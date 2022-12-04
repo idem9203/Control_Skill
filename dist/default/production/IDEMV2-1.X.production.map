@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\IDEMV2-1.X.production.sym \
   --cmf=dist/default/production\IDEMV2-1.X.production.cmf -z -Q18F25K50 \
-  -oC:\Users\echev\AppData\Local\Temp\xcAs3hc.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\echev\AppData\Local\Temp\xcAsr58.4 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/IDEMV2-1.X.production.map -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ASTACK=07Eh-07FFh -pstack=STACK -ACODE=00h-07FFFh \
   -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
@@ -23,7 +23,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\echev\AppData\Local\Temp\xcAs3hc.o \
+  C:\Users\echev\AppData\Local\Temp\xcAsr58.o \
   dist/default/production\IDEMV2-1.X.production.o 
 
 Object code version is 3.11
@@ -33,7 +33,7 @@ Machine type is 18F25K50
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\echev\AppData\Local\Temp\xcAs3hc.o
+C:\Users\echev\AppData\Local\Temp\xcAsr58.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                  0        0        4        0       0
@@ -41,47 +41,47 @@ dist/default/production\IDEMV2-1.X.production.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 smallconst                          800      800       1C      400       0
-                text14                              AB2      AB2       16      40E       0
-                text13                              B00      B00        E      40E       0
-                text12                              A48      A48       20      40E       0
-                text11                              9F8      9F8       2E      40E       0
-                text10                              AEE      AEE       12      40E       0
-                text9                               934      934       48      40E       0
-                text8                               AC8      AC8       14      40E       0
-                text7                               A68      A68       1C      40E       0
-                text6                               A84      A84       18      40E       0
-                text5                               97C      97C       46      40E       0
-                text4                               8CC      8CC       68      40E       0
-                text3                               ADC      ADC       12      40E       0
-                text2                               9C2      9C2       36      40E       0
-                text1                               A9C      A9C       16      40E       0
-                text0                               81C      81C       B0      40E       0
+                text14                              ACC      ACC       16      40E       0
+                text13                              B1A      B1A        E      40E       0
+                text12                              A62      A62       20      40E       0
+                text11                              A12      A12       2E      40E       0
+                text10                              B08      B08       12      40E       0
+                text9                               94E      94E       48      40E       0
+                text8                               AE2      AE2       14      40E       0
+                text7                               A82      A82       1C      40E       0
+                text6                               A9E      A9E       18      40E       0
+                text5                               996      996       46      40E       0
+                text4                               8E6      8E6       68      40E       0
+                text3                               AF6      AF6       12      40E       0
+                text2                               9DC      9DC       36      40E       0
+                text1                               AB6      AB6       16      40E       0
+                text0                               81C      81C       CA      40E       0
                 cstackCOMRAM                         40       40        B        1       1
                 bssBANK0                             60       60       1E       60       1
                 bssCOMRAM                             1        1       3F        1       1
-                cinit                               A26      A26       22      40E       0
+                cinit                               A40      A40       22      40E       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 init                                  0        0        4         0
-                text14                              AB2      AB2       16         0
-                text13                              B00      B00        E         0
-                text12                              A48      A48       20         0
-                text11                              9F8      9F8       2E         0
-                text10                              AEE      AEE       12         0
-                text9                               934      934       48         0
-                text8                               AC8      AC8       14         0
-                text7                               A68      A68       1C         0
-                text6                               A84      A84       18         0
-                text5                               97C      97C       46         0
-                text4                               8CC      8CC       68         0
-                text3                               ADC      ADC       12         0
-                text2                               9C2      9C2       36         0
-                text1                               A9C      A9C       16         0
-                text0                               81C      81C       B0         0
-                cinit                               A26      A26       22         0
+                text14                              ACC      ACC       16         0
+                text13                              B1A      B1A        E         0
+                text12                              A62      A62       20         0
+                text11                              A12      A12       2E         0
+                text10                              B08      B08       12         0
+                text9                               94E      94E       48         0
+                text8                               AE2      AE2       14         0
+                text7                               A82      A82       1C         0
+                text6                               A9E      A9E       18         0
+                text5                               996      996       46         0
+                text4                               8E6      8E6       68         0
+                text3                               AF6      AF6       12         0
+                text2                               9DC      9DC       36         0
+                text1                               AB6      AB6       16         0
+                text0                               81C      81C       CA         0
+                cinit                               A40      A40       22         0
 
         CLASS   CONST          
 
@@ -137,7 +137,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 bssCOMRAM                      000001  00004A  00004B         1       1  COMRAM  
                 bssBANK0                       000060  00001E  00007E        60       1  BANK0   
                 smallconst                     000800  00001C  00081C       400       0  SMALLCON
-                text0                          00081C  0002F2  000B0E       40E       0  CODE    
+                text0                          00081C  00030C  000B28       40E       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -154,15 +154,15 @@ UNUSED ADDRESS RANGES
         BIGRAM           00004B-00005F               15
                          00007E-0007FF              782
         CODE             000004-0007FF              7FC
-                         000B0E-007FFF             74F2
+                         000B28-007FFF             74D8
         COMRAM           00004B-00005F               15
         CONST            000004-0007FF              7FC
-                         000B0E-007FFF             74F2
+                         000B28-007FFF             74D8
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000B0E-007FFF             74F2
+        MEDIUMCONST      000B28-007FFF             74D8
         RAM              00007E-0007FF              100
         SFR              000F53-000FFF                D
-        SMALLCONST       000B0E-007FFF              100
+        SMALLCONST       000B28-007FFF              100
         STACK            00007E-0007FF              782
 
                                   Symbol Table
@@ -172,7 +172,7 @@ _ADCON0                             (abs)        000FC2
 _ADCON0bits                         (abs)        000FC2
 _ADCON1                             (abs)        000FC1
 _ADCON2                             (abs)        000FC0
-_ADC_Initialize                     text14       000AB2
+_ADC_Initialize                     text14       000ACC
 _ADC_InterruptHandler               bssCOMRAM    000015
 _ADRESH                             (abs)        000FC4
 _ADRESL                             (abs)        000FC3
@@ -181,7 +181,7 @@ _ANSELB                             (abs)        000F5C
 _ANSELC                             (abs)        000F5D
 _BAUDCON1                           (abs)        000FB8
 _CCP2CON                            (abs)        000F97
-_CCP2_Initialize                    text13       000B00
+_CCP2_Initialize                    text13       000B1A
 _CCPR2H                             (abs)        000F91
 _CCPR2L                             (abs)        000F90
 _EUSART1_DefaultErrorHandler        (abs)        000000
@@ -201,9 +201,9 @@ _LATC                               (abs)        000F8B
 _LATCbits                           (abs)        000F8B
 _OSCCON                             (abs)        000FD3
 _OSCCON2                            (abs)        000FD2
-_OSCILLATOR_Initialize              text12       000A48
+_OSCILLATOR_Initialize              text12       000A62
 _OSCTUNE                            (abs)        000F9B
-_PIN_MANAGER_Initialize             text11       0009F8
+_PIN_MANAGER_Initialize             text11       000A12
 _PIR1bits                           (abs)        000F9E
 _PLLRDY                             (abs)        007E97
 _PORTAbits                          (abs)        000F80
@@ -213,8 +213,9 @@ _RCSTA1                             (abs)        000FAB
 _RCSTA1bits                         (abs)        000FAB
 _SPBRG1                             (abs)        000FAF
 _SPBRGH1                            (abs)        000FB0
-_SYSTEM_Initialize                  text10       000AEE
+_SYSTEM_Initialize                  text10       000B08
 _TRISA                              (abs)        000F92
+_TRISAbits                          (abs)        000F92
 _TRISB                              (abs)        000F93
 _TRISBbits                          (abs)        000F93
 _TRISC                              (abs)        000F94
@@ -276,7 +277,7 @@ __Hreset_vec                        reset_vec    000000
 __Hrparam                           rparam       000000
 __Hsfr                              sfr          000000
 __Hsmallconst                       smallconst   00081C
-__Hspace_0                          (abs)        000B0E
+__Hspace_0                          (abs)        000B28
 __Hspace_1                          (abs)        00007E
 __Hspace_2                          (abs)        000000
 __Hspace_4                          (abs)        60000E
@@ -375,7 +376,7 @@ __Ltext6                            text6        000000
 __Ltext7                            text7        000000
 __Ltext8                            text8        000000
 __Ltext9                            text9        000000
-__S0                                (abs)        000B0E
+__S0                                (abs)        000B28
 __S1                                (abs)        00007E
 __S2                                (abs)        000000
 __S4                                (abs)        000000
@@ -387,46 +388,46 @@ ___rparam_used                      (abs)        000001
 ___sp                               stack        000000
 __accesstop                         (abs)        000060
 __activetblptr                      (abs)        000002
-__end_of_ADC_Initialize             text14       000AC8
-__end_of_CCP2_Initialize            text13       000B0E
-__end_of_OSCILLATOR_Initialize      text12       000A68
-__end_of_PIN_MANAGER_Initialize     text11       000A26
-__end_of_SYSTEM_Initialize          text10       000B00
-__end_of__initialization            cinit        000A3E
+__end_of_ADC_Initialize             text14       000AE2
+__end_of_CCP2_Initialize            text13       000B28
+__end_of_OSCILLATOR_Initialize      text12       000A82
+__end_of_PIN_MANAGER_Initialize     text11       000A40
+__end_of_SYSTEM_Initialize          text10       000B1A
+__end_of__initialization            cinit        000A58
 __end_of_direccion_rx               smallconst   000806
 __end_of_direccion_tx               smallconst   00080B
-__end_of_flush_TX                   text3        000AEE
-__end_of_flush_TX_RX                text6        000A9C
-__end_of_main                       text0        0008CC
-__end_of_nrF2401_init_TX            text4        000934
-__end_of_nrf2401_comando            text8        000ADC
-__end_of_nrf2401_direccion_TX_RX    text5        0009C2
-__end_of_nrf2401_envia              text2        0009F8
-__end_of_nrf2401_write              text7        000A84
-__end_of_spi_s_init                 text1        000AB2
-__end_of_spi_s_write                text9        00097C
-__initialization                    cinit        000A26
+__end_of_flush_TX                   text3        000B08
+__end_of_flush_TX_RX                text6        000AB6
+__end_of_main                       text0        0008E6
+__end_of_nrF2401_init_TX            text4        00094E
+__end_of_nrf2401_comando            text8        000AF6
+__end_of_nrf2401_direccion_TX_RX    text5        0009DC
+__end_of_nrf2401_envia              text2        000A12
+__end_of_nrf2401_write              text7        000A9E
+__end_of_spi_s_init                 text1        000ACC
+__end_of_spi_s_write                text9        000996
+__initialization                    cinit        000A40
 __mediumconst                       mediumconst  000000
 __pbssBANK0                         bssBANK0     000060
 __pbssCOMRAM                        bssCOMRAM    000001
-__pcinit                            cinit        000A26
+__pcinit                            cinit        000A40
 __pcstackCOMRAM                     cstackCOMRAM 000040
 __psmallconst                       smallconst   000800
 __ptext0                            text0        00081C
-__ptext1                            text1        000A9C
-__ptext10                           text10       000AEE
-__ptext11                           text11       0009F8
-__ptext12                           text12       000A48
-__ptext13                           text13       000B00
-__ptext14                           text14       000AB2
-__ptext2                            text2        0009C2
-__ptext3                            text3        000ADC
-__ptext4                            text4        0008CC
-__ptext5                            text5        00097C
-__ptext6                            text6        000A84
-__ptext7                            text7        000A68
-__ptext8                            text8        000AC8
-__ptext9                            text9        000934
+__ptext1                            text1        000AB6
+__ptext10                           text10       000B08
+__ptext11                           text11       000A12
+__ptext12                           text12       000A62
+__ptext13                           text13       000B1A
+__ptext14                           text14       000ACC
+__ptext2                            text2        0009DC
+__ptext3                            text3        000AF6
+__ptext4                            text4        0008E6
+__ptext5                            text5        000996
+__ptext6                            text6        000A9E
+__ptext7                            text7        000A82
+__ptext8                            text8        000AE2
+__ptext9                            text9        00094E
 __ramtop                            ramtop       000800
 __size_of_ADC_Initialize            (abs)        000000
 __size_of_CCP2_Initialize           (abs)        000000
@@ -450,21 +451,21 @@ _direccion_rx                       smallconst   000801
 _direccion_tx                       smallconst   000806
 _eusart1RxLastError                 bssCOMRAM    000021
 _flag_rx                            bssCOMRAM    00001D
-_flush_TX                           text3        000ADC
-_flush_TX_RX                        text6        000A84
+_flush_TX                           text3        000AF6
+_flush_TX_RX                        text6        000A9E
 _main                               text0        00081C
-_nrF2401_init_TX                    text4        0008CC
-_nrf2401_comando                    text8        000AC8
-_nrf2401_direccion_TX_RX            text5        00097C
-_nrf2401_envia                      text2        0009C2
-_nrf2401_write                      text7        000A68
+_nrF2401_init_TX                    text4        0008E6
+_nrf2401_comando                    text8        000AE2
+_nrf2401_direccion_TX_RX            text5        000996
+_nrf2401_envia                      text2        0009DC
+_nrf2401_write                      text7        000A82
 _procesa                            bssBANK0     000060
 _puntero                            bssCOMRAM    00001F
-_spi_s_init                         text1        000A9C
-_spi_s_write                        text9        000934
+_spi_s_init                         text1        000AB6
+_spi_s_write                        text9        00094E
 _texto                              bssCOMRAM    000001
 _trama                              bssCOMRAM    000022
-end_of_initialization               cinit        000A3E
+end_of_initialization               cinit        000A58
 intlevel0                           text         000000
 intlevel1                           text         000000
 intlevel2                           text         000000
@@ -484,55 +485,55 @@ spi_s_write@dato_                   cstackCOMRAM 000040
 stackhi                             (abs)        0007FF
 stacklo                             (abs)        00007E
 start                               init         000000
-start_initialization                cinit        000A26
+start_initialization                cinit        000A40
 
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 mcc_generated_files/pin_manager.c
-		_PIN_MANAGER_Initialize		CODE           	09F8	0000	46
+		_PIN_MANAGER_Initialize		CODE           	0A12	0000	46
 
 mcc_generated_files/pin_manager.c estimated size: 46
 
 mcc_generated_files/adc.c
-		_ADC_Initialize		CODE           	0AB2	0000	22
+		_ADC_Initialize		CODE           	0ACC	0000	22
 
 mcc_generated_files/adc.c estimated size: 22
 
 mcc_generated_files/ccp2.c
-		_CCP2_Initialize		CODE           	0B00	0000	14
+		_CCP2_Initialize		CODE           	0B1A	0000	14
 
 mcc_generated_files/ccp2.c estimated size: 14
 
 ./Librerias/nRF24L01_2.h
-		_spi_s_init    		CODE           	0A9C	0000	22
-		_nrf2401_comando		CODE           	0AC8	0000	20
-		_nrf2401_direccion_TX_RX		CODE           	097C	0000	70
-		_nrF2401_init_TX		CODE           	08CC	0000	104
-		_nrf2401_envia 		CODE           	09C2	0000	54
-		_nrf2401_write 		CODE           	0A68	0000	28
-		_spi_s_write   		CODE           	0934	0000	72
-		_flush_TX      		CODE           	0ADC	0000	18
-		_flush_TX_RX   		CODE           	0A84	0000	24
+		_spi_s_init    		CODE           	0AB6	0000	22
+		_nrf2401_comando		CODE           	0AE2	0000	20
+		_nrf2401_direccion_TX_RX		CODE           	0996	0000	70
+		_nrF2401_init_TX		CODE           	08E6	0000	104
+		_nrf2401_envia 		CODE           	09DC	0000	54
+		_nrf2401_write 		CODE           	0A82	0000	28
+		_spi_s_write   		CODE           	094E	0000	72
+		_flush_TX      		CODE           	0AF6	0000	18
+		_flush_TX_RX   		CODE           	0A9E	0000	24
 
 ./Librerias/nRF24L01_2.h estimated size: 412
 
 shared
 		_direccion_rx  		SMALLCONST     	0801	0000	5
 		_direccion_tx  		SMALLCONST     	0806	0000	5
-		__initialization		CODE           	0A26	0000	24
+		__initialization		CODE           	0A40	0000	24
 
 shared estimated size: 34
 
 mcc_generated_files/mcc.c
-		_OSCILLATOR_Initialize		CODE           	0A48	0000	32
-		_SYSTEM_Initialize		CODE           	0AEE	0000	18
+		_OSCILLATOR_Initialize		CODE           	0A62	0000	32
+		_SYSTEM_Initialize		CODE           	0B08	0000	18
 
 mcc_generated_files/mcc.c estimated size: 50
 
 main.c
-		_main          		CODE           	081C	0000	176
+		_main          		CODE           	081C	0000	202
 
-main.c estimated size: 176
+main.c estimated size: 202
 

@@ -8354,6 +8354,8 @@ void main(void)
 
 
 
+    TRISAbits.RA3 = 1;
+
     PORTAbits.RA5 = 1;
     _delay((unsigned long)((500)*(48000000/4000.0)));
     PORTAbits.RA5 = 0;
@@ -8388,5 +8390,6 @@ void main(void)
             nrf2401_envia(dato_serial);
 
         }
+        _delay((unsigned long)((100)*(48000000/4000.0)));
     }
 }

@@ -172,6 +172,8 @@ void main(void)
 //    RCIE = 1;                                                                   //Habilita la interrupcion serial
 //    GIE = 1;                                                                    //Autoriza todas las interrupciones programadas 
     
+    TRISAbits.RA3 = 1;                                                          // Puerto RA3 se asigna como entrada
+    
     LED = 1;
     __delay_ms(500);
     LED = 0;
@@ -206,6 +208,7 @@ void main(void)
             nrf2401_envia(dato_serial);
             
         }
+        __delay_ms(100);
     }
 }
 /**
