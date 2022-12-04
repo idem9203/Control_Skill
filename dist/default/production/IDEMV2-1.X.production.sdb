@@ -3,8 +3,8 @@
 [d edition pro ]
 [d chip 18F25K50 ]
 [d frameptr 4065 ]
-"84 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-[e E4456 . `uc
+"83 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+[e E4598 . `uc
 channel_AN0 0
 channel_AN1 1
 channel_AN2 2
@@ -13,77 +13,75 @@ channel_CTMU 29
 channel_DAC 30
 channel_FVRBuf2 31
 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fleq.c
+"23 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+[v _spi_s_init spi_s_init `(v  1 e 1 0 ]
+"40
+[v _spi_s_read spi_s_read `(uc  1 e 1 0 ]
+"61
+[v _spi_s_write spi_s_write `(v  1 e 1 0 ]
+"81
+[v _nrf2401_write nrf2401_write `(v  1 e 1 0 ]
+"91
+[v _nrf2401_comando nrf2401_comando `(v  1 e 1 0 ]
+"99
+[v _nrf2401_read nrf2401_read `(uc  1 e 1 0 ]
+"111
+[v _nrf2401_direccion_TX_RX nrf2401_direccion_TX_RX `(v  1 e 1 0 ]
+"128
+[v _flush_RX flush_RX `(v  1 e 1 0 ]
+"135
+[v _flush_TX flush_TX `(v  1 e 1 0 ]
+"142
+[v _flush_TX_RX flush_TX_RX `(v  1 e 1 0 ]
+"151
+[v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
+"172
+[v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
+"184
+[v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
+"218
+[v _get_Status get_Status `(uc  1 e 1 0 ]
+"240
+[v _nrf2401_haydatos nrf2401_haydatos `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\float.c
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
-"86 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftadd.c
+"86 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 4 0 ]
-"54 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftdiv.c
+"54 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 4 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftmul.c
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
-"19 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftsub.c
+"19 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\memset.c
-[v _memset memset `(*.39v  1 e 2 0 ]
-"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 4 0 ]
-"11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+"11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcmul.c
+"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strchr.c
+"3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strchr.c
 [v _strchr strchr `(*.39uc  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strlen.c
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strncmp.c
+"3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strncmp.c
 [v _strncmp strncmp `(i  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strstr.c
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strstr.c
 [v _strstr strstr `(*.39uc  1 e 2 0 ]
-"15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul32.c
+"15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul64.c
-[v ___omul __omul `(ul  1 e 4 0 ]
-"39 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\Librerias/nRF24L01_2.h
-[v _spi_s_read spi_s_read `(uc  1 e 1 0 ]
-"60
-[v _spi_s_write spi_s_write `(v  1 e 1 0 ]
-"80
-[v _nrf2401_write nrf2401_write `(v  1 e 1 0 ]
-"90
-[v _nrf2401_comando nrf2401_comando `(v  1 e 1 0 ]
-"98
-[v _nrf2401_read nrf2401_read `(uc  1 e 1 0 ]
-"110
-[v _nrf2401_direccion_TX_RX nrf2401_direccion_TX_RX `(v  1 e 1 0 ]
-"127
-[v _flush_RX flush_RX `(v  1 e 1 0 ]
-"134
-[v _flush_TX flush_TX `(v  1 e 1 0 ]
-"141
-[v _flush_TX_RX flush_TX_RX `(v  1 e 1 0 ]
-"150
-[v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
-"171
-[v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
-"217
-[v _get_Status get_Status `(uc  1 e 1 0 ]
-"88 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-[v _procesarx procesarx `(v  1 e 1 0 ]
-"115
-[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"137
+"91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"143 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "62 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "49 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
 [v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
-"66 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
-"113
+"113 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
 "132
 [v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
@@ -105,13 +103,46 @@ channel_FVRBuf2 31
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "55 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"232 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f25k50.h
+"233 C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h
 [v _ANSELA ANSELA `VEuc  1 e 1 @3931 ]
-"277
+"278
 [v _ANSELB ANSELB `VEuc  1 e 1 @3932 ]
-"327
+"328
 [v _ANSELC ANSELC `VEuc  1 e 1 @3933 ]
-[s S591 . 1 `uc 1 RB0 1 0 :1:0 
+[s S763 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"2838
+[s S772 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+`uc 1 OSC2 1 0 :1:6 
+]
+[s S780 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFM 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S786 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S789 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+`uc 1 . 1 0 :6:1 
+`uc 1 RJPU 1 0 :1:7 
+]
+[u S793 . 1 `S763 1 . 1 0 `S772 1 . 1 0 `S780 1 . 1 0 `S786 1 . 1 0 `S789 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES793  1 e 1 @3968 ]
+[s S592 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -120,8 +151,8 @@ channel_FVRBuf2 31
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
-"2977
-[s S713 . 1 `uc 1 INT0 1 0 :1:0 
+"2978
+[s S714 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -129,18 +160,18 @@ channel_FVRBuf2 31
 `uc 1 PGC 1 0 :1:6 
 `uc 1 PGD 1 0 :1:7 
 ]
-[s S721 . 1 `uc 1 . 1 0 :3:0 
+[s S722 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S724 . 1 `S591 1 . 1 0 `S713 1 . 1 0 `S721 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES724  1 e 1 @3969 ]
-"3238
+[u S725 . 1 `S592 1 . 1 0 `S714 1 . 1 0 `S722 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES725  1 e 1 @3969 ]
+"3239
 [v _WPUB WPUB `VEuc  1 e 1 @3973 ]
-"3472
+"3473
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
-"3584
+"3585
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
-[s S622 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S623 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -149,8 +180,8 @@ channel_FVRBuf2 31
 `uc 1 LATB6 1 0 :1:6 
 `uc 1 LATB7 1 0 :1:7 
 ]
-"3611
-[s S631 . 1 `uc 1 LB0 1 0 :1:0 
+"3612
+[s S632 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -159,11 +190,11 @@ channel_FVRBuf2 31
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S640 . 1 `S622 1 . 1 0 `S631 1 . 1 0 ]
-[v _LATBbits LATBbits `VES640  1 e 1 @3978 ]
-"3696
+[u S641 . 1 `S623 1 . 1 0 `S632 1 . 1 0 ]
+[v _LATBbits LATBbits `VES641  1 e 1 @3978 ]
+"3697
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
-[s S662 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S663 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -172,8 +203,8 @@ channel_FVRBuf2 31
 `uc 1 LATC6 1 0 :1:6 
 `uc 1 LATC7 1 0 :1:7 
 ]
-"3723
-[s S671 . 1 `uc 1 LC0 1 0 :1:0 
+"3724
+[s S672 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -182,17 +213,17 @@ channel_FVRBuf2 31
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S680 . 1 `S662 1 . 1 0 `S671 1 . 1 0 ]
-[v _LATCbits LATCbits `VES680  1 e 1 @3979 ]
-"4115
+[u S681 . 1 `S663 1 . 1 0 `S672 1 . 1 0 ]
+[v _LATCbits LATCbits `VES681  1 e 1 @3979 ]
+"4116
 [v _CCPR2L CCPR2L `VEuc  1 e 1 @3984 ]
-"4135
+"4136
 [v _CCPR2H CCPR2H `VEuc  1 e 1 @3985 ]
-"4155
+"4156
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
-"4377
+"4378
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S582 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S583 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -201,12 +232,12 @@ channel_FVRBuf2 31
 `uc 1 TRISB6 1 0 :1:6 
 `uc 1 TRISB7 1 0 :1:7 
 ]
-"4409
-[u S600 . 1 `S582 1 . 1 0 `S591 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES600  1 e 1 @3987 ]
-"4599
+"4410
+[u S601 . 1 `S583 1 . 1 0 `S592 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES601  1 e 1 @3987 ]
+"4600
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S546 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S547 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -215,19 +246,19 @@ channel_FVRBuf2 31
 `uc 1 TRISC6 1 0 :1:6 
 `uc 1 TRISC7 1 0 :1:7 
 ]
-"4629
-[s S555 . 1 `uc 1 RC0 1 0 :1:0 
+"4630
+[s S556 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S562 . 1 `S546 1 . 1 0 `S555 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES562  1 e 1 @3988 ]
-"4777
+[u S563 . 1 `S547 1 . 1 0 `S556 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES563  1 e 1 @3988 ]
+"4778
 [v _CCP2CON CCP2CON `VEuc  1 e 1 @3991 ]
-"5241
+"5242
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
 [s S70 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
@@ -238,7 +269,7 @@ channel_FVRBuf2 31
 `uc 1 ADIF 1 0 :1:6 
 `uc 1 ACTIF 1 0 :1:7 
 ]
-"5509
+"5510
 [s S79 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SSP1IF 1 0 :1:3 
 `uc 1 TX1IF 1 0 :1:4 
@@ -251,7 +282,7 @@ channel_FVRBuf2 31
 ]
 [u S89 . 1 `S70 1 . 1 0 `S79 1 . 1 0 `S86 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES89  1 e 1 @3998 ]
-"6242
+"6243
 [v _RCSTA1 RCSTA1 `VEuc  1 e 1 @4011 ]
 [s S197 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
@@ -262,7 +293,7 @@ channel_FVRBuf2 31
 `uc 1 RX9 1 0 :1:6 
 `uc 1 SPEN 1 0 :1:7 
 ]
-"6281
+"6282
 [s S206 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
@@ -278,7 +309,7 @@ channel_FVRBuf2 31
 ]
 [u S219 . 1 `S197 1 . 1 0 `S206 1 . 1 0 `S209 1 . 1 0 `S213 1 . 1 0 `S216 1 . 1 0 ]
 [v _RCSTA1bits RCSTA1bits `VES219  1 e 1 @4011 ]
-"6448
+"6449
 [v _TXSTA1 TXSTA1 `VEuc  1 e 1 @4012 ]
 [s S113 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
@@ -289,7 +320,7 @@ channel_FVRBuf2 31
 `uc 1 TX9 1 0 :1:6 
 `uc 1 CSRC 1 0 :1:7 
 ]
-"6506
+"6507
 [s S122 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 TX8_9 1 0 :1:6 
@@ -319,65 +350,65 @@ channel_FVRBuf2 31
 ]
 [u S149 . 1 `S113 1 . 1 0 `S122 1 . 1 0 `S126 1 . 1 0 `S129 1 . 1 0 `S132 1 . 1 0 `S135 1 . 1 0 `S138 1 . 1 0 `S141 1 . 1 0 `S144 1 . 1 0 `S146 1 . 1 0 ]
 [v _TXSTA1bits TXSTA1bits `VES149  1 e 1 @4012 ]
-"6742
+"6743
 [v _TXREG1 TXREG1 `VEuc  1 e 1 @4013 ]
-"6780
+"6781
 [v _RCREG1 RCREG1 `VEuc  1 e 1 @4014 ]
-"6818
+"6819
 [v _SPBRG1 SPBRG1 `VEuc  1 e 1 @4015 ]
-"6956
+"6957
 [v _SPBRGH1 SPBRGH1 `VEuc  1 e 1 @4016 ]
-"7401
+"7402
 [v _ACTCON ACTCON `VEuc  1 e 1 @4021 ]
-"7891
+"7892
 [v _BAUDCON1 BAUDCON1 `VEuc  1 e 1 @4024 ]
-"8827
+"8828
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
-"8898
+"8899
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-"8966
+"8967
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
-[s S467 . 1 `uc 1 . 1 0 :1:0 
+[s S468 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
-"9006
-[s S470 . 1 `uc 1 ADON 1 0 :1:0 
+"9007
+[s S471 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
-[s S474 . 1 `uc 1 . 1 0 :1:0 
+[s S475 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S477 . 1 `uc 1 . 1 0 :1:0 
+[s S478 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S480 . 1 `uc 1 . 1 0 :1:0 
+[s S481 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S483 . 1 `uc 1 . 1 0 :1:0 
+[s S484 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S486 . 1 `uc 1 . 1 0 :1:0 
+[s S487 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[s S489 . 1 `uc 1 . 1 0 :1:0 
+[s S490 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S492 . 1 `S467 1 . 1 0 `S470 1 . 1 0 `S474 1 . 1 0 `S477 1 . 1 0 `S480 1 . 1 0 `S483 1 . 1 0 `S486 1 . 1 0 `S489 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES492  1 e 1 @4034 ]
-"9061
+[u S493 . 1 `S468 1 . 1 0 `S471 1 . 1 0 `S475 1 . 1 0 `S478 1 . 1 0 `S481 1 . 1 0 `S484 1 . 1 0 `S487 1 . 1 0 `S490 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES493  1 e 1 @4034 ]
+"9062
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
-"9068
+"9069
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
-"11485
+"11486
 [v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
-"11547
+"11548
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S343 . 1 `uc 1 . 1 0 :7:0 
+[s S344 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
-"12366
-[s S346 . 1 `uc 1 IOCIP 1 0 :1:0 
+"12367
+[s S347 . 1 `uc 1 IOCIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -386,16 +417,14 @@ channel_FVRBuf2 31
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S355 . 1 `uc 1 . 1 0 :2:0 
+[s S356 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IP 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S360 . 1 `S343 1 . 1 0 `S346 1 . 1 0 `S355 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES360  1 e 1 @4081 ]
-"12416
-[v _INTCON INTCON `VEuc  1 e 1 @4082 ]
-[s S382 . 1 `uc 1 IOCIF 1 0 :1:0 
+[u S361 . 1 `S344 1 . 1 0 `S347 1 . 1 0 `S356 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES361  1 e 1 @4081 ]
+[s S383 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -404,8 +433,8 @@ channel_FVRBuf2 31
 `uc 1 PEIE_GIEL 1 0 :1:6 
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
-"12448
-[s S391 . 1 `uc 1 . 1 0 :1:0 
+"12449
+[s S392 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -414,34 +443,24 @@ channel_FVRBuf2 31
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S400 . 1 `uc 1 . 1 0 :6:0 
+[s S401 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S404 . 1 `S382 1 . 1 0 `S391 1 . 1 0 `S400 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES404  1 e 1 @4082 ]
-"14044
-[v _GIE GIE `VEb  1 e 0 @32663 ]
-"14317
+[u S405 . 1 `S383 1 . 1 0 `S392 1 . 1 0 `S401 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES405  1 e 1 @4082 ]
+"14322
 [v _LATA5 LATA5 `VEb  1 e 0 @31821 ]
-"14326
+"14331
 [v _LATB0 LATB0 `VEb  1 e 0 @31824 ]
-"14653
+"14658
 [v _PLLRDY PLLRDY `VEb  1 e 0 @32407 ]
-"14758
-[v _RCIE RCIE `VEb  1 e 0 @31981 ]
-"14761
-[v _RCIF RCIF `VEb  1 e 0 @31989 ]
-"69 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+"70 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _direccion_tx direccion_tx `C[5]uc  1 e 5 0 ]
-"78
-[v _trama trama `[30]uc  1 e 30 0 ]
-"80
-[v _puntero puntero `uc  1 e 1 0 ]
-"81
-[v _datorx datorx `uc  1 e 1 0 ]
+"74
+[v _dato_serial dato_serial `uc  1 e 1 0 ]
 "82
-[v _flag_rx flag_rx `uc  1 e 1 0 ]
+[v _trama trama `[30]uc  1 e 30 0 ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
@@ -456,57 +475,107 @@ channel_FVRBuf2 31
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"137 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+"143 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"182
+"210
 } 0
-"88
-[v _procesarx procesarx `(v  1 e 1 0 ]
+"23 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+[v _spi_s_init spi_s_init `(v  1 e 1 0 ]
 {
-"110
+"38
 } 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strstr.c
-[v _strstr strstr `(*.39uc  1 e 2 0 ]
+"172
+[v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
 {
-[v strstr@s1 s1 `*.39Cuc  1 p 2 13 ]
-[v strstr@s2 s2 `*.25Cuc  1 p 2 15 ]
-"12
+"174
+[v nrf2401_recibe@valor_ valor_ `uc  1 a 1 2 ]
+"181
 } 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strncmp.c
-[v _strncmp strncmp `(i  1 e 2 0 ]
+"240
+[v _nrf2401_haydatos nrf2401_haydatos `(uc  1 e 1 0 ]
 {
-[v strncmp@s1 s1 `*.39Cuc  1 p 2 6 ]
-[v strncmp@s2 s2 `*.25Cuc  1 p 2 8 ]
-[v strncmp@len len `ui  1 p 2 10 ]
-"14
+"244
 } 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
+"218
+[v _get_Status get_Status `(uc  1 e 1 0 ]
 {
-"6
-[v strlen@cp cp `*.25Cuc  1 a 2 4 ]
-"4
-[v strlen@s s `*.25Cuc  1 p 2 2 ]
-"13
+"221
 } 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strchr.c
-[v _strchr strchr `(*.39uc  1 e 2 0 ]
+"99
+[v _nrf2401_read nrf2401_read `(uc  1 e 1 0 ]
 {
-[v strchr@ptr ptr `*.39Cuc  1 p 2 2 ]
-[v strchr@chr chr `i  1 p 2 4 ]
-"11
+[v nrf2401_read@reg reg `uc  1 a 1 wreg ]
+"101
+[v nrf2401_read@dato_ dato_ `uc  1 a 1 3 ]
+"99
+[v nrf2401_read@reg reg `uc  1 a 1 wreg ]
+[v nrf2401_read@reg reg `uc  1 a 1 2 ]
+"108
 } 0
-"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\memset.c
-[v _memset memset `(*.39v  1 e 2 0 ]
+"40
+[v _spi_s_read spi_s_read `(uc  1 e 1 0 ]
 {
-"15
-[v memset@p p `*.39uc  1 a 2 8 ]
-"8
-[v memset@p1 p1 `*.39v  1 p 2 2 ]
-[v memset@c c `i  1 p 2 4 ]
-[v memset@n n `ui  1 p 2 6 ]
-"22
+"42
+[v spi_s_read@cont_s cont_s `uc  1 a 1 1 ]
+"43
+[v spi_s_read@dato_ dato_ `uc  1 a 1 0 ]
+"59
+} 0
+"184
+[v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
+{
+[v nrF2401_init_RX@canal canal `uc  1 a 1 wreg ]
+[v nrF2401_init_RX@canal canal `uc  1 a 1 wreg ]
+"186
+[v nrF2401_init_RX@canal canal `uc  1 a 1 8 ]
+"199
+} 0
+"111
+[v _nrf2401_direccion_TX_RX nrf2401_direccion_TX_RX `(v  1 e 1 0 ]
+{
+"113
+[v nrf2401_direccion_TX_RX@cont_s cont_s `uc  1 a 1 7 ]
+"111
+[v nrf2401_direccion_TX_RX@direccion_ direccion_ `*.25Cuc  1 p 2 2 ]
+[v nrf2401_direccion_TX_RX@registro registro `uc  1 p 1 4 ]
+"124
+} 0
+"142
+[v _flush_TX_RX flush_TX_RX `(v  1 e 1 0 ]
+{
+"147
+} 0
+"81
+[v _nrf2401_write nrf2401_write `(v  1 e 1 0 ]
+{
+[v nrf2401_write@reg reg `uc  1 a 1 wreg ]
+[v nrf2401_write@reg reg `uc  1 a 1 wreg ]
+[v nrf2401_write@valor valor `uc  1 p 1 2 ]
+"83
+[v nrf2401_write@reg reg `uc  1 a 1 3 ]
+"89
+} 0
+"91
+[v _nrf2401_comando nrf2401_comando `(v  1 e 1 0 ]
+{
+[v nrf2401_comando@comando comando `uc  1 a 1 wreg ]
+[v nrf2401_comando@comando comando `uc  1 a 1 wreg ]
+"93
+[v nrf2401_comando@comando comando `uc  1 a 1 2 ]
+"97
+} 0
+"61
+[v _spi_s_write spi_s_write `(v  1 e 1 0 ]
+{
+[v spi_s_write@dato_ dato_ `uc  1 a 1 wreg ]
+"63
+[v spi_s_write@cont_s cont_s `uc  1 a 1 1 ]
+"61
+[v spi_s_write@dato_ dato_ `uc  1 a 1 wreg ]
+"63
+[v spi_s_write@dato_ dato_ `uc  1 a 1 0 ]
+"77
 } 0
 "50 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -523,29 +592,6 @@ channel_FVRBuf2 31
 {
 "74
 } 0
-"66 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
-{
-"92
-} 0
-"170
-[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
-"172
-} 0
-"166
-[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
-"168
-} 0
-"174
-[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
-{
-[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
-"176
-} 0
 "49 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
 [v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
 {
@@ -555,14 +601,4 @@ channel_FVRBuf2 31
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
 "81
-} 0
-"115 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-{
-"130
-} 0
-"113 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
-{
-"130
 } 0

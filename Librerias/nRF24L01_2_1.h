@@ -16,8 +16,8 @@ extern int CE_2401_Direction;
 extern int INT_2401_Direction;
 */
 
-extern const unsigned char direccion_tx[];
-extern const unsigned char direccion_rx[];
+//extern const unsigned char direccion_tx[];
+//extern const unsigned char direccion_rx[];
 
 
 void spi_s_init()
@@ -34,7 +34,6 @@ void spi_s_init()
     SPI_CS = 0;
     spi_mosi = 0;
     CE_2401 = 0;
-    
 }
 
 unsigned char  spi_s_read()

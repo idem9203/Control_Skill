@@ -1,8 +1,13 @@
-
 # 1 "mcc_generated_files/device_config.c"
-
-
-# 50
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 288 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\\pic\\include\\language_support.h" 1 3
+# 2 "<built-in>" 2
+# 1 "mcc_generated_files/device_config.c" 2
+# 50 "mcc_generated_files/device_config.c"
 #pragma config PLLSEL = PLL3X
 #pragma config CFGPLLEN = ON
 #pragma config CPUDIV = NOCLKDIV
@@ -67,3 +72,5 @@
 
 
 #pragma config EBTRB = OFF
+# 113 "mcc_generated_files/device_config.c"
+

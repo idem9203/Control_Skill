@@ -52,6 +52,7 @@
 // PARA USO DEL MODULO NRF24L01
 #include "Librerias/nRF24L01.h"
 
+
 #define spi_miso PORTBbits.RB3
 #define spi_clock LATBbits.LATB2
 #define spi_mosi LATCbits.LATC1
@@ -70,16 +71,19 @@ const unsigned char direccion_tx[5] = {17, 17, 17, 17, 17};                     
 const unsigned char direccion_rx[5] = {17, 17, 17, 17, 17};                     //direccion de recepcion.
 
 #include "Librerias/nRF24L01_2.h"
+unsigned char dato_serial = 0;
+//char texto[20];
 //END //////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////// DECLARACION DE VARIABLES
+#define LED PORTAbits.RA5
 char procesa[30];
-char trama[30];
 char trama[30];
 char puntero = 0;
 char datorx;
 char flag_rx = 0;
+unsigned char texto[20];
 
 //END //////////////////////////////////////////////////////////////////////////
 
@@ -112,27 +116,29 @@ void procesarx()
 
 ////////////////////////////////////////////////////////////////////////////////
 // FUNCION DE INTERRUPCION
-void interrupt INTERRUPT_InterruptManager (void)
-{
-    if (RCIF == 1)                                                              //Si presenta una interrupcion en recepcion UART
-    {
-        datorx = EUSART1_Read();                                                //lee el dato
-        trama[puntero] = datorx;                                                //lo almacena en la trama
-        puntero++;                                                              //incrementa el contador de trama
-        if(puntero >= 30) puntero = 0;                                          //si llegan mas de 30 datos erroneos inicia el almacenamiento
-        if(datorx == '/')                                                       //Si llega el fin de la trama
-        {
-            RCIE = 0;                                                           //deshabilita la interrupcion
-            flag_rx = 1;                                                        //activa la bandera de que hay una trama valida
-        }
-        RCIF = 0;
-    }
-}
+//void interrupt INTERRUPT_InterruptManager (void)
+//{
+//    if (RCIF == 1)                                                              //Si presenta una interrupcion en recepcion UART
+//    {
+//        datorx = EUSART1_Read();                                                //lee el dato
+//        trama[puntero] = datorx;                                                //lo almacena en la trama
+//        puntero++;                                                              //incrementa el contador de trama
+//        if(puntero >= 30) puntero = 0;                                          //si llegan mas de 30 datos erroneos inicia el almacenamiento
+//        if(datorx == '/')                                                       //Si llega el fin de la trama
+//        {
+//            RCIE = 0;                                                           //deshabilita la interrupcion
+//            flag_rx = 1;                                                        //activa la bandera de que hay una trama valida
+//        }
+//        RCIF = 0;
+//    }
+//}
 //END //////////////////////////////////////////////////////////////////////////
 
 /*
                          Main application
  */
+
+
 
 void main(void)
 {
@@ -160,24 +166,46 @@ void main(void)
     ANSELB = 0b00000000;
     ANSELC = 0x00;                                                              //Todo el puerto C lo hace digital
 
-    INTCON = 0b01000000;                                                        //Habilita interrupciones de perifericos
-    RCIF = 0;                                                                   //Limpia bandera interrupcion serial
-    RCIE = 1;                                                                   //Habilita la interrupcion serial
-    GIE = 1;                                                                    //Autoriza todas las interrupciones programadas 
+//    INTCON = 0b01000000;                                                        //Habilita interrupciones de perifericos
+//    RCIF = 0;                                                                   //Limpia bandera interrupcion serial
+//    RCIE = 1;                                                                   //Habilita la interrupcion serial
+//    GIE = 1;                                                                    //Autoriza todas las interrupciones programadas 
+    
+    LED = 1;
+    __delay_ms(2000);
+    LED = 0;
+    
+    //INICIAMOS EL MODULO NRF24L01
+    spi_s_init();
+//    nrF2401_init_TX(17);                                                        //incicializa transmision por el canal 17
+    nrF2401_init_RX(17);                                                        //Inicializa recepcion por el canal 17
+    ////////////////////////////////////////////////////////////////////////////
 
     while (1)
     {
         // Add your application code
         
-        if (flag_rx == 1)
         {
-            procesarx();                                                        //Llama el procedimiento de procesar la trama
-            puntero = 0;                                                        //Inicializa el conteo
-            memset (trama, 0, 30);                                              //Limpia la trama
-            flag_rx = 0;
-            RCIF = 0;                                                           //Limpia la bandera de la interrupcion
-            RCIE = 1;                                                           //Habilita la interrupcion serial
+        
+        if(nrf2401_haydatos() == 1)                                             //Recibe datos del modulo NRF2401
+        {
+            dato_serial = nrf2401_recibe();
+            LED = dato_serial;
         }
+
+   
+        __delay_ms(100);
+    }
+        
+//        if (flag_rx == 1)
+//        {
+//            procesarx();                                                        //Llama el procedimiento de procesar la trama
+//            puntero = 0;                                                        //Inicializa el conteo
+//            memset (trama, 0, 30);                                              //Limpia la trama
+//            flag_rx = 0;
+//            RCIF = 0;                                                           //Limpia la bandera de la interrupcion
+//            RCIE = 1;                                                           //Habilita la interrupcion serial
+//        }
     }
 }
 /**

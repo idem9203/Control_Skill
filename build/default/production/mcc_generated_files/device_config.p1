@@ -1,85 +1,86 @@
-Version 3.2 HI-TECH Software Intermediate Code
+Version 4.0 HI-TECH Software Intermediate Code
 "50 mcc_generated_files/device_config.c
-[p x PLLSEL=PLL3X ]
+[p x PLLSEL  =  PLL3X     ]
 "51
-[p x CFGPLLEN=ON ]
+[p x CFGPLLEN  =  ON     ]
 "52
-[p x CPUDIV=NOCLKDIV ]
+[p x CPUDIV  =  NOCLKDIV     ]
 "53
-[p x LS48MHZ=SYS48X8 ]
+[p x LS48MHZ  =  SYS48X8     ]
 "56
-[p x FOSC=HSH ]
+[p x FOSC  =  HSH     ]
 "57
-[p x PCLKEN=ON ]
+[p x PCLKEN  =  ON     ]
 "58
-[p x FCMEN=OFF ]
+[p x FCMEN  =  OFF     ]
 "59
-[p x IESO=OFF ]
+[p x IESO  =  OFF     ]
 "62
-[p x nPWRTEN=ON ]
+[p x nPWRTEN  =  ON     ]
 "63
-[p x BOREN=SBORDIS ]
+[p x BOREN  =  SBORDIS     ]
 "64
-[p x BORV=190 ]
+[p x BORV  =  190     ]
 "65
-[p x nLPBOR=OFF ]
+[p x nLPBOR  =  OFF     ]
 "68
-[p x WDTEN=OFF ]
+[p x WDTEN  =  OFF     ]
 "69
-[p x WDTPS=32768 ]
+[p x WDTPS  =  32768     ]
 "72
-[p x CCP2MX=RC1 ]
+[p x CCP2MX  =  RC1     ]
 "73
-[p x PBADEN=OFF ]
+[p x PBADEN  =  OFF     ]
 "74
-[p x T3CMX=RC0 ]
+[p x T3CMX  =  RC0     ]
 "75
-[p x SDOMX=RB3 ]
+[p x SDOMX  =  RB3     ]
 "76
-[p x MCLRE=ON ]
+[p x MCLRE  =  ON     ]
 "79
-[p x STVREN=ON ]
+[p x STVREN  =  ON     ]
 "80
-[p x LVP=ON ]
+[p x LVP  =  ON     ]
 "81
-[p x ICPRT=OFF ]
+[p x ICPRT  =  OFF     ]
 "82
-[p x XINST=OFF ]
+[p x XINST  =  OFF     ]
 "83
-[p x DEBUG=OFF ]
+[p x DEBUG  =  OFF     ]
 "86
-[p x CP0=OFF ]
+[p x CP0  =  OFF     ]
 "87
-[p x CP1=OFF ]
+[p x CP1  =  OFF     ]
 "88
-[p x CP2=OFF ]
+[p x CP2  =  OFF     ]
 "89
-[p x CP3=OFF ]
+[p x CP3  =  OFF     ]
 "92
-[p x CPB=OFF ]
+[p x CPB  =  OFF     ]
 "93
-[p x CPD=OFF ]
+[p x CPD  =  OFF     ]
 "96
-[p x WRT0=OFF ]
+[p x WRT0  =  OFF     ]
 "97
-[p x WRT1=OFF ]
+[p x WRT1  =  OFF     ]
 "98
-[p x WRT2=OFF ]
+[p x WRT2  =  OFF     ]
 "99
-[p x WRT3=OFF ]
+[p x WRT3  =  OFF     ]
 "102
-[p x WRTC=OFF ]
+[p x WRTC  =  OFF     ]
 "103
-[p x WRTB=OFF ]
+[p x WRTB  =  OFF     ]
 "104
-[p x WRTD=OFF ]
+[p x WRTD  =  OFF     ]
 "107
-[p x EBTR0=OFF ]
+[p x EBTR0  =  OFF     ]
 "108
-[p x EBTR1=OFF ]
+[p x EBTR1  =  OFF     ]
 "109
-[p x EBTR2=OFF ]
+[p x EBTR2  =  OFF     ]
 "110
-[p x EBTR3=OFF ]
+[p x EBTR3  =  OFF     ]
 "113
-[p x EBTRB=OFF ]
+[; ;mcc_generated_files/device_config.c: 113: 
+[p x EBTRB  =  OFF     ]
