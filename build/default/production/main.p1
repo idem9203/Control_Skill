@@ -1479,177 +1479,200 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _dato_serial
 -> -> 0 `i `uc
 ]
-"81
-[; ;main.c: 81: char procesa[30];
-[v _procesa `uc ~T0 @X0 -> 30 `i e ]
 "82
-[; ;main.c: 82: char trama[30];
-[v _trama `uc ~T0 @X0 -> 30 `i e ]
+[; ;main.c: 82: char procesa[30];
+[v _procesa `uc ~T0 @X0 -> 30 `i e ]
 "83
-[; ;main.c: 83: char puntero = 0;
+[; ;main.c: 83: char trama[30];
+[v _trama `uc ~T0 @X0 -> 30 `i e ]
+"84
+[; ;main.c: 84: char puntero = 0;
 [v _puntero `uc ~T0 @X0 1 e ]
 [i _puntero
 -> -> 0 `i `uc
 ]
-"84
-[; ;main.c: 84: char datorx;
-[v _datorx `uc ~T0 @X0 1 e ]
 "85
-[; ;main.c: 85: char flag_rx = 0;
+[; ;main.c: 85: char datorx;
+[v _datorx `uc ~T0 @X0 1 e ]
+"86
+[; ;main.c: 86: char flag_rx = 0;
 [v _flag_rx `uc ~T0 @X0 1 e ]
 [i _flag_rx
 -> -> 0 `i `uc
 ]
-"86
-[; ;main.c: 86: unsigned char texto[20];
+"87
+[; ;main.c: 87: unsigned char texto[20];
 [v _texto `uc ~T0 @X0 -> 20 `i e ]
-"92
-[; ;main.c: 92: void procesarx()
-[v _procesarx `(v ~T0 @X0 1 ef ]
 "93
-[; ;main.c: 93: {
+[; ;main.c: 93: void procesarx()
+[v _procesarx `(v ~T0 @X0 1 ef ]
+"94
+[; ;main.c: 94: {
 {
 [e :U _procesarx ]
 [f ]
-"94
-[; ;main.c: 94:     if(strstr(trama,"cier="))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 2C -> -> 0 `i `*uc 653  ]
 "95
-[; ;main.c: 95:     {
-{
+[; ;main.c: 95:     if(strstr(trama,"cier="))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 2C -> -> 0 `i `*uc 653  ]
 "96
-[; ;main.c: 96:         if(strstr(trama,"on"))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 4C -> -> 0 `i `*uc 654  ]
-"97
-[; ;main.c: 97:         {
+[; ;main.c: 96:     {
 {
+"97
+[; ;main.c: 97:         if(strstr(trama,"on"))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 4C -> -> 0 `i `*uc 654  ]
 "98
-[; ;main.c: 98:             LATB0 = 1;
-[e = _LATB0 -> -> 1 `i `b ]
+[; ;main.c: 98:         {
+{
 "99
-[; ;main.c: 99:             _delay((unsigned long)((300)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 99:             LATB0 = 1;
+[e = _LATB0 -> -> 1 `i `b ]
 "100
-[; ;main.c: 100:             LATB0 = 0;
-[e = _LATB0 -> -> 0 `i `b ]
+[; ;main.c: 100:             _delay((unsigned long)((300)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "101
-[; ;main.c: 101:         }
+[; ;main.c: 101:             LATB0 = 0;
+[e = _LATB0 -> -> 0 `i `b ]
+"102
+[; ;main.c: 102:         }
 }
 [e $U 655  ]
-"102
-[; ;main.c: 102:         else LATB0 = 0;
+"103
+[; ;main.c: 103:         else LATB0 = 0;
 [e :U 654 ]
 [e = _LATB0 -> -> 0 `i `b ]
 [e :U 655 ]
-"103
-[; ;main.c: 103:     }
+"104
+[; ;main.c: 104:     }
 }
 [e :U 653 ]
-"104
-[; ;main.c: 104:     if(strstr(trama,"aper="))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 6C -> -> 0 `i `*uc 656  ]
 "105
-[; ;main.c: 105:     {
-{
+[; ;main.c: 105:     if(strstr(trama,"aper="))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 6C -> -> 0 `i `*uc 656  ]
 "106
-[; ;main.c: 106:         if(strstr(trama,"on"))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 8C -> -> 0 `i `*uc 657  ]
-"107
-[; ;main.c: 107:         {
+[; ;main.c: 106:     {
 {
+"107
+[; ;main.c: 107:         if(strstr(trama,"on"))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 8C -> -> 0 `i `*uc 657  ]
 "108
-[; ;main.c: 108:             LATA5 = 1;
-[e = _LATA5 -> -> 1 `i `b ]
+[; ;main.c: 108:         {
+{
 "109
-[; ;main.c: 109:             _delay((unsigned long)((300)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 109:             LATA5 = 1;
+[e = _LATA5 -> -> 1 `i `b ]
 "110
-[; ;main.c: 110:             LATA5 = 0;
-[e = _LATA5 -> -> 0 `i `b ]
+[; ;main.c: 110:             _delay((unsigned long)((300)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "111
-[; ;main.c: 111:         }
+[; ;main.c: 111:             LATA5 = 0;
+[e = _LATA5 -> -> 0 `i `b ]
+"112
+[; ;main.c: 112:         }
 }
 [e $U 658  ]
-"112
-[; ;main.c: 112:         else LATA5 = 0;
+"113
+[; ;main.c: 113:         else LATA5 = 0;
 [e :U 657 ]
 [e = _LATA5 -> -> 0 `i `b ]
 [e :U 658 ]
-"113
-[; ;main.c: 113:     }
+"114
+[; ;main.c: 114:     }
 }
 [e :U 656 ]
-"114
-[; ;main.c: 114: }
+"115
+[; ;main.c: 115: }
 [e :UE 652 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"143
-[; ;main.c: 143: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
 "144
-[; ;main.c: 144: {
+[; ;main.c: 144: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"145
+[; ;main.c: 145: {
 {
 [e :U _main ]
 [f ]
-"146
-[; ;main.c: 146:     SYSTEM_Initialize();
+"147
+[; ;main.c: 147:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"165
-[; ;main.c: 165:     ANSELA = 0b00000111;
-[e = _ANSELA -> -> 7 `i `uc ]
 "166
-[; ;main.c: 166:     ANSELB = 0b00000000;
-[e = _ANSELB -> -> 0 `i `uc ]
+[; ;main.c: 166:     ANSELA = 0b00000111;
+[e = _ANSELA -> -> 7 `i `uc ]
 "167
-[; ;main.c: 167:     ANSELC = 0x00;
+[; ;main.c: 167:     ANSELB = 0b00000000;
+[e = _ANSELB -> -> 0 `i `uc ]
+"168
+[; ;main.c: 168:     ANSELC = 0x00;
 [e = _ANSELC -> -> 0 `i `uc ]
-"174
-[; ;main.c: 174:     PORTAbits.RA5 = 1;
-[e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
 "175
-[; ;main.c: 175:     _delay((unsigned long)((2000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 175:     PORTAbits.RA5 = 1;
+[e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
 "176
-[; ;main.c: 176:     PORTAbits.RA5 = 0;
+[; ;main.c: 176:     _delay((unsigned long)((2000)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"177
+[; ;main.c: 177:     PORTAbits.RA5 = 0;
 [e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
-"179
-[; ;main.c: 179:     spi_s_init();
+"180
+[; ;main.c: 180:     spi_s_init();
 [e ( _spi_s_init ..  ]
 "181
-[; ;main.c: 181:     nrF2401_init_RX(17);
-[e ( _nrF2401_init_RX (1 -> -> 17 `i `uc ]
-"184
-[; ;main.c: 184:     while (1)
-[e :U 661 ]
+[; ;main.c: 181:     nrF2401_init_TX(17);
+[e ( _nrF2401_init_TX (1 -> -> 17 `i `uc ]
 "185
-[; ;main.c: 185:     {
-{
-"188
-[; ;main.c: 188:         {
+[; ;main.c: 185:     while (1)
+[e :U 661 ]
+"186
+[; ;main.c: 186:     {
 {
 "190
-[; ;main.c: 190:         if(nrf2401_haydatos() == 1)
-[e $ ! == -> ( _nrf2401_haydatos ..  `i -> 1 `i 663  ]
+[; ;main.c: 190:         if(PORTAbits.RA3 == 1)
+[e $ ! == -> . . _PORTAbits 0 3 `i -> 1 `i 663  ]
 "191
 [; ;main.c: 191:         {
 {
-"192
-[; ;main.c: 192:             dato_serial = nrf2401_recibe();
-[e = _dato_serial -> ( _nrf2401_recibe ..  `uc ]
-"193
-[; ;main.c: 193:             PORTAbits.RA5 = dato_serial;
-[e = . . _PORTAbits 0 5 _dato_serial ]
 "194
-[; ;main.c: 194:         }
+[; ;main.c: 194:             PORTAbits.RA5 = ~PORTAbits.RA5;
+[e = . . _PORTAbits 0 5 -> ~ -> . . _PORTAbits 0 5 `i `uc ]
+"195
+[; ;main.c: 195:             _delay((unsigned long)((300)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"196
+[; ;main.c: 196:         }
 }
 [e :U 663 ]
-"197
-[; ;main.c: 197:         _delay((unsigned long)((100)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "198
-[; ;main.c: 198:     }
+[; ;main.c: 198:         if(PORTAbits.RA5 == 1)
+[e $ ! == -> . . _PORTAbits 0 5 `i -> 1 `i 664  ]
+"199
+[; ;main.c: 199:         {
+{
+"200
+[; ;main.c: 200:             dato_serial = 1;
+[e = _dato_serial -> -> 1 `i `uc ]
+"201
+[; ;main.c: 201:             nrf2401_envia(dato_serial);
+[e ( _nrf2401_envia (1 _dato_serial ]
+"202
+[; ;main.c: 202:         }
 }
+[e $U 665  ]
+"203
+[; ;main.c: 203:         else
+[e :U 664 ]
+"204
+[; ;main.c: 204:         {
+{
+"205
+[; ;main.c: 205:             dato_serial = 0;
+[e = _dato_serial -> -> 0 `i `uc ]
+"206
+[; ;main.c: 206:             nrf2401_envia(dato_serial);
+[e ( _nrf2401_envia (1 _dato_serial ]
+"208
+[; ;main.c: 208:         }
+}
+[e :U 665 ]
 "209
 [; ;main.c: 209:     }
 }

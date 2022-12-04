@@ -78,6 +78,7 @@ unsigned char dato_serial = 0;
 ////////////////////////////////////////////////////////////////////////////////
 ////////// DECLARACION DE VARIABLES
 #define LED PORTAbits.RA5
+#define BUTTON PORTAbits.RA3
 char procesa[30];
 char trama[30];
 char puntero = 0;
@@ -177,35 +178,34 @@ void main(void)
     
     //INICIAMOS EL MODULO NRF24L01
     spi_s_init();
-//    nrF2401_init_TX(17);                                                        //incicializa transmision por el canal 17
-    nrF2401_init_RX(17);                                                        //Inicializa recepcion por el canal 17
+    nrF2401_init_TX(17);                                                        //incicializa transmision por el canal 17
+//    nrF2401_init_RX(17);                                                        //Inicializa recepcion por el canal 17
     ////////////////////////////////////////////////////////////////////////////
 
     while (1)
     {
         // Add your application code
         
+        //EJEMPLO ENVIO DE DATOS TX POR MODULO NRF24L01
+        if(BUTTON == 1) 
         {
-        
-        if(nrf2401_haydatos() == 1)                                             //Recibe datos del modulo NRF2401
-        {
-            dato_serial = nrf2401_recibe();
-            LED = dato_serial;
+//            dato_serial = ~dato_serial;
+//            nrf2401_envia(dato_serial);
+            LED = ~LED;
+            __delay_ms(300);
         }
-
-   
-        __delay_ms(100);
-    }
         
-//        if (flag_rx == 1)
-//        {
-//            procesarx();                                                        //Llama el procedimiento de procesar la trama
-//            puntero = 0;                                                        //Inicializa el conteo
-//            memset (trama, 0, 30);                                              //Limpia la trama
-//            flag_rx = 0;
-//            RCIF = 0;                                                           //Limpia la bandera de la interrupcion
-//            RCIE = 1;                                                           //Habilita la interrupcion serial
-//        }
+        if(LED == 1)
+        {
+            dato_serial = 1;
+            nrf2401_envia(dato_serial);
+        }
+        else 
+        {
+            dato_serial = 0;
+            nrf2401_envia(dato_serial);
+            
+        }
     }
 }
 /**

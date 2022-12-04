@@ -8304,6 +8304,7 @@ unsigned char dato_serial = 0;
 
 
 
+
 char procesa[30];
 char trama[30];
 char puntero = 0;
@@ -8338,12 +8339,12 @@ void procesarx()
         else LATA5 = 0;
     }
 }
-# 143 "main.c"
+# 144 "main.c"
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 165 "main.c"
+# 166 "main.c"
     ANSELA = 0b00000111;
     ANSELB = 0b00000000;
     ANSELC = 0x00;
@@ -8359,25 +8360,33 @@ void main(void)
 
 
     spi_s_init();
+    nrF2401_init_TX(17);
 
-    nrF2401_init_RX(17);
 
 
     while (1)
     {
 
 
+
+        if(PORTAbits.RA3 == 1)
         {
 
-        if(nrf2401_haydatos() == 1)
-        {
-            dato_serial = nrf2401_recibe();
-            PORTAbits.RA5 = dato_serial;
+
+            PORTAbits.RA5 = ~PORTAbits.RA5;
+            _delay((unsigned long)((300)*(48000000/4000.0)));
         }
 
+        if(PORTAbits.RA5 == 1)
+        {
+            dato_serial = 1;
+            nrf2401_envia(dato_serial);
+        }
+        else
+        {
+            dato_serial = 0;
+            nrf2401_envia(dato_serial);
 
-        _delay((unsigned long)((100)*(48000000/4000.0)));
-    }
-# 209 "main.c"
+        }
     }
 }

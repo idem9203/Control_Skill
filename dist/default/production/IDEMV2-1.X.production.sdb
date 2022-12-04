@@ -37,12 +37,10 @@ channel_FVRBuf2 31
 [v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
 "172
 [v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
-"184
-[v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
+"201
+[v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
 "218
 [v _get_Status get_Status `(uc  1 e 1 0 ]
-"240
-[v _nrf2401_haydatos nrf2401_haydatos `(uc  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\float.c
@@ -75,7 +73,7 @@ channel_FVRBuf2 31
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"143 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+"144 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "62 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -459,7 +457,7 @@ channel_FVRBuf2 31
 [v _direccion_tx direccion_tx `C[5]uc  1 e 5 0 ]
 "74
 [v _dato_serial dato_serial `uc  1 e 1 0 ]
-"82
+"83
 [v _trama trama `[30]uc  1 e 30 0 ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
@@ -475,7 +473,7 @@ channel_FVRBuf2 31
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"143 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+"144 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "210
@@ -485,51 +483,27 @@ channel_FVRBuf2 31
 {
 "38
 } 0
-"172
-[v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
+"151
+[v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
 {
-"174
-[v nrf2401_recibe@valor_ valor_ `uc  1 a 1 2 ]
-"181
+[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 wreg ]
+[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 wreg ]
+[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 4 ]
+"167
 } 0
-"240
-[v _nrf2401_haydatos nrf2401_haydatos `(uc  1 e 1 0 ]
+"135
+[v _flush_TX flush_TX `(v  1 e 1 0 ]
 {
-"244
+"139
 } 0
-"218
-[v _get_Status get_Status `(uc  1 e 1 0 ]
+"201
+[v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
 {
-"221
-} 0
-"99
-[v _nrf2401_read nrf2401_read `(uc  1 e 1 0 ]
-{
-[v nrf2401_read@reg reg `uc  1 a 1 wreg ]
-"101
-[v nrf2401_read@dato_ dato_ `uc  1 a 1 3 ]
-"99
-[v nrf2401_read@reg reg `uc  1 a 1 wreg ]
-[v nrf2401_read@reg reg `uc  1 a 1 2 ]
-"108
-} 0
-"40
-[v _spi_s_read spi_s_read `(uc  1 e 1 0 ]
-{
-"42
-[v spi_s_read@cont_s cont_s `uc  1 a 1 1 ]
-"43
-[v spi_s_read@dato_ dato_ `uc  1 a 1 0 ]
-"59
-} 0
-"184
-[v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
-{
-[v nrF2401_init_RX@canal canal `uc  1 a 1 wreg ]
-[v nrF2401_init_RX@canal canal `uc  1 a 1 wreg ]
-"186
-[v nrF2401_init_RX@canal canal `uc  1 a 1 8 ]
-"199
+[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
+[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
+"203
+[v nrF2401_init_TX@canal canal `uc  1 a 1 8 ]
+"215
 } 0
 "111
 [v _nrf2401_direccion_TX_RX nrf2401_direccion_TX_RX `(v  1 e 1 0 ]
