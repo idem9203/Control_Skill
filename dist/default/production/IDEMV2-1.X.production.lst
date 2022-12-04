@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Sun Dec 04 17:56:11 2022
+                                                                                               Sun Dec 04 17:58:30 2022
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1 
      1                           	processor	18F25K50
@@ -172,36 +172,36 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
    158                           ; #config settings
    159                           
    160                           	psect	cinit
-   161  000A24                     __pcinit:
+   161  000A26                     __pcinit:
    162                           	callstack 0
-   163  000A24                     start_initialization:
+   163  000A26                     start_initialization:
    164                           	callstack 0
-   165  000A24                     __initialization:
+   165  000A26                     __initialization:
    166                           	callstack 0
    167                           
    168                           ; Clear objects allocated to BANK0 (30 bytes)
-   169  000A24  EE00  F060         	lfsr	0,__pbssBANK0
-   170  000A28  0E1E               	movlw	30
-   171  000A2A                     clear_0:
-   172  000A2A  6AEE               	clrf	postinc0,c
-   173  000A2C  06E8               	decf	wreg,f,c
-   174  000A2E  E1FD               	bnz	clear_0
+   169  000A26  EE00  F060         	lfsr	0,__pbssBANK0
+   170  000A2A  0E1E               	movlw	30
+   171  000A2C                     clear_0:
+   172  000A2C  6AEE               	clrf	postinc0,c
+   173  000A2E  06E8               	decf	wreg,f,c
+   174  000A30  E1FD               	bnz	clear_0
    175                           
    176                           ; Clear objects allocated to COMRAM (63 bytes)
-   177  000A30  EE00  F001         	lfsr	0,__pbssCOMRAM
-   178  000A34  0E3F               	movlw	63
-   179  000A36                     clear_1:
-   180  000A36  6AEE               	clrf	postinc0,c
-   181  000A38  06E8               	decf	wreg,f,c
-   182  000A3A  E1FD               	bnz	clear_1
-   183  000A3C                     end_of_initialization:
+   177  000A32  EE00  F001         	lfsr	0,__pbssCOMRAM
+   178  000A36  0E3F               	movlw	63
+   179  000A38                     clear_1:
+   180  000A38  6AEE               	clrf	postinc0,c
+   181  000A3A  06E8               	decf	wreg,f,c
+   182  000A3C  E1FD               	bnz	clear_1
+   183  000A3E                     end_of_initialization:
    184                           	callstack 0
-   185  000A3C                     __end_of__initialization:
+   185  000A3E                     __end_of__initialization:
    186                           	callstack 0
-   187  000A3C  0E00               	movlw	low (__Lmediumconst shr (0+16))
-   188  000A3E  6EF8               	movwf	tblptru,c
-   189  000A40  0100               	movlb	0
-   190  000A42  EF0E  F004         	goto	_main	;jump to C main() function
+   187  000A3E  0E00               	movlw	low (__Lmediumconst shr (0+16))
+   188  000A40  6EF8               	movwf	tblptru,c
+   189  000A42  0100               	movlb	0
+   190  000A44  EF0E  F004         	goto	_main	;jump to C main() function
    191                           
    192                           	psect	bssCOMRAM
    193  000001                     __pbssCOMRAM:
@@ -342,7 +342,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
    328                           	callstack 27
    329  00081C                     
    330                           ;main.c: 147:     SYSTEM_Initialize();
-   331  00081C  EC76  F005         	call	_SYSTEM_Initialize	;wreg free
+   331  00081C  EC77  F005         	call	_SYSTEM_Initialize	;wreg free
    332  000820                     
    333                           ;main.c: 166:     ANSELA = 0b00000111;
    334  000820  0E07               	movlw	7
@@ -364,12 +364,12 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
    350  00082E  8A80               	bsf	128,5,c	;volatile
    351  000830                     
    352                           ; BSR set to: 15
-   353                           ;main.c: 176:     _delay((unsigned long)((2000)*(48000000/4000.0)));
-   354  000830  0E7A               	movlw	122
+   353                           ;main.c: 176:     _delay((unsigned long)((500)*(48000000/4000.0)));
+   354  000830  0E1F               	movlw	31
    355  000832  6E4A               	movwf	(??_main+1)^0,c
-   356  000834  0EC1               	movlw	193
+   356  000834  0E71               	movlw	113
    357  000836  6E49               	movwf	??_main^0,c
-   358  000838  0E82               	movlw	130
+   358  000838  0E1E               	movlw	30
    359  00083A                     u307:
    360  00083A  2EE8               	decfsz	wreg,f,c
    361  00083C  D7FE               	bra	u307
@@ -377,1330 +377,1331 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
    363  000840  D7FC               	bra	u307
    364  000842  2E4A               	decfsz	(??_main+1)^0,f,c
    365  000844  D7FA               	bra	u307
-   366  000846                     
-   367                           ;main.c: 177:     PORTAbits.RA5 = 0;
-   368  000846  9A80               	bcf	128,5,c	;volatile
-   369  000848                     
-   370                           ;main.c: 180:     spi_s_init();
-   371  000848  EC4D  F005         	call	_spi_s_init	;wreg free
-   372  00084C                     
-   373                           ;main.c: 181:     nrF2401_init_TX(17);
-   374  00084C  0E11               	movlw	17
-   375  00084E  EC65  F004         	call	_nrF2401_init_TX
-   376  000852                     l1516:
-   377                           
-   378                           ;main.c: 186:     {;main.c: 190:         if(PORTAbits.RA3 == 1)
-   379  000852  A680               	btfss	128,3,c	;volatile
-   380  000854  EF2E  F004         	goto	u271
-   381  000858  EF30  F004         	goto	u270
-   382  00085C                     u271:
-   383  00085C  EF4E  F004         	goto	l1522
-   384  000860                     u270:
-   385  000860                     
-   386                           ;main.c: 191:         {;main.c: 194:             PORTAbits.RA5 = ~PORTAbits.RA5;
-   387  000860  BA80               	btfsc	128,5,c	;volatile
-   388  000862  EF35  F004         	goto	u281
-   389  000866  EF38  F004         	goto	u280
-   390  00086A                     u281:
-   391  00086A  0E01               	movlw	1
-   392  00086C  EF39  F004         	goto	u286
-   393  000870                     u280:
-   394  000870  0E00               	movlw	0
-   395  000872                     u286:
-   396  000872  0AFF               	xorlw	255
-   397  000874  6E49               	movwf	??_main^0,c
-   398  000876  3A49               	swapf	??_main^0,f,c
-   399  000878  4649               	rlncf	??_main^0,f,c
-   400  00087A  5080               	movf	128,w,c	;volatile
-   401  00087C  1849               	xorwf	??_main^0,w,c
-   402  00087E  0BDF               	andlw	-33
-   403  000880  1849               	xorwf	??_main^0,w,c
-   404  000882  6E80               	movwf	128,c	;volatile
-   405  000884                     
-   406                           ;main.c: 195:             _delay((unsigned long)((300)*(48000000/4000.0)));
-   407  000884  0E13               	movlw	19
-   408  000886  6E4A               	movwf	(??_main+1)^0,c
-   409  000888  0E44               	movlw	68
-   410  00088A  6E49               	movwf	??_main^0,c
-   411  00088C  0E44               	movlw	68
-   412  00088E                     u317:
-   413  00088E  2EE8               	decfsz	wreg,f,c
-   414  000890  D7FE               	bra	u317
-   415  000892  2E49               	decfsz	??_main^0,f,c
-   416  000894  D7FC               	bra	u317
-   417  000896  2E4A               	decfsz	(??_main+1)^0,f,c
-   418  000898  D7FA               	bra	u317
-   419  00089A  D000               	nop2	
-   420  00089C                     l1522:
-   421                           
-   422                           ;main.c: 198:         if(PORTAbits.RA5 == 1)
-   423  00089C  AA80               	btfss	128,5,c	;volatile
-   424  00089E  EF53  F004         	goto	u291
-   425  0008A2  EF55  F004         	goto	u290
-   426  0008A6                     u291:
-   427  0008A6  EF5C  F004         	goto	l1528
-   428  0008AA                     u290:
-   429  0008AA                     
-   430                           ;main.c: 199:         {;main.c: 200:             dato_serial = 1;
-   431  0008AA  0E01               	movlw	1
-   432  0008AC  6E20               	movwf	_dato_serial^0,c
-   433  0008AE                     
-   434                           ;main.c: 201:             nrf2401_envia(dato_serial);
-   435  0008AE  0E01               	movlw	1
-   436  0008B0  ECE0  F004         	call	_nrf2401_envia
-   437                           
-   438                           ;main.c: 202:         }
-   439  0008B4  EF29  F004         	goto	l1516
-   440  0008B8                     l1528:
-   441                           
-   442                           ;main.c: 204:         {;main.c: 205:             dato_serial = 0;
-   443  0008B8  0E00               	movlw	0
-   444  0008BA  6E20               	movwf	_dato_serial^0,c
-   445  0008BC                     
-   446                           ;main.c: 206:             nrf2401_envia(dato_serial);
-   447  0008BC  0E00               	movlw	0
-   448  0008BE  ECE0  F004         	call	_nrf2401_envia
-   449  0008C2  EF29  F004         	goto	l1516
-   450  0008C6  EF00  F000         	goto	start
-   451  0008CA                     __end_of_main:
-   452                           	callstack 0
-   453                           
-   454 ;; *************** function _spi_s_init *****************
-   455 ;; Defined at:
-   456 ;;		line 23 in file "./Librerias/nRF24L01_2.h"
-   457 ;; Parameters:    Size  Location     Type
-   458 ;;		None
-   459 ;; Auto vars:     Size  Location     Type
-   460 ;;		None
-   461 ;; Return value:  Size  Location     Type
-   462 ;;                  1    wreg      void 
-   463 ;; Registers used:
-   464 ;;		None
-   465 ;; Tracked objects:
-   466 ;;		On entry : 0/0
-   467 ;;		On exit  : 0/0
-   468 ;;		Unchanged: 0/0
-   469 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-   470 ;;      Params:         0       0       0       0       0       0       0       0       0
-   471 ;;      Locals:         0       0       0       0       0       0       0       0       0
-   472 ;;      Temps:          0       0       0       0       0       0       0       0       0
-   473 ;;      Totals:         0       0       0       0       0       0       0       0       0
-   474 ;;Total ram usage:        0 bytes
-   475 ;; Hardware stack levels used: 1
-   476 ;; This function calls:
-   477 ;;		Nothing
-   478 ;; This function is called by:
-   479 ;;		_main
-   480 ;; This function uses a non-reentrant model
-   481 ;;
-   482                           
-   483                           	psect	text1
-   484  000A9A                     __ptext1:
-   485                           	callstack 0
-   486  000A9A                     _spi_s_init:
-   487                           	callstack 30
-   488  000A9A                     
-   489                           ;./Librerias/nRF24L01_2.h: 26:     TRISCbits.TRISC1 = 0;
-   490  000A9A  9294               	bcf	148,1,c	;volatile
-   491                           
-   492                           ;./Librerias/nRF24L01_2.h: 27:     TRISBbits.TRISB2 = 0;
-   493  000A9C  9493               	bcf	147,2,c	;volatile
-   494                           
-   495                           ;./Librerias/nRF24L01_2.h: 28:     TRISCbits.TRISC2 = 0;
-   496  000A9E  9494               	bcf	148,2,c	;volatile
-   497                           
-   498                           ;./Librerias/nRF24L01_2.h: 29:     TRISBbits.TRISB3 = 1;
-   499  000AA0  8693               	bsf	147,3,c	;volatile
-   500                           
-   501                           ;./Librerias/nRF24L01_2.h: 30:     TRISBbits.TRISB1 = 0;
-   502  000AA2  9293               	bcf	147,1,c	;volatile
-   503                           
-   504                           ;./Librerias/nRF24L01_2.h: 31:     TRISCbits.TRISC0 = 1;
-   505  000AA4  8094               	bsf	148,0,c	;volatile
-   506                           
-   507                           ;./Librerias/nRF24L01_2.h: 33:     LATBbits.LATB2 = 0;
-   508  000AA6  948A               	bcf	138,2,c	;volatile
-   509                           
-   510                           ;./Librerias/nRF24L01_2.h: 34:     LATCbits.LATC2 = 0;
-   511  000AA8  948B               	bcf	139,2,c	;volatile
-   512                           
-   513                           ;./Librerias/nRF24L01_2.h: 35:     LATCbits.LATC1 = 0;
-   514  000AAA  928B               	bcf	139,1,c	;volatile
-   515                           
-   516                           ;./Librerias/nRF24L01_2.h: 36:     LATBbits.LATB1 = 0;
-   517  000AAC  928A               	bcf	138,1,c	;volatile
-   518  000AAE  0012               	return		;funcret
-   519  000AB0                     __end_of_spi_s_init:
-   520                           	callstack 0
-   521                           
-   522 ;; *************** function _nrf2401_envia *****************
-   523 ;; Defined at:
-   524 ;;		line 151 in file "./Librerias/nRF24L01_2.h"
-   525 ;; Parameters:    Size  Location     Type
-   526 ;;  dato_tx         1    wreg     unsigned char 
-   527 ;; Auto vars:     Size  Location     Type
-   528 ;;  dato_tx         1    4[COMRAM] unsigned char 
-   529 ;;  cont_           1    0        unsigned char 
-   530 ;; Return value:  Size  Location     Type
-   531 ;;                  1    wreg      void 
-   532 ;; Registers used:
-   533 ;;		wreg, status,2, status,0, cstack
-   534 ;; Tracked objects:
-   535 ;;		On entry : 0/0
-   536 ;;		On exit  : 0/0
-   537 ;;		Unchanged: 0/0
-   538 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-   539 ;;      Params:         0       0       0       0       0       0       0       0       0
-   540 ;;      Locals:         1       0       0       0       0       0       0       0       0
-   541 ;;      Temps:          0       0       0       0       0       0       0       0       0
-   542 ;;      Totals:         1       0       0       0       0       0       0       0       0
-   543 ;;Total ram usage:        1 bytes
-   544 ;; Hardware stack levels used: 1
-   545 ;; Hardware stack levels required when called: 3
-   546 ;; This function calls:
-   547 ;;		_flush_TX
-   548 ;;		_nrf2401_write
-   549 ;;		_spi_s_write
-   550 ;; This function is called by:
-   551 ;;		_main
-   552 ;;		_nrf2401_envia_Text
-   553 ;; This function uses a non-reentrant model
-   554 ;;
-   555                           
-   556                           	psect	text2
-   557  0009C0                     __ptext2:
-   558                           	callstack 0
-   559  0009C0                     _nrf2401_envia:
-   560                           	callstack 27
-   561                           
-   562                           ;incstack = 0
-   563                           ;nrf2401_envia@dato_tx stored from wreg
-   564  0009C0  6E44               	movwf	nrf2401_envia@dato_tx^0,c
-   565  0009C2                     
-   566                           ;./Librerias/nRF24L01_2.h: 155:     flush_TX();
-   567  0009C2  EC6D  F005         	call	_flush_TX	;wreg free
-   568  0009C6                     
-   569                           ;./Librerias/nRF24L01_2.h: 156:     nrf2401_write(0x00, 0x02 +0x04 + 0x08);
-   570  0009C6  0E0E               	movlw	14
-   571  0009C8  6E42               	movwf	nrf2401_write@valor^0,c
-   572  0009CA  0E00               	movlw	0
-   573  0009CC  EC33  F005         	call	_nrf2401_write
-   574  0009D0                     
-   575                           ;./Librerias/nRF24L01_2.h: 159:     LATCbits.LATC2 = 0;
-   576  0009D0  948B               	bcf	139,2,c	;volatile
-   577  0009D2                     
-   578                           ;./Librerias/nRF24L01_2.h: 160:     spi_s_write(0xA0);
-   579  0009D2  0EA0               	movlw	160
-   580  0009D4  EC99  F004         	call	_spi_s_write
-   581  0009D8                     
-   582                           ;./Librerias/nRF24L01_2.h: 161:     spi_s_write(dato_tx);
-   583  0009D8  5044               	movf	nrf2401_envia@dato_tx^0,w,c
-   584  0009DA  EC99  F004         	call	_spi_s_write
-   585  0009DE                     
-   586                           ;./Librerias/nRF24L01_2.h: 162:     LATCbits.LATC2 = 1;
-   587  0009DE  848B               	bsf	139,2,c	;volatile
-   588  0009E0                     
-   589                           ;./Librerias/nRF24L01_2.h: 163:     LATBbits.LATB1 = 1;
-   590  0009E0  828A               	bsf	138,1,c	;volatile
-   591  0009E2                     
-   592                           ;./Librerias/nRF24L01_2.h: 164:     _delay((unsigned long)((15)*(48000000/4000000.0)));
-   593  0009E2  0E3C               	movlw	60
-   594  0009E4                     u327:
-   595  0009E4  2EE8               	decfsz	wreg,f,c
-   596  0009E6  D7FE               	bra	u327
-   597  0009E8                     
-   598                           ;./Librerias/nRF24L01_2.h: 165:     LATBbits.LATB1 = 0;
-   599  0009E8  928A               	bcf	138,1,c	;volatile
-   600  0009EA                     
-   601                           ;./Librerias/nRF24L01_2.h: 166:     nrf2401_write(0x00, 0x01 + 0x02 +0x04 + 0x08);
-   602  0009EA  0E0F               	movlw	15
-   603  0009EC  6E42               	movwf	nrf2401_write@valor^0,c
-   604  0009EE  0E00               	movlw	0
-   605  0009F0  EC33  F005         	call	_nrf2401_write
-   606  0009F4  0012               	return		;funcret
-   607  0009F6                     __end_of_nrf2401_envia:
-   608                           	callstack 0
-   609                           
-   610 ;; *************** function _flush_TX *****************
-   611 ;; Defined at:
-   612 ;;		line 135 in file "./Librerias/nRF24L01_2.h"
-   613 ;; Parameters:    Size  Location     Type
-   614 ;;		None
-   615 ;; Auto vars:     Size  Location     Type
-   616 ;;		None
-   617 ;; Return value:  Size  Location     Type
-   618 ;;                  1    wreg      void 
-   619 ;; Registers used:
-   620 ;;		wreg, status,2, status,0, cstack
-   621 ;; Tracked objects:
-   622 ;;		On entry : 0/0
-   623 ;;		On exit  : 0/0
-   624 ;;		Unchanged: 0/0
-   625 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-   626 ;;      Params:         0       0       0       0       0       0       0       0       0
-   627 ;;      Locals:         0       0       0       0       0       0       0       0       0
-   628 ;;      Temps:          0       0       0       0       0       0       0       0       0
-   629 ;;      Totals:         0       0       0       0       0       0       0       0       0
-   630 ;;Total ram usage:        0 bytes
-   631 ;; Hardware stack levels used: 1
-   632 ;; Hardware stack levels required when called: 2
-   633 ;; This function calls:
-   634 ;;		_nrf2401_comando
-   635 ;;		_nrf2401_write
-   636 ;; This function is called by:
-   637 ;;		_nrf2401_envia
-   638 ;;		_nrf2401_envia_Text
-   639 ;; This function uses a non-reentrant model
-   640 ;;
-   641                           
-   642                           	psect	text3
-   643  000ADA                     __ptext3:
-   644                           	callstack 0
-   645  000ADA                     _flush_TX:
-   646                           	callstack 27
-   647  000ADA                     
-   648                           ;./Librerias/nRF24L01_2.h: 137:     nrf2401_write(0x07, 0x70);
-   649  000ADA  0E70               	movlw	112
-   650  000ADC  6E42               	movwf	nrf2401_write@valor^0,c
-   651  000ADE  0E07               	movlw	7
-   652  000AE0  EC33  F005         	call	_nrf2401_write
-   653                           
-   654                           ;./Librerias/nRF24L01_2.h: 138:     nrf2401_comando(0xE2);
-   655  000AE4  0EE2               	movlw	226
-   656  000AE6  EC63  F005         	call	_nrf2401_comando
-   657  000AEA  0012               	return		;funcret
-   658  000AEC                     __end_of_flush_TX:
-   659                           	callstack 0
-   660                           
-   661 ;; *************** function _nrF2401_init_TX *****************
-   662 ;; Defined at:
-   663 ;;		line 201 in file "./Librerias/nRF24L01_2.h"
-   664 ;; Parameters:    Size  Location     Type
-   665 ;;  canal           1    wreg     unsigned char 
-   666 ;; Auto vars:     Size  Location     Type
-   667 ;;  canal           1    8[COMRAM] unsigned char 
-   668 ;; Return value:  Size  Location     Type
-   669 ;;                  1    wreg      void 
-   670 ;; Registers used:
-   671 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
-   672 ;; Tracked objects:
-   673 ;;		On entry : 0/0
-   674 ;;		On exit  : 0/0
-   675 ;;		Unchanged: 0/0
-   676 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-   677 ;;      Params:         0       0       0       0       0       0       0       0       0
-   678 ;;      Locals:         1       0       0       0       0       0       0       0       0
-   679 ;;      Temps:          0       0       0       0       0       0       0       0       0
-   680 ;;      Totals:         1       0       0       0       0       0       0       0       0
-   681 ;;Total ram usage:        1 bytes
-   682 ;; Hardware stack levels used: 1
-   683 ;; Hardware stack levels required when called: 3
-   684 ;; This function calls:
-   685 ;;		_flush_TX_RX
-   686 ;;		_nrf2401_direccion_TX_RX
-   687 ;;		_nrf2401_write
-   688 ;; This function is called by:
-   689 ;;		_main
-   690 ;; This function uses a non-reentrant model
-   691 ;;
-   692                           
-   693                           	psect	text4
-   694  0008CA                     __ptext4:
-   695                           	callstack 0
-   696  0008CA                     _nrF2401_init_TX:
-   697                           	callstack 27
-   698                           
-   699                           ;incstack = 0
-   700                           ;nrF2401_init_TX@canal stored from wreg
-   701  0008CA  6E48               	movwf	nrF2401_init_TX@canal^0,c
-   702  0008CC                     
-   703                           ;./Librerias/nRF24L01_2.h: 201: void nrF2401_init_TX(unsigned char canal);./Librerias/nR
+   366  000846  D000               	nop2	
+   367  000848                     
+   368                           ;main.c: 177:     PORTAbits.RA5 = 0;
+   369  000848  9A80               	bcf	128,5,c	;volatile
+   370  00084A                     
+   371                           ;main.c: 180:     spi_s_init();
+   372  00084A  EC4E  F005         	call	_spi_s_init	;wreg free
+   373  00084E                     
+   374                           ;main.c: 181:     nrF2401_init_TX(17);
+   375  00084E  0E11               	movlw	17
+   376  000850  EC66  F004         	call	_nrF2401_init_TX
+   377  000854                     l1516:
+   378                           
+   379                           ;main.c: 186:     {;main.c: 190:         if(PORTAbits.RA3 == 1)
+   380  000854  A680               	btfss	128,3,c	;volatile
+   381  000856  EF2F  F004         	goto	u271
+   382  00085A  EF31  F004         	goto	u270
+   383  00085E                     u271:
+   384  00085E  EF4F  F004         	goto	l1522
+   385  000862                     u270:
+   386  000862                     
+   387                           ;main.c: 191:         {;main.c: 194:             PORTAbits.RA5 = ~PORTAbits.RA5;
+   388  000862  BA80               	btfsc	128,5,c	;volatile
+   389  000864  EF36  F004         	goto	u281
+   390  000868  EF39  F004         	goto	u280
+   391  00086C                     u281:
+   392  00086C  0E01               	movlw	1
+   393  00086E  EF3A  F004         	goto	u286
+   394  000872                     u280:
+   395  000872  0E00               	movlw	0
+   396  000874                     u286:
+   397  000874  0AFF               	xorlw	255
+   398  000876  6E49               	movwf	??_main^0,c
+   399  000878  3A49               	swapf	??_main^0,f,c
+   400  00087A  4649               	rlncf	??_main^0,f,c
+   401  00087C  5080               	movf	128,w,c	;volatile
+   402  00087E  1849               	xorwf	??_main^0,w,c
+   403  000880  0BDF               	andlw	-33
+   404  000882  1849               	xorwf	??_main^0,w,c
+   405  000884  6E80               	movwf	128,c	;volatile
+   406  000886                     
+   407                           ;main.c: 195:             _delay((unsigned long)((300)*(48000000/4000.0)));
+   408  000886  0E13               	movlw	19
+   409  000888  6E4A               	movwf	(??_main+1)^0,c
+   410  00088A  0E44               	movlw	68
+   411  00088C  6E49               	movwf	??_main^0,c
+   412  00088E  0E44               	movlw	68
+   413  000890                     u317:
+   414  000890  2EE8               	decfsz	wreg,f,c
+   415  000892  D7FE               	bra	u317
+   416  000894  2E49               	decfsz	??_main^0,f,c
+   417  000896  D7FC               	bra	u317
+   418  000898  2E4A               	decfsz	(??_main+1)^0,f,c
+   419  00089A  D7FA               	bra	u317
+   420  00089C  D000               	nop2	
+   421  00089E                     l1522:
+   422                           
+   423                           ;main.c: 198:         if(PORTAbits.RA5 == 1)
+   424  00089E  AA80               	btfss	128,5,c	;volatile
+   425  0008A0  EF54  F004         	goto	u291
+   426  0008A4  EF56  F004         	goto	u290
+   427  0008A8                     u291:
+   428  0008A8  EF5D  F004         	goto	l1528
+   429  0008AC                     u290:
+   430  0008AC                     
+   431                           ;main.c: 199:         {;main.c: 200:             dato_serial = 1;
+   432  0008AC  0E01               	movlw	1
+   433  0008AE  6E20               	movwf	_dato_serial^0,c
+   434  0008B0                     
+   435                           ;main.c: 201:             nrf2401_envia(dato_serial);
+   436  0008B0  0E01               	movlw	1
+   437  0008B2  ECE1  F004         	call	_nrf2401_envia
+   438                           
+   439                           ;main.c: 202:         }
+   440  0008B6  EF2A  F004         	goto	l1516
+   441  0008BA                     l1528:
+   442                           
+   443                           ;main.c: 204:         {;main.c: 205:             dato_serial = 0;
+   444  0008BA  0E00               	movlw	0
+   445  0008BC  6E20               	movwf	_dato_serial^0,c
+   446  0008BE                     
+   447                           ;main.c: 206:             nrf2401_envia(dato_serial);
+   448  0008BE  0E00               	movlw	0
+   449  0008C0  ECE1  F004         	call	_nrf2401_envia
+   450  0008C4  EF2A  F004         	goto	l1516
+   451  0008C8  EF00  F000         	goto	start
+   452  0008CC                     __end_of_main:
+   453                           	callstack 0
+   454                           
+   455 ;; *************** function _spi_s_init *****************
+   456 ;; Defined at:
+   457 ;;		line 23 in file "./Librerias/nRF24L01_2.h"
+   458 ;; Parameters:    Size  Location     Type
+   459 ;;		None
+   460 ;; Auto vars:     Size  Location     Type
+   461 ;;		None
+   462 ;; Return value:  Size  Location     Type
+   463 ;;                  1    wreg      void 
+   464 ;; Registers used:
+   465 ;;		None
+   466 ;; Tracked objects:
+   467 ;;		On entry : 0/0
+   468 ;;		On exit  : 0/0
+   469 ;;		Unchanged: 0/0
+   470 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   471 ;;      Params:         0       0       0       0       0       0       0       0       0
+   472 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   473 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   474 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   475 ;;Total ram usage:        0 bytes
+   476 ;; Hardware stack levels used: 1
+   477 ;; This function calls:
+   478 ;;		Nothing
+   479 ;; This function is called by:
+   480 ;;		_main
+   481 ;; This function uses a non-reentrant model
+   482 ;;
+   483                           
+   484                           	psect	text1
+   485  000A9C                     __ptext1:
+   486                           	callstack 0
+   487  000A9C                     _spi_s_init:
+   488                           	callstack 30
+   489  000A9C                     
+   490                           ;./Librerias/nRF24L01_2.h: 26:     TRISCbits.TRISC1 = 0;
+   491  000A9C  9294               	bcf	148,1,c	;volatile
+   492                           
+   493                           ;./Librerias/nRF24L01_2.h: 27:     TRISBbits.TRISB2 = 0;
+   494  000A9E  9493               	bcf	147,2,c	;volatile
+   495                           
+   496                           ;./Librerias/nRF24L01_2.h: 28:     TRISCbits.TRISC2 = 0;
+   497  000AA0  9494               	bcf	148,2,c	;volatile
+   498                           
+   499                           ;./Librerias/nRF24L01_2.h: 29:     TRISBbits.TRISB3 = 1;
+   500  000AA2  8693               	bsf	147,3,c	;volatile
+   501                           
+   502                           ;./Librerias/nRF24L01_2.h: 30:     TRISBbits.TRISB1 = 0;
+   503  000AA4  9293               	bcf	147,1,c	;volatile
+   504                           
+   505                           ;./Librerias/nRF24L01_2.h: 31:     TRISCbits.TRISC0 = 1;
+   506  000AA6  8094               	bsf	148,0,c	;volatile
+   507                           
+   508                           ;./Librerias/nRF24L01_2.h: 33:     LATBbits.LATB2 = 0;
+   509  000AA8  948A               	bcf	138,2,c	;volatile
+   510                           
+   511                           ;./Librerias/nRF24L01_2.h: 34:     LATCbits.LATC2 = 0;
+   512  000AAA  948B               	bcf	139,2,c	;volatile
+   513                           
+   514                           ;./Librerias/nRF24L01_2.h: 35:     LATCbits.LATC1 = 0;
+   515  000AAC  928B               	bcf	139,1,c	;volatile
+   516                           
+   517                           ;./Librerias/nRF24L01_2.h: 36:     LATBbits.LATB1 = 0;
+   518  000AAE  928A               	bcf	138,1,c	;volatile
+   519  000AB0  0012               	return		;funcret
+   520  000AB2                     __end_of_spi_s_init:
+   521                           	callstack 0
+   522                           
+   523 ;; *************** function _nrf2401_envia *****************
+   524 ;; Defined at:
+   525 ;;		line 151 in file "./Librerias/nRF24L01_2.h"
+   526 ;; Parameters:    Size  Location     Type
+   527 ;;  dato_tx         1    wreg     unsigned char 
+   528 ;; Auto vars:     Size  Location     Type
+   529 ;;  dato_tx         1    4[COMRAM] unsigned char 
+   530 ;;  cont_           1    0        unsigned char 
+   531 ;; Return value:  Size  Location     Type
+   532 ;;                  1    wreg      void 
+   533 ;; Registers used:
+   534 ;;		wreg, status,2, status,0, cstack
+   535 ;; Tracked objects:
+   536 ;;		On entry : 0/0
+   537 ;;		On exit  : 0/0
+   538 ;;		Unchanged: 0/0
+   539 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   540 ;;      Params:         0       0       0       0       0       0       0       0       0
+   541 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   542 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   543 ;;      Totals:         1       0       0       0       0       0       0       0       0
+   544 ;;Total ram usage:        1 bytes
+   545 ;; Hardware stack levels used: 1
+   546 ;; Hardware stack levels required when called: 3
+   547 ;; This function calls:
+   548 ;;		_flush_TX
+   549 ;;		_nrf2401_write
+   550 ;;		_spi_s_write
+   551 ;; This function is called by:
+   552 ;;		_main
+   553 ;;		_nrf2401_envia_Text
+   554 ;; This function uses a non-reentrant model
+   555 ;;
+   556                           
+   557                           	psect	text2
+   558  0009C2                     __ptext2:
+   559                           	callstack 0
+   560  0009C2                     _nrf2401_envia:
+   561                           	callstack 27
+   562                           
+   563                           ;incstack = 0
+   564                           ;nrf2401_envia@dato_tx stored from wreg
+   565  0009C2  6E44               	movwf	nrf2401_envia@dato_tx^0,c
+   566  0009C4                     
+   567                           ;./Librerias/nRF24L01_2.h: 155:     flush_TX();
+   568  0009C4  EC6E  F005         	call	_flush_TX	;wreg free
+   569  0009C8                     
+   570                           ;./Librerias/nRF24L01_2.h: 156:     nrf2401_write(0x00, 0x02 +0x04 + 0x08);
+   571  0009C8  0E0E               	movlw	14
+   572  0009CA  6E42               	movwf	nrf2401_write@valor^0,c
+   573  0009CC  0E00               	movlw	0
+   574  0009CE  EC34  F005         	call	_nrf2401_write
+   575  0009D2                     
+   576                           ;./Librerias/nRF24L01_2.h: 159:     LATCbits.LATC2 = 0;
+   577  0009D2  948B               	bcf	139,2,c	;volatile
+   578  0009D4                     
+   579                           ;./Librerias/nRF24L01_2.h: 160:     spi_s_write(0xA0);
+   580  0009D4  0EA0               	movlw	160
+   581  0009D6  EC9A  F004         	call	_spi_s_write
+   582  0009DA                     
+   583                           ;./Librerias/nRF24L01_2.h: 161:     spi_s_write(dato_tx);
+   584  0009DA  5044               	movf	nrf2401_envia@dato_tx^0,w,c
+   585  0009DC  EC9A  F004         	call	_spi_s_write
+   586  0009E0                     
+   587                           ;./Librerias/nRF24L01_2.h: 162:     LATCbits.LATC2 = 1;
+   588  0009E0  848B               	bsf	139,2,c	;volatile
+   589  0009E2                     
+   590                           ;./Librerias/nRF24L01_2.h: 163:     LATBbits.LATB1 = 1;
+   591  0009E2  828A               	bsf	138,1,c	;volatile
+   592  0009E4                     
+   593                           ;./Librerias/nRF24L01_2.h: 164:     _delay((unsigned long)((15)*(48000000/4000000.0)));
+   594  0009E4  0E3C               	movlw	60
+   595  0009E6                     u327:
+   596  0009E6  2EE8               	decfsz	wreg,f,c
+   597  0009E8  D7FE               	bra	u327
+   598  0009EA                     
+   599                           ;./Librerias/nRF24L01_2.h: 165:     LATBbits.LATB1 = 0;
+   600  0009EA  928A               	bcf	138,1,c	;volatile
+   601  0009EC                     
+   602                           ;./Librerias/nRF24L01_2.h: 166:     nrf2401_write(0x00, 0x01 + 0x02 +0x04 + 0x08);
+   603  0009EC  0E0F               	movlw	15
+   604  0009EE  6E42               	movwf	nrf2401_write@valor^0,c
+   605  0009F0  0E00               	movlw	0
+   606  0009F2  EC34  F005         	call	_nrf2401_write
+   607  0009F6  0012               	return		;funcret
+   608  0009F8                     __end_of_nrf2401_envia:
+   609                           	callstack 0
+   610                           
+   611 ;; *************** function _flush_TX *****************
+   612 ;; Defined at:
+   613 ;;		line 135 in file "./Librerias/nRF24L01_2.h"
+   614 ;; Parameters:    Size  Location     Type
+   615 ;;		None
+   616 ;; Auto vars:     Size  Location     Type
+   617 ;;		None
+   618 ;; Return value:  Size  Location     Type
+   619 ;;                  1    wreg      void 
+   620 ;; Registers used:
+   621 ;;		wreg, status,2, status,0, cstack
+   622 ;; Tracked objects:
+   623 ;;		On entry : 0/0
+   624 ;;		On exit  : 0/0
+   625 ;;		Unchanged: 0/0
+   626 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   627 ;;      Params:         0       0       0       0       0       0       0       0       0
+   628 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   629 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   630 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   631 ;;Total ram usage:        0 bytes
+   632 ;; Hardware stack levels used: 1
+   633 ;; Hardware stack levels required when called: 2
+   634 ;; This function calls:
+   635 ;;		_nrf2401_comando
+   636 ;;		_nrf2401_write
+   637 ;; This function is called by:
+   638 ;;		_nrf2401_envia
+   639 ;;		_nrf2401_envia_Text
+   640 ;; This function uses a non-reentrant model
+   641 ;;
+   642                           
+   643                           	psect	text3
+   644  000ADC                     __ptext3:
+   645                           	callstack 0
+   646  000ADC                     _flush_TX:
+   647                           	callstack 27
+   648  000ADC                     
+   649                           ;./Librerias/nRF24L01_2.h: 137:     nrf2401_write(0x07, 0x70);
+   650  000ADC  0E70               	movlw	112
+   651  000ADE  6E42               	movwf	nrf2401_write@valor^0,c
+   652  000AE0  0E07               	movlw	7
+   653  000AE2  EC34  F005         	call	_nrf2401_write
+   654                           
+   655                           ;./Librerias/nRF24L01_2.h: 138:     nrf2401_comando(0xE2);
+   656  000AE6  0EE2               	movlw	226
+   657  000AE8  EC64  F005         	call	_nrf2401_comando
+   658  000AEC  0012               	return		;funcret
+   659  000AEE                     __end_of_flush_TX:
+   660                           	callstack 0
+   661                           
+   662 ;; *************** function _nrF2401_init_TX *****************
+   663 ;; Defined at:
+   664 ;;		line 201 in file "./Librerias/nRF24L01_2.h"
+   665 ;; Parameters:    Size  Location     Type
+   666 ;;  canal           1    wreg     unsigned char 
+   667 ;; Auto vars:     Size  Location     Type
+   668 ;;  canal           1    8[COMRAM] unsigned char 
+   669 ;; Return value:  Size  Location     Type
+   670 ;;                  1    wreg      void 
+   671 ;; Registers used:
+   672 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+   673 ;; Tracked objects:
+   674 ;;		On entry : 0/0
+   675 ;;		On exit  : 0/0
+   676 ;;		Unchanged: 0/0
+   677 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   678 ;;      Params:         0       0       0       0       0       0       0       0       0
+   679 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   680 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   681 ;;      Totals:         1       0       0       0       0       0       0       0       0
+   682 ;;Total ram usage:        1 bytes
+   683 ;; Hardware stack levels used: 1
+   684 ;; Hardware stack levels required when called: 3
+   685 ;; This function calls:
+   686 ;;		_flush_TX_RX
+   687 ;;		_nrf2401_direccion_TX_RX
+   688 ;;		_nrf2401_write
+   689 ;; This function is called by:
+   690 ;;		_main
+   691 ;; This function uses a non-reentrant model
+   692 ;;
+   693                           
+   694                           	psect	text4
+   695  0008CC                     __ptext4:
+   696                           	callstack 0
+   697  0008CC                     _nrF2401_init_TX:
+   698                           	callstack 27
+   699                           
+   700                           ;incstack = 0
+   701                           ;nrF2401_init_TX@canal stored from wreg
+   702  0008CC  6E48               	movwf	nrF2401_init_TX@canal^0,c
+   703  0008CE                     
+   704                           ;./Librerias/nRF24L01_2.h: 201: void nrF2401_init_TX(unsigned char canal);./Librerias/nR
       +                          F24L01_2.h: 202: {;./Librerias/nRF24L01_2.h: 203:     LATBbits.LATB1 = 0;
-   704  0008CC  928A               	bcf	138,1,c	;volatile
-   705  0008CE                     
-   706                           ;./Librerias/nRF24L01_2.h: 204:     nrf2401_write(0x04, 0x00);
-   707  0008CE  0E00               	movlw	0
-   708  0008D0  6E42               	movwf	nrf2401_write@valor^0,c
-   709  0008D2  0E04               	movlw	4
-   710  0008D4  EC33  F005         	call	_nrf2401_write
-   711                           
-   712                           ;./Librerias/nRF24L01_2.h: 206:     nrf2401_write(0x03, 0x03);
-   713  0008D8  0E03               	movlw	3
-   714  0008DA  6E42               	movwf	nrf2401_write@valor^0,c
-   715  0008DC  0E03               	movlw	3
-   716  0008DE  EC33  F005         	call	_nrf2401_write
-   717                           
-   718                           ;./Librerias/nRF24L01_2.h: 207:     nrf2401_write(0x06, 0x08 + 0x06);
-   719  0008E2  0E0E               	movlw	14
-   720  0008E4  6E42               	movwf	nrf2401_write@valor^0,c
-   721  0008E6  0E06               	movlw	6
-   722  0008E8  EC33  F005         	call	_nrf2401_write
-   723                           
-   724                           ;./Librerias/nRF24L01_2.h: 208:     nrf2401_write(0x05, canal);
-   725  0008EC  C048  F042         	movff	nrF2401_init_TX@canal,nrf2401_write@valor
-   726  0008F0  0E05               	movlw	5
-   727  0008F2  EC33  F005         	call	_nrf2401_write
-   728                           
-   729                           ;./Librerias/nRF24L01_2.h: 209:     nrf2401_write(0x01, 0);
-   730  0008F6  0E00               	movlw	0
-   731  0008F8  6E42               	movwf	nrf2401_write@valor^0,c
-   732  0008FA  0E01               	movlw	1
-   733  0008FC  EC33  F005         	call	_nrf2401_write
-   734                           
-   735                           ;./Librerias/nRF24L01_2.h: 210:     nrf2401_write(0x00, 0x02 +0x04 + 0x08);
-   736  000900  0E0E               	movlw	14
-   737  000902  6E42               	movwf	nrf2401_write@valor^0,c
-   738  000904  0E00               	movlw	0
-   739  000906  EC33  F005         	call	_nrf2401_write
-   740  00090A                     
-   741                           ;./Librerias/nRF24L01_2.h: 211:     nrf2401_direccion_TX_RX(direccion_tx, 0x10);
-   742  00090A  0E06               	movlw	low _direccion_tx
-   743  00090C  6E42               	movwf	nrf2401_direccion_TX_RX@direccion_^0,c
-   744  00090E  0E08               	movlw	high _direccion_tx
-   745  000910  6E43               	movwf	(nrf2401_direccion_TX_RX@direccion_+1)^0,c
-   746  000912  0E10               	movlw	16
-   747  000914  6E44               	movwf	nrf2401_direccion_TX_RX@registro^0,c
-   748  000916  ECBD  F004         	call	_nrf2401_direccion_TX_RX	;wreg free
-   749  00091A                     
-   750                           ;./Librerias/nRF24L01_2.h: 212:     nrf2401_direccion_TX_RX(direccion_tx, 0x0A);
-   751  00091A  0E06               	movlw	low _direccion_tx
-   752  00091C  6E42               	movwf	nrf2401_direccion_TX_RX@direccion_^0,c
-   753  00091E  0E08               	movlw	high _direccion_tx
-   754  000920  6E43               	movwf	(nrf2401_direccion_TX_RX@direccion_+1)^0,c
-   755  000922  0E0A               	movlw	10
-   756  000924  6E44               	movwf	nrf2401_direccion_TX_RX@registro^0,c
-   757  000926  ECBD  F004         	call	_nrf2401_direccion_TX_RX	;wreg free
-   758                           
-   759                           ;./Librerias/nRF24L01_2.h: 213:     flush_TX_RX();
-   760  00092A  EC41  F005         	call	_flush_TX_RX	;wreg free
-   761  00092E                     
-   762                           ;./Librerias/nRF24L01_2.h: 214:     LATBbits.LATB1 = 1;
-   763  00092E  828A               	bsf	138,1,c	;volatile
-   764  000930  0012               	return		;funcret
-   765  000932                     __end_of_nrF2401_init_TX:
-   766                           	callstack 0
-   767                           
-   768 ;; *************** function _nrf2401_direccion_TX_RX *****************
-   769 ;; Defined at:
-   770 ;;		line 111 in file "./Librerias/nRF24L01_2.h"
-   771 ;; Parameters:    Size  Location     Type
-   772 ;;  direccion_      2    2[COMRAM] PTR const unsigned char 
-   773 ;;		 -> direccion_tx(5), 
-   774 ;;  registro        1    4[COMRAM] unsigned char 
-   775 ;; Auto vars:     Size  Location     Type
-   776 ;;  cont_s          1    7[COMRAM] unsigned char 
-   777 ;; Return value:  Size  Location     Type
-   778 ;;                  1    wreg      void 
-   779 ;; Registers used:
-   780 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
-   781 ;; Tracked objects:
-   782 ;;		On entry : 0/0
-   783 ;;		On exit  : 0/0
-   784 ;;		Unchanged: 0/0
-   785 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-   786 ;;      Params:         3       0       0       0       0       0       0       0       0
-   787 ;;      Locals:         1       0       0       0       0       0       0       0       0
-   788 ;;      Temps:          2       0       0       0       0       0       0       0       0
-   789 ;;      Totals:         6       0       0       0       0       0       0       0       0
-   790 ;;Total ram usage:        6 bytes
-   791 ;; Hardware stack levels used: 1
-   792 ;; Hardware stack levels required when called: 1
-   793 ;; This function calls:
-   794 ;;		_spi_s_write
-   795 ;; This function is called by:
-   796 ;;		_nrF2401_init_TX
-   797 ;;		_nrF2401_init_RX
-   798 ;; This function uses a non-reentrant model
-   799 ;;
-   800                           
-   801                           	psect	text5
-   802  00097A                     __ptext5:
-   803                           	callstack 0
-   804  00097A                     _nrf2401_direccion_TX_RX:
-   805                           	callstack 28
-   806  00097A                     
-   807                           ;./Librerias/nRF24L01_2.h: 111: void nrf2401_direccion_TX_RX(const unsigned char *direcc
+   705  0008CE  928A               	bcf	138,1,c	;volatile
+   706  0008D0                     
+   707                           ;./Librerias/nRF24L01_2.h: 204:     nrf2401_write(0x04, 0x00);
+   708  0008D0  0E00               	movlw	0
+   709  0008D2  6E42               	movwf	nrf2401_write@valor^0,c
+   710  0008D4  0E04               	movlw	4
+   711  0008D6  EC34  F005         	call	_nrf2401_write
+   712                           
+   713                           ;./Librerias/nRF24L01_2.h: 206:     nrf2401_write(0x03, 0x03);
+   714  0008DA  0E03               	movlw	3
+   715  0008DC  6E42               	movwf	nrf2401_write@valor^0,c
+   716  0008DE  0E03               	movlw	3
+   717  0008E0  EC34  F005         	call	_nrf2401_write
+   718                           
+   719                           ;./Librerias/nRF24L01_2.h: 207:     nrf2401_write(0x06, 0x08 + 0x06);
+   720  0008E4  0E0E               	movlw	14
+   721  0008E6  6E42               	movwf	nrf2401_write@valor^0,c
+   722  0008E8  0E06               	movlw	6
+   723  0008EA  EC34  F005         	call	_nrf2401_write
+   724                           
+   725                           ;./Librerias/nRF24L01_2.h: 208:     nrf2401_write(0x05, canal);
+   726  0008EE  C048  F042         	movff	nrF2401_init_TX@canal,nrf2401_write@valor
+   727  0008F2  0E05               	movlw	5
+   728  0008F4  EC34  F005         	call	_nrf2401_write
+   729                           
+   730                           ;./Librerias/nRF24L01_2.h: 209:     nrf2401_write(0x01, 0);
+   731  0008F8  0E00               	movlw	0
+   732  0008FA  6E42               	movwf	nrf2401_write@valor^0,c
+   733  0008FC  0E01               	movlw	1
+   734  0008FE  EC34  F005         	call	_nrf2401_write
+   735                           
+   736                           ;./Librerias/nRF24L01_2.h: 210:     nrf2401_write(0x00, 0x02 +0x04 + 0x08);
+   737  000902  0E0E               	movlw	14
+   738  000904  6E42               	movwf	nrf2401_write@valor^0,c
+   739  000906  0E00               	movlw	0
+   740  000908  EC34  F005         	call	_nrf2401_write
+   741  00090C                     
+   742                           ;./Librerias/nRF24L01_2.h: 211:     nrf2401_direccion_TX_RX(direccion_tx, 0x10);
+   743  00090C  0E06               	movlw	low _direccion_tx
+   744  00090E  6E42               	movwf	nrf2401_direccion_TX_RX@direccion_^0,c
+   745  000910  0E08               	movlw	high _direccion_tx
+   746  000912  6E43               	movwf	(nrf2401_direccion_TX_RX@direccion_+1)^0,c
+   747  000914  0E10               	movlw	16
+   748  000916  6E44               	movwf	nrf2401_direccion_TX_RX@registro^0,c
+   749  000918  ECBE  F004         	call	_nrf2401_direccion_TX_RX	;wreg free
+   750  00091C                     
+   751                           ;./Librerias/nRF24L01_2.h: 212:     nrf2401_direccion_TX_RX(direccion_tx, 0x0A);
+   752  00091C  0E06               	movlw	low _direccion_tx
+   753  00091E  6E42               	movwf	nrf2401_direccion_TX_RX@direccion_^0,c
+   754  000920  0E08               	movlw	high _direccion_tx
+   755  000922  6E43               	movwf	(nrf2401_direccion_TX_RX@direccion_+1)^0,c
+   756  000924  0E0A               	movlw	10
+   757  000926  6E44               	movwf	nrf2401_direccion_TX_RX@registro^0,c
+   758  000928  ECBE  F004         	call	_nrf2401_direccion_TX_RX	;wreg free
+   759                           
+   760                           ;./Librerias/nRF24L01_2.h: 213:     flush_TX_RX();
+   761  00092C  EC42  F005         	call	_flush_TX_RX	;wreg free
+   762  000930                     
+   763                           ;./Librerias/nRF24L01_2.h: 214:     LATBbits.LATB1 = 1;
+   764  000930  828A               	bsf	138,1,c	;volatile
+   765  000932  0012               	return		;funcret
+   766  000934                     __end_of_nrF2401_init_TX:
+   767                           	callstack 0
+   768                           
+   769 ;; *************** function _nrf2401_direccion_TX_RX *****************
+   770 ;; Defined at:
+   771 ;;		line 111 in file "./Librerias/nRF24L01_2.h"
+   772 ;; Parameters:    Size  Location     Type
+   773 ;;  direccion_      2    2[COMRAM] PTR const unsigned char 
+   774 ;;		 -> direccion_tx(5), 
+   775 ;;  registro        1    4[COMRAM] unsigned char 
+   776 ;; Auto vars:     Size  Location     Type
+   777 ;;  cont_s          1    7[COMRAM] unsigned char 
+   778 ;; Return value:  Size  Location     Type
+   779 ;;                  1    wreg      void 
+   780 ;; Registers used:
+   781 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+   782 ;; Tracked objects:
+   783 ;;		On entry : 0/0
+   784 ;;		On exit  : 0/0
+   785 ;;		Unchanged: 0/0
+   786 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   787 ;;      Params:         3       0       0       0       0       0       0       0       0
+   788 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   789 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   790 ;;      Totals:         6       0       0       0       0       0       0       0       0
+   791 ;;Total ram usage:        6 bytes
+   792 ;; Hardware stack levels used: 1
+   793 ;; Hardware stack levels required when called: 1
+   794 ;; This function calls:
+   795 ;;		_spi_s_write
+   796 ;; This function is called by:
+   797 ;;		_nrF2401_init_TX
+   798 ;;		_nrF2401_init_RX
+   799 ;; This function uses a non-reentrant model
+   800 ;;
+   801                           
+   802                           	psect	text5
+   803  00097C                     __ptext5:
+   804                           	callstack 0
+   805  00097C                     _nrf2401_direccion_TX_RX:
+   806                           	callstack 28
+   807  00097C                     
+   808                           ;./Librerias/nRF24L01_2.h: 111: void nrf2401_direccion_TX_RX(const unsigned char *direcc
       +                          ion_, unsigned char registro);./Librerias/nRF24L01_2.h: 112: {;./Librerias/nRF24L01_2.h:
       +                           113:     unsigned char cont_s;;./Librerias/nRF24L01_2.h: 115:     LATCbits.LATC2 = 0;
-   808  00097A  948B               	bcf	139,2,c	;volatile
-   809  00097C                     
-   810                           ;./Librerias/nRF24L01_2.h: 116:     spi_s_write(registro | 0x20);
-   811  00097C  5044               	movf	nrf2401_direccion_TX_RX@registro^0,w,c
-   812  00097E  0920               	iorlw	32
-   813  000980  EC99  F004         	call	_spi_s_write
-   814  000984                     
-   815                           ;./Librerias/nRF24L01_2.h: 117:     for(cont_s = 0; cont_s < 5; cont_s++)
-   816  000984  0E00               	movlw	0
-   817  000986  6E47               	movwf	nrf2401_direccion_TX_RX@cont_s^0,c
-   818  000988                     l1420:
-   819                           
-   820                           ;./Librerias/nRF24L01_2.h: 118:     {;./Librerias/nRF24L01_2.h: 119:         spi_s_write
+   809  00097C  948B               	bcf	139,2,c	;volatile
+   810  00097E                     
+   811                           ;./Librerias/nRF24L01_2.h: 116:     spi_s_write(registro | 0x20);
+   812  00097E  5044               	movf	nrf2401_direccion_TX_RX@registro^0,w,c
+   813  000980  0920               	iorlw	32
+   814  000982  EC9A  F004         	call	_spi_s_write
+   815  000986                     
+   816                           ;./Librerias/nRF24L01_2.h: 117:     for(cont_s = 0; cont_s < 5; cont_s++)
+   817  000986  0E00               	movlw	0
+   818  000988  6E47               	movwf	nrf2401_direccion_TX_RX@cont_s^0,c
+   819  00098A                     l1420:
+   820                           
+   821                           ;./Librerias/nRF24L01_2.h: 118:     {;./Librerias/nRF24L01_2.h: 119:         spi_s_write
       +                          (direccion_[cont_s]);
-   821  000988  5047               	movf	nrf2401_direccion_TX_RX@cont_s^0,w,c
-   822  00098A  2442               	addwf	nrf2401_direccion_TX_RX@direccion_^0,w,c
-   823  00098C  6E45               	movwf	??_nrf2401_direccion_TX_RX^0,c
-   824  00098E  0E00               	movlw	0
-   825  000990  2043               	addwfc	(nrf2401_direccion_TX_RX@direccion_+1)^0,w,c
-   826  000992  6E46               	movwf	(??_nrf2401_direccion_TX_RX+1)^0,c
-   827  000994  C045  FFF6         	movff	??_nrf2401_direccion_TX_RX,tblptrl
-   828  000998  C046  FFF7         	movff	??_nrf2401_direccion_TX_RX+1,tblptrh
-   829  00099C                     	if	0	;tblptru may be non-zero
-   830  00099C                     	endif
-   831  00099C                     	if	0	;tblptru may be non-zero
-   832  00099C                     	endif
-   833  00099C  0008               	tblrd		*
-   834  00099E  50F5               	movf	tablat,w,c
-   835  0009A0  EC99  F004         	call	_spi_s_write
-   836  0009A4                     
-   837                           ;./Librerias/nRF24L01_2.h: 120:     }
-   838  0009A4  2A47               	incf	nrf2401_direccion_TX_RX@cont_s^0,f,c
-   839  0009A6  0E04               	movlw	4
-   840  0009A8  6447               	cpfsgt	nrf2401_direccion_TX_RX@cont_s^0,c
-   841  0009AA  EFD9  F004         	goto	u231
-   842  0009AE  EFDB  F004         	goto	u230
-   843  0009B2                     u231:
-   844  0009B2  EFC4  F004         	goto	l1420
-   845  0009B6                     u230:
-   846  0009B6                     
-   847                           ;./Librerias/nRF24L01_2.h: 121:     LATCbits.LATC2 = 1;
-   848  0009B6  848B               	bsf	139,2,c	;volatile
-   849  0009B8                     
-   850                           ;./Librerias/nRF24L01_2.h: 122:     _delay((unsigned long)((5)*(48000000/4000000.0)));
-   851  0009B8  0E14               	movlw	20
-   852  0009BA                     u337:
-   853  0009BA  2EE8               	decfsz	wreg,f,c
-   854  0009BC  D7FE               	bra	u337
-   855  0009BE  0012               	return		;funcret
-   856  0009C0                     __end_of_nrf2401_direccion_TX_RX:
-   857                           	callstack 0
-   858                           
-   859 ;; *************** function _flush_TX_RX *****************
-   860 ;; Defined at:
-   861 ;;		line 142 in file "./Librerias/nRF24L01_2.h"
-   862 ;; Parameters:    Size  Location     Type
-   863 ;;		None
-   864 ;; Auto vars:     Size  Location     Type
-   865 ;;		None
-   866 ;; Return value:  Size  Location     Type
-   867 ;;                  1    wreg      void 
-   868 ;; Registers used:
-   869 ;;		wreg, status,2, status,0, cstack
-   870 ;; Tracked objects:
-   871 ;;		On entry : 0/0
-   872 ;;		On exit  : 0/0
-   873 ;;		Unchanged: 0/0
-   874 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-   875 ;;      Params:         0       0       0       0       0       0       0       0       0
-   876 ;;      Locals:         0       0       0       0       0       0       0       0       0
-   877 ;;      Temps:          0       0       0       0       0       0       0       0       0
-   878 ;;      Totals:         0       0       0       0       0       0       0       0       0
-   879 ;;Total ram usage:        0 bytes
-   880 ;; Hardware stack levels used: 1
-   881 ;; Hardware stack levels required when called: 2
-   882 ;; This function calls:
-   883 ;;		_nrf2401_comando
-   884 ;;		_nrf2401_write
-   885 ;; This function is called by:
-   886 ;;		_nrF2401_init_TX
-   887 ;;		_nrF2401_init_RX
-   888 ;; This function uses a non-reentrant model
-   889 ;;
-   890                           
-   891                           	psect	text6
-   892  000A82                     __ptext6:
-   893                           	callstack 0
-   894  000A82                     _flush_TX_RX:
-   895                           	callstack 27
-   896  000A82                     
-   897                           ;./Librerias/nRF24L01_2.h: 144:     nrf2401_write(0x07, 0x70);
-   898  000A82  0E70               	movlw	112
-   899  000A84  6E42               	movwf	nrf2401_write@valor^0,c
-   900  000A86  0E07               	movlw	7
-   901  000A88  EC33  F005         	call	_nrf2401_write
-   902                           
-   903                           ;./Librerias/nRF24L01_2.h: 145:     nrf2401_comando(0xE1);
-   904  000A8C  0EE1               	movlw	225
-   905  000A8E  EC63  F005         	call	_nrf2401_comando
-   906                           
-   907                           ;./Librerias/nRF24L01_2.h: 146:     nrf2401_comando(0xE2);
-   908  000A92  0EE2               	movlw	226
-   909  000A94  EC63  F005         	call	_nrf2401_comando
-   910  000A98  0012               	return		;funcret
-   911  000A9A                     __end_of_flush_TX_RX:
-   912                           	callstack 0
-   913                           
-   914 ;; *************** function _nrf2401_write *****************
-   915 ;; Defined at:
-   916 ;;		line 81 in file "./Librerias/nRF24L01_2.h"
-   917 ;; Parameters:    Size  Location     Type
-   918 ;;  reg             1    wreg     unsigned char 
-   919 ;;  valor           1    2[COMRAM] unsigned char 
-   920 ;; Auto vars:     Size  Location     Type
-   921 ;;  reg             1    3[COMRAM] unsigned char 
-   922 ;; Return value:  Size  Location     Type
-   923 ;;                  1    wreg      void 
-   924 ;; Registers used:
-   925 ;;		wreg, status,2, status,0, cstack
-   926 ;; Tracked objects:
-   927 ;;		On entry : 0/0
-   928 ;;		On exit  : 0/0
-   929 ;;		Unchanged: 0/0
-   930 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-   931 ;;      Params:         1       0       0       0       0       0       0       0       0
-   932 ;;      Locals:         1       0       0       0       0       0       0       0       0
-   933 ;;      Temps:          0       0       0       0       0       0       0       0       0
-   934 ;;      Totals:         2       0       0       0       0       0       0       0       0
-   935 ;;Total ram usage:        2 bytes
-   936 ;; Hardware stack levels used: 1
-   937 ;; Hardware stack levels required when called: 1
-   938 ;; This function calls:
-   939 ;;		_spi_s_write
-   940 ;; This function is called by:
-   941 ;;		_flush_TX
-   942 ;;		_flush_TX_RX
-   943 ;;		_nrf2401_envia
-   944 ;;		_nrF2401_init_TX
-   945 ;;		_flush_RX
-   946 ;;		_nrF2401_init_RX
-   947 ;; This function uses a non-reentrant model
-   948 ;;
-   949                           
-   950                           	psect	text7
-   951  000A66                     __ptext7:
-   952                           	callstack 0
-   953  000A66                     _nrf2401_write:
-   954                           	callstack 28
-   955                           
-   956                           ;incstack = 0
-   957                           ;nrf2401_write@reg stored from wreg
-   958  000A66  6E43               	movwf	nrf2401_write@reg^0,c
-   959  000A68                     
-   960                           ;./Librerias/nRF24L01_2.h: 81: void nrf2401_write(unsigned char reg, unsigned char valor
+   822  00098A  5047               	movf	nrf2401_direccion_TX_RX@cont_s^0,w,c
+   823  00098C  2442               	addwf	nrf2401_direccion_TX_RX@direccion_^0,w,c
+   824  00098E  6E45               	movwf	??_nrf2401_direccion_TX_RX^0,c
+   825  000990  0E00               	movlw	0
+   826  000992  2043               	addwfc	(nrf2401_direccion_TX_RX@direccion_+1)^0,w,c
+   827  000994  6E46               	movwf	(??_nrf2401_direccion_TX_RX+1)^0,c
+   828  000996  C045  FFF6         	movff	??_nrf2401_direccion_TX_RX,tblptrl
+   829  00099A  C046  FFF7         	movff	??_nrf2401_direccion_TX_RX+1,tblptrh
+   830  00099E                     	if	0	;tblptru may be non-zero
+   831  00099E                     	endif
+   832  00099E                     	if	0	;tblptru may be non-zero
+   833  00099E                     	endif
+   834  00099E  0008               	tblrd		*
+   835  0009A0  50F5               	movf	tablat,w,c
+   836  0009A2  EC9A  F004         	call	_spi_s_write
+   837  0009A6                     
+   838                           ;./Librerias/nRF24L01_2.h: 120:     }
+   839  0009A6  2A47               	incf	nrf2401_direccion_TX_RX@cont_s^0,f,c
+   840  0009A8  0E04               	movlw	4
+   841  0009AA  6447               	cpfsgt	nrf2401_direccion_TX_RX@cont_s^0,c
+   842  0009AC  EFDA  F004         	goto	u231
+   843  0009B0  EFDC  F004         	goto	u230
+   844  0009B4                     u231:
+   845  0009B4  EFC5  F004         	goto	l1420
+   846  0009B8                     u230:
+   847  0009B8                     
+   848                           ;./Librerias/nRF24L01_2.h: 121:     LATCbits.LATC2 = 1;
+   849  0009B8  848B               	bsf	139,2,c	;volatile
+   850  0009BA                     
+   851                           ;./Librerias/nRF24L01_2.h: 122:     _delay((unsigned long)((5)*(48000000/4000000.0)));
+   852  0009BA  0E14               	movlw	20
+   853  0009BC                     u337:
+   854  0009BC  2EE8               	decfsz	wreg,f,c
+   855  0009BE  D7FE               	bra	u337
+   856  0009C0  0012               	return		;funcret
+   857  0009C2                     __end_of_nrf2401_direccion_TX_RX:
+   858                           	callstack 0
+   859                           
+   860 ;; *************** function _flush_TX_RX *****************
+   861 ;; Defined at:
+   862 ;;		line 142 in file "./Librerias/nRF24L01_2.h"
+   863 ;; Parameters:    Size  Location     Type
+   864 ;;		None
+   865 ;; Auto vars:     Size  Location     Type
+   866 ;;		None
+   867 ;; Return value:  Size  Location     Type
+   868 ;;                  1    wreg      void 
+   869 ;; Registers used:
+   870 ;;		wreg, status,2, status,0, cstack
+   871 ;; Tracked objects:
+   872 ;;		On entry : 0/0
+   873 ;;		On exit  : 0/0
+   874 ;;		Unchanged: 0/0
+   875 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   876 ;;      Params:         0       0       0       0       0       0       0       0       0
+   877 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   878 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   879 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   880 ;;Total ram usage:        0 bytes
+   881 ;; Hardware stack levels used: 1
+   882 ;; Hardware stack levels required when called: 2
+   883 ;; This function calls:
+   884 ;;		_nrf2401_comando
+   885 ;;		_nrf2401_write
+   886 ;; This function is called by:
+   887 ;;		_nrF2401_init_TX
+   888 ;;		_nrF2401_init_RX
+   889 ;; This function uses a non-reentrant model
+   890 ;;
+   891                           
+   892                           	psect	text6
+   893  000A84                     __ptext6:
+   894                           	callstack 0
+   895  000A84                     _flush_TX_RX:
+   896                           	callstack 27
+   897  000A84                     
+   898                           ;./Librerias/nRF24L01_2.h: 144:     nrf2401_write(0x07, 0x70);
+   899  000A84  0E70               	movlw	112
+   900  000A86  6E42               	movwf	nrf2401_write@valor^0,c
+   901  000A88  0E07               	movlw	7
+   902  000A8A  EC34  F005         	call	_nrf2401_write
+   903                           
+   904                           ;./Librerias/nRF24L01_2.h: 145:     nrf2401_comando(0xE1);
+   905  000A8E  0EE1               	movlw	225
+   906  000A90  EC64  F005         	call	_nrf2401_comando
+   907                           
+   908                           ;./Librerias/nRF24L01_2.h: 146:     nrf2401_comando(0xE2);
+   909  000A94  0EE2               	movlw	226
+   910  000A96  EC64  F005         	call	_nrf2401_comando
+   911  000A9A  0012               	return		;funcret
+   912  000A9C                     __end_of_flush_TX_RX:
+   913                           	callstack 0
+   914                           
+   915 ;; *************** function _nrf2401_write *****************
+   916 ;; Defined at:
+   917 ;;		line 81 in file "./Librerias/nRF24L01_2.h"
+   918 ;; Parameters:    Size  Location     Type
+   919 ;;  reg             1    wreg     unsigned char 
+   920 ;;  valor           1    2[COMRAM] unsigned char 
+   921 ;; Auto vars:     Size  Location     Type
+   922 ;;  reg             1    3[COMRAM] unsigned char 
+   923 ;; Return value:  Size  Location     Type
+   924 ;;                  1    wreg      void 
+   925 ;; Registers used:
+   926 ;;		wreg, status,2, status,0, cstack
+   927 ;; Tracked objects:
+   928 ;;		On entry : 0/0
+   929 ;;		On exit  : 0/0
+   930 ;;		Unchanged: 0/0
+   931 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   932 ;;      Params:         1       0       0       0       0       0       0       0       0
+   933 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   934 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   935 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   936 ;;Total ram usage:        2 bytes
+   937 ;; Hardware stack levels used: 1
+   938 ;; Hardware stack levels required when called: 1
+   939 ;; This function calls:
+   940 ;;		_spi_s_write
+   941 ;; This function is called by:
+   942 ;;		_flush_TX
+   943 ;;		_flush_TX_RX
+   944 ;;		_nrf2401_envia
+   945 ;;		_nrF2401_init_TX
+   946 ;;		_flush_RX
+   947 ;;		_nrF2401_init_RX
+   948 ;; This function uses a non-reentrant model
+   949 ;;
+   950                           
+   951                           	psect	text7
+   952  000A68                     __ptext7:
+   953                           	callstack 0
+   954  000A68                     _nrf2401_write:
+   955                           	callstack 28
+   956                           
+   957                           ;incstack = 0
+   958                           ;nrf2401_write@reg stored from wreg
+   959  000A68  6E43               	movwf	nrf2401_write@reg^0,c
+   960  000A6A                     
+   961                           ;./Librerias/nRF24L01_2.h: 81: void nrf2401_write(unsigned char reg, unsigned char valor
       +                          );./Librerias/nRF24L01_2.h: 82: {;./Librerias/nRF24L01_2.h: 83:     LATCbits.LATC2 = 0;
-   961  000A68  948B               	bcf	139,2,c	;volatile
-   962  000A6A                     
-   963                           ;./Librerias/nRF24L01_2.h: 84:     spi_s_write((reg | 0x20));
-   964  000A6A  5043               	movf	nrf2401_write@reg^0,w,c
-   965  000A6C  0920               	iorlw	32
-   966  000A6E  EC99  F004         	call	_spi_s_write
-   967                           
-   968                           ;./Librerias/nRF24L01_2.h: 85:     spi_s_write(valor);
-   969  000A72  5042               	movf	nrf2401_write@valor^0,w,c
-   970  000A74  EC99  F004         	call	_spi_s_write
-   971  000A78                     
-   972                           ;./Librerias/nRF24L01_2.h: 86:     LATCbits.LATC2 = 1;
-   973  000A78  848B               	bsf	139,2,c	;volatile
-   974  000A7A                     
-   975                           ;./Librerias/nRF24L01_2.h: 87:     _delay((unsigned long)((5)*(48000000/4000000.0)));
-   976  000A7A  0E14               	movlw	20
-   977  000A7C                     u347:
-   978  000A7C  2EE8               	decfsz	wreg,f,c
-   979  000A7E  D7FE               	bra	u347
-   980  000A80  0012               	return		;funcret
-   981  000A82                     __end_of_nrf2401_write:
-   982                           	callstack 0
-   983                           
-   984 ;; *************** function _nrf2401_comando *****************
-   985 ;; Defined at:
-   986 ;;		line 91 in file "./Librerias/nRF24L01_2.h"
-   987 ;; Parameters:    Size  Location     Type
-   988 ;;  comando         1    wreg     unsigned char 
-   989 ;; Auto vars:     Size  Location     Type
-   990 ;;  comando         1    2[COMRAM] unsigned char 
-   991 ;; Return value:  Size  Location     Type
-   992 ;;                  1    wreg      void 
-   993 ;; Registers used:
-   994 ;;		wreg, status,2, status,0, cstack
-   995 ;; Tracked objects:
-   996 ;;		On entry : 0/0
-   997 ;;		On exit  : 0/0
-   998 ;;		Unchanged: 0/0
-   999 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1000 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1001 ;;      Locals:         1       0       0       0       0       0       0       0       0
-  1002 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  1003 ;;      Totals:         1       0       0       0       0       0       0       0       0
-  1004 ;;Total ram usage:        1 bytes
-  1005 ;; Hardware stack levels used: 1
-  1006 ;; Hardware stack levels required when called: 1
-  1007 ;; This function calls:
-  1008 ;;		_spi_s_write
-  1009 ;; This function is called by:
-  1010 ;;		_flush_TX
-  1011 ;;		_flush_TX_RX
-  1012 ;;		_flush_RX
-  1013 ;; This function uses a non-reentrant model
-  1014 ;;
-  1015                           
-  1016                           	psect	text8
-  1017  000AC6                     __ptext8:
-  1018                           	callstack 0
-  1019  000AC6                     _nrf2401_comando:
-  1020                           	callstack 27
-  1021                           
-  1022                           ;incstack = 0
-  1023                           ;nrf2401_comando@comando stored from wreg
-  1024  000AC6  6E42               	movwf	nrf2401_comando@comando^0,c
-  1025  000AC8                     
-  1026                           ;./Librerias/nRF24L01_2.h: 91: void nrf2401_comando(unsigned char comando);./Librerias/n
+   962  000A6A  948B               	bcf	139,2,c	;volatile
+   963  000A6C                     
+   964                           ;./Librerias/nRF24L01_2.h: 84:     spi_s_write((reg | 0x20));
+   965  000A6C  5043               	movf	nrf2401_write@reg^0,w,c
+   966  000A6E  0920               	iorlw	32
+   967  000A70  EC9A  F004         	call	_spi_s_write
+   968                           
+   969                           ;./Librerias/nRF24L01_2.h: 85:     spi_s_write(valor);
+   970  000A74  5042               	movf	nrf2401_write@valor^0,w,c
+   971  000A76  EC9A  F004         	call	_spi_s_write
+   972  000A7A                     
+   973                           ;./Librerias/nRF24L01_2.h: 86:     LATCbits.LATC2 = 1;
+   974  000A7A  848B               	bsf	139,2,c	;volatile
+   975  000A7C                     
+   976                           ;./Librerias/nRF24L01_2.h: 87:     _delay((unsigned long)((5)*(48000000/4000000.0)));
+   977  000A7C  0E14               	movlw	20
+   978  000A7E                     u347:
+   979  000A7E  2EE8               	decfsz	wreg,f,c
+   980  000A80  D7FE               	bra	u347
+   981  000A82  0012               	return		;funcret
+   982  000A84                     __end_of_nrf2401_write:
+   983                           	callstack 0
+   984                           
+   985 ;; *************** function _nrf2401_comando *****************
+   986 ;; Defined at:
+   987 ;;		line 91 in file "./Librerias/nRF24L01_2.h"
+   988 ;; Parameters:    Size  Location     Type
+   989 ;;  comando         1    wreg     unsigned char 
+   990 ;; Auto vars:     Size  Location     Type
+   991 ;;  comando         1    2[COMRAM] unsigned char 
+   992 ;; Return value:  Size  Location     Type
+   993 ;;                  1    wreg      void 
+   994 ;; Registers used:
+   995 ;;		wreg, status,2, status,0, cstack
+   996 ;; Tracked objects:
+   997 ;;		On entry : 0/0
+   998 ;;		On exit  : 0/0
+   999 ;;		Unchanged: 0/0
+  1000 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1001 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1002 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1003 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1004 ;;      Totals:         1       0       0       0       0       0       0       0       0
+  1005 ;;Total ram usage:        1 bytes
+  1006 ;; Hardware stack levels used: 1
+  1007 ;; Hardware stack levels required when called: 1
+  1008 ;; This function calls:
+  1009 ;;		_spi_s_write
+  1010 ;; This function is called by:
+  1011 ;;		_flush_TX
+  1012 ;;		_flush_TX_RX
+  1013 ;;		_flush_RX
+  1014 ;; This function uses a non-reentrant model
+  1015 ;;
+  1016                           
+  1017                           	psect	text8
+  1018  000AC8                     __ptext8:
+  1019                           	callstack 0
+  1020  000AC8                     _nrf2401_comando:
+  1021                           	callstack 27
+  1022                           
+  1023                           ;incstack = 0
+  1024                           ;nrf2401_comando@comando stored from wreg
+  1025  000AC8  6E42               	movwf	nrf2401_comando@comando^0,c
+  1026  000ACA                     
+  1027                           ;./Librerias/nRF24L01_2.h: 91: void nrf2401_comando(unsigned char comando);./Librerias/n
       +                          RF24L01_2.h: 92: {;./Librerias/nRF24L01_2.h: 93:     LATCbits.LATC2 = 0;
-  1027  000AC8  948B               	bcf	139,2,c	;volatile
-  1028  000ACA                     
-  1029                           ;./Librerias/nRF24L01_2.h: 94:     spi_s_write(comando);
-  1030  000ACA  5042               	movf	nrf2401_comando@comando^0,w,c
-  1031  000ACC  EC99  F004         	call	_spi_s_write
-  1032  000AD0                     
-  1033                           ;./Librerias/nRF24L01_2.h: 95:     LATCbits.LATC2 = 1;
-  1034  000AD0  848B               	bsf	139,2,c	;volatile
-  1035  000AD2                     
-  1036                           ;./Librerias/nRF24L01_2.h: 96:     _delay((unsigned long)((5)*(48000000/4000000.0)));
-  1037  000AD2  0E14               	movlw	20
-  1038  000AD4                     u357:
-  1039  000AD4  2EE8               	decfsz	wreg,f,c
-  1040  000AD6  D7FE               	bra	u357
-  1041  000AD8  0012               	return		;funcret
-  1042  000ADA                     __end_of_nrf2401_comando:
-  1043                           	callstack 0
-  1044                           
-  1045 ;; *************** function _spi_s_write *****************
-  1046 ;; Defined at:
-  1047 ;;		line 61 in file "./Librerias/nRF24L01_2.h"
-  1048 ;; Parameters:    Size  Location     Type
-  1049 ;;  dato_           1    wreg     unsigned char 
-  1050 ;; Auto vars:     Size  Location     Type
-  1051 ;;  dato_           1    0[COMRAM] unsigned char 
-  1052 ;;  cont_s          1    1[COMRAM] unsigned char 
-  1053 ;; Return value:  Size  Location     Type
-  1054 ;;                  1    wreg      void 
-  1055 ;; Registers used:
-  1056 ;;		wreg, status,2, status,0
-  1057 ;; Tracked objects:
-  1058 ;;		On entry : 0/0
-  1059 ;;		On exit  : 0/0
-  1060 ;;		Unchanged: 0/0
-  1061 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1062 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1063 ;;      Locals:         2       0       0       0       0       0       0       0       0
-  1064 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  1065 ;;      Totals:         2       0       0       0       0       0       0       0       0
-  1066 ;;Total ram usage:        2 bytes
-  1067 ;; Hardware stack levels used: 1
-  1068 ;; This function calls:
-  1069 ;;		Nothing
-  1070 ;; This function is called by:
-  1071 ;;		_nrf2401_write
-  1072 ;;		_nrf2401_comando
-  1073 ;;		_nrf2401_direccion_TX_RX
-  1074 ;;		_nrf2401_envia
-  1075 ;;		_nrf2401_read
-  1076 ;;		_nrf2401_recibe
-  1077 ;; This function uses a non-reentrant model
-  1078 ;;
-  1079                           
-  1080                           	psect	text9
-  1081  000932                     __ptext9:
-  1082                           	callstack 0
-  1083  000932                     _spi_s_write:
-  1084                           	callstack 29
-  1085                           
-  1086                           ;incstack = 0
-  1087                           ;spi_s_write@dato_ stored from wreg
-  1088  000932  6E40               	movwf	spi_s_write@dato_^0,c
-  1089  000934                     
-  1090                           ;./Librerias/nRF24L01_2.h: 61: void spi_s_write(unsigned char dato_);./Librerias/nRF24L0
+  1028  000ACA  948B               	bcf	139,2,c	;volatile
+  1029  000ACC                     
+  1030                           ;./Librerias/nRF24L01_2.h: 94:     spi_s_write(comando);
+  1031  000ACC  5042               	movf	nrf2401_comando@comando^0,w,c
+  1032  000ACE  EC9A  F004         	call	_spi_s_write
+  1033  000AD2                     
+  1034                           ;./Librerias/nRF24L01_2.h: 95:     LATCbits.LATC2 = 1;
+  1035  000AD2  848B               	bsf	139,2,c	;volatile
+  1036  000AD4                     
+  1037                           ;./Librerias/nRF24L01_2.h: 96:     _delay((unsigned long)((5)*(48000000/4000000.0)));
+  1038  000AD4  0E14               	movlw	20
+  1039  000AD6                     u357:
+  1040  000AD6  2EE8               	decfsz	wreg,f,c
+  1041  000AD8  D7FE               	bra	u357
+  1042  000ADA  0012               	return		;funcret
+  1043  000ADC                     __end_of_nrf2401_comando:
+  1044                           	callstack 0
+  1045                           
+  1046 ;; *************** function _spi_s_write *****************
+  1047 ;; Defined at:
+  1048 ;;		line 61 in file "./Librerias/nRF24L01_2.h"
+  1049 ;; Parameters:    Size  Location     Type
+  1050 ;;  dato_           1    wreg     unsigned char 
+  1051 ;; Auto vars:     Size  Location     Type
+  1052 ;;  dato_           1    0[COMRAM] unsigned char 
+  1053 ;;  cont_s          1    1[COMRAM] unsigned char 
+  1054 ;; Return value:  Size  Location     Type
+  1055 ;;                  1    wreg      void 
+  1056 ;; Registers used:
+  1057 ;;		wreg, status,2, status,0
+  1058 ;; Tracked objects:
+  1059 ;;		On entry : 0/0
+  1060 ;;		On exit  : 0/0
+  1061 ;;		Unchanged: 0/0
+  1062 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1063 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1064 ;;      Locals:         2       0       0       0       0       0       0       0       0
+  1065 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1066 ;;      Totals:         2       0       0       0       0       0       0       0       0
+  1067 ;;Total ram usage:        2 bytes
+  1068 ;; Hardware stack levels used: 1
+  1069 ;; This function calls:
+  1070 ;;		Nothing
+  1071 ;; This function is called by:
+  1072 ;;		_nrf2401_write
+  1073 ;;		_nrf2401_comando
+  1074 ;;		_nrf2401_direccion_TX_RX
+  1075 ;;		_nrf2401_envia
+  1076 ;;		_nrf2401_read
+  1077 ;;		_nrf2401_recibe
+  1078 ;; This function uses a non-reentrant model
+  1079 ;;
+  1080                           
+  1081                           	psect	text9
+  1082  000934                     __ptext9:
+  1083                           	callstack 0
+  1084  000934                     _spi_s_write:
+  1085                           	callstack 29
+  1086                           
+  1087                           ;incstack = 0
+  1088                           ;spi_s_write@dato_ stored from wreg
+  1089  000934  6E40               	movwf	spi_s_write@dato_^0,c
+  1090  000936                     
+  1091                           ;./Librerias/nRF24L01_2.h: 61: void spi_s_write(unsigned char dato_);./Librerias/nRF24L0
       +                          1_2.h: 62: {;./Librerias/nRF24L01_2.h: 63:     unsigned char cont_s = 0;
-  1091  000934  0E00               	movlw	0
-  1092  000936  6E41               	movwf	spi_s_write@cont_s^0,c
-  1093                           
-  1094                           ;./Librerias/nRF24L01_2.h: 65:     for(cont_s = 0; cont_s < 8; cont_s++)
-  1095  000938  0E00               	movlw	0
-  1096  00093A  6E41               	movwf	spi_s_write@cont_s^0,c
-  1097  00093C                     l246:
-  1098                           
-  1099                           ;./Librerias/nRF24L01_2.h: 66:     {;./Librerias/nRF24L01_2.h: 68:         if((dato_ & 0
+  1092  000936  0E00               	movlw	0
+  1093  000938  6E41               	movwf	spi_s_write@cont_s^0,c
+  1094                           
+  1095                           ;./Librerias/nRF24L01_2.h: 65:     for(cont_s = 0; cont_s < 8; cont_s++)
+  1096  00093A  0E00               	movlw	0
+  1097  00093C  6E41               	movwf	spi_s_write@cont_s^0,c
+  1098  00093E                     l246:
+  1099                           
+  1100                           ;./Librerias/nRF24L01_2.h: 66:     {;./Librerias/nRF24L01_2.h: 68:         if((dato_ & 0
       +                          x80) != 0) LATCbits.LATC1 = 1;
-  1100  00093C  AE40               	btfss	spi_s_write@dato_^0,7,c
-  1101  00093E  EFA3  F004         	goto	u11
-  1102  000942  EFA5  F004         	goto	u10
-  1103  000946                     u11:
-  1104  000946  EFA8  F004         	goto	l248
-  1105  00094A                     u10:
-  1106  00094A  828B               	bsf	139,1,c	;volatile
-  1107  00094C  EFA9  F004         	goto	l1064
-  1108  000950                     l248:
-  1109  000950  928B               	bcf	139,1,c	;volatile
-  1110  000952                     l1064:
-  1111                           
-  1112                           ;./Librerias/nRF24L01_2.h: 70:         dato_ <<= 1;
-  1113  000952  90D8               	bcf	status,0,c
-  1114  000954  3640               	rlcf	spi_s_write@dato_^0,f,c
-  1115  000956                     
-  1116                           ;./Librerias/nRF24L01_2.h: 72:         LATBbits.LATB2 = 1;
-  1117  000956  848A               	bsf	138,2,c	;volatile
-  1118  000958                     
-  1119                           ;./Librerias/nRF24L01_2.h: 73:         _delay((unsigned long)((5)*(48000000/4000000.0)))
+  1101  00093E  AE40               	btfss	spi_s_write@dato_^0,7,c
+  1102  000940  EFA4  F004         	goto	u11
+  1103  000944  EFA6  F004         	goto	u10
+  1104  000948                     u11:
+  1105  000948  EFA9  F004         	goto	l248
+  1106  00094C                     u10:
+  1107  00094C  828B               	bsf	139,1,c	;volatile
+  1108  00094E  EFAA  F004         	goto	l1064
+  1109  000952                     l248:
+  1110  000952  928B               	bcf	139,1,c	;volatile
+  1111  000954                     l1064:
+  1112                           
+  1113                           ;./Librerias/nRF24L01_2.h: 70:         dato_ <<= 1;
+  1114  000954  90D8               	bcf	status,0,c
+  1115  000956  3640               	rlcf	spi_s_write@dato_^0,f,c
+  1116  000958                     
+  1117                           ;./Librerias/nRF24L01_2.h: 72:         LATBbits.LATB2 = 1;
+  1118  000958  848A               	bsf	138,2,c	;volatile
+  1119  00095A                     
+  1120                           ;./Librerias/nRF24L01_2.h: 73:         _delay((unsigned long)((5)*(48000000/4000000.0)))
       +                          ;
-  1120  000958  0E14               	movlw	20
-  1121  00095A                     u367:
-  1122  00095A  2EE8               	decfsz	wreg,f,c
-  1123  00095C  D7FE               	bra	u367
-  1124  00095E                     
-  1125                           ;./Librerias/nRF24L01_2.h: 74:         LATBbits.LATB2 = 0;
-  1126  00095E  948A               	bcf	138,2,c	;volatile
-  1127  000960                     
-  1128                           ;./Librerias/nRF24L01_2.h: 75:         _delay((unsigned long)((5)*(48000000/4000000.0)))
+  1121  00095A  0E14               	movlw	20
+  1122  00095C                     u367:
+  1123  00095C  2EE8               	decfsz	wreg,f,c
+  1124  00095E  D7FE               	bra	u367
+  1125  000960                     
+  1126                           ;./Librerias/nRF24L01_2.h: 74:         LATBbits.LATB2 = 0;
+  1127  000960  948A               	bcf	138,2,c	;volatile
+  1128  000962                     
+  1129                           ;./Librerias/nRF24L01_2.h: 75:         _delay((unsigned long)((5)*(48000000/4000000.0)))
       +                          ;
-  1129  000960  0E14               	movlw	20
-  1130  000962                     u377:
-  1131  000962  2EE8               	decfsz	wreg,f,c
-  1132  000964  D7FE               	bra	u377
-  1133  000966                     
-  1134                           ;./Librerias/nRF24L01_2.h: 76:     }
-  1135  000966  2A41               	incf	spi_s_write@cont_s^0,f,c
-  1136  000968  0E07               	movlw	7
-  1137  00096A  6441               	cpfsgt	spi_s_write@cont_s^0,c
-  1138  00096C  EFBA  F004         	goto	u21
-  1139  000970  EFBC  F004         	goto	u20
-  1140  000974                     u21:
-  1141  000974  EF9E  F004         	goto	l246
-  1142  000978                     u20:
-  1143  000978  0012               	return		;funcret
-  1144  00097A                     __end_of_spi_s_write:
-  1145                           	callstack 0
-  1146                           
-  1147 ;; *************** function _SYSTEM_Initialize *****************
-  1148 ;; Defined at:
-  1149 ;;		line 50 in file "mcc_generated_files/mcc.c"
-  1150 ;; Parameters:    Size  Location     Type
-  1151 ;;		None
-  1152 ;; Auto vars:     Size  Location     Type
-  1153 ;;		None
-  1154 ;; Return value:  Size  Location     Type
-  1155 ;;                  1    wreg      void 
-  1156 ;; Registers used:
-  1157 ;;		wreg, status,2, cstack
-  1158 ;; Tracked objects:
-  1159 ;;		On entry : 0/0
-  1160 ;;		On exit  : 0/0
-  1161 ;;		Unchanged: 0/0
-  1162 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1163 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1164 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  1165 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  1166 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  1167 ;;Total ram usage:        0 bytes
-  1168 ;; Hardware stack levels used: 1
-  1169 ;; Hardware stack levels required when called: 1
-  1170 ;; This function calls:
-  1171 ;;		_ADC_Initialize
-  1172 ;;		_CCP2_Initialize
-  1173 ;;		_OSCILLATOR_Initialize
-  1174 ;;		_PIN_MANAGER_Initialize
-  1175 ;; This function is called by:
-  1176 ;;		_main
-  1177 ;; This function uses a non-reentrant model
-  1178 ;;
-  1179                           
-  1180                           	psect	text10
-  1181  000AEC                     __ptext10:
-  1182                           	callstack 0
-  1183  000AEC                     _SYSTEM_Initialize:
-  1184                           	callstack 29
-  1185  000AEC                     
-  1186                           ;mcc_generated_files/mcc.c: 53:     PIN_MANAGER_Initialize();
-  1187  000AEC  ECFB  F004         	call	_PIN_MANAGER_Initialize	;wreg free
-  1188                           
-  1189                           ;mcc_generated_files/mcc.c: 54:     OSCILLATOR_Initialize();
-  1190  000AF0  EC23  F005         	call	_OSCILLATOR_Initialize	;wreg free
-  1191                           
-  1192                           ;mcc_generated_files/mcc.c: 55:     CCP2_Initialize();
-  1193  000AF4  EC7F  F005         	call	_CCP2_Initialize	;wreg free
-  1194                           
-  1195                           ;mcc_generated_files/mcc.c: 56:     ADC_Initialize();
-  1196  000AF8  EC58  F005         	call	_ADC_Initialize	;wreg free
-  1197  000AFC  0012               	return		;funcret
-  1198  000AFE                     __end_of_SYSTEM_Initialize:
-  1199                           	callstack 0
-  1200                           
-  1201 ;; *************** function _PIN_MANAGER_Initialize *****************
-  1202 ;; Defined at:
-  1203 ;;		line 55 in file "mcc_generated_files/pin_manager.c"
-  1204 ;; Parameters:    Size  Location     Type
-  1205 ;;		None
-  1206 ;; Auto vars:     Size  Location     Type
-  1207 ;;		None
-  1208 ;; Return value:  Size  Location     Type
-  1209 ;;                  1    wreg      void 
-  1210 ;; Registers used:
-  1211 ;;		wreg, status,2
-  1212 ;; Tracked objects:
-  1213 ;;		On entry : 0/0
-  1214 ;;		On exit  : 0/0
-  1215 ;;		Unchanged: 0/0
-  1216 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1217 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1218 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  1219 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  1220 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  1221 ;;Total ram usage:        0 bytes
-  1222 ;; Hardware stack levels used: 1
-  1223 ;; This function calls:
-  1224 ;;		Nothing
-  1225 ;; This function is called by:
-  1226 ;;		_SYSTEM_Initialize
-  1227 ;; This function uses a non-reentrant model
-  1228 ;;
-  1229                           
-  1230                           	psect	text11
-  1231  0009F6                     __ptext11:
-  1232                           	callstack 0
-  1233  0009F6                     _PIN_MANAGER_Initialize:
-  1234                           	callstack 29
-  1235  0009F6                     
-  1236                           ;mcc_generated_files/pin_manager.c: 60:     LATA = 0x00;
-  1237  0009F6  0E00               	movlw	0
-  1238  0009F8  6E89               	movwf	137,c	;volatile
-  1239                           
-  1240                           ;mcc_generated_files/pin_manager.c: 61:     LATB = 0x00;
-  1241  0009FA  0E00               	movlw	0
-  1242  0009FC  6E8A               	movwf	138,c	;volatile
-  1243                           
-  1244                           ;mcc_generated_files/pin_manager.c: 62:     LATC = 0x00;
-  1245  0009FE  0E00               	movlw	0
-  1246  000A00  6E8B               	movwf	139,c	;volatile
-  1247                           
-  1248                           ;mcc_generated_files/pin_manager.c: 67:     TRISA = 0xC7;
-  1249  000A02  0EC7               	movlw	199
-  1250  000A04  6E92               	movwf	146,c	;volatile
-  1251                           
-  1252                           ;mcc_generated_files/pin_manager.c: 68:     TRISB = 0xFE;
-  1253  000A06  0EFE               	movlw	254
-  1254  000A08  6E93               	movwf	147,c	;volatile
-  1255                           
-  1256                           ;mcc_generated_files/pin_manager.c: 69:     TRISC = 0x87;
-  1257  000A0A  0E87               	movlw	135
-  1258  000A0C  6E94               	movwf	148,c	;volatile
-  1259                           
-  1260                           ;mcc_generated_files/pin_manager.c: 74:     ANSELC = 0x04;
-  1261  000A0E  0E04               	movlw	4
-  1262  000A10  010F               	movlb	15	; () banked
-  1263  000A12  6F5D               	movwf	93,b	;volatile
-  1264                           
-  1265                           ;mcc_generated_files/pin_manager.c: 75:     ANSELB = 0x3E;
-  1266  000A14  0E3E               	movlw	62
-  1267  000A16  6F5C               	movwf	92,b	;volatile
-  1268                           
-  1269                           ;mcc_generated_files/pin_manager.c: 76:     ANSELA = 0x07;
-  1270  000A18  0E07               	movlw	7
-  1271  000A1A  6F5B               	movwf	91,b	;volatile
-  1272                           
-  1273                           ;mcc_generated_files/pin_manager.c: 81:     WPUB = 0x00;
-  1274  000A1C  0E00               	movlw	0
-  1275  000A1E  6E85               	movwf	133,c	;volatile
-  1276  000A20                     
-  1277                           ; BSR set to: 15
-  1278                           ;mcc_generated_files/pin_manager.c: 82:     INTCON2bits.nRBPU = 1;
-  1279  000A20  8EF1               	bsf	241,7,c	;volatile
-  1280  000A22                     
-  1281                           ; BSR set to: 15
-  1282  000A22  0012               	return		;funcret
-  1283  000A24                     __end_of_PIN_MANAGER_Initialize:
-  1284                           	callstack 0
-  1285                           
-  1286 ;; *************** function _OSCILLATOR_Initialize *****************
-  1287 ;; Defined at:
-  1288 ;;		line 60 in file "mcc_generated_files/mcc.c"
-  1289 ;; Parameters:    Size  Location     Type
-  1290 ;;		None
-  1291 ;; Auto vars:     Size  Location     Type
-  1292 ;;		None
-  1293 ;; Return value:  Size  Location     Type
-  1294 ;;                  1    wreg      void 
-  1295 ;; Registers used:
-  1296 ;;		wreg, status,2
-  1297 ;; Tracked objects:
-  1298 ;;		On entry : 0/0
-  1299 ;;		On exit  : 0/0
-  1300 ;;		Unchanged: 0/0
-  1301 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1302 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1303 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  1304 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  1305 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  1306 ;;Total ram usage:        0 bytes
-  1307 ;; Hardware stack levels used: 1
-  1308 ;; This function calls:
-  1309 ;;		Nothing
-  1310 ;; This function is called by:
-  1311 ;;		_SYSTEM_Initialize
-  1312 ;; This function uses a non-reentrant model
-  1313 ;;
-  1314                           
-  1315                           	psect	text12
-  1316  000A46                     __ptext12:
-  1317                           	callstack 0
-  1318  000A46                     _OSCILLATOR_Initialize:
-  1319                           	callstack 29
-  1320  000A46                     
-  1321                           ;mcc_generated_files/mcc.c: 63:     OSCCON = 0x70;
-  1322  000A46  0E70               	movlw	112
-  1323  000A48  6ED3               	movwf	211,c	;volatile
-  1324                           
-  1325                           ;mcc_generated_files/mcc.c: 65:     OSCCON2 = 0x00;
-  1326  000A4A  0E00               	movlw	0
-  1327  000A4C  6ED2               	movwf	210,c	;volatile
-  1328                           
-  1329                           ;mcc_generated_files/mcc.c: 67:     OSCTUNE = 0x80;
-  1330  000A4E  0E80               	movlw	128
-  1331  000A50  6E9B               	movwf	155,c	;volatile
-  1332                           
-  1333                           ;mcc_generated_files/mcc.c: 69:     ACTCON = 0x00;
-  1334  000A52  0E00               	movlw	0
-  1335  000A54  6EB5               	movwf	181,c	;volatile
-  1336  000A56                     l118:
-  1337                           
-  1338                           ;mcc_generated_files/mcc.c: 71:     while(PLLRDY == 0)
-  1339  000A56  AED2               	btfss	4050,7,c	;volatile
-  1340  000A58  EF30  F005         	goto	u51
-  1341  000A5C  EF32  F005         	goto	u50
-  1342  000A60                     u51:
-  1343  000A60  EF2B  F005         	goto	l118
-  1344  000A64                     u50:
-  1345  000A64  0012               	return		;funcret
-  1346  000A66                     __end_of_OSCILLATOR_Initialize:
-  1347                           	callstack 0
-  1348                           
-  1349 ;; *************** function _CCP2_Initialize *****************
-  1350 ;; Defined at:
-  1351 ;;		line 49 in file "mcc_generated_files/ccp2.c"
-  1352 ;; Parameters:    Size  Location     Type
-  1353 ;;		None
-  1354 ;; Auto vars:     Size  Location     Type
-  1355 ;;		None
-  1356 ;; Return value:  Size  Location     Type
-  1357 ;;                  1    wreg      void 
-  1358 ;; Registers used:
-  1359 ;;		wreg, status,2
-  1360 ;; Tracked objects:
-  1361 ;;		On entry : 0/0
-  1362 ;;		On exit  : 0/0
-  1363 ;;		Unchanged: 0/0
-  1364 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1365 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1366 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  1367 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  1368 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  1369 ;;Total ram usage:        0 bytes
-  1370 ;; Hardware stack levels used: 1
-  1371 ;; This function calls:
-  1372 ;;		Nothing
-  1373 ;; This function is called by:
-  1374 ;;		_SYSTEM_Initialize
-  1375 ;; This function uses a non-reentrant model
-  1376 ;;
-  1377                           
-  1378                           	psect	text13
-  1379  000AFE                     __ptext13:
-  1380                           	callstack 0
-  1381  000AFE                     _CCP2_Initialize:
-  1382                           	callstack 29
-  1383  000AFE                     
-  1384                           ;mcc_generated_files/ccp2.c: 53:  CCP2CON = 0x00;
-  1385  000AFE  0E00               	movlw	0
-  1386  000B00  6E97               	movwf	151,c	;volatile
-  1387                           
-  1388                           ;mcc_generated_files/ccp2.c: 56:  CCPR2L = 0x00;
-  1389  000B02  0E00               	movlw	0
-  1390  000B04  6E90               	movwf	144,c	;volatile
-  1391                           
-  1392                           ;mcc_generated_files/ccp2.c: 59:  CCPR2H = 0x00;
-  1393  000B06  0E00               	movlw	0
-  1394  000B08  6E91               	movwf	145,c	;volatile
-  1395  000B0A  0012               	return		;funcret
-  1396  000B0C                     __end_of_CCP2_Initialize:
-  1397                           	callstack 0
-  1398                           
-  1399 ;; *************** function _ADC_Initialize *****************
-  1400 ;; Defined at:
-  1401 ;;		line 62 in file "mcc_generated_files/adc.c"
-  1402 ;; Parameters:    Size  Location     Type
-  1403 ;;		None
-  1404 ;; Auto vars:     Size  Location     Type
-  1405 ;;		None
-  1406 ;; Return value:  Size  Location     Type
-  1407 ;;                  1    wreg      void 
-  1408 ;; Registers used:
-  1409 ;;		wreg, status,2
-  1410 ;; Tracked objects:
-  1411 ;;		On entry : 0/0
-  1412 ;;		On exit  : 0/0
-  1413 ;;		Unchanged: 0/0
-  1414 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1415 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1416 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  1417 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  1418 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  1419 ;;Total ram usage:        0 bytes
-  1420 ;; Hardware stack levels used: 1
-  1421 ;; This function calls:
-  1422 ;;		Nothing
-  1423 ;; This function is called by:
-  1424 ;;		_SYSTEM_Initialize
-  1425 ;; This function uses a non-reentrant model
-  1426 ;;
-  1427                           
-  1428                           	psect	text14
-  1429  000AB0                     __ptext14:
-  1430                           	callstack 0
-  1431  000AB0                     _ADC_Initialize:
-  1432                           	callstack 29
-  1433  000AB0                     
-  1434                           ;mcc_generated_files/adc.c: 67:     ADCON1 = 0x00;
-  1435  000AB0  0E00               	movlw	0
-  1436  000AB2  6EC1               	movwf	193,c	;volatile
-  1437                           
-  1438                           ;mcc_generated_files/adc.c: 70:     ADCON2 = 0x87;
-  1439  000AB4  0E87               	movlw	135
-  1440  000AB6  6EC0               	movwf	192,c	;volatile
-  1441                           
-  1442                           ;mcc_generated_files/adc.c: 73:     ADRESL = 0x00;
-  1443  000AB8  0E00               	movlw	0
-  1444  000ABA  6EC3               	movwf	195,c	;volatile
-  1445                           
-  1446                           ;mcc_generated_files/adc.c: 76:     ADRESH = 0x00;
-  1447  000ABC  0E00               	movlw	0
-  1448  000ABE  6EC4               	movwf	196,c	;volatile
-  1449                           
-  1450                           ;mcc_generated_files/adc.c: 79:     ADCON0 = 0x01;
-  1451  000AC0  0E01               	movlw	1
-  1452  000AC2  6EC2               	movwf	194,c	;volatile
-  1453  000AC4  0012               	return		;funcret
-  1454  000AC6                     __end_of_ADC_Initialize:
-  1455                           	callstack 0
-  1456                           
-  1457                           	psect	rparam
-  1458  0000                     
-  1459                           	psect	idloc
-  1460                           
-  1461                           ;Config register IDLOC0 @ 0x200000
-  1462                           ;	unspecified, using default values
-  1463  200000                     	org	2097152
-  1464  200000  FF                 	db	255
-  1465                           
-  1466                           ;Config register IDLOC1 @ 0x200001
-  1467                           ;	unspecified, using default values
-  1468  200001                     	org	2097153
-  1469  200001  FF                 	db	255
-  1470                           
-  1471                           ;Config register IDLOC2 @ 0x200002
-  1472                           ;	unspecified, using default values
-  1473  200002                     	org	2097154
-  1474  200002  FF                 	db	255
-  1475                           
-  1476                           ;Config register IDLOC3 @ 0x200003
-  1477                           ;	unspecified, using default values
-  1478  200003                     	org	2097155
-  1479  200003  FF                 	db	255
-  1480                           
-  1481                           ;Config register IDLOC4 @ 0x200004
-  1482                           ;	unspecified, using default values
-  1483  200004                     	org	2097156
-  1484  200004  FF                 	db	255
-  1485                           
-  1486                           ;Config register IDLOC5 @ 0x200005
-  1487                           ;	unspecified, using default values
-  1488  200005                     	org	2097157
-  1489  200005  FF                 	db	255
-  1490                           
-  1491                           ;Config register IDLOC6 @ 0x200006
-  1492                           ;	unspecified, using default values
-  1493  200006                     	org	2097158
-  1494  200006  FF                 	db	255
-  1495                           
-  1496                           ;Config register IDLOC7 @ 0x200007
-  1497                           ;	unspecified, using default values
-  1498  200007                     	org	2097159
-  1499  200007  FF                 	db	255
-  1500                           
-  1501                           	psect	config
-  1502                           
-  1503                           ;Config register CONFIG1L @ 0x300000
-  1504                           ;	PLL Selection
-  1505                           ;	PLLSEL = PLL3X, 3x clock multiplier
-  1506                           ;	PLL Enable Configuration bit
-  1507                           ;	CFGPLLEN = ON, PLL Enabled
-  1508                           ;	CPU System Clock Postscaler
-  1509                           ;	CPUDIV = NOCLKDIV, CPU uses system clock (no divide)
-  1510                           ;	Low Speed USB mode with 48 MHz system clock
-  1511                           ;	LS48MHZ = SYS48X8, System clock at 48 MHz, USB clock divider is set to 8
-  1512  300000                     	org	3145728
-  1513  300000  23                 	db	35
-  1514                           
-  1515                           ;Config register CONFIG1H @ 0x300001
-  1516                           ;	Oscillator Selection
-  1517                           ;	FOSC = HSH, HS oscillator, high power 16MHz to 25MHz
-  1518                           ;	Primary Oscillator Shutdown
-  1519                           ;	PCLKEN = ON, Primary oscillator enabled
-  1520                           ;	Fail-Safe Clock Monitor
-  1521                           ;	FCMEN = OFF, Fail-Safe Clock Monitor disabled
-  1522                           ;	Internal/External Oscillator Switchover
-  1523                           ;	IESO = OFF, Oscillator Switchover mode disabled
-  1524  300001                     	org	3145729
-  1525  300001  22                 	db	34
-  1526                           
-  1527                           ;Config register CONFIG2L @ 0x300002
-  1528                           ;	Power-up Timer Enable
-  1529                           ;	nPWRTEN = ON, Power up timer enabled
-  1530                           ;	Brown-out Reset Enable
-  1531                           ;	BOREN = SBORDIS, BOR enabled in hardware (SBOREN is ignored)
-  1532                           ;	Brown-out Reset Voltage
-  1533                           ;	BORV = 190, BOR set to 1.9V nominal
-  1534                           ;	Low-Power Brown-out Reset
-  1535                           ;	nLPBOR = OFF, Low-Power Brown-out Reset disabled
-  1536  300002                     	org	3145730
-  1537  300002  5E                 	db	94
-  1538                           
-  1539                           ;Config register CONFIG2H @ 0x300003
-  1540                           ;	Watchdog Timer Enable bits
-  1541                           ;	WDTEN = OFF, WDT disabled in hardware (SWDTEN ignored)
-  1542                           ;	Watchdog Timer Postscaler
-  1543                           ;	WDTPS = 32768, 1:32768
-  1544  300003                     	org	3145731
-  1545  300003  3C                 	db	60
-  1546                           
-  1547                           ; Padding undefined space
-  1548  300004                     	org	3145732
-  1549  300004  FF                 	db	255
-  1550                           
-  1551                           ;Config register CONFIG3H @ 0x300005
-  1552                           ;	CCP2 MUX bit
-  1553                           ;	CCP2MX = RC1, CCP2 input/output is multiplexed with RC1
-  1554                           ;	PORTB A/D Enable bit
-  1555                           ;	PBADEN = OFF, PORTB<5:0> pins are configured as digital I/O on Reset
-  1556                           ;	Timer3 Clock Input MUX bit
-  1557                           ;	T3CMX = RC0, T3CKI function is on RC0
-  1558                           ;	SDO Output MUX bit
-  1559                           ;	SDOMX = RB3, SDO function is on RB3
-  1560                           ;	Master Clear Reset Pin Enable
-  1561                           ;	MCLRE = ON, MCLR pin enabled; RE3 input disabled
-  1562  300005                     	org	3145733
-  1563  300005  D1                 	db	209
-  1564                           
-  1565                           ;Config register CONFIG4L @ 0x300006
-  1566                           ;	Stack Full/Underflow Reset
-  1567                           ;	STVREN = ON, Stack full/underflow will cause Reset
-  1568                           ;	Single-Supply ICSP Enable bit
-  1569                           ;	LVP = ON, Single-Supply ICSP enabled if MCLRE is also 1
-  1570                           ;	Dedicated In-Circuit Debug/Programming Port Enable
-  1571                           ;	ICPRT = OFF, ICPORT disabled
-  1572                           ;	Extended Instruction Set Enable bit
-  1573                           ;	XINST = OFF, Instruction set extension and Indexed Addressing mode disabled
-  1574                           ;	Background Debugger Enable bit
-  1575                           ;	DEBUG = OFF, Background debugger disabled, RB6 and RB7 configured as general purpose I
+  1130  000962  0E14               	movlw	20
+  1131  000964                     u377:
+  1132  000964  2EE8               	decfsz	wreg,f,c
+  1133  000966  D7FE               	bra	u377
+  1134  000968                     
+  1135                           ;./Librerias/nRF24L01_2.h: 76:     }
+  1136  000968  2A41               	incf	spi_s_write@cont_s^0,f,c
+  1137  00096A  0E07               	movlw	7
+  1138  00096C  6441               	cpfsgt	spi_s_write@cont_s^0,c
+  1139  00096E  EFBB  F004         	goto	u21
+  1140  000972  EFBD  F004         	goto	u20
+  1141  000976                     u21:
+  1142  000976  EF9F  F004         	goto	l246
+  1143  00097A                     u20:
+  1144  00097A  0012               	return		;funcret
+  1145  00097C                     __end_of_spi_s_write:
+  1146                           	callstack 0
+  1147                           
+  1148 ;; *************** function _SYSTEM_Initialize *****************
+  1149 ;; Defined at:
+  1150 ;;		line 50 in file "mcc_generated_files/mcc.c"
+  1151 ;; Parameters:    Size  Location     Type
+  1152 ;;		None
+  1153 ;; Auto vars:     Size  Location     Type
+  1154 ;;		None
+  1155 ;; Return value:  Size  Location     Type
+  1156 ;;                  1    wreg      void 
+  1157 ;; Registers used:
+  1158 ;;		wreg, status,2, cstack
+  1159 ;; Tracked objects:
+  1160 ;;		On entry : 0/0
+  1161 ;;		On exit  : 0/0
+  1162 ;;		Unchanged: 0/0
+  1163 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1164 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1165 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1166 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1167 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1168 ;;Total ram usage:        0 bytes
+  1169 ;; Hardware stack levels used: 1
+  1170 ;; Hardware stack levels required when called: 1
+  1171 ;; This function calls:
+  1172 ;;		_ADC_Initialize
+  1173 ;;		_CCP2_Initialize
+  1174 ;;		_OSCILLATOR_Initialize
+  1175 ;;		_PIN_MANAGER_Initialize
+  1176 ;; This function is called by:
+  1177 ;;		_main
+  1178 ;; This function uses a non-reentrant model
+  1179 ;;
+  1180                           
+  1181                           	psect	text10
+  1182  000AEE                     __ptext10:
+  1183                           	callstack 0
+  1184  000AEE                     _SYSTEM_Initialize:
+  1185                           	callstack 29
+  1186  000AEE                     
+  1187                           ;mcc_generated_files/mcc.c: 53:     PIN_MANAGER_Initialize();
+  1188  000AEE  ECFC  F004         	call	_PIN_MANAGER_Initialize	;wreg free
+  1189                           
+  1190                           ;mcc_generated_files/mcc.c: 54:     OSCILLATOR_Initialize();
+  1191  000AF2  EC24  F005         	call	_OSCILLATOR_Initialize	;wreg free
+  1192                           
+  1193                           ;mcc_generated_files/mcc.c: 55:     CCP2_Initialize();
+  1194  000AF6  EC80  F005         	call	_CCP2_Initialize	;wreg free
+  1195                           
+  1196                           ;mcc_generated_files/mcc.c: 56:     ADC_Initialize();
+  1197  000AFA  EC59  F005         	call	_ADC_Initialize	;wreg free
+  1198  000AFE  0012               	return		;funcret
+  1199  000B00                     __end_of_SYSTEM_Initialize:
+  1200                           	callstack 0
+  1201                           
+  1202 ;; *************** function _PIN_MANAGER_Initialize *****************
+  1203 ;; Defined at:
+  1204 ;;		line 55 in file "mcc_generated_files/pin_manager.c"
+  1205 ;; Parameters:    Size  Location     Type
+  1206 ;;		None
+  1207 ;; Auto vars:     Size  Location     Type
+  1208 ;;		None
+  1209 ;; Return value:  Size  Location     Type
+  1210 ;;                  1    wreg      void 
+  1211 ;; Registers used:
+  1212 ;;		wreg, status,2
+  1213 ;; Tracked objects:
+  1214 ;;		On entry : 0/0
+  1215 ;;		On exit  : 0/0
+  1216 ;;		Unchanged: 0/0
+  1217 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1218 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1219 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1220 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1221 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1222 ;;Total ram usage:        0 bytes
+  1223 ;; Hardware stack levels used: 1
+  1224 ;; This function calls:
+  1225 ;;		Nothing
+  1226 ;; This function is called by:
+  1227 ;;		_SYSTEM_Initialize
+  1228 ;; This function uses a non-reentrant model
+  1229 ;;
+  1230                           
+  1231                           	psect	text11
+  1232  0009F8                     __ptext11:
+  1233                           	callstack 0
+  1234  0009F8                     _PIN_MANAGER_Initialize:
+  1235                           	callstack 29
+  1236  0009F8                     
+  1237                           ;mcc_generated_files/pin_manager.c: 60:     LATA = 0x00;
+  1238  0009F8  0E00               	movlw	0
+  1239  0009FA  6E89               	movwf	137,c	;volatile
+  1240                           
+  1241                           ;mcc_generated_files/pin_manager.c: 61:     LATB = 0x00;
+  1242  0009FC  0E00               	movlw	0
+  1243  0009FE  6E8A               	movwf	138,c	;volatile
+  1244                           
+  1245                           ;mcc_generated_files/pin_manager.c: 62:     LATC = 0x00;
+  1246  000A00  0E00               	movlw	0
+  1247  000A02  6E8B               	movwf	139,c	;volatile
+  1248                           
+  1249                           ;mcc_generated_files/pin_manager.c: 67:     TRISA = 0xC7;
+  1250  000A04  0EC7               	movlw	199
+  1251  000A06  6E92               	movwf	146,c	;volatile
+  1252                           
+  1253                           ;mcc_generated_files/pin_manager.c: 68:     TRISB = 0xFE;
+  1254  000A08  0EFE               	movlw	254
+  1255  000A0A  6E93               	movwf	147,c	;volatile
+  1256                           
+  1257                           ;mcc_generated_files/pin_manager.c: 69:     TRISC = 0x87;
+  1258  000A0C  0E87               	movlw	135
+  1259  000A0E  6E94               	movwf	148,c	;volatile
+  1260                           
+  1261                           ;mcc_generated_files/pin_manager.c: 74:     ANSELC = 0x04;
+  1262  000A10  0E04               	movlw	4
+  1263  000A12  010F               	movlb	15	; () banked
+  1264  000A14  6F5D               	movwf	93,b	;volatile
+  1265                           
+  1266                           ;mcc_generated_files/pin_manager.c: 75:     ANSELB = 0x3E;
+  1267  000A16  0E3E               	movlw	62
+  1268  000A18  6F5C               	movwf	92,b	;volatile
+  1269                           
+  1270                           ;mcc_generated_files/pin_manager.c: 76:     ANSELA = 0x07;
+  1271  000A1A  0E07               	movlw	7
+  1272  000A1C  6F5B               	movwf	91,b	;volatile
+  1273                           
+  1274                           ;mcc_generated_files/pin_manager.c: 81:     WPUB = 0x00;
+  1275  000A1E  0E00               	movlw	0
+  1276  000A20  6E85               	movwf	133,c	;volatile
+  1277  000A22                     
+  1278                           ; BSR set to: 15
+  1279                           ;mcc_generated_files/pin_manager.c: 82:     INTCON2bits.nRBPU = 1;
+  1280  000A22  8EF1               	bsf	241,7,c	;volatile
+  1281  000A24                     
+  1282                           ; BSR set to: 15
+  1283  000A24  0012               	return		;funcret
+  1284  000A26                     __end_of_PIN_MANAGER_Initialize:
+  1285                           	callstack 0
+  1286                           
+  1287 ;; *************** function _OSCILLATOR_Initialize *****************
+  1288 ;; Defined at:
+  1289 ;;		line 60 in file "mcc_generated_files/mcc.c"
+  1290 ;; Parameters:    Size  Location     Type
+  1291 ;;		None
+  1292 ;; Auto vars:     Size  Location     Type
+  1293 ;;		None
+  1294 ;; Return value:  Size  Location     Type
+  1295 ;;                  1    wreg      void 
+  1296 ;; Registers used:
+  1297 ;;		wreg, status,2
+  1298 ;; Tracked objects:
+  1299 ;;		On entry : 0/0
+  1300 ;;		On exit  : 0/0
+  1301 ;;		Unchanged: 0/0
+  1302 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1303 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1304 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1305 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1306 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1307 ;;Total ram usage:        0 bytes
+  1308 ;; Hardware stack levels used: 1
+  1309 ;; This function calls:
+  1310 ;;		Nothing
+  1311 ;; This function is called by:
+  1312 ;;		_SYSTEM_Initialize
+  1313 ;; This function uses a non-reentrant model
+  1314 ;;
+  1315                           
+  1316                           	psect	text12
+  1317  000A48                     __ptext12:
+  1318                           	callstack 0
+  1319  000A48                     _OSCILLATOR_Initialize:
+  1320                           	callstack 29
+  1321  000A48                     
+  1322                           ;mcc_generated_files/mcc.c: 63:     OSCCON = 0x70;
+  1323  000A48  0E70               	movlw	112
+  1324  000A4A  6ED3               	movwf	211,c	;volatile
+  1325                           
+  1326                           ;mcc_generated_files/mcc.c: 65:     OSCCON2 = 0x00;
+  1327  000A4C  0E00               	movlw	0
+  1328  000A4E  6ED2               	movwf	210,c	;volatile
+  1329                           
+  1330                           ;mcc_generated_files/mcc.c: 67:     OSCTUNE = 0x80;
+  1331  000A50  0E80               	movlw	128
+  1332  000A52  6E9B               	movwf	155,c	;volatile
+  1333                           
+  1334                           ;mcc_generated_files/mcc.c: 69:     ACTCON = 0x00;
+  1335  000A54  0E00               	movlw	0
+  1336  000A56  6EB5               	movwf	181,c	;volatile
+  1337  000A58                     l118:
+  1338                           
+  1339                           ;mcc_generated_files/mcc.c: 71:     while(PLLRDY == 0)
+  1340  000A58  AED2               	btfss	4050,7,c	;volatile
+  1341  000A5A  EF31  F005         	goto	u51
+  1342  000A5E  EF33  F005         	goto	u50
+  1343  000A62                     u51:
+  1344  000A62  EF2C  F005         	goto	l118
+  1345  000A66                     u50:
+  1346  000A66  0012               	return		;funcret
+  1347  000A68                     __end_of_OSCILLATOR_Initialize:
+  1348                           	callstack 0
+  1349                           
+  1350 ;; *************** function _CCP2_Initialize *****************
+  1351 ;; Defined at:
+  1352 ;;		line 49 in file "mcc_generated_files/ccp2.c"
+  1353 ;; Parameters:    Size  Location     Type
+  1354 ;;		None
+  1355 ;; Auto vars:     Size  Location     Type
+  1356 ;;		None
+  1357 ;; Return value:  Size  Location     Type
+  1358 ;;                  1    wreg      void 
+  1359 ;; Registers used:
+  1360 ;;		wreg, status,2
+  1361 ;; Tracked objects:
+  1362 ;;		On entry : 0/0
+  1363 ;;		On exit  : 0/0
+  1364 ;;		Unchanged: 0/0
+  1365 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1366 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1367 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1368 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1369 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1370 ;;Total ram usage:        0 bytes
+  1371 ;; Hardware stack levels used: 1
+  1372 ;; This function calls:
+  1373 ;;		Nothing
+  1374 ;; This function is called by:
+  1375 ;;		_SYSTEM_Initialize
+  1376 ;; This function uses a non-reentrant model
+  1377 ;;
+  1378                           
+  1379                           	psect	text13
+  1380  000B00                     __ptext13:
+  1381                           	callstack 0
+  1382  000B00                     _CCP2_Initialize:
+  1383                           	callstack 29
+  1384  000B00                     
+  1385                           ;mcc_generated_files/ccp2.c: 53:  CCP2CON = 0x00;
+  1386  000B00  0E00               	movlw	0
+  1387  000B02  6E97               	movwf	151,c	;volatile
+  1388                           
+  1389                           ;mcc_generated_files/ccp2.c: 56:  CCPR2L = 0x00;
+  1390  000B04  0E00               	movlw	0
+  1391  000B06  6E90               	movwf	144,c	;volatile
+  1392                           
+  1393                           ;mcc_generated_files/ccp2.c: 59:  CCPR2H = 0x00;
+  1394  000B08  0E00               	movlw	0
+  1395  000B0A  6E91               	movwf	145,c	;volatile
+  1396  000B0C  0012               	return		;funcret
+  1397  000B0E                     __end_of_CCP2_Initialize:
+  1398                           	callstack 0
+  1399                           
+  1400 ;; *************** function _ADC_Initialize *****************
+  1401 ;; Defined at:
+  1402 ;;		line 62 in file "mcc_generated_files/adc.c"
+  1403 ;; Parameters:    Size  Location     Type
+  1404 ;;		None
+  1405 ;; Auto vars:     Size  Location     Type
+  1406 ;;		None
+  1407 ;; Return value:  Size  Location     Type
+  1408 ;;                  1    wreg      void 
+  1409 ;; Registers used:
+  1410 ;;		wreg, status,2
+  1411 ;; Tracked objects:
+  1412 ;;		On entry : 0/0
+  1413 ;;		On exit  : 0/0
+  1414 ;;		Unchanged: 0/0
+  1415 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1416 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1417 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1418 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1419 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1420 ;;Total ram usage:        0 bytes
+  1421 ;; Hardware stack levels used: 1
+  1422 ;; This function calls:
+  1423 ;;		Nothing
+  1424 ;; This function is called by:
+  1425 ;;		_SYSTEM_Initialize
+  1426 ;; This function uses a non-reentrant model
+  1427 ;;
+  1428                           
+  1429                           	psect	text14
+  1430  000AB2                     __ptext14:
+  1431                           	callstack 0
+  1432  000AB2                     _ADC_Initialize:
+  1433                           	callstack 29
+  1434  000AB2                     
+  1435                           ;mcc_generated_files/adc.c: 67:     ADCON1 = 0x00;
+  1436  000AB2  0E00               	movlw	0
+  1437  000AB4  6EC1               	movwf	193,c	;volatile
+  1438                           
+  1439                           ;mcc_generated_files/adc.c: 70:     ADCON2 = 0x87;
+  1440  000AB6  0E87               	movlw	135
+  1441  000AB8  6EC0               	movwf	192,c	;volatile
+  1442                           
+  1443                           ;mcc_generated_files/adc.c: 73:     ADRESL = 0x00;
+  1444  000ABA  0E00               	movlw	0
+  1445  000ABC  6EC3               	movwf	195,c	;volatile
+  1446                           
+  1447                           ;mcc_generated_files/adc.c: 76:     ADRESH = 0x00;
+  1448  000ABE  0E00               	movlw	0
+  1449  000AC0  6EC4               	movwf	196,c	;volatile
+  1450                           
+  1451                           ;mcc_generated_files/adc.c: 79:     ADCON0 = 0x01;
+  1452  000AC2  0E01               	movlw	1
+  1453  000AC4  6EC2               	movwf	194,c	;volatile
+  1454  000AC6  0012               	return		;funcret
+  1455  000AC8                     __end_of_ADC_Initialize:
+  1456                           	callstack 0
+  1457                           
+  1458                           	psect	rparam
+  1459  0000                     
+  1460                           	psect	idloc
+  1461                           
+  1462                           ;Config register IDLOC0 @ 0x200000
+  1463                           ;	unspecified, using default values
+  1464  200000                     	org	2097152
+  1465  200000  FF                 	db	255
+  1466                           
+  1467                           ;Config register IDLOC1 @ 0x200001
+  1468                           ;	unspecified, using default values
+  1469  200001                     	org	2097153
+  1470  200001  FF                 	db	255
+  1471                           
+  1472                           ;Config register IDLOC2 @ 0x200002
+  1473                           ;	unspecified, using default values
+  1474  200002                     	org	2097154
+  1475  200002  FF                 	db	255
+  1476                           
+  1477                           ;Config register IDLOC3 @ 0x200003
+  1478                           ;	unspecified, using default values
+  1479  200003                     	org	2097155
+  1480  200003  FF                 	db	255
+  1481                           
+  1482                           ;Config register IDLOC4 @ 0x200004
+  1483                           ;	unspecified, using default values
+  1484  200004                     	org	2097156
+  1485  200004  FF                 	db	255
+  1486                           
+  1487                           ;Config register IDLOC5 @ 0x200005
+  1488                           ;	unspecified, using default values
+  1489  200005                     	org	2097157
+  1490  200005  FF                 	db	255
+  1491                           
+  1492                           ;Config register IDLOC6 @ 0x200006
+  1493                           ;	unspecified, using default values
+  1494  200006                     	org	2097158
+  1495  200006  FF                 	db	255
+  1496                           
+  1497                           ;Config register IDLOC7 @ 0x200007
+  1498                           ;	unspecified, using default values
+  1499  200007                     	org	2097159
+  1500  200007  FF                 	db	255
+  1501                           
+  1502                           	psect	config
+  1503                           
+  1504                           ;Config register CONFIG1L @ 0x300000
+  1505                           ;	PLL Selection
+  1506                           ;	PLLSEL = PLL3X, 3x clock multiplier
+  1507                           ;	PLL Enable Configuration bit
+  1508                           ;	CFGPLLEN = ON, PLL Enabled
+  1509                           ;	CPU System Clock Postscaler
+  1510                           ;	CPUDIV = NOCLKDIV, CPU uses system clock (no divide)
+  1511                           ;	Low Speed USB mode with 48 MHz system clock
+  1512                           ;	LS48MHZ = SYS48X8, System clock at 48 MHz, USB clock divider is set to 8
+  1513  300000                     	org	3145728
+  1514  300000  23                 	db	35
+  1515                           
+  1516                           ;Config register CONFIG1H @ 0x300001
+  1517                           ;	Oscillator Selection
+  1518                           ;	FOSC = HSH, HS oscillator, high power 16MHz to 25MHz
+  1519                           ;	Primary Oscillator Shutdown
+  1520                           ;	PCLKEN = ON, Primary oscillator enabled
+  1521                           ;	Fail-Safe Clock Monitor
+  1522                           ;	FCMEN = OFF, Fail-Safe Clock Monitor disabled
+  1523                           ;	Internal/External Oscillator Switchover
+  1524                           ;	IESO = OFF, Oscillator Switchover mode disabled
+  1525  300001                     	org	3145729
+  1526  300001  22                 	db	34
+  1527                           
+  1528                           ;Config register CONFIG2L @ 0x300002
+  1529                           ;	Power-up Timer Enable
+  1530                           ;	nPWRTEN = ON, Power up timer enabled
+  1531                           ;	Brown-out Reset Enable
+  1532                           ;	BOREN = SBORDIS, BOR enabled in hardware (SBOREN is ignored)
+  1533                           ;	Brown-out Reset Voltage
+  1534                           ;	BORV = 190, BOR set to 1.9V nominal
+  1535                           ;	Low-Power Brown-out Reset
+  1536                           ;	nLPBOR = OFF, Low-Power Brown-out Reset disabled
+  1537  300002                     	org	3145730
+  1538  300002  5E                 	db	94
+  1539                           
+  1540                           ;Config register CONFIG2H @ 0x300003
+  1541                           ;	Watchdog Timer Enable bits
+  1542                           ;	WDTEN = OFF, WDT disabled in hardware (SWDTEN ignored)
+  1543                           ;	Watchdog Timer Postscaler
+  1544                           ;	WDTPS = 32768, 1:32768
+  1545  300003                     	org	3145731
+  1546  300003  3C                 	db	60
+  1547                           
+  1548                           ; Padding undefined space
+  1549  300004                     	org	3145732
+  1550  300004  FF                 	db	255
+  1551                           
+  1552                           ;Config register CONFIG3H @ 0x300005
+  1553                           ;	CCP2 MUX bit
+  1554                           ;	CCP2MX = RC1, CCP2 input/output is multiplexed with RC1
+  1555                           ;	PORTB A/D Enable bit
+  1556                           ;	PBADEN = OFF, PORTB<5:0> pins are configured as digital I/O on Reset
+  1557                           ;	Timer3 Clock Input MUX bit
+  1558                           ;	T3CMX = RC0, T3CKI function is on RC0
+  1559                           ;	SDO Output MUX bit
+  1560                           ;	SDOMX = RB3, SDO function is on RB3
+  1561                           ;	Master Clear Reset Pin Enable
+  1562                           ;	MCLRE = ON, MCLR pin enabled; RE3 input disabled
+  1563  300005                     	org	3145733
+  1564  300005  D1                 	db	209
+  1565                           
+  1566                           ;Config register CONFIG4L @ 0x300006
+  1567                           ;	Stack Full/Underflow Reset
+  1568                           ;	STVREN = ON, Stack full/underflow will cause Reset
+  1569                           ;	Single-Supply ICSP Enable bit
+  1570                           ;	LVP = ON, Single-Supply ICSP enabled if MCLRE is also 1
+  1571                           ;	Dedicated In-Circuit Debug/Programming Port Enable
+  1572                           ;	ICPRT = OFF, ICPORT disabled
+  1573                           ;	Extended Instruction Set Enable bit
+  1574                           ;	XINST = OFF, Instruction set extension and Indexed Addressing mode disabled
+  1575                           ;	Background Debugger Enable bit
+  1576                           ;	DEBUG = OFF, Background debugger disabled, RB6 and RB7 configured as general purpose I
       +                          /O pins
-  1576  300006                     	org	3145734
-  1577  300006  85                 	db	133
-  1578                           
-  1579                           ; Padding undefined space
-  1580  300007                     	org	3145735
-  1581  300007  FF                 	db	255
-  1582                           
-  1583                           ;Config register CONFIG5L @ 0x300008
-  1584                           ;	Block 0 Code Protect
-  1585                           ;	CP0 = OFF, Block 0 is not code-protected
-  1586                           ;	Block 1 Code Protect
-  1587                           ;	CP1 = OFF, Block 1 is not code-protected
-  1588                           ;	Block 2 Code Protect
-  1589                           ;	CP2 = OFF, Block 2 is not code-protected
-  1590                           ;	Block 3 Code Protect
-  1591                           ;	CP3 = OFF, Block 3 is not code-protected
-  1592  300008                     	org	3145736
-  1593  300008  0F                 	db	15
-  1594                           
-  1595                           ;Config register CONFIG5H @ 0x300009
-  1596                           ;	Boot Block Code Protect
-  1597                           ;	CPB = OFF, Boot block is not code-protected
-  1598                           ;	Data EEPROM Code Protect
-  1599                           ;	CPD = OFF, Data EEPROM is not code-protected
-  1600  300009                     	org	3145737
-  1601  300009  C0                 	db	192
-  1602                           
-  1603                           ;Config register CONFIG6L @ 0x30000A
-  1604                           ;	Block 0 Write Protect
-  1605                           ;	WRT0 = OFF, Block 0 (0800-1FFFh) is not write-protected
-  1606                           ;	Block 1 Write Protect
-  1607                           ;	WRT1 = OFF, Block 1 (2000-3FFFh) is not write-protected
-  1608                           ;	Block 2 Write Protect
-  1609                           ;	WRT2 = OFF, Block 2 (04000-5FFFh) is not write-protected
-  1610                           ;	Block 3 Write Protect
-  1611                           ;	WRT3 = OFF, Block 3 (06000-7FFFh) is not write-protected
-  1612  30000A                     	org	3145738
-  1613  30000A  0F                 	db	15
-  1614                           
-  1615                           ;Config register CONFIG6H @ 0x30000B
-  1616                           ;	Configuration Registers Write Protect
-  1617                           ;	WRTC = OFF, Configuration registers (300000-3000FFh) are not write-protected
-  1618                           ;	Boot Block Write Protect
-  1619                           ;	WRTB = OFF, Boot block (0000-7FFh) is not write-protected
-  1620                           ;	Data EEPROM Write Protect
-  1621                           ;	WRTD = OFF, Data EEPROM is not write-protected
-  1622  30000B                     	org	3145739
-  1623  30000B  E0                 	db	224
-  1624                           
-  1625                           ;Config register CONFIG7L @ 0x30000C
-  1626                           ;	Block 0 Table Read Protect
-  1627                           ;	EBTR0 = OFF, Block 0 is not protected from table reads executed in other blocks
-  1628                           ;	Block 1 Table Read Protect
-  1629                           ;	EBTR1 = OFF, Block 1 is not protected from table reads executed in other blocks
-  1630                           ;	Block 2 Table Read Protect
-  1631                           ;	EBTR2 = OFF, Block 2 is not protected from table reads executed in other blocks
-  1632                           ;	Block 3 Table Read Protect
-  1633                           ;	EBTR3 = OFF, Block 3 is not protected from table reads executed in other blocks
-  1634  30000C                     	org	3145740
-  1635  30000C  0F                 	db	15
-  1636                           
-  1637                           ;Config register CONFIG7H @ 0x30000D
-  1638                           ;	Boot Block Table Read Protect
-  1639                           ;	EBTRB = OFF, Boot block is not protected from table reads executed in other blocks
-  1640  30000D                     	org	3145741
-  1641  30000D  40                 	db	64
-  1642                           tosu	equ	0xFFF
-  1643                           tosh	equ	0xFFE
-  1644                           tosl	equ	0xFFD
-  1645                           stkptr	equ	0xFFC
-  1646                           pclatu	equ	0xFFB
-  1647                           pclath	equ	0xFFA
-  1648                           pcl	equ	0xFF9
-  1649                           tblptru	equ	0xFF8
-  1650                           tblptrh	equ	0xFF7
-  1651                           tblptrl	equ	0xFF6
-  1652                           tablat	equ	0xFF5
-  1653                           prodh	equ	0xFF4
-  1654                           prodl	equ	0xFF3
-  1655                           indf0	equ	0xFEF
-  1656                           postinc0	equ	0xFEE
-  1657                           postdec0	equ	0xFED
-  1658                           preinc0	equ	0xFEC
-  1659                           plusw0	equ	0xFEB
-  1660                           fsr0h	equ	0xFEA
-  1661                           fsr0l	equ	0xFE9
-  1662                           wreg	equ	0xFE8
-  1663                           indf1	equ	0xFE7
-  1664                           postinc1	equ	0xFE6
-  1665                           postdec1	equ	0xFE5
-  1666                           preinc1	equ	0xFE4
-  1667                           plusw1	equ	0xFE3
-  1668                           fsr1h	equ	0xFE2
-  1669                           fsr1l	equ	0xFE1
-  1670                           bsr	equ	0xFE0
-  1671                           indf2	equ	0xFDF
-  1672                           postinc2	equ	0xFDE
-  1673                           postdec2	equ	0xFDD
-  1674                           preinc2	equ	0xFDC
-  1675                           plusw2	equ	0xFDB
-  1676                           fsr2h	equ	0xFDA
-  1677                           fsr2l	equ	0xFD9
-  1678                           status	equ	0xFD8
+  1577  300006                     	org	3145734
+  1578  300006  85                 	db	133
+  1579                           
+  1580                           ; Padding undefined space
+  1581  300007                     	org	3145735
+  1582  300007  FF                 	db	255
+  1583                           
+  1584                           ;Config register CONFIG5L @ 0x300008
+  1585                           ;	Block 0 Code Protect
+  1586                           ;	CP0 = OFF, Block 0 is not code-protected
+  1587                           ;	Block 1 Code Protect
+  1588                           ;	CP1 = OFF, Block 1 is not code-protected
+  1589                           ;	Block 2 Code Protect
+  1590                           ;	CP2 = OFF, Block 2 is not code-protected
+  1591                           ;	Block 3 Code Protect
+  1592                           ;	CP3 = OFF, Block 3 is not code-protected
+  1593  300008                     	org	3145736
+  1594  300008  0F                 	db	15
+  1595                           
+  1596                           ;Config register CONFIG5H @ 0x300009
+  1597                           ;	Boot Block Code Protect
+  1598                           ;	CPB = OFF, Boot block is not code-protected
+  1599                           ;	Data EEPROM Code Protect
+  1600                           ;	CPD = OFF, Data EEPROM is not code-protected
+  1601  300009                     	org	3145737
+  1602  300009  C0                 	db	192
+  1603                           
+  1604                           ;Config register CONFIG6L @ 0x30000A
+  1605                           ;	Block 0 Write Protect
+  1606                           ;	WRT0 = OFF, Block 0 (0800-1FFFh) is not write-protected
+  1607                           ;	Block 1 Write Protect
+  1608                           ;	WRT1 = OFF, Block 1 (2000-3FFFh) is not write-protected
+  1609                           ;	Block 2 Write Protect
+  1610                           ;	WRT2 = OFF, Block 2 (04000-5FFFh) is not write-protected
+  1611                           ;	Block 3 Write Protect
+  1612                           ;	WRT3 = OFF, Block 3 (06000-7FFFh) is not write-protected
+  1613  30000A                     	org	3145738
+  1614  30000A  0F                 	db	15
+  1615                           
+  1616                           ;Config register CONFIG6H @ 0x30000B
+  1617                           ;	Configuration Registers Write Protect
+  1618                           ;	WRTC = OFF, Configuration registers (300000-3000FFh) are not write-protected
+  1619                           ;	Boot Block Write Protect
+  1620                           ;	WRTB = OFF, Boot block (0000-7FFh) is not write-protected
+  1621                           ;	Data EEPROM Write Protect
+  1622                           ;	WRTD = OFF, Data EEPROM is not write-protected
+  1623  30000B                     	org	3145739
+  1624  30000B  E0                 	db	224
+  1625                           
+  1626                           ;Config register CONFIG7L @ 0x30000C
+  1627                           ;	Block 0 Table Read Protect
+  1628                           ;	EBTR0 = OFF, Block 0 is not protected from table reads executed in other blocks
+  1629                           ;	Block 1 Table Read Protect
+  1630                           ;	EBTR1 = OFF, Block 1 is not protected from table reads executed in other blocks
+  1631                           ;	Block 2 Table Read Protect
+  1632                           ;	EBTR2 = OFF, Block 2 is not protected from table reads executed in other blocks
+  1633                           ;	Block 3 Table Read Protect
+  1634                           ;	EBTR3 = OFF, Block 3 is not protected from table reads executed in other blocks
+  1635  30000C                     	org	3145740
+  1636  30000C  0F                 	db	15
+  1637                           
+  1638                           ;Config register CONFIG7H @ 0x30000D
+  1639                           ;	Boot Block Table Read Protect
+  1640                           ;	EBTRB = OFF, Boot block is not protected from table reads executed in other blocks
+  1641  30000D                     	org	3145741
+  1642  30000D  40                 	db	64
+  1643                           tosu	equ	0xFFF
+  1644                           tosh	equ	0xFFE
+  1645                           tosl	equ	0xFFD
+  1646                           stkptr	equ	0xFFC
+  1647                           pclatu	equ	0xFFB
+  1648                           pclath	equ	0xFFA
+  1649                           pcl	equ	0xFF9
+  1650                           tblptru	equ	0xFF8
+  1651                           tblptrh	equ	0xFF7
+  1652                           tblptrl	equ	0xFF6
+  1653                           tablat	equ	0xFF5
+  1654                           prodh	equ	0xFF4
+  1655                           prodl	equ	0xFF3
+  1656                           indf0	equ	0xFEF
+  1657                           postinc0	equ	0xFEE
+  1658                           postdec0	equ	0xFED
+  1659                           preinc0	equ	0xFEC
+  1660                           plusw0	equ	0xFEB
+  1661                           fsr0h	equ	0xFEA
+  1662                           fsr0l	equ	0xFE9
+  1663                           wreg	equ	0xFE8
+  1664                           indf1	equ	0xFE7
+  1665                           postinc1	equ	0xFE6
+  1666                           postdec1	equ	0xFE5
+  1667                           preinc1	equ	0xFE4
+  1668                           plusw1	equ	0xFE3
+  1669                           fsr1h	equ	0xFE2
+  1670                           fsr1l	equ	0xFE1
+  1671                           bsr	equ	0xFE0
+  1672                           indf2	equ	0xFDF
+  1673                           postinc2	equ	0xFDE
+  1674                           postdec2	equ	0xFDD
+  1675                           preinc2	equ	0xFDC
+  1676                           plusw2	equ	0xFDB
+  1677                           fsr2h	equ	0xFDA
+  1678                           fsr2l	equ	0xFD9
+  1679                           status	equ	0xFD8
 
 Data Sizes:
     Strings     15
@@ -1914,79 +1915,79 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Sun Dec 04 17:56:11 2022
+Symbol Table                                                                                   Sun Dec 04 17:58:30 2022
 
-                                u10 094A                                  u11 0946  
-                                u20 0978                                  u21 0974  
-                                u50 0A64                                  u51 0A60  
-                               l121 0A64                                 l115 0AFC  
-                               l118 0A56                                 l160 0B0A  
-                               l250 0978                                 l148 0A22  
-                               l253 0A80                                 l237 0AAE  
-                               l246 093C                                 l270 0AEA  
-                               l263 09B6                                 l248 0950  
-                               l256 0AD8                                 l264 09BE  
-                               l273 0A98                                 l179 0AC4  
-                               l276 09F4                                 l285 0930  
-                               u230 09B6                                 u231 09B2  
-                               u307 083A                                 u317 088E  
-                               u270 0860                                 u327 09E4  
-                               u271 085C                                 u280 0870  
-                               u337 09BA                                 u281 086A  
-                               u290 08AA                                 u347 0A7C  
-                               u291 08A6                                 u357 0AD4  
-                               u286 0872                                 u367 095A  
-                               u377 0962                                 wreg 000FE8  
-                        _TXSTA1bits 000FAC                     _nrF2401_init_TX 08CA  
-                              l1120 0AD2                                l1130 0AB0  
-                              l1122 09F6                                l1114 0AC8  
-                              l1124 0A20                                l1116 0ACA  
-                              l1126 0A46                                l1070 095E  
-                              l1062 094A                                l1118 0AD0  
-                              l1128 0AFE                                l1072 0960  
-                              l1064 0952                                l1056 0934  
-                              l1074 0966                                l1066 0956  
-                              l1402 0A68                                l1410 097A  
-                              l1076 0968                                l1068 0958  
-                              l1404 0A6A                                l1420 0988  
-                              l1412 097C                                l1500 0820  
-                              l1406 0A78                                l1430 0A82  
-                              l1422 09A4                                l1414 0984  
-                              l1510 0846                                l1502 0826  
-                              l1184 0AEC                                l1408 0A7A  
-                              l1424 09A6                                l1440 09D0  
-                              l1520 0884                                l1512 0848  
-                              l1504 082A                                l1426 09B8  
-                              l1450 09E2                                l1442 09D2  
-                              l1434 09C2                                l1186 0A9A  
-                              l1530 08BC                                l1522 089C  
-                              l1514 084C                                l1506 082E  
-                              l1460 090A                                l1428 0ADA  
-                              l1452 09E8                                l1444 09D8  
-                              l1436 09C2                                l1524 08AA  
-                              l1516 0852                                l1508 0830  
-                              l1462 091A                                l1454 09EA  
-                              l1446 09DE                                l1438 09C6  
-                              l1526 08AE                                l1518 0860  
-                              l1464 092E                                l1456 08CC  
-                              l1448 09E0                                l1528 08B8  
-                              l1458 08CE                                l1498 081C  
+                                u10 094C                                  u11 0948  
+                                u20 097A                                  u21 0976  
+                                u50 0A66                                  u51 0A62  
+                               l121 0A66                                 l115 0AFE  
+                               l118 0A58                                 l160 0B0C  
+                               l250 097A                                 l148 0A24  
+                               l253 0A82                                 l237 0AB0  
+                               l246 093E                                 l270 0AEC  
+                               l263 09B8                                 l248 0952  
+                               l256 0ADA                                 l264 09C0  
+                               l273 0A9A                                 l179 0AC6  
+                               l276 09F6                                 l285 0932  
+                               u230 09B8                                 u231 09B4  
+                               u307 083A                                 u317 0890  
+                               u270 0862                                 u327 09E6  
+                               u271 085E                                 u280 0872  
+                               u337 09BC                                 u281 086C  
+                               u290 08AC                                 u347 0A7E  
+                               u291 08A8                                 u357 0AD6  
+                               u286 0874                                 u367 095C  
+                               u377 0964                                 wreg 000FE8  
+                        _TXSTA1bits 000FAC                     _nrF2401_init_TX 08CC  
+                              l1120 0AD4                                l1130 0AB2  
+                              l1122 09F8                                l1114 0ACA  
+                              l1124 0A22                                l1116 0ACC  
+                              l1126 0A48                                l1070 0960  
+                              l1062 094C                                l1118 0AD2  
+                              l1128 0B00                                l1072 0962  
+                              l1064 0954                                l1056 0936  
+                              l1074 0968                                l1066 0958  
+                              l1402 0A6A                                l1410 097C  
+                              l1076 096A                                l1068 095A  
+                              l1404 0A6C                                l1420 098A  
+                              l1412 097E                                l1500 0820  
+                              l1406 0A7A                                l1430 0A84  
+                              l1422 09A6                                l1414 0986  
+                              l1510 0848                                l1502 0826  
+                              l1184 0AEE                                l1408 0A7C  
+                              l1424 09A8                                l1440 09D2  
+                              l1520 0886                                l1512 084A  
+                              l1504 082A                                l1426 09BA  
+                              l1450 09E4                                l1442 09D4  
+                              l1434 09C4                                l1186 0A9C  
+                              l1530 08BE                                l1522 089E  
+                              l1514 084E                                l1506 082E  
+                              l1460 090C                                l1428 0ADC  
+                              l1452 09EA                                l1444 09DA  
+                              l1436 09C4                                l1524 08AC  
+                              l1516 0854                                l1508 0830  
+                              l1462 091C                                l1454 09EC  
+                              l1446 09E0                                l1438 09C8  
+                              l1526 08B0                                l1518 0862  
+                              l1464 0930                                l1456 08CE  
+                              l1448 09E2                                l1528 08BA  
+                              l1458 08D0                                l1498 081C  
                               STR_1 080B                                STR_3 0817  
                               STR_5 0811                                _LATA 000F89  
                               _LATB 000F8A                                _LATC 000F8B  
-                              _WPUB 000F85             __end_of_CCP2_Initialize 0B0C  
+                              _WPUB 000F85             __end_of_CCP2_Initialize 0B0E  
                               _main 081C                                start 0000  
                   nrf2401_write@reg 0043                        ?_flush_TX_RX 0040  
-                      ___param_bank 000000     __end_of_nrf2401_direccion_TX_RX 09C0  
-    __size_of_OSCILLATOR_Initialize 0020       __end_of_OSCILLATOR_Initialize 0A66  
+                      ___param_bank 000000     __end_of_nrf2401_direccion_TX_RX 09C2  
+    __size_of_OSCILLATOR_Initialize 0020       __end_of_OSCILLATOR_Initialize 0A68  
                              ?_main 0040                               _LATB0 007C50  
                              _LATA5 007C4D                               _TRISA 000F92  
                              _TRISB 000F93                               _TRISC 000F94  
                              _trama 0022                               _texto 0001  
                              tablat 000FF5                               status 000FD8  
-_EUSART1_DefaultFramingErrorHandler 000000                     __initialization 0A24  
-                      __end_of_main 08CA                              ??_main 0049  
-                     __activetblptr 000002             __end_of_nrF2401_init_TX 0932  
+_EUSART1_DefaultFramingErrorHandler 000000                     __initialization 0A26  
+                      __end_of_main 08CC                              ??_main 0049  
+                     __activetblptr 000002             __end_of_nrF2401_init_TX 0934  
                             _ADCON0 000FC2                              _ADCON1 000FC1  
                             _ADCON2 000FC0                              _ACTCON 000FB5  
                             _ADRESH 000FC4                              _ADRESL 000FC3  
@@ -1997,52 +1998,52 @@ _EUSART1_DefaultFramingErrorHandler 000000                     __initialization 
                             _RCSTA1 000FAB                              _OSCCON 000FD3  
                             _PLLRDY 007E97                              _SPBRG1 000FAF  
                   ?_CCP2_Initialize 0040                              _TXREG1 000FAD  
-                            _TXSTA1 000FAC                     _nrf2401_comando 0AC6  
-                            _datorx 001E                    __end_of_flush_TX 0AEC  
-                            clear_0 0A2A                              clear_1 0A36  
+                            _TXSTA1 000FAC                     _nrf2401_comando 0AC8  
+                            _datorx 001E                    __end_of_flush_TX 0AEE  
+                            clear_0 0A2C                              clear_1 0A38  
                             isa$std 000001                        __mediumconst 0000  
                             tblptrh 000FF7                              tblptrl 000FF6  
-                            tblptru 000FF8                   _SYSTEM_Initialize 0AEC  
-                        __accesstop 0060             __end_of__initialization 0A3C  
+                            tblptru 000FF8                   _SYSTEM_Initialize 0AEE  
+                        __accesstop 0060             __end_of__initialization 0A3E  
               nrF2401_init_TX@canal 0048                        ?_spi_s_write 0040  
                 ?_SYSTEM_Initialize 0040                       ___rparam_used 000001  
                 nrf2401_write@valor 0042                      __pcstackCOMRAM 0040  
                ??_SYSTEM_Initialize 0040                __size_of_flush_TX_RX 0018  
-                  ?_nrF2401_init_TX 0040           __end_of_SYSTEM_Initialize 0AFE  
-                        __pbssBANK0 0060             __end_of_nrf2401_comando 0ADA  
-             __end_of_nrf2401_envia 09F6              nrf2401_comando@comando 0042  
-             __end_of_nrf2401_write 0A82                             _CCP2CON 000F97  
+                  ?_nrF2401_init_TX 0040           __end_of_SYSTEM_Initialize 0B00  
+                        __pbssBANK0 0060             __end_of_nrf2401_comando 0ADC  
+             __end_of_nrf2401_envia 09F8              nrf2401_comando@comando 0042  
+             __end_of_nrf2401_write 0A84                             _CCP2CON 000F97  
            __size_of_ADC_Initialize 0016                             _OSCCON2 000FD2  
           ?_nrf2401_direccion_TX_RX 0042                             _OSCTUNE 000F9B  
                            _SPBRGH1 000FB0       nrf2401_direccion_TX_RX@cont_s 0047  
                          ?_flush_TX 0040                _ADC_InterruptHandler 0015  
                            __Hparam 0000                             __Lparam 0000  
                       __psmallconst 0800                        _direccion_rx 0801  
-                      _direccion_tx 0806                             __pcinit 0A24  
+                      _direccion_tx 0806                             __pcinit 0A26  
                            __ramtop 0800                             __ptext0 081C  
-                           _flag_rx 001D                             __ptext1 0A9A  
-                           __ptext2 09C0                             __ptext3 0ADA  
-                           __ptext4 08CA                             __ptext5 097A  
-                           __ptext6 0A82                             __ptext7 0A66  
-                           __ptext8 0AC6                             __ptext9 0932  
-                  spi_s_write@dato_ 0040               _OSCILLATOR_Initialize 0A46  
+                           _flag_rx 001D                             __ptext1 0A9C  
+                           __ptext2 09C2                             __ptext3 0ADC  
+                           __ptext4 08CC                             __ptext5 097C  
+                           __ptext6 0A84                             __ptext7 0A68  
+                           __ptext8 0AC8                             __ptext9 0934  
+                  spi_s_write@dato_ 0040               _OSCILLATOR_Initialize 0A48  
           ??_PIN_MANAGER_Initialize 0040                             _procesa 0060  
                            _puntero 001F          __size_of_SYSTEM_Initialize 0012  
- nrf2401_direccion_TX_RX@direccion_ 0042                end_of_initialization 0A3C  
+ nrf2401_direccion_TX_RX@direccion_ 0042                end_of_initialization 0A3E  
                         ??_flush_TX 0044                       __Lmediumconst 0000  
        _EUSART1_OverrunErrorHandler 0019                    ?_nrf2401_comando 0040  
               __size_of_spi_s_write 0048                             postinc0 000FEE  
                          _PORTAbits 000F80                           _PORTBbits 000F81  
-                        _spi_s_init 0A9A                           _TRISBbits 000F93  
+                        _spi_s_init 0A9C                           _TRISBbits 000F93  
                          _TRISCbits 000F94            __size_of_CCP2_Initialize 000E  
-                    _ADC_Initialize 0AB0              ?_OSCILLATOR_Initialize 0040  
-               start_initialization 0A24     __size_of_PIN_MANAGER_Initialize 002E  
-                     ??_flush_TX_RX 0044              __end_of_ADC_Initialize 0AC6  
+                    _ADC_Initialize 0AB2              ?_OSCILLATOR_Initialize 0040  
+               start_initialization 0A26     __size_of_PIN_MANAGER_Initialize 002E  
+                     ??_flush_TX_RX 0044              __end_of_ADC_Initialize 0AC8  
                        ?_spi_s_init 0040                         __pbssCOMRAM 0001  
           __size_of_nrF2401_init_TX 0068                   __size_of_flush_TX 0012  
-  __size_of_nrf2401_direccion_TX_RX 0046              _PIN_MANAGER_Initialize 09F6  
+  __size_of_nrf2401_direccion_TX_RX 0046              _PIN_MANAGER_Initialize 09F8  
                        _dato_serial 0020                     ?_ADC_Initialize 0040  
-               __end_of_flush_TX_RX 0A9A                         __smallconst 0800  
+               __end_of_flush_TX_RX 0A9C                         __smallconst 0800  
                  ??_CCP2_Initialize 0040     nrf2401_direccion_TX_RX@registro 0044  
                           _BAUDCON1 000FB8  _EUSART1_DefaultOverrunErrorHandler 000000  
               _EUSART1_ErrorHandler 0017              __size_of_nrf2401_envia 0036  
@@ -2052,20 +2053,20 @@ _EUSART1_DefaultFramingErrorHandler 000000                     __initialization 
                        _INTCON2bits 000FF1                nrf2401_envia@dato_tx 0044  
                      ??_spi_s_write 0040                            __Hrparam 0000  
                  ??_nrF2401_init_TX 0048                            __Lrparam 0000  
-                       _flush_TX_RX 0A82                       _nrf2401_envia 09C0  
-                     _nrf2401_write 0A66             ??_OSCILLATOR_Initialize 0040  
+                       _flush_TX_RX 0A84                       _nrf2401_envia 09C2  
+                     _nrf2401_write 0A68             ??_OSCILLATOR_Initialize 0040  
           __size_of_nrf2401_comando 0014         _EUSART1_DefaultErrorHandler 000000  
-                          __ptext10 0AEC                            __ptext11 09F6  
-                          __ptext12 0A46                            __ptext13 0AFE  
-                          __ptext14 0AB0                            _flush_TX 0ADA  
-                 spi_s_write@cont_s 0041                       __size_of_main 00AE  
-           _nrf2401_direccion_TX_RX 097A                      ?_nrf2401_envia 0040  
+                          __ptext10 0AEE                            __ptext11 09F8  
+                          __ptext12 0A48                            __ptext13 0B00  
+                          __ptext14 0AB2                            _flush_TX 0ADC  
+                 spi_s_write@cont_s 0041                       __size_of_main 00B0  
+           _nrf2401_direccion_TX_RX 097C                      ?_nrf2401_envia 0040  
                           isa$xinst 000000                      ?_nrf2401_write 0042  
-               __end_of_spi_s_write 097A         _EUSART1_FramingErrorHandler 001B  
+               __end_of_spi_s_write 097C         _EUSART1_FramingErrorHandler 001B  
                       ??_spi_s_init 0040                          _INTCONbits 000FF2  
            ?_PIN_MANAGER_Initialize 0040                          _RCSTA1bits 000FAB  
-                  ??_ADC_Initialize 0040                  __end_of_spi_s_init 0AB0  
-                   _CCP2_Initialize 0AFE                  _eusart1RxLastError 0021  
+                  ??_ADC_Initialize 0040                  __end_of_spi_s_init 0AB2  
+                   _CCP2_Initialize 0B00                  _eusart1RxLastError 0021  
                  ??_nrf2401_comando 0042           ??_nrf2401_direccion_TX_RX 0045  
-    __end_of_PIN_MANAGER_Initialize 0A24                         _spi_s_write 0932  
+    __end_of_PIN_MANAGER_Initialize 0A26                         _spi_s_write 0934  
                    ??_nrf2401_envia 0044                     ??_nrf2401_write 0043  

@@ -173,7 +173,7 @@ void main(void)
 //    GIE = 1;                                                                    //Autoriza todas las interrupciones programadas 
     
     LED = 1;
-    __delay_ms(2000);
+    __delay_ms(500);
     LED = 0;
     
     //INICIAMOS EL MODULO NRF24L01

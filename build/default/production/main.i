@@ -8355,7 +8355,7 @@ void main(void)
 
 
     PORTAbits.RA5 = 1;
-    _delay((unsigned long)((2000)*(48000000/4000.0)));
+    _delay((unsigned long)((500)*(48000000/4000.0)));
     PORTAbits.RA5 = 0;
 
 

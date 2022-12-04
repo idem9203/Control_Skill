@@ -1608,8 +1608,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 175:     PORTAbits.RA5 = 1;
 [e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
 "176
-[; ;main.c: 176:     _delay((unsigned long)((2000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 176:     _delay((unsigned long)((500)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "177
 [; ;main.c: 177:     PORTAbits.RA5 = 0;
 [e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
