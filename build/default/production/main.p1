@@ -1623,14 +1623,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 175:     TRISAbits.RA3 = 1;
 [e = . . _TRISAbits 1 3 -> -> 1 `i `uc ]
 "177
-[; ;main.c: 177:     PORTAbits.RA5 = 1;
-[e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 177:     LATA5 = 1;
+[e = _LATA5 -> -> 1 `i `b ]
 "178
 [; ;main.c: 178:     _delay((unsigned long)((500)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "179
-[; ;main.c: 179:     PORTAbits.RA5 = 0;
-[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 179:     LATA5 = 0;
+[e = _LATA5 -> -> 0 `i `b ]
 "182
 [; ;main.c: 182:     spi_s_init();
 [e ( _spi_s_init ..  ]
@@ -1650,8 +1650,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 193:         {
 {
 "196
-[; ;main.c: 196:             PORTAbits.RA5 = ~PORTAbits.RA5;
-[e = . . _PORTAbits 0 5 -> ~ -> . . _PORTAbits 0 5 `i `uc ]
+[; ;main.c: 196:             LATA5 = ~LATA5;
+[e = _LATA5 -> ~ -> _LATA5 `ui `b ]
 "197
 [; ;main.c: 197:             _delay((unsigned long)((300)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
@@ -1660,8 +1660,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 663 ]
 "200
-[; ;main.c: 200:         if(PORTAbits.RA5 == 1)
-[e $ ! == -> . . _PORTAbits 0 5 `i -> 1 `i 664  ]
+[; ;main.c: 200:         if(LATA5 == 1)
+[e $ ! == -> _LATA5 `i -> 1 `i 664  ]
 "201
 [; ;main.c: 201:         {
 {

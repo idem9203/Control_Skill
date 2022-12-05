@@ -77,8 +77,8 @@ unsigned char dato_serial = 0;
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////// DECLARACION DE VARIABLES
-#define LED PORTAbits.RA5
-#define BUTTON PORTAbits.RA3
+#define RELE1 LATA5
+#define Input1 PORTAbits.RA3
 char procesa[30];
 char trama[30];
 char puntero = 0;
@@ -174,9 +174,9 @@ void main(void)
     
     TRISAbits.RA3 = 1;                                                          // Puerto RA3 se asigna como entrada
     
-    LED = 1;
+    RELE1 = 1;
     __delay_ms(500);
-    LED = 0;
+    RELE1 = 0;
     
     //INICIAMOS EL MODULO NRF24L01
     spi_s_init();
@@ -189,15 +189,15 @@ void main(void)
         // Add your application code
         
         //EJEMPLO ENVIO DE DATOS TX POR MODULO NRF24L01
-        if(BUTTON == 1) 
+        if(Input1 == 1) 
         {
 //            dato_serial = ~dato_serial;
 //            nrf2401_envia(dato_serial);
-            LED = ~LED;
+            RELE1 = ~RELE1;
             __delay_ms(300);
         }
         
-        if(LED == 1)
+        if(RELE1 == 1)
         {
             dato_serial = 1;
             nrf2401_envia(dato_serial);

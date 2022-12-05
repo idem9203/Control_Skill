@@ -8356,9 +8356,9 @@ void main(void)
 
     TRISAbits.RA3 = 1;
 
-    PORTAbits.RA5 = 1;
+    LATA5 = 1;
     _delay((unsigned long)((500)*(48000000/4000.0)));
-    PORTAbits.RA5 = 0;
+    LATA5 = 0;
 
 
     spi_s_init();
@@ -8375,11 +8375,11 @@ void main(void)
         {
 
 
-            PORTAbits.RA5 = ~PORTAbits.RA5;
+            LATA5 = ~LATA5;
             _delay((unsigned long)((300)*(48000000/4000.0)));
         }
 
-        if(PORTAbits.RA5 == 1)
+        if(LATA5 == 1)
         {
             dato_serial = 1;
             nrf2401_envia(dato_serial);
