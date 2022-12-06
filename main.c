@@ -81,7 +81,13 @@ __bit on;
 #define RELE1 LATA5
 unsigned short valor = 0;
 float voltaje = 0.0;
-char* valor_string[8];
+float sensibilidad = 0.185;
+float I = 0.0;
+float I_max = 0.0;
+float I_min = 0.0;
+float I_rms = 0.0;
+float offset = 0.0;
+char* valor_string[14];
 char prob = 100;
 char procesa[30];
 char trama[30];
@@ -118,6 +124,26 @@ void procesarx()
     }
 }
 //END //////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// ECUACION PARA OBTENER N MUESTRAS DE CORRIENTE 
+float get_corriente_AC(int n_muestras)
+{
+  float corriente = 0.0;
+  I_max = 0.0;
+  I_min = 0.0;
+  for(int i = 0; i < n_muestras; i++)
+  {
+      valor = ADC_GetConversion(0);
+      voltaje =  valor * (5.0 / 1023.0);                                        ////lectura del sensor
+      corriente = 0.9 * corriente + 0.1 * ((voltaje - 2.5) / sensibilidad);     //Ecuación  para obtener la corriente
+      if (corriente > I_max) I_max = corriente;
+      if (corriente < I_min) I_min = corriente;
+  }
+//  I_max = I_max / n_muestras;
+//  I_min = I_min / n_muestras;
+  return(((I_max - I_min) / 2) - offset);
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 // FUNCION DE INTERRUPCION
@@ -190,9 +216,10 @@ void main(void)
     {
         // Add your application code
         
-        valor = ADC_GetConversion(0);
-        voltaje = valor*5.0/1023.0;
-        snprintf(valor_string, 8, "%.3f\n\r", voltaje);
+
+        I = get_corriente_AC(200);
+        I_rms = I * 0.707;
+        snprintf(valor_string, 14, "%.3f Amp.\n\r", I_rms);
         EUSART1_Write_string(valor_string);
         
         if(nrf2401_haydatos() == 1)                                             //Recibe datos del modulo NRF2401

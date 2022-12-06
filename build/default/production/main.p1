@@ -94,6 +94,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14322
 [; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 14322: extern volatile __bit LATA5 __attribute__((address(0x7C4D)));
 [v _LATA5 `Vb ~T0 @X0 0 e@31821 ]
+"137 main.c
+[; ;main.c: 137:       valor = ADC_GetConversion(0);
+[c E4614 0 1 2 28 29 30 31 .. ]
+[n E4614 . channel_AN0 channel_AN1 channel_AN2 channel_Temp channel_CTMU channel_DAC channel_FVRBuf2  ]
+"291 ./mcc_generated_files/adc.h
+[; ;./mcc_generated_files/adc.h: 291: adc_result_t ADC_GetConversion(adc_channel_t channel);
+[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E4614 ]
 [p mainexit ]
 "72 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
@@ -107,13 +114,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "328
 [; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 328: extern volatile unsigned char ANSELC __attribute__((address(0xF5D)));
 [v _ANSELC `Vuc ~T0 @X0 0 e@3933 ]
-"193 main.c
-[; ;main.c: 193:         valor = ADC_GetConversion(0);
-[c E4614 0 1 2 28 29 30 31 .. ]
-[n E4614 . channel_AN0 channel_AN1 channel_AN2 channel_Temp channel_CTMU channel_DAC channel_FVRBuf2  ]
-"291 ./mcc_generated_files/adc.h
-[; ;./mcc_generated_files/adc.h: 291: adc_result_t ADC_GetConversion(adc_channel_t channel);
-[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E4614 ]
 "114 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _snprintf `(i ~T0 @X0 0 e2v`*uc`ui`*Cuc ]
 "344 ./mcc_generated_files/eusart1.h
@@ -1480,231 +1480,335 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> .0.0 `f
 ]
 "84
-[; ;main.c: 84: char* valor_string[8];
-[v _valor_string `*uc ~T0 @X0 -> 8 `i e ]
+[; ;main.c: 84: float sensibilidad = 0.185;
+[v _sensibilidad `f ~T0 @X0 1 e ]
+[i _sensibilidad
+-> .0.185 `f
+]
 "85
-[; ;main.c: 85: char prob = 100;
+[; ;main.c: 85: float I = 0.0;
+[v _I `f ~T0 @X0 1 e ]
+[i _I
+-> .0.0 `f
+]
+"86
+[; ;main.c: 86: float I_max = 0.0;
+[v _I_max `f ~T0 @X0 1 e ]
+[i _I_max
+-> .0.0 `f
+]
+"87
+[; ;main.c: 87: float I_min = 0.0;
+[v _I_min `f ~T0 @X0 1 e ]
+[i _I_min
+-> .0.0 `f
+]
+"88
+[; ;main.c: 88: float I_rms = 0.0;
+[v _I_rms `f ~T0 @X0 1 e ]
+[i _I_rms
+-> .0.0 `f
+]
+"89
+[; ;main.c: 89: float offset = 0.0;
+[v _offset `f ~T0 @X0 1 e ]
+[i _offset
+-> .0.0 `f
+]
+"90
+[; ;main.c: 90: char* valor_string[14];
+[v _valor_string `*uc ~T0 @X0 -> 14 `i e ]
+"91
+[; ;main.c: 91: char prob = 100;
 [v _prob `uc ~T0 @X0 1 e ]
 [i _prob
 -> -> 100 `i `uc
 ]
-"86
-[; ;main.c: 86: char procesa[30];
+"92
+[; ;main.c: 92: char procesa[30];
 [v _procesa `uc ~T0 @X0 -> 30 `i e ]
-"87
-[; ;main.c: 87: char trama[30];
+"93
+[; ;main.c: 93: char trama[30];
 [v _trama `uc ~T0 @X0 -> 30 `i e ]
-"88
-[; ;main.c: 88: char puntero = 0;
+"94
+[; ;main.c: 94: char puntero = 0;
 [v _puntero `uc ~T0 @X0 1 e ]
 [i _puntero
 -> -> 0 `i `uc
 ]
-"89
-[; ;main.c: 89: char datorx;
+"95
+[; ;main.c: 95: char datorx;
 [v _datorx `uc ~T0 @X0 1 e ]
-"90
-[; ;main.c: 90: char flag_rx = 0;
+"96
+[; ;main.c: 96: char flag_rx = 0;
 [v _flag_rx `uc ~T0 @X0 1 e ]
 [i _flag_rx
 -> -> 0 `i `uc
 ]
-"91
-[; ;main.c: 91: unsigned char texto[20];
-[v _texto `uc ~T0 @X0 -> 20 `i e ]
 "97
-[; ;main.c: 97: void procesarx()
+[; ;main.c: 97: unsigned char texto[20];
+[v _texto `uc ~T0 @X0 -> 20 `i e ]
+"103
+[; ;main.c: 103: void procesarx()
 [v _procesarx `(v ~T0 @X0 1 ef ]
-"98
-[; ;main.c: 98: {
+"104
+[; ;main.c: 104: {
 {
 [e :U _procesarx ]
 [f ]
-"99
-[; ;main.c: 99:     if(strstr(trama,"cier="))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 2C -> -> 0 `i `*uc 655  ]
-"100
-[; ;main.c: 100:     {
-{
-"101
-[; ;main.c: 101:         if(strstr(trama,"on"))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 4C -> -> 0 `i `*uc 656  ]
-"102
-[; ;main.c: 102:         {
-{
-"103
-[; ;main.c: 103:             LATB0 = 1;
-[e = _LATB0 -> -> 1 `i `b ]
-"104
-[; ;main.c: 104:             _delay((unsigned long)((300)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "105
-[; ;main.c: 105:             LATB0 = 0;
-[e = _LATB0 -> -> 0 `i `b ]
+[; ;main.c: 105:     if(strstr(trama,"cier="))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 2C -> -> 0 `i `*uc 655  ]
 "106
-[; ;main.c: 106:         }
+[; ;main.c: 106:     {
+{
+"107
+[; ;main.c: 107:         if(strstr(trama,"on"))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 4C -> -> 0 `i `*uc 656  ]
+"108
+[; ;main.c: 108:         {
+{
+"109
+[; ;main.c: 109:             LATB0 = 1;
+[e = _LATB0 -> -> 1 `i `b ]
+"110
+[; ;main.c: 110:             _delay((unsigned long)((300)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"111
+[; ;main.c: 111:             LATB0 = 0;
+[e = _LATB0 -> -> 0 `i `b ]
+"112
+[; ;main.c: 112:         }
 }
 [e $U 657  ]
-"107
-[; ;main.c: 107:         else LATB0 = 0;
+"113
+[; ;main.c: 113:         else LATB0 = 0;
 [e :U 656 ]
 [e = _LATB0 -> -> 0 `i `b ]
 [e :U 657 ]
-"108
-[; ;main.c: 108:     }
+"114
+[; ;main.c: 114:     }
 }
 [e :U 655 ]
-"109
-[; ;main.c: 109:     if(strstr(trama,"aper="))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 6C -> -> 0 `i `*uc 658  ]
-"110
-[; ;main.c: 110:     {
-{
-"111
-[; ;main.c: 111:         if(strstr(trama,"on"))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 8C -> -> 0 `i `*uc 659  ]
-"112
-[; ;main.c: 112:         {
-{
-"113
-[; ;main.c: 113:             LATA5 = 1;
-[e = _LATA5 -> -> 1 `i `b ]
-"114
-[; ;main.c: 114:             _delay((unsigned long)((300)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "115
-[; ;main.c: 115:             LATA5 = 0;
-[e = _LATA5 -> -> 0 `i `b ]
+[; ;main.c: 115:     if(strstr(trama,"aper="))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 6C -> -> 0 `i `*uc 658  ]
 "116
-[; ;main.c: 116:         }
+[; ;main.c: 116:     {
+{
+"117
+[; ;main.c: 117:         if(strstr(trama,"on"))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 8C -> -> 0 `i `*uc 659  ]
+"118
+[; ;main.c: 118:         {
+{
+"119
+[; ;main.c: 119:             LATA5 = 1;
+[e = _LATA5 -> -> 1 `i `b ]
+"120
+[; ;main.c: 120:             _delay((unsigned long)((300)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"121
+[; ;main.c: 121:             LATA5 = 0;
+[e = _LATA5 -> -> 0 `i `b ]
+"122
+[; ;main.c: 122:         }
 }
 [e $U 660  ]
-"117
-[; ;main.c: 117:         else LATA5 = 0;
+"123
+[; ;main.c: 123:         else LATA5 = 0;
 [e :U 659 ]
 [e = _LATA5 -> -> 0 `i `b ]
 [e :U 660 ]
-"118
-[; ;main.c: 118:     }
+"124
+[; ;main.c: 124:     }
 }
 [e :U 658 ]
-"119
-[; ;main.c: 119: }
+"125
+[; ;main.c: 125: }
 [e :UE 654 ]
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
+"130
+[; ;main.c: 130: float get_corriente_AC(int n_muestras)
+[v _get_corriente_AC `(f ~T0 @X0 1 ef1`i ]
+"131
+[; ;main.c: 131: {
+{
+[e :U _get_corriente_AC ]
+"130
+[; ;main.c: 130: float get_corriente_AC(int n_muestras)
+[v _n_muestras `i ~T0 @X0 1 r1 ]
+"131
+[; ;main.c: 131: {
+[f ]
+"132
+[; ;main.c: 132:   float corriente = 0.0;
+[v _corriente `f ~T0 @X0 1 a ]
+[e = _corriente -> .0.0 `f ]
+"133
+[; ;main.c: 133:   I_max = 0.0;
+[e = _I_max -> .0.0 `f ]
+"134
+[; ;main.c: 134:   I_min = 0.0;
+[e = _I_min -> .0.0 `f ]
+"135
+[; ;main.c: 135:   for(int i = 0; i < n_muestras; i++)
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 665  ]
+[e :U 662 ]
+"136
+[; ;main.c: 136:   {
+{
+"137
+[; ;main.c: 137:       valor = ADC_GetConversion(0);
+[e = _valor ( _ADC_GetConversion (1 -> -> 0 `i `E4614 ]
+"138
+[; ;main.c: 138:       voltaje = valor * (5.0 / 1023.0);
+[e = _voltaje -> * -> -> _valor `ui `d / .5.0 .1023.0 `f ]
+"139
+[; ;main.c: 139:       corriente = 0.9 * corriente + 0.1 * ((voltaje - 2.5) / sensibilidad);
+[e = _corriente -> + * .0.9 -> _corriente `d * .0.1 / - -> _voltaje `d .2.5 -> _sensibilidad `d `f ]
+"140
+[; ;main.c: 140:       if (corriente > I_max) I_max = corriente;
+[e $ ! > _corriente _I_max 666  ]
+[e = _I_max _corriente ]
+[e :U 666 ]
+"141
+[; ;main.c: 141:       if (corriente < I_min) I_min = corriente;
+[e $ ! < _corriente _I_min 667  ]
+[e = _I_min _corriente ]
+[e :U 667 ]
+"142
+[; ;main.c: 142:   }
+}
+[e ++ _i -> 1 `i ]
+[e :U 665 ]
+[e $ < _i _n_muestras 662  ]
+[e :U 663 ]
+}
+"145
+[; ;main.c: 145:   return(((I_max - I_min) / 2) - offset);
+[e ) - / - _I_max _I_min -> -> 2 `i `f _offset ]
+[e $UE 661  ]
 "146
-[; ;main.c: 146: void main(void)
+[; ;main.c: 146: }
+[e :UE 661 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"172
+[; ;main.c: 172: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"147
-[; ;main.c: 147: {
+"173
+[; ;main.c: 173: {
 {
 [e :U _main ]
 [f ]
-"149
-[; ;main.c: 149:     SYSTEM_Initialize();
+"175
+[; ;main.c: 175:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"168
-[; ;main.c: 168:     ANSELA = 0b00000111;
-[e = _ANSELA -> -> 7 `i `uc ]
-"169
-[; ;main.c: 169:     ANSELB = 0b00000000;
-[e = _ANSELB -> -> 0 `i `uc ]
-"170
-[; ;main.c: 170:     ANSELC = 0x00;
-[e = _ANSELC -> -> 0 `i `uc ]
-"177
-[; ;main.c: 177:     LATA5 = 1;
-[e = _LATA5 -> -> 1 `i `b ]
-"178
-[; ;main.c: 178:     _delay((unsigned long)((2000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"179
-[; ;main.c: 179:     LATA5 = 0;
-[e = _LATA5 -> -> 0 `i `b ]
-"182
-[; ;main.c: 182:     spi_s_init();
-[e ( _spi_s_init ..  ]
-"184
-[; ;main.c: 184:     nrF2401_init_RX(17);
-[e ( _nrF2401_init_RX (1 -> -> 17 `i `uc ]
-"189
-[; ;main.c: 189:     while (1)
-[e :U 663 ]
-"190
-[; ;main.c: 190:     {
-{
-"193
-[; ;main.c: 193:         valor = ADC_GetConversion(0);
-[e = _valor ( _ADC_GetConversion (1 -> -> 0 `i `E4614 ]
 "194
-[; ;main.c: 194:         voltaje = valor*5.0/1023.0;
-[e = _voltaje -> / * -> -> _valor `ui `d .5.0 .1023.0 `f ]
+[; ;main.c: 194:     ANSELA = 0b00000111;
+[e = _ANSELA -> -> 7 `i `uc ]
 "195
-[; ;main.c: 195:         snprintf(valor_string, 8, "%.3f\n\r", voltaje);
-[e ( _snprintf (2 , (. , , -> &U _valor_string `*uc -> -> 8 `i `ui :s 9C -> _voltaje `d ]
+[; ;main.c: 195:     ANSELB = 0b00000000;
+[e = _ANSELB -> -> 0 `i `uc ]
 "196
-[; ;main.c: 196:         EUSART1_Write_string(valor_string);
-[e ( _EUSART1_Write_string (1 -> &U _valor_string `*Cuc ]
-"198
-[; ;main.c: 198:         if(nrf2401_haydatos() == 1)
-[e $ ! == -> ( _nrf2401_haydatos ..  `i -> 1 `i 665  ]
-"199
-[; ;main.c: 199:         {
-{
-"200
-[; ;main.c: 200:             dato_serial = nrf2401_recibe();
-[e = _dato_serial -> ( _nrf2401_recibe ..  `uc ]
-"201
-[; ;main.c: 201:             if (dato_serial == 1)
-[e $ ! == -> _dato_serial `i -> 1 `i 666  ]
-"202
-[; ;main.c: 202:             {
-{
+[; ;main.c: 196:     ANSELC = 0x00;
+[e = _ANSELC -> -> 0 `i `uc ]
 "203
-[; ;main.c: 203:                 on = 1;
-[e = _on -> -> 1 `i `b ]
+[; ;main.c: 203:     LATA5 = 1;
+[e = _LATA5 -> -> 1 `i `b ]
 "204
-[; ;main.c: 204:                 LATA5 = on;
-[e = _LATA5 _on ]
+[; ;main.c: 204:     _delay((unsigned long)((2000)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "205
-[; ;main.c: 205:             }
-}
-[e $U 667  ]
-"206
-[; ;main.c: 206:             else if (dato_serial == 0)
-[e :U 666 ]
-[e $ ! == -> _dato_serial `i -> 0 `i 668  ]
-"207
-[; ;main.c: 207:             {
-{
-"208
-[; ;main.c: 208:                 on = 0;
-[e = _on -> -> 0 `i `b ]
-"209
-[; ;main.c: 209:                 LATA5 = 0;
+[; ;main.c: 205:     LATA5 = 0;
 [e = _LATA5 -> -> 0 `i `b ]
+"208
+[; ;main.c: 208:     spi_s_init();
+[e ( _spi_s_init ..  ]
 "210
-[; ;main.c: 210:             }
-}
-[e :U 668 ]
-[e :U 667 ]
-"211
-[; ;main.c: 211:         }
-}
-[e :U 665 ]
-"213
-[; ;main.c: 213:         _delay((unsigned long)((100)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 210:     nrF2401_init_RX(17);
+[e ( _nrF2401_init_RX (1 -> -> 17 `i `uc ]
+"215
+[; ;main.c: 215:     while (1)
+[e :U 670 ]
 "216
-[; ;main.c: 216:     }
+[; ;main.c: 216:     {
+{
+"220
+[; ;main.c: 220:         I = get_corriente_AC(200);
+[e = _I ( _get_corriente_AC (1 -> 200 `i ]
+"221
+[; ;main.c: 221:         I_rms = I * 0.707;
+[e = _I_rms -> * -> _I `d .0.707 `f ]
+"222
+[; ;main.c: 222:         snprintf(valor_string, 14, "%.3f Amp.\n\r", I_rms);
+[e ( _snprintf (2 , (. , , -> &U _valor_string `*uc -> -> 14 `i `ui :s 9C -> _I_rms `d ]
+"223
+[; ;main.c: 223:         EUSART1_Write_string(valor_string);
+[e ( _EUSART1_Write_string (1 -> &U _valor_string `*Cuc ]
+"225
+[; ;main.c: 225:         if(nrf2401_haydatos() == 1)
+[e $ ! == -> ( _nrf2401_haydatos ..  `i -> 1 `i 672  ]
+"226
+[; ;main.c: 226:         {
+{
+"227
+[; ;main.c: 227:             dato_serial = nrf2401_recibe();
+[e = _dato_serial -> ( _nrf2401_recibe ..  `uc ]
+"228
+[; ;main.c: 228:             if (dato_serial == 1)
+[e $ ! == -> _dato_serial `i -> 1 `i 673  ]
+"229
+[; ;main.c: 229:             {
+{
+"230
+[; ;main.c: 230:                 on = 1;
+[e = _on -> -> 1 `i `b ]
+"231
+[; ;main.c: 231:                 LATA5 = on;
+[e = _LATA5 _on ]
+"232
+[; ;main.c: 232:             }
 }
-[e :U 662 ]
-[e $U 663  ]
-[e :U 664 ]
-"217
-[; ;main.c: 217: }
-[e :UE 661 ]
+[e $U 674  ]
+"233
+[; ;main.c: 233:             else if (dato_serial == 0)
+[e :U 673 ]
+[e $ ! == -> _dato_serial `i -> 0 `i 675  ]
+"234
+[; ;main.c: 234:             {
+{
+"235
+[; ;main.c: 235:                 on = 0;
+[e = _on -> -> 0 `i `b ]
+"236
+[; ;main.c: 236:                 LATA5 = 0;
+[e = _LATA5 -> -> 0 `i `b ]
+"237
+[; ;main.c: 237:             }
+}
+[e :U 675 ]
+[e :U 674 ]
+"238
+[; ;main.c: 238:         }
+}
+[e :U 672 ]
+"240
+[; ;main.c: 240:         _delay((unsigned long)((100)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"243
+[; ;main.c: 243:     }
+}
+[e :U 669 ]
+[e $U 670  ]
+[e :U 671 ]
+"244
+[; ;main.c: 244: }
+[e :UE 668 ]
 }
 [p f _snprintf 8462336 ]
 [a 3C 111 110 0 ]
@@ -1715,4 +1819,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 6C 97 112 101 114 61 0 ]
 [a 1C 99 105 101 114 61 0 ]
 [a 2C 99 105 101 114 61 0 ]
-[a 9C 37 46 51 102 10 13 0 ]
+[a 9C 37 46 51 102 32 65 109 112 46 10 13 0 ]
