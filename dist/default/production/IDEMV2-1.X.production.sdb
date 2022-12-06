@@ -13,6 +13,16 @@ channel_CTMU 29
 channel_DAC 30
 channel_FVRBuf2 31
 ]
+"190 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+[e E4614 . `uc
+channel_AN0 0
+channel_AN1 1
+channel_AN2 2
+channel_Temp 28
+channel_CTMU 29
+channel_DAC 30
+channel_FVRBuf2 31
+]
 "23 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
 [v _spi_s_init spi_s_init `(v  1 e 1 0 ]
 "40
@@ -75,10 +85,12 @@ channel_FVRBuf2 31
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"143 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+"145 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "62 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"110
+[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
 "49 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
 [v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
 "113 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
@@ -109,39 +121,6 @@ channel_FVRBuf2 31
 [v _ANSELB ANSELB `VEuc  1 e 1 @3932 ]
 "328
 [v _ANSELC ANSELC `VEuc  1 e 1 @3933 ]
-[s S763 . 1 `uc 1 RA0 1 0 :1:0 
-`uc 1 RA1 1 0 :1:1 
-`uc 1 RA2 1 0 :1:2 
-`uc 1 RA3 1 0 :1:3 
-`uc 1 RA4 1 0 :1:4 
-`uc 1 RA5 1 0 :1:5 
-`uc 1 RA6 1 0 :1:6 
-`uc 1 RA7 1 0 :1:7 
-]
-"2838
-[s S772 . 1 `uc 1 AN0 1 0 :1:0 
-`uc 1 AN1 1 0 :1:1 
-`uc 1 AN2 1 0 :1:2 
-`uc 1 AN3 1 0 :1:3 
-`uc 1 T0CKI 1 0 :1:4 
-`uc 1 AN4 1 0 :1:5 
-`uc 1 OSC2 1 0 :1:6 
-]
-[s S780 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 VREFM 1 0 :1:2 
-`uc 1 VREFP 1 0 :1:3 
-`uc 1 . 1 0 :1:4 
-`uc 1 LVDIN 1 0 :1:5 
-]
-[s S786 . 1 `uc 1 . 1 0 :5:0 
-`uc 1 HLVDIN 1 0 :1:5 
-]
-[s S789 . 1 `uc 1 ULPWUIN 1 0 :1:0 
-`uc 1 . 1 0 :6:1 
-`uc 1 RJPU 1 0 :1:7 
-]
-[u S793 . 1 `S763 1 . 1 0 `S772 1 . 1 0 `S780 1 . 1 0 `S786 1 . 1 0 `S789 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES793  1 e 1 @3968 ]
 [s S592 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -459,7 +438,11 @@ channel_FVRBuf2 31
 [v _direccion_tx direccion_tx `C[5]uc  1 e 5 0 ]
 "74
 [v _dato_serial dato_serial `uc  1 e 1 0 ]
+"75
+[v _on on `b  1 e 0 0 ]
 "82
+[v _valor valor `ui  1 e 2 0 ]
+"84
 [v _trama trama `[30]uc  1 e 30 0 ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
@@ -475,10 +458,10 @@ channel_FVRBuf2 31
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"143 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+"145 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"210
+"211
 } 0
 "23 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
 [v _spi_s_init spi_s_init `(v  1 e 1 0 ]
@@ -601,4 +584,13 @@ channel_FVRBuf2 31
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
 "81
+} 0
+"110
+[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
+{
+[v ADC_GetConversion@channel channel `E4598  1 a 1 wreg ]
+[v ADC_GetConversion@channel channel `E4598  1 a 1 wreg ]
+"113
+[v ADC_GetConversion@channel channel `E4598  1 a 1 4 ]
+"128
 } 0

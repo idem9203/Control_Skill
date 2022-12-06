@@ -72,12 +72,14 @@ const unsigned char direccion_rx[5] = {17, 17, 17, 17, 17};                     
 
 #include "Librerias/nRF24L01_2.h"
 unsigned char dato_serial = 0;
+__bit on;
 //char texto[20];
 //END //////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////// DECLARACION DE VARIABLES
-#define LED PORTAbits.RA5
+#define RELE1 LATA5
+unsigned valor = 0;
 char procesa[30];
 char trama[30];
 char puntero = 0;
@@ -171,9 +173,9 @@ void main(void)
 //    RCIE = 1;                                                                   //Habilita la interrupcion serial
 //    GIE = 1;                                                                    //Autoriza todas las interrupciones programadas 
     
-    LED = 1;
+    RELE1 = 1;
     __delay_ms(2000);
-    LED = 0;
+    RELE1 = 0;
     
     //INICIAMOS EL MODULO NRF24L01
     spi_s_init();
@@ -185,27 +187,26 @@ void main(void)
     {
         // Add your application code
         
-        {
+        valor = ADC_GetConversion(0);
         
         if(nrf2401_haydatos() == 1)                                             //Recibe datos del modulo NRF2401
         {
             dato_serial = nrf2401_recibe();
-            LED = dato_serial;
+            if (dato_serial == 1) 
+            {
+                on = 1;
+                RELE1 = on;
+            }
+            else
+            {
+                on = 0;
+                RELE1 = 0;
+            }
         }
-
    
         __delay_ms(100);
-    }
         
-//        if (flag_rx == 1)
-//        {
-//            procesarx();                                                        //Llama el procedimiento de procesar la trama
-//            puntero = 0;                                                        //Inicializa el conteo
-//            memset (trama, 0, 30);                                              //Limpia la trama
-//            flag_rx = 0;
-//            RCIF = 0;                                                           //Limpia la bandera de la interrupcion
-//            RCIE = 1;                                                           //Habilita la interrupcion serial
-//        }
+
     }
 }
 /**

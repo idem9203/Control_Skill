@@ -8298,12 +8298,14 @@ void nrf2401_recibe_Text(char* Buffer, char StopChar)
 # 73 "main.c" 2
 
 unsigned char dato_serial = 0;
+__bit on;
 
 
 
 
 
 
+unsigned valor = 0;
 char procesa[30];
 char trama[30];
 char puntero = 0;
@@ -8338,12 +8340,12 @@ void procesarx()
         else LATA5 = 0;
     }
 }
-# 143 "main.c"
+# 145 "main.c"
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 165 "main.c"
+# 167 "main.c"
     ANSELA = 0b00000111;
     ANSELB = 0b00000000;
     ANSELC = 0x00;
@@ -8353,9 +8355,9 @@ void main(void)
 
 
 
-    PORTAbits.RA5 = 1;
+    LATA5 = 1;
     _delay((unsigned long)((2000)*(48000000/4000.0)));
-    PORTAbits.RA5 = 0;
+    LATA5 = 0;
 
 
     spi_s_init();
@@ -8367,17 +8369,25 @@ void main(void)
     {
 
 
-        {
+        valor = ADC_GetConversion(0);
 
         if(nrf2401_haydatos() == 1)
         {
             dato_serial = nrf2401_recibe();
-            PORTAbits.RA5 = dato_serial;
+            if (dato_serial == 1)
+            {
+                on = 1;
+                LATA5 = on;
+            }
+            else
+            {
+                on = 0;
+                LATA5 = 0;
+            }
         }
 
-
         _delay((unsigned long)((100)*(48000000/4000.0)));
-    }
-# 209 "main.c"
+
+
     }
 }
