@@ -197,7 +197,7 @@ void main(void)
                 on = 1;
                 RELE1 = on;
             }
-            else
+            else if (dato_serial == 0)
             {
                 on = 0;
                 RELE1 = 0;

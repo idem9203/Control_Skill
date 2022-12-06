@@ -8379,7 +8379,7 @@ void main(void)
                 on = 1;
                 LATA5 = on;
             }
-            else
+            else if (dato_serial == 0)
             {
                 on = 0;
                 LATA5 = 0;
