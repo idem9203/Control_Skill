@@ -7758,12 +7758,9 @@ adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 319 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
 # 56 "./mcc_generated_files/mcc.h" 2
-# 72 "./mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 85 "./mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 44 "main.c" 2
 
+# 1 "./mcc_generated_files/eusart1.h" 1
+# 57 "./mcc_generated_files/eusart1.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -7902,7 +7899,46 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 45 "main.c" 2
+# 57 "./mcc_generated_files/eusart1.h" 2
+# 76 "./mcc_generated_files/eusart1.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart1_status_t;
+# 111 "./mcc_generated_files/eusart1.h"
+void EUSART1_Initialize(void);
+# 159 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_tx_ready(void);
+# 207 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_rx_ready(void);
+# 254 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_tx_done(void);
+# 302 "./mcc_generated_files/eusart1.h"
+eusart1_status_t EUSART1_get_last_status(void);
+# 322 "./mcc_generated_files/eusart1.h"
+uint8_t EUSART1_Read(void);
+# 342 "./mcc_generated_files/eusart1.h"
+void EUSART1_Write(uint8_t txData);
+
+void EUSART1_Write_string(const char* data);
+# 363 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 381 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 399 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+# 57 "./mcc_generated_files/mcc.h" 2
+# 72 "./mcc_generated_files/mcc.h"
+void SYSTEM_Initialize(void);
+# 85 "./mcc_generated_files/mcc.h"
+void OSCILLATOR_Initialize(void);
+# 44 "main.c" 2
+
 
 
 
@@ -8305,7 +8341,10 @@ __bit on;
 
 
 
-unsigned valor = 0;
+unsigned short valor = 0;
+float voltaje = 0.0;
+char* valor_string[8];
+char prob = 100;
 char procesa[30];
 char trama[30];
 char puntero = 0;
@@ -8340,12 +8379,12 @@ void procesarx()
         else LATA5 = 0;
     }
 }
-# 145 "main.c"
+# 146 "main.c"
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 167 "main.c"
+# 168 "main.c"
     ANSELA = 0b00000111;
     ANSELB = 0b00000000;
     ANSELC = 0x00;
@@ -8365,11 +8404,16 @@ void main(void)
     nrF2401_init_RX(17);
 
 
+
+
     while (1)
     {
 
 
         valor = ADC_GetConversion(0);
+        voltaje = valor*5.0/1023.0;
+        snprintf(valor_string, 8, "%.3f\n\r", voltaje);
+        EUSART1_Write_string(valor_string);
 
         if(nrf2401_haydatos() == 1)
         {

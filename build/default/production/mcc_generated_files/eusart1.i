@@ -7835,11 +7835,13 @@ eusart1_status_t EUSART1_get_last_status(void);
 uint8_t EUSART1_Read(void);
 # 342 "mcc_generated_files/eusart1.h"
 void EUSART1_Write(uint8_t txData);
-# 362 "mcc_generated_files/eusart1.h"
+
+void EUSART1_Write_string(const char* data);
+# 363 "mcc_generated_files/eusart1.h"
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 380 "mcc_generated_files/eusart1.h"
+# 381 "mcc_generated_files/eusart1.h"
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 398 "mcc_generated_files/eusart1.h"
+# 399 "mcc_generated_files/eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 # 50 "mcc_generated_files/eusart1.c" 2
 
@@ -7931,6 +7933,14 @@ void EUSART1_Write(uint8_t txData)
     }
 
     TXREG1 = txData;
+}
+
+void EUSART1_Write_string(const char* data)
+{
+    while(*data != 0)
+    {
+        EUSART1_Write(*data++);
+    }
 }
 
 char getch(void)

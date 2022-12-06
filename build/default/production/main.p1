@@ -107,13 +107,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "328
 [; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 328: extern volatile unsigned char ANSELC __attribute__((address(0xF5D)));
 [v _ANSELC `Vuc ~T0 @X0 0 e@3933 ]
-"190 main.c
-[; ;main.c: 190:         valor = ADC_GetConversion(0);
+"193 main.c
+[; ;main.c: 193:         valor = ADC_GetConversion(0);
 [c E4614 0 1 2 28 29 30 31 .. ]
 [n E4614 . channel_AN0 channel_AN1 channel_AN2 channel_Temp channel_CTMU channel_DAC channel_FVRBuf2  ]
 "291 ./mcc_generated_files/adc.h
 [; ;./mcc_generated_files/adc.h: 291: adc_result_t ADC_GetConversion(adc_channel_t channel);
 [v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E4614 ]
+"114 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
+[v _snprintf `(i ~T0 @X0 0 e2v`*uc`ui`*Cuc ]
+"344 ./mcc_generated_files/eusart1.h
+[; ;./mcc_generated_files/eusart1.h: 344: void EUSART1_Write_string(const char* data);
+[v _EUSART1_Write_string `(v ~T0 @X0 0 ef1`*Cuc ]
 "55 C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h
 [; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 55: __asm("SRCON1 equ 0F57h");
 [; <" SRCON1 equ 0F57h ;# ">
@@ -775,7 +780,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
 "38
 [; ;./Librerias/nRF24L01_2.h: 38: }
-[e :UE 612 ]
+[e :UE 614 ]
 }
 "40
 [; ;./Librerias/nRF24L01_2.h: 40: unsigned char spi_s_read()
@@ -797,9 +802,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Librerias/nRF24L01_2.h: 45:     for(cont_s = 0; cont_s < 8; cont_s++)
 {
 [e = _cont_s -> -> 0 `i `uc ]
-[e $ < -> _cont_s `i -> 8 `i 614  ]
-[e $U 615  ]
-[e :U 614 ]
+[e $ < -> _cont_s `i -> 8 `i 616  ]
+[e $U 617  ]
+[e :U 616 ]
 "46
 [; ;./Librerias/nRF24L01_2.h: 46:     {
 {
@@ -814,7 +819,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
 "51
 [; ;./Librerias/nRF24L01_2.h: 51:         if(PORTBbits.RB3 != 0)
-[e $ ! != -> . . _PORTBbits 0 3 `i -> 0 `i 617  ]
+[e $ ! != -> . . _PORTBbits 0 3 `i -> 0 `i 619  ]
 "52
 [; ;./Librerias/nRF24L01_2.h: 52:         {
 {
@@ -824,7 +829,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54
 [; ;./Librerias/nRF24L01_2.h: 54:         }
 }
-[e :U 617 ]
+[e :U 619 ]
 "55
 [; ;./Librerias/nRF24L01_2.h: 55:         LATBbits.LATB2 = 0;
 [e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
@@ -835,16 +840,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Librerias/nRF24L01_2.h: 57:     }
 }
 [e ++ _cont_s -> -> 1 `i `uc ]
-[e $ < -> _cont_s `i -> 8 `i 614  ]
-[e :U 615 ]
+[e $ < -> _cont_s `i -> 8 `i 616  ]
+[e :U 617 ]
 }
 "58
 [; ;./Librerias/nRF24L01_2.h: 58:     return dato_;
 [e ) _dato_ ]
-[e $UE 613  ]
+[e $UE 615  ]
 "59
 [; ;./Librerias/nRF24L01_2.h: 59: }
-[e :UE 613 ]
+[e :UE 615 ]
 }
 "61
 [; ;./Librerias/nRF24L01_2.h: 61: void spi_s_write(unsigned char dato_)
@@ -867,22 +872,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Librerias/nRF24L01_2.h: 65:     for(cont_s = 0; cont_s < 8; cont_s++)
 {
 [e = _cont_s -> -> 0 `i `uc ]
-[e $ < -> _cont_s `i -> 8 `i 619  ]
-[e $U 620  ]
-[e :U 619 ]
+[e $ < -> _cont_s `i -> 8 `i 621  ]
+[e $U 622  ]
+[e :U 621 ]
 "66
 [; ;./Librerias/nRF24L01_2.h: 66:     {
 {
 "68
 [; ;./Librerias/nRF24L01_2.h: 68:         if((dato_ & 0x80) != 0) LATCbits.LATC1 = 1;
-[e $ ! != & -> _dato_ `i -> 128 `i -> 0 `i 622  ]
+[e $ ! != & -> _dato_ `i -> 128 `i -> 0 `i 624  ]
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-[e $U 623  ]
+[e $U 625  ]
 "69
 [; ;./Librerias/nRF24L01_2.h: 69:         else LATCbits.LATC1 = 0;
-[e :U 622 ]
+[e :U 624 ]
 [e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
-[e :U 623 ]
+[e :U 625 ]
 "70
 [; ;./Librerias/nRF24L01_2.h: 70:         dato_ <<= 1;
 [e =<< _dato_ -> -> 1 `i `uc ]
@@ -902,12 +907,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Librerias/nRF24L01_2.h: 76:     }
 }
 [e ++ _cont_s -> -> 1 `i `uc ]
-[e $ < -> _cont_s `i -> 8 `i 619  ]
-[e :U 620 ]
+[e $ < -> _cont_s `i -> 8 `i 621  ]
+[e :U 622 ]
 }
 "77
 [; ;./Librerias/nRF24L01_2.h: 77: }
-[e :UE 618 ]
+[e :UE 620 ]
 }
 "81
 [; ;./Librerias/nRF24L01_2.h: 81: void nrf2401_write(unsigned char reg, unsigned char valor)
@@ -940,7 +945,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
 "89
 [; ;./Librerias/nRF24L01_2.h: 89: }
-[e :UE 624 ]
+[e :UE 626 ]
 }
 "91
 [; ;./Librerias/nRF24L01_2.h: 91: void nrf2401_comando(unsigned char comando)
@@ -969,7 +974,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
 "97
 [; ;./Librerias/nRF24L01_2.h: 97: }
-[e :UE 625 ]
+[e :UE 627 ]
 }
 "99
 [; ;./Librerias/nRF24L01_2.h: 99: unsigned char nrf2401_read(unsigned char reg)
@@ -1006,10 +1011,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "107
 [; ;./Librerias/nRF24L01_2.h: 107:     return dato_;
 [e ) _dato_ ]
-[e $UE 626  ]
+[e $UE 628  ]
 "108
 [; ;./Librerias/nRF24L01_2.h: 108: }
-[e :UE 626 ]
+[e :UE 628 ]
 }
 "111
 [; ;./Librerias/nRF24L01_2.h: 111: void nrf2401_direccion_TX_RX(const unsigned char *direccion_, unsigned char registro)
@@ -1038,9 +1043,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Librerias/nRF24L01_2.h: 117:     for(cont_s = 0; cont_s < 5; cont_s++)
 {
 [e = _cont_s -> -> 0 `i `uc ]
-[e $ < -> _cont_s `i -> 5 `i 628  ]
-[e $U 629  ]
-[e :U 628 ]
+[e $ < -> _cont_s `i -> 5 `i 630  ]
+[e $U 631  ]
+[e :U 630 ]
 "118
 [; ;./Librerias/nRF24L01_2.h: 118:     {
 {
@@ -1051,8 +1056,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Librerias/nRF24L01_2.h: 120:     }
 }
 [e ++ _cont_s -> -> 1 `i `uc ]
-[e $ < -> _cont_s `i -> 5 `i 628  ]
-[e :U 629 ]
+[e $ < -> _cont_s `i -> 5 `i 630  ]
+[e :U 631 ]
 }
 "121
 [; ;./Librerias/nRF24L01_2.h: 121:     LATCbits.LATC2 = 1;
@@ -1062,7 +1067,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
 "124
 [; ;./Librerias/nRF24L01_2.h: 124: }
-[e :UE 627 ]
+[e :UE 629 ]
 }
 "128
 [; ;./Librerias/nRF24L01_2.h: 128: void flush_RX()
@@ -1080,7 +1085,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _nrf2401_comando (1 -> -> 226 `i `uc ]
 "132
 [; ;./Librerias/nRF24L01_2.h: 132: }
-[e :UE 631 ]
+[e :UE 633 ]
 }
 "135
 [; ;./Librerias/nRF24L01_2.h: 135: void flush_TX()
@@ -1098,7 +1103,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _nrf2401_comando (1 -> -> 226 `i `uc ]
 "139
 [; ;./Librerias/nRF24L01_2.h: 139: }
-[e :UE 632 ]
+[e :UE 634 ]
 }
 "142
 [; ;./Librerias/nRF24L01_2.h: 142: void flush_TX_RX()
@@ -1119,7 +1124,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _nrf2401_comando (1 -> -> 226 `i `uc ]
 "147
 [; ;./Librerias/nRF24L01_2.h: 147: }
-[e :UE 633 ]
+[e :UE 635 ]
 }
 "151
 [; ;./Librerias/nRF24L01_2.h: 151: void nrf2401_envia(unsigned char dato_tx)
@@ -1170,7 +1175,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _nrf2401_write (2 , -> -> 0 `i `uc -> + + + -> 1 `i -> 2 `i -> 4 `i -> 8 `i `uc ]
 "167
 [; ;./Librerias/nRF24L01_2.h: 167: }
-[e :UE 634 ]
+[e :UE 636 ]
 }
 "172
 [; ;./Librerias/nRF24L01_2.h: 172: char nrf2401_recibe()
@@ -1201,10 +1206,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "180
 [; ;./Librerias/nRF24L01_2.h: 180:     return (valor_);
 [e ) _valor_ ]
-[e $UE 635  ]
+[e $UE 637  ]
 "181
 [; ;./Librerias/nRF24L01_2.h: 181: }
-[e :UE 635 ]
+[e :UE 637 ]
 }
 "184
 [; ;./Librerias/nRF24L01_2.h: 184: void nrF2401_init_RX(unsigned char canal)
@@ -1260,7 +1265,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 "199
 [; ;./Librerias/nRF24L01_2.h: 199: }
-[e :UE 636 ]
+[e :UE 638 ]
 }
 "201
 [; ;./Librerias/nRF24L01_2.h: 201: void nrF2401_init_TX(unsigned char canal)
@@ -1310,7 +1315,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 "215
 [; ;./Librerias/nRF24L01_2.h: 215: }
-[e :UE 637 ]
+[e :UE 639 ]
 }
 "218
 [; ;./Librerias/nRF24L01_2.h: 218: unsigned char get_Status()
@@ -1323,10 +1328,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "220
 [; ;./Librerias/nRF24L01_2.h: 220:     return nrf2401_read (0x07);
 [e ) ( _nrf2401_read (1 -> -> 7 `i `uc ]
-[e $UE 638  ]
+[e $UE 640  ]
 "221
 [; ;./Librerias/nRF24L01_2.h: 221: }
-[e :UE 638 ]
+[e :UE 640 ]
 }
 "223
 [; ;./Librerias/nRF24L01_2.h: 223: unsigned char get_fifo_status()
@@ -1339,10 +1344,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "225
 [; ;./Librerias/nRF24L01_2.h: 225:     return nrf2401_read (0x17);
 [e ) ( _nrf2401_read (1 -> -> 23 `i `uc ]
-[e $UE 639  ]
+[e $UE 641  ]
 "227
 [; ;./Librerias/nRF24L01_2.h: 227: }
-[e :UE 639 ]
+[e :UE 641 ]
 }
 "230
 [; ;./Librerias/nRF24L01_2.h: 230: void nrf2401_envia_Text(char* Text)
@@ -1362,8 +1367,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _flush_TX ..  ]
 "233
 [; ;./Librerias/nRF24L01_2.h: 233:     while(*Text)
-[e $U 641  ]
-[e :U 642 ]
+[e $U 643  ]
+[e :U 644 ]
 "234
 [; ;./Librerias/nRF24L01_2.h: 234:     {
 {
@@ -1373,17 +1378,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "236
 [; ;./Librerias/nRF24L01_2.h: 236:     }
 }
-[e :U 641 ]
+[e :U 643 ]
 "233
 [; ;./Librerias/nRF24L01_2.h: 233:     while(*Text)
-[e $ != -> *U _Text `i -> 0 `i 642  ]
-[e :U 643 ]
+[e $ != -> *U _Text `i -> 0 `i 644  ]
+[e :U 645 ]
 "237
 [; ;./Librerias/nRF24L01_2.h: 237:     _delay((unsigned long)((3)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 3 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "238
 [; ;./Librerias/nRF24L01_2.h: 238: }
-[e :UE 640 ]
+[e :UE 642 ]
 }
 "240
 [; ;./Librerias/nRF24L01_2.h: 240: char nrf2401_haydatos()
@@ -1395,19 +1400,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "242
 [; ;./Librerias/nRF24L01_2.h: 242:     if(get_Status() == 0x40) return(1);
-[e $ ! == -> ( _get_Status ..  `i -> 64 `i 645  ]
+[e $ ! == -> ( _get_Status ..  `i -> 64 `i 647  ]
 [e ) -> -> 1 `i `uc ]
-[e $UE 644  ]
-[e $U 646  ]
+[e $UE 646  ]
+[e $U 648  ]
 "243
 [; ;./Librerias/nRF24L01_2.h: 243:     else return(0);
-[e :U 645 ]
+[e :U 647 ]
 [e ) -> -> 0 `i `uc ]
-[e $UE 644  ]
-[e :U 646 ]
+[e $UE 646  ]
+[e :U 648 ]
 "244
 [; ;./Librerias/nRF24L01_2.h: 244: }
-[e :UE 644 ]
+[e :UE 646 ]
 }
 "247
 [; ;./Librerias/nRF24L01_2.h: 247: void nrf2401_recibe_Text(char* Buffer, char StopChar)
@@ -1428,30 +1433,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _flush_RX ..  ]
 "250
 [; ;./Librerias/nRF24L01_2.h: 250:     while(*(Buffer-1)!=StopChar)
-[e $U 648  ]
-[e :U 649 ]
+[e $U 650  ]
+[e :U 651 ]
 "251
 [; ;./Librerias/nRF24L01_2.h: 251:     {
 {
 "252
 [; ;./Librerias/nRF24L01_2.h: 252:         if(get_Status() == 0x40) *Buffer++=nrf2401_recibe();
-[e $ ! == -> ( _get_Status ..  `i -> 64 `i 651  ]
+[e $ ! == -> ( _get_Status ..  `i -> 64 `i 653  ]
 [e = *U ++ _Buffer * -> -> 1 `i `x -> -> # *U _Buffer `i `x ( _nrf2401_recibe ..  ]
-[e :U 651 ]
+[e :U 653 ]
 "253
 [; ;./Librerias/nRF24L01_2.h: 253:     }
 }
-[e :U 648 ]
+[e :U 650 ]
 "250
 [; ;./Librerias/nRF24L01_2.h: 250:     while(*(Buffer-1)!=StopChar)
-[e $ != -> *U - _Buffer * -> -> 1 `i `x -> -> # *U _Buffer `i `x `i -> _StopChar `i 649  ]
-[e :U 650 ]
+[e $ != -> *U - _Buffer * -> -> 1 `i `x -> -> # *U _Buffer `i `x `i -> _StopChar `i 651  ]
+[e :U 652 ]
 "255
 [; ;./Librerias/nRF24L01_2.h: 255:     *--Buffer=0;
 [e = *U =- _Buffer * -> -> 1 `i `x -> -> # *U _Buffer `i `x -> -> 0 `i `uc ]
 "256
 [; ;./Librerias/nRF24L01_2.h: 256: }
-[e :UE 647 ]
+[e :UE 649 ]
 }
 "74 main.c
 [; ;main.c: 74: unsigned char dato_serial = 0;
@@ -1463,220 +1468,245 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 75: __bit on;
 [v _on `b ~T0 @X0 1 e ]
 "82
-[; ;main.c: 82: unsigned valor = 0;
-[v _valor `ui ~T0 @X0 1 e ]
+[; ;main.c: 82: unsigned short valor = 0;
+[v _valor `us ~T0 @X0 1 e ]
 [i _valor
--> -> 0 `i `ui
+-> -> 0 `i `us
 ]
 "83
-[; ;main.c: 83: char procesa[30];
-[v _procesa `uc ~T0 @X0 -> 30 `i e ]
+[; ;main.c: 83: float voltaje = 0.0;
+[v _voltaje `f ~T0 @X0 1 e ]
+[i _voltaje
+-> .0.0 `f
+]
 "84
-[; ;main.c: 84: char trama[30];
-[v _trama `uc ~T0 @X0 -> 30 `i e ]
+[; ;main.c: 84: char* valor_string[8];
+[v _valor_string `*uc ~T0 @X0 -> 8 `i e ]
 "85
-[; ;main.c: 85: char puntero = 0;
+[; ;main.c: 85: char prob = 100;
+[v _prob `uc ~T0 @X0 1 e ]
+[i _prob
+-> -> 100 `i `uc
+]
+"86
+[; ;main.c: 86: char procesa[30];
+[v _procesa `uc ~T0 @X0 -> 30 `i e ]
+"87
+[; ;main.c: 87: char trama[30];
+[v _trama `uc ~T0 @X0 -> 30 `i e ]
+"88
+[; ;main.c: 88: char puntero = 0;
 [v _puntero `uc ~T0 @X0 1 e ]
 [i _puntero
 -> -> 0 `i `uc
 ]
-"86
-[; ;main.c: 86: char datorx;
+"89
+[; ;main.c: 89: char datorx;
 [v _datorx `uc ~T0 @X0 1 e ]
-"87
-[; ;main.c: 87: char flag_rx = 0;
+"90
+[; ;main.c: 90: char flag_rx = 0;
 [v _flag_rx `uc ~T0 @X0 1 e ]
 [i _flag_rx
 -> -> 0 `i `uc
 ]
-"88
-[; ;main.c: 88: unsigned char texto[20];
+"91
+[; ;main.c: 91: unsigned char texto[20];
 [v _texto `uc ~T0 @X0 -> 20 `i e ]
-"94
-[; ;main.c: 94: void procesarx()
+"97
+[; ;main.c: 97: void procesarx()
 [v _procesarx `(v ~T0 @X0 1 ef ]
-"95
-[; ;main.c: 95: {
+"98
+[; ;main.c: 98: {
 {
 [e :U _procesarx ]
 [f ]
-"96
-[; ;main.c: 96:     if(strstr(trama,"cier="))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 2C -> -> 0 `i `*uc 653  ]
-"97
-[; ;main.c: 97:     {
-{
-"98
-[; ;main.c: 98:         if(strstr(trama,"on"))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 4C -> -> 0 `i `*uc 654  ]
 "99
-[; ;main.c: 99:         {
-{
+[; ;main.c: 99:     if(strstr(trama,"cier="))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 2C -> -> 0 `i `*uc 655  ]
 "100
-[; ;main.c: 100:             LATB0 = 1;
-[e = _LATB0 -> -> 1 `i `b ]
+[; ;main.c: 100:     {
+{
 "101
-[; ;main.c: 101:             _delay((unsigned long)((300)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 101:         if(strstr(trama,"on"))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 4C -> -> 0 `i `*uc 656  ]
 "102
-[; ;main.c: 102:             LATB0 = 0;
-[e = _LATB0 -> -> 0 `i `b ]
+[; ;main.c: 102:         {
+{
 "103
-[; ;main.c: 103:         }
-}
-[e $U 655  ]
+[; ;main.c: 103:             LATB0 = 1;
+[e = _LATB0 -> -> 1 `i `b ]
 "104
-[; ;main.c: 104:         else LATB0 = 0;
-[e :U 654 ]
-[e = _LATB0 -> -> 0 `i `b ]
-[e :U 655 ]
-"105
-[; ;main.c: 105:     }
-}
-[e :U 653 ]
-"106
-[; ;main.c: 106:     if(strstr(trama,"aper="))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 6C -> -> 0 `i `*uc 656  ]
-"107
-[; ;main.c: 107:     {
-{
-"108
-[; ;main.c: 108:         if(strstr(trama,"on"))
-[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 8C -> -> 0 `i `*uc 657  ]
-"109
-[; ;main.c: 109:         {
-{
-"110
-[; ;main.c: 110:             LATA5 = 1;
-[e = _LATA5 -> -> 1 `i `b ]
-"111
-[; ;main.c: 111:             _delay((unsigned long)((300)*(48000000/4000.0)));
+[; ;main.c: 104:             _delay((unsigned long)((300)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"112
-[; ;main.c: 112:             LATA5 = 0;
-[e = _LATA5 -> -> 0 `i `b ]
-"113
-[; ;main.c: 113:         }
+"105
+[; ;main.c: 105:             LATB0 = 0;
+[e = _LATB0 -> -> 0 `i `b ]
+"106
+[; ;main.c: 106:         }
 }
-[e $U 658  ]
-"114
-[; ;main.c: 114:         else LATA5 = 0;
-[e :U 657 ]
-[e = _LATA5 -> -> 0 `i `b ]
-[e :U 658 ]
-"115
-[; ;main.c: 115:     }
-}
+[e $U 657  ]
+"107
+[; ;main.c: 107:         else LATB0 = 0;
 [e :U 656 ]
+[e = _LATB0 -> -> 0 `i `b ]
+[e :U 657 ]
+"108
+[; ;main.c: 108:     }
+}
+[e :U 655 ]
+"109
+[; ;main.c: 109:     if(strstr(trama,"aper="))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 6C -> -> 0 `i `*uc 658  ]
+"110
+[; ;main.c: 110:     {
+{
+"111
+[; ;main.c: 111:         if(strstr(trama,"on"))
+[e $ ! != ( _strstr (2 , -> &U _trama `*Cuc :s 8C -> -> 0 `i `*uc 659  ]
+"112
+[; ;main.c: 112:         {
+{
+"113
+[; ;main.c: 113:             LATA5 = 1;
+[e = _LATA5 -> -> 1 `i `b ]
+"114
+[; ;main.c: 114:             _delay((unsigned long)((300)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"115
+[; ;main.c: 115:             LATA5 = 0;
+[e = _LATA5 -> -> 0 `i `b ]
 "116
-[; ;main.c: 116: }
-[e :UE 652 ]
+[; ;main.c: 116:         }
+}
+[e $U 660  ]
+"117
+[; ;main.c: 117:         else LATA5 = 0;
+[e :U 659 ]
+[e = _LATA5 -> -> 0 `i `b ]
+[e :U 660 ]
+"118
+[; ;main.c: 118:     }
+}
+[e :U 658 ]
+"119
+[; ;main.c: 119: }
+[e :UE 654 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"145
-[; ;main.c: 145: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
 "146
-[; ;main.c: 146: {
+[; ;main.c: 146: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"147
+[; ;main.c: 147: {
 {
 [e :U _main ]
 [f ]
-"148
-[; ;main.c: 148:     SYSTEM_Initialize();
+"149
+[; ;main.c: 149:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"167
-[; ;main.c: 167:     ANSELA = 0b00000111;
-[e = _ANSELA -> -> 7 `i `uc ]
 "168
-[; ;main.c: 168:     ANSELB = 0b00000000;
-[e = _ANSELB -> -> 0 `i `uc ]
+[; ;main.c: 168:     ANSELA = 0b00000111;
+[e = _ANSELA -> -> 7 `i `uc ]
 "169
-[; ;main.c: 169:     ANSELC = 0x00;
+[; ;main.c: 169:     ANSELB = 0b00000000;
+[e = _ANSELB -> -> 0 `i `uc ]
+"170
+[; ;main.c: 170:     ANSELC = 0x00;
 [e = _ANSELC -> -> 0 `i `uc ]
-"176
-[; ;main.c: 176:     LATA5 = 1;
-[e = _LATA5 -> -> 1 `i `b ]
 "177
-[; ;main.c: 177:     _delay((unsigned long)((2000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 177:     LATA5 = 1;
+[e = _LATA5 -> -> 1 `i `b ]
 "178
-[; ;main.c: 178:     LATA5 = 0;
+[; ;main.c: 178:     _delay((unsigned long)((2000)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"179
+[; ;main.c: 179:     LATA5 = 0;
 [e = _LATA5 -> -> 0 `i `b ]
-"181
-[; ;main.c: 181:     spi_s_init();
+"182
+[; ;main.c: 182:     spi_s_init();
 [e ( _spi_s_init ..  ]
-"183
-[; ;main.c: 183:     nrF2401_init_RX(17);
+"184
+[; ;main.c: 184:     nrF2401_init_RX(17);
 [e ( _nrF2401_init_RX (1 -> -> 17 `i `uc ]
-"186
-[; ;main.c: 186:     while (1)
-[e :U 661 ]
-"187
-[; ;main.c: 187:     {
-{
-"190
-[; ;main.c: 190:         valor = ADC_GetConversion(0);
-[e = _valor -> ( _ADC_GetConversion (1 -> -> 0 `i `E4614 `ui ]
-"192
-[; ;main.c: 192:         if(nrf2401_haydatos() == 1)
-[e $ ! == -> ( _nrf2401_haydatos ..  `i -> 1 `i 663  ]
-"193
-[; ;main.c: 193:         {
-{
-"194
-[; ;main.c: 194:             dato_serial = nrf2401_recibe();
-[e = _dato_serial -> ( _nrf2401_recibe ..  `uc ]
-"195
-[; ;main.c: 195:             if (dato_serial == 1)
-[e $ ! == -> _dato_serial `i -> 1 `i 664  ]
-"196
-[; ;main.c: 196:             {
-{
-"197
-[; ;main.c: 197:                 on = 1;
-[e = _on -> -> 1 `i `b ]
-"198
-[; ;main.c: 198:                 LATA5 = on;
-[e = _LATA5 _on ]
-"199
-[; ;main.c: 199:             }
-}
-[e $U 665  ]
-"200
-[; ;main.c: 200:             else if (dato_serial == 0)
-[e :U 664 ]
-[e $ ! == -> _dato_serial `i -> 0 `i 666  ]
-"201
-[; ;main.c: 201:             {
-{
-"202
-[; ;main.c: 202:                 on = 0;
-[e = _on -> -> 0 `i `b ]
-"203
-[; ;main.c: 203:                 LATA5 = 0;
-[e = _LATA5 -> -> 0 `i `b ]
-"204
-[; ;main.c: 204:             }
-}
-[e :U 666 ]
-[e :U 665 ]
-"205
-[; ;main.c: 205:         }
-}
+"189
+[; ;main.c: 189:     while (1)
 [e :U 663 ]
+"190
+[; ;main.c: 190:     {
+{
+"193
+[; ;main.c: 193:         valor = ADC_GetConversion(0);
+[e = _valor ( _ADC_GetConversion (1 -> -> 0 `i `E4614 ]
+"194
+[; ;main.c: 194:         voltaje = valor*5.0/1023.0;
+[e = _voltaje -> / * -> -> _valor `ui `d .5.0 .1023.0 `f ]
+"195
+[; ;main.c: 195:         snprintf(valor_string, 8, "%.3f\n\r", voltaje);
+[e ( _snprintf (2 , (. , , -> &U _valor_string `*uc -> -> 8 `i `ui :s 9C -> _voltaje `d ]
+"196
+[; ;main.c: 196:         EUSART1_Write_string(valor_string);
+[e ( _EUSART1_Write_string (1 -> &U _valor_string `*Cuc ]
+"198
+[; ;main.c: 198:         if(nrf2401_haydatos() == 1)
+[e $ ! == -> ( _nrf2401_haydatos ..  `i -> 1 `i 665  ]
+"199
+[; ;main.c: 199:         {
+{
+"200
+[; ;main.c: 200:             dato_serial = nrf2401_recibe();
+[e = _dato_serial -> ( _nrf2401_recibe ..  `uc ]
+"201
+[; ;main.c: 201:             if (dato_serial == 1)
+[e $ ! == -> _dato_serial `i -> 1 `i 666  ]
+"202
+[; ;main.c: 202:             {
+{
+"203
+[; ;main.c: 203:                 on = 1;
+[e = _on -> -> 1 `i `b ]
+"204
+[; ;main.c: 204:                 LATA5 = on;
+[e = _LATA5 _on ]
+"205
+[; ;main.c: 205:             }
+}
+[e $U 667  ]
+"206
+[; ;main.c: 206:             else if (dato_serial == 0)
+[e :U 666 ]
+[e $ ! == -> _dato_serial `i -> 0 `i 668  ]
 "207
-[; ;main.c: 207:         _delay((unsigned long)((100)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 207:             {
+{
+"208
+[; ;main.c: 208:                 on = 0;
+[e = _on -> -> 0 `i `b ]
+"209
+[; ;main.c: 209:                 LATA5 = 0;
+[e = _LATA5 -> -> 0 `i `b ]
 "210
-[; ;main.c: 210:     }
+[; ;main.c: 210:             }
 }
-[e :U 660 ]
-[e $U 661  ]
-[e :U 662 ]
+[e :U 668 ]
+[e :U 667 ]
 "211
-[; ;main.c: 211: }
-[e :UE 659 ]
+[; ;main.c: 211:         }
 }
+[e :U 665 ]
+"213
+[; ;main.c: 213:         _delay((unsigned long)((100)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"216
+[; ;main.c: 216:     }
+}
+[e :U 662 ]
+[e $U 663  ]
+[e :U 664 ]
+"217
+[; ;main.c: 217: }
+[e :UE 661 ]
+}
+[p f _snprintf 8462336 ]
 [a 3C 111 110 0 ]
 [a 4C 111 110 0 ]
 [a 7C 111 110 0 ]
@@ -1685,3 +1715,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 6C 97 112 101 114 61 0 ]
 [a 1C 99 105 101 114 61 0 ]
 [a 2C 99 105 101 114 61 0 ]
+[a 9C 37 46 51 102 10 13 0 ]

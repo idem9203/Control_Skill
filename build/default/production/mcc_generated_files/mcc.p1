@@ -11,6 +11,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "139 mcc_generated_files/adc.h
 [; ;mcc_generated_files/adc.h: 139: void ADC_Initialize(void);
 [v _ADC_Initialize `(v ~T0 @X0 0 ef ]
+"111 mcc_generated_files/eusart1.h
+[; ;mcc_generated_files/eusart1.h: 111: void EUSART1_Initialize(void);
+[v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
 "11548 C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h
 [; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11548: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
@@ -643,9 +646,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56
 [; ;mcc_generated_files/mcc.c: 56:     ADC_Initialize();
 [e ( _ADC_Initialize ..  ]
+"57
+[; ;mcc_generated_files/mcc.c: 57:     EUSART1_Initialize();
+[e ( _EUSART1_Initialize ..  ]
 "58
 [; ;mcc_generated_files/mcc.c: 58: }
-[e :UE 609 ]
+[e :UE 613 ]
 }
 "60
 [; ;mcc_generated_files/mcc.c: 60: void OSCILLATOR_Initialize(void)
@@ -669,20 +675,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ACTCON -> -> 0 `i `uc ]
 "71
 [; ;mcc_generated_files/mcc.c: 71:     while(PLLRDY == 0)
-[e $U 611  ]
-[e :U 612 ]
+[e $U 615  ]
+[e :U 616 ]
 "72
 [; ;mcc_generated_files/mcc.c: 72:     {
 {
 "73
 [; ;mcc_generated_files/mcc.c: 73:     }
 }
-[e :U 611 ]
+[e :U 615 ]
 "71
 [; ;mcc_generated_files/mcc.c: 71:     while(PLLRDY == 0)
-[e $ == -> _PLLRDY `i -> 0 `i 612  ]
-[e :U 613 ]
+[e $ == -> _PLLRDY `i -> 0 `i 616  ]
+[e :U 617 ]
 "74
 [; ;mcc_generated_files/mcc.c: 74: }
-[e :UE 610 ]
+[e :UE 614 ]
 }

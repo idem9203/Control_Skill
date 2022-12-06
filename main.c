@@ -79,7 +79,10 @@ __bit on;
 ////////////////////////////////////////////////////////////////////////////////
 ////////// DECLARACION DE VARIABLES
 #define RELE1 LATA5
-unsigned valor = 0;
+unsigned short valor = 0;
+float voltaje = 0.0;
+char* valor_string[8];
+char prob = 100;
 char procesa[30];
 char trama[30];
 char puntero = 0;
@@ -140,8 +143,6 @@ void procesarx()
                          Main application
  */
 
-
-
 void main(void)
 {
     // Initialize the device
@@ -182,12 +183,17 @@ void main(void)
 //    nrF2401_init_TX(17);                                                        //incicializa transmision por el canal 17
     nrF2401_init_RX(17);                                                        //Inicializa recepcion por el canal 17
     ////////////////////////////////////////////////////////////////////////////
+    
+    
 
     while (1)
     {
         // Add your application code
         
         valor = ADC_GetConversion(0);
+        voltaje = valor*5.0/1023.0;
+        snprintf(valor_string, 8, "%.3f\n\r", voltaje);
+        EUSART1_Write_string(valor_string);
         
         if(nrf2401_haydatos() == 1)                                             //Recibe datos del modulo NRF2401
         {

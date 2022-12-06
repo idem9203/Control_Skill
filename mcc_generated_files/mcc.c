@@ -54,7 +54,7 @@ void SYSTEM_Initialize(void)
     OSCILLATOR_Initialize();
     CCP2_Initialize();
     ADC_Initialize();
-//    EUSART1_Initialize();
+    EUSART1_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
