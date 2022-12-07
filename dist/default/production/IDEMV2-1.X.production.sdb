@@ -13,7 +13,7 @@ channel_CTMU 29
 channel_DAC 30
 channel_FVRBuf2 31
 ]
-"137 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+"131 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [e E4614 . `uc
 channel_AN0 0
 channel_AN1 1
@@ -137,16 +137,12 @@ channel_FVRBuf2 31
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strchr.c
-[v _strchr strchr `(*.39uc  1 e 2 0 ]
 "3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strcpy.c
 [v _strcpy strcpy `(*.39uc  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
 "3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strncmp.c
 [v _strncmp strncmp `(i  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strstr.c
-[v _strstr strstr `(*.39uc  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\tolower.c
 [v _tolower tolower `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\toupper.c
@@ -159,9 +155,9 @@ channel_FVRBuf2 31
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"130 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-[v _get_corriente_AC get_corriente_AC `(f  1 e 4 0 ]
-"172
+"124 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+[v _get_corriente_AC get_corriente_AC `(d  1 e 4 0 ]
+"166
 [v _main main `(v  1 e 1 0 ]
 "62 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -171,6 +167,8 @@ channel_FVRBuf2 31
 [v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
 "66 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+"94
+[v _EUSART1_is_tx_ready EUSART1_is_tx_ready `(a  1 e 1 0 ]
 "113
 [v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
 "132
@@ -512,8 +510,6 @@ channel_FVRBuf2 31
 [v _INTCONbits INTCONbits `VES409  1 e 1 @4082 ]
 "14322
 [v _LATA5 LATA5 `VEb  1 e 0 @31821 ]
-"14331
-[v _LATB0 LATB0 `VEb  1 e 0 @31824 ]
 "14658
 [v _PLLRDY PLLRDY `VEb  1 e 0 @32407 ]
 "55 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
@@ -532,22 +528,22 @@ channel_FVRBuf2 31
 [v _dato_serial dato_serial `uc  1 e 1 0 ]
 "75
 [v _on on `b  1 e 0 0 ]
-"82
-[v _valor valor `us  1 e 2 0 ]
+"76
+[v _off off `b  1 e 0 0 ]
 "83
-[v _voltaje voltaje `f  1 e 4 0 ]
-"85
-[v _I I `f  1 e 4 0 ]
+[v _valor valor `ui  1 e 2 0 ]
+"84
+[v _voltaje voltaje `d  1 e 4 0 ]
 "86
-[v _I_max I_max `f  1 e 4 0 ]
+[v _I I `d  1 e 4 0 ]
 "87
-[v _I_min I_min `f  1 e 4 0 ]
+[v _I_max I_max `d  1 e 4 0 ]
 "88
-[v _I_rms I_rms `f  1 e 4 0 ]
-"90
-[v _valor_string valor_string `[14]*.39uc  1 e 28 0 ]
-"93
-[v _trama trama `[30]uc  1 e 30 0 ]
+[v _I_min I_min `d  1 e 4 0 ]
+"89
+[v _I_rms I_rms `d  1 e 4 0 ]
+"91
+[v _valor_string valor_string `[14]uc  1 e 14 0 ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
@@ -562,10 +558,10 @@ channel_FVRBuf2 31
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"172 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+"166 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"244
+"237
 } 0
 "23 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
 [v _spi_s_init spi_s_init `(v  1 e 1 0 ]
@@ -576,63 +572,63 @@ channel_FVRBuf2 31
 [v _snprintf snprintf `(i  1 e 2 0 ]
 {
 "7
-[v snprintf@ap ap `[1]*.39v  1 a 2 139 ]
+[v snprintf@ap ap `[1]*.39v  1 a 2 153 ]
 "4
-[v snprintf@s s `*.39uc  1 p 2 129 ]
-[v snprintf@n n `ui  1 p 2 131 ]
-[v snprintf@fmt fmt `*.25Cuc  1 p 2 133 ]
+[v snprintf@s s `*.39uc  1 p 2 143 ]
+[v snprintf@n n `ui  1 p 2 145 ]
+[v snprintf@fmt fmt `*.25Cuc  1 p 2 147 ]
 "12
 } 0
 "11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_vsnprintf.c
 [v _vsnprintf vsnprintf `(i  1 e 2 0 ]
 {
-[s S1379 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[s S1358 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
 "14
-[v vsnprintf@f f `S1379  1 a 6 123 ]
+[v vsnprintf@f f `S1358  1 a 6 137 ]
 "13
-[v vsnprintf@cnt cnt `i  1 a 2 121 ]
+[v vsnprintf@cnt cnt `i  1 a 2 135 ]
 "11
-[v vsnprintf@s s `*.39uc  1 p 2 106 ]
-[v vsnprintf@n n `ui  1 p 2 108 ]
-[v vsnprintf@fmt fmt `*.25Cuc  1 p 2 110 ]
-[v vsnprintf@ap ap `*.39*.39v  1 p 2 112 ]
+[v vsnprintf@s s `*.39uc  1 p 2 120 ]
+[v vsnprintf@n n `ui  1 p 2 122 ]
+[v vsnprintf@fmt fmt `*.25Cuc  1 p 2 124 ]
+[v vsnprintf@ap ap `*.39*.39v  1 p 2 126 ]
 "34
 } 0
 "1390 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
 "1393
-[v vfprintf@cfmt cfmt `*.25uc  1 a 2 104 ]
-[s S1404 _IO_FILE 0 ]
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 92 ]
+[s S1383 _IO_FILE 0 ]
 "1390
-[v vfprintf@fp fp `*.39S1404  1 p 2 98 ]
-[v vfprintf@fmt fmt `*.25Cuc  1 p 2 100 ]
-[v vfprintf@ap ap `*.39*.39v  1 p 2 102 ]
+[v vfprintf@fp fp `*.39S1383  1 p 2 114 ]
+[v vfprintf@fmt fmt `*.25Cuc  1 p 2 116 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 118 ]
 "1404
 } 0
 "692
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
 "697
-[v vfpfcnvrt@llu llu `uo  1 a 8 90 ]
+[v vfpfcnvrt@llu llu `uo  1 a 8 106 ]
 "696
-[v vfpfcnvrt@ll ll `o  1 a 8 79 ]
+[v vfpfcnvrt@ll ll `o  1 a 8 95 ]
 "698
-[v vfpfcnvrt@f f `d  1 a 4 72 ]
+[v vfpfcnvrt@f f `d  1 a 4 88 ]
 "694
-[v vfpfcnvrt@ct ct `[3]uc  1 a 3 76 ]
+[v vfpfcnvrt@ct ct `[3]uc  1 a 3 92 ]
 "699
-[v vfpfcnvrt@vp vp `*.39v  1 a 2 87 ]
+[v vfpfcnvrt@vp vp `*.39v  1 a 2 103 ]
 "695
-[v vfpfcnvrt@done done `i  1 a 2 64 ]
+[v vfpfcnvrt@done done `i  1 a 2 80 ]
 "694
-[v vfpfcnvrt@cp cp `*.39uc  1 a 2 62 ]
-[v vfpfcnvrt@c c `uc  1 a 1 89 ]
-[s S1404 _IO_FILE 0 ]
+[v vfpfcnvrt@cp cp `*.39uc  1 a 2 78 ]
+[v vfpfcnvrt@c c `uc  1 a 1 105 ]
+[s S1383 _IO_FILE 0 ]
 "692
-[v vfpfcnvrt@fp fp `*.39S1404  1 p 2 56 ]
-[v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 58 ]
-[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 60 ]
+[v vfpfcnvrt@fp fp `*.39S1383  1 p 2 68 ]
+[v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 70 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 72 ]
 "1387
 } 0
 "645
@@ -645,9 +641,9 @@ channel_FVRBuf2 31
 [v xtoa@i i `i  1 a 2 64 ]
 [v xtoa@w w `i  1 a 2 54 ]
 [v xtoa@p p `i  1 a 2 52 ]
-[s S1404 _IO_FILE 0 ]
+[s S1383 _IO_FILE 0 ]
 "645
-[v xtoa@fp fp `*.39S1404  1 p 2 29 ]
+[v xtoa@fp fp `*.39S1383  1 p 2 29 ]
 [v xtoa@d d `uo  1 p 8 31 ]
 [v xtoa@x x `uc  1 p 1 39 ]
 "687
@@ -679,9 +675,9 @@ channel_FVRBuf2 31
 [v utoa@i i `i  1 a 2 59 ]
 [v utoa@w w `i  1 a 2 49 ]
 [v utoa@p p `i  1 a 2 47 ]
-[s S1404 _IO_FILE 0 ]
+[s S1383 _IO_FILE 0 ]
 "615
-[v utoa@fp fp `*.39S1404  1 p 2 29 ]
+[v utoa@fp fp `*.39S1383  1 p 2 29 ]
 [v utoa@d d `uo  1 p 8 31 ]
 "641
 } 0
@@ -732,9 +728,9 @@ channel_FVRBuf2 31
 "571
 [v stoa@w w `i  1 a 2 25 ]
 [v stoa@i i `i  1 a 2 23 ]
-[s S1404 _IO_FILE 0 ]
+[s S1383 _IO_FILE 0 ]
 "568
-[v stoa@fp fp `*.39S1404  1 p 2 11 ]
+[v stoa@fp fp `*.39S1383  1 p 2 11 ]
 [v stoa@s s `*.39uc  1 p 2 13 ]
 "570
 [v stoa@F1176 F1176 `[7]uc  1 s 7 F1176 ]
@@ -750,9 +746,9 @@ channel_FVRBuf2 31
 [v otoa@w w `i  1 a 2 51 ]
 [v otoa@t t `i  1 a 2 49 ]
 [v otoa@p p `i  1 a 2 47 ]
-[s S1404 _IO_FILE 0 ]
+[s S1383 _IO_FILE 0 ]
 "529
-[v otoa@fp fp `*.39S1404  1 p 2 29 ]
+[v otoa@fp fp `*.39S1383  1 p 2 29 ]
 [v otoa@d d `uo  1 p 8 31 ]
 "564
 } 0
@@ -760,31 +756,31 @@ channel_FVRBuf2 31
 [v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
 {
 "336
-[v efgtoa@u u `d  1 a 4 52 ]
-[v efgtoa@g g `d  1 a 4 44 ]
-[v efgtoa@l l `d  1 a 4 38 ]
-[v efgtoa@h h `d  1 a 4 34 ]
-[v efgtoa@ou ou `d  1 a 4 20 ]
+[v efgtoa@u u `d  1 a 4 64 ]
+[v efgtoa@g g `d  1 a 4 56 ]
+[v efgtoa@l l `d  1 a 4 50 ]
+[v efgtoa@h h `d  1 a 4 46 ]
+[v efgtoa@ou ou `d  1 a 4 32 ]
 "335
-[v efgtoa@n n `i  1 a 2 50 ]
-[v efgtoa@e e `i  1 a 2 48 ]
-[v efgtoa@i i `i  1 a 2 42 ]
-[v efgtoa@w w `i  1 a 2 30 ]
-[v efgtoa@p p `i  1 a 2 28 ]
-[v efgtoa@sign sign `i  1 a 2 26 ]
-[v efgtoa@d d `i  1 a 2 24 ]
-[v efgtoa@m m `i  1 a 2 18 ]
-[v efgtoa@ne ne `i  1 a 2 16 ]
-[v efgtoa@pp pp `i  1 a 2 14 ]
-[v efgtoa@t t `i  1 a 2 12 ]
+[v efgtoa@n n `i  1 a 2 62 ]
+[v efgtoa@e e `i  1 a 2 60 ]
+[v efgtoa@i i `i  1 a 2 54 ]
+[v efgtoa@w w `i  1 a 2 42 ]
+[v efgtoa@p p `i  1 a 2 40 ]
+[v efgtoa@sign sign `i  1 a 2 38 ]
+[v efgtoa@d d `i  1 a 2 36 ]
+[v efgtoa@m m `i  1 a 2 30 ]
+[v efgtoa@ne ne `i  1 a 2 28 ]
+[v efgtoa@pp pp `i  1 a 2 26 ]
+[v efgtoa@t t `i  1 a 2 24 ]
 "334
-[v efgtoa@mode mode `uc  1 a 1 33 ]
-[v efgtoa@nmode nmode `uc  1 a 1 32 ]
-[s S1404 _IO_FILE 0 ]
+[v efgtoa@mode mode `uc  1 a 1 45 ]
+[v efgtoa@nmode nmode `uc  1 a 1 44 ]
+[s S1383 _IO_FILE 0 ]
 "332
-[v efgtoa@fp fp `*.39S1404  1 p 2 78 ]
-[v efgtoa@f f `d  1 p 4 80 ]
-[v efgtoa@c c `uc  1 p 1 84 ]
+[v efgtoa@fp fp `*.39S1383  1 p 2 0 ]
+[v efgtoa@f f `d  1 p 4 2 ]
+[v efgtoa@c c `uc  1 p 1 6 ]
 "525
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\tolower.c
@@ -814,31 +810,31 @@ channel_FVRBuf2 31
 "3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S1716 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1696 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S1716  1 a 4 57 ]
+[v floorf@u u `S1696  1 a 4 88 ]
 "7
-[v floorf@m m `ul  1 a 4 51 ]
+[v floorf@m m `ul  1 a 4 82 ]
 "6
-[v floorf@e e `i  1 a 2 55 ]
+[v floorf@e e `i  1 a 2 86 ]
 "3
-[v floorf@x x `f  1 p 4 41 ]
+[v floorf@x x `f  1 p 4 72 ]
 "4
-[v floorf@F527 F527 `S1716  1 s 4 F527 ]
+[v floorf@F527 F527 `S1696  1 s 4 F527 ]
 "27
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S1716 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1696 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S1716  1 a 4 10 ]
+[v ___fpclassifyf@u u `S1696  1 a 4 10 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 8 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 0 ]
 "5
-[v ___fpclassifyf@F465 F465 `S1716  1 s 4 F465 ]
+[v ___fpclassifyf@F465 F465 `S1696  1 s 4 F465 ]
 "11
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
@@ -898,9 +894,9 @@ channel_FVRBuf2 31
 [v dtoa@s s `i  1 a 2 53 ]
 [v dtoa@w w `i  1 a 2 51 ]
 [v dtoa@p p `i  1 a 2 49 ]
-[s S1404 _IO_FILE 0 ]
+[s S1383 _IO_FILE 0 ]
 "287
-[v dtoa@fp fp `*.39S1404  1 p 2 29 ]
+[v dtoa@fp fp `*.39S1383  1 p 2 29 ]
 [v dtoa@d d `o  1 p 8 31 ]
 "328
 } 0
@@ -910,9 +906,9 @@ channel_FVRBuf2 31
 "74
 [v pad@w w `i  1 a 2 27 ]
 [v pad@i i `i  1 a 2 25 ]
-[s S1404 _IO_FILE 0 ]
+[s S1383 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S1404  1 p 2 18 ]
+[v pad@fp fp `*.39S1383  1 p 2 18 ]
 [v pad@buf buf `*.39uc  1 p 2 20 ]
 [v pad@p p `i  1 p 2 22 ]
 "95
@@ -921,9 +917,9 @@ channel_FVRBuf2 31
 [v _strlen strlen `(ui  1 e 2 0 ]
 {
 "7
-[v strlen@a a `*.35Cuc  1 a 2 2 ]
+[v strlen@a a `*.39Cuc  1 a 2 2 ]
 "5
-[v strlen@s s `*.35Cuc  1 p 2 0 ]
+[v strlen@s s `*.39Cuc  1 p 2 0 ]
 "12
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputs.c
@@ -935,8 +931,8 @@ channel_FVRBuf2 31
 [v fputs@c c `uc  1 a 1 15 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 11 ]
-[s S1379 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputs@fp fp `*.39S1379  1 p 2 13 ]
+[s S1358 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.39S1358  1 p 2 13 ]
 "19
 } 0
 "1 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\abs.c
@@ -975,9 +971,9 @@ channel_FVRBuf2 31
 "261
 [v ctoa@w w `i  1 a 2 17 ]
 [v ctoa@l l `i  1 a 2 15 ]
-[s S1404 _IO_FILE 0 ]
+[s S1383 _IO_FILE 0 ]
 "259
-[v ctoa@fp fp `*.39S1404  1 p 2 11 ]
+[v ctoa@fp fp `*.39S1383  1 p 2 11 ]
 [v ctoa@c c `uc  1 p 1 13 ]
 "283
 } 0
@@ -985,8 +981,8 @@ channel_FVRBuf2 31
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 2 ]
-[s S1379 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputc@fp fp `*.39S1379  1 p 2 4 ]
+[s S1358 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputc@fp fp `*.39S1358  1 p 2 4 ]
 "24
 } 0
 "154 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
@@ -1122,16 +1118,16 @@ channel_FVRBuf2 31
 [v spi_s_write@dato_ dato_ `uc  1 a 1 0 ]
 "77
 } 0
-"130 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-[v _get_corriente_AC get_corriente_AC `(f  1 e 4 0 ]
+"124 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+[v _get_corriente_AC get_corriente_AC `(d  1 e 4 0 ]
 {
-"135
-[v get_corriente_AC@i i `i  1 a 2 87 ]
-"132
-[v get_corriente_AC@corriente corriente `f  1 a 4 89 ]
-"130
-[v get_corriente_AC@n_muestras n_muestras `i  1 p 2 78 ]
-"146
+"129
+[v get_corriente_AC@i i `i  1 a 2 77 ]
+"126
+[v get_corriente_AC@corriente corriente `d  1 a 4 79 ]
+"124
+[v get_corriente_AC@n_muestras n_muestras `i  1 p 2 72 ]
+"140
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -1151,8 +1147,8 @@ channel_FVRBuf2 31
 "245 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
 [v ___flsub __flsub `(d  1 e 4 0 ]
 {
-[v ___flsub@b b `d  1 p 4 66 ]
-[v ___flsub@a a `d  1 p 4 70 ]
+[v ___flsub@b b `d  1 p 4 39 ]
+[v ___flsub@a a `d  1 p 4 43 ]
 "250
 } 0
 "10
@@ -1174,53 +1170,53 @@ channel_FVRBuf2 31
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1224 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1203 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1229 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1232 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1224 1 fAsBytes 4 0 `S1229 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1232  1 a 4 60 ]
+[s S1208 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1211 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1203 1 fAsBytes 4 0 `S1208 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1211  1 a 4 33 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 54 ]
-[s S1300 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 27 ]
+[s S1279 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1303 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1300 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1303  1 a 2 64 ]
+[u S1282 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1279 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1282  1 a 2 37 ]
 "10
-[v ___flmul@bexp bexp `uc  1 a 1 59 ]
+[v ___flmul@bexp bexp `uc  1 a 1 32 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 58 ]
+[v ___flmul@aexp aexp `uc  1 a 1 31 ]
 "9
-[v ___flmul@sign sign `uc  1 a 1 53 ]
+[v ___flmul@sign sign `uc  1 a 1 26 ]
 "8
-[v ___flmul@b b `d  1 p 4 41 ]
-[v ___flmul@a a `d  1 p 4 45 ]
+[v ___flmul@b b `d  1 p 4 14 ]
+[v ___flmul@a a `d  1 p 4 18 ]
 "205
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\flge.c
 [v ___flge __flge `(b  1 e 0 0 ]
 {
-[v ___flge@ff1 ff1 `d  1 p 4 66 ]
-[v ___flge@ff2 ff2 `d  1 p 4 70 ]
+[v ___flge@ff1 ff1 `d  1 p 4 39 ]
+[v ___flge@ff2 ff2 `d  1 p 4 43 ]
 "19
 } 0
 "11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 {
 "21
-[v ___fldiv@grs grs `ul  1 a 4 35 ]
+[v ___fldiv@grs grs `ul  1 a 4 66 ]
 "22
-[v ___fldiv@rem rem `ul  1 a 4 28 ]
+[v ___fldiv@rem rem `ul  1 a 4 59 ]
 "20
-[v ___fldiv@new_exp new_exp `s  1 a 2 33 ]
+[v ___fldiv@new_exp new_exp `s  1 a 2 64 ]
 "19
-[v ___fldiv@aexp aexp `uc  1 a 1 40 ]
+[v ___fldiv@aexp aexp `uc  1 a 1 71 ]
 "18
-[v ___fldiv@bexp bexp `uc  1 a 1 39 ]
+[v ___fldiv@bexp bexp `uc  1 a 1 70 ]
 "16
-[v ___fldiv@sign sign `uc  1 a 1 32 ]
+[v ___fldiv@sign sign `uc  1 a 1 63 ]
 "11
-[v ___fldiv@b b `d  1 p 4 16 ]
-[v ___fldiv@a a `d  1 p 4 20 ]
+[v ___fldiv@b b `d  1 p 4 47 ]
+[v ___fldiv@a a `d  1 p 4 51 ]
 "185
 } 0
 "110 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
@@ -1280,7 +1276,12 @@ channel_FVRBuf2 31
 {
 "81
 } 0
-"141 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+"94 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+[v _EUSART1_is_tx_ready EUSART1_is_tx_ready `(a  1 e 1 0 ]
+{
+"97
+} 0
+"141
 [v _EUSART1_Write_string EUSART1_Write_string `(v  1 e 1 0 ]
 {
 [v EUSART1_Write_string@data data `*.39Cuc  1 p 2 1 ]

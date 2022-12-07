@@ -8335,83 +8335,46 @@ void nrf2401_recibe_Text(char* Buffer, char StopChar)
 
 unsigned char dato_serial = 0;
 __bit on;
+__bit off;
 
 
 
 
 
 
-unsigned short valor = 0;
-float voltaje = 0.0;
+unsigned int valor = 0;
+double voltaje = 0.0;
 float sensibilidad = 0.185;
-float I = 0.0;
-float I_max = 0.0;
-float I_min = 0.0;
-float I_rms = 0.0;
-float offset = 0.0;
-char* valor_string[14];
-char prob = 100;
-char procesa[30];
-char trama[30];
-char puntero = 0;
-char datorx;
-char flag_rx = 0;
-unsigned char texto[20];
-
-
-
-
-
-void procesarx()
+double I = 0.0;
+double I_max = 0.0;
+double I_min = 0.0;
+double I_rms = 0.0;
+double offset = 0.0;
+char valor_string[14];
+# 124 "main.c"
+double get_corriente_AC(int n_muestras)
 {
-    if(strstr(trama,"cier="))
-    {
-        if(strstr(trama,"on"))
-        {
-            LATB0 = 1;
-            _delay((unsigned long)((300)*(48000000/4000.0)));
-            LATB0 = 0;
-        }
-        else LATB0 = 0;
-    }
-    if(strstr(trama,"aper="))
-    {
-        if(strstr(trama,"on"))
-        {
-            LATA5 = 1;
-            _delay((unsigned long)((300)*(48000000/4000.0)));
-            LATA5 = 0;
-        }
-        else LATA5 = 0;
-    }
-}
-
-
-
-
-float get_corriente_AC(int n_muestras)
-{
-  float corriente = 0.0;
+  double corriente = 0.0;
   I_max = 0.0;
   I_min = 0.0;
   for(int i = 0; i < n_muestras; i++)
   {
       valor = ADC_GetConversion(0);
       voltaje = valor * (5.0 / 1023.0);
-      corriente = 0.9 * corriente + 0.1 * ((voltaje - 2.5) / sensibilidad);
+      corriente = ((voltaje - 2.5) / sensibilidad);
       if (corriente > I_max) I_max = corriente;
       if (corriente < I_min) I_min = corriente;
   }
 
 
-  return(((I_max - I_min) / 2) - offset);
+  return(((I_max - I_min) / 2.0) - offset);
 }
-# 172 "main.c"
+# 166 "main.c"
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 194 "main.c"
+# 188 "main.c"
     ANSELA = 0b00000111;
     ANSELB = 0b00000000;
     ANSELC = 0x00;
@@ -8425,6 +8388,8 @@ void main(void)
     _delay((unsigned long)((2000)*(48000000/4000.0)));
     LATA5 = 0;
 
+    on = 1;
+    off = 0;
 
     spi_s_init();
 
@@ -8437,24 +8402,21 @@ void main(void)
     {
 
 
-
         I = get_corriente_AC(200);
         I_rms = I * 0.707;
         snprintf(valor_string, 14, "%.3f Amp.\n\r", I_rms);
-        EUSART1_Write_string(valor_string);
+        if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);
 
         if(nrf2401_haydatos() == 1)
         {
             dato_serial = nrf2401_recibe();
             if (dato_serial == 1)
             {
-                on = 1;
                 LATA5 = on;
             }
             else if (dato_serial == 0)
             {
-                on = 0;
-                LATA5 = 0;
+                LATA5 = off;
             }
         }
 
