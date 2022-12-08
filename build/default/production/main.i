@@ -8228,7 +8228,7 @@ void nrF2401_init_RX(unsigned char canal)
     nrf2401_write(0x00, 0x04 + 0x08);
     nrf2401_write(0x04, 0x00);
     nrf2401_write(0x03, 0x03);
-    nrf2401_write(0x06, 0x08 + 0x06);
+    nrf2401_write(0x06, 0x10 + 0x06);
     nrf2401_write(0x05, canal);
     nrf2401_write(0x01, 0x00);
     nrf2401_write(0x11, 1);
@@ -8245,7 +8245,7 @@ void nrF2401_init_TX(unsigned char canal)
     nrf2401_write(0x04, 0x00);
 
     nrf2401_write(0x03, 0x03);
-    nrf2401_write(0x06, 0x08 + 0x06);
+    nrf2401_write(0x06, 0x10 + 0x06);
     nrf2401_write(0x05, canal);
     nrf2401_write(0x01, 0);
     nrf2401_write(0x00, 0x02 +0x04 + 0x08);
@@ -8311,34 +8311,6 @@ char puntero = 0;
 char datorx;
 char flag_rx = 0;
 unsigned char texto[20];
-
-
-
-
-
-void procesarx()
-{
-    if(strstr(trama,"cier="))
-    {
-        if(strstr(trama,"on"))
-        {
-            LATB0 = 1;
-            _delay((unsigned long)((300)*(48000000/4000.0)));
-            LATB0 = 0;
-        }
-        else LATB0 = 0;
-    }
-    if(strstr(trama,"aper="))
-    {
-        if(strstr(trama,"on"))
-        {
-            LATA5 = 1;
-            _delay((unsigned long)((300)*(48000000/4000.0)));
-            LATA5 = 0;
-        }
-        else LATA5 = 0;
-    }
-}
 # 144 "main.c"
 void main(void)
 {
@@ -8375,21 +8347,15 @@ void main(void)
         {
 
 
-            LATA5 = ~LATA5;
-            _delay((unsigned long)((300)*(48000000/4000.0)));
-        }
-
-        if(LATA5 == 1)
-        {
+            LATA5 = 1;
             dato_serial = 1;
-            nrf2401_envia(dato_serial);
+            for (int i = 0; i >= 10; i++)
+            {
+               nrf2401_envia(dato_serial);
+            }
+            _delay((unsigned long)((2000)*(48000000/4000.0)));
         }
-        else
-        {
-            dato_serial = 0;
-            nrf2401_envia(dato_serial);
-
-        }
+        else LATA5 = 0;
         _delay((unsigned long)((100)*(48000000/4000.0)));
     }
 }

@@ -90,29 +90,29 @@ unsigned char texto[20];
 
 ////////////////////////////////////////////////////////////////////////////////
 /// DECLARACION DE FUNCIONES
-void procesarx()
-{
-    if(strstr(trama,"cier="))
-    {
-        if(strstr(trama,"on")) 
-        {
-            LATB0 = 1;
-            __delay_ms(300);
-            LATB0 = 0;
-        }
-        else LATB0 = 0;
-    }
-    if(strstr(trama,"aper="))
-    {
-        if(strstr(trama,"on")) 
-        {
-            LATA5 = 1;
-            __delay_ms(300);
-            LATA5 = 0;
-        }
-        else LATA5 = 0;
-    }
-}
+//void procesarx()
+//{
+//    if(strstr(trama,"cier="))
+//    {
+//        if(strstr(trama,"on")) 
+//        {
+//            LATB0 = 1;
+//            __delay_ms(300);
+//            LATB0 = 0;
+//        }
+//        else LATB0 = 0;
+//    }
+//    if(strstr(trama,"aper="))
+//    {
+//        if(strstr(trama,"on")) 
+//        {
+//            LATA5 = 1;
+//            __delay_ms(300);
+//            LATA5 = 0;
+//        }
+//        else LATA5 = 0;
+//    }
+//}
 //END //////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -193,21 +193,15 @@ void main(void)
         {
 //            dato_serial = ~dato_serial;
 //            nrf2401_envia(dato_serial);
-            RELE1 = ~RELE1;
-            __delay_ms(300);
-        }
-        
-        if(RELE1 == 1)
-        {
+            RELE1 = 1;
             dato_serial = 1;
-            nrf2401_envia(dato_serial);
+            for (int i = 0; i >= 10; i++)
+            {
+               nrf2401_envia(dato_serial); 
+            }
+            __delay_ms(2000);
         }
-        else 
-        {
-            dato_serial = 0;
-            nrf2401_envia(dato_serial);
-            
-        }
+        else RELE1 = 0;
         __delay_ms(100);
     }
 }

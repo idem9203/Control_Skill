@@ -61,14 +61,6 @@ channel_FVRBuf2 31
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strchr.c
-[v _strchr strchr `(*.39uc  1 e 2 0 ]
-"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-"3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strncmp.c
-[v _strncmp strncmp `(i  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strstr.c
-[v _strstr strstr `(*.39uc  1 e 2 0 ]
 "15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
@@ -107,7 +99,7 @@ channel_FVRBuf2 31
 [v _ANSELB ANSELB `VEuc  1 e 1 @3932 ]
 "328
 [v _ANSELC ANSELC `VEuc  1 e 1 @3933 ]
-[s S772 . 1 `uc 1 RA0 1 0 :1:0 
+[s S764 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -117,7 +109,7 @@ channel_FVRBuf2 31
 `uc 1 RA7 1 0 :1:7 
 ]
 "2838
-[s S812 . 1 `uc 1 AN0 1 0 :1:0 
+[s S805 . 1 `uc 1 AN0 1 0 :1:0 
 `uc 1 AN1 1 0 :1:1 
 `uc 1 AN2 1 0 :1:2 
 `uc 1 AN3 1 0 :1:3 
@@ -125,21 +117,21 @@ channel_FVRBuf2 31
 `uc 1 AN4 1 0 :1:5 
 `uc 1 OSC2 1 0 :1:6 
 ]
-[s S820 . 1 `uc 1 . 1 0 :2:0 
+[s S813 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 VREFM 1 0 :1:2 
 `uc 1 VREFP 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
 `uc 1 LVDIN 1 0 :1:5 
 ]
-[s S826 . 1 `uc 1 . 1 0 :5:0 
+[s S819 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 HLVDIN 1 0 :1:5 
 ]
-[s S829 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+[s S822 . 1 `uc 1 ULPWUIN 1 0 :1:0 
 `uc 1 . 1 0 :6:1 
 `uc 1 RJPU 1 0 :1:7 
 ]
-[u S833 . 1 `S772 1 . 1 0 `S812 1 . 1 0 `S820 1 . 1 0 `S826 1 . 1 0 `S829 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES833  1 e 1 @3968 ]
+[u S826 . 1 `S764 1 . 1 0 `S805 1 . 1 0 `S813 1 . 1 0 `S819 1 . 1 0 `S822 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES826  1 e 1 @3968 ]
 [s S592 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -219,7 +211,7 @@ channel_FVRBuf2 31
 [v _CCPR2H CCPR2H `VEuc  1 e 1 @3985 ]
 "4156
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
-[s S763 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S755 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -229,8 +221,8 @@ channel_FVRBuf2 31
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "4188
-[u S781 . 1 `S763 1 . 1 0 `S772 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES781  1 e 1 @3986 ]
+[u S773 . 1 `S755 1 . 1 0 `S764 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES773  1 e 1 @3986 ]
 "4378
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 [s S583 . 1 `uc 1 TRISB0 1 0 :1:0 
@@ -461,16 +453,12 @@ channel_FVRBuf2 31
 [v _INTCONbits INTCONbits `VES405  1 e 1 @4082 ]
 "14322
 [v _LATA5 LATA5 `VEb  1 e 0 @31821 ]
-"14331
-[v _LATB0 LATB0 `VEb  1 e 0 @31824 ]
 "14658
 [v _PLLRDY PLLRDY `VEb  1 e 0 @32407 ]
 "70 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _direccion_tx direccion_tx `C[5]uc  1 e 5 0 ]
 "74
 [v _dato_serial dato_serial `uc  1 e 1 0 ]
-"83
-[v _trama trama `[30]uc  1 e 30 0 ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
@@ -488,7 +476,7 @@ channel_FVRBuf2 31
 "144 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"213
+"207
 } 0
 "23 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
 [v _spi_s_init spi_s_init `(v  1 e 1 0 ]
