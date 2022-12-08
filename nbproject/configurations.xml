@@ -13,6 +13,8 @@
         <itemPath>mcc_generated_files/device_config.h</itemPath>
         <itemPath>mcc_generated_files/adc.h</itemPath>
         <itemPath>mcc_generated_files/ccp2.h</itemPath>
+        <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
+        <itemPath>mcc_generated_files/tmr1.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -31,6 +33,8 @@
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
         <itemPath>mcc_generated_files/ccp2.c</itemPath>
         <itemPath>mcc_generated_files/adc.c</itemPath>
+        <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
+        <itemPath>mcc_generated_files/tmr1.c</itemPath>
       </logicalFolder>
       <logicalFolder name="NRF24L01" displayName="NRF24L01" projectFiles="true">
         <itemPath>Librerias/nRF24L01_2.h</itemPath>

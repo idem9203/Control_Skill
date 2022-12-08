@@ -7715,10 +7715,44 @@ extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/interrupt_manager.h" 1
+# 110 "./mcc_generated_files/interrupt_manager.h"
+void INTERRUPT_Initialize (void);
+# 55 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/ccp2.h" 1
 # 59 "./mcc_generated_files/ccp2.h"
 void CCP2_Initialize(void);
-# 55 "./mcc_generated_files/mcc.h" 2
+# 56 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/tmr1.h" 1
+# 95 "./mcc_generated_files/tmr1.h"
+void TMR1_Initialize(void);
+# 126 "./mcc_generated_files/tmr1.h"
+void TMR1_StartTimer(void);
+# 156 "./mcc_generated_files/tmr1.h"
+void TMR1_StopTimer(void);
+# 190 "./mcc_generated_files/tmr1.h"
+uint16_t TMR1_ReadTimer(void);
+# 216 "./mcc_generated_files/tmr1.h"
+void TMR1_WriteTimer(uint16_t timerVal);
+# 248 "./mcc_generated_files/tmr1.h"
+void TMR1_Reload(void);
+# 289 "./mcc_generated_files/tmr1.h"
+void TMR1_StartSinglePulseAcquisition(void);
+# 330 "./mcc_generated_files/tmr1.h"
+uint8_t TMR1_CheckGateValueStatus(void);
+# 346 "./mcc_generated_files/tmr1.h"
+void TMR1_ISR(void);
+# 365 "./mcc_generated_files/tmr1.h"
+void TMR1_CallBack(void);
+# 383 "./mcc_generated_files/tmr1.h"
+ void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+# 401 "./mcc_generated_files/tmr1.h"
+extern void (*TMR1_InterruptHandler)(void);
+# 419 "./mcc_generated_files/tmr1.h"
+void TMR1_DefaultInterruptHandler(void);
+# 57 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/adc.h" 1
 # 72 "./mcc_generated_files/adc.h"
@@ -7757,7 +7791,7 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 319 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 56 "./mcc_generated_files/mcc.h" 2
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart1.h" 1
 # 57 "./mcc_generated_files/eusart1.h"
@@ -7932,10 +7966,10 @@ void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 399 "./mcc_generated_files/eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-# 57 "./mcc_generated_files/mcc.h" 2
-# 72 "./mcc_generated_files/mcc.h"
+# 59 "./mcc_generated_files/mcc.h" 2
+# 74 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "./mcc_generated_files/mcc.h"
+# 87 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 44 "main.c" 2
 
@@ -8334,8 +8368,7 @@ void nrf2401_recibe_Text(char* Buffer, char StopChar)
 # 73 "main.c" 2
 
 unsigned char dato_serial = 0;
-__bit on;
-__bit off;
+
 
 
 
@@ -8344,14 +8377,26 @@ __bit off;
 
 unsigned int valor = 0;
 double voltaje = 0.0;
-float sensibilidad = 0.185;
+double sensibilidad = 0.282;
+double relacion = 0.100;
 double I = 0.0;
 double I_max = 0.0;
 double I_min = 0.0;
 double I_rms = 0.0;
-double offset = 0.0;
+double offset = 0.100;
+int i = 0;
+int j = 0;
+int k = 0;
+int l = 0;
 char valor_string[14];
-# 124 "main.c"
+
+
+
+unsigned long conteo = 0;
+unsigned long currentSeg = 0;
+unsigned long previousMillis = 0;
+const long intervalo = 14400;
+# 135 "main.c"
 double get_corriente_AC(int n_muestras)
 {
   double corriente = 0.0;
@@ -8361,20 +8406,93 @@ double get_corriente_AC(int n_muestras)
   {
       valor = ADC_GetConversion(0);
       voltaje = valor * (5.0 / 1023.0);
-      corriente = ((voltaje - 2.5) / sensibilidad);
+      corriente = ((voltaje - 2.527) / sensibilidad);
       if (corriente > I_max) I_max = corriente;
       if (corriente < I_min) I_min = corriente;
   }
 
 
-  return(((I_max - I_min) / 2.0) - offset);
+  return(((I_max - I_min) / 2));
 }
-# 166 "main.c"
+# 196 "main.c"
+void trip_protec_current()
+{
+    I = ((get_corriente_AC(2000) - offset) / relacion);
+    if (I <= 9)
+    {
+        LATA5 = 0;
+        currentSeg = conteo;
+        if (currentSeg - previousMillis >= intervalo)
+        {
+            previousMillis = currentSeg;
+            LATA5 = 1;
+            _delay((unsigned long)((3000)*(48000000/4000.0)));
+        }
+    }
+    if (I >= 16 && I < 17)
+    {
+        i = i + 1;
+        if (i > 600)
+        {
+            i = 0;
+            LATA5 = 0;
+            while(1){}
+        }
+    }
+    if (I >= 17 && I < 18)
+    {
+        j = j + 1;
+        if ( j > 300)
+        {
+            j = 0;
+            LATA5 = 0;
+            while(1){}
+        }
+    }
+    if (I >= 18 && I < 19)
+    {
+        k = k + 1;
+        if (k > 120)
+        {
+            k = 0;
+            LATA5 = 0;
+            while(1){}
+        }
+    }
+    if (I >= 19)
+    {
+        l = l + 1;
+        if (l > 15)
+        {
+            l = 0;
+            LATA5 = 0;
+            while(1){}
+        }
+    }
+}
+
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 188 "main.c"
+
+
+
+
+
+
+
+    (INTCONbits.GIE = 1);
+
+
+
+
+
+    (INTCONbits.PEIE = 1);
+
+
+
+
     ANSELA = 0b00000111;
     ANSELB = 0b00000000;
     ANSELC = 0x00;
@@ -8384,12 +8502,6 @@ void main(void)
 
 
 
-    LATA5 = 1;
-    _delay((unsigned long)((2000)*(48000000/4000.0)));
-    LATA5 = 0;
-
-    on = 1;
-    off = 0;
 
     spi_s_init();
 
@@ -8397,26 +8509,30 @@ void main(void)
 
 
 
+    _delay((unsigned long)((2000)*(48000000/4000.0)));
+    LATA5 = 1;
+    _delay((unsigned long)((3000)*(48000000/4000.0)));
 
     while (1)
     {
 
 
-        I = get_corriente_AC(200);
-        I_rms = I * 0.707;
-        snprintf(valor_string, 14, "%.3f Amp.\n\r", I_rms);
-        if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);
+
+
+
+
+        trip_protec_current();
 
         if(nrf2401_haydatos() == 1)
         {
             dato_serial = nrf2401_recibe();
             if (dato_serial == 1)
             {
-                LATA5 = on;
+                LATA5 = 1;
             }
             else if (dato_serial == 0)
             {
-                LATA5 = off;
+                LATA5 = 0;
             }
         }
 

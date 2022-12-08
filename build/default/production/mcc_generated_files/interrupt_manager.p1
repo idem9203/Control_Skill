@@ -1,40 +1,101 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"110 mcc_generated_files/interrupt_manager.h
-[; ;mcc_generated_files/interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
-[v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
-"196 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 196: void PIN_MANAGER_Initialize (void);
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"87 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 87: void OSCILLATOR_Initialize(void);
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"59 mcc_generated_files/ccp2.h
-[; ;mcc_generated_files/ccp2.h: 59: void CCP2_Initialize(void);
-[v _CCP2_Initialize `(v ~T0 @X0 0 ef ]
-"95 mcc_generated_files/tmr1.h
-[; ;mcc_generated_files/tmr1.h: 95: void TMR1_Initialize(void);
-[v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
-"139 mcc_generated_files/adc.h
-[; ;mcc_generated_files/adc.h: 139: void ADC_Initialize(void);
-[v _ADC_Initialize `(v ~T0 @X0 0 ef ]
-"111 mcc_generated_files/eusart1.h
-[; ;mcc_generated_files/eusart1.h: 111: void EUSART1_Initialize(void);
-[v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
-"11548 C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h
-[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11548: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"11486
-[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11486: extern volatile unsigned char OSCCON2 __attribute__((address(0xFD2)));
-[v _OSCCON2 `Vuc ~T0 @X0 0 e@4050 ]
-"5242
-[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5242: extern volatile unsigned char OSCTUNE __attribute__((address(0xF9B)));
-[v _OSCTUNE `Vuc ~T0 @X0 0 e@3995 ]
-"7402
-[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 7402: extern volatile unsigned char ACTCON __attribute__((address(0xFB5)));
-[v _ACTCON `Vuc ~T0 @X0 0 e@4021 ]
-"14658
-[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 14658: extern volatile __bit PLLRDY __attribute__((address(0x7E97)));
-[v _PLLRDY `Vb ~T0 @X0 0 e@32407 ]
+"11331 C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11331:     struct {
+[s S513 :1 `uc 1 ]
+[n S513 . NOT_BOR ]
+"11334
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11334:     struct {
+[s S514 :1 `uc 1 :1 `uc 1 ]
+[n S514 . . NOT_POR ]
+"11338
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11338:     struct {
+[s S515 :2 `uc 1 :1 `uc 1 ]
+[n S515 . . NOT_PD ]
+"11342
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11342:     struct {
+[s S516 :3 `uc 1 :1 `uc 1 ]
+[n S516 . . NOT_TO ]
+"11346
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11346:     struct {
+[s S517 :4 `uc 1 :1 `uc 1 ]
+[n S517 . . NOT_RI ]
+"11350
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11350:     struct {
+[s S518 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S518 . nBOR nPOR nPD nTO nRI . SBOREN IPEN ]
+"11360
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11360:     struct {
+[s S519 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S519 . BOR POR PD TO RI ]
+"11330
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11330: typedef union {
+[u S512 `S513 1 `S514 1 `S515 1 `S516 1 `S517 1 `S518 1 `S519 1 ]
+[n S512 . . . . . . . . ]
+"11368
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 11368: extern volatile RCONbits_t RCONbits __attribute__((address(0xFD0)));
+[v _RCONbits `VS512 ~T0 @X0 0 e@4048 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"12423
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 12423:     struct {
+[s S584 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S584 . IOCIF INT0IF TMR0IF IOCIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"12433
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 12433:     struct {
+[s S585 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S585 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"12443
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 12443:     struct {
+[s S586 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S586 . . GIEL GIEH ]
+"12422
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 12422: typedef union {
+[u S583 `S584 1 `S585 1 `S586 1 ]
+[n S583 . . . . ]
+"12449
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 12449: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
+[v _INTCONbits `VS583 ~T0 @X0 0 e@4082 ]
+"5388
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5388:     struct {
+[s S223 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S223 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ACTIE ]
+"5398
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5398:     struct {
+[s S224 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S224 . . SSP1IE TX1IE RC1IE . STIE ]
+"5406
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5406:     struct {
+[s S225 :7 `uc 1 :1 `uc 1 ]
+[n S225 . . PSPIE ]
+"5387
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5387: typedef union {
+[u S222 `S223 1 `S224 1 `S225 1 ]
+[n S222 . . . . ]
+"5411
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5411: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
+[v _PIE1bits `VS222 ~T0 @X0 0 e@3997 ]
+"5487
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5487:     struct {
+[s S227 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S227 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ACTIF ]
+"5497
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5497:     struct {
+[s S228 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S228 . . SSP1IF TX1IF RC1IF . STIF ]
+"5505
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5505:     struct {
+[s S229 :7 `uc 1 :1 `uc 1 ]
+[n S229 . . PSPIF ]
+"5486
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5486: typedef union {
+[u S226 `S227 1 `S228 1 `S229 1 ]
+[n S226 . . . . ]
+"5510
+[; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 5510: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
+[v _PIR1bits `VS226 ~T0 @X0 0 e@3998 ]
+"346 mcc_generated_files/tmr1.h
+[; ;mcc_generated_files/tmr1.h: 346: void TMR1_ISR(void);
+[v _TMR1_ISR `(v ~T0 @X0 0 ef ]
 "55 C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h
 [; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 55: __asm("SRCON1 equ 0F57h");
 [; <" SRCON1 equ 0F57h ;# ">
@@ -632,75 +693,54 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12843
 [; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 12843: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"50 mcc_generated_files/mcc.c
-[; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
-"51
-[; ;mcc_generated_files/mcc.c: 51: {
-{
-[e :U _SYSTEM_Initialize ]
-[f ]
+"52 mcc_generated_files/interrupt_manager.c
+[; ;mcc_generated_files/interrupt_manager.c: 52: void INTERRUPT_Initialize (void)
+[v _INTERRUPT_Initialize `(v ~T0 @X0 1 ef ]
 "53
-[; ;mcc_generated_files/mcc.c: 53:     INTERRUPT_Initialize();
-[e ( _INTERRUPT_Initialize ..  ]
-"54
-[; ;mcc_generated_files/mcc.c: 54:     PIN_MANAGER_Initialize();
-[e ( _PIN_MANAGER_Initialize ..  ]
+[; ;mcc_generated_files/interrupt_manager.c: 53: {
+{
+[e :U _INTERRUPT_Initialize ]
+[f ]
 "55
-[; ;mcc_generated_files/mcc.c: 55:     OSCILLATOR_Initialize();
-[e ( _OSCILLATOR_Initialize ..  ]
+[; ;mcc_generated_files/interrupt_manager.c: 55:     RCONbits.IPEN = 0;
+[e = . . _RCONbits 5 7 -> -> 0 `i `uc ]
 "56
-[; ;mcc_generated_files/mcc.c: 56:     CCP2_Initialize();
-[e ( _CCP2_Initialize ..  ]
-"57
-[; ;mcc_generated_files/mcc.c: 57:     TMR1_Initialize();
-[e ( _TMR1_Initialize ..  ]
-"58
-[; ;mcc_generated_files/mcc.c: 58:     ADC_Initialize();
-[e ( _ADC_Initialize ..  ]
-"59
-[; ;mcc_generated_files/mcc.c: 59:     EUSART1_Initialize();
-[e ( _EUSART1_Initialize ..  ]
-"60
-[; ;mcc_generated_files/mcc.c: 60: }
+[; ;mcc_generated_files/interrupt_manager.c: 56: }
 [e :UE 613 ]
 }
-"62
-[; ;mcc_generated_files/mcc.c: 62: void OSCILLATOR_Initialize(void)
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"63
-[; ;mcc_generated_files/mcc.c: 63: {
+[v $root$_INTERRUPT_InterruptManager `(v ~T0 @X0 0 e ]
+"58
+[; ;mcc_generated_files/interrupt_manager.c: 58: void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
+[v _INTERRUPT_InterruptManager `(v ~T1 @X0 1 ef ]
+"59
+[; ;mcc_generated_files/interrupt_manager.c: 59: {
 {
-[e :U _OSCILLATOR_Initialize ]
+[e :U _INTERRUPT_InterruptManager ]
 [f ]
-"65
-[; ;mcc_generated_files/mcc.c: 65:     OSCCON = 0x70;
-[e = _OSCCON -> -> 112 `i `uc ]
-"67
-[; ;mcc_generated_files/mcc.c: 67:     OSCCON2 = 0x00;
-[e = _OSCCON2 -> -> 0 `i `uc ]
-"69
-[; ;mcc_generated_files/mcc.c: 69:     OSCTUNE = 0x80;
-[e = _OSCTUNE -> -> 128 `i `uc ]
-"71
-[; ;mcc_generated_files/mcc.c: 71:     ACTCON = 0x00;
-[e = _ACTCON -> -> 0 `i `uc ]
-"73
-[; ;mcc_generated_files/mcc.c: 73:     while(PLLRDY == 0)
-[e $U 615  ]
-[e :U 616 ]
-"74
-[; ;mcc_generated_files/mcc.c: 74:     {
+"61
+[; ;mcc_generated_files/interrupt_manager.c: 61:     if(INTCONbits.PEIE == 1)
+[e $ ! == -> . . _INTCONbits 1 6 `i -> 1 `i 615  ]
+"62
+[; ;mcc_generated_files/interrupt_manager.c: 62:     {
 {
-"75
-[; ;mcc_generated_files/mcc.c: 75:     }
+"63
+[; ;mcc_generated_files/interrupt_manager.c: 63:         if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
+[e $ ! && == -> . . _PIE1bits 0 0 `i -> 1 `i == -> . . _PIR1bits 0 0 `i -> 1 `i 616  ]
+"64
+[; ;mcc_generated_files/interrupt_manager.c: 64:         {
+{
+"65
+[; ;mcc_generated_files/interrupt_manager.c: 65:             TMR1_ISR();
+[e ( _TMR1_ISR ..  ]
+"66
+[; ;mcc_generated_files/interrupt_manager.c: 66:         }
+}
+[e :U 616 ]
+"67
+[; ;mcc_generated_files/interrupt_manager.c: 67:     }
 }
 [e :U 615 ]
-"73
-[; ;mcc_generated_files/mcc.c: 73:     while(PLLRDY == 0)
-[e $ == -> _PLLRDY `i -> 0 `i 616  ]
-[e :U 617 ]
-"76
-[; ;mcc_generated_files/mcc.c: 76: }
+"68
+[; ;mcc_generated_files/interrupt_manager.c: 68: }
 [e :UE 614 ]
 }

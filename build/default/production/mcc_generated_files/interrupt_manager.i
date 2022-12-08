@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/mcc.c"
+# 1 "mcc_generated_files/interrupt_manager.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,13 @@
 # 1 "<built-in>" 2
 # 1 "C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/mcc.c" 2
-# 47 "mcc_generated_files/mcc.c"
+# 1 "mcc_generated_files/interrupt_manager.c" 2
+# 49 "mcc_generated_files/interrupt_manager.c"
+# 1 "mcc_generated_files/interrupt_manager.h" 1
+# 110 "mcc_generated_files/interrupt_manager.h"
+void INTERRUPT_Initialize (void);
+# 49 "mcc_generated_files/interrupt_manager.c" 2
+
 # 1 "mcc_generated_files/mcc.h" 1
 # 49 "mcc_generated_files/mcc.h"
 # 1 "C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\\pic\\include\\xc.h" 1 3
@@ -7715,10 +7720,6 @@ extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/interrupt_manager.h" 1
-# 110 "mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
-# 55 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/ccp2.h" 1
 # 59 "mcc_generated_files/ccp2.h"
@@ -7971,34 +7972,23 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void SYSTEM_Initialize(void);
 # 87 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 47 "mcc_generated_files/mcc.c" 2
+# 50 "mcc_generated_files/interrupt_manager.c" 2
 
 
-
-void SYSTEM_Initialize(void)
+void INTERRUPT_Initialize (void)
 {
 
-    INTERRUPT_Initialize();
-    PIN_MANAGER_Initialize();
-    OSCILLATOR_Initialize();
-    CCP2_Initialize();
-    TMR1_Initialize();
-    ADC_Initialize();
-    EUSART1_Initialize();
+    RCONbits.IPEN = 0;
 }
 
-void OSCILLATOR_Initialize(void)
+void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
 {
 
-    OSCCON = 0x70;
-
-    OSCCON2 = 0x00;
-
-    OSCTUNE = 0x80;
-
-    ACTCON = 0x00;
-
-    while(PLLRDY == 0)
+    if(INTCONbits.PEIE == 1)
     {
+        if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
+        {
+            TMR1_ISR();
+        }
     }
 }

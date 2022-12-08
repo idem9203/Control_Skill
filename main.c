@@ -72,23 +72,34 @@ const unsigned char direccion_rx[5] = {17, 17, 17, 17, 17};                     
 
 #include "Librerias/nRF24L01_2.h"
 unsigned char dato_serial = 0;
-__bit on;
-__bit off;
 //char texto[20];
 //END //////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////// DECLARACION DE VARIABLES
 #define RELE1 LATA5
+#define RELE2 LATB0
 unsigned int valor = 0;
 double voltaje = 0.0;
-float sensibilidad = 0.185;
+double sensibilidad = 0.282;
+double relacion = 0.100;
 double I = 0.0;
 double I_max = 0.0;
 double I_min = 0.0;
 double I_rms = 0.0;
-double offset = 0.0;
+double offset = 0.100;
+int i = 0;
+int j = 0;
+int k = 0;
+int l = 0;
 char valor_string[14];
+
+////////////////////////////////////////////////////////////////////////////////
+// CUATRO HORAS
+unsigned long conteo = 0;
+unsigned long currentSeg = 0;
+unsigned long previousMillis = 0;                                               //Conteo anterior
+const long intervalo = 14400;                                                   //Tiempo de espera en segundos
 
 //END //////////////////////////////////////////////////////////////////////////
 
@@ -130,14 +141,31 @@ double get_corriente_AC(int n_muestras)
   {
       valor = ADC_GetConversion(0);
       voltaje =  valor * (5.0 / 1023.0);                                        ////lectura del sensor
-      corriente = ((voltaje - 2.5) / sensibilidad);                             //Ecuación  para obtener la corriente
+      corriente = ((voltaje - 2.527) / sensibilidad);                             //Ecuación  para obtener la corriente
       if (corriente > I_max) I_max = corriente;
       if (corriente < I_min) I_min = corriente;
   }
 //  I_max = I_max / n_muestras;
 //  I_min = I_min / n_muestras;
-  return(((I_max - I_min) / 2.0) - offset);
+  return(((I_max - I_min) / 2));
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// CALIBRACION
+//
+//double get_voltage(int n_muestras)
+//{
+//  double voltage=0.0;
+//  double v_max = 0.0;
+//  for(int i=0;i<n_muestras;i++)
+//  {
+//    voltage = ADC_GetConversion(0) * (5.0 / 1023.0);   
+//    if (voltage > v_max) v_max = voltage;
+//  }
+//  voltage=voltage/n_muestras;
+//  return(v_max);
+//}
+////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 // FUNCION DE INTERRUPCION
@@ -163,6 +191,64 @@ double get_corriente_AC(int n_muestras)
                          Main application
  */
 
+////////////////////////////////////////////////////////////////////////////////
+// DISPARO POR SOBRE CORRIENTE
+void trip_protec_current()
+{
+    I = ((get_corriente_AC(2000) - offset) / relacion);
+    if (I <= 9)
+    {
+        RELE1 = 0;
+        currentSeg = conteo;
+        if (currentSeg - previousMillis >= intervalo)
+        {
+            previousMillis = currentSeg;
+            RELE1 = 1;
+            __delay_ms(3000);
+        }
+    }
+    if (I >= 16 && I < 17)
+    {
+        i = i + 1;
+        if (i > 600)
+        {
+            i = 0;
+            RELE1 = 0;
+            while(1){}
+        }
+    }
+    if (I >= 17 && I < 18)
+    {
+        j = j + 1;
+        if ( j > 300)
+        {
+            j = 0;
+            RELE1 = 0;
+            while(1){}
+        }
+    }
+    if (I >= 18 && I < 19)
+    {
+        k = k + 1;
+        if (k > 120)
+        {
+            k = 0;
+            RELE1 = 0;
+            while(1){}          
+        }
+    }
+    if (I >= 19)
+    {
+        l = l + 1;
+        if (l > 15)
+        {
+            l = 0;
+            RELE1 = 0;
+            while(1){}
+        }
+    }
+}
+
 void main(void)
 {
     // Initialize the device
@@ -174,13 +260,13 @@ void main(void)
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
@@ -193,13 +279,7 @@ void main(void)
 //    RCIF = 0;                                                                   //Limpia bandera interrupcion serial
 //    RCIE = 1;                                                                   //Habilita la interrupcion serial
 //    GIE = 1;                                                                    //Autoriza todas las interrupciones programadas 
-    
-    RELE1 = 1;
-    __delay_ms(2000);
-    RELE1 = 0;
-    
-    on = 1;
-    off = 0;
+
     //INICIAMOS EL MODULO NRF24L01
     spi_s_init();
 //    nrF2401_init_TX(17);                                                        //incicializa transmision por el canal 17
@@ -207,26 +287,30 @@ void main(void)
     ////////////////////////////////////////////////////////////////////////////
     
     
+    __delay_ms(2000);
+    RELE1 = 1;
+    __delay_ms(3000);
 
     while (1)
     {
-        // Add your application code
-
-        I = get_corriente_AC(200);
-        I_rms = I * 0.707;
-        snprintf(valor_string, 14, "%.3f Amp.\n\r", I_rms);
-        if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);
+        // Add your application code        
+        
+//        I_rms = I * 0.707 / 0.150;
+//        snprintf(valor_string, 14, "%.3f Amp.\n\r", (get_corriente_AC(2000) - offset) / relacion);
+//        if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);
+        
+        trip_protec_current();
         
         if(nrf2401_haydatos() == 1)                                             //Recibe datos del modulo NRF2401
         {
             dato_serial = nrf2401_recibe();
             if (dato_serial == 1) 
             {
-                RELE1 = on;
+                RELE1 = 1;
             }
             else if (dato_serial == 0)
             {
-                RELE1 = off;
+                RELE1 = 0;
             }
         }
    

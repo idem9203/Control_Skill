@@ -1,24 +1,26 @@
 /**
-  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Source File
+  Generated Interrupt Manager Source File
 
   @Company:
     Microchip Technology Inc.
 
   @File Name:
-    mcc.c
+    interrupt_manager.c
 
   @Summary:
-    This is the mcc.c file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+    This is the Interrupt Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
+    This header file provides implementations for global interrupt handling.
+    For individual peripheral handlers please see the peripheral driver for
+    all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
         Device            :  PIC18F25K50
-        Driver Version    :  2.00
+        Driver Version    :  2.04
     The generated drivers are tested against the following:
         Compiler          :  XC8 2.31 and above or later
-        MPLAB             :  MPLAB X 5.45
+        MPLAB 	          :  MPLAB X 5.45
 */
 
 /*
@@ -44,38 +46,26 @@
     SOFTWARE.
 */
 
+#include "interrupt_manager.h"
 #include "mcc.h"
 
-
-void SYSTEM_Initialize(void)
+void  INTERRUPT_Initialize (void)
 {
-
-    INTERRUPT_Initialize();
-    PIN_MANAGER_Initialize();
-    OSCILLATOR_Initialize();
-    CCP2_Initialize();
-    TMR1_Initialize();
-    ADC_Initialize();
-    EUSART1_Initialize();
+    // Disable Interrupt Priority Vectors (16CXXX Compatibility Mode)
+    RCONbits.IPEN = 0;
 }
 
-void OSCILLATOR_Initialize(void)
+void __interrupt() INTERRUPT_InterruptManager (void)
 {
-    // SCS FOSC; IDLEN disabled; IRCF 16MHz; 
-    OSCCON = 0x70;
-    // INTSRC INTRC_31_25KHz; PLLEN disabled; PRISD disabled; SOSCGO disabled; 
-    OSCCON2 = 0x00;
-    // SPLLMULT 3xPLL; TUN 0; 
-    OSCTUNE = 0x80;
-    // ACTSRC SOSC; ACTUD enabled; ACTEN disabled; 
-    ACTCON = 0x00;
-    // Wait for PLL to stabilize
-    while(PLLRDY == 0)
+    // interrupt handler
+    if(INTCONbits.PEIE == 1)
     {
-    }
+        if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
+        {
+            TMR1_ISR();
+        } 
+    }      
 }
-
-
 /**
  End of File
 */
