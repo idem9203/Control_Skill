@@ -187,7 +187,7 @@ void nrF2401_init_RX(unsigned char canal)
     nrf2401_write(CONFIG, CRC2 + EN_CRC);  // 2 bit crc
     nrf2401_write(SETUP_RETR, 0x00);   //no hay retrasmision solo es recepcion
     nrf2401_write(SETUP_AW, AW5);   //DIRECCION DE 5 BYTES
-    nrf2401_write(RF_SETUP, RF_DR_2Mb + RF_PWR_0db);      //a maxima potencia y 2mbps
+    nrf2401_write(RF_SETUP, RF_DR_250Kb + RF_PWR_0db);      //a maxima potencia y 2mbps
     nrf2401_write(RF_CH, canal);    //CANAL DE COMUNICACION
     nrf2401_write(EN_AA, 0x00); //sin autoreconocimiento
     nrf2401_write(RX_PW_P0, 1); //tamaño de trama en el caso 1
@@ -204,7 +204,7 @@ void nrF2401_init_TX(unsigned char canal)
     nrf2401_write(SETUP_RETR, 0x00);  //sin retrasmisión
     // nrf2401_write(SETUP_RETR, 0xfa);  //con 10 retrasmisones cada 4 ms
     nrf2401_write(SETUP_AW, AW5);  // direccion de 5 bytes
-    nrf2401_write(RF_SETUP, RF_DR_2Mb + RF_PWR_0db);      //a maxima potencia y 1mbps
+    nrf2401_write(RF_SETUP, RF_DR_250Kb + RF_PWR_0db);      //a maxima potencia y 1mbps
     nrf2401_write(RF_CH, canal);   //canal de comunicacion  tiene para 127 canales por defecto el 2
     nrf2401_write(EN_AA, 0);  //sin autoreconocimiento
     nrf2401_write(CONFIG, PWR_UP +CRC2 + EN_CRC);  //configura el regsito 2 bits de crc
@@ -247,9 +247,9 @@ char nrf2401_haydatos()
 void nrf2401_recibe_Text(char* Buffer, char StopChar)
 {
     flush_RX();
-    while(*(Buffer-1)!=StopChar)   //mientras no llegue el caracter deseado
+    while(*(Buffer-1)!= StopChar)   //mientras no llegue el caracter deseado
     {
-        if(get_Status() == 0x40) *Buffer++=nrf2401_recibe();  //sigue almacenando en el buffer       ,
+        if(get_Status() == 0x40) *Buffer++ = nrf2401_recibe();  //sigue almacenando en el buffer       ,
     }
 
     *--Buffer=0; //coloca un cero al final para que sea una cadena
