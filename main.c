@@ -183,6 +183,7 @@ void main(void)
     nrF2401_init_TX(17);                                                        //incicializa transmision por el canal 17
 //    nrF2401_init_RX(17);                                                        //Inicializa recepcion por el canal 17
     ////////////////////////////////////////////////////////////////////////////
+    dato_serial = 1;
 
     while (1)
     {
@@ -194,9 +195,8 @@ void main(void)
 //            dato_serial = ~dato_serial;
 //            nrf2401_envia(dato_serial);
             RELE1 = 1;
-            dato_serial = 1;
             nrf2401_envia(dato_serial);
-            __delay_ms(2000);
+            __delay_ms(3000);
         }
         else RELE1 = 0;
         __delay_ms(100);

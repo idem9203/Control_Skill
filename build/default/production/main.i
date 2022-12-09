@@ -8337,6 +8337,7 @@ void main(void)
     nrF2401_init_TX(17);
 
 
+    dato_serial = 1;
 
     while (1)
     {
@@ -8348,9 +8349,8 @@ void main(void)
 
 
             LATA5 = 1;
-            dato_serial = 1;
             nrf2401_envia(dato_serial);
-            _delay((unsigned long)((2000)*(48000000/4000.0)));
+            _delay((unsigned long)((3000)*(48000000/4000.0)));
         }
         else LATA5 = 0;
         _delay((unsigned long)((100)*(48000000/4000.0)));

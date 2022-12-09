@@ -325,7 +325,7 @@ text0 80C ADD CODE 80C 0
 %locals
 dist/default/production\IDEMV2-1.X.production.o
 C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h
-C:\Users\echev\AppData\Local\Temp\xcAsr68.s
+C:\Users\echev\AppData\Local\Temp\xcAsqec.s
 2701 9F6 0 CODE 0
 2703 9F6 0 CODE 0
 2706 9F6 0 CODE 0
@@ -358,9 +358,9 @@ main.c
 179 83A 0 CODE 0
 182 83C 0 CODE 0
 183 840 0 CODE 0
-192 846 0 CODE 0
-196 854 0 CODE 0
-197 856 0 CODE 0
+186 846 0 CODE 0
+193 84A 0 CODE 0
+197 858 0 CODE 0
 198 85A 0 CODE 0
 199 860 0 CODE 0
 200 876 0 CODE 0

@@ -1551,30 +1551,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 "183
 [; ;main.c: 183:     nrF2401_init_TX(17);
 [e ( _nrF2401_init_TX (1 -> -> 17 `i `uc ]
-"187
-[; ;main.c: 187:     while (1)
-[e :U 654 ]
-"188
-[; ;main.c: 188:     {
-{
-"192
-[; ;main.c: 192:         if(PORTAbits.RA3 == 1)
-[e $ ! == -> . . _PORTAbits 0 3 `i -> 1 `i 656  ]
-"193
-[; ;main.c: 193:         {
-{
-"196
-[; ;main.c: 196:             LATA5 = 1;
-[e = _LATA5 -> -> 1 `i `b ]
-"197
-[; ;main.c: 197:             dato_serial = 1;
+"186
+[; ;main.c: 186:     dato_serial = 1;
 [e = _dato_serial -> -> 1 `i `uc ]
+"188
+[; ;main.c: 188:     while (1)
+[e :U 654 ]
+"189
+[; ;main.c: 189:     {
+{
+"193
+[; ;main.c: 193:         if(PORTAbits.RA3 == 1)
+[e $ ! == -> . . _PORTAbits 0 3 `i -> 1 `i 656  ]
+"194
+[; ;main.c: 194:         {
+{
+"197
+[; ;main.c: 197:             LATA5 = 1;
+[e = _LATA5 -> -> 1 `i `b ]
 "198
 [; ;main.c: 198:             nrf2401_envia(dato_serial);
 [e ( _nrf2401_envia (1 _dato_serial ]
 "199
-[; ;main.c: 199:             _delay((unsigned long)((2000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 199:             _delay((unsigned long)((3000)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "200
 [; ;main.c: 200:         }
 }

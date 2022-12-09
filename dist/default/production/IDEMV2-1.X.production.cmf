@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+$C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 idloc IDLOC 5 200000 200000 8 1
 init CODE 0 0 0 4 1
 config CONFIG 4 300000 300000 E 1
@@ -210,34 +210,34 @@ A80 text1 CODE >38:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF2
 83A text0 CODE >179:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 83C text0 CODE >182:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 840 text0 CODE >183:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-846 text0 CODE >192:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-854 text0 CODE >196:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-856 text0 CODE >197:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+846 text0 CODE >186:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+84A text0 CODE >193:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+858 text0 CODE >197:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 85A text0 CODE >198:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 860 text0 CODE >199:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 876 text0 CODE >200:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 87A text0 CODE >201:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 87C text0 CODE >202:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-9F6 cinit CODE >2701:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-9F6 cinit CODE >2703:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-9F6 cinit CODE >2706:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-9F6 cinit CODE >2760:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-9FA cinit CODE >2761:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-9FC cinit CODE >2762:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-9FC cinit CODE >2763:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-9FE cinit CODE >2764:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A00 cinit CODE >2765:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A02 cinit CODE >2768:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A06 cinit CODE >2769:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A08 cinit CODE >2770:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A08 cinit CODE >2771:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A0A cinit CODE >2772:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A0C cinit CODE >2773:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A0E cinit CODE >2779:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A0E cinit CODE >2782:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A10 cinit CODE >2783:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A12 cinit CODE >2784:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
-A14 cinit CODE >2785:C:\Users\echev\AppData\Local\Temp\xcAsr68.s
+9F6 cinit CODE >2701:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+9F6 cinit CODE >2703:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+9F6 cinit CODE >2706:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+9F6 cinit CODE >2760:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+9FA cinit CODE >2761:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+9FC cinit CODE >2762:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+9FC cinit CODE >2763:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+9FE cinit CODE >2764:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A00 cinit CODE >2765:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A02 cinit CODE >2768:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A06 cinit CODE >2769:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A08 cinit CODE >2770:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A08 cinit CODE >2771:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A0A cinit CODE >2772:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A0C cinit CODE >2773:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A0E cinit CODE >2779:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A0E cinit CODE >2782:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A10 cinit CODE >2783:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A12 cinit CODE >2784:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
+A14 cinit CODE >2785:C:\Users\echev\AppData\Local\Temp\xcAsqec.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -257,16 +257,16 @@ __Hspace_1 7E 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hspace_4 60000E 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\IDEMV2-1.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\IDEMV2-1.X.production.o
 __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\IDEMV2-1.X.production.o
 _LATA F89 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _LATB F8A 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _LATC F8B 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _WPUB F85 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+___sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 _main 80C 0 CODE 0 text0 dist/default/production\IDEMV2-1.X.production.o
-start 0 0 CODE 0 init C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+start 0 0 CODE 0 init C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 __size_of_main 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\IDEMV2-1.X.production.o
 nrf2401_comando@comando 42 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
@@ -274,11 +274,11 @@ nrf2401_envia@dato_tx 44 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\IDEMV2-1.X.production.o
 _spi_s_write 904 0 CODE 0 text9 dist/default/production\IDEMV2-1.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAsr68.o
-intlevel0 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAsr68.o
-intlevel1 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAsr68.o
-intlevel2 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAsr68.o
-intlevel3 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+__accesstop 60 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAsqec.o
+intlevel0 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAsqec.o
+intlevel1 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAsqec.o
+intlevel2 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAsqec.o
+intlevel3 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\IDEMV2-1.X.production.o
 __size_of_ADC_Initialize 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\IDEMV2-1.X.production.o
@@ -296,8 +296,8 @@ _ADRESL FC3 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _ANSELA F5B 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _ANSELB F5C 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _ANSELC F5D 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAsr68.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAsqec.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 _CCPR2H F91 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _CCPR2L F90 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 spi_s_write@cont_s 41 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
@@ -332,7 +332,7 @@ _TXREG1 FAD 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _TXSTA1 FAC 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _EUSART1_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _EUSART1_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+isa$xinst 0 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 __end_of_nrF2401_init_TX 904 0 CODE 0 text4 dist/default/production\IDEMV2-1.X.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\IDEMV2-1.X.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\IDEMV2-1.X.production.o
@@ -363,7 +363,7 @@ __Htext8 0 0 ABS 0 text8 dist/default/production\IDEMV2-1.X.production.o
 __Htext9 0 0 ABS 0 text9 dist/default/production\IDEMV2-1.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\IDEMV2-1.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\IDEMV2-1.X.production.o
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 _BAUDCON1 FB8 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\IDEMV2-1.X.production.o
 __Hconfig 30000E 0 CONFIG 4 config dist/default/production\IDEMV2-1.X.production.o
@@ -469,11 +469,11 @@ _RCSTA1bits FAB 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __size_of_nrf2401_write 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\IDEMV2-1.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\IDEMV2-1.X.production.o
-isa$std 1 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+isa$std 1 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 _nrf2401_direccion_TX_RX 94C 0 CODE 0 text5 dist/default/production\IDEMV2-1.X.production.o
 __end_of_nrf2401_direccion_TX_RX 992 0 CODE 0 text5 dist/default/production\IDEMV2-1.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAsr68.o
-stacklo 7E 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+stackhi 7FF 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAsqec.o
+stacklo 7E 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 __Lintcode 0 0 CODE 0 intcode dist/default/production\IDEMV2-1.X.production.o
 _OSCCON2 FD2 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _OSCTUNE F9B 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
@@ -520,7 +520,7 @@ __Ltext12 0 0 ABS 0 text12 dist/default/production\IDEMV2-1.X.production.o
 __Ltext13 0 0 ABS 0 text13 dist/default/production\IDEMV2-1.X.production.o
 __Ltext14 0 0 ABS 0 text14 dist/default/production\IDEMV2-1.X.production.o
 __size_of_spi_s_write 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\echev\AppData\Local\Temp\xcAsr68.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\echev\AppData\Local\Temp\xcAsqec.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\IDEMV2-1.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\IDEMV2-1.X.production.o
 __psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\IDEMV2-1.X.production.o

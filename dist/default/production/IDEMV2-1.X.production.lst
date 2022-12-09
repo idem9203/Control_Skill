@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Thu Dec 08 19:17:38 2022
+                                                                                               Thu Dec 08 20:03:10 2022
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1 
      1                           	processor	18F25K50
@@ -374,33 +374,33 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
    360                           ;main.c: 183:     nrF2401_init_TX(17);
    361  000840  0E11               	movlw	17
    362  000842  EC4E  F004         	call	_nrF2401_init_TX
-   363  000846                     l1447:
-   364                           
-   365                           ;main.c: 188:     {;main.c: 192:         if(PORTAbits.RA3 == 1)
-   366  000846  A680               	btfss	128,3,c	;volatile
-   367  000848  EF28  F004         	goto	u211
-   368  00084C  EF2A  F004         	goto	u210
-   369  000850                     u211:
-   370  000850  EF3D  F004         	goto	l327
-   371  000854                     u210:
-   372  000854                     
-   373                           ;main.c: 193:         {;main.c: 196:             LATA5 = 1;
-   374  000854  8A89               	bsf	3977,5,c	;volatile
-   375  000856                     
-   376                           ;main.c: 197:             dato_serial = 1;
-   377  000856  0E01               	movlw	1
-   378  000858  6E3E               	movwf	_dato_serial^0,c
+   363  000846                     
+   364                           ;main.c: 186:     dato_serial = 1;
+   365  000846  0E01               	movlw	1
+   366  000848  6E3E               	movwf	_dato_serial^0,c
+   367  00084A                     l1449:
+   368                           
+   369                           ;main.c: 189:     {;main.c: 193:         if(PORTAbits.RA3 == 1)
+   370  00084A  A680               	btfss	128,3,c	;volatile
+   371  00084C  EF2A  F004         	goto	u211
+   372  000850  EF2C  F004         	goto	u210
+   373  000854                     u211:
+   374  000854  EF3D  F004         	goto	l327
+   375  000858                     u210:
+   376  000858                     
+   377                           ;main.c: 194:         {;main.c: 197:             LATA5 = 1;
+   378  000858  8A89               	bsf	3977,5,c	;volatile
    379  00085A                     
    380                           ;main.c: 198:             nrf2401_envia(dato_serial);
-   381  00085A  0E01               	movlw	1
+   381  00085A  503E               	movf	_dato_serial^0,w,c
    382  00085C  ECC9  F004         	call	_nrf2401_envia
    383  000860                     
-   384                           ;main.c: 199:             _delay((unsigned long)((2000)*(48000000/4000.0)));
-   385  000860  0E7A               	movlw	122
+   384                           ;main.c: 199:             _delay((unsigned long)((3000)*(48000000/4000.0)));
+   385  000860  0EB7               	movlw	183
    386  000862  6E4A               	movwf	(??_main+1)^0,c
-   387  000864  0EC1               	movlw	193
+   387  000864  0EA1               	movlw	161
    388  000866  6E49               	movwf	??_main^0,c
-   389  000868  0E82               	movlw	130
+   389  000868  0EC4               	movlw	196
    390  00086A                     u237:
    391  00086A  2EE8               	decfsz	wreg,f,c
    392  00086C  D7FE               	bra	u237
@@ -429,7 +429,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
    415  00088E  2E4A               	decfsz	(??_main+1)^0,f,c
    416  000890  D7FA               	bra	u247
    417  000892  D000               	nop2	
-   418  000894  EF23  F004         	goto	l1447
+   418  000894  EF25  F004         	goto	l1449
    419  000898  EF00  F000         	goto	start
    420  00089C                     __end_of_main:
    421                           	callstack 0
@@ -1877,7 +1877,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Thu Dec 08 19:17:38 2022
+Symbol Table                                                                                   Thu Dec 08 20:03:10 2022
 
                                 u10 091C                                  u11 0918  
                                 u20 094A                                  u21 0946  
@@ -1891,8 +1891,8 @@ Symbol Table                                                                    
                                l271 0A6A                                 l327 087A  
                                l248 094A                                 l274 09C6  
                                l179 0A96                                 l283 0902  
-                               l268 0ABC                                 u210 0854  
-                               u211 0850                                 u170 0988  
+                               l268 0ABC                                 u210 0858  
+                               u211 0854                                 u170 0988  
                                u307 0934                                 u171 0984  
                                u227 082C                                 u237 086A  
                                u247 0886                                 u257 09B6  
@@ -1917,7 +1917,7 @@ Symbol Table                                                                    
                               l1441 083A                                l1433 081A  
                               l1355 098A                                l1339 094C  
                               l1371 09A4                                l1363 0994  
-                              l1451 0856                                l1443 083C  
+                              l1451 0858                                l1443 083C  
                               l1435 081E                                l1427 080C  
                               l1349 095A                                l1357 0AAC  
                               l1381 09BA                                l1373 09AA  
@@ -1930,7 +1930,7 @@ Symbol Table                                                                    
                               l1439 0822                                l1393 0900  
                               l1385 089E                                l1377 09B2  
                               l1369 09A2                                l1457 087C  
-                              l1449 0854                                l1387 08A0  
+                              l1449 084A                                l1387 08A0  
                               l1379 09B4                                l1389 08DC  
                               _LATA 000F89                                _LATB 000F8A  
                               _LATC 000F8B                                _WPUB 000F85  
