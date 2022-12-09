@@ -1570,48 +1570,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 197:             dato_serial = 1;
 [e = _dato_serial -> -> 1 `i `uc ]
 "198
-[; ;main.c: 198:             for (int i = 0; i >= 10; i++)
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ >= _i -> 10 `i 657  ]
-[e $U 658  ]
-[e :U 657 ]
-"199
-[; ;main.c: 199:             {
-{
-"200
-[; ;main.c: 200:                nrf2401_envia(dato_serial);
+[; ;main.c: 198:             nrf2401_envia(dato_serial);
 [e ( _nrf2401_envia (1 _dato_serial ]
-"201
-[; ;main.c: 201:             }
-}
-[e ++ _i -> 1 `i ]
-[e $ >= _i -> 10 `i 657  ]
-[e :U 658 ]
-}
-"202
-[; ;main.c: 202:             _delay((unsigned long)((2000)*(48000000/4000.0)));
+"199
+[; ;main.c: 199:             _delay((unsigned long)((2000)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"203
-[; ;main.c: 203:         }
+"200
+[; ;main.c: 200:         }
 }
-[e $U 660  ]
-"204
-[; ;main.c: 204:         else LATA5 = 0;
+[e $U 657  ]
+"201
+[; ;main.c: 201:         else LATA5 = 0;
 [e :U 656 ]
 [e = _LATA5 -> -> 0 `i `b ]
-[e :U 660 ]
-"205
-[; ;main.c: 205:         _delay((unsigned long)((100)*(48000000/4000.0)));
+[e :U 657 ]
+"202
+[; ;main.c: 202:         _delay((unsigned long)((100)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"206
-[; ;main.c: 206:     }
+"203
+[; ;main.c: 203:     }
 }
 [e :U 653 ]
 [e $U 654  ]
 [e :U 655 ]
-"207
-[; ;main.c: 207: }
+"204
+[; ;main.c: 204: }
 [e :UE 652 ]
 }

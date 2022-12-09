@@ -8349,10 +8349,7 @@ void main(void)
 
             LATA5 = 1;
             dato_serial = 1;
-            for (int i = 0; i >= 10; i++)
-            {
-               nrf2401_envia(dato_serial);
-            }
+            nrf2401_envia(dato_serial);
             _delay((unsigned long)((2000)*(48000000/4000.0)));
         }
         else LATA5 = 0;

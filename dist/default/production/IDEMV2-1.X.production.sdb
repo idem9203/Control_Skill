@@ -476,7 +476,7 @@ channel_FVRBuf2 31
 "144 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"207
+"204
 } 0
 "23 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
 [v _spi_s_init spi_s_init `(v  1 e 1 0 ]

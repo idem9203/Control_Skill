@@ -195,10 +195,7 @@ void main(void)
 //            nrf2401_envia(dato_serial);
             RELE1 = 1;
             dato_serial = 1;
-            for (int i = 0; i >= 10; i++)
-            {
-               nrf2401_envia(dato_serial); 
-            }
+            nrf2401_envia(dato_serial);
             __delay_ms(2000);
         }
         else RELE1 = 0;
