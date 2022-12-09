@@ -11,59 +11,59 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\echev\AppData\Local\Temp\xcAs74g.o
+$C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
 idloc IDLOC 5 200000 200000 8 1
 init CODE 0 4C 4C 4 1
 reset_vec CODE 0 0 0 4 1
 config CONFIG 4 300000 300000 E 1
 $dist/default/production\IDEMV2-1.X.production.o
-cinit CODE 0 1E1E 1E1E 46 1
+cinit CODE 0 1E34 1E34 46 1
 idloc IDLOC 5 200000 200000 8 1
-text0 CODE 0 1C74 1C74 9E 1
+text0 CODE 0 1C74 1C74 B4 1
 text1 CODE 0 1494 1494 34E 1
 text2 CODE 0 17E2 17E2 1DA 1
 text3 CODE 0 19BC 19BC 1B4 1
-text4 CODE 0 1E64 1E64 46 1
+text4 CODE 0 1E7A 1E7A 46 1
 text5 CODE 0 810 810 4C0 1
 text6 CODE 0 CD0 CD0 42A 1
 text7 CODE 0 1B70 1B70 104 1
 text8 CODE 0 10FA 10FA 39A 1
-text9 CODE 0 1F74 1F74 3A 1
-text10 CODE 0 212A 212A 16 1
-text11 CODE 0 20F8 20F8 1A 1
-text12 CODE 0 2084 2084 1E 1
-text13 CODE 0 21AC 21AC 8 1
-text14 CODE 0 20C0 20C0 1C 1
-text15 CODE 0 1EAA 1EAA 46 1
-text16 CODE 0 1D12 1D12 7C 1
-text17 CODE 0 1EF0 1EF0 46 1
-text18 CODE 0 2112 2112 18 1
-text19 CODE 0 20DC 20DC 1C 1
-text20 CODE 0 2156 2156 14 1
-text21 CODE 0 1D8E 1D8E 48 1
-text22 CODE 0 20A2 20A2 1E 1
-text23 CODE 0 2012 2012 2A 1
-text24 CODE 0 2184 2184 A 1
-text25 CODE 0 1FE4 1FE4 2E 1
-text26 CODE 0 2064 2064 20 1
-text27 CODE 0 21B4 21B4 4 1
-text28 CODE 0 1F36 1F36 3E 1
-text29 CODE 0 218E 218E A 1
-text30 CODE 0 2198 2198 A 1
-text31 CODE 0 21A2 21A2 A 1
-text32 CODE 0 216A 216A E 1
-text33 CODE 0 2140 2140 16 1
-text35 CODE 0 1FAE 1FAE 36 1
-text36 CODE 0 203C 203C 28 1
-text37 CODE 0 1DD6 1DD6 48 1
-text38 CODE 0 21B8 21B8 2 1
+text9 CODE 0 1F8A 1F8A 3A 1
+text10 CODE 0 2140 2140 16 1
+text11 CODE 0 210E 210E 1A 1
+text12 CODE 0 209A 209A 1E 1
+text13 CODE 0 21C2 21C2 8 1
+text14 CODE 0 20D6 20D6 1C 1
+text15 CODE 0 1EC0 1EC0 46 1
+text16 CODE 0 1D28 1D28 7C 1
+text17 CODE 0 1F06 1F06 46 1
+text18 CODE 0 2128 2128 18 1
+text19 CODE 0 20F2 20F2 1C 1
+text20 CODE 0 216C 216C 14 1
+text21 CODE 0 1DA4 1DA4 48 1
+text22 CODE 0 20B8 20B8 1E 1
+text23 CODE 0 2028 2028 2A 1
+text24 CODE 0 219A 219A A 1
+text25 CODE 0 1FFA 1FFA 2E 1
+text26 CODE 0 207A 207A 20 1
+text27 CODE 0 21CA 21CA 4 1
+text28 CODE 0 1F4C 1F4C 3E 1
+text29 CODE 0 21A4 21A4 A 1
+text30 CODE 0 21AE 21AE A 1
+text31 CODE 0 21B8 21B8 A 1
+text32 CODE 0 2180 2180 E 1
+text33 CODE 0 2156 2156 16 1
+text35 CODE 0 1FC4 1FC4 36 1
+text36 CODE 0 2052 2052 28 1
+text37 CODE 0 1DEC 1DEC 48 1
+text38 CODE 0 21CE 21CE 2 1
 cstackCOMRAM COMRAM 1 1 1 46 1
 cstackBANK0 BANK0 1 A0 A0 4 1
 temp COMRAM 1 5B 5B 1 1
 bssBANK0 BANK0 1 60 60 34 1
 intcode CODE 0 8 8 44 1
 smallconst SMALLCONST 0 800 800 10 1
-idataBANK0 CODE 0 2178 2178 C 1
+idataBANK0 CODE 0 218E 218E C 1
 dataBANK0 BANK0 1 94 94 C 1
 bssCOMRAM COMRAM 1 47 47 14 1
 config CONFIG 4 300000 300000 E 1
@@ -85,17 +85,17 @@ BANK6 600-6FF 1
 BANK7 700-7FF 1
 CONST 4-7 1
 CONST 50-7FF 1
-CONST 21BA-7FFF 1
+CONST 21D0-7FFF 1
 STACK A4-7FF 1
-SMALLCONST 21BA-7FFF 1
+SMALLCONST 21D0-7FFF 1
 CODE 4-7 1
 CODE 50-7FF 1
-CODE 21BA-7FFF 1
+CODE 21D0-7FFF 1
 BIGRAM 5C-5F 1
 BIGRAM A4-7FF 1
 COMRAM 5C-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST 21BA-7FFF 1
+MEDIUMCONST 21D0-7FFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -110,226 +110,226 @@ MEDIUMCONST 21BA-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\IDEMV2-1.X.production.o
-8 intcode CODE >10754:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
+8 intcode CODE >10778:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
 8 intcode CODE >58:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
 12 intcode CODE >61:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
 20 intcode CODE >63:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
 3C intcode CODE >65:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
 40 intcode CODE >68:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
-21B8 text38 CODE >193:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-21B8 text38 CODE >196:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1DD6 text37 CODE >179:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1DD6 text37 CODE >182:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1DF0 text37 CODE >183:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1E02 text37 CODE >185:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1E1C text37 CODE >187:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-203C text36 CODE >123:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-203C text36 CODE >125:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-204A text36 CODE >128:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-204C text36 CODE >131:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2050 text36 CODE >132:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2054 text36 CODE >135:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2056 text36 CODE >136:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-205A text36 CODE >140:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-205E text36 CODE >141:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2062 text36 CODE >143:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1FAE text35 CODE >160:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1FAE text35 CODE >165:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1FB0 text35 CODE >166:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1FBC text35 CODE >169:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1FD6 text35 CODE >172:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1FDA text35 CODE >175:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-1FE2 text35 CODE >177:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2140 text33 CODE >62:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-2140 text33 CODE >67:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-2144 text33 CODE >70:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-2148 text33 CODE >73:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-214C text33 CODE >76:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-2150 text33 CODE >79:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-2154 text33 CODE >81:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-216A text32 CODE >49:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
-216A text32 CODE >53:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
-216E text32 CODE >56:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
-2172 text32 CODE >59:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
-2176 text32 CODE >60:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
-21A2 text31 CODE >182:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-21A2 text31 CODE >183:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-21AA text31 CODE >184:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-2198 text30 CODE >174:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-2198 text30 CODE >175:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-21A0 text30 CODE >176:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-218E text29 CODE >178:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-218E text29 CODE >179:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-2196 text29 CODE >180:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F36 text28 CODE >66:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F36 text28 CODE >71:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F3A text28 CODE >74:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F3E text28 CODE >77:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F42 text28 CODE >80:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F46 text28 CODE >83:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F4A text28 CODE >86:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F56 text28 CODE >87:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F62 text28 CODE >88:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F6E text28 CODE >90:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-1F72 text28 CODE >92:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-21B4 text27 CODE >52:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
-21B4 text27 CODE >55:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
-21B6 text27 CODE >56:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
-2064 text26 CODE >62:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-2064 text26 CODE >65:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-2068 text26 CODE >67:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-206C text26 CODE >69:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-2070 text26 CODE >71:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-2074 text26 CODE >73:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-2074 text26 CODE >75:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-2082 text26 CODE >76:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-1FE4 text25 CODE >55:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-1FE4 text25 CODE >60:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-1FE8 text25 CODE >61:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-1FEC text25 CODE >62:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-1FF0 text25 CODE >67:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-1FF4 text25 CODE >68:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-1FF8 text25 CODE >69:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-1FFC text25 CODE >74:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-2002 text25 CODE >75:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-2006 text25 CODE >76:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-200A text25 CODE >81:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-200E text25 CODE >82:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-2010 text25 CODE >91:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
-2184 text24 CODE >189:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2184 text24 CODE >190:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-218C text24 CODE >191:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2012 text23 CODE >65:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2012 text23 CODE >70:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2016 text23 CODE >73:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-201A text23 CODE >76:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-201E text23 CODE >79:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2026 text23 CODE >82:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2028 text23 CODE >85:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-202A text23 CODE >88:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-2036 text23 CODE >91:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-203A text23 CODE >93:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
-20A2 text22 CODE >50:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-20A2 text22 CODE >53:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-20A6 text22 CODE >54:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-20AA text22 CODE >55:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-20AE text22 CODE >56:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-20B2 text22 CODE >57:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-20B6 text22 CODE >58:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-20BA text22 CODE >59:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-20BE text22 CODE >60:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
-1D8E text21 CODE >61:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D90 text21 CODE >63:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D94 text21 CODE >65:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D98 text21 CODE >68:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1DAC text21 CODE >69:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1DAE text21 CODE >70:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1DB2 text21 CODE >72:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1DB4 text21 CODE >73:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1DBA text21 CODE >74:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1DBC text21 CODE >75:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1DC2 text21 CODE >76:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1DD4 text21 CODE >77:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2156 text20 CODE >91:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2158 text20 CODE >93:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-215A text20 CODE >94:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2160 text20 CODE >95:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2162 text20 CODE >96:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2168 text20 CODE >97:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20DC text19 CODE >81:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20DE text19 CODE >83:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20E0 text19 CODE >84:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20E8 text19 CODE >85:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20EE text19 CODE >86:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20F0 text19 CODE >87:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20F6 text19 CODE >89:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2112 text18 CODE >142:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2112 text18 CODE >144:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-211C text18 CODE >145:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2122 text18 CODE >146:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2128 text18 CODE >147:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EF0 text17 CODE >111:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EF0 text17 CODE >115:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EF2 text17 CODE >116:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EFA text17 CODE >117:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EFE text17 CODE >119:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1F1A text17 CODE >120:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1F2C text17 CODE >121:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1F2E text17 CODE >122:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1F34 text17 CODE >124:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D12 text16 CODE >184:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D14 text16 CODE >186:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D16 text16 CODE >187:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D20 text16 CODE >188:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D2A text16 CODE >189:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D34 text16 CODE >190:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D3E text16 CODE >191:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D48 text16 CODE >192:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D52 text16 CODE >193:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D5C text16 CODE >194:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D66 text16 CODE >195:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D76 text16 CODE >196:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D86 text16 CODE >197:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D8A text16 CODE >198:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1D8C text16 CODE >199:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EAA text15 CODE >40:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EAA text15 CODE >42:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EAE text15 CODE >43:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EB2 text15 CODE >45:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EB6 text15 CODE >47:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EBA text15 CODE >48:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EBC text15 CODE >49:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EC2 text15 CODE >51:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1ED0 text15 CODE >53:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1ED2 text15 CODE >55:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1ED4 text15 CODE >56:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EDA text15 CODE >57:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EEC text15 CODE >58:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1EEE text15 CODE >59:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20C0 text14 CODE >99:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20C2 text14 CODE >101:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20C2 text14 CODE >102:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20C4 text14 CODE >103:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20CA text14 CODE >104:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20D0 text14 CODE >105:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20D2 text14 CODE >106:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20D8 text14 CODE >107:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20DA text14 CODE >108:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-21AC text13 CODE >218:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-21AC text13 CODE >220:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-21B2 text13 CODE >221:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2084 text12 CODE >240:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2084 text12 CODE >242:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-209E text12 CODE >243:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20A0 text12 CODE >244:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20F8 text11 CODE >172:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20F8 text11 CODE >175:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-20FA text11 CODE >176:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2100 text11 CODE >177:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2106 text11 CODE >178:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2108 text11 CODE >179:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-210E text11 CODE >180:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2110 text11 CODE >181:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-212A text10 CODE >23:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-212A text10 CODE >26:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-212C text10 CODE >27:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-212E text10 CODE >28:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2130 text10 CODE >29:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2132 text10 CODE >30:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2134 text10 CODE >31:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2136 text10 CODE >33:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-2138 text10 CODE >34:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-213A text10 CODE >35:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-213C text10 CODE >36:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-213E text10 CODE >38:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
-1F74 text9 CODE >110:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-1F76 text9 CODE >113:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-1F88 text9 CODE >116:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-1F8A text9 CODE >119:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-1F8C text9 CODE >122:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-1F8C text9 CODE >124:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-1F9A text9 CODE >127:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-1FAC text9 CODE >128:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+21CE text38 CODE >193:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+21CE text38 CODE >196:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1DEC text37 CODE >179:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1DEC text37 CODE >182:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1E06 text37 CODE >183:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1E18 text37 CODE >185:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1E32 text37 CODE >187:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2052 text36 CODE >123:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2052 text36 CODE >125:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2060 text36 CODE >128:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2062 text36 CODE >131:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2066 text36 CODE >132:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+206A text36 CODE >135:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+206C text36 CODE >136:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2070 text36 CODE >140:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2074 text36 CODE >141:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2078 text36 CODE >143:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1FC4 text35 CODE >160:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1FC4 text35 CODE >165:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1FC6 text35 CODE >166:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1FD2 text35 CODE >169:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1FEC text35 CODE >172:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1FF0 text35 CODE >175:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+1FF8 text35 CODE >177:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2156 text33 CODE >62:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+2156 text33 CODE >67:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+215A text33 CODE >70:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+215E text33 CODE >73:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+2162 text33 CODE >76:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+2166 text33 CODE >79:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+216A text33 CODE >81:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+2180 text32 CODE >49:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
+2180 text32 CODE >53:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
+2184 text32 CODE >56:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
+2188 text32 CODE >59:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
+218C text32 CODE >60:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
+21B8 text31 CODE >182:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+21B8 text31 CODE >183:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+21C0 text31 CODE >184:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+21AE text30 CODE >174:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+21AE text30 CODE >175:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+21B6 text30 CODE >176:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+21A4 text29 CODE >178:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+21A4 text29 CODE >179:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+21AC text29 CODE >180:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F4C text28 CODE >66:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F4C text28 CODE >71:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F50 text28 CODE >74:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F54 text28 CODE >77:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F58 text28 CODE >80:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F5C text28 CODE >83:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F60 text28 CODE >86:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F6C text28 CODE >87:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F78 text28 CODE >88:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F84 text28 CODE >90:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+1F88 text28 CODE >92:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+21CA text27 CODE >52:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
+21CA text27 CODE >55:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
+21CC text27 CODE >56:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/interrupt_manager.c
+207A text26 CODE >62:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+207A text26 CODE >65:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+207E text26 CODE >67:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+2082 text26 CODE >69:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+2086 text26 CODE >71:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+208A text26 CODE >73:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+208A text26 CODE >75:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+2098 text26 CODE >76:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+1FFA text25 CODE >55:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+1FFA text25 CODE >60:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+1FFE text25 CODE >61:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+2002 text25 CODE >62:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+2006 text25 CODE >67:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+200A text25 CODE >68:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+200E text25 CODE >69:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+2012 text25 CODE >74:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+2018 text25 CODE >75:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+201C text25 CODE >76:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+2020 text25 CODE >81:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+2024 text25 CODE >82:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+2026 text25 CODE >91:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+219A text24 CODE >189:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+219A text24 CODE >190:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+21A2 text24 CODE >191:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2028 text23 CODE >65:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2028 text23 CODE >70:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+202C text23 CODE >73:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2030 text23 CODE >76:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2034 text23 CODE >79:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+203C text23 CODE >82:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+203E text23 CODE >85:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2040 text23 CODE >88:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+204C text23 CODE >91:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+2050 text23 CODE >93:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/tmr1.c
+20B8 text22 CODE >50:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+20B8 text22 CODE >53:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+20BC text22 CODE >54:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+20C0 text22 CODE >55:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+20C4 text22 CODE >56:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+20C8 text22 CODE >57:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+20CC text22 CODE >58:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+20D0 text22 CODE >59:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+20D4 text22 CODE >60:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+1DA4 text21 CODE >61:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DA6 text21 CODE >63:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DAA text21 CODE >65:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DAE text21 CODE >68:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DC2 text21 CODE >69:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DC4 text21 CODE >70:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DC8 text21 CODE >72:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DCA text21 CODE >73:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DD0 text21 CODE >74:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DD2 text21 CODE >75:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DD8 text21 CODE >76:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DEA text21 CODE >77:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+216C text20 CODE >91:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+216E text20 CODE >93:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2170 text20 CODE >94:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2176 text20 CODE >95:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2178 text20 CODE >96:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+217E text20 CODE >97:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20F2 text19 CODE >81:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20F4 text19 CODE >83:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20F6 text19 CODE >84:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20FE text19 CODE >85:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2104 text19 CODE >86:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2106 text19 CODE >87:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+210C text19 CODE >89:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2128 text18 CODE >142:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2128 text18 CODE >144:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2132 text18 CODE >145:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2138 text18 CODE >146:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+213E text18 CODE >147:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F06 text17 CODE >111:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F06 text17 CODE >115:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F08 text17 CODE >116:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F10 text17 CODE >117:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F14 text17 CODE >119:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F30 text17 CODE >120:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F42 text17 CODE >121:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F44 text17 CODE >122:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F4A text17 CODE >124:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D28 text16 CODE >184:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D2A text16 CODE >186:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D2C text16 CODE >187:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D36 text16 CODE >188:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D40 text16 CODE >189:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D4A text16 CODE >190:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D54 text16 CODE >191:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D5E text16 CODE >192:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D68 text16 CODE >193:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D72 text16 CODE >194:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D7C text16 CODE >195:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D8C text16 CODE >196:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1D9C text16 CODE >197:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DA0 text16 CODE >198:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1DA2 text16 CODE >199:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1EC0 text15 CODE >40:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1EC0 text15 CODE >42:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1EC4 text15 CODE >43:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1EC8 text15 CODE >45:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1ECC text15 CODE >47:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1ED0 text15 CODE >48:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1ED2 text15 CODE >49:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1ED8 text15 CODE >51:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1EE6 text15 CODE >53:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1EE8 text15 CODE >55:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1EEA text15 CODE >56:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1EF0 text15 CODE >57:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F02 text15 CODE >58:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F04 text15 CODE >59:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20D6 text14 CODE >99:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20D8 text14 CODE >101:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20D8 text14 CODE >102:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20DA text14 CODE >103:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20E0 text14 CODE >104:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20E6 text14 CODE >105:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20E8 text14 CODE >106:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20EE text14 CODE >107:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20F0 text14 CODE >108:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+21C2 text13 CODE >218:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+21C2 text13 CODE >220:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+21C8 text13 CODE >221:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+209A text12 CODE >240:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+209A text12 CODE >242:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20B4 text12 CODE >243:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+20B6 text12 CODE >244:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+210E text11 CODE >172:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+210E text11 CODE >175:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2110 text11 CODE >176:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2116 text11 CODE >177:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+211C text11 CODE >178:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+211E text11 CODE >179:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2124 text11 CODE >180:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2126 text11 CODE >181:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2140 text10 CODE >23:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2140 text10 CODE >26:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2142 text10 CODE >27:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2144 text10 CODE >28:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2146 text10 CODE >29:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2148 text10 CODE >30:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+214A text10 CODE >31:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+214C text10 CODE >33:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+214E text10 CODE >34:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2150 text10 CODE >35:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2152 text10 CODE >36:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+2154 text10 CODE >38:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X/Librerias/nRF24L01_2.h
+1F8A text9 CODE >110:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+1F8C text9 CODE >113:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+1F9E text9 CODE >116:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+1FA0 text9 CODE >119:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+1FA2 text9 CODE >122:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+1FA2 text9 CODE >124:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+1FB0 text9 CODE >127:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
+1FC2 text9 CODE >128:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
 10FA text8 CODE >11:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 10FA text8 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 1100 text8 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
@@ -637,10 +637,10 @@ CAE text5 CODE >233:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\
 CBC text5 CODE >234:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
 CBE text5 CODE >236:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
 CCE text5 CODE >237:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
-1E64 text4 CODE >245:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
-1E64 text4 CODE >248:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
-1E74 text4 CODE >249:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
-1EA8 text4 CODE >250:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+1E7A text4 CODE >245:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+1E7A text4 CODE >248:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+1E8A text4 CODE >249:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+1EBE text4 CODE >250:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
 19BC text3 CODE >10:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 19BE text3 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 19DC text3 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
@@ -733,43 +733,46 @@ CCE text5 CODE >237:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\
 1CC6 text0 CODE >304:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 1CDA text0 CODE >306:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 1CE0 text0 CODE >307:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+1CF0 text0 CODE >309:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
 1CF2 text0 CODE >310:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-1E1E cinit CODE >3585:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E1E cinit CODE >3587:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E1E cinit CODE >3590:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E1E cinit CODE >3693:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E20 cinit CODE >3694:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E22 cinit CODE >3695:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E24 cinit CODE >3696:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E26 cinit CODE >3697:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E28 cinit CODE >3698:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E2A cinit CODE >3699:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E2E cinit CODE >3700:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E32 cinit CODE >3701:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E32 cinit CODE >3702:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E34 cinit CODE >3703:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E38 cinit CODE >3704:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E3A cinit CODE >3705:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E3C cinit CODE >3706:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E3E cinit CODE >3710:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E42 cinit CODE >3711:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E44 cinit CODE >3712:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E44 cinit CODE >3713:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E46 cinit CODE >3714:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E48 cinit CODE >3715:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E4A cinit CODE >3718:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E4E cinit CODE >3719:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E50 cinit CODE >3720:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E50 cinit CODE >3721:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E52 cinit CODE >3722:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E54 cinit CODE >3723:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E56 cinit CODE >3729:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E56 cinit CODE >3731:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E58 cinit CODE >3732:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E5A cinit CODE >3734:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E5C cinit CODE >3735:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E5E cinit CODE >3736:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
-1E60 cinit CODE >3737:C:\Users\echev\AppData\Local\Temp\xcAs74g.s
+1D08 text0 CODE >312:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+1D08 text0 CODE >314:D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+1E34 cinit CODE >3585:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E34 cinit CODE >3587:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E34 cinit CODE >3590:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E34 cinit CODE >3693:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E36 cinit CODE >3694:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E38 cinit CODE >3695:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E3A cinit CODE >3696:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E3C cinit CODE >3697:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E3E cinit CODE >3698:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E40 cinit CODE >3699:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E44 cinit CODE >3700:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E48 cinit CODE >3701:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E48 cinit CODE >3702:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E4A cinit CODE >3703:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E4E cinit CODE >3704:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E50 cinit CODE >3705:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E52 cinit CODE >3706:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E54 cinit CODE >3710:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E58 cinit CODE >3711:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E5A cinit CODE >3712:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E5A cinit CODE >3713:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E5C cinit CODE >3714:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E5E cinit CODE >3715:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E60 cinit CODE >3718:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E64 cinit CODE >3719:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E66 cinit CODE >3720:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E66 cinit CODE >3721:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E68 cinit CODE >3722:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E6A cinit CODE >3723:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E6C cinit CODE >3729:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E6C cinit CODE >3731:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E6E cinit CODE >3732:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E70 cinit CODE >3734:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E72 cinit CODE >3735:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E74 cinit CODE >3736:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
+1E76 cinit CODE >3737:C:\Users\echev\AppData\Local\Temp\xcAs5hs.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -790,18 +793,18 @@ _l 51 0 COMRAM 1 bssCOMRAM dist/default/production\IDEMV2-1.X.production.o
 _dato_serial 59 0 COMRAM 1 bssCOMRAM dist/default/production\IDEMV2-1.X.production.o
 __LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\IDEMV2-1.X.production.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\IDEMV2-1.X.production.o
-__Hspace_0 21BA 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
+__Hspace_0 21D0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hspace_1 A4 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hspace_4 60000E 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\IDEMV2-1.X.production.o
 EUSART1_SetErrorHandler@interruptHandler 5 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\IDEMV2-1.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\echev\AppData\Local\Temp\xcAs74g.o
-_EUSART1_Initialize 1F36 0 CODE 0 text28 dist/default/production\IDEMV2-1.X.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
+_EUSART1_Initialize 1F4C 0 CODE 0 text28 dist/default/production\IDEMV2-1.X.production.o
 __end_of_trip_protec_current 17E2 0 CODE 0 text1 dist/default/production\IDEMV2-1.X.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\IDEMV2-1.X.production.o
-__end_of_INTERRUPT_Initialize 21B8 0 CODE 0 text27 dist/default/production\IDEMV2-1.X.production.o
+__end_of_INTERRUPT_Initialize 21CE 0 CODE 0 text27 dist/default/production\IDEMV2-1.X.production.o
 _T1CONbits FCD 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _valor_string 60 0 BANK0 1 bssBANK0 dist/default/production\IDEMV2-1.X.production.o
 ADC_GetConversion@channel 9 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
@@ -811,12 +814,12 @@ _LATB F8A 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _LATC F8B 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _TMR1 FCE 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _WPUB F85 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAs74g.o
+___sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
 _main 1C74 0 CODE 0 text0 dist/default/production\IDEMV2-1.X.production.o
 btemp 5B 0 COMRAM 1 temp dist/default/production\IDEMV2-1.X.production.o
-__end_of_ADC_GetConversion 1FAE 0 CODE 0 text9 dist/default/production\IDEMV2-1.X.production.o
-_nrf2401_recibe 20F8 0 CODE 0 text11 dist/default/production\IDEMV2-1.X.production.o
-start 4C 0 CODE 0 init C:\Users\echev\AppData\Local\Temp\xcAs74g.o
+__end_of_ADC_GetConversion 1FC4 0 CODE 0 text9 dist/default/production\IDEMV2-1.X.production.o
+_nrf2401_recibe 210E 0 CODE 0 text11 dist/default/production\IDEMV2-1.X.production.o
+start 4C 0 CODE 0 init C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
 ___flmul@aexp 20 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___flmul@bexp 25 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___flmul@prod 26 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
@@ -834,16 +837,16 @@ __LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\IDEMV2-1.X.production
 __Hpowerup 4C 0 CODE 0 powerup dist/default/production\IDEMV2-1.X.production.o
 __size_of_TMR1_Initialize 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __size_of_TMR1_WriteTimer 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-_spi_s_write 1D8E 0 CODE 0 text21 dist/default/production\IDEMV2-1.X.production.o
+_spi_s_write 1DA4 0 CODE 0 text21 dist/default/production\IDEMV2-1.X.production.o
 ttemp5 5C 0 COMRAM 1 temp dist/default/production\IDEMV2-1.X.production.o
 ttemp6 5F 0 COMRAM 1 temp dist/default/production\IDEMV2-1.X.production.o
 ttemp7 63 0 COMRAM 1 temp dist/default/production\IDEMV2-1.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAs74g.o
-intlevel0 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAs74g.o
-intlevel1 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAs74g.o
-intlevel2 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAs74g.o
-intlevel3 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAs74g.o
+__accesstop 60 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
+intlevel0 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
+intlevel1 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
+intlevel2 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
+intlevel3 0 0 CODE 0 text C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
 __size_of_EUSART1_SetErrorHandler 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\IDEMV2-1.X.production.o
 spi_s_read@cont_s 6 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
@@ -857,8 +860,8 @@ __size_of_TMR1_DefaultInterruptHandler 0 0 ABS 0 - dist/default/production\IDEMV
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\IDEMV2-1.X.production.o
 __size_of_spi_s_init 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __size_of_spi_s_read 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-__end_of_nrf2401_recibe 2112 0 CODE 0 text11 dist/default/production\IDEMV2-1.X.production.o
-__end_of_TMR1_DefaultInterruptHandler 21BA 0 CODE 0 text38 dist/default/production\IDEMV2-1.X.production.o
+__end_of_nrf2401_recibe 2128 0 CODE 0 text11 dist/default/production\IDEMV2-1.X.production.o
+__end_of_TMR1_DefaultInterruptHandler 21D0 0 CODE 0 text38 dist/default/production\IDEMV2-1.X.production.o
 _ACTCON FB5 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _ADCON0 FC2 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _ADCON1 FC1 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
@@ -869,8 +872,8 @@ _ANSELA F5B 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _ANSELB F5C 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _ANSELC F5D 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 get_corriente_AC@n_muestras 36 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAs74g.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAs74g.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
 _CCPR2H F91 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _CCPR2L F90 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 spi_s_write@cont_s 6 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
@@ -879,24 +882,24 @@ get_corriente_AC@corriente 3D 0 COMRAM 1 cstackCOMRAM dist/default/production\ID
 __size_of_TMR1_SetInterruptHandler 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\IDEMV2-1.X.production.o
 __end_of___flge 1C74 0 CODE 0 text7 dist/default/production\IDEMV2-1.X.production.o
-__end_of_CCP2_Initialize 2178 0 CODE 0 text32 dist/default/production\IDEMV2-1.X.production.o
+__end_of_CCP2_Initialize 218E 0 CODE 0 text32 dist/default/production\IDEMV2-1.X.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\IDEMV2-1.X.production.o
 _TXSTA1bits FAC 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 ___fldiv@aexp 35 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___fldiv@bexp 34 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___fldiv@sign 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\IDEMV2-1.X.production.o
-_ADC_GetConversion 1F74 0 CODE 0 text9 dist/default/production\IDEMV2-1.X.production.o
+_ADC_GetConversion 1F8A 0 CODE 0 text9 dist/default/production\IDEMV2-1.X.production.o
 __Hintcodelo 4C 0 CODE 0 intcodelo dist/default/production\IDEMV2-1.X.production.o
 nrf2401_read@reg 7 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 nrf2401_direccion_TX_RX@direccion_ 7 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-_nrf2401_haydatos 2084 0 CODE 0 text12 dist/default/production\IDEMV2-1.X.production.o
+_nrf2401_haydatos 209A 0 CODE 0 text12 dist/default/production\IDEMV2-1.X.production.o
 EUSART1_SetFramingErrorHandler@interruptHandler 5 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 __end_of___fladd CD0 0 CODE 0 text5 dist/default/production\IDEMV2-1.X.production.o
 __end_of___fldiv 1494 0 CODE 0 text8 dist/default/production\IDEMV2-1.X.production.o
 __end_of___flmul 10FA 0 CODE 0 text6 dist/default/production\IDEMV2-1.X.production.o
-__end_of___flsub 1EAA 0 CODE 0 text4 dist/default/production\IDEMV2-1.X.production.o
-__end_of_flush_TX_RX 212A 0 CODE 0 text18 dist/default/production\IDEMV2-1.X.production.o
+__end_of___flsub 1EC0 0 CODE 0 text4 dist/default/production\IDEMV2-1.X.production.o
+__end_of_flush_TX_RX 2140 0 CODE 0 text18 dist/default/production\IDEMV2-1.X.production.o
 ___fladd@a 9 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___fladd@b 5 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___fldiv@a 21 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
@@ -907,8 +910,8 @@ ___flsub@a 19 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.product
 ___flsub@b 15 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 _INTCON2bits FF1 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Lintcodelo 4C 0 CODE 0 intcodelo dist/default/production\IDEMV2-1.X.production.o
-_PIN_MANAGER_Initialize 1FE4 0 CODE 0 text25 dist/default/production\IDEMV2-1.X.production.o
-start_initialization 1E1E 0 CODE 0 cinit dist/default/production\IDEMV2-1.X.production.o
+_PIN_MANAGER_Initialize 1FFA 0 CODE 0 text25 dist/default/production\IDEMV2-1.X.production.o
+start_initialization 1E34 0 CODE 0 cinit dist/default/production\IDEMV2-1.X.production.o
 _eusart1RxLastError 5A 0 COMRAM 1 bssCOMRAM dist/default/production\IDEMV2-1.X.production.o
 _OSCCON FD3 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\IDEMV2-1.X.production.o
@@ -916,12 +919,12 @@ _get_corriente_AC 17E2 0 CODE 0 text2 dist/default/production\IDEMV2-1.X.product
 _PLLRDY 7E97 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _TRISBbits F93 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _TRISCbits F94 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-_CCP2_Initialize 216A 0 CODE 0 text32 dist/default/production\IDEMV2-1.X.production.o
+_CCP2_Initialize 2180 0 CODE 0 text32 dist/default/production\IDEMV2-1.X.production.o
 TMR1_ISR@CountCallBack 4B 0 COMRAM 1 bssCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _RCREG1 FAE 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _RCSTA1 FAB 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-__end_of_SYSTEM_Initialize 20C0 0 CODE 0 text22 dist/default/production\IDEMV2-1.X.production.o
+__end_of_SYSTEM_Initialize 20D6 0 CODE 0 text22 dist/default/production\IDEMV2-1.X.production.o
 nrf2401_write@valor 7 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 _SPBRG1 FAF 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __pcstackBANK0 A0 0 BANK0 1 cstackBANK0 dist/default/production\IDEMV2-1.X.production.o
@@ -930,11 +933,11 @@ _TXREG1 FAD 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _TXSTA1 FAC 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _EUSART1_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _EUSART1_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAs74g.o
-__end_of_nrF2401_init_RX 1D8E 0 CODE 0 text16 dist/default/production\IDEMV2-1.X.production.o
-__end_of_TMR1_SetInterruptHandler 218E 0 CODE 0 text24 dist/default/production\IDEMV2-1.X.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
+__end_of_nrF2401_init_RX 1DA4 0 CODE 0 text16 dist/default/production\IDEMV2-1.X.production.o
+__end_of_TMR1_SetInterruptHandler 21A4 0 CODE 0 text24 dist/default/production\IDEMV2-1.X.production.o
 __size_of_EUSART1_Initialize 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-_get_Status 21AC 0 CODE 0 text13 dist/default/production\IDEMV2-1.X.production.o
+_get_Status 21C2 0 CODE 0 text13 dist/default/production\IDEMV2-1.X.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\IDEMV2-1.X.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\IDEMV2-1.X.production.o
 __Hbank2 0 0 ABS 0 bank2 dist/default/production\IDEMV2-1.X.production.o
@@ -965,13 +968,13 @@ __Htext9 0 0 ABS 0 text9 dist/default/production\IDEMV2-1.X.production.o
 __size_of___xxtofl 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\IDEMV2-1.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\IDEMV2-1.X.production.o
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\echev\AppData\Local\Temp\xcAs74g.o
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
 _BAUDCON1 FB8 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 ___xxtofl@arg F 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___xxtofl@exp E 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___xxtofl@val 5 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 nrF2401_init_RX@canal D 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-__end_of_nrf2401_haydatos 20A2 0 CODE 0 text12 dist/default/production\IDEMV2-1.X.production.o
+__end_of_nrf2401_haydatos 20B8 0 CODE 0 text12 dist/default/production\IDEMV2-1.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\IDEMV2-1.X.production.o
 __Hconfig 30000E 0 CONFIG 4 config dist/default/production\IDEMV2-1.X.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\IDEMV2-1.X.production.o
@@ -1009,10 +1012,10 @@ __size_of_EUSART1_SetFramingErrorHandler 0 0 ABS 0 - dist/default/production\IDE
 __size_of_EUSART1_SetOverrunErrorHandler 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 ___flmul@grs 21 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\IDEMV2-1.X.production.o
-_nrf2401_write 20DC 0 CODE 0 text19 dist/default/production\IDEMV2-1.X.production.o
+_nrf2401_write 20F2 0 CODE 0 text19 dist/default/production\IDEMV2-1.X.production.o
 _PORTBbits F81 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _INTCONbits FF2 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-_INTERRUPT_Initialize 21B4 0 CODE 0 text27 dist/default/production\IDEMV2-1.X.production.o
+_INTERRUPT_Initialize 21CA 0 CODE 0 text27 dist/default/production\IDEMV2-1.X.production.o
 __Habs1 0 0 ABS 0 abs1 dist/default/production\IDEMV2-1.X.production.o
 __Hdata 0 0 ABS 0 data dist/default/production\IDEMV2-1.X.production.o
 __Hinit 50 0 CODE 0 init dist/default/production\IDEMV2-1.X.production.o
@@ -1035,7 +1038,7 @@ __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\IDEMV2-1.X.produc
 __size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hintret 0 0 ABS 0 intret dist/default/production\IDEMV2-1.X.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\IDEMV2-1.X.production.o
-__S0 21BA 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
+__S0 21D0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __S1 A4 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __S2 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __S4 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
@@ -1044,23 +1047,23 @@ nrf2401_direccion_TX_RX@cont_s C 0 COMRAM 1 cstackCOMRAM dist/default/production
 __size_of_TMR1_ISR 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _ADC_InterruptHandler 8C 0 BANK0 1 bssBANK0 dist/default/production\IDEMV2-1.X.production.o
 _EUSART1_DefaultErrorHandler 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-_nrF2401_init_RX 1D12 0 CODE 0 text16 dist/default/production\IDEMV2-1.X.production.o
+_nrF2401_init_RX 1D28 0 CODE 0 text16 dist/default/production\IDEMV2-1.X.production.o
 __end_of_get_corriente_AC 19BC 0 CODE 0 text2 dist/default/production\IDEMV2-1.X.production.o
-__end_of_nrf2401_comando 216A 0 CODE 0 text20 dist/default/production\IDEMV2-1.X.production.o
+__end_of_nrf2401_comando 2180 0 CODE 0 text20 dist/default/production\IDEMV2-1.X.production.o
 _conteo 76 0 BANK0 1 bssBANK0 dist/default/production\IDEMV2-1.X.production.o
-__end_of_spi_s_write 1DD6 0 CODE 0 text21 dist/default/production\IDEMV2-1.X.production.o
+__end_of_spi_s_write 1DEC 0 CODE 0 text21 dist/default/production\IDEMV2-1.X.production.o
 __size_of_CCP2_Initialize 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __size_of_get_corriente_AC 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\IDEMV2-1.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\IDEMV2-1.X.production.o
-__end_of_get_Status 21B4 0 CODE 0 text13 dist/default/production\IDEMV2-1.X.production.o
-_TMR1_CallBack 1DD6 0 CODE 0 text37 dist/default/production\IDEMV2-1.X.production.o
-_SYSTEM_Initialize 20A2 0 CODE 0 text22 dist/default/production\IDEMV2-1.X.production.o
+__end_of_get_Status 21CA 0 CODE 0 text13 dist/default/production\IDEMV2-1.X.production.o
+_TMR1_CallBack 1DEC 0 CODE 0 text37 dist/default/production\IDEMV2-1.X.production.o
+_SYSTEM_Initialize 20B8 0 CODE 0 text22 dist/default/production\IDEMV2-1.X.production.o
 ___xxtofl 19BC 0 CODE 0 text3 dist/default/production\IDEMV2-1.X.production.o
 __size_of_flush_TX_RX 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Lintentry 0 0 ABS 0 intentry dist/default/production\IDEMV2-1.X.production.o
 nrf2401_read@dato_ 8 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-_nrf2401_read 20C0 0 CODE 0 text14 dist/default/production\IDEMV2-1.X.production.o
+_nrf2401_read 20D6 0 CODE 0 text14 dist/default/production\IDEMV2-1.X.production.o
 __Hramtop 800 0 RAM 0 ramtop dist/default/production\IDEMV2-1.X.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\IDEMV2-1.X.production.o
 __end_of___xxtofl 1B70 0 CODE 0 text3 dist/default/production\IDEMV2-1.X.production.o
@@ -1101,74 +1104,74 @@ __Htext37 0 0 ABS 0 text37 dist/default/production\IDEMV2-1.X.production.o
 __Htext38 0 0 ABS 0 text38 dist/default/production\IDEMV2-1.X.production.o
 __Htext39 0 0 ABS 0 text39 dist/default/production\IDEMV2-1.X.production.o
 _INTERRUPT_InterruptManager 8 0 CODE 0 intcode dist/default/production\IDEMV2-1.X.production.o
-_ADC_Initialize 2140 0 CODE 0 text33 dist/default/production\IDEMV2-1.X.production.o
+_ADC_Initialize 2156 0 CODE 0 text33 dist/default/production\IDEMV2-1.X.production.o
 _PIE1bits F9D 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 ?_ADC_GetConversion 5 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___fladd@signs 11 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-_TMR1_ISR 1FAE 0 CODE 0 text35 dist/default/production\IDEMV2-1.X.production.o
-__ptext10 212A 0 CODE 0 text10 dist/default/production\IDEMV2-1.X.production.o
-__ptext11 20F8 0 CODE 0 text11 dist/default/production\IDEMV2-1.X.production.o
-__ptext12 2084 0 CODE 0 text12 dist/default/production\IDEMV2-1.X.production.o
-__ptext13 21AC 0 CODE 0 text13 dist/default/production\IDEMV2-1.X.production.o
-__ptext14 20C0 0 CODE 0 text14 dist/default/production\IDEMV2-1.X.production.o
-__ptext15 1EAA 0 CODE 0 text15 dist/default/production\IDEMV2-1.X.production.o
-__ptext16 1D12 0 CODE 0 text16 dist/default/production\IDEMV2-1.X.production.o
-__ptext17 1EF0 0 CODE 0 text17 dist/default/production\IDEMV2-1.X.production.o
-__ptext18 2112 0 CODE 0 text18 dist/default/production\IDEMV2-1.X.production.o
-__ptext19 20DC 0 CODE 0 text19 dist/default/production\IDEMV2-1.X.production.o
-__ptext20 2156 0 CODE 0 text20 dist/default/production\IDEMV2-1.X.production.o
-__ptext21 1D8E 0 CODE 0 text21 dist/default/production\IDEMV2-1.X.production.o
-__ptext22 20A2 0 CODE 0 text22 dist/default/production\IDEMV2-1.X.production.o
-__ptext23 2012 0 CODE 0 text23 dist/default/production\IDEMV2-1.X.production.o
-__ptext24 2184 0 CODE 0 text24 dist/default/production\IDEMV2-1.X.production.o
-__ptext25 1FE4 0 CODE 0 text25 dist/default/production\IDEMV2-1.X.production.o
-__ptext26 2064 0 CODE 0 text26 dist/default/production\IDEMV2-1.X.production.o
-__ptext27 21B4 0 CODE 0 text27 dist/default/production\IDEMV2-1.X.production.o
-__ptext28 1F36 0 CODE 0 text28 dist/default/production\IDEMV2-1.X.production.o
-__ptext29 218E 0 CODE 0 text29 dist/default/production\IDEMV2-1.X.production.o
-__ptext30 2198 0 CODE 0 text30 dist/default/production\IDEMV2-1.X.production.o
-__ptext31 21A2 0 CODE 0 text31 dist/default/production\IDEMV2-1.X.production.o
-__ptext32 216A 0 CODE 0 text32 dist/default/production\IDEMV2-1.X.production.o
-__ptext33 2140 0 CODE 0 text33 dist/default/production\IDEMV2-1.X.production.o
-__ptext35 1FAE 0 CODE 0 text35 dist/default/production\IDEMV2-1.X.production.o
-__ptext36 203C 0 CODE 0 text36 dist/default/production\IDEMV2-1.X.production.o
-__ptext37 1DD6 0 CODE 0 text37 dist/default/production\IDEMV2-1.X.production.o
-__ptext38 21B8 0 CODE 0 text38 dist/default/production\IDEMV2-1.X.production.o
+_TMR1_ISR 1FC4 0 CODE 0 text35 dist/default/production\IDEMV2-1.X.production.o
+__ptext10 2140 0 CODE 0 text10 dist/default/production\IDEMV2-1.X.production.o
+__ptext11 210E 0 CODE 0 text11 dist/default/production\IDEMV2-1.X.production.o
+__ptext12 209A 0 CODE 0 text12 dist/default/production\IDEMV2-1.X.production.o
+__ptext13 21C2 0 CODE 0 text13 dist/default/production\IDEMV2-1.X.production.o
+__ptext14 20D6 0 CODE 0 text14 dist/default/production\IDEMV2-1.X.production.o
+__ptext15 1EC0 0 CODE 0 text15 dist/default/production\IDEMV2-1.X.production.o
+__ptext16 1D28 0 CODE 0 text16 dist/default/production\IDEMV2-1.X.production.o
+__ptext17 1F06 0 CODE 0 text17 dist/default/production\IDEMV2-1.X.production.o
+__ptext18 2128 0 CODE 0 text18 dist/default/production\IDEMV2-1.X.production.o
+__ptext19 20F2 0 CODE 0 text19 dist/default/production\IDEMV2-1.X.production.o
+__ptext20 216C 0 CODE 0 text20 dist/default/production\IDEMV2-1.X.production.o
+__ptext21 1DA4 0 CODE 0 text21 dist/default/production\IDEMV2-1.X.production.o
+__ptext22 20B8 0 CODE 0 text22 dist/default/production\IDEMV2-1.X.production.o
+__ptext23 2028 0 CODE 0 text23 dist/default/production\IDEMV2-1.X.production.o
+__ptext24 219A 0 CODE 0 text24 dist/default/production\IDEMV2-1.X.production.o
+__ptext25 1FFA 0 CODE 0 text25 dist/default/production\IDEMV2-1.X.production.o
+__ptext26 207A 0 CODE 0 text26 dist/default/production\IDEMV2-1.X.production.o
+__ptext27 21CA 0 CODE 0 text27 dist/default/production\IDEMV2-1.X.production.o
+__ptext28 1F4C 0 CODE 0 text28 dist/default/production\IDEMV2-1.X.production.o
+__ptext29 21A4 0 CODE 0 text29 dist/default/production\IDEMV2-1.X.production.o
+__ptext30 21AE 0 CODE 0 text30 dist/default/production\IDEMV2-1.X.production.o
+__ptext31 21B8 0 CODE 0 text31 dist/default/production\IDEMV2-1.X.production.o
+__ptext32 2180 0 CODE 0 text32 dist/default/production\IDEMV2-1.X.production.o
+__ptext33 2156 0 CODE 0 text33 dist/default/production\IDEMV2-1.X.production.o
+__ptext35 1FC4 0 CODE 0 text35 dist/default/production\IDEMV2-1.X.production.o
+__ptext36 2052 0 CODE 0 text36 dist/default/production\IDEMV2-1.X.production.o
+__ptext37 1DEC 0 CODE 0 text37 dist/default/production\IDEMV2-1.X.production.o
+__ptext38 21CE 0 CODE 0 text38 dist/default/production\IDEMV2-1.X.production.o
 __ptext39 0 0 CODE 0 text39 dist/default/production\IDEMV2-1.X.production.o
 __size_of_nrf2401_recibe 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-__end_of_PIN_MANAGER_Initialize 2012 0 CODE 0 text25 dist/default/production\IDEMV2-1.X.production.o
+__end_of_PIN_MANAGER_Initialize 2028 0 CODE 0 text25 dist/default/production\IDEMV2-1.X.production.o
 ___fladd 810 0 CODE 0 text5 dist/default/production\IDEMV2-1.X.production.o
 ___fldiv 10FA 0 CODE 0 text8 dist/default/production\IDEMV2-1.X.production.o
 ___flmul CD0 0 CODE 0 text6 dist/default/production\IDEMV2-1.X.production.o
-___flsub 1E64 0 CODE 0 text4 dist/default/production\IDEMV2-1.X.production.o
+___flsub 1E7A 0 CODE 0 text4 dist/default/production\IDEMV2-1.X.production.o
 _EUSART1_ErrorHandler 8E 0 BANK0 1 bssBANK0 dist/default/production\IDEMV2-1.X.production.o
 _offset 94 0 BANK0 1 dataBANK0 dist/default/production\IDEMV2-1.X.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\IDEMV2-1.X.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\IDEMV2-1.X.production.o
-_nrf2401_comando 2156 0 CODE 0 text20 dist/default/production\IDEMV2-1.X.production.o
+_nrf2401_comando 216C 0 CODE 0 text20 dist/default/production\IDEMV2-1.X.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\IDEMV2-1.X.production.o
 __Lconfig 0 0 CONFIG 4 config dist/default/production\IDEMV2-1.X.production.o
-__end_of_TMR1_ISR 1FE4 0 CODE 0 text35 dist/default/production\IDEMV2-1.X.production.o
+__end_of_TMR1_ISR 1FFA 0 CODE 0 text35 dist/default/production\IDEMV2-1.X.production.o
 _LATBbits F8A 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _LATCbits F8B 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-_EUSART1_SetErrorHandler 21A2 0 CODE 0 text31 dist/default/production\IDEMV2-1.X.production.o
+_EUSART1_SetErrorHandler 21B8 0 CODE 0 text31 dist/default/production\IDEMV2-1.X.production.o
 ___fldiv@grs 30 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___fldiv@rem 29 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 _currentSeg 72 0 BANK0 1 bssBANK0 dist/default/production\IDEMV2-1.X.production.o
 _RCSTA1bits FAB 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-__end_of_EUSART1_SetErrorHandler 21AC 0 CODE 0 text31 dist/default/production\IDEMV2-1.X.production.o
+__end_of_EUSART1_SetErrorHandler 21C2 0 CODE 0 text31 dist/default/production\IDEMV2-1.X.production.o
 __size_of_nrf2401_read 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __size_of_nrf2401_write 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\IDEMV2-1.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\IDEMV2-1.X.production.o
-isa$std 1 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAs74g.o
-_nrf2401_direccion_TX_RX 1EF0 0 CODE 0 text17 dist/default/production\IDEMV2-1.X.production.o
+isa$std 1 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
+_nrf2401_direccion_TX_RX 1F06 0 CODE 0 text17 dist/default/production\IDEMV2-1.X.production.o
 ___fldiv@new_exp 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-__end_of_nrf2401_direccion_TX_RX 1F36 0 CODE 0 text17 dist/default/production\IDEMV2-1.X.production.o
-__end_of_EUSART1_SetFramingErrorHandler 21A2 0 CODE 0 text30 dist/default/production\IDEMV2-1.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAs74g.o
-stacklo A4 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAs74g.o
-__end_of_EUSART1_SetOverrunErrorHandler 2198 0 CODE 0 text29 dist/default/production\IDEMV2-1.X.production.o
+__end_of_nrf2401_direccion_TX_RX 1F4C 0 CODE 0 text17 dist/default/production\IDEMV2-1.X.production.o
+__end_of_EUSART1_SetFramingErrorHandler 21B8 0 CODE 0 text30 dist/default/production\IDEMV2-1.X.production.o
+stackhi 7FF 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
+stacklo A4 0 ABS 0 - C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
+__end_of_EUSART1_SetOverrunErrorHandler 21AE 0 CODE 0 text29 dist/default/production\IDEMV2-1.X.production.o
 _voltaje 86 0 BANK0 1 bssBANK0 dist/default/production\IDEMV2-1.X.production.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\IDEMV2-1.X.production.o
 _OSCCON2 FD2 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
@@ -1185,18 +1188,18 @@ __Lspace_1 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Lspace_2 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Lspace_4 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __pbssCOMRAM 47 0 COMRAM 1 bssCOMRAM dist/default/production\IDEMV2-1.X.production.o
-__end_of_ADC_Initialize 2156 0 CODE 0 text33 dist/default/production\IDEMV2-1.X.production.o
+__end_of_ADC_Initialize 216C 0 CODE 0 text33 dist/default/production\IDEMV2-1.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\IDEMV2-1.X.production.o
 ___flge@ff1 5 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___flge@ff2 9 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 _PIR1bits F9E 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-__end_of_nrf2401_read 20DC 0 CODE 0 text14 dist/default/production\IDEMV2-1.X.production.o
+__end_of_nrf2401_read 20F2 0 CODE 0 text14 dist/default/production\IDEMV2-1.X.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-end_of_initialization 1E56 0 CODE 0 cinit dist/default/production\IDEMV2-1.X.production.o
+end_of_initialization 1E6C 0 CODE 0 cinit dist/default/production\IDEMV2-1.X.production.o
 __size_of_trip_protec_current 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-_spi_s_init 212A 0 CODE 0 text10 dist/default/production\IDEMV2-1.X.production.o
-_spi_s_read 1EAA 0 CODE 0 text15 dist/default/production\IDEMV2-1.X.production.o
-__end_of_nrf2401_write 20F8 0 CODE 0 text19 dist/default/production\IDEMV2-1.X.production.o
+_spi_s_init 2140 0 CODE 0 text10 dist/default/production\IDEMV2-1.X.production.o
+_spi_s_read 1EC0 0 CODE 0 text15 dist/default/production\IDEMV2-1.X.production.o
+__end_of_nrf2401_write 210E 0 CODE 0 text19 dist/default/production\IDEMV2-1.X.production.o
 __size_of_TMR1_CallBack 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\IDEMV2-1.X.production.o
 __Hintentry 0 0 ABS 0 intentry dist/default/production\IDEMV2-1.X.production.o
@@ -1213,17 +1216,17 @@ __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\IDEMV2-1.X.production.o
 _relacion 98 0 BANK0 1 dataBANK0 dist/default/production\IDEMV2-1.X.production.o
 __Lramtop 800 0 RAM 0 ramtop dist/default/production\IDEMV2-1.X.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\IDEMV2-1.X.production.o
-__pcinit 1E1E 0 CODE 0 cinit dist/default/production\IDEMV2-1.X.production.o
+__pcinit 1E34 0 CODE 0 cinit dist/default/production\IDEMV2-1.X.production.o
 __ptext0 1C74 0 CODE 0 text0 dist/default/production\IDEMV2-1.X.production.o
 __ptext1 1494 0 CODE 0 text1 dist/default/production\IDEMV2-1.X.production.o
 __ptext2 17E2 0 CODE 0 text2 dist/default/production\IDEMV2-1.X.production.o
 __ptext3 19BC 0 CODE 0 text3 dist/default/production\IDEMV2-1.X.production.o
-__ptext4 1E64 0 CODE 0 text4 dist/default/production\IDEMV2-1.X.production.o
+__ptext4 1E7A 0 CODE 0 text4 dist/default/production\IDEMV2-1.X.production.o
 __ptext5 810 0 CODE 0 text5 dist/default/production\IDEMV2-1.X.production.o
 __ptext6 CD0 0 CODE 0 text6 dist/default/production\IDEMV2-1.X.production.o
 __ptext7 1B70 0 CODE 0 text7 dist/default/production\IDEMV2-1.X.production.o
 __ptext8 10FA 0 CODE 0 text8 dist/default/production\IDEMV2-1.X.production.o
-__ptext9 1F74 0 CODE 0 text9 dist/default/production\IDEMV2-1.X.production.o
+__ptext9 1F8A 0 CODE 0 text9 dist/default/production\IDEMV2-1.X.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\IDEMV2-1.X.production.o
 __end_of_intervalo 80A 0 SMALLCONST 0 smallconst dist/default/production\IDEMV2-1.X.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\IDEMV2-1.X.production.o
@@ -1256,17 +1259,17 @@ __Ltext37 0 0 ABS 0 text37 dist/default/production\IDEMV2-1.X.production.o
 __Ltext38 0 0 ABS 0 text38 dist/default/production\IDEMV2-1.X.production.o
 __Ltext39 0 0 ABS 0 text39 dist/default/production\IDEMV2-1.X.production.o
 __size_of_spi_s_write 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\echev\AppData\Local\Temp\xcAs74g.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\echev\AppData\Local\Temp\xcAs5hs.o
 __Lpowerup 4C 0 CODE 0 powerup dist/default/production\IDEMV2-1.X.production.o
 ?___xxtofl 5 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\IDEMV2-1.X.production.o
 TMR1_WriteTimer@timerVal 1 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___fladd@aexp 12 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 ___fladd@bexp 13 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-__end_of_TMR1_Initialize 203C 0 CODE 0 text23 dist/default/production\IDEMV2-1.X.production.o
-__end_of_TMR1_WriteTimer 2064 0 CODE 0 text36 dist/default/production\IDEMV2-1.X.production.o
+__end_of_TMR1_Initialize 2052 0 CODE 0 text23 dist/default/production\IDEMV2-1.X.production.o
+__end_of_TMR1_WriteTimer 207A 0 CODE 0 text36 dist/default/production\IDEMV2-1.X.production.o
 __psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\IDEMV2-1.X.production.o
-__end_of_TMR1_CallBack 1E1E 0 CODE 0 text37 dist/default/production\IDEMV2-1.X.production.o
+__end_of_TMR1_CallBack 1E34 0 CODE 0 text37 dist/default/production\IDEMV2-1.X.production.o
 __size_of_nrf2401_comando 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\IDEMV2-1.X.production.o
 ?_get_corriente_AC 36 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
@@ -1274,23 +1277,23 @@ __size_of_ADC_GetConversion 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.produ
 _trip_protec_current 1494 0 CODE 0 text1 dist/default/production\IDEMV2-1.X.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\IDEMV2-1.X.production.o
-__end_of__initialization 1E56 0 CODE 0 cinit dist/default/production\IDEMV2-1.X.production.o
+__end_of__initialization 1E6C 0 CODE 0 cinit dist/default/production\IDEMV2-1.X.production.o
 __size_of_get_Status 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\IDEMV2-1.X.production.o
 spi_s_read@dato_ 5 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-__pidataBANK0 2178 0 CODE 0 idataBANK0 dist/default/production\IDEMV2-1.X.production.o
+__pidataBANK0 218E 0 CODE 0 idataBANK0 dist/default/production\IDEMV2-1.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\IDEMV2-1.X.production.o
 _SPBRGH1 FB0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
-__end_of_spi_s_init 2140 0 CODE 0 text10 dist/default/production\IDEMV2-1.X.production.o
-__end_of_spi_s_read 1EF0 0 CODE 0 text15 dist/default/production\IDEMV2-1.X.production.o
+__end_of_spi_s_init 2156 0 CODE 0 text10 dist/default/production\IDEMV2-1.X.production.o
+__end_of_spi_s_read 1F06 0 CODE 0 text15 dist/default/production\IDEMV2-1.X.production.o
 _timer1ReloadVal 4F 0 COMRAM 1 bssCOMRAM dist/default/production\IDEMV2-1.X.production.o
-_TMR1_DefaultInterruptHandler 21B8 0 CODE 0 text38 dist/default/production\IDEMV2-1.X.production.o
+_TMR1_DefaultInterruptHandler 21CE 0 CODE 0 text38 dist/default/production\IDEMV2-1.X.production.o
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-_flush_TX_RX 2112 0 CODE 0 text18 dist/default/production\IDEMV2-1.X.production.o
+_flush_TX_RX 2128 0 CODE 0 text18 dist/default/production\IDEMV2-1.X.production.o
 nrf2401_direccion_TX_RX@registro 9 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
-_EUSART1_SetFramingErrorHandler 2198 0 CODE 0 text30 dist/default/production\IDEMV2-1.X.production.o
-_EUSART1_SetOverrunErrorHandler 218E 0 CODE 0 text29 dist/default/production\IDEMV2-1.X.production.o
-__end_of_main 1D12 0 CODE 0 text0 dist/default/production\IDEMV2-1.X.production.o
+_EUSART1_SetFramingErrorHandler 21AE 0 CODE 0 text30 dist/default/production\IDEMV2-1.X.production.o
+_EUSART1_SetOverrunErrorHandler 21A4 0 CODE 0 text29 dist/default/production\IDEMV2-1.X.production.o
+__end_of_main 1D28 0 CODE 0 text0 dist/default/production\IDEMV2-1.X.production.o
 _sensibilidad 9C 0 BANK0 1 dataBANK0 dist/default/production\IDEMV2-1.X.production.o
 __pintcode 8 0 CODE 0 intcode dist/default/production\IDEMV2-1.X.production.o
 _I_max 82 0 BANK0 1 bssBANK0 dist/default/production\IDEMV2-1.X.production.o
@@ -1311,28 +1314,28 @@ __LRAM 1 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __Lbss 0 0 RAM 1 bss dist/default/production\IDEMV2-1.X.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\IDEMV2-1.X.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\IDEMV2-1.X.production.o
-_TMR1_Initialize 2012 0 CODE 0 text23 dist/default/production\IDEMV2-1.X.production.o
-_TMR1_WriteTimer 203C 0 CODE 0 text36 dist/default/production\IDEMV2-1.X.production.o
+_TMR1_Initialize 2028 0 CODE 0 text23 dist/default/production\IDEMV2-1.X.production.o
+_TMR1_WriteTimer 2052 0 CODE 0 text36 dist/default/production\IDEMV2-1.X.production.o
 _valor 8A 0 BANK0 1 bssBANK0 dist/default/production\IDEMV2-1.X.production.o
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _CCP2CON F97 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\IDEMV2-1.X.production.o
-__end_of_EUSART1_Initialize 1F74 0 CODE 0 text28 dist/default/production\IDEMV2-1.X.production.o
-__end_of_OSCILLATOR_Initialize 2084 0 CODE 0 text26 dist/default/production\IDEMV2-1.X.production.o
-__initialization 1E1E 0 CODE 0 cinit dist/default/production\IDEMV2-1.X.production.o
+__end_of_EUSART1_Initialize 1F8A 0 CODE 0 text28 dist/default/production\IDEMV2-1.X.production.o
+__end_of_OSCILLATOR_Initialize 209A 0 CODE 0 text26 dist/default/production\IDEMV2-1.X.production.o
+__initialization 1E34 0 CODE 0 cinit dist/default/production\IDEMV2-1.X.production.o
 ___xxtofl@sign D 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 __pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\IDEMV2-1.X.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\IDEMV2-1.X.production.o
 nrf2401_write@reg 8 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 __Hsmallconst 810 0 SMALLCONST 0 smallconst dist/default/production\IDEMV2-1.X.production.o
-_TMR1_SetInterruptHandler 2184 0 CODE 0 text24 dist/default/production\IDEMV2-1.X.production.o
+_TMR1_SetInterruptHandler 219A 0 CODE 0 text24 dist/default/production\IDEMV2-1.X.production.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\IDEMV2-1.X.production.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\IDEMV2-1.X.production.o
 EUSART1_SetOverrunErrorHandler@interruptHandler 5 0 COMRAM 1 cstackCOMRAM dist/default/production\IDEMV2-1.X.production.o
 __Hintcode 4C 0 CODE 0 intcode dist/default/production\IDEMV2-1.X.production.o
 __size_of_INTERRUPT_Initialize 0 0 ABS 0 - dist/default/production\IDEMV2-1.X.production.o
 _TMR1_InterruptHandler 4D 0 COMRAM 1 bssCOMRAM dist/default/production\IDEMV2-1.X.production.o
-_OSCILLATOR_Initialize 2064 0 CODE 0 text26 dist/default/production\IDEMV2-1.X.production.o
+_OSCILLATOR_Initialize 207A 0 CODE 0 text26 dist/default/production\IDEMV2-1.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1357,7 +1360,7 @@ _OSCILLATOR_Initialize 2064 0 CODE 0 text26 dist/default/production\IDEMV2-1.X.p
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text5 0 810 810 19AA 1
+text5 0 810 810 19C0 1
 cstackCOMRAM 1 1 1 5B 1
 reset_vec 0 0 0 4 1
 bssBANK0 1 60 60 44 1

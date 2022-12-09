@@ -1245,8 +1245,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Librerias/nRF24L01_2.h: 189:     nrf2401_write(0x03, 0x03);
 [e ( _nrf2401_write (2 , -> -> 3 `i `uc -> -> 3 `i `uc ]
 "190
-[; ;./Librerias/nRF24L01_2.h: 190:     nrf2401_write(0x06, 0x08 + 0x06);
-[e ( _nrf2401_write (2 , -> -> 6 `i `uc -> + -> 8 `i -> 6 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 190:     nrf2401_write(0x06, 0x10 + 0x06);
+[e ( _nrf2401_write (2 , -> -> 6 `i `uc -> + -> 16 `i -> 6 `i `uc ]
 "191
 [; ;./Librerias/nRF24L01_2.h: 191:     nrf2401_write(0x05, canal);
 [e ( _nrf2401_write (2 , -> -> 5 `i `uc _canal ]
@@ -1298,8 +1298,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Librerias/nRF24L01_2.h: 206:     nrf2401_write(0x03, 0x03);
 [e ( _nrf2401_write (2 , -> -> 3 `i `uc -> -> 3 `i `uc ]
 "207
-[; ;./Librerias/nRF24L01_2.h: 207:     nrf2401_write(0x06, 0x08 + 0x06);
-[e ( _nrf2401_write (2 , -> -> 6 `i `uc -> + -> 8 `i -> 6 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 207:     nrf2401_write(0x06, 0x10 + 0x06);
+[e ( _nrf2401_write (2 , -> -> 6 `i `uc -> + -> 16 `i -> 6 `i `uc ]
 "208
 [; ;./Librerias/nRF24L01_2.h: 208:     nrf2401_write(0x05, canal);
 [e ( _nrf2401_write (2 , -> -> 5 `i `uc _canal ]
@@ -1904,24 +1904,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 306:             dato_serial = nrf2401_recibe();
 [e = _dato_serial -> ( _nrf2401_recibe ..  `uc ]
 "307
-[; ;main.c: 307:             if (dato_serial == 1) LATA5 = 1;
+[; ;main.c: 307:             if (dato_serial == 1)
 [e $ ! == -> _dato_serial `i -> 1 `i 689  ]
-[e = _LATA5 -> -> 1 `i `b ]
-[e :U 689 ]
 "308
-[; ;main.c: 308:         }
+[; ;main.c: 308:             {
+{
+"309
+[; ;main.c: 309:                 LATA5 = 1;
+[e = _LATA5 -> -> 1 `i `b ]
+"310
+[; ;main.c: 310:                 _delay((unsigned long)((3000)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"311
+[; ;main.c: 311:             }
+}
+[e :U 689 ]
+"312
+[; ;main.c: 312:         }
 }
 [e :U 688 ]
-"310
-[; ;main.c: 310:         _delay((unsigned long)((100)*(48000000/4000.0)));
+"314
+[; ;main.c: 314:         _delay((unsigned long)((100)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"313
-[; ;main.c: 313:     }
+"317
+[; ;main.c: 317:     }
 }
 [e :U 685 ]
 [e $U 686  ]
 [e :U 687 ]
-"314
-[; ;main.c: 314: }
+"318
+[; ;main.c: 318: }
 [e :UE 684 ]
 }

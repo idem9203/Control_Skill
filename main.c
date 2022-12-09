@@ -304,7 +304,11 @@ void main(void)
         if(nrf2401_haydatos() == 1)                                             //Recibe datos del modulo NRF2401
         {
             dato_serial = nrf2401_recibe();
-            if (dato_serial == 1) RELE1 = 1;
+            if (dato_serial == 1) 
+            {
+                RELE1 = 1;
+                __delay_ms(3000);
+            }
         }
    
         __delay_ms(100);

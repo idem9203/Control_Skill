@@ -8298,7 +8298,7 @@ void nrF2401_init_RX(unsigned char canal)
     nrf2401_write(0x00, 0x04 + 0x08);
     nrf2401_write(0x04, 0x00);
     nrf2401_write(0x03, 0x03);
-    nrf2401_write(0x06, 0x08 + 0x06);
+    nrf2401_write(0x06, 0x10 + 0x06);
     nrf2401_write(0x05, canal);
     nrf2401_write(0x01, 0x00);
     nrf2401_write(0x11, 1);
@@ -8315,7 +8315,7 @@ void nrF2401_init_TX(unsigned char canal)
     nrf2401_write(0x04, 0x00);
 
     nrf2401_write(0x03, 0x03);
-    nrf2401_write(0x06, 0x08 + 0x06);
+    nrf2401_write(0x06, 0x10 + 0x06);
     nrf2401_write(0x05, canal);
     nrf2401_write(0x01, 0);
     nrf2401_write(0x00, 0x02 +0x04 + 0x08);
@@ -8526,7 +8526,11 @@ void main(void)
         if(nrf2401_haydatos() == 1)
         {
             dato_serial = nrf2401_recibe();
-            if (dato_serial == 1) LATA5 = 1;
+            if (dato_serial == 1)
+            {
+                LATA5 = 1;
+                _delay((unsigned long)((3000)*(48000000/4000.0)));
+            }
         }
 
         _delay((unsigned long)((100)*(48000000/4000.0)));
