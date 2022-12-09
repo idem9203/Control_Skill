@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Thu Dec 08 14:29:51 2022
+                                                                                               Thu Dec 08 19:05:56 2022
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1 
      1                           	processor	18F25K50
@@ -4088,8 +4088,8 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   4061  001D2E  0E03               	movlw	3
   4062  001D30  EC6E  F010         	call	_nrf2401_write
   4063                           
-  4064                           ;./Librerias/nRF24L01_2.h: 190:     nrf2401_write(0x06, 0x10 + 0x06);
-  4065  001D34  0E16               	movlw	22
+  4064                           ;./Librerias/nRF24L01_2.h: 190:     nrf2401_write(0x06, 0x08 + 0x06);
+  4065  001D34  0E0E               	movlw	14
   4066  001D36  6E07               	movwf	nrf2401_write@valor^0,c
   4067  001D38  0E06               	movlw	6
   4068  001D3A  EC6E  F010         	call	_nrf2401_write
@@ -6227,7 +6227,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Thu Dec 08 14:29:51 2022
+Symbol Table                                                                                   Thu Dec 08 19:05:56 2022
 
                                              _I 0047                                    ___fldiv@aexp 0035  
                                   ___fldiv@bexp 0034                                               _i 0057  
