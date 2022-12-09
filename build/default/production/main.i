@@ -8417,7 +8417,6 @@ double get_corriente_AC(int n_muestras)
 # 196 "main.c"
 void trip_protec_current()
 {
-    I = ((get_corriente_AC(2000) - offset) / relacion);
     if (I <= 9)
     {
         LATA5 = 0;
@@ -8518,8 +8517,9 @@ void main(void)
 
 
 
-
-
+        I = ((get_corriente_AC(2000) - offset) / relacion);
+        sprintf(valor_string, "%.3f Amp.\n\r", I);
+        if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);
 
         trip_protec_current();
 

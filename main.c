@@ -195,7 +195,6 @@ double get_corriente_AC(int n_muestras)
 // DISPARO POR SOBRE CORRIENTE
 void trip_protec_current()
 {
-    I = ((get_corriente_AC(2000) - offset) / relacion);
     if (I <= 9)
     {
         RELE1 = 0;
@@ -296,8 +295,9 @@ void main(void)
         // Add your application code        
         
 //        I_rms = I * 0.707 / 0.150;
-//        snprintf(valor_string, 14, "%.3f Amp.\n\r", (get_corriente_AC(2000) - offset) / relacion);
-//        if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);
+        I = ((get_corriente_AC(2000) - offset) / relacion);
+        sprintf(valor_string, "%.3f Amp.\n\r", I);
+        if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);
         
         trip_protec_current();
         

@@ -127,6 +127,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "328
 [; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 328: extern volatile unsigned char ANSELC __attribute__((address(0xF5D)));
 [v _ANSELC `Vuc ~T0 @X0 0 e@3933 ]
+"113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"159 ./mcc_generated_files/eusart1.h
+[; ;./mcc_generated_files/eusart1.h: 159: _Bool EUSART1_is_tx_ready(void);
+[v _EUSART1_is_tx_ready `(a ~T0 @X0 0 ef ]
+"344
+[; ;./mcc_generated_files/eusart1.h: 344: void EUSART1_Write_string(const char* data);
+[v _EUSART1_Write_string `(v ~T0 @X0 0 ef1`*Cuc ]
 "55 C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h
 [; ;C:/Users/echev/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f25k50.h: 55: __asm("SRCON1 equ 0F57h");
 [; <" SRCON1 equ 0F57h ;# ">
@@ -1654,249 +1662,257 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _trip_protec_current ]
 [f ]
 "198
-[; ;main.c: 198:     I = ((get_corriente_AC(2000) - offset) / relacion);
-[e = _I / - ( _get_corriente_AC (1 -> 2000 `i _offset _relacion ]
-"199
-[; ;main.c: 199:     if (I <= 9)
+[; ;main.c: 198:     if (I <= 9)
 [e $ ! <= _I -> -> 9 `i `d 662  ]
+"199
+[; ;main.c: 199:     {
+{
 "200
-[; ;main.c: 200:     {
-{
-"201
-[; ;main.c: 201:         LATA5 = 0;
+[; ;main.c: 200:         LATA5 = 0;
 [e = _LATA5 -> -> 0 `i `b ]
-"202
-[; ;main.c: 202:         currentSeg = conteo;
+"201
+[; ;main.c: 201:         currentSeg = conteo;
 [e = _currentSeg _conteo ]
-"203
-[; ;main.c: 203:         if (currentSeg - previousMillis >= intervalo)
+"202
+[; ;main.c: 202:         if (currentSeg - previousMillis >= intervalo)
 [e $ ! >= - _currentSeg _previousMillis -> _intervalo `ul 663  ]
-"204
-[; ;main.c: 204:         {
+"203
+[; ;main.c: 203:         {
 {
-"205
-[; ;main.c: 205:             previousMillis = currentSeg;
+"204
+[; ;main.c: 204:             previousMillis = currentSeg;
 [e = _previousMillis _currentSeg ]
-"206
-[; ;main.c: 206:             LATA5 = 1;
+"205
+[; ;main.c: 205:             LATA5 = 1;
 [e = _LATA5 -> -> 1 `i `b ]
-"207
-[; ;main.c: 207:             _delay((unsigned long)((3000)*(48000000/4000.0)));
+"206
+[; ;main.c: 206:             _delay((unsigned long)((3000)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"208
-[; ;main.c: 208:         }
+"207
+[; ;main.c: 207:         }
 }
 [e :U 663 ]
-"209
-[; ;main.c: 209:     }
+"208
+[; ;main.c: 208:     }
 }
 [e :U 662 ]
-"210
-[; ;main.c: 210:     if (I >= 16 && I < 17)
+"209
+[; ;main.c: 209:     if (I >= 16 && I < 17)
 [e $ ! && >= _I -> -> 16 `i `d < _I -> -> 17 `i `d 664  ]
+"210
+[; ;main.c: 210:     {
+{
 "211
-[; ;main.c: 211:     {
-{
-"212
-[; ;main.c: 212:         i = i + 1;
+[; ;main.c: 211:         i = i + 1;
 [e = _i + _i -> 1 `i ]
-"213
-[; ;main.c: 213:         if (i > 600)
+"212
+[; ;main.c: 212:         if (i > 600)
 [e $ ! > _i -> 600 `i 665  ]
-"214
-[; ;main.c: 214:         {
+"213
+[; ;main.c: 213:         {
 {
-"215
-[; ;main.c: 215:             i = 0;
+"214
+[; ;main.c: 214:             i = 0;
 [e = _i -> 0 `i ]
-"216
-[; ;main.c: 216:             LATA5 = 0;
+"215
+[; ;main.c: 215:             LATA5 = 0;
 [e = _LATA5 -> -> 0 `i `b ]
-"217
-[; ;main.c: 217:             while(1){}
+"216
+[; ;main.c: 216:             while(1){}
 [e :U 667 ]
 {
 }
 [e :U 666 ]
 [e $U 667  ]
 [e :U 668 ]
-"218
-[; ;main.c: 218:         }
+"217
+[; ;main.c: 217:         }
 }
 [e :U 665 ]
-"219
-[; ;main.c: 219:     }
+"218
+[; ;main.c: 218:     }
 }
 [e :U 664 ]
-"220
-[; ;main.c: 220:     if (I >= 17 && I < 18)
+"219
+[; ;main.c: 219:     if (I >= 17 && I < 18)
 [e $ ! && >= _I -> -> 17 `i `d < _I -> -> 18 `i `d 669  ]
+"220
+[; ;main.c: 220:     {
+{
 "221
-[; ;main.c: 221:     {
-{
-"222
-[; ;main.c: 222:         j = j + 1;
+[; ;main.c: 221:         j = j + 1;
 [e = _j + _j -> 1 `i ]
-"223
-[; ;main.c: 223:         if ( j > 300)
+"222
+[; ;main.c: 222:         if ( j > 300)
 [e $ ! > _j -> 300 `i 670  ]
-"224
-[; ;main.c: 224:         {
+"223
+[; ;main.c: 223:         {
 {
-"225
-[; ;main.c: 225:             j = 0;
+"224
+[; ;main.c: 224:             j = 0;
 [e = _j -> 0 `i ]
-"226
-[; ;main.c: 226:             LATA5 = 0;
+"225
+[; ;main.c: 225:             LATA5 = 0;
 [e = _LATA5 -> -> 0 `i `b ]
-"227
-[; ;main.c: 227:             while(1){}
+"226
+[; ;main.c: 226:             while(1){}
 [e :U 672 ]
 {
 }
 [e :U 671 ]
 [e $U 672  ]
 [e :U 673 ]
-"228
-[; ;main.c: 228:         }
+"227
+[; ;main.c: 227:         }
 }
 [e :U 670 ]
-"229
-[; ;main.c: 229:     }
+"228
+[; ;main.c: 228:     }
 }
 [e :U 669 ]
-"230
-[; ;main.c: 230:     if (I >= 18 && I < 19)
+"229
+[; ;main.c: 229:     if (I >= 18 && I < 19)
 [e $ ! && >= _I -> -> 18 `i `d < _I -> -> 19 `i `d 674  ]
+"230
+[; ;main.c: 230:     {
+{
 "231
-[; ;main.c: 231:     {
-{
-"232
-[; ;main.c: 232:         k = k + 1;
+[; ;main.c: 231:         k = k + 1;
 [e = _k + _k -> 1 `i ]
-"233
-[; ;main.c: 233:         if (k > 120)
+"232
+[; ;main.c: 232:         if (k > 120)
 [e $ ! > _k -> 120 `i 675  ]
-"234
-[; ;main.c: 234:         {
+"233
+[; ;main.c: 233:         {
 {
-"235
-[; ;main.c: 235:             k = 0;
+"234
+[; ;main.c: 234:             k = 0;
 [e = _k -> 0 `i ]
-"236
-[; ;main.c: 236:             LATA5 = 0;
+"235
+[; ;main.c: 235:             LATA5 = 0;
 [e = _LATA5 -> -> 0 `i `b ]
-"237
-[; ;main.c: 237:             while(1){}
+"236
+[; ;main.c: 236:             while(1){}
 [e :U 677 ]
 {
 }
 [e :U 676 ]
 [e $U 677  ]
 [e :U 678 ]
-"238
-[; ;main.c: 238:         }
+"237
+[; ;main.c: 237:         }
 }
 [e :U 675 ]
-"239
-[; ;main.c: 239:     }
+"238
+[; ;main.c: 238:     }
 }
 [e :U 674 ]
-"240
-[; ;main.c: 240:     if (I >= 19)
+"239
+[; ;main.c: 239:     if (I >= 19)
 [e $ ! >= _I -> -> 19 `i `d 679  ]
+"240
+[; ;main.c: 240:     {
+{
 "241
-[; ;main.c: 241:     {
-{
-"242
-[; ;main.c: 242:         l = l + 1;
+[; ;main.c: 241:         l = l + 1;
 [e = _l + _l -> 1 `i ]
-"243
-[; ;main.c: 243:         if (l > 15)
+"242
+[; ;main.c: 242:         if (l > 15)
 [e $ ! > _l -> 15 `i 680  ]
-"244
-[; ;main.c: 244:         {
+"243
+[; ;main.c: 243:         {
 {
-"245
-[; ;main.c: 245:             l = 0;
+"244
+[; ;main.c: 244:             l = 0;
 [e = _l -> 0 `i ]
-"246
-[; ;main.c: 246:             LATA5 = 0;
+"245
+[; ;main.c: 245:             LATA5 = 0;
 [e = _LATA5 -> -> 0 `i `b ]
-"247
-[; ;main.c: 247:             while(1){}
+"246
+[; ;main.c: 246:             while(1){}
 [e :U 682 ]
 {
 }
 [e :U 681 ]
 [e $U 682  ]
 [e :U 683 ]
-"248
-[; ;main.c: 248:         }
+"247
+[; ;main.c: 247:         }
 }
 [e :U 680 ]
-"249
-[; ;main.c: 249:     }
+"248
+[; ;main.c: 248:     }
 }
 [e :U 679 ]
-"250
-[; ;main.c: 250: }
+"249
+[; ;main.c: 249: }
 [e :UE 661 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"252
-[; ;main.c: 252: void main(void)
+"251
+[; ;main.c: 251: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"253
-[; ;main.c: 253: {
+"252
+[; ;main.c: 252: {
 {
 [e :U _main ]
 [f ]
-"255
-[; ;main.c: 255:     SYSTEM_Initialize();
+"254
+[; ;main.c: 254:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"263
-[; ;main.c: 263:     (INTCONbits.GIE = 1);
+"262
+[; ;main.c: 262:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"269
-[; ;main.c: 269:     (INTCONbits.PEIE = 1);
+"268
+[; ;main.c: 268:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"274
-[; ;main.c: 274:     ANSELA = 0b00000111;
+"273
+[; ;main.c: 273:     ANSELA = 0b00000111;
 [e = _ANSELA -> -> 7 `i `uc ]
-"275
-[; ;main.c: 275:     ANSELB = 0b00000000;
+"274
+[; ;main.c: 274:     ANSELB = 0b00000000;
 [e = _ANSELB -> -> 0 `i `uc ]
-"276
-[; ;main.c: 276:     ANSELC = 0x00;
+"275
+[; ;main.c: 275:     ANSELC = 0x00;
 [e = _ANSELC -> -> 0 `i `uc ]
-"284
-[; ;main.c: 284:     spi_s_init();
+"283
+[; ;main.c: 283:     spi_s_init();
 [e ( _spi_s_init ..  ]
-"286
-[; ;main.c: 286:     nrF2401_init_RX(17);
+"285
+[; ;main.c: 285:     nrF2401_init_RX(17);
 [e ( _nrF2401_init_RX (1 -> -> 17 `i `uc ]
-"290
-[; ;main.c: 290:     _delay((unsigned long)((2000)*(48000000/4000.0)));
+"289
+[; ;main.c: 289:     _delay((unsigned long)((2000)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"291
-[; ;main.c: 291:     LATA5 = 1;
+"290
+[; ;main.c: 290:     LATA5 = 1;
 [e = _LATA5 -> -> 1 `i `b ]
-"292
-[; ;main.c: 292:     _delay((unsigned long)((3000)*(48000000/4000.0)));
+"291
+[; ;main.c: 291:     _delay((unsigned long)((3000)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"294
-[; ;main.c: 294:     while (1)
+"293
+[; ;main.c: 293:     while (1)
 [e :U 686 ]
-"295
-[; ;main.c: 295:     {
+"294
+[; ;main.c: 294:     {
 {
+"298
+[; ;main.c: 298:         I = ((get_corriente_AC(2000) - offset) / relacion);
+[e = _I / - ( _get_corriente_AC (1 -> 2000 `i _offset _relacion ]
+"299
+[; ;main.c: 299:         sprintf(valor_string, "%.3f Amp.\n\r", I);
+[e ( _sprintf (1 , (. , &U _valor_string :s 1C _I ]
+"300
+[; ;main.c: 300:         if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);
+[e $ ! != -> ( _EUSART1_is_tx_ready ..  `i -> 0 `i 688  ]
+[e ( _EUSART1_Write_string (1 -> &U _valor_string `*Cuc ]
+[e :U 688 ]
 "302
 [; ;main.c: 302:         trip_protec_current();
 [e ( _trip_protec_current ..  ]
 "304
 [; ;main.c: 304:         if(nrf2401_haydatos() == 1)
-[e $ ! == -> ( _nrf2401_haydatos ..  `i -> 1 `i 688  ]
+[e $ ! == -> ( _nrf2401_haydatos ..  `i -> 1 `i 689  ]
 "305
 [; ;main.c: 305:         {
 {
@@ -1905,7 +1921,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _dato_serial -> ( _nrf2401_recibe ..  `uc ]
 "307
 [; ;main.c: 307:             if (dato_serial == 1)
-[e $ ! == -> _dato_serial `i -> 1 `i 689  ]
+[e $ ! == -> _dato_serial `i -> 1 `i 690  ]
 "308
 [; ;main.c: 308:             {
 {
@@ -1918,11 +1934,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "311
 [; ;main.c: 311:             }
 }
-[e :U 689 ]
+[e :U 690 ]
 "312
 [; ;main.c: 312:         }
 }
-[e :U 688 ]
+[e :U 689 ]
 "314
 [; ;main.c: 314:         _delay((unsigned long)((100)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
@@ -1936,3 +1952,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 318: }
 [e :UE 684 ]
 }
+[p f _sprintf 8462336 ]
+[a 1C 37 46 51 102 32 65 109 112 46 10 13 0 ]
