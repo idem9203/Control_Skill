@@ -33,8 +33,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S578 . . . . ]
 "12448
 [v _INTCONbits `VS578 ~T0 @X0 0 e@4082 ]
-"342 mcc_generated_files/eusart1.h
-[v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
+"363 mcc_generated_files/eusart1.h
+[v _EUSART1_Write_string `(v ~T0 @X0 0 ef1`*Cuc ]
 "14 C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\string.h
 [v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
 "194 C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdio.h
@@ -57,8 +57,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _INT1E `Vb ~T0 @X0 0 e@32643 ]
 "14330
 [v _LATB0 `Vb ~T0 @X0 0 e@31824 ]
-"16 C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\conio.h
-[v _putch `(v ~T0 @X0 0 ef1`uc ]
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -5182,9 +5180,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart1.h: 302: eusart1_status_t EUSART1_get_last_status(void);
 [; ;eusart1.h: 322: uint8_t EUSART1_Read(void);
 [; ;eusart1.h: 342: void EUSART1_Write(uint8_t txData);
-[; ;eusart1.h: 362: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 380: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 398: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 363: void EUSART1_Write_string(const char* data);
+[; ;eusart1.h: 365: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 383: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 401: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 [; ;mcc.h: 73: void SYSTEM_Initialize(void);
 [; ;mcc.h: 86: void OSCILLATOR_Initialize(void);
 [; ;stdlib.h: 7: typedef unsigned short wchar_t;
@@ -5414,36 +5413,36 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 236: codigo_ir = Hash_algoritmo();
 "236
 [e = _codigo_ir ( _Hash_algoritmo ..  ]
-[; ;main.c: 237: EUSART1_Write("Son: ");
+[; ;main.c: 237: EUSART1_Write_string("Son: ");
 "237
-[e ( _EUSART1_Write (1 -> :s 1C `uc ]
+[e ( _EUSART1_Write_string (1 :s 1C ]
 [; ;main.c: 238: memcpy(texto, cuenta, sizeof(cuenta));
 "238
 [e ( _memcpy (3 , , -> &U _texto `*v -> _cuenta `*Cv -> # _cuenta `ui ]
-[; ;main.c: 239: EUSART1_Write(texto);
+[; ;main.c: 239: EUSART1_Write_string(texto);
 "239
-[e ( _EUSART1_Write (1 -> &U _texto `uc ]
-[; ;main.c: 240: EUSART1_Write("\r");
+[e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
+[; ;main.c: 240: EUSART1_Write_string("\r");
 "240
-[e ( _EUSART1_Write (1 -> :s 2C `uc ]
-[; ;main.c: 241: EUSART1_Write("\n");
+[e ( _EUSART1_Write_string (1 :s 2C ]
+[; ;main.c: 241: EUSART1_Write_string("\n");
 "241
-[e ( _EUSART1_Write (1 -> :s 3C `uc ]
+[e ( _EUSART1_Write_string (1 :s 3C ]
 [; ;main.c: 242: sprintf(texto, "%lx", codigo_ir);
 "242
 [e ( _sprintf (1 , (. , &U _texto :s 4C _codigo_ir ]
-[; ;main.c: 243: EUSART1_Write("CODIGO IR = ");
+[; ;main.c: 243: EUSART1_Write_string("CODIGO IR = ");
 "243
-[e ( _EUSART1_Write (1 -> :s 5C `uc ]
-[; ;main.c: 244: EUSART1_Write(texto);
+[e ( _EUSART1_Write_string (1 :s 5C ]
+[; ;main.c: 244: EUSART1_Write_string(texto);
 "244
-[e ( _EUSART1_Write (1 -> &U _texto `uc ]
-[; ;main.c: 245: EUSART1_Write("\r");
+[e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
+[; ;main.c: 245: EUSART1_Write_string("\r");
 "245
-[e ( _EUSART1_Write (1 -> :s 6C `uc ]
-[; ;main.c: 246: EUSART1_Write("\n");
+[e ( _EUSART1_Write_string (1 :s 6C ]
+[; ;main.c: 246: EUSART1_Write_string("\n");
 "246
-[e ( _EUSART1_Write (1 -> :s 7C `uc ]
+[e ( _EUSART1_Write_string (1 :s 7C ]
 [; ;main.c: 248: if (codigo_ir == 0xBF681DA0)
 "248
 [e $ ! == _codigo_ir -> 3211271584 `ul 629  ]
@@ -5453,9 +5452,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 250: LATA3 =~ LATA3;
 "250
 [e = _LATA3 -> ~ -> _LATA3 `i `b ]
-[; ;main.c: 251: EUSART1_Write("COMANDO1");
+[; ;main.c: 251: EUSART1_Write_string("COMANDO1");
 "251
-[e ( _EUSART1_Write (1 -> :s 8C `uc ]
+[e ( _EUSART1_Write_string (1 :s 8C ]
 "253
 }
 [; ;main.c: 253: }
@@ -5470,9 +5469,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 256: LATA4 =~ LATA4;
 "256
 [e = _LATA4 -> ~ -> _LATA4 `i `b ]
-[; ;main.c: 257: EUSART1_Write("COMANDO2");
+[; ;main.c: 257: EUSART1_Write_string("COMANDO2");
 "257
-[e ( _EUSART1_Write (1 -> :s 9C `uc ]
+[e ( _EUSART1_Write_string (1 :s 9C ]
 "258
 }
 [; ;main.c: 258: }
@@ -5487,9 +5486,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 262: LATA5 =~ LATA5;
 "262
 [e = _LATA5 -> ~ -> _LATA5 `i `b ]
-[; ;main.c: 263: EUSART1_Write("COMANDO3");
+[; ;main.c: 263: EUSART1_Write_string("COMANDO3");
 "263
-[e ( _EUSART1_Write (1 -> :s 10C `uc ]
+[e ( _EUSART1_Write_string (1 :s 10C ]
 "264
 }
 [e :U 633 ]
@@ -5527,9 +5526,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 276: LATB0 =~ LATB0;
 "276
 [e = _LATB0 -> ~ -> _LATB0 `i `b ]
-[; ;main.c: 277: putch("Son: ");
+[; ;main.c: 277: EUSART1_Write_string("Son: ");
 "277
-[e ( _putch (1 -> :s 11C `uc ]
+[e ( _EUSART1_Write_string (1 :s 11C ]
 "278
 }
 [e :U 625 ]

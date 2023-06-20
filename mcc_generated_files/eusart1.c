@@ -138,6 +138,14 @@ void EUSART1_Write(uint8_t txData)
     TXREG1 = txData;    // Write the data byte to the USART.
 }
 
+void EUSART1_Write_string(const char* data)
+{
+    while(*data != 0)
+    {
+        EUSART1_Write(*data++);
+    }
+}
+
 char getch(void)
 {
     return EUSART1_Read();

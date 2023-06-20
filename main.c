@@ -234,33 +234,33 @@ void main(void)
             
             normaliza(); //normaliza los codigos a las constantes analizadas
             codigo_ir = Hash_algoritmo();
-            EUSART1_Write("Son: ");
+            EUSART1_Write_string("Son: ");
             memcpy(texto, cuenta, sizeof(cuenta));
-            EUSART1_Write(texto);
-            EUSART1_Write("\r");
-            EUSART1_Write("\n");
+            EUSART1_Write_string(texto);
+            EUSART1_Write_string("\r");
+            EUSART1_Write_string("\n");
             sprintf(texto, "%lx", codigo_ir);
-            EUSART1_Write("CODIGO IR = ");
-            EUSART1_Write(texto);
-            EUSART1_Write("\r");
-            EUSART1_Write("\n");
+            EUSART1_Write_string("CODIGO IR = ");
+            EUSART1_Write_string(texto);
+            EUSART1_Write_string("\r");
+            EUSART1_Write_string("\n");
             
             if (codigo_ir == 0xBF681DA0)
             {
                 led1 =~ led1;
-                EUSART1_Write("COMANDO1");
+                EUSART1_Write_string("COMANDO1");
 
             }
             else if (codigo_ir == 0xBF681DA0)
             {
                 led2 =~ led2;
-                EUSART1_Write("COMANDO2");
+                EUSART1_Write_string("COMANDO2");
             }
 
             else if (codigo_ir == 0xBF681DA0)
             {
                 led3 =~ led3;
-                EUSART1_Write("COMANDO3");
+                EUSART1_Write_string("COMANDO3");
             }
             codigo_ir = 0;
 
@@ -274,7 +274,7 @@ void main(void)
         }
         __delay_ms(80);
         LATB0 =~ LATB0; 
-        putch("Son: ");
+        EUSART1_Write_string("Son: ");
     }
 }
 /**

@@ -359,6 +359,9 @@ void EUSART1_Write(uint8_t txData);
   @Returns
     None
 */
+
+void EUSART1_Write_string(const char* data);
+
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 
 /**

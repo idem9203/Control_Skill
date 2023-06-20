@@ -7772,13 +7772,15 @@ uint8_t EUSART1_Read(void);
 # 342
 void EUSART1_Write(uint8_t txData);
 
-# 362
+# 363
+void EUSART1_Write_string(const char* data);
+
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 
-# 380
+# 383
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 
-# 398
+# 401
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
 # 52 "mcc_generated_files/eusart1.c"
@@ -7866,6 +7868,14 @@ while(0 == PIR1bits.TX1IF)
 }
 
 TXREG1 = txData;
+}
+
+void EUSART1_Write_string(const char* data)
+{
+while(*data != 0)
+{
+EUSART1_Write(*data++);
+}
 }
 
 char getch(void)

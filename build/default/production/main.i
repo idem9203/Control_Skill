@@ -7848,13 +7848,15 @@ uint8_t EUSART1_Read(void);
 # 342
 void EUSART1_Write(uint8_t txData);
 
-# 362
+# 363
+void EUSART1_Write_string(const char* data);
+
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 
-# 380
+# 383
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 
-# 398
+# 401
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
 # 73 "mcc_generated_files/mcc.h"
@@ -8040,33 +8042,33 @@ if (flag_codigo == 1)
 
 normaliza();
 codigo_ir = Hash_algoritmo();
-EUSART1_Write("Son: ");
+EUSART1_Write_string("Son: ");
 memcpy(texto, cuenta, sizeof(cuenta));
-EUSART1_Write(texto);
-EUSART1_Write("\r");
-EUSART1_Write("\n");
+EUSART1_Write_string(texto);
+EUSART1_Write_string("\r");
+EUSART1_Write_string("\n");
 sprintf(texto, "%lx", codigo_ir);
-EUSART1_Write("CODIGO IR = ");
-EUSART1_Write(texto);
-EUSART1_Write("\r");
-EUSART1_Write("\n");
+EUSART1_Write_string("CODIGO IR = ");
+EUSART1_Write_string(texto);
+EUSART1_Write_string("\r");
+EUSART1_Write_string("\n");
 
 if (codigo_ir == 0xBF681DA0)
 {
 LATA3 =~ LATA3;
-EUSART1_Write("COMANDO1");
+EUSART1_Write_string("COMANDO1");
 
 }
 else if (codigo_ir == 0xBF681DA0)
 {
 LATA4 =~ LATA4;
-EUSART1_Write("COMANDO2");
+EUSART1_Write_string("COMANDO2");
 }
 
 else if (codigo_ir == 0xBF681DA0)
 {
 LATA5 =~ LATA5;
-EUSART1_Write("COMANDO3");
+EUSART1_Write_string("COMANDO3");
 }
 codigo_ir = 0;
 
@@ -8080,7 +8082,7 @@ INT1E = 1;
 }
 _delay((unsigned long)((80)*(48000000/4000.0)));
 LATB0 =~ LATB0;
-putch("Son: ");
+EUSART1_Write_string("Son: ");
 }
 }
 

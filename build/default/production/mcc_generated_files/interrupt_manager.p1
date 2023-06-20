@@ -5179,9 +5179,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart1.h: 302: eusart1_status_t EUSART1_get_last_status(void);
 [; ;eusart1.h: 322: uint8_t EUSART1_Read(void);
 [; ;eusart1.h: 342: void EUSART1_Write(uint8_t txData);
-[; ;eusart1.h: 362: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 380: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 398: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 363: void EUSART1_Write_string(const char* data);
+[; ;eusart1.h: 365: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 383: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 401: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 [; ;mcc.h: 73: void SYSTEM_Initialize(void);
 [; ;mcc.h: 86: void OSCILLATOR_Initialize(void);
 "52 mcc_generated_files/interrupt_manager.c
