@@ -79,7 +79,6 @@
 
 
 
-
 #define led1 LATA3
 #define led2 LATA4
 #define led3 LATA5
@@ -169,21 +168,58 @@ unsigned long Hash_algoritmo ()
 
 ////////////////////////////////////////////////////////////////////////////////
 // FUNCION DE INTERRUPCION
-//void interrupt INTERRUPT_InterruptManager (void)
+//void __interrupt() INTERRUPT_InterruptManager (void)
 //{
-//    if (RCIF == 1)                                                              //Si presenta una interrupcion en recepcion UART
+////    if (RCIF == 1)                                                              //Si presenta una interrupcion en recepcion UART
+////    {
+////        datorx = EUSART1_Read();                                                //lee el dato
+////        trama[puntero] = datorx;                                                //lo almacena en la trama
+////        puntero++;                                                              //incrementa el contador de trama
+////        if(puntero >= 30) puntero = 0;                                          //si llegan mas de 30 datos erroneos inicia el almacenamiento
+////        if(datorx == '/')                                                       //Si llega el fin de la trama
+////        {
+////            RCIE = 0;                                                           //deshabilita la interrupcion
+////            flag_rx = 1;                                                        //activa la bandera de que hay una trama valida
+////        }
+////        RCIF = 0;
+////    }
+////    EUSART1_Write_string("aqui");
+////    sprintf(valor_string, "Son: %d ", TMR0);
+////    EUSART1_Write_string(valor_string);
+////    
+////  
+//    if (INT1IF == 1)
 //    {
-//        datorx = EUSART1_Read();                                                //lee el dato
-//        trama[puntero] = datorx;                                                //lo almacena en la trama
-//        puntero++;                                                              //incrementa el contador de trama
-//        if(puntero >= 30) puntero = 0;                                          //si llegan mas de 30 datos erroneos inicia el almacenamiento
-//        if(datorx == '/')                                                       //Si llega el fin de la trama
-//        {
-//            RCIE = 0;                                                           //deshabilita la interrupcion
-//            flag_rx = 1;                                                        //activa la bandera de que hay una trama valida
-//        }
-//        RCIF = 0;
+//        LATA4 = 1;
+//
+//
+//       //el analasis se hace solo
+//       if (flag_codigo == 0)
+//       {
+//           if (cuenta != 0)
+//           {
+//               timer_aux = TMR0; //captura el valor del timer
+//               TMR0 = 0; // resetea el timer para otra lectura
+//               tiempo[cuenta - 1] = timer_aux;     // CARGA UN BUUFER CON LOS DATOS
+//               cuenta++;
+//               INTEDG1 = !INTEDG1;
+//
+//               if (TMR0IF == 1)  // si hubo desborde del timer , fin de datos
+//               {
+//                   cuenta--;// omite el codigo de ultimo desborde
+//                   flag_codigo = 1;
+//                   INT1IE = 0; //deshabilita la interrpcuion
+//               }
+//            }
+//           else
+//           {
+//               TMR0IF = 0;// limpia la bansera timer
+//               TMR0 = 0;   // resetea el timer
+//               cuenta++;
+//           }
+//       }
 //    }
+//    INT1IF = 0;    
 //}
 //END //////////////////////////////////////////////////////////////////////////
 
@@ -201,27 +237,27 @@ void main(void)
     SYSTEM_Initialize();
     
     ANSELA = 0b00000111;
-    ANSELB = 0b01000000;
     ANSELC = 0x00;                                                              //Todo el puerto C lo hace digital
-    TRISBbits.TRISB1 = 1;
 
     // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
     // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();                                          // es lo mismo que GIE = 1; y INTCON = 0b11000000;
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
     // Enable the Peripheral Interrupts
-    INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();                                      //es lo mismo que PEIE = 1; y INTCON = 0b11000000;
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
-//    INTCON = 0b01000000;                                                        //Habilita interrupciones de perifericos
+//    INTCON = 0b11000000;                                                        //Habilita interrupciones de perifericos
+//    INTEDG1 = 0;                                                                // falling
+//    INTCON3 = 0b00001000; 
 //    RCIF = 0;                                                                   //Limpia bandera interrupcion serial
 //    GIE = 1;                                                                    //Autoriza todas las interrupciones programadas 
 
@@ -235,7 +271,7 @@ void main(void)
             normaliza(); //normaliza los codigos a las constantes analizadas
             codigo_ir = Hash_algoritmo();
             EUSART1_Write_string("Son: ");
-            memcpy(texto, cuenta, sizeof(cuenta));
+            sprintf(texto, "%d", cuenta);
             EUSART1_Write_string(texto);
             EUSART1_Write_string("\r");
             EUSART1_Write_string("\n");
@@ -245,7 +281,7 @@ void main(void)
             EUSART1_Write_string("\r");
             EUSART1_Write_string("\n");
             
-            if (codigo_ir == 0xBF681DA0)
+            if (codigo_ir == 0x811c9dc5)
             {
                 led1 =~ led1;
                 EUSART1_Write_string("COMANDO1");
@@ -274,7 +310,9 @@ void main(void)
         }
         __delay_ms(80);
         LATB0 =~ LATB0; 
-        EUSART1_Write_string("Son: ");
+//        EUSART1_Write_string("Son: \n\r");
+//        sprintf(valor_string, "Son: ");
+//        if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);
     }
 }
 /**

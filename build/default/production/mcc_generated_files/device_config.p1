@@ -2,13 +2,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "50 mcc_generated_files/device_config.c
 [p x PLLSEL=PLL3X ]
 "51
-[p x CFGPLLEN=ON ]
+[p x CFGPLLEN=OFF ]
 "52
 [p x CPUDIV=NOCLKDIV ]
 "53
 [p x LS48MHZ=SYS48X8 ]
 "56
-[p x FOSC=HSH ]
+[p x FOSC=HSM ]
 "57
 [p x PCLKEN=ON ]
 "58
@@ -40,7 +40,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "79
 [p x STVREN=ON ]
 "80
-[p x LVP=ON ]
+[p x LVP=OFF ]
 "81
 [p x ICPRT=OFF ]
 "82

@@ -4,21 +4,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "232 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
 [v _ANSELA `Vuc ~T0 @X0 0 e@3931 ]
-"277
-[v _ANSELB `Vuc ~T0 @X0 0 e@3932 ]
 "327
 [v _ANSELC `Vuc ~T0 @X0 0 e@3933 ]
-"4388
-[s S180 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S180 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
-"4398
-[s S181 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S181 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"4387
-[u S179 `S180 1 `S181 1 ]
-[n S179 . . . ]
-"4409
-[v _TRISBbits `VS179 ~T0 @X0 0 e@3987 ]
 "12422
 [s S579 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S579 . IOCIF INT0IF TMR0IF IOCIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
@@ -35,8 +22,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _INTCONbits `VS578 ~T0 @X0 0 e@4082 ]
 "363 mcc_generated_files/eusart1.h
 [v _EUSART1_Write_string `(v ~T0 @X0 0 ef1`*Cuc ]
-"14 C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\string.h
-[v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
 "194 C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "14315 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
@@ -5083,8 +5068,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\pic18.h: 158: __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 [; ;xc8\pic\include\pic18.h: 192: unsigned char __t1rd16on(void);
 [; ;xc8\pic\include\pic18.h: 193: unsigned char __t3rd16on(void);
-[; ;pin_manager.h: 166: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 178: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 156: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 168: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;errno.h: 29: extern int errno;
 [; ;conio.h: 12: extern void init_uart(void);
@@ -5095,53 +5080,50 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;conio.h: 19: extern __bit kbhit(void);
 [; ;conio.h: 23: extern char * cgets(char *);
 [; ;conio.h: 24: extern void cputs(const char *);
-[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
-"251 mcc_generated_files/ext_int.h
+"53 mcc_generated_files/interrupt_manager.h
 [v _flag_codigo `uc ~T0 @X0 1 e ]
 [i _flag_codigo
 -> -> 0 `i `uc
 ]
-[; ;ext_int.h: 251: char flag_codigo=0;
-"252
+[; ;interrupt_manager.h: 53: char flag_codigo=0;
+"54
 [v _cuenta `ui ~T0 @X0 1 e ]
 [i _cuenta
 -> -> 0 `i `ui
 ]
-[; ;ext_int.h: 252: unsigned int cuenta=0;
-"253
+[; ;interrupt_manager.h: 54: unsigned int cuenta=0;
+"55
 [v _cont `uc ~T0 @X0 1 e ]
-[; ;ext_int.h: 253: unsigned char cont;
-"254
+[; ;interrupt_manager.h: 55: unsigned char cont;
+"56
 [v _texto `uc ~T0 @X0 -> 10 `i e ]
-[; ;ext_int.h: 254: char texto[10];
-"255
+[; ;interrupt_manager.h: 56: char texto[10];
+"57
 [v _timer_aux `uc ~T0 @X0 1 e ]
-[; ;ext_int.h: 255: unsigned char timer_aux;
-"256
+[; ;interrupt_manager.h: 57: unsigned char timer_aux;
+"58
 [v _tiempo `uc ~T0 @X0 -> 70 `i e ]
-[; ;ext_int.h: 256: unsigned char tiempo[70];
-"257
+[; ;interrupt_manager.h: 58: unsigned char tiempo[70];
+"59
 [v _codigo_ir `ul ~T0 @X0 1 e ]
-[; ;ext_int.h: 257: unsigned long codigo_ir;
-[; ;ext_int.h: 260: void EXT_INT_Initialize(void);
-[; ;ext_int.h: 282: void INT1_ISR(void);
-[; ;ext_int.h: 306: void INT1_CallBack(void);
-[; ;ext_int.h: 329: void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
-[; ;ext_int.h: 353: extern void (*INT1_InterruptHandler)(void);
-[; ;ext_int.h: 377: void INT1_DefaultInterruptHandler(void);
-[; ;ext_int.h: 379: void normaliza(void);
-[; ;ext_int.h: 381: unsigned long Hash_algoritmo ();
+[; ;interrupt_manager.h: 59: unsigned long codigo_ir;
+[; ;interrupt_manager.h: 119: void INTERRUPT_Initialize (void);
+[; ;ext_int.h: 253: void EXT_INT_Initialize(void);
+[; ;ext_int.h: 275: void INT1_ISR(void);
+[; ;ext_int.h: 299: void INT1_CallBack(void);
+[; ;ext_int.h: 322: void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;ext_int.h: 346: extern void (*INT1_InterruptHandler)(void);
+[; ;ext_int.h: 370: void INT1_DefaultInterruptHandler(void);
+[; ;ext_int.h: 372: void normaliza(void);
+[; ;ext_int.h: 374: unsigned long Hash_algoritmo ();
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr0.h: 100: void TMR0_Initialize(void);
 [; ;tmr0.h: 129: void TMR0_StartTimer(void);
 [; ;tmr0.h: 161: void TMR0_StopTimer(void);
-[; ;tmr0.h: 197: uint16_t TMR0_ReadTimer(void);
-[; ;tmr0.h: 236: void TMR0_WriteTimer(uint16_t timerVal);
-[; ;tmr0.h: 272: void TMR0_Reload(void);
-[; ;tmr0.h: 290: void TMR0_ISR(void);
-[; ;tmr0.h: 309: void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-[; ;tmr0.h: 327: extern void (*TMR0_InterruptHandler)(void);
-[; ;tmr0.h: 345: void TMR0_DefaultInterruptHandler(void);
+[; ;tmr0.h: 196: uint8_t TMR0_ReadTimer(void);
+[; ;tmr0.h: 235: void TMR0_WriteTimer(uint8_t timerVal);
+[; ;tmr0.h: 271: void TMR0_Reload(void);
+[; ;tmr0.h: 310: bool TMR0_HasOverflowOccured(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
@@ -5275,280 +5257,271 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ctype.h: 14: extern __bit iscntrl(char);
 [; ;ctype.h: 17: extern char toupper(char);
 [; ;ctype.h: 18: extern char tolower(char);
-"108 main.c
+"107 main.c
 [v _normaliza `(v ~T0 @X0 1 ef ]
-"109
+"108
 {
-[; ;main.c: 108: void normaliza()
-[; ;main.c: 109: {
+[; ;main.c: 107: void normaliza()
+[; ;main.c: 108: {
 [e :U _normaliza ]
 [f ]
-[; ;main.c: 113: for (cont=0;cont<cuenta-1+2;cont++)
-"113
+[; ;main.c: 112: for (cont=0;cont<cuenta-1+2;cont++)
+"112
 {
 [e = _cont -> -> 0 `i `uc ]
 [e $U 614  ]
-"114
+"113
 [e :U 611 ]
-[; ;main.c: 114: {
+[; ;main.c: 113: {
 {
-[; ;main.c: 115: if (tiempo[cont+2] <(float)tiempo[cont] * .8) tiempo[cont]=0 ;
-"115
+[; ;main.c: 114: if (tiempo[cont+2] <(float)tiempo[cont] * .8) tiempo[cont]=0 ;
+"114
 [e $ ! < -> *U + &U _tiempo * -> -> + -> _cont `i -> 2 `i `ui `ux -> -> # *U &U _tiempo `ui `ux `d * -> -> *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux `f `d .0.8 615  ]
 [e = *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux -> -> 0 `i `uc ]
 [e $U 616  ]
-"116
+"115
 [e :U 615 ]
-[; ;main.c: 116: else if (tiempo[cont] <(float)tiempo[cont+2] * .8) tiempo[cont]= 2 ;
+[; ;main.c: 115: else if (tiempo[cont] <(float)tiempo[cont+2] * .8) tiempo[cont]= 2 ;
 [e $ ! < -> *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux `d * -> -> *U + &U _tiempo * -> -> + -> _cont `i -> 2 `i `ui `ux -> -> # *U &U _tiempo `ui `ux `f `d .0.8 617  ]
 [e = *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux -> -> 2 `i `uc ]
 [e $U 618  ]
-"117
+"116
 [e :U 617 ]
-[; ;main.c: 117: else tiempo[cont]=1 ;
+[; ;main.c: 116: else tiempo[cont]=1 ;
 [e = *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux -> -> 1 `i `uc ]
 [e :U 618 ]
 [e :U 616 ]
-"122
+"121
 }
-"113
+"112
 [e ++ _cont -> -> 1 `i `uc ]
 [e :U 614 ]
 [e $ < -> _cont `ui + - _cuenta -> -> 1 `i `ui -> -> 2 `i `ui 611  ]
 [e :U 612 ]
-"122
+"121
 }
-[; ;main.c: 122: }
-[; ;main.c: 127: }
-"127
+[; ;main.c: 121: }
+[; ;main.c: 126: }
+"126
 [e :UE 610 ]
 }
-"129
+"128
 [v _Hash_algoritmo `(ul ~T0 @X0 1 ef ]
-"130
+"129
 {
-[; ;main.c: 129: unsigned long Hash_algoritmo ()
-[; ;main.c: 130: {
+[; ;main.c: 128: unsigned long Hash_algoritmo ()
+[; ;main.c: 129: {
 [e :U _Hash_algoritmo ]
 [f ]
-"131
+"130
 [v _hash_acum `ul ~T0 @X0 1 a ]
-[; ;main.c: 131: unsigned long hash_acum = 2166136261;
+[; ;main.c: 130: unsigned long hash_acum = 2166136261;
 [e = _hash_acum -> 2166136261 `ul ]
-[; ;main.c: 132: for (cont = 0; cont < cuenta - 1; cont++)
-"132
+[; ;main.c: 131: for (cont = 0; cont < cuenta - 1; cont++)
+"131
 {
 [e = _cont -> -> 0 `i `uc ]
 [e $U 623  ]
-"133
-[e :U 620 ]
-[; ;main.c: 133: {
-{
-[; ;main.c: 134: hash_acum = (hash_acum * 16777619) ^ tiempo[cont];
-"134
-[e = _hash_acum ^ * _hash_acum -> -> 16777619 `l `ul -> *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux `ul ]
-"135
-}
 "132
+[e :U 620 ]
+[; ;main.c: 132: {
+{
+[; ;main.c: 133: hash_acum = (hash_acum * 16777619) ^ tiempo[cont];
+"133
+[e = _hash_acum ^ * _hash_acum -> -> 16777619 `l `ul -> *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux `ul ]
+"134
+}
+"131
 [e ++ _cont -> -> 1 `i `uc ]
 [e :U 623 ]
 [e $ < -> _cont `ui - _cuenta -> -> 1 `i `ui 620  ]
 [e :U 621 ]
-"135
+"134
 }
-[; ;main.c: 135: }
-[; ;main.c: 136: return (hash_acum);
-"136
+[; ;main.c: 134: }
+[; ;main.c: 135: return (hash_acum);
+"135
 [e ) _hash_acum ]
 [e $UE 619  ]
-[; ;main.c: 137: }
-"137
+[; ;main.c: 136: }
+"136
 [e :UE 619 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"198
+"234
 [v _main `(v ~T0 @X0 1 ef ]
-"199
+"235
 {
-[; ;main.c: 198: void main(void)
-[; ;main.c: 199: {
+[; ;main.c: 234: void main(void)
+[; ;main.c: 235: {
 [e :U _main ]
 [f ]
-[; ;main.c: 201: SYSTEM_Initialize();
-"201
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 203: ANSELA = 0b00000111;
-"203
-[e = _ANSELA -> -> 7 `i `uc ]
-[; ;main.c: 204: ANSELB = 0b01000000;
-"204
-[e = _ANSELB -> -> 64 `i `uc ]
-[; ;main.c: 205: ANSELC = 0x00;
-"205
-[e = _ANSELC -> -> 0 `i `uc ]
-[; ;main.c: 206: TRISBbits.TRISB1 = 1;
-"206
-[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 213: (INTCONbits.GIE = 1);
-"213
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;main.c: 219: (INTCONbits.PEIE = 1);
-"219
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-[; ;main.c: 228: while (1)
-"228
-[e :U 626 ]
-[; ;main.c: 229: {
-"229
-{
-[; ;main.c: 231: if (flag_codigo == 1)
-"231
-[e $ ! == -> _flag_codigo `i -> 1 `i 628  ]
-[; ;main.c: 232: {
-"232
-{
-[; ;main.c: 235: normaliza();
-"235
-[e ( _normaliza ..  ]
-[; ;main.c: 236: codigo_ir = Hash_algoritmo();
-"236
-[e = _codigo_ir ( _Hash_algoritmo ..  ]
-[; ;main.c: 237: EUSART1_Write_string("Son: ");
+[; ;main.c: 237: SYSTEM_Initialize();
 "237
-[e ( _EUSART1_Write_string (1 :s 1C ]
-[; ;main.c: 238: memcpy(texto, cuenta, sizeof(cuenta));
-"238
-[e ( _memcpy (3 , , -> &U _texto `*v -> _cuenta `*Cv -> # _cuenta `ui ]
-[; ;main.c: 239: EUSART1_Write_string(texto);
+[e ( _SYSTEM_Initialize ..  ]
+[; ;main.c: 239: ANSELA = 0b00000111;
 "239
-[e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
-[; ;main.c: 240: EUSART1_Write_string("\r");
+[e = _ANSELA -> -> 7 `i `uc ]
+[; ;main.c: 240: ANSELC = 0x00;
 "240
-[e ( _EUSART1_Write_string (1 :s 2C ]
-[; ;main.c: 241: EUSART1_Write_string("\n");
-"241
-[e ( _EUSART1_Write_string (1 :s 3C ]
-[; ;main.c: 242: sprintf(texto, "%lx", codigo_ir);
-"242
-[e ( _sprintf (1 , (. , &U _texto :s 4C _codigo_ir ]
-[; ;main.c: 243: EUSART1_Write_string("CODIGO IR = ");
-"243
-[e ( _EUSART1_Write_string (1 :s 5C ]
-[; ;main.c: 244: EUSART1_Write_string(texto);
-"244
-[e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
-[; ;main.c: 245: EUSART1_Write_string("\r");
-"245
-[e ( _EUSART1_Write_string (1 :s 6C ]
-[; ;main.c: 246: EUSART1_Write_string("\n");
-"246
-[e ( _EUSART1_Write_string (1 :s 7C ]
-[; ;main.c: 248: if (codigo_ir == 0xBF681DA0)
-"248
-[e $ ! == _codigo_ir -> 3211271584 `ul 629  ]
-[; ;main.c: 249: {
-"249
-{
-[; ;main.c: 250: LATA3 =~ LATA3;
-"250
-[e = _LATA3 -> ~ -> _LATA3 `i `b ]
-[; ;main.c: 251: EUSART1_Write_string("COMANDO1");
-"251
-[e ( _EUSART1_Write_string (1 :s 8C ]
+[e = _ANSELC -> -> 0 `i `uc ]
+[; ;main.c: 247: (INTCONbits.GIE = 1);
+"247
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;main.c: 253: (INTCONbits.PEIE = 1);
 "253
-}
-[; ;main.c: 253: }
-[e $U 630  ]
-"254
-[e :U 629 ]
-[; ;main.c: 254: else if (codigo_ir == 0xBF681DA0)
-[e $ ! == _codigo_ir -> 3211271584 `ul 631  ]
-[; ;main.c: 255: {
-"255
-{
-[; ;main.c: 256: LATA4 =~ LATA4;
-"256
-[e = _LATA4 -> ~ -> _LATA4 `i `b ]
-[; ;main.c: 257: EUSART1_Write_string("COMANDO2");
-"257
-[e ( _EUSART1_Write_string (1 :s 9C ]
-"258
-}
-[; ;main.c: 258: }
-[e $U 632  ]
-"260
-[e :U 631 ]
-[; ;main.c: 260: else if (codigo_ir == 0xBF681DA0)
-[e $ ! == _codigo_ir -> 3211271584 `ul 633  ]
-[; ;main.c: 261: {
-"261
-{
-[; ;main.c: 262: LATA5 =~ LATA5;
-"262
-[e = _LATA5 -> ~ -> _LATA5 `i `b ]
-[; ;main.c: 263: EUSART1_Write_string("COMANDO3");
-"263
-[e ( _EUSART1_Write_string (1 :s 10C ]
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+[; ;main.c: 264: while (1)
 "264
+[e :U 626 ]
+[; ;main.c: 265: {
+"265
+{
+[; ;main.c: 267: if (flag_codigo == 1)
+"267
+[e $ ! == -> _flag_codigo `i -> 1 `i 628  ]
+[; ;main.c: 268: {
+"268
+{
+[; ;main.c: 271: normaliza();
+"271
+[e ( _normaliza ..  ]
+[; ;main.c: 272: codigo_ir = Hash_algoritmo();
+"272
+[e = _codigo_ir ( _Hash_algoritmo ..  ]
+[; ;main.c: 273: EUSART1_Write_string("Son: ");
+"273
+[e ( _EUSART1_Write_string (1 :s 1C ]
+[; ;main.c: 274: sprintf(texto, "%d", cuenta);
+"274
+[e ( _sprintf (1 , (. , &U _texto :s 2C _cuenta ]
+[; ;main.c: 275: EUSART1_Write_string(texto);
+"275
+[e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
+[; ;main.c: 276: EUSART1_Write_string("\r");
+"276
+[e ( _EUSART1_Write_string (1 :s 3C ]
+[; ;main.c: 277: EUSART1_Write_string("\n");
+"277
+[e ( _EUSART1_Write_string (1 :s 4C ]
+[; ;main.c: 278: sprintf(texto, "%lx", codigo_ir);
+"278
+[e ( _sprintf (1 , (. , &U _texto :s 5C _codigo_ir ]
+[; ;main.c: 279: EUSART1_Write_string("CODIGO IR = ");
+"279
+[e ( _EUSART1_Write_string (1 :s 6C ]
+[; ;main.c: 280: EUSART1_Write_string(texto);
+"280
+[e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
+[; ;main.c: 281: EUSART1_Write_string("\r");
+"281
+[e ( _EUSART1_Write_string (1 :s 7C ]
+[; ;main.c: 282: EUSART1_Write_string("\n");
+"282
+[e ( _EUSART1_Write_string (1 :s 8C ]
+[; ;main.c: 284: if (codigo_ir == 0x811c9dc5)
+"284
+[e $ ! == _codigo_ir -> 2166136261 `ul 629  ]
+[; ;main.c: 285: {
+"285
+{
+[; ;main.c: 286: LATA3 =~ LATA3;
+"286
+[e = _LATA3 -> ~ -> _LATA3 `i `b ]
+[; ;main.c: 287: EUSART1_Write_string("COMANDO1");
+"287
+[e ( _EUSART1_Write_string (1 :s 9C ]
+"289
+}
+[; ;main.c: 289: }
+[e $U 630  ]
+"290
+[e :U 629 ]
+[; ;main.c: 290: else if (codigo_ir == 0xBF681DA0)
+[e $ ! == _codigo_ir -> 3211271584 `ul 631  ]
+[; ;main.c: 291: {
+"291
+{
+[; ;main.c: 292: LATA4 =~ LATA4;
+"292
+[e = _LATA4 -> ~ -> _LATA4 `i `b ]
+[; ;main.c: 293: EUSART1_Write_string("COMANDO2");
+"293
+[e ( _EUSART1_Write_string (1 :s 10C ]
+"294
+}
+[; ;main.c: 294: }
+[e $U 632  ]
+"296
+[e :U 631 ]
+[; ;main.c: 296: else if (codigo_ir == 0xBF681DA0)
+[e $ ! == _codigo_ir -> 3211271584 `ul 633  ]
+[; ;main.c: 297: {
+"297
+{
+[; ;main.c: 298: LATA5 =~ LATA5;
+"298
+[e = _LATA5 -> ~ -> _LATA5 `i `b ]
+[; ;main.c: 299: EUSART1_Write_string("COMANDO3");
+"299
+[e ( _EUSART1_Write_string (1 :s 11C ]
+"300
 }
 [e :U 633 ]
-"265
+"301
 [e :U 632 ]
 [e :U 630 ]
-[; ;main.c: 264: }
-[; ;main.c: 265: codigo_ir = 0;
+[; ;main.c: 300: }
+[; ;main.c: 301: codigo_ir = 0;
 [e = _codigo_ir -> -> -> 0 `i `l `ul ]
-[; ;main.c: 267: _delay((unsigned long)((2000)*(48000000/4000.0)));
-"267
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;main.c: 269: flag_codigo = 0;
-"269
+[; ;main.c: 303: _delay((unsigned long)((2000)*(16000000/4000.0)));
+"303
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;main.c: 305: flag_codigo = 0;
+"305
 [e = _flag_codigo -> -> 0 `i `uc ]
-[; ;main.c: 270: cuenta = 0;
-"270
+[; ;main.c: 306: cuenta = 0;
+"306
 [e = _cuenta -> -> 0 `i `ui ]
-[; ;main.c: 271: INTEDG1 = 0;
-"271
+[; ;main.c: 307: INTEDG1 = 0;
+"307
 [e = _INTEDG1 -> -> 0 `i `b ]
-[; ;main.c: 272: INT1IF = 0;
-"272
+[; ;main.c: 308: INT1IF = 0;
+"308
 [e = _INT1IF -> -> 0 `i `b ]
-[; ;main.c: 273: INT1E = 1;
-"273
+[; ;main.c: 309: INT1E = 1;
+"309
 [e = _INT1E -> -> 1 `i `b ]
-"274
+"310
 }
 [e :U 628 ]
-[; ;main.c: 274: }
-[; ;main.c: 275: _delay((unsigned long)((80)*(48000000/4000.0)));
-"275
-[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;main.c: 276: LATB0 =~ LATB0;
-"276
+[; ;main.c: 310: }
+[; ;main.c: 311: _delay((unsigned long)((80)*(16000000/4000.0)));
+"311
+[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;main.c: 312: LATB0 =~ LATB0;
+"312
 [e = _LATB0 -> ~ -> _LATB0 `i `b ]
-[; ;main.c: 277: EUSART1_Write_string("Son: ");
-"277
-[e ( _EUSART1_Write_string (1 :s 11C ]
-"278
+"316
 }
 [e :U 625 ]
-"228
+"264
 [e $U 626  ]
 [e :U 627 ]
-[; ;main.c: 278: }
-[; ;main.c: 279: }
-"279
+[; ;main.c: 316: }
+[; ;main.c: 317: }
+"317
 [e :UE 624 ]
 }
-[p f _sprintf 12582928 ]
-[a 4C 37 108 120 0 ]
-[a 10C 67 79 77 65 78 68 79 51 0 ]
-[a 9C 67 79 77 65 78 68 79 50 0 ]
-[a 8C 67 79 77 65 78 68 79 49 0 ]
-[a 5C 67 79 68 73 71 79 32 73 82 32 61 32 0 ]
+[p f _sprintf 12583056 ]
+[a 5C 37 108 120 0 ]
+[a 2C 37 100 0 ]
+[a 11C 67 79 77 65 78 68 79 51 0 ]
+[a 10C 67 79 77 65 78 68 79 50 0 ]
+[a 9C 67 79 77 65 78 68 79 49 0 ]
+[a 6C 67 79 68 73 71 79 32 73 82 32 61 32 0 ]
 [a 1C 83 111 110 58 32 0 ]
-[a 11C 83 111 110 58 32 0 ]
-[a 2C 13 0 ]
-[a 6C 13 0 ]
-[a 3C 10 0 ]
-[a 7C 10 0 ]
+[a 3C 13 0 ]
+[a 7C 13 0 ]
+[a 4C 10 0 ]
+[a 8C 10 0 ]

@@ -48,12 +48,12 @@
 
 // CONFIG1L
 #pragma config PLLSEL = PLL3X    // PLL Selection->3x clock multiplier
-#pragma config CFGPLLEN = ON    // PLL Enable Configuration bit->PLL Enabled
+#pragma config CFGPLLEN = OFF    // PLL Enable Configuration bit->PLL Disabled (firmware controlled)
 #pragma config CPUDIV = NOCLKDIV    // CPU System Clock Postscaler->CPU uses system clock (no divide)
 #pragma config LS48MHZ = SYS48X8    // Low Speed USB mode with 48 MHz system clock->System clock at 48 MHz, USB clock divider is set to 8
 
 // CONFIG1H
-#pragma config FOSC = HSH    // Oscillator Selection->HS oscillator, high power 16MHz to 25MHz
+#pragma config FOSC = HSM    // Oscillator Selection->HS oscillator, medium power 4MHz to 16MHz
 #pragma config PCLKEN = ON    // Primary Oscillator Shutdown->Primary oscillator enabled
 #pragma config FCMEN = OFF    // Fail-Safe Clock Monitor->Fail-Safe Clock Monitor disabled
 #pragma config IESO = OFF    // Internal/External Oscillator Switchover->Oscillator Switchover mode disabled
@@ -77,7 +77,7 @@
 
 // CONFIG4L
 #pragma config STVREN = ON    // Stack Full/Underflow Reset->Stack full/underflow will cause Reset
-#pragma config LVP = ON    // Single-Supply ICSP Enable bit->Single-Supply ICSP enabled if MCLRE is also 1
+#pragma config LVP = OFF    // Single-Supply ICSP Enable bit->Single-Supply ICSP disabled
 #pragma config ICPRT = OFF    // Dedicated In-Circuit Debug/Programming Port Enable->ICPORT disabled
 #pragma config XINST = OFF    // Extended Instruction Set Enable bit->Instruction set extension and Indexed Addressing mode disabled
 #pragma config DEBUG = OFF    // Background Debugger Enable bit->Background debugger disabled, RB6 and RB7 configured as general purpose I/O pins

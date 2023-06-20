@@ -7686,61 +7686,41 @@ void TMR0_StartTimer(void);
 # 161
 void TMR0_StopTimer(void);
 
-# 197
-uint16_t TMR0_ReadTimer(void);
+# 196
+uint8_t TMR0_ReadTimer(void);
 
-# 236
-void TMR0_WriteTimer(uint16_t timerVal);
+# 235
+void TMR0_WriteTimer(uint8_t timerVal);
 
-# 272
+# 271
 void TMR0_Reload(void);
 
-# 290
-void TMR0_ISR(void);
+# 310
+bool TMR0_HasOverflowOccured(void);
 
-# 309
-void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
+# 59 "mcc_generated_files/tmr0.c"
+volatile uint8_t timer0ReloadVal;
 
-# 327
-extern void (*TMR0_InterruptHandler)(void);
-
-# 345
-void TMR0_DefaultInterruptHandler(void);
-
-# 58 "mcc_generated_files/tmr0.c"
-void (*TMR0_InterruptHandler)(void);
-
-volatile uint16_t timer0ReloadVal;
-
-# 67
+# 66
 void TMR0_Initialize(void)
 {
 
 
 
-T0CONbits.T08BIT = 0;
+TMR0H = 0x00;
 
 
-TMR0H = 0x15;
-
-
-TMR0L = 0x9F;
+TMR0L = 0x64;
 
 
 
-timer0ReloadVal = (uint16_t)((TMR0H << 8) | TMR0L);
+timer0ReloadVal = 100;
 
 
 INTCONbits.TMR0IF = 0;
 
 
-INTCONbits.TMR0IE = 1;
-
-
-TMR0_SetInterruptHandler(TMR0_DefaultInterruptHandler);
-
-
-T0CON = 0x90;
+T0CON = 0xD7;
 }
 
 void TMR0_StartTimer(void)
@@ -7755,60 +7735,32 @@ void TMR0_StopTimer(void)
 T0CONbits.TMR0ON = 0;
 }
 
-uint16_t TMR0_ReadTimer(void)
+uint8_t TMR0_ReadTimer(void)
 {
-uint16_t readVal;
-uint8_t readValLow;
-uint8_t readValHigh;
+uint8_t readVal;
 
-readValLow = TMR0L;
-readValHigh = TMR0H;
-readVal = ((uint16_t)readValHigh << 8) + readValLow;
+
+readVal = TMR0L;
 
 return readVal;
 }
 
-void TMR0_WriteTimer(uint16_t timerVal)
+void TMR0_WriteTimer(uint8_t timerVal)
 {
 
-TMR0H = timerVal >> 8;
-TMR0L = (uint8_t) timerVal;
+TMR0L = timerVal;
 }
 
 void TMR0_Reload(void)
 {
 
-TMR0H = timer0ReloadVal >> 8;
-TMR0L = (uint8_t) timer0ReloadVal;
+TMR0L = timer0ReloadVal;
 }
 
-void TMR0_ISR(void)
+
+bool TMR0_HasOverflowOccured(void)
 {
 
-
-INTCONbits.TMR0IF = 0;
-
-
-
-TMR0H = timer0ReloadVal >> 8;
-TMR0L = (uint8_t) timer0ReloadVal;
-
-if(TMR0_InterruptHandler)
-{
-TMR0_InterruptHandler();
-}
-
-
-
-}
-
-
-void TMR0_SetInterruptHandler(void (* InterruptHandler)(void)){
-TMR0_InterruptHandler = InterruptHandler;
-}
-
-void TMR0_DefaultInterruptHandler(void){
-
-
+return(INTCONbits.TMR0IF);
 }
 

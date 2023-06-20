@@ -4,12 +4,12 @@
 
 # 50
 #pragma config PLLSEL = PLL3X
-#pragma config CFGPLLEN = ON
+#pragma config CFGPLLEN = OFF
 #pragma config CPUDIV = NOCLKDIV
 #pragma config LS48MHZ = SYS48X8
 
 
-#pragma config FOSC = HSH
+#pragma config FOSC = HSM
 #pragma config PCLKEN = ON
 #pragma config FCMEN = OFF
 #pragma config IESO = OFF
@@ -33,7 +33,7 @@
 
 
 #pragma config STVREN = ON
-#pragma config LVP = ON
+#pragma config LVP = OFF
 #pragma config ICPRT = OFF
 #pragma config XINST = OFF
 #pragma config DEBUG = OFF

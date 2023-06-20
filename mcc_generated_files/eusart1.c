@@ -70,17 +70,17 @@ void EUSART1_Initialize(void)
     // ABDOVF no_overflow; CKTXP async_noninverted_sync_fallingedge; BRG16 16bit_generator; WUE disabled; ABDEN disabled; DTRXP not_inverted; 
     BAUDCON1 = 0x08;
 
-    // SPEN enabled; RX9 8-bit; CREN enabled; ADDEN disabled; SREN disabled; 
-    RCSTA1 = 0x90;
+    // SPEN enabled; RX9 8-bit; CREN disabled; ADDEN disabled; SREN disabled; 
+    RCSTA1 = 0x80;
 
     // TX9 8-bit; TX9D 0; SENDB sync_break_complete; TXEN enabled; SYNC asynchronous; BRGH hi_speed; CSRC slave_mode; 
     TXSTA1 = 0x24;
 
-    // SPBRG1 225; 
-    SPBRG1 = 0xE1;
+    // SPBRG1 160; 
+    SPBRG1 = 0xA0;
 
-    // SPBRGH1 4; 
-    SPBRGH1 = 0x04;
+    // SPBRGH1 1; 
+    SPBRGH1 = 0x01;
 
 
     EUSART1_SetFramingErrorHandler(EUSART1_DefaultFramingErrorHandler);

@@ -5209,18 +5209,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart1.c: 71: BAUDCON1 = 0x08;
 "71
 [e = _BAUDCON1 -> -> 8 `i `uc ]
-[; ;eusart1.c: 74: RCSTA1 = 0x90;
+[; ;eusart1.c: 74: RCSTA1 = 0x80;
 "74
-[e = _RCSTA1 -> -> 144 `i `uc ]
+[e = _RCSTA1 -> -> 128 `i `uc ]
 [; ;eusart1.c: 77: TXSTA1 = 0x24;
 "77
 [e = _TXSTA1 -> -> 36 `i `uc ]
-[; ;eusart1.c: 80: SPBRG1 = 0xE1;
+[; ;eusart1.c: 80: SPBRG1 = 0xA0;
 "80
-[e = _SPBRG1 -> -> 225 `i `uc ]
-[; ;eusart1.c: 83: SPBRGH1 = 0x04;
+[e = _SPBRG1 -> -> 160 `i `uc ]
+[; ;eusart1.c: 83: SPBRGH1 = 0x01;
 "83
-[e = _SPBRGH1 -> -> 4 `i `uc ]
+[e = _SPBRGH1 -> -> 1 `i `uc ]
 [; ;eusart1.c: 86: EUSART1_SetFramingErrorHandler(EUSART1_DefaultFramingErrorHandler);
 "86
 [e ( _EUSART1_SetFramingErrorHandler (1 &U _EUSART1_DefaultFramingErrorHandler ]

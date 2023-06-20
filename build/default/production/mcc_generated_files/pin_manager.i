@@ -7674,10 +7674,10 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 166 "mcc_generated_files/pin_manager.h"
+# 156 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 178
+# 168
 void PIN_MANAGER_IOC(void);
 
 # 55 "mcc_generated_files/pin_manager.c"
@@ -7695,7 +7695,7 @@ TRISB = 0xFE;
 TRISC = 0x87;
 
 # 74
-ANSELC = 0x04;
+ANSELC = 0x84;
 ANSELB = 0x3C;
 ANSELA = 0x07;
 

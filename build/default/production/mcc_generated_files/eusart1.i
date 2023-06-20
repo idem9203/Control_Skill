@@ -7803,16 +7803,16 @@ void EUSART1_Initialize(void)
 BAUDCON1 = 0x08;
 
 
-RCSTA1 = 0x90;
+RCSTA1 = 0x80;
 
 
 TXSTA1 = 0x24;
 
 
-SPBRG1 = 0xE1;
+SPBRG1 = 0xA0;
 
 
-SPBRGH1 = 0x04;
+SPBRGH1 = 0x01;
 
 
 EUSART1_SetFramingErrorHandler(EUSART1_DefaultFramingErrorHandler);

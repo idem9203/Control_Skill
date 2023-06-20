@@ -5073,8 +5073,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\pic18.h: 158: __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 [; ;xc8\pic\include\pic18.h: 192: unsigned char __t1rd16on(void);
 [; ;xc8\pic\include\pic18.h: 193: unsigned char __t3rd16on(void);
-[; ;pin_manager.h: 166: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 178: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 156: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 168: void PIN_MANAGER_IOC(void);
 "55 mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
 "56
@@ -5101,9 +5101,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.c: 69: TRISC = 0x87;
 "69
 [e = _TRISC -> -> 135 `i `uc ]
-[; ;pin_manager.c: 74: ANSELC = 0x04;
+[; ;pin_manager.c: 74: ANSELC = 0x84;
 "74
-[e = _ANSELC -> -> 4 `i `uc ]
+[e = _ANSELC -> -> 132 `i `uc ]
 [; ;pin_manager.c: 75: ANSELB = 0x3C;
 "75
 [e = _ANSELB -> -> 60 `i `uc ]

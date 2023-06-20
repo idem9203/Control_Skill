@@ -223,7 +223,15 @@ extern double round(double);
 # 12 "C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\doprnt.c"
 #pragma warning disable 350
 
-# 366
+# 358
+const static unsigned long dpowers[] = {1, 10, 100, 1000, 10000,
+
+100000, 1000000, 10000000, 100000000,
+1000000000
+
+};
+
+
 const static unsigned long hexpowers[] = {1, 0x10, 0x100, 0x1000,
 
 0x10000, 0x100000, 0x1000000, 0x10000000
@@ -289,10 +297,17 @@ case 'l':
 flag |= 0x10;
 goto loop;
 
+# 723
+case 'd':
+case 'i':
+break;
+
 # 744
 case 'x':
 
-# 749
+
+flag |= 0x80;
+
 break;
 
 # 828
@@ -304,7 +319,29 @@ continue;
 # 848
 }
 
-# 1299
+# 1277
+if((flag & 0x80) == 0x00)
+
+{
+
+if(flag & 0x10)
+val = (unsigned long)(*(long *)__va_arg((*(long **)ap), (long)0));
+else
+
+val = (unsigned long)(*(int *)__va_arg((*(int **)ap), (int)0));
+
+if((long)val < 0) {
+flag |= 0x03;
+val = -val;
+}
+
+}
+
+else
+
+
+
+
 {
 
 # 1307
@@ -316,13 +353,41 @@ else
 val = (*(unsigned *)__va_arg((*(unsigned **)ap), (unsigned)0));
 }
 
-# 1342
+# 1320
+switch((unsigned char)(flag & 0x80)) {
+
+
+
+
+case 0x00:
+
+# 1331
+for(c = 1 ; c != sizeof dpowers/sizeof dpowers[0] ; c++)
+if(val < dpowers[c])
+break;
+
+break;
+
+
+
+
+case 0x80:
+
 for(c = 1 ; c != sizeof hexpowers/sizeof hexpowers[0] ; c++)
 if(val < hexpowers[c])
 break;
 
+break;
+
+# 1362
+}
+
 # 1448
 {
+
+# 1464
+if(flag & 0x03)
+((*sp++ = ('-')));
 
 # 1495
 }
@@ -332,10 +397,23 @@ prec = c;
 
 while(prec--) {
 
-# 1504
+switch((unsigned char)(flag & 0x80))
+
 {
 
-# 1525
+
+
+
+case 0x00:
+
+# 1515
+c = (val / dpowers[(unsigned int)prec]) % 10 + '0';
+
+break;
+
+# 1523
+case 0x80:
+
 {
 unsigned char idx = (val / hexpowers[(unsigned int)prec]) & 0xF;
 
@@ -343,6 +421,8 @@ unsigned char idx = (val / hexpowers[(unsigned int)prec]) & 0xF;
 c = "0123456789abcdef"[idx];
 
 }
+
+break;
 
 # 1549
 }

@@ -160,13 +160,12 @@ void TMR0_StartTimer(void);
 */
 void TMR0_StopTimer(void);
 
-
 /**
   @Summary
-    Reads the 16 bits TMR0 register value.
+    Reads the 8 bits TMR0 register value.
 
   @Description
-    This function reads the 16 bits TMR0 register value and return it.
+    This function reads the 8 bits TMR0 register value and return it.
 
   @Preconditions
     Initialize  the TMR0 before calling this function.
@@ -175,7 +174,7 @@ void TMR0_StopTimer(void);
     None
 
   @Returns
-    This function returns the 16 bits value of TMR0 register.
+    This function returns the 8 bits value of TMR0 register.
 
   @Example
     <code>
@@ -194,14 +193,14 @@ void TMR0_StopTimer(void);
     }
     </code>
 */
-uint16_t TMR0_ReadTimer(void);
+uint8_t TMR0_ReadTimer(void);
 
 /**
   @Summary
-    Writes the 16 bits value to TMR0 register.
+    Writes the 8 bits value to TMR0 register.
 
   @Description
-    This function writes the 16 bits value to TMR0 register.
+    This function writes the 8 bits value to TMR0 register.
     This function must be called after the initialization of TMR0.
 
   @Preconditions
@@ -215,12 +214,12 @@ uint16_t TMR0_ReadTimer(void);
 
   @Example
     <code>
-    #define PERIOD 0x8000
-    #define ZERO   0x0000
+    #define PERIOD 0x80
+    #define ZERO   0x00
 
     while(1)
     {
-        //Read the TMR0 register
+        // Read the TMR0 register
         if(ZERO == TMR0_ReadTimer())
         {
             // Do something else...
@@ -233,14 +232,14 @@ uint16_t TMR0_ReadTimer(void);
     }
     </code>
 */
-void TMR0_WriteTimer(uint16_t timerVal);
+void TMR0_WriteTimer(uint8_t timerVal);
 
 /**
   @Summary
-    Reload the 16 bits value to TMR0 register.
+    Reload the 8 bits value to TMR0 register.
 
   @Description
-    This function reloads the 16 bit value to TMR0 register.
+    This function reloads the 8 bit value to TMR0 register.
     This function must be called to write initial value into TMR0 register.
 
   @Preconditions
@@ -271,78 +270,44 @@ void TMR0_WriteTimer(uint16_t timerVal);
 */
 void TMR0_Reload(void);
 
+
 /**
   @Summary
-    Timer Interrupt Service Routine
+    Boolean routine to poll or to check for the overflow flag on the fly.
 
   @Description
-    Timer Interrupt Service Routine is called by the Interrupt Manager.
+    This function is called to check for the timer overflow flag.
+    This function is usd in timer polling method.
 
   @Preconditions
-    Initialize  the TMR0 module with interrupt before calling this isr.
+    Initialize  the TMR0 module before calling this routine.
 
   @Param
     None
 
   @Returns
-    None
- */
-void TMR0_ISR(void);
+    true - timer overflow has occured.
+    false - timer overflow has not occured.
 
+  @Example
+    <code>
+    while(1)
+    {
+        // check the overflow flag
+        if(TMR0_HasOverflowOccured())
+        {
+            // Do something else...
 
-/**
-  @Summary
-    Set Timer Interrupt Handler
+            // clear the TMR0 interrupt flag
+            TMR0IF = 0;
 
-  @Description
-    This sets the function to be called during the ISR
-
-  @Preconditions
-    Initialize  the TMR0 module with interrupt before calling this.
-
-  @Param
-    Address of function to be set
-
-  @Returns
-    None
+            // Reload the TMR0 value
+            TMR0_Reload();
+        }
+    }
+    </code>
 */
- void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-
-/**
-  @Summary
-    Timer Interrupt Handler
-
-  @Description
-    This is a function pointer to the function that will be called during the ISR
-
-  @Preconditions
-    Initialize  the TMR0 module with interrupt before calling this isr.
-
-  @Param
-    None
-
-  @Returns
-    None
-*/
-extern void (*TMR0_InterruptHandler)(void);
-
-/**
-  @Summary
-    Default Timer Interrupt Handler
-
-  @Description
-    This is the default Interrupt Handler function
-
-  @Preconditions
-    Initialize  the TMR0 module with interrupt before calling this isr.
-
-  @Param
-    None
-
-  @Returns
-    None
-*/
-void TMR0_DefaultInterruptHandler(void);
+bool TMR0_HasOverflowOccured(void);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 

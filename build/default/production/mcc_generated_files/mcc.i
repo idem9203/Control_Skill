@@ -7674,10 +7674,10 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 166 "mcc_generated_files/pin_manager.h"
+# 156 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 178
+# 168
 void PIN_MANAGER_IOC(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
@@ -7700,10 +7700,7 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 
-# 110 "mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
-
-# 251 "mcc_generated_files/ext_int.h"
+# 53 "mcc_generated_files/interrupt_manager.h"
 char flag_codigo=0;
 unsigned int cuenta=0;
 unsigned char cont;
@@ -7712,22 +7709,25 @@ unsigned char timer_aux;
 unsigned char tiempo[70];
 unsigned long codigo_ir;
 
+# 119
+void INTERRUPT_Initialize (void);
 
+# 253 "mcc_generated_files/ext_int.h"
 void EXT_INT_Initialize(void);
 
-# 282
+# 275
 void INT1_ISR(void);
 
-# 306
+# 299
 void INT1_CallBack(void);
 
-# 329
+# 322
 void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
 
-# 353
+# 346
 extern void (*INT1_InterruptHandler)(void);
 
-# 377
+# 370
 void INT1_DefaultInterruptHandler(void);
 
 void normaliza(void);
@@ -7746,26 +7746,17 @@ void TMR0_StartTimer(void);
 # 161
 void TMR0_StopTimer(void);
 
-# 197
-uint16_t TMR0_ReadTimer(void);
+# 196
+uint8_t TMR0_ReadTimer(void);
 
-# 236
-void TMR0_WriteTimer(uint16_t timerVal);
+# 235
+void TMR0_WriteTimer(uint8_t timerVal);
 
-# 272
+# 271
 void TMR0_Reload(void);
 
-# 290
-void TMR0_ISR(void);
-
-# 309
-void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-
-# 327
-extern void (*TMR0_InterruptHandler)(void);
-
-# 345
-void TMR0_DefaultInterruptHandler(void);
+# 310
+bool TMR0_HasOverflowOccured(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -7887,9 +7878,5 @@ OSCCON2 = 0x00;
 OSCTUNE = 0x80;
 
 ACTCON = 0x00;
-
-while(PLLRDY == 0)
-{
-}
 }
 

@@ -32,47 +32,15 @@ void (*INT1_InterruptHandler)(void);
 void INT1_ISR(void)
 {
     EXT_INT1_InterruptFlagClear();
-
+    
     // Callback function gets called everytime this ISR executes
-    INT1_CallBack();    
+    INT1_CallBack();   
 }
 
 
 void INT1_CallBack(void)
 {
-    // Add your custom callback code here
-    if (INT1IF == 1)
-    {
-
-
-       //el analasis se hace solo
-       if (flag_codigo == 0)
-       {
-           if (cuenta != 0)
-           {
-               timer_aux = TMR0; //captura el valor del timer
-               TMR0 = 0; // resetea el timer para otra lectura
-               tiempo[cuenta - 1] = timer_aux;     // CARGA UN BUUFER CON LOS DATOS
-               cuenta++;
-               INTEDG1 = !INTEDG1;
-
-               if (TMR0IF == 1)  // si hubo desborde del timer , fin de datos
-               {
-                   cuenta--;// omite el codigo de ultimo desborde
-                   flag_codigo = 1;
-                   INT1E = 0; //deshabilita la interrpcuion
-               }
-            }
-           else
-           {
-               TMR0IF = 0;// limpia la bansera timer
-               TMR0 = 0;   // resetea el timer
-               cuenta++;
-           }
-       }
-    }
-    INT1IF = 0;
-    
+    // Add your custom callback code here     
     if(INT1_InterruptHandler)
     {
         INT1_InterruptHandler();
@@ -84,7 +52,7 @@ void INT1_SetInterruptHandler(void (* InterruptHandler)(void)){
 }
 
 void INT1_DefaultInterruptHandler(void){
-    // add your INT1 interrupt custom code
+    // add your INT1 interrupt custom code 
     // or set custom function using INT1_SetInterruptHandler()
 }
 
@@ -94,7 +62,7 @@ void EXT_INT_Initialize(void)
     // Clear the interrupt flag
     // Set the external interrupt edge detect
     EXT_INT1_InterruptFlagClear();   
-    EXT_INT1_risingEdgeSet();    
+    EXT_INT1_fallingEdgeSet();    
     // Set Default Interrupt Handler
     INT1_SetInterruptHandler(INT1_DefaultInterruptHandler);
     EXT_INT1_InterruptEnable();      
