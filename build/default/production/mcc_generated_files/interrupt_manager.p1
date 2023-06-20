@@ -54,7 +54,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S571 . . . ]
 "12274
 [v _INTCON3bits `VS571 ~T0 @X0 0 e@4080 ]
-"272 mcc_generated_files/ext_int.h
+"282 mcc_generated_files/ext_int.h
 [v _INT1_ISR `(v ~T0 @X0 0 ef ]
 [; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
@@ -5095,12 +5095,41 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;conio.h: 19: extern __bit kbhit(void);
 [; ;conio.h: 23: extern char * cgets(char *);
 [; ;conio.h: 24: extern void cputs(const char *);
-[; ;ext_int.h: 250: void EXT_INT_Initialize(void);
-[; ;ext_int.h: 272: void INT1_ISR(void);
-[; ;ext_int.h: 296: void INT1_CallBack(void);
-[; ;ext_int.h: 319: void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
-[; ;ext_int.h: 343: extern void (*INT1_InterruptHandler)(void);
-[; ;ext_int.h: 367: void INT1_DefaultInterruptHandler(void);
+"251 mcc_generated_files/ext_int.h
+[v _flag_codigo `uc ~T0 @X0 1 e ]
+[i _flag_codigo
+-> -> 0 `i `uc
+]
+[; ;ext_int.h: 251: char flag_codigo=0;
+"252
+[v _cuenta `ui ~T0 @X0 1 e ]
+[i _cuenta
+-> -> 0 `i `ui
+]
+[; ;ext_int.h: 252: unsigned int cuenta=0;
+"253
+[v _cont `uc ~T0 @X0 1 e ]
+[; ;ext_int.h: 253: unsigned char cont;
+"254
+[v _texto `uc ~T0 @X0 -> 10 `i e ]
+[; ;ext_int.h: 254: char texto[10];
+"255
+[v _timer_aux `uc ~T0 @X0 1 e ]
+[; ;ext_int.h: 255: unsigned char timer_aux;
+"256
+[v _tiempo `uc ~T0 @X0 -> 70 `i e ]
+[; ;ext_int.h: 256: unsigned char tiempo[70];
+"257
+[v _codigo_ir `ul ~T0 @X0 1 e ]
+[; ;ext_int.h: 257: unsigned long codigo_ir;
+[; ;ext_int.h: 260: void EXT_INT_Initialize(void);
+[; ;ext_int.h: 282: void INT1_ISR(void);
+[; ;ext_int.h: 306: void INT1_CallBack(void);
+[; ;ext_int.h: 329: void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;ext_int.h: 353: extern void (*INT1_InterruptHandler)(void);
+[; ;ext_int.h: 377: void INT1_DefaultInterruptHandler(void);
+[; ;ext_int.h: 379: void normaliza(void);
+[; ;ext_int.h: 381: unsigned long Hash_algoritmo ();
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr0.h: 100: void TMR0_Initialize(void);
 [; ;tmr0.h: 129: void TMR0_StartTimer(void);

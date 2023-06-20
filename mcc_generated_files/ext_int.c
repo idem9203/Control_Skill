@@ -41,6 +41,37 @@ void INT1_ISR(void)
 void INT1_CallBack(void)
 {
     // Add your custom callback code here
+    if (INT1IF == 1)
+    {
+
+
+       //el analasis se hace solo
+       if (flag_codigo == 0)
+       {
+           if (cuenta != 0)
+           {
+               timer_aux = TMR0; //captura el valor del timer
+               TMR0 = 0; // resetea el timer para otra lectura
+               tiempo[cuenta - 1] = timer_aux;     // CARGA UN BUUFER CON LOS DATOS
+               cuenta++;
+               INTEDG1 = !INTEDG1;
+
+               if (TMR0IF == 1)  // si hubo desborde del timer , fin de datos
+               {
+                   cuenta--;// omite el codigo de ultimo desborde
+                   flag_codigo = 1;
+                   INT1E = 0; //deshabilita la interrpcuion
+               }
+            }
+           else
+           {
+               TMR0IF = 0;// limpia la bansera timer
+               TMR0 = 0;   // resetea el timer
+               cuenta++;
+           }
+       }
+    }
+    INT1IF = 0;
     
     if(INT1_InterruptHandler)
     {

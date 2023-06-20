@@ -50,36 +50,93 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 // PARA USO DEL MODULO NRF24L01
-#include "Librerias/nRF24L01.h"
-
-#define spi_miso PORTBbits.RB3
-#define spi_clock LATBbits.LATB2
-#define spi_mosi LATCbits.LATC1
-#define SPI_CS LATCbits.LATC2
-#define CE_2401 LATBbits.LATB1
-#define INT_2401 PORTCbits.RC0
-
-#define spi_miso_Direction TRISBbits.TRISB3
-#define spi_clock_Direction TRISBbits.TRISB2
-#define spi_mosi_Direction TRISCbits.TRISC1
-#define SPI_CS_Direction TRISCbits.TRISC2
-#define CE_2401_Direction TRISBbits.TRISB1
-#define INT_2401_Direction TRISCbits.TRISC0
-
-const unsigned char direccion_tx[5] = {17, 17, 17, 17, 17};                     //direccion de transmision.
-const unsigned char direccion_rx[5] = {17, 17, 17, 17, 17};                     //direccion de recepcion.
-
-#include "Librerias/nRF24L01_2.h"
+//#include "Librerias/nRF24L01.h"
+//
+//#define spi_miso PORTBbits.RB3
+//#define spi_clock LATBbits.LATB2
+//#define spi_mosi LATCbits.LATC1
+//#define SPI_CS LATCbits.LATC2
+//#define CE_2401 LATBbits.LATB1
+//#define INT_2401 PORTCbits.RC0
+//
+//#define spi_miso_Direction TRISBbits.TRISB3
+//#define spi_clock_Direction TRISBbits.TRISB2
+//#define spi_mosi_Direction TRISCbits.TRISC1
+//#define SPI_CS_Direction TRISCbits.TRISC2
+//#define CE_2401_Direction TRISBbits.TRISB1
+//#define INT_2401_Direction TRISCbits.TRISC0
+//
+//const unsigned char direccion_tx[5] = {17, 17, 17, 17, 17};                     //direccion de transmision.
+//const unsigned char direccion_rx[5] = {17, 17, 17, 17, 17};                     //direccion de recepcion.
+//
+//#include "Librerias/nRF24L01_2.h"
 //END //////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////// DECLARACION DE VARIABLES
-char procesa[30];
-char trama[30];
-char trama[30];
-char puntero = 0;
-char datorx;
-char flag_rx = 0;
+
+
+
+
+
+
+#define led1 LATA3
+#define led2 LATA4
+#define led3 LATA5
+
+//char procesa[30];
+//char trama[30];
+//char trama[30];
+//char puntero = 0;
+//char datorx;
+//char flag_rx = 0;
+
+  //define codigos a analizar
+#define inicio 138  /// no interesa
+#define cod1 6
+#define cod2 10
+#define cod3 22
+
+#define paso 2  // desviacion del Tiempo en el codigo leido +-2 en este caso opcional                                                               en esyte caso
+#define paso1 3   // desviacion del Tiempo en el codigo leido +-3 en este caso
+
+// ALGORITMO HASH
+#define FNV_PRIME 16777619
+#define FNV_BASIS 2166136261
+
+
+void normaliza()
+{
+    //UART1_Write_Text("NOR=\r\n");
+    //UART1_Write('{');
+
+    for (cont=0;cont<cuenta-1+2;cont++)      //toma dos datos adicionales
+    {
+        if   (tiempo[cont+2] <(float)tiempo[cont] * .8)  tiempo[cont]=0 ;
+        else if (tiempo[cont] <(float)tiempo[cont+2] * .8)  tiempo[cont]= 2 ;
+        else  tiempo[cont]=1 ;
+        /*     ByteToStr(tiempo[cont],texto);
+         UART1_Write_Text(texto);
+         UART1_Write(',');
+        */
+    }
+        /* UART1_Write('}');
+         UART1_Write('\r');
+         UART1_Write('\n');  
+         */
+}
+
+unsigned long Hash_algoritmo ()
+{
+    unsigned long hash_acum = FNV_BASIS;
+    for (cont = 0; cont < cuenta - 1; cont++)
+    {
+        hash_acum = (hash_acum * FNV_PRIME) ^ tiempo[cont];
+    }
+    return (hash_acum);
+}
+
+
 
 //END //////////////////////////////////////////////////////////////////////////
 
@@ -130,6 +187,10 @@ char flag_rx = 0;
 //}
 //END //////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
+// FUNCION 
+//END //////////////////////////////////////////////////////////////////////////
+
 /*
                          Main application
  */
@@ -139,6 +200,10 @@ void main(void)
     // Initialize the device
     SYSTEM_Initialize();
     
+    ANSELA = 0b00000111;
+    ANSELB = 0b01000000;
+    ANSELC = 0x00;                                                              //Todo el puerto C lo hace digital
+    TRISBbits.TRISB1 = 1;
 
     // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
     // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
@@ -155,10 +220,6 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    
-    ANSELA = 0b00000111;
-    ANSELB = 0b00000000;
-    ANSELC = 0x00;                                                              //Todo el puerto C lo hace digital
 
 //    INTCON = 0b01000000;                                                        //Habilita interrupciones de perifericos
 //    RCIF = 0;                                                                   //Limpia bandera interrupcion serial
@@ -167,16 +228,53 @@ void main(void)
     while (1)
     {
         // Add your application code
-        
-//        if (flag_rx == 1)
-//        {
-//            procesarx();                                                        //Llama el procedimiento de procesar la trama
-//            puntero = 0;                                                        //Inicializa el conteo
-//            memset (trama, 0, 30);                                              //Limpia la trama
-//            flag_rx = 0;
-//            RCIF = 0;                                                           //Limpia la bandera de la interrupcion
-//            RCIE = 1;                                                           //Habilita la interrupcion serial
-//        }
+        if (flag_codigo == 1)
+        {
+
+            
+            normaliza(); //normaliza los codigos a las constantes analizadas
+            codigo_ir = Hash_algoritmo();
+            EUSART1_Write("Son: ");
+            memcpy(texto, cuenta, sizeof(cuenta));
+            EUSART1_Write(texto);
+            EUSART1_Write("\r");
+            EUSART1_Write("\n");
+            sprintf(texto, "%lx", codigo_ir);
+            EUSART1_Write("CODIGO IR = ");
+            EUSART1_Write(texto);
+            EUSART1_Write("\r");
+            EUSART1_Write("\n");
+            
+            if (codigo_ir == 0xBF681DA0)
+            {
+                led1 =~ led1;
+                EUSART1_Write("COMANDO1");
+
+            }
+            else if (codigo_ir == 0xBF681DA0)
+            {
+                led2 =~ led2;
+                EUSART1_Write("COMANDO2");
+            }
+
+            else if (codigo_ir == 0xBF681DA0)
+            {
+                led3 =~ led3;
+                EUSART1_Write("COMANDO3");
+            }
+            codigo_ir = 0;
+
+            __delay_ms(2000);
+           
+            flag_codigo = 0;
+            cuenta = 0;
+            INTEDG1 = 0; // for flanco de bajada
+            INT1IF = 0; // limpia la badera de interrpcion
+            INT1E = 1; //  habilita la interrpcion for flanco
+        }
+        __delay_ms(80);
+        LATB0 =~ LATB0; 
+        putch("Son: ");
     }
 }
 /**

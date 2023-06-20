@@ -247,6 +247,16 @@ extern "C" {
     </code>
 
 */
+    
+char flag_codigo=0;
+unsigned int cuenta=0;  // almacenar #datos
+unsigned char cont; // contador para for
+char texto[10];   // usado para convertir numeros a cadena
+unsigned char timer_aux;
+unsigned char tiempo[70];        // en has sumar dos al numero de datos leidos
+unsigned long codigo_ir; // variable salida has que almcena codigo unico
+    
+    
 void EXT_INT_Initialize(void);
 
 /**
@@ -365,6 +375,10 @@ extern void (*INT1_InterruptHandler)(void);
 
 */
 void INT1_DefaultInterruptHandler(void);
+
+void normaliza(void);
+
+unsigned long Hash_algoritmo ();
 
 // Provide C++ Compatibility
 #ifdef __cplusplus  

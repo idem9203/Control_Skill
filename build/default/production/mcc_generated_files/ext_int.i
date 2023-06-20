@@ -7674,23 +7674,36 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 250 "mcc_generated_files/ext_int.h"
+# 251 "mcc_generated_files/ext_int.h"
+char flag_codigo=0;
+unsigned int cuenta=0;
+unsigned char cont;
+char texto[10];
+unsigned char timer_aux;
+unsigned char tiempo[70];
+unsigned long codigo_ir;
+
+
 void EXT_INT_Initialize(void);
 
-# 272
+# 282
 void INT1_ISR(void);
 
-# 296
+# 306
 void INT1_CallBack(void);
 
-# 319
+# 329
 void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
 
-# 343
+# 353
 extern void (*INT1_InterruptHandler)(void);
 
-# 367
+# 377
 void INT1_DefaultInterruptHandler(void);
+
+void normaliza(void);
+
+unsigned long Hash_algoritmo ();
 
 # 30 "mcc_generated_files/ext_int.c"
 void (*INT1_InterruptHandler)(void);
@@ -7707,6 +7720,37 @@ INT1_CallBack();
 void INT1_CallBack(void)
 {
 
+if (INT1IF == 1)
+{
+
+
+
+if (flag_codigo == 0)
+{
+if (cuenta != 0)
+{
+timer_aux = TMR0;
+TMR0 = 0;
+tiempo[cuenta - 1] = timer_aux;
+cuenta++;
+INTEDG1 = !INTEDG1;
+
+if (TMR0IF == 1)
+{
+cuenta--;
+flag_codigo = 1;
+INT1E = 0;
+}
+}
+else
+{
+TMR0IF = 0;
+TMR0 = 0;
+cuenta++;
+}
+}
+}
+INT1IF = 0;
 
 if(INT1_InterruptHandler)
 {

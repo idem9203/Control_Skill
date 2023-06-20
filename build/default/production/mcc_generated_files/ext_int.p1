@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F4461 `(v ~T0 @X0 0 tf ]
+[v F4468 `(v ~T0 @X0 0 tf ]
 "12253 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
 [s S572 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S572 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
@@ -11,10 +11,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S571 . . . ]
 "12274
 [v _INTCON3bits `VS571 ~T0 @X0 0 e@4080 ]
-"296 mcc_generated_files/ext_int.h
+"306 mcc_generated_files/ext_int.h
 [v _INT1_CallBack `(v ~T0 @X0 0 ef ]
-[v F4458 `(v ~T0 @X0 0 tf ]
-"12345 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
+"14159 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
+[v _INT1IF `Vb ~T0 @X0 0 e@32640 ]
+"11700
+[v _TMR0 `Vus ~T0 @X0 0 e@4054 ]
+"14192
+[v _INTEDG1 `Vb ~T0 @X0 0 e@32653 ]
+"15386
+[v _TMR0IF `Vb ~T0 @X0 0 e@32658 ]
+"14150
+[v _INT1E `Vb ~T0 @X0 0 e@32643 ]
+[v F4465 `(v ~T0 @X0 0 tf ]
+"12345
 [s S575 :7 `uc 1 :1 `uc 1 ]
 [n S575 . . NOT_RBPU ]
 "12349
@@ -5054,14 +5064,43 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\pic18.h: 158: __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 [; ;xc8\pic\include\pic18.h: 192: unsigned char __t1rd16on(void);
 [; ;xc8\pic\include\pic18.h: 193: unsigned char __t3rd16on(void);
-[; ;ext_int.h: 250: void EXT_INT_Initialize(void);
-[; ;ext_int.h: 272: void INT1_ISR(void);
-[; ;ext_int.h: 296: void INT1_CallBack(void);
-[; ;ext_int.h: 319: void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
-[; ;ext_int.h: 343: extern void (*INT1_InterruptHandler)(void);
-[; ;ext_int.h: 367: void INT1_DefaultInterruptHandler(void);
+"251 mcc_generated_files/ext_int.h
+[v _flag_codigo `uc ~T0 @X0 1 e ]
+[i _flag_codigo
+-> -> 0 `i `uc
+]
+[; ;ext_int.h: 251: char flag_codigo=0;
+"252
+[v _cuenta `ui ~T0 @X0 1 e ]
+[i _cuenta
+-> -> 0 `i `ui
+]
+[; ;ext_int.h: 252: unsigned int cuenta=0;
+"253
+[v _cont `uc ~T0 @X0 1 e ]
+[; ;ext_int.h: 253: unsigned char cont;
+"254
+[v _texto `uc ~T0 @X0 -> 10 `i e ]
+[; ;ext_int.h: 254: char texto[10];
+"255
+[v _timer_aux `uc ~T0 @X0 1 e ]
+[; ;ext_int.h: 255: unsigned char timer_aux;
+"256
+[v _tiempo `uc ~T0 @X0 -> 70 `i e ]
+[; ;ext_int.h: 256: unsigned char tiempo[70];
+"257
+[v _codigo_ir `ul ~T0 @X0 1 e ]
+[; ;ext_int.h: 257: unsigned long codigo_ir;
+[; ;ext_int.h: 260: void EXT_INT_Initialize(void);
+[; ;ext_int.h: 282: void INT1_ISR(void);
+[; ;ext_int.h: 306: void INT1_CallBack(void);
+[; ;ext_int.h: 329: void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;ext_int.h: 353: extern void (*INT1_InterruptHandler)(void);
+[; ;ext_int.h: 377: void INT1_DefaultInterruptHandler(void);
+[; ;ext_int.h: 379: void normaliza(void);
+[; ;ext_int.h: 381: unsigned long Hash_algoritmo ();
 "30 mcc_generated_files/ext_int.c
-[v _INT1_InterruptHandler `*F4461 ~T0 @X0 1 e ]
+[v _INT1_InterruptHandler `*F4468 ~T0 @X0 1 e ]
 [; ;ext_int.c: 30: void (*INT1_InterruptHandler)(void);
 "32
 [v _INT1_ISR `(v ~T0 @X0 1 ef ]
@@ -5089,69 +5128,155 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ext_int.c: 42: {
 [e :U _INT1_CallBack ]
 [f ]
-[; ;ext_int.c: 45: if(INT1_InterruptHandler)
+[; ;ext_int.c: 44: if (INT1IF == 1)
+"44
+[e $ ! == -> _INT1IF `i -> 1 `i 605  ]
+[; ;ext_int.c: 45: {
 "45
-[e $ ! != _INT1_InterruptHandler -> -> 0 `i `*F4461 605  ]
-[; ;ext_int.c: 46: {
-"46
 {
-[; ;ext_int.c: 47: INT1_InterruptHandler();
-"47
-[e ( *U _INT1_InterruptHandler ..  ]
-"48
+[; ;ext_int.c: 49: if (flag_codigo == 0)
+"49
+[e $ ! == -> _flag_codigo `i -> 0 `i 606  ]
+[; ;ext_int.c: 50: {
+"50
+{
+[; ;ext_int.c: 51: if (cuenta != 0)
+"51
+[e $ ! != _cuenta -> -> 0 `i `ui 607  ]
+[; ;ext_int.c: 52: {
+"52
+{
+[; ;ext_int.c: 53: timer_aux = TMR0;
+"53
+[e = _timer_aux -> _TMR0 `uc ]
+[; ;ext_int.c: 54: TMR0 = 0;
+"54
+[e = _TMR0 -> -> 0 `i `us ]
+[; ;ext_int.c: 55: tiempo[cuenta - 1] = timer_aux;
+"55
+[e = *U + &U _tiempo * -> - _cuenta -> -> 1 `i `ui `ux -> -> # *U &U _tiempo `ui `ux _timer_aux ]
+[; ;ext_int.c: 56: cuenta++;
+"56
+[e ++ _cuenta -> -> 1 `i `ui ]
+[; ;ext_int.c: 57: INTEDG1 = !INTEDG1;
+"57
+[e = _INTEDG1 ! _INTEDG1 ]
+[; ;ext_int.c: 59: if (TMR0IF == 1)
+"59
+[e $ ! == -> _TMR0IF `i -> 1 `i 608  ]
+[; ;ext_int.c: 60: {
+"60
+{
+[; ;ext_int.c: 61: cuenta--;
+"61
+[e -- _cuenta -> -> 1 `i `ui ]
+[; ;ext_int.c: 62: flag_codigo = 1;
+"62
+[e = _flag_codigo -> -> 1 `i `uc ]
+[; ;ext_int.c: 63: INT1E = 0;
+"63
+[e = _INT1E -> -> 0 `i `b ]
+"64
+}
+[e :U 608 ]
+"65
+}
+[; ;ext_int.c: 64: }
+[; ;ext_int.c: 65: }
+[e $U 609  ]
+"66
+[e :U 607 ]
+[; ;ext_int.c: 66: else
+[; ;ext_int.c: 67: {
+"67
+{
+[; ;ext_int.c: 68: TMR0IF = 0;
+"68
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;ext_int.c: 69: TMR0 = 0;
+"69
+[e = _TMR0 -> -> 0 `i `us ]
+[; ;ext_int.c: 70: cuenta++;
+"70
+[e ++ _cuenta -> -> 1 `i `ui ]
+"71
+}
+[e :U 609 ]
+"72
+}
+[e :U 606 ]
+"73
 }
 [e :U 605 ]
-[; ;ext_int.c: 48: }
-[; ;ext_int.c: 49: }
-"49
+[; ;ext_int.c: 71: }
+[; ;ext_int.c: 72: }
+[; ;ext_int.c: 73: }
+[; ;ext_int.c: 74: INT1IF = 0;
+"74
+[e = _INT1IF -> -> 0 `i `b ]
+[; ;ext_int.c: 76: if(INT1_InterruptHandler)
+"76
+[e $ ! != _INT1_InterruptHandler -> -> 0 `i `*F4468 610  ]
+[; ;ext_int.c: 77: {
+"77
+{
+[; ;ext_int.c: 78: INT1_InterruptHandler();
+"78
+[e ( *U _INT1_InterruptHandler ..  ]
+"79
+}
+[e :U 610 ]
+[; ;ext_int.c: 79: }
+[; ;ext_int.c: 80: }
+"80
 [e :UE 604 ]
 }
-"51
-[v _INT1_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F4458 ]
+"82
+[v _INT1_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F4465 ]
 {
-[; ;ext_int.c: 51: void INT1_SetInterruptHandler(void (* InterruptHandler)(void)){
+[; ;ext_int.c: 82: void INT1_SetInterruptHandler(void (* InterruptHandler)(void)){
 [e :U _INT1_SetInterruptHandler ]
-[v F4470 `(v ~T0 @X0 0 tf ]
-[v _InterruptHandler `*F4470 ~T0 @X0 1 r1 ]
+[v F4480 `(v ~T0 @X0 0 tf ]
+[v _InterruptHandler `*F4480 ~T0 @X0 1 r1 ]
 [f ]
-[; ;ext_int.c: 52: INT1_InterruptHandler = InterruptHandler;
-"52
+[; ;ext_int.c: 83: INT1_InterruptHandler = InterruptHandler;
+"83
 [e = _INT1_InterruptHandler _InterruptHandler ]
-[; ;ext_int.c: 53: }
-"53
-[e :UE 606 ]
+[; ;ext_int.c: 84: }
+"84
+[e :UE 611 ]
 }
-"55
+"86
 [v _INT1_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
-[; ;ext_int.c: 55: void INT1_DefaultInterruptHandler(void){
+[; ;ext_int.c: 86: void INT1_DefaultInterruptHandler(void){
 [e :U _INT1_DefaultInterruptHandler ]
 [f ]
-[; ;ext_int.c: 58: }
-"58
-[e :UE 607 ]
+[; ;ext_int.c: 89: }
+"89
+[e :UE 612 ]
 }
-"60
+"91
 [v _EXT_INT_Initialize `(v ~T0 @X0 1 ef ]
-"61
+"92
 {
-[; ;ext_int.c: 60: void EXT_INT_Initialize(void)
-[; ;ext_int.c: 61: {
+[; ;ext_int.c: 91: void EXT_INT_Initialize(void)
+[; ;ext_int.c: 92: {
 [e :U _EXT_INT_Initialize ]
 [f ]
-[; ;ext_int.c: 65: (INTCON3bits.INT1IF = 0);
-"65
+[; ;ext_int.c: 96: (INTCON3bits.INT1IF = 0);
+"96
 [e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-[; ;ext_int.c: 66: (INTCON2bits.INTEDG1 = 1);
-"66
+[; ;ext_int.c: 97: (INTCON2bits.INTEDG1 = 1);
+"97
 [e = . . _INTCON2bits 1 5 -> -> 1 `i `uc ]
-[; ;ext_int.c: 68: INT1_SetInterruptHandler(INT1_DefaultInterruptHandler);
-"68
+[; ;ext_int.c: 99: INT1_SetInterruptHandler(INT1_DefaultInterruptHandler);
+"99
 [e ( _INT1_SetInterruptHandler (1 &U _INT1_DefaultInterruptHandler ]
-[; ;ext_int.c: 69: (INTCON3bits.INT1IE = 1);
-"69
+[; ;ext_int.c: 100: (INTCON3bits.INT1IE = 1);
+"100
 [e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
-[; ;ext_int.c: 71: }
-"71
-[e :UE 608 ]
+[; ;ext_int.c: 102: }
+"102
+[e :UE 613 ]
 }

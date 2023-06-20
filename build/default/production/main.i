@@ -7703,23 +7703,36 @@ extern void cputs(const char *);
 # 110 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
-# 250 "mcc_generated_files/ext_int.h"
+# 251 "mcc_generated_files/ext_int.h"
+char flag_codigo=0;
+unsigned int cuenta=0;
+unsigned char cont;
+char texto[10];
+unsigned char timer_aux;
+unsigned char tiempo[70];
+unsigned long codigo_ir;
+
+
 void EXT_INT_Initialize(void);
 
-# 272
+# 282
 void INT1_ISR(void);
 
-# 296
+# 306
 void INT1_CallBack(void);
 
-# 319
+# 329
 void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
 
-# 343
+# 353
 extern void (*INT1_InterruptHandler)(void);
 
-# 367
+# 377
 void INT1_DefaultInterruptHandler(void);
+
+void normaliza(void);
+
+unsigned long Hash_algoritmo ();
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -7972,319 +7985,102 @@ extern __bit iscntrl(char);
 extern char toupper(char);
 extern char tolower(char);
 
-# 2 "Librerias/nRF24L01.h"
-void spi_s_init();
-unsigned char spi_s_read();
-void spi_s_write(unsigned char dato_);
-void nrf2401_write(unsigned char reg, unsigned char valor);
-void nrf2401_comando(unsigned char comando);
-unsigned char nrf2401_read(unsigned char reg);
-void nrf2401_direccion_TX_RX(const unsigned char *direccion_, unsigned char registro);
-void flush_RX();
-void flush_TX();
-void flush_TX_RX();
-void nrf2401_envia(unsigned char dato_tx);
-char nrf2401_haydatos();
-char nrf2401_recibe();
-void nrF2401_init_RX(unsigned char canal);
-void nrF2401_init_TX(unsigned char canal);
-unsigned char get_Status();
-unsigned char get_fifo_status();
-void nrf2401_envia_Text(char* Text);
-void nrf2401_recibe_Text(char* Buffer, char StopChar);
-
-# 69 "main.c"
-const unsigned char direccion_tx[5] = {17, 17, 17, 17, 17};
-const unsigned char direccion_rx[5] = {17, 17, 17, 17, 17};
-
-# 2 "Librerias/nRF24L01.h"
-void spi_s_init();
-unsigned char spi_s_read();
-void spi_s_write(unsigned char dato_);
-void nrf2401_write(unsigned char reg, unsigned char valor);
-void nrf2401_comando(unsigned char comando);
-unsigned char nrf2401_read(unsigned char reg);
-void nrf2401_direccion_TX_RX(const unsigned char *direccion_, unsigned char registro);
-void flush_RX();
-void flush_TX();
-void flush_TX_RX();
-void nrf2401_envia(unsigned char dato_tx);
-char nrf2401_haydatos();
-char nrf2401_recibe();
-void nrF2401_init_RX(unsigned char canal);
-void nrF2401_init_TX(unsigned char canal);
-unsigned char get_Status();
-unsigned char get_fifo_status();
-void nrf2401_envia_Text(char* Text);
-void nrf2401_recibe_Text(char* Buffer, char StopChar);
-
-# 23 "Librerias/nRF24L01_2.h"
-void spi_s_init()
+# 108 "main.c"
+void normaliza()
 {
 
-TRISCbits.TRISC1 = 0;
-TRISBbits.TRISB2 = 0;
-TRISCbits.TRISC2 = 0;
-TRISBbits.TRISB3 = 1;
-TRISBbits.TRISB1 = 0;
-TRISCbits.TRISC0 = 1;
 
-LATBbits.LATB2 = 0;
-LATCbits.LATC2 = 0;
-LATCbits.LATC1 = 0;
-LATBbits.LATB1 = 0;
-}
 
-unsigned char spi_s_read()
+for (cont=0;cont<cuenta-1+2;cont++)
 {
-unsigned char cont_s = 0;
-unsigned char dato_ = 0;
+if (tiempo[cont+2] <(float)tiempo[cont] * .8) tiempo[cont]=0 ;
+else if (tiempo[cont] <(float)tiempo[cont+2] * .8) tiempo[cont]= 2 ;
+else tiempo[cont]=1 ;
 
-for(cont_s = 0; cont_s < 8; cont_s++)
+# 122
+}
+
+# 127
+}
+
+unsigned long Hash_algoritmo ()
 {
-dato_ <<= 1;
-LATBbits.LATB2 = 1;
-_delay((unsigned long)((1)*(48000000/4000000.0)));
-
-if(PORTBbits.RB3 != 0)
+unsigned long hash_acum = 2166136261;
+for (cont = 0; cont < cuenta - 1; cont++)
 {
-dato_ |= 1;
+hash_acum = (hash_acum * 16777619) ^ tiempo[cont];
 }
-LATBbits.LATB2 = 0;
-_delay((unsigned long)((1)*(48000000/4000000.0)));
-}
-return dato_;
+return (hash_acum);
 }
 
-void spi_s_write(unsigned char dato_)
-{
-unsigned char cont_s = 0;
-
-for(cont_s = 0; cont_s < 8; cont_s++)
-{
-
-if((dato_ & 0x80) != 0) LATCbits.LATC1 = 1;
-else LATCbits.LATC1 = 0;
-dato_ <<= 1;
-
-LATBbits.LATB2 = 1;
-_delay((unsigned long)((5)*(48000000/4000000.0)));
-LATBbits.LATB2 = 0;
-_delay((unsigned long)((5)*(48000000/4000000.0)));
-}
-}
-
-
-
-void nrf2401_write(unsigned char reg, unsigned char valor)
-{
-LATCbits.LATC2 = 0;
-spi_s_write((reg | 0x20));
-spi_s_write(valor);
-LATCbits.LATC2 = 1;
-_delay((unsigned long)((5)*(48000000/4000000.0)));
-
-}
-
-void nrf2401_comando(unsigned char comando)
-{
-LATCbits.LATC2 = 0;
-spi_s_write(comando);
-LATCbits.LATC2 = 1;
-_delay((unsigned long)((5)*(48000000/4000000.0)));
-}
-
-unsigned char nrf2401_read(unsigned char reg)
-{
-unsigned char dato_ = 0;
-LATCbits.LATC2 = 0;
-spi_s_write((reg | 0x00));
-dato_ = spi_s_read();
-LATCbits.LATC2 = 1;
-_delay((unsigned long)((5)*(48000000/4000000.0)));
-return dato_;
-}
-
-
-void nrf2401_direccion_TX_RX(const unsigned char *direccion_, unsigned char registro)
-{
-unsigned char cont_s;
-
-LATCbits.LATC2 = 0;
-spi_s_write(registro | 0x20);
-for(cont_s = 0; cont_s < 5; cont_s++)
-{
-spi_s_write(direccion_[cont_s]);
-}
-LATCbits.LATC2 = 1;
-_delay((unsigned long)((5)*(48000000/4000000.0)));
-
-}
-
-
-
-void flush_RX()
-{
-nrf2401_write(0x07, 0x70);
-nrf2401_comando(0xE2);
-}
-
-
-void flush_TX()
-{
-nrf2401_write(0x07, 0x70);
-nrf2401_comando(0xE2);
-}
-
-
-void flush_TX_RX()
-{
-nrf2401_write(0x07, 0x70);
-nrf2401_comando(0xE1);
-nrf2401_comando(0xE2);
-}
-
-
-
-void nrf2401_envia(unsigned char dato_tx)
-{
-unsigned char cont_ = 0;
-
-flush_TX();
-nrf2401_write(0x00, 0x02 +0x04 + 0x08);
-
-
-LATCbits.LATC2 = 0;
-spi_s_write(0xA0);
-spi_s_write(dato_tx);
-LATCbits.LATC2 = 1;
-LATBbits.LATB1 = 1;
-_delay((unsigned long)((15)*(48000000/4000000.0)));
-LATBbits.LATB1 = 0;
-nrf2401_write(0x00, 0x01 + 0x02 +0x04 + 0x08);
-}
-
-
-
-
-char nrf2401_recibe()
-{
-char valor_;
-LATCbits.LATC2 = 0;
-spi_s_write(0x61);
-valor_ = spi_s_read();
-LATCbits.LATC2 = 1;
-_delay((unsigned long)((5)*(48000000/4000000.0)));
-return (valor_);
-}
-
-
-void nrF2401_init_RX(unsigned char canal)
-{
-LATBbits.LATB1 = 0;
-nrf2401_write(0x00, 0x04 + 0x08);
-nrf2401_write(0x04, 0x00);
-nrf2401_write(0x03, 0x03);
-nrf2401_write(0x06, 0x08 + 0x06);
-nrf2401_write(0x05, canal);
-nrf2401_write(0x01, 0x00);
-nrf2401_write(0x11, 1);
-nrf2401_write(0x00, 0x01 + 0x02 +0x04 + 0x08);
-nrf2401_direccion_TX_RX(direccion_tx , 0x10);
-nrf2401_direccion_TX_RX(direccion_tx, 0x0A);
-flush_TX_RX();
-LATBbits.LATB1 = 1;
-}
-
-void nrF2401_init_TX(unsigned char canal)
-{
-LATBbits.LATB1 = 0;
-nrf2401_write(0x04, 0x00);
-
-nrf2401_write(0x03, 0x03);
-nrf2401_write(0x06, 0x08 + 0x06);
-nrf2401_write(0x05, canal);
-nrf2401_write(0x01, 0);
-nrf2401_write(0x00, 0x02 +0x04 + 0x08);
-nrf2401_direccion_TX_RX(direccion_tx, 0x10);
-nrf2401_direccion_TX_RX(direccion_tx, 0x0A);
-flush_TX_RX();
-LATBbits.LATB1 = 1;
-}
-
-
-unsigned char get_Status()
-{
-return nrf2401_read (0x07);
-}
-
-unsigned char get_fifo_status()
-{
-return nrf2401_read (0x17);
-
-}
-
-
-void nrf2401_envia_Text(char* Text)
-{
-flush_TX();
-while(*Text)
-{
-nrf2401_envia(*Text++);
-}
-_delay((unsigned long)((3)*(48000000/4000.0)));
-}
-
-char nrf2401_haydatos()
-{
-if(get_Status() == 0x40) return(1);
-else return(0);
-}
-
-
-void nrf2401_recibe_Text(char* Buffer, char StopChar)
-{
-flush_RX();
-while(*(Buffer-1)!=StopChar)
-{
-if(get_Status() == 0x40) *Buffer++=nrf2401_recibe();
-}
-
-*--Buffer=0;
-}
-
-# 77 "main.c"
-char procesa[30];
-char trama[30];
-char trama[30];
-char puntero = 0;
-char datorx;
-char flag_rx = 0;
-
-# 137
+# 198
 void main(void)
 {
 
 SYSTEM_Initialize();
 
-# 148
+ANSELA = 0b00000111;
+ANSELB = 0b01000000;
+ANSELC = 0x00;
+TRISBbits.TRISB1 = 1;
+
+# 213
 (INTCONbits.GIE = 1);
 
-# 154
+# 219
 (INTCONbits.PEIE = 1);
 
-
-
-
-ANSELA = 0b00000111;
-ANSELB = 0b00000000;
-ANSELC = 0x00;
-
-# 167
+# 228
 while (1)
 {
 
-# 180
+if (flag_codigo == 1)
+{
+
+
+normaliza();
+codigo_ir = Hash_algoritmo();
+EUSART1_Write("Son: ");
+memcpy(texto, cuenta, sizeof(cuenta));
+EUSART1_Write(texto);
+EUSART1_Write("\r");
+EUSART1_Write("\n");
+sprintf(texto, "%lx", codigo_ir);
+EUSART1_Write("CODIGO IR = ");
+EUSART1_Write(texto);
+EUSART1_Write("\r");
+EUSART1_Write("\n");
+
+if (codigo_ir == 0xBF681DA0)
+{
+LATA3 =~ LATA3;
+EUSART1_Write("COMANDO1");
+
+}
+else if (codigo_ir == 0xBF681DA0)
+{
+LATA4 =~ LATA4;
+EUSART1_Write("COMANDO2");
+}
+
+else if (codigo_ir == 0xBF681DA0)
+{
+LATA5 =~ LATA5;
+EUSART1_Write("COMANDO3");
+}
+codigo_ir = 0;
+
+_delay((unsigned long)((2000)*(48000000/4000.0)));
+
+flag_codigo = 0;
+cuenta = 0;
+INTEDG1 = 0;
+INT1IF = 0;
+INT1E = 1;
+}
+_delay((unsigned long)((80)*(48000000/4000.0)));
+LATB0 =~ LATB0;
+putch("Son: ");
 }
 }
 

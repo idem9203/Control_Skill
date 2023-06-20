@@ -7703,23 +7703,36 @@ extern void cputs(const char *);
 # 110 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
-# 250 "mcc_generated_files/ext_int.h"
+# 251 "mcc_generated_files/ext_int.h"
+char flag_codigo=0;
+unsigned int cuenta=0;
+unsigned char cont;
+char texto[10];
+unsigned char timer_aux;
+unsigned char tiempo[70];
+unsigned long codigo_ir;
+
+
 void EXT_INT_Initialize(void);
 
-# 272
+# 282
 void INT1_ISR(void);
 
-# 296
+# 306
 void INT1_CallBack(void);
 
-# 319
+# 329
 void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
 
-# 343
+# 353
 extern void (*INT1_InterruptHandler)(void);
 
-# 367
+# 377
 void INT1_DefaultInterruptHandler(void);
+
+void normaliza(void);
+
+unsigned long Hash_algoritmo ();
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
