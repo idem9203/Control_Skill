@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\IDEMV2-1.X.production.hex">
+  <executable name="dist/default/production\Control_Skill.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>1248</used>
-      <free>31520</free>
+      <used>444</used>
+      <free>32324</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>2048</length>
-      <used>92</used>
-      <free>1956</free>
+      <used>81</used>
+      <free>1967</free>
     </memory>
   </executable>
 </project>

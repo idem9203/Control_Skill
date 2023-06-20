@@ -1,17 +1,117 @@
 
 # 1 "main.c"
 
-# 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\xc.h"
+# 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
 
-# 13 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\xc8debug.h"
+# 13 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\xc8debug.h"
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 52 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f25k50.h"
+# 13 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdint.h"
+typedef signed char int8_t;
+
+# 20
+typedef signed int int16_t;
+
+# 28
+typedef __int24 int24_t;
+
+# 36
+typedef signed long int int32_t;
+
+# 52
+typedef unsigned char uint8_t;
+
+# 58
+typedef unsigned int uint16_t;
+
+# 65
+typedef __uint24 uint24_t;
+
+# 72
+typedef unsigned long int uint32_t;
+
+# 88
+typedef signed char int_least8_t;
+
+# 96
+typedef signed int int_least16_t;
+
+# 109
+typedef __int24 int_least24_t;
+
+# 118
+typedef signed long int int_least32_t;
+
+# 136
+typedef unsigned char uint_least8_t;
+
+# 143
+typedef unsigned int uint_least16_t;
+
+# 154
+typedef __uint24 uint_least24_t;
+
+# 162
+typedef unsigned long int uint_least32_t;
+
+# 181
+typedef signed char int_fast8_t;
+
+# 188
+typedef signed int int_fast16_t;
+
+# 200
+typedef __int24 int_fast24_t;
+
+# 208
+typedef signed long int int_fast32_t;
+
+# 224
+typedef unsigned char uint_fast8_t;
+
+# 230
+typedef unsigned int uint_fast16_t;
+
+# 240
+typedef __uint24 uint_fast24_t;
+
+# 247
+typedef unsigned long int uint_fast32_t;
+
+# 268
+typedef int32_t intmax_t;
+
+# 282
+typedef uint32_t uintmax_t;
+
+# 289
+typedef int16_t intptr_t;
+
+
+
+
+typedef uint16_t uintptr_t;
+
+
+# 7 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\builtins.h"
+#pragma intrinsic(__nop)
+extern void __nop(void);
+
+
+#pragma intrinsic(_delay)
+extern __nonreentrant void _delay(uint32_t);
+#pragma intrinsic(_delaywdt)
+extern __nonreentrant void _delaywdt(uint32_t);
+
+#pragma intrinsic(_delay3)
+extern __nonreentrant void _delay3(uint8_t);
+
+# 52 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h"
 extern volatile unsigned char SRCON1 __at(0xF57);
 
 asm("SRCON1 equ 0F57h");
@@ -4603,7 +4703,7 @@ extern volatile unsigned char TOSU __at(0xFFF);
 
 asm("TOSU equ 0FFFh");
 
-# 12853
+# 12857
 extern volatile __bit ABDEN __at(0x7DC0);
 
 
@@ -7561,132 +7661,32 @@ extern volatile __bit nW __at(0x7E3A);
 
 extern volatile __bit nWRITE __at(0x7E3A);
 
-# 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\pic18.h"
+# 19 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\pic18.h"
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
 
-
-# 49
-#pragma intrinsic(__nop)
-extern void __nop(void);
-
-# 158
+# 156
 __attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
 __attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
 __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 
-# 194
+# 192
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-
-# 202
-#pragma intrinsic(_delay)
-extern __nonreentrant void _delay(unsigned long);
-#pragma intrinsic(_delaywdt)
-extern __nonreentrant void _delaywdt(unsigned long);
-#pragma intrinsic(_delay3)
-extern __nonreentrant void _delay3(unsigned char);
-
-# 196 "mcc_generated_files/pin_manager.h"
+# 154 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 208
+# 166
 void PIN_MANAGER_IOC(void);
 
-# 13 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdint.h"
-typedef signed char int8_t;
-
-# 20
-typedef signed int int16_t;
-
-# 28
-typedef __int24 int24_t;
-
-# 36
-typedef signed long int int32_t;
-
-# 52
-typedef unsigned char uint8_t;
-
-# 58
-typedef unsigned int uint16_t;
-
-# 65
-typedef __uint24 uint24_t;
-
-# 72
-typedef unsigned long int uint32_t;
-
-# 88
-typedef signed char int_least8_t;
-
-# 96
-typedef signed int int_least16_t;
-
-# 109
-typedef __int24 int_least24_t;
-
-# 118
-typedef signed long int int_least32_t;
-
-# 136
-typedef unsigned char uint_least8_t;
-
-# 143
-typedef unsigned int uint_least16_t;
-
-# 154
-typedef __uint24 uint_least24_t;
-
-# 162
-typedef unsigned long int uint_least32_t;
-
-# 181
-typedef signed char int_fast8_t;
-
-# 188
-typedef signed int int_fast16_t;
-
-# 200
-typedef __int24 int_fast24_t;
-
-# 208
-typedef signed long int int_fast32_t;
-
-# 224
-typedef unsigned char uint_fast8_t;
-
-# 230
-typedef unsigned int uint_fast16_t;
-
-# 240
-typedef __uint24 uint_fast24_t;
-
-# 247
-typedef unsigned long int uint_fast32_t;
-
-# 268
-typedef int32_t intmax_t;
-
-# 282
-typedef uint32_t uintmax_t;
-
-# 289
-typedef int16_t intptr_t;
-
-
-
-
-typedef uint16_t uintptr_t;
-
-# 15 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdbool.h"
+# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 29 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\errno.h"
+# 29 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\errno.h"
 extern int errno;
 
-# 12 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\conio.h"
+# 12 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\conio.h"
 extern void init_uart(void);
 
 extern char getch(void);
@@ -7700,62 +7700,49 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 
-# 59 "mcc_generated_files/ccp2.h"
-void CCP2_Initialize(void);
+# 110 "mcc_generated_files/interrupt_manager.h"
+void INTERRUPT_Initialize (void);
 
-# 15 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdbool.h"
+# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 72 "mcc_generated_files/adc.h"
-typedef uint16_t adc_result_t;
+# 100 "mcc_generated_files/tmr0.h"
+void TMR0_Initialize(void);
 
-# 77
-typedef struct
-{
-adc_result_t adcResult1;
-adc_result_t adcResult2;
-} adc_sync_double_result_t;
+# 129
+void TMR0_StartTimer(void);
 
-# 95
-typedef enum
-{
-channel_AN0 = 0x0,
-channel_AN1 = 0x1,
-channel_AN2 = 0x2,
-channel_Temp = 0x1C,
-channel_CTMU = 0x1D,
-channel_DAC = 0x1E,
-channel_FVRBuf2 = 0x1F
-} adc_channel_t;
+# 161
+void TMR0_StopTimer(void);
 
-# 139
-void ADC_Initialize(void);
+# 197
+uint16_t TMR0_ReadTimer(void);
 
-# 169
-void ADC_SelectChannel(adc_channel_t channel);
+# 236
+void TMR0_WriteTimer(uint16_t timerVal);
 
-# 196
-void ADC_StartConversion(void);
+# 272
+void TMR0_Reload(void);
 
-# 228
-bool ADC_IsConversionDone(void);
+# 290
+void TMR0_ISR(void);
 
-# 261
-adc_result_t ADC_GetConversionResult(void);
+# 309
+void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
 
-# 291
-adc_result_t ADC_GetConversion(adc_channel_t channel);
+# 327
+extern void (*TMR0_InterruptHandler)(void);
 
-# 319
-void ADC_TemperatureAcquisitionDelay(void);
+# 345
+void TMR0_DefaultInterruptHandler(void);
 
-# 15 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdbool.h"
+# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 4 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\__size_t.h"
+# 4 "C:\Program Files\Microchip\xc8\v2.36\pic\include\__size_t.h"
 typedef unsigned size_t;
 
-# 7 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdarg.h"
+# 7 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdarg.h"
 typedef void * va_list[1];
 
 #pragma intrinsic(__va_start)
@@ -7764,7 +7751,7 @@ extern void * __va_start(void);
 #pragma intrinsic(__va_arg)
 extern void * __va_arg(void *, ...);
 
-# 43 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdio.h"
+# 43 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdio.h"
 struct __prbuf
 {
 char * ptr;
@@ -7845,7 +7832,7 @@ void SYSTEM_Initialize(void);
 # 85
 void OSCILLATOR_Initialize(void);
 
-# 7 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdlib.h"
+# 7 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdlib.h"
 typedef unsigned short wchar_t;
 
 # 15
@@ -7918,7 +7905,7 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 14 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\string.h"
+# 14 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\string.h"
 extern void * memcpy(void *, const void *, size_t);
 extern void * memmove(void *, const void *, size_t);
 extern void * memset(void *, int, size_t);
@@ -7950,7 +7937,7 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 
-# 4 "C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\ctype.h"
+# 4 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\ctype.h"
 extern __bit isalpha(char);
 extern __bit isupper(char);
 extern __bit islower(char);
@@ -8256,51 +8243,6 @@ char puntero = 0;
 char datorx;
 char flag_rx = 0;
 
-# 88
-void procesarx()
-{
-if(strstr(trama,"cier="))
-{
-if(strstr(trama,"on"))
-{
-LATB0 = 1;
-_delay((unsigned long)((300)*(48000000/4000.0)));
-LATB0 = 0;
-}
-else LATB0 = 0;
-}
-if(strstr(trama,"aper="))
-{
-if(strstr(trama,"on"))
-{
-LATA5 = 1;
-_delay((unsigned long)((300)*(48000000/4000.0)));
-LATA5 = 0;
-}
-else LATA5 = 0;
-}
-}
-
-
-
-
-void interrupt INTERRUPT_InterruptManager (void)
-{
-if (RCIF == 1)
-{
-datorx = EUSART1_Read();
-trama[puntero] = datorx;
-puntero++;
-if(puntero >= 30) puntero = 0;
-if(datorx == '/')
-{
-RCIE = 0;
-flag_rx = 1;
-}
-RCIF = 0;
-}
-}
-
 # 137
 void main(void)
 {
@@ -8312,24 +8254,11 @@ ANSELA = 0b00000111;
 ANSELB = 0b00000000;
 ANSELC = 0x00;
 
-INTCON = 0b01000000;
-RCIF = 0;
-RCIE = 1;
-GIE = 1;
-
+# 167
 while (1)
 {
 
-
-if (flag_rx == 1)
-{
-procesarx();
-puntero = 0;
-memset (trama, 0, 30);
-flag_rx = 0;
-RCIF = 0;
-RCIE = 1;
-}
+# 180
 }
 }
 

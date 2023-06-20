@@ -1,23 +1,25 @@
 /**
-  CCP2 Generated Driver API Header File
+  Generated Interrupt Manager Source File
 
-  @Company
+  @Company:
     Microchip Technology Inc.
 
-  @File Name
-    ccp2.h
+  @File Name:
+    interrupt_manager.c
 
-  @Summary
-    This is the generated header file for the CCP2 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary:
+    This is the Interrupt Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  @Description
-    This header file provides APIs for driver for CCP2.
+  @Description:
+    This header file provides implementations for global interrupt handling.
+    For individual peripheral handlers please see the peripheral driver for
+    all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
         Device            :  PIC18F25K50
-        Driver Version    :  2.01
+        Driver Version    :  2.04
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.31 and above
+        Compiler          :  XC8 2.31 and above or later
         MPLAB 	          :  MPLAB X 5.45
 */
 
@@ -44,18 +46,23 @@
     SOFTWARE.
 */
 
-#ifndef CCP2_H
-#define CCP2_H
+#include "interrupt_manager.h"
+#include "mcc.h"
 
-#include <xc.h>
+void  INTERRUPT_Initialize (void)
+{
+    // Disable Interrupt Priority Vectors (16CXXX Compatibility Mode)
+    RCONbits.IPEN = 0;
+}
+
+void __interrupt() INTERRUPT_InterruptManager (void)
+{
+    // interrupt handler
+    if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
+    {
+        TMR0_ISR();
+    }
+}
 /**
- * Initialization routine that takes inputs from the GUI.
- * @prototype        void CCP2_Initialize(void)
- * @param           none
- * @return           none
- * @comment          
- * @usage            CCP2_Initialize();
- */
-void CCP2_Initialize(void);
-
-#endif  // CCP2.h
+ End of File
+*/

@@ -3,51 +3,31 @@
 [d edition pro ]
 [d chip 18F25K50 ]
 [d frameptr 4065 ]
-"84 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-[e E4456 . `uc
-channel_AN0 0
-channel_AN1 1
-channel_AN2 2
-channel_Temp 28
-channel_CTMU 29
-channel_DAC 30
-channel_FVRBuf2 31
-]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fleq.c
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\float.c
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
-"86 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftadd.c
+"86 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 4 0 ]
-"54 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftdiv.c
+"54 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 4 0 ]
-"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftmul.c
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
-"19 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\ftsub.c
+"19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\memset.c
-[v _memset memset `(*.39v  1 e 2 0 ]
-"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 4 0 ]
-"11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcmul.c
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strchr.c
-[v _strchr strchr `(*.39uc  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strncmp.c
-[v _strncmp strncmp `(i  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strstr.c
-[v _strstr strstr `(*.39uc  1 e 2 0 ]
-"15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul32.c
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul64.c
+"91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul64.c
 [v ___omul __omul `(ul  1 e 4 0 ]
-"39 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\Librerias/nRF24L01_2.h
+"39 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/nRF24L01_2.h
 [v _spi_s_read spi_s_read `(uc  1 e 1 0 ]
 "60
 [v _spi_s_write spi_s_write `(v  1 e 1 0 ]
@@ -71,17 +51,9 @@ channel_FVRBuf2 31
 [v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
 "217
 [v _get_Status get_Status `(uc  1 e 1 0 ]
-"88 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-[v _procesarx procesarx `(v  1 e 1 0 ]
-"115
-[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"137
+"137 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
 [v _main main `(v  1 e 1 0 ]
-"62 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
-"49 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
-[v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
-"66 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+"66 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
 "113
 [v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
@@ -99,19 +71,31 @@ channel_FVRBuf2 31
 [v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
 "174
 [v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
-"50 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+"52 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"58
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+"50 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "60
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"55 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"232 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f25k50.h
+"67 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"136
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"156
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"160
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"232 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
 [v _ANSELA ANSELA `VEuc  1 e 1 @3931 ]
 "277
 [v _ANSELB ANSELB `VEuc  1 e 1 @3932 ]
 "327
 [v _ANSELC ANSELC `VEuc  1 e 1 @3933 ]
-[s S591 . 1 `uc 1 RB0 1 0 :1:0 
+[s S494 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -121,7 +105,7 @@ channel_FVRBuf2 31
 `uc 1 RB7 1 0 :1:7 
 ]
 "2977
-[s S713 . 1 `uc 1 INT0 1 0 :1:0 
+[s S620 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -129,18 +113,18 @@ channel_FVRBuf2 31
 `uc 1 PGC 1 0 :1:6 
 `uc 1 PGD 1 0 :1:7 
 ]
-[s S721 . 1 `uc 1 . 1 0 :3:0 
+[s S628 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S724 . 1 `S591 1 . 1 0 `S713 1 . 1 0 `S721 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES724  1 e 1 @3969 ]
+[u S631 . 1 `S494 1 . 1 0 `S620 1 . 1 0 `S628 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES631  1 e 1 @3969 ]
 "3238
 [v _WPUB WPUB `VEuc  1 e 1 @3973 ]
 "3472
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
 "3584
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
-[s S622 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S525 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -150,7 +134,7 @@ channel_FVRBuf2 31
 `uc 1 LATB7 1 0 :1:7 
 ]
 "3611
-[s S631 . 1 `uc 1 LB0 1 0 :1:0 
+[s S534 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -159,11 +143,11 @@ channel_FVRBuf2 31
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S640 . 1 `S622 1 . 1 0 `S631 1 . 1 0 ]
-[v _LATBbits LATBbits `VES640  1 e 1 @3978 ]
+[u S543 . 1 `S525 1 . 1 0 `S534 1 . 1 0 ]
+[v _LATBbits LATBbits `VES543  1 e 1 @3978 ]
 "3696
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
-[s S662 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S565 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -173,7 +157,7 @@ channel_FVRBuf2 31
 `uc 1 LATC7 1 0 :1:7 
 ]
 "3723
-[s S671 . 1 `uc 1 LC0 1 0 :1:0 
+[s S574 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -182,17 +166,13 @@ channel_FVRBuf2 31
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S680 . 1 `S662 1 . 1 0 `S671 1 . 1 0 ]
-[v _LATCbits LATCbits `VES680  1 e 1 @3979 ]
-"4115
-[v _CCPR2L CCPR2L `VEuc  1 e 1 @3984 ]
-"4135
-[v _CCPR2H CCPR2H `VEuc  1 e 1 @3985 ]
+[u S583 . 1 `S565 1 . 1 0 `S574 1 . 1 0 ]
+[v _LATCbits LATCbits `VES583  1 e 1 @3979 ]
 "4155
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "4377
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S582 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S485 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -202,11 +182,11 @@ channel_FVRBuf2 31
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "4409
-[u S600 . 1 `S582 1 . 1 0 `S591 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES600  1 e 1 @3987 ]
+[u S503 . 1 `S485 1 . 1 0 `S494 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES503  1 e 1 @3987 ]
 "4599
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S546 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S449 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -216,17 +196,15 @@ channel_FVRBuf2 31
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "4629
-[s S555 . 1 `uc 1 RC0 1 0 :1:0 
+[s S458 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S562 . 1 `S546 1 . 1 0 `S555 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES562  1 e 1 @3988 ]
-"4777
-[v _CCP2CON CCP2CON `VEuc  1 e 1 @3991 ]
+[u S465 . 1 `S449 1 . 1 0 `S458 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES465  1 e 1 @3988 ]
 "5241
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
 [s S70 . 1 `uc 1 TMR1IF 1 0 :1:0 
@@ -331,48 +309,62 @@ channel_FVRBuf2 31
 [v _ACTCON ACTCON `VEuc  1 e 1 @4021 ]
 "7891
 [v _BAUDCON1 BAUDCON1 `VEuc  1 e 1 @4024 ]
-"8827
-[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
-"8898
-[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-"8966
-[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
-[s S467 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO_NOT_DONE 1 0 :1:1 
+[s S859 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
-"9006
-[s S470 . 1 `uc 1 ADON 1 0 :1:0 
-`uc 1 GO_nDONE 1 0 :1:1 
-`uc 1 CHS 1 0 :5:2 
+"11367
+[s S861 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S474 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 DONE 1 0 :1:1 
+[s S864 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S477 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO 1 0 :1:1 
+[s S867 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S480 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 NOT_DONE 1 0 :1:1 
+[s S870 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S483 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 nDONE 1 0 :1:1 
+[s S873 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
 ]
-[s S486 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GODONE 1 0 :1:1 
+[s S882 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
 ]
-[s S489 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO_DONE 1 0 :1:1 
-]
-[u S492 . 1 `S467 1 . 1 0 `S470 1 . 1 0 `S474 1 . 1 0 `S477 1 . 1 0 `S480 1 . 1 0 `S483 1 . 1 0 `S486 1 . 1 0 `S489 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES492  1 e 1 @4034 ]
-"9061
-[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
-"9068
-[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+[u S888 . 1 `S859 1 . 1 0 `S861 1 . 1 0 `S864 1 . 1 0 `S867 1 . 1 0 `S870 1 . 1 0 `S873 1 . 1 0 `S882 1 . 1 0 ]
+[v _RCONbits RCONbits `VES888  1 e 1 @4048 ]
 "11485
 [v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
 "11547
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"11630
+[v _T0CON T0CON `VEuc  1 e 1 @4053 ]
+[s S765 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"11650
+[s S772 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S776 . 1 `S765 1 . 1 0 `S772 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES776  1 e 1 @4053 ]
+"11707
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"11727
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
 [s S343 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
@@ -393,8 +385,6 @@ channel_FVRBuf2 31
 ]
 [u S360 . 1 `S343 1 . 1 0 `S346 1 . 1 0 `S355 1 . 1 0 ]
 [v _INTCON2bits INTCON2bits `VES360  1 e 1 @4081 ]
-"12416
-[v _INTCON INTCON `VEuc  1 e 1 @4082 ]
 [s S382 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -420,34 +410,16 @@ channel_FVRBuf2 31
 ]
 [u S404 . 1 `S382 1 . 1 0 `S391 1 . 1 0 `S400 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES404  1 e 1 @4082 ]
-"14044
-[v _GIE GIE `VEb  1 e 0 @32663 ]
-"14317
-[v _LATA5 LATA5 `VEb  1 e 0 @31821 ]
-"14326
-[v _LATB0 LATB0 `VEb  1 e 0 @31824 ]
-"14653
+"14657
 [v _PLLRDY PLLRDY `VEb  1 e 0 @32407 ]
-"14758
-[v _RCIE RCIE `VEb  1 e 0 @31981 ]
-"14761
-[v _RCIF RCIF `VEb  1 e 0 @31989 ]
-"69 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+"69 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
 [v _direccion_tx direccion_tx `C[5]uc  1 e 5 0 ]
-"78
-[v _trama trama `[30]uc  1 e 30 0 ]
-"80
-[v _puntero puntero `uc  1 e 1 0 ]
-"81
-[v _datorx datorx `uc  1 e 1 0 ]
-"82
-[v _flag_rx flag_rx `uc  1 e 1 0 ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
-"52 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+"52 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
 [u S29 . 1 `S24 1 . 1 0 `uc 1 status 1 0 ]
 [v _eusart1RxLastError eusart1RxLastError `VES29  1 e 1 0 ]
 "58
@@ -456,74 +428,47 @@ channel_FVRBuf2 31
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"137 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
+"58 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/tmr0.c
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
+"60
+[v _timer0ReloadVal timer0ReloadVal `VEui  1 e 2 0 ]
+"137 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"182
+"181
 } 0
-"88
-[v _procesarx procesarx `(v  1 e 1 0 ]
-{
-"110
-} 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strstr.c
-[v _strstr strstr `(*.39uc  1 e 2 0 ]
-{
-[v strstr@s1 s1 `*.39Cuc  1 p 2 13 ]
-[v strstr@s2 s2 `*.25Cuc  1 p 2 15 ]
-"12
-} 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strncmp.c
-[v _strncmp strncmp `(i  1 e 2 0 ]
-{
-[v strncmp@s1 s1 `*.39Cuc  1 p 2 6 ]
-[v strncmp@s2 s2 `*.25Cuc  1 p 2 8 ]
-[v strncmp@len len `ui  1 p 2 10 ]
-"14
-} 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-{
-"6
-[v strlen@cp cp `*.25Cuc  1 a 2 4 ]
-"4
-[v strlen@s s `*.25Cuc  1 p 2 2 ]
-"13
-} 0
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strchr.c
-[v _strchr strchr `(*.39uc  1 e 2 0 ]
-{
-[v strchr@ptr ptr `*.39Cuc  1 p 2 2 ]
-[v strchr@chr chr `i  1 p 2 4 ]
-"11
-} 0
-"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\memset.c
-[v _memset memset `(*.39v  1 e 2 0 ]
-{
-"15
-[v memset@p p `*.39uc  1 a 2 8 ]
-"8
-[v memset@p1 p1 `*.39v  1 p 2 2 ]
-[v memset@c c `i  1 p 2 4 ]
-[v memset@n n `ui  1 p 2 6 ]
-"22
-} 0
-"50 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+"50 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "58
 } 0
-"55 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/pin_manager.c
+"67 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"95
+} 0
+"156
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"158
+} 0
+"55 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "91
 } 0
-"60 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/mcc.c
+"60 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "74
 } 0
-"66 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
+"52 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"66 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
 {
 "92
@@ -546,23 +491,18 @@ channel_FVRBuf2 31
 [v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 2 ]
 "176
 } 0
-"49 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/ccp2.c
-[v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
+"58 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
 {
-"60
+"65
 } 0
-"62 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/adc.c
-[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"136 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
 {
-"81
+"153
 } 0
-"115 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\main.c
-[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"160
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"130
-} 0
-"113 D:\TRABAJO\Escritorio\IDEM_V2-1_xc8\IDEMV2-1.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
-{
-"130
+"163
 } 0

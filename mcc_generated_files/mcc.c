@@ -50,10 +50,10 @@
 void SYSTEM_Initialize(void)
 {
 
+    INTERRUPT_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
-    CCP2_Initialize();
-    ADC_Initialize();
+    TMR0_Initialize();
     EUSART1_Initialize();
 }
 

@@ -85,49 +85,49 @@ char flag_rx = 0;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// DECLARACION DE FUNCIONES
-void procesarx()
-{
-    if(strstr(trama,"cier="))
-    {
-        if(strstr(trama,"on")) 
-        {
-            LATB0 = 1;
-            __delay_ms(300);
-            LATB0 = 0;
-        }
-        else LATB0 = 0;
-    }
-    if(strstr(trama,"aper="))
-    {
-        if(strstr(trama,"on")) 
-        {
-            LATA5 = 1;
-            __delay_ms(300);
-            LATA5 = 0;
-        }
-        else LATA5 = 0;
-    }
-}
+//void procesarx()
+//{
+//    if(strstr(trama,"cier="))
+//    {
+//        if(strstr(trama,"on")) 
+//        {
+//            LATB0 = 1;
+//            __delay_ms(300);
+//            LATB0 = 0;
+//        }
+//        else LATB0 = 0;
+//    }
+//    if(strstr(trama,"aper="))
+//    {
+//        if(strstr(trama,"on")) 
+//        {
+//            LATA5 = 1;
+//            __delay_ms(300);
+//            LATA5 = 0;
+//        }
+//        else LATA5 = 0;
+//    }
+//}
 //END //////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 // FUNCION DE INTERRUPCION
-void interrupt INTERRUPT_InterruptManager (void)
-{
-    if (RCIF == 1)                                                              //Si presenta una interrupcion en recepcion UART
-    {
-        datorx = EUSART1_Read();                                                //lee el dato
-        trama[puntero] = datorx;                                                //lo almacena en la trama
-        puntero++;                                                              //incrementa el contador de trama
-        if(puntero >= 30) puntero = 0;                                          //si llegan mas de 30 datos erroneos inicia el almacenamiento
-        if(datorx == '/')                                                       //Si llega el fin de la trama
-        {
-            RCIE = 0;                                                           //deshabilita la interrupcion
-            flag_rx = 1;                                                        //activa la bandera de que hay una trama valida
-        }
-        RCIF = 0;
-    }
-}
+//void interrupt INTERRUPT_InterruptManager (void)
+//{
+//    if (RCIF == 1)                                                              //Si presenta una interrupcion en recepcion UART
+//    {
+//        datorx = EUSART1_Read();                                                //lee el dato
+//        trama[puntero] = datorx;                                                //lo almacena en la trama
+//        puntero++;                                                              //incrementa el contador de trama
+//        if(puntero >= 30) puntero = 0;                                          //si llegan mas de 30 datos erroneos inicia el almacenamiento
+//        if(datorx == '/')                                                       //Si llega el fin de la trama
+//        {
+//            RCIE = 0;                                                           //deshabilita la interrupcion
+//            flag_rx = 1;                                                        //activa la bandera de que hay una trama valida
+//        }
+//        RCIF = 0;
+//    }
+//}
 //END //////////////////////////////////////////////////////////////////////////
 
 /*
@@ -160,24 +160,23 @@ void main(void)
     ANSELB = 0b00000000;
     ANSELC = 0x00;                                                              //Todo el puerto C lo hace digital
 
-    INTCON = 0b01000000;                                                        //Habilita interrupciones de perifericos
-    RCIF = 0;                                                                   //Limpia bandera interrupcion serial
-    RCIE = 1;                                                                   //Habilita la interrupcion serial
-    GIE = 1;                                                                    //Autoriza todas las interrupciones programadas 
+//    INTCON = 0b01000000;                                                        //Habilita interrupciones de perifericos
+//    RCIF = 0;                                                                   //Limpia bandera interrupcion serial
+//    GIE = 1;                                                                    //Autoriza todas las interrupciones programadas 
 
     while (1)
     {
         // Add your application code
         
-        if (flag_rx == 1)
-        {
-            procesarx();                                                        //Llama el procedimiento de procesar la trama
-            puntero = 0;                                                        //Inicializa el conteo
-            memset (trama, 0, 30);                                              //Limpia la trama
-            flag_rx = 0;
-            RCIF = 0;                                                           //Limpia la bandera de la interrupcion
-            RCIE = 1;                                                           //Habilita la interrupcion serial
-        }
+//        if (flag_rx == 1)
+//        {
+//            procesarx();                                                        //Llama el procedimiento de procesar la trama
+//            puntero = 0;                                                        //Inicializa el conteo
+//            memset (trama, 0, 30);                                              //Limpia la trama
+//            flag_rx = 0;
+//            RCIF = 0;                                                           //Limpia la bandera de la interrupcion
+//            RCIE = 1;                                                           //Habilita la interrupcion serial
+//        }
     }
 }
 /**
