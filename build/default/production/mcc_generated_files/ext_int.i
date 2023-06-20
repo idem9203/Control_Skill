@@ -1,5 +1,5 @@
 
-# 1 "mcc_generated_files/pin_manager.c"
+# 1 "mcc_generated_files/ext_int.c"
 
 # 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -7674,41 +7674,65 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 166 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
+# 250 "mcc_generated_files/ext_int.h"
+void EXT_INT_Initialize(void);
 
-# 178
-void PIN_MANAGER_IOC(void);
+# 272
+void INT1_ISR(void);
 
-# 55 "mcc_generated_files/pin_manager.c"
-void PIN_MANAGER_Initialize(void)
+# 296
+void INT1_CallBack(void);
+
+# 319
+void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
+
+# 343
+extern void (*INT1_InterruptHandler)(void);
+
+# 367
+void INT1_DefaultInterruptHandler(void);
+
+# 30 "mcc_generated_files/ext_int.c"
+void (*INT1_InterruptHandler)(void);
+
+void INT1_ISR(void)
 {
+(INTCON3bits.INT1IF = 0);
 
-# 60
-LATA = 0x00;
-LATB = 0x00;
-LATC = 0x00;
 
-# 67
-TRISA = 0xC7;
-TRISB = 0xFE;
-TRISC = 0x87;
-
-# 74
-ANSELC = 0x04;
-ANSELB = 0x3C;
-ANSELA = 0x07;
-
-# 81
-WPUB = 0x00;
-INTCON2bits.nRBPU = 1;
-
-# 91
+INT1_CallBack();
 }
 
-void PIN_MANAGER_IOC(void)
+
+void INT1_CallBack(void)
 {
 
-INTCONbits.IOCIF = 0;
+
+if(INT1_InterruptHandler)
+{
+INT1_InterruptHandler();
+}
+}
+
+void INT1_SetInterruptHandler(void (* InterruptHandler)(void)){
+INT1_InterruptHandler = InterruptHandler;
+}
+
+void INT1_DefaultInterruptHandler(void){
+
+
+}
+
+void EXT_INT_Initialize(void)
+{
+
+
+
+(INTCON3bits.INT1IF = 0);
+(INTCON2bits.INTEDG1 = 1);
+
+INT1_SetInterruptHandler(INT1_DefaultInterruptHandler);
+(INTCON3bits.INT1IE = 1);
+
 }
 

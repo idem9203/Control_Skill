@@ -7677,10 +7677,10 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 154 "mcc_generated_files/pin_manager.h"
+# 166 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 166
+# 178
 void PIN_MANAGER_IOC(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
@@ -7702,6 +7702,24 @@ extern __bit kbhit(void);
 # 23
 extern char * cgets(char *);
 extern void cputs(const char *);
+
+# 250 "mcc_generated_files/ext_int.h"
+void EXT_INT_Initialize(void);
+
+# 272
+void INT1_ISR(void);
+
+# 296
+void INT1_CallBack(void);
+
+# 319
+void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
+
+# 343
+extern void (*INT1_InterruptHandler)(void);
+
+# 367
+void INT1_DefaultInterruptHandler(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -7826,10 +7844,10 @@ void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 398
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
-# 72 "mcc_generated_files/mcc.h"
+# 73 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 85
+# 86
 void OSCILLATOR_Initialize(void);
 
 # 52 "mcc_generated_files/interrupt_manager.c"
@@ -7845,6 +7863,10 @@ void __interrupt() INTERRUPT_InterruptManager (void)
 if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
 {
 TMR0_ISR();
+}
+if(INTCON3bits.INT1IE == 1 && INTCON3bits.INT1IF == 1)
+{
+INT1_ISR();
 }
 }
 

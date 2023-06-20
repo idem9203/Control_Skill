@@ -5248,32 +5248,32 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 610 ]
 [; ;tmr0.c: 150: }
-[; ;tmr0.c: 153: }
-"153
+[; ;tmr0.c: 154: }
+"154
 [e :UE 609 ]
 }
-"156
+"157
 [v _TMR0_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F4467 ]
 {
-[; ;tmr0.c: 156: void TMR0_SetInterruptHandler(void (* InterruptHandler)(void)){
+[; ;tmr0.c: 157: void TMR0_SetInterruptHandler(void (* InterruptHandler)(void)){
 [e :U _TMR0_SetInterruptHandler ]
 [v F4494 `(v ~T0 @X0 0 tf ]
 [v _InterruptHandler `*F4494 ~T0 @X0 1 r1 ]
 [f ]
-[; ;tmr0.c: 157: TMR0_InterruptHandler = InterruptHandler;
-"157
-[e = _TMR0_InterruptHandler _InterruptHandler ]
-[; ;tmr0.c: 158: }
+[; ;tmr0.c: 158: TMR0_InterruptHandler = InterruptHandler;
 "158
+[e = _TMR0_InterruptHandler _InterruptHandler ]
+[; ;tmr0.c: 159: }
+"159
 [e :UE 611 ]
 }
-"160
+"161
 [v _TMR0_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
-[; ;tmr0.c: 160: void TMR0_DefaultInterruptHandler(void){
+[; ;tmr0.c: 161: void TMR0_DefaultInterruptHandler(void){
 [e :U _TMR0_DefaultInterruptHandler ]
 [f ]
-[; ;tmr0.c: 163: }
-"163
+[; ;tmr0.c: 164: }
+"164
 [e :UE 612 ]
 }

@@ -7674,10 +7674,10 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 154 "mcc_generated_files/pin_manager.h"
+# 166 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 166
+# 178
 void PIN_MANAGER_IOC(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
@@ -7702,6 +7702,24 @@ extern void cputs(const char *);
 
 # 110 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
+
+# 250 "mcc_generated_files/ext_int.h"
+void EXT_INT_Initialize(void);
+
+# 272
+void INT1_ISR(void);
+
+# 296
+void INT1_CallBack(void);
+
+# 319
+void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
+
+# 343
+extern void (*INT1_InterruptHandler)(void);
+
+# 367
+void INT1_DefaultInterruptHandler(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -7826,10 +7844,10 @@ void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 398
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
-# 72 "mcc_generated_files/mcc.h"
+# 73 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 85
+# 86
 void OSCILLATOR_Initialize(void);
 
 # 7 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdlib.h"
@@ -8249,7 +8267,15 @@ void main(void)
 
 SYSTEM_Initialize();
 
-# 159
+# 148
+(INTCONbits.GIE = 1);
+
+# 154
+(INTCONbits.PEIE = 1);
+
+
+
+
 ANSELA = 0b00000111;
 ANSELB = 0b00000000;
 ANSELC = 0x00;
