@@ -11,13 +11,13 @@
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\Control_Skill.production.hex)
   8h - E5h		(dist/default/production\Control_Skill.production.hex)
-  800h - 1ACBh		(dist/default/production\Control_Skill.production.hex)
+  800h - 1ACDh		(dist/default/production\Control_Skill.production.hex)
   200000h - 200007h		(dist/default/production\Control_Skill.production.hex)
   300000h - 30000Dh		(dist/default/production\Control_Skill.production.hex)
  Unused ranges:
   4h - 7h
   E6h - 7FFh
-  1ACCh - 1FFFFFh
+  1ACEh - 1FFFFFh
   200008h - 2FFFFFh
 
 ### Hex Memory Map ###
@@ -343,7 +343,7 @@
 00001A90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001AA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001AB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001AC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
+00001AC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------

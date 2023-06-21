@@ -6,6 +6,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ANSELA `Vuc ~T0 @X0 0 e@3931 ]
 "327
 [v _ANSELC `Vuc ~T0 @X0 0 e@3933 ]
+"4388
+[s S180 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S180 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"4398
+[s S181 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S181 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"4387
+[u S179 `S180 1 `S181 1 ]
+[n S179 . . . ]
+"4409
+[v _TRISBbits `VS179 ~T0 @X0 0 e@3987 ]
 "12422
 [s S579 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S579 . IOCIF INT0IF TMR0IF IOCIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
@@ -40,8 +51,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _INT1IF `Vb ~T0 @X0 0 e@32640 ]
 "14150
 [v _INT1E `Vb ~T0 @X0 0 e@32643 ]
-"14330
-[v _LATB0 `Vb ~T0 @X0 0 e@31824 ]
+"14351
+[v _LATB7 `Vb ~T0 @X0 0 e@31831 ]
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -5365,152 +5376,155 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 240: ANSELC = 0x00;
 "240
 [e = _ANSELC -> -> 0 `i `uc ]
-[; ;main.c: 247: (INTCONbits.GIE = 1);
-"247
+[; ;main.c: 241: TRISBbits.TRISB7 = 0;
+"241
+[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
+[; ;main.c: 248: (INTCONbits.GIE = 1);
+"248
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;main.c: 253: (INTCONbits.PEIE = 1);
-"253
+[; ;main.c: 254: (INTCONbits.PEIE = 1);
+"254
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-[; ;main.c: 264: while (1)
-"264
-[e :U 626 ]
-[; ;main.c: 265: {
+[; ;main.c: 265: while (1)
 "265
+[e :U 626 ]
+[; ;main.c: 266: {
+"266
 {
-[; ;main.c: 267: if (flag_codigo == 1)
-"267
-[e $ ! == -> _flag_codigo `i -> 1 `i 628  ]
-[; ;main.c: 268: {
+[; ;main.c: 268: if (flag_codigo == 1)
 "268
+[e $ ! == -> _flag_codigo `i -> 1 `i 628  ]
+[; ;main.c: 269: {
+"269
 {
-[; ;main.c: 271: normaliza();
-"271
-[e ( _normaliza ..  ]
-[; ;main.c: 272: codigo_ir = Hash_algoritmo();
+[; ;main.c: 272: normaliza();
 "272
-[e = _codigo_ir ( _Hash_algoritmo ..  ]
-[; ;main.c: 273: EUSART1_Write_string("Son: ");
+[e ( _normaliza ..  ]
+[; ;main.c: 273: codigo_ir = Hash_algoritmo();
 "273
-[e ( _EUSART1_Write_string (1 :s 1C ]
-[; ;main.c: 274: sprintf(texto, "%d", cuenta);
+[e = _codigo_ir ( _Hash_algoritmo ..  ]
+[; ;main.c: 274: EUSART1_Write_string("Son: ");
 "274
-[e ( _sprintf (1 , (. , &U _texto :s 2C _cuenta ]
-[; ;main.c: 275: EUSART1_Write_string(texto);
+[e ( _EUSART1_Write_string (1 :s 1C ]
+[; ;main.c: 275: sprintf(texto, "%d", cuenta);
 "275
-[e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
-[; ;main.c: 276: EUSART1_Write_string("\r");
+[e ( _sprintf (1 , (. , &U _texto :s 2C _cuenta ]
+[; ;main.c: 276: EUSART1_Write_string(texto);
 "276
-[e ( _EUSART1_Write_string (1 :s 3C ]
-[; ;main.c: 277: EUSART1_Write_string("\n");
-"277
-[e ( _EUSART1_Write_string (1 :s 4C ]
-[; ;main.c: 278: sprintf(texto, "%lx", codigo_ir);
-"278
-[e ( _sprintf (1 , (. , &U _texto :s 5C _codigo_ir ]
-[; ;main.c: 279: EUSART1_Write_string("CODIGO IR = ");
-"279
-[e ( _EUSART1_Write_string (1 :s 6C ]
-[; ;main.c: 280: EUSART1_Write_string(texto);
-"280
 [e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
-[; ;main.c: 281: EUSART1_Write_string("\r");
+[; ;main.c: 277: EUSART1_Write_string("\r");
+"277
+[e ( _EUSART1_Write_string (1 :s 3C ]
+[; ;main.c: 278: EUSART1_Write_string("\n");
+"278
+[e ( _EUSART1_Write_string (1 :s 4C ]
+[; ;main.c: 279: sprintf(texto, "%lx", codigo_ir);
+"279
+[e ( _sprintf (1 , (. , &U _texto :s 5C _codigo_ir ]
+[; ;main.c: 280: EUSART1_Write_string("CODIGO IR = ");
+"280
+[e ( _EUSART1_Write_string (1 :s 6C ]
+[; ;main.c: 281: EUSART1_Write_string(texto);
 "281
-[e ( _EUSART1_Write_string (1 :s 7C ]
-[; ;main.c: 282: EUSART1_Write_string("\n");
+[e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
+[; ;main.c: 282: EUSART1_Write_string("\r");
 "282
+[e ( _EUSART1_Write_string (1 :s 7C ]
+[; ;main.c: 283: EUSART1_Write_string("\n");
+"283
 [e ( _EUSART1_Write_string (1 :s 8C ]
-[; ;main.c: 284: if (codigo_ir == 0x811c9dc5)
-"284
-[e $ ! == _codigo_ir -> 2166136261 `ul 629  ]
-[; ;main.c: 285: {
+[; ;main.c: 285: if (codigo_ir == 0x811c9dc5)
 "285
-{
-[; ;main.c: 286: LATA3 =~ LATA3;
+[e $ ! == _codigo_ir -> 2166136261 `ul 629  ]
+[; ;main.c: 286: {
 "286
-[e = _LATA3 -> ~ -> _LATA3 `i `b ]
-[; ;main.c: 287: EUSART1_Write_string("COMANDO1");
+{
+[; ;main.c: 287: LATA3 =~ LATA3;
 "287
+[e = _LATA3 -> ~ -> _LATA3 `i `b ]
+[; ;main.c: 288: EUSART1_Write_string("COMANDO1");
+"288
 [e ( _EUSART1_Write_string (1 :s 9C ]
-"289
-}
-[; ;main.c: 289: }
-[e $U 630  ]
 "290
-[e :U 629 ]
-[; ;main.c: 290: else if (codigo_ir == 0xBF681DA0)
-[e $ ! == _codigo_ir -> 3211271584 `ul 631  ]
-[; ;main.c: 291: {
-"291
-{
-[; ;main.c: 292: LATA4 =~ LATA4;
-"292
-[e = _LATA4 -> ~ -> _LATA4 `i `b ]
-[; ;main.c: 293: EUSART1_Write_string("COMANDO2");
-"293
-[e ( _EUSART1_Write_string (1 :s 10C ]
-"294
 }
-[; ;main.c: 294: }
-[e $U 632  ]
-"296
-[e :U 631 ]
-[; ;main.c: 296: else if (codigo_ir == 0xBF681DA0)
-[e $ ! == _codigo_ir -> 3211271584 `ul 633  ]
-[; ;main.c: 297: {
-"297
+[; ;main.c: 290: }
+[e $U 630  ]
+"291
+[e :U 629 ]
+[; ;main.c: 291: else if (codigo_ir == 0xBF681DA0)
+[e $ ! == _codigo_ir -> 3211271584 `ul 631  ]
+[; ;main.c: 292: {
+"292
 {
-[; ;main.c: 298: LATA5 =~ LATA5;
+[; ;main.c: 293: LATA4 =~ LATA4;
+"293
+[e = _LATA4 -> ~ -> _LATA4 `i `b ]
+[; ;main.c: 294: EUSART1_Write_string("COMANDO2");
+"294
+[e ( _EUSART1_Write_string (1 :s 10C ]
+"295
+}
+[; ;main.c: 295: }
+[e $U 632  ]
+"297
+[e :U 631 ]
+[; ;main.c: 297: else if (codigo_ir == 0xBF681DA0)
+[e $ ! == _codigo_ir -> 3211271584 `ul 633  ]
+[; ;main.c: 298: {
 "298
-[e = _LATA5 -> ~ -> _LATA5 `i `b ]
-[; ;main.c: 299: EUSART1_Write_string("COMANDO3");
+{
+[; ;main.c: 299: LATA5 =~ LATA5;
 "299
-[e ( _EUSART1_Write_string (1 :s 11C ]
+[e = _LATA5 -> ~ -> _LATA5 `i `b ]
+[; ;main.c: 300: EUSART1_Write_string("COMANDO3");
 "300
+[e ( _EUSART1_Write_string (1 :s 11C ]
+"301
 }
 [e :U 633 ]
-"301
+"302
 [e :U 632 ]
 [e :U 630 ]
-[; ;main.c: 300: }
-[; ;main.c: 301: codigo_ir = 0;
+[; ;main.c: 301: }
+[; ;main.c: 302: codigo_ir = 0;
 [e = _codigo_ir -> -> -> 0 `i `l `ul ]
-[; ;main.c: 303: _delay((unsigned long)((2000)*(16000000/4000.0)));
-"303
+[; ;main.c: 304: _delay((unsigned long)((2000)*(16000000/4000.0)));
+"304
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 305: flag_codigo = 0;
-"305
-[e = _flag_codigo -> -> 0 `i `uc ]
-[; ;main.c: 306: cuenta = 0;
+[; ;main.c: 306: flag_codigo = 0;
 "306
-[e = _cuenta -> -> 0 `i `ui ]
-[; ;main.c: 307: INTEDG1 = 0;
+[e = _flag_codigo -> -> 0 `i `uc ]
+[; ;main.c: 307: cuenta = 0;
 "307
-[e = _INTEDG1 -> -> 0 `i `b ]
-[; ;main.c: 308: INT1IF = 0;
+[e = _cuenta -> -> 0 `i `ui ]
+[; ;main.c: 308: INTEDG1 = 0;
 "308
-[e = _INT1IF -> -> 0 `i `b ]
-[; ;main.c: 309: INT1E = 1;
+[e = _INTEDG1 -> -> 0 `i `b ]
+[; ;main.c: 309: INT1IF = 0;
 "309
-[e = _INT1E -> -> 1 `i `b ]
+[e = _INT1IF -> -> 0 `i `b ]
+[; ;main.c: 310: INT1E = 1;
 "310
+[e = _INT1E -> -> 1 `i `b ]
+"311
 }
 [e :U 628 ]
-[; ;main.c: 310: }
-[; ;main.c: 311: _delay((unsigned long)((80)*(16000000/4000.0)));
-"311
-[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 312: LATB0 =~ LATB0;
+[; ;main.c: 311: }
+[; ;main.c: 312: _delay((unsigned long)((80)*(16000000/4000.0)));
 "312
-[e = _LATB0 -> ~ -> _LATB0 `i `b ]
-"316
+[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;main.c: 313: LATB7 =~ LATB7;
+"313
+[e = _LATB7 -> ~ -> _LATB7 `i `b ]
+"317
 }
 [e :U 625 ]
-"264
+"265
 [e $U 626  ]
 [e :U 627 ]
-[; ;main.c: 316: }
 [; ;main.c: 317: }
-"317
+[; ;main.c: 318: }
+"318
 [e :UE 624 ]
 }
 [p f _sprintf 12583056 ]

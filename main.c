@@ -238,6 +238,7 @@ void main(void)
     
     ANSELA = 0b00000111;
     ANSELC = 0x00;                                                              //Todo el puerto C lo hace digital
+    TRISBbits.TRISB7 = 0;
 
     // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
     // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
@@ -309,7 +310,7 @@ void main(void)
             INT1E = 1; //  habilita la interrpcion for flanco
         }
         __delay_ms(80);
-        LATB0 =~ LATB0; 
+        LATB7 =~ LATB7; 
 //        EUSART1_Write_string("Son: \n\r");
 //        sprintf(valor_string, "Son: ");
 //        if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);

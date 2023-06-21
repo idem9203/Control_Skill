@@ -8014,14 +8014,15 @@ SYSTEM_Initialize();
 
 ANSELA = 0b00000111;
 ANSELC = 0x00;
+TRISBbits.TRISB7 = 0;
 
-# 247
+# 248
 (INTCONbits.GIE = 1);
 
-# 253
+# 254
 (INTCONbits.PEIE = 1);
 
-# 264
+# 265
 while (1)
 {
 
@@ -8070,7 +8071,7 @@ INT1IF = 0;
 INT1E = 1;
 }
 _delay((unsigned long)((80)*(16000000/4000.0)));
-LATB0 =~ LATB0;
+LATB7 =~ LATB7;
 
 
 
