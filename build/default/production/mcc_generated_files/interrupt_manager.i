@@ -7869,11 +7869,7 @@ void __interrupt() INTERRUPT_InterruptManager (void)
 if(INTCON3bits.INT1IE == 1 && INTCON3bits.INT1IF == 1)
 {
 if (INT1IF == 1)
-
 {
-
-
-
 
 if (flag_codigo == 0)
 {

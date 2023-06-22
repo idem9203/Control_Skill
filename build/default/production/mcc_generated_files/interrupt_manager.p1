@@ -5209,97 +5209,97 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interrupt_manager.c: 63: if (INT1IF == 1)
 "63
 [e $ ! == -> _INT1IF `i -> 1 `i 609  ]
-[; ;interrupt_manager.c: 65: {
-"65
+[; ;interrupt_manager.c: 64: {
+"64
 {
-[; ;interrupt_manager.c: 70: if (flag_codigo == 0)
-"70
+[; ;interrupt_manager.c: 66: if (flag_codigo == 0)
+"66
 [e $ ! == -> _flag_codigo `i -> 0 `i 610  ]
-[; ;interrupt_manager.c: 71: {
-"71
+[; ;interrupt_manager.c: 67: {
+"67
 {
-[; ;interrupt_manager.c: 72: if (cuenta != 0)
-"72
+[; ;interrupt_manager.c: 68: if (cuenta != 0)
+"68
 [e $ ! != _cuenta -> -> 0 `i `ui 611  ]
-[; ;interrupt_manager.c: 73: {
-"73
+[; ;interrupt_manager.c: 69: {
+"69
 {
-[; ;interrupt_manager.c: 74: timer_aux = TMR0;
-"74
+[; ;interrupt_manager.c: 70: timer_aux = TMR0;
+"70
 [e = _timer_aux -> _TMR0 `uc ]
-[; ;interrupt_manager.c: 75: TMR0 = 0;
-"75
+[; ;interrupt_manager.c: 71: TMR0 = 0;
+"71
 [e = _TMR0 -> -> 0 `i `us ]
-[; ;interrupt_manager.c: 76: tiempo[cuenta - 1] = timer_aux;
-"76
+[; ;interrupt_manager.c: 72: tiempo[cuenta - 1] = timer_aux;
+"72
 [e = *U + &U _tiempo * -> - _cuenta -> -> 1 `i `ui `ux -> -> # *U &U _tiempo `ui `ux _timer_aux ]
-[; ;interrupt_manager.c: 77: cuenta++;
-"77
+[; ;interrupt_manager.c: 73: cuenta++;
+"73
 [e ++ _cuenta -> -> 1 `i `ui ]
-[; ;interrupt_manager.c: 78: INTEDG1 = !INTEDG1;
-"78
+[; ;interrupt_manager.c: 74: INTEDG1 = !INTEDG1;
+"74
 [e = _INTEDG1 ! _INTEDG1 ]
-[; ;interrupt_manager.c: 80: if (TMR0IF == 1)
-"80
+[; ;interrupt_manager.c: 76: if (TMR0IF == 1)
+"76
 [e $ ! == -> _TMR0IF `i -> 1 `i 612  ]
-[; ;interrupt_manager.c: 81: {
-"81
+[; ;interrupt_manager.c: 77: {
+"77
 {
-[; ;interrupt_manager.c: 82: cuenta--;
-"82
+[; ;interrupt_manager.c: 78: cuenta--;
+"78
 [e -- _cuenta -> -> 1 `i `ui ]
-[; ;interrupt_manager.c: 83: flag_codigo = 1;
-"83
+[; ;interrupt_manager.c: 79: flag_codigo = 1;
+"79
 [e = _flag_codigo -> -> 1 `i `uc ]
-[; ;interrupt_manager.c: 84: INT1IE = 0;
-"84
+[; ;interrupt_manager.c: 80: INT1IE = 0;
+"80
 [e = _INT1IE -> -> 0 `i `b ]
-"85
+"81
 }
 [e :U 612 ]
-"86
+"82
 }
-[; ;interrupt_manager.c: 85: }
-[; ;interrupt_manager.c: 86: }
+[; ;interrupt_manager.c: 81: }
+[; ;interrupt_manager.c: 82: }
 [e $U 613  ]
-"87
+"83
 [e :U 611 ]
-[; ;interrupt_manager.c: 87: else
-[; ;interrupt_manager.c: 88: {
-"88
+[; ;interrupt_manager.c: 83: else
+[; ;interrupt_manager.c: 84: {
+"84
 {
-[; ;interrupt_manager.c: 89: TMR0IF = 0;
-"89
+[; ;interrupt_manager.c: 85: TMR0IF = 0;
+"85
 [e = _TMR0IF -> -> 0 `i `b ]
-[; ;interrupt_manager.c: 90: TMR0 = 0;
-"90
+[; ;interrupt_manager.c: 86: TMR0 = 0;
+"86
 [e = _TMR0 -> -> 0 `i `us ]
-[; ;interrupt_manager.c: 91: cuenta++;
-"91
+[; ;interrupt_manager.c: 87: cuenta++;
+"87
 [e ++ _cuenta -> -> 1 `i `ui ]
-"92
+"88
 }
 [e :U 613 ]
-"93
+"89
 }
 [e :U 610 ]
-"94
+"90
 }
 [e :U 609 ]
-[; ;interrupt_manager.c: 92: }
-[; ;interrupt_manager.c: 93: }
-[; ;interrupt_manager.c: 94: }
-[; ;interrupt_manager.c: 95: INT1IF = 0;
-"95
+[; ;interrupt_manager.c: 88: }
+[; ;interrupt_manager.c: 89: }
+[; ;interrupt_manager.c: 90: }
+[; ;interrupt_manager.c: 91: INT1IF = 0;
+"91
 [e = _INT1IF -> -> 0 `i `b ]
-[; ;interrupt_manager.c: 97: INT1_ISR();
-"97
+[; ;interrupt_manager.c: 93: INT1_ISR();
+"93
 [e ( _INT1_ISR ..  ]
-"98
+"94
 }
 [e :U 608 ]
-[; ;interrupt_manager.c: 98: }
-[; ;interrupt_manager.c: 99: }
-"99
+[; ;interrupt_manager.c: 94: }
+[; ;interrupt_manager.c: 95: }
+"95
 [e :UE 607 ]
 }

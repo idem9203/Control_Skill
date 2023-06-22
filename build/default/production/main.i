@@ -7978,22 +7978,15 @@ extern __bit iscntrl(char);
 extern char toupper(char);
 extern char tolower(char);
 
-# 107 "main.c"
+# 65 "main.c"
 void normaliza()
 {
-
-
-
 for (cont=0;cont<cuenta-1+2;cont++)
 {
 if (tiempo[cont+2] <(float)tiempo[cont] * .8) tiempo[cont]=0 ;
 else if (tiempo[cont] <(float)tiempo[cont+2] * .8) tiempo[cont]= 2 ;
 else tiempo[cont]=1 ;
-
-# 121
 }
-
-# 126
 }
 
 unsigned long Hash_algoritmo ()
@@ -8006,7 +7999,7 @@ hash_acum = (hash_acum * 16777619) ^ tiempo[cont];
 return (hash_acum);
 }
 
-# 234
+# 91
 void main(void)
 {
 
@@ -8014,22 +8007,28 @@ SYSTEM_Initialize();
 
 ANSELA = 0b00000111;
 ANSELC = 0x00;
+TRISAbits.TRISA5 = 0;
+TRISBbits.TRISB0 = 0;
 TRISBbits.TRISB7 = 0;
 
-# 248
+LATA5 = 0;
+LATB0 = 0;
+LATB7 = 0;
+
+# 111
 (INTCONbits.GIE = 1);
 
-# 254
+# 117
 (INTCONbits.PEIE = 1);
 
-# 265
+
+
+
 while (1)
 {
 
 if (flag_codigo == 1)
 {
-
-
 normaliza();
 codigo_ir = Hash_algoritmo();
 EUSART1_Write_string("Son: ");
@@ -8043,21 +8042,20 @@ EUSART1_Write_string(texto);
 EUSART1_Write_string("\r");
 EUSART1_Write_string("\n");
 
-if (codigo_ir == 0x811c9dc5)
+if (codigo_ir == 0xabca4680)
 {
-LATA3 =~ LATA3;
+LATA5 =~ LATA5;
 EUSART1_Write_string("COMANDO1");
-
 }
-else if (codigo_ir == 0xBF681DA0)
+else if (codigo_ir == 0x88574b5)
 {
-LATA4 =~ LATA4;
+LATB0 =~ LATB0;
 EUSART1_Write_string("COMANDO2");
 }
 
-else if (codigo_ir == 0xBF681DA0)
+else if (codigo_ir == 0x574cb39e)
 {
-LATA5 =~ LATA5;
+LATA3 =~ LATA3;
 EUSART1_Write_string("COMANDO3");
 }
 codigo_ir = 0;
@@ -8072,9 +8070,6 @@ INT1E = 1;
 }
 _delay((unsigned long)((80)*(16000000/4000.0)));
 LATB7 =~ LATB7;
-
-
-
 }
 }
 

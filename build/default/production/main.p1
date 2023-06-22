@@ -6,6 +6,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ANSELA `Vuc ~T0 @X0 0 e@3931 ]
 "327
 [v _ANSELC `Vuc ~T0 @X0 0 e@3933 ]
+"4166
+[s S174 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S174 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"4176
+[s S175 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S175 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"4165
+[u S173 `S174 1 `S175 1 ]
+[n S173 . . . ]
+"4187
+[v _TRISAbits `VS173 ~T0 @X0 0 e@3986 ]
 "4388
 [s S180 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S180 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
@@ -17,6 +28,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S179 . . . ]
 "4409
 [v _TRISBbits `VS179 ~T0 @X0 0 e@3987 ]
+"14321
+[v _LATA5 `Vb ~T0 @X0 0 e@31821 ]
+"14330
+[v _LATB0 `Vb ~T0 @X0 0 e@31824 ]
+"14351
+[v _LATB7 `Vb ~T0 @X0 0 e@31831 ]
 "12422
 [s S579 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S579 . IOCIF INT0IF TMR0IF IOCIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
@@ -37,10 +54,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "14315 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
 [v _LATA3 `Vb ~T0 @X0 0 e@31819 ]
-"14318
-[v _LATA4 `Vb ~T0 @X0 0 e@31820 ]
-"14321
-[v _LATA5 `Vb ~T0 @X0 0 e@31821 ]
 [v F38 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\builtins.h
 [v __delay `JF38 ~T0 @X0 0 e ]
@@ -51,8 +64,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _INT1IF `Vb ~T0 @X0 0 e@32640 ]
 "14150
 [v _INT1E `Vb ~T0 @X0 0 e@32643 ]
-"14351
-[v _LATB7 `Vb ~T0 @X0 0 e@31831 ]
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -5268,263 +5279,278 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ctype.h: 14: extern __bit iscntrl(char);
 [; ;ctype.h: 17: extern char toupper(char);
 [; ;ctype.h: 18: extern char tolower(char);
-"107 main.c
+"65 main.c
 [v _normaliza `(v ~T0 @X0 1 ef ]
-"108
+"66
 {
-[; ;main.c: 107: void normaliza()
-[; ;main.c: 108: {
+[; ;main.c: 65: void normaliza()
+[; ;main.c: 66: {
 [e :U _normaliza ]
 [f ]
-[; ;main.c: 112: for (cont=0;cont<cuenta-1+2;cont++)
-"112
+[; ;main.c: 67: for (cont=0;cont<cuenta-1+2;cont++)
+"67
 {
 [e = _cont -> -> 0 `i `uc ]
 [e $U 614  ]
-"113
+"68
 [e :U 611 ]
-[; ;main.c: 113: {
+[; ;main.c: 68: {
 {
-[; ;main.c: 114: if (tiempo[cont+2] <(float)tiempo[cont] * .8) tiempo[cont]=0 ;
-"114
+[; ;main.c: 69: if (tiempo[cont+2] <(float)tiempo[cont] * .8) tiempo[cont]=0 ;
+"69
 [e $ ! < -> *U + &U _tiempo * -> -> + -> _cont `i -> 2 `i `ui `ux -> -> # *U &U _tiempo `ui `ux `d * -> -> *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux `f `d .0.8 615  ]
 [e = *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux -> -> 0 `i `uc ]
 [e $U 616  ]
-"115
+"70
 [e :U 615 ]
-[; ;main.c: 115: else if (tiempo[cont] <(float)tiempo[cont+2] * .8) tiempo[cont]= 2 ;
+[; ;main.c: 70: else if (tiempo[cont] <(float)tiempo[cont+2] * .8) tiempo[cont]= 2 ;
 [e $ ! < -> *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux `d * -> -> *U + &U _tiempo * -> -> + -> _cont `i -> 2 `i `ui `ux -> -> # *U &U _tiempo `ui `ux `f `d .0.8 617  ]
 [e = *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux -> -> 2 `i `uc ]
 [e $U 618  ]
-"116
+"71
 [e :U 617 ]
-[; ;main.c: 116: else tiempo[cont]=1 ;
+[; ;main.c: 71: else tiempo[cont]=1 ;
 [e = *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux -> -> 1 `i `uc ]
 [e :U 618 ]
 [e :U 616 ]
-"121
+"72
 }
-"112
+"67
 [e ++ _cont -> -> 1 `i `uc ]
 [e :U 614 ]
 [e $ < -> _cont `ui + - _cuenta -> -> 1 `i `ui -> -> 2 `i `ui 611  ]
 [e :U 612 ]
-"121
+"72
 }
-[; ;main.c: 121: }
-[; ;main.c: 126: }
-"126
+[; ;main.c: 72: }
+[; ;main.c: 73: }
+"73
 [e :UE 610 ]
 }
-"128
+"75
 [v _Hash_algoritmo `(ul ~T0 @X0 1 ef ]
-"129
+"76
 {
-[; ;main.c: 128: unsigned long Hash_algoritmo ()
-[; ;main.c: 129: {
+[; ;main.c: 75: unsigned long Hash_algoritmo ()
+[; ;main.c: 76: {
 [e :U _Hash_algoritmo ]
 [f ]
-"130
+"77
 [v _hash_acum `ul ~T0 @X0 1 a ]
-[; ;main.c: 130: unsigned long hash_acum = 2166136261;
+[; ;main.c: 77: unsigned long hash_acum = 2166136261;
 [e = _hash_acum -> 2166136261 `ul ]
-[; ;main.c: 131: for (cont = 0; cont < cuenta - 1; cont++)
-"131
+[; ;main.c: 78: for (cont = 0; cont < cuenta - 1; cont++)
+"78
 {
 [e = _cont -> -> 0 `i `uc ]
 [e $U 623  ]
-"132
+"79
 [e :U 620 ]
-[; ;main.c: 132: {
+[; ;main.c: 79: {
 {
-[; ;main.c: 133: hash_acum = (hash_acum * 16777619) ^ tiempo[cont];
-"133
+[; ;main.c: 80: hash_acum = (hash_acum * 16777619) ^ tiempo[cont];
+"80
 [e = _hash_acum ^ * _hash_acum -> -> 16777619 `l `ul -> *U + &U _tiempo * -> _cont `ux -> -> # *U &U _tiempo `ui `ux `ul ]
-"134
+"81
 }
-"131
+"78
 [e ++ _cont -> -> 1 `i `uc ]
 [e :U 623 ]
 [e $ < -> _cont `ui - _cuenta -> -> 1 `i `ui 620  ]
 [e :U 621 ]
-"134
+"81
 }
-[; ;main.c: 134: }
-[; ;main.c: 135: return (hash_acum);
-"135
+[; ;main.c: 81: }
+[; ;main.c: 82: return (hash_acum);
+"82
 [e ) _hash_acum ]
 [e $UE 619  ]
-[; ;main.c: 136: }
-"136
+[; ;main.c: 83: }
+"83
 [e :UE 619 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"234
+"91
 [v _main `(v ~T0 @X0 1 ef ]
-"235
+"92
 {
-[; ;main.c: 234: void main(void)
-[; ;main.c: 235: {
+[; ;main.c: 91: void main(void)
+[; ;main.c: 92: {
 [e :U _main ]
 [f ]
-[; ;main.c: 237: SYSTEM_Initialize();
-"237
+[; ;main.c: 94: SYSTEM_Initialize();
+"94
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 239: ANSELA = 0b00000111;
-"239
+[; ;main.c: 96: ANSELA = 0b00000111;
+"96
 [e = _ANSELA -> -> 7 `i `uc ]
-[; ;main.c: 240: ANSELC = 0x00;
-"240
+[; ;main.c: 97: ANSELC = 0x00;
+"97
 [e = _ANSELC -> -> 0 `i `uc ]
-[; ;main.c: 241: TRISBbits.TRISB7 = 0;
-"241
+[; ;main.c: 98: TRISAbits.TRISA5 = 0;
+"98
+[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 99: TRISBbits.TRISB0 = 0;
+"99
+[e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 100: TRISBbits.TRISB7 = 0;
+"100
 [e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
-[; ;main.c: 248: (INTCONbits.GIE = 1);
-"248
+[; ;main.c: 102: LATA5 = 0;
+"102
+[e = _LATA5 -> -> 0 `i `b ]
+[; ;main.c: 103: LATB0 = 0;
+"103
+[e = _LATB0 -> -> 0 `i `b ]
+[; ;main.c: 104: LATB7 = 0;
+"104
+[e = _LATB7 -> -> 0 `i `b ]
+[; ;main.c: 111: (INTCONbits.GIE = 1);
+"111
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;main.c: 254: (INTCONbits.PEIE = 1);
-"254
+[; ;main.c: 117: (INTCONbits.PEIE = 1);
+"117
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-[; ;main.c: 265: while (1)
-"265
+[; ;main.c: 122: while (1)
+"122
 [e :U 626 ]
-[; ;main.c: 266: {
-"266
+[; ;main.c: 123: {
+"123
 {
-[; ;main.c: 268: if (flag_codigo == 1)
-"268
+[; ;main.c: 125: if (flag_codigo == 1)
+"125
 [e $ ! == -> _flag_codigo `i -> 1 `i 628  ]
-[; ;main.c: 269: {
-"269
+[; ;main.c: 126: {
+"126
 {
-[; ;main.c: 272: normaliza();
-"272
+[; ;main.c: 127: normaliza();
+"127
 [e ( _normaliza ..  ]
-[; ;main.c: 273: codigo_ir = Hash_algoritmo();
-"273
+[; ;main.c: 128: codigo_ir = Hash_algoritmo();
+"128
 [e = _codigo_ir ( _Hash_algoritmo ..  ]
-[; ;main.c: 274: EUSART1_Write_string("Son: ");
-"274
+[; ;main.c: 129: EUSART1_Write_string("Son: ");
+"129
 [e ( _EUSART1_Write_string (1 :s 1C ]
-[; ;main.c: 275: sprintf(texto, "%d", cuenta);
-"275
+[; ;main.c: 130: sprintf(texto, "%d", cuenta);
+"130
 [e ( _sprintf (1 , (. , &U _texto :s 2C _cuenta ]
-[; ;main.c: 276: EUSART1_Write_string(texto);
-"276
+[; ;main.c: 131: EUSART1_Write_string(texto);
+"131
 [e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
-[; ;main.c: 277: EUSART1_Write_string("\r");
-"277
+[; ;main.c: 132: EUSART1_Write_string("\r");
+"132
 [e ( _EUSART1_Write_string (1 :s 3C ]
-[; ;main.c: 278: EUSART1_Write_string("\n");
-"278
+[; ;main.c: 133: EUSART1_Write_string("\n");
+"133
 [e ( _EUSART1_Write_string (1 :s 4C ]
-[; ;main.c: 279: sprintf(texto, "%lx", codigo_ir);
-"279
+[; ;main.c: 134: sprintf(texto, "%lx", codigo_ir);
+"134
 [e ( _sprintf (1 , (. , &U _texto :s 5C _codigo_ir ]
-[; ;main.c: 280: EUSART1_Write_string("CODIGO IR = ");
-"280
+[; ;main.c: 135: EUSART1_Write_string("CODIGO IR = ");
+"135
 [e ( _EUSART1_Write_string (1 :s 6C ]
-[; ;main.c: 281: EUSART1_Write_string(texto);
-"281
+[; ;main.c: 136: EUSART1_Write_string(texto);
+"136
 [e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
-[; ;main.c: 282: EUSART1_Write_string("\r");
-"282
+[; ;main.c: 137: EUSART1_Write_string("\r");
+"137
 [e ( _EUSART1_Write_string (1 :s 7C ]
-[; ;main.c: 283: EUSART1_Write_string("\n");
-"283
+[; ;main.c: 138: EUSART1_Write_string("\n");
+"138
 [e ( _EUSART1_Write_string (1 :s 8C ]
-[; ;main.c: 285: if (codigo_ir == 0x811c9dc5)
-"285
-[e $ ! == _codigo_ir -> 2166136261 `ul 629  ]
-[; ;main.c: 286: {
-"286
+[; ;main.c: 140: if (codigo_ir == 0xabca4680)
+"140
+[e $ ! == _codigo_ir -> 2882160256 `ul 629  ]
+[; ;main.c: 141: {
+"141
 {
-[; ;main.c: 287: LATA3 =~ LATA3;
-"287
-[e = _LATA3 -> ~ -> _LATA3 `i `b ]
-[; ;main.c: 288: EUSART1_Write_string("COMANDO1");
-"288
-[e ( _EUSART1_Write_string (1 :s 9C ]
-"290
-}
-[; ;main.c: 290: }
-[e $U 630  ]
-"291
-[e :U 629 ]
-[; ;main.c: 291: else if (codigo_ir == 0xBF681DA0)
-[e $ ! == _codigo_ir -> 3211271584 `ul 631  ]
-[; ;main.c: 292: {
-"292
-{
-[; ;main.c: 293: LATA4 =~ LATA4;
-"293
-[e = _LATA4 -> ~ -> _LATA4 `i `b ]
-[; ;main.c: 294: EUSART1_Write_string("COMANDO2");
-"294
-[e ( _EUSART1_Write_string (1 :s 10C ]
-"295
-}
-[; ;main.c: 295: }
-[e $U 632  ]
-"297
-[e :U 631 ]
-[; ;main.c: 297: else if (codigo_ir == 0xBF681DA0)
-[e $ ! == _codigo_ir -> 3211271584 `ul 633  ]
-[; ;main.c: 298: {
-"298
-{
-[; ;main.c: 299: LATA5 =~ LATA5;
-"299
+[; ;main.c: 142: LATA5 =~ LATA5;
+"142
 [e = _LATA5 -> ~ -> _LATA5 `i `b ]
-[; ;main.c: 300: EUSART1_Write_string("COMANDO3");
-"300
+[; ;main.c: 143: EUSART1_Write_string("COMANDO1");
+"143
+[e ( _EUSART1_Write_string (1 :s 9C ]
+"144
+}
+[; ;main.c: 144: }
+[e $U 630  ]
+"145
+[e :U 629 ]
+[; ;main.c: 145: else if (codigo_ir == 0x88574b5)
+[e $ ! == _codigo_ir -> -> 142963893 `l `ul 631  ]
+[; ;main.c: 146: {
+"146
+{
+[; ;main.c: 147: LATB0 =~ LATB0;
+"147
+[e = _LATB0 -> ~ -> _LATB0 `i `b ]
+[; ;main.c: 148: EUSART1_Write_string("COMANDO2");
+"148
+[e ( _EUSART1_Write_string (1 :s 10C ]
+"149
+}
+[; ;main.c: 149: }
+[e $U 632  ]
+"151
+[e :U 631 ]
+[; ;main.c: 151: else if (codigo_ir == 0x574cb39e)
+[e $ ! == _codigo_ir -> -> 1464644510 `l `ul 633  ]
+[; ;main.c: 152: {
+"152
+{
+[; ;main.c: 153: LATA3 =~ LATA3;
+"153
+[e = _LATA3 -> ~ -> _LATA3 `i `b ]
+[; ;main.c: 154: EUSART1_Write_string("COMANDO3");
+"154
 [e ( _EUSART1_Write_string (1 :s 11C ]
-"301
+"155
 }
 [e :U 633 ]
-"302
+"156
 [e :U 632 ]
 [e :U 630 ]
-[; ;main.c: 301: }
-[; ;main.c: 302: codigo_ir = 0;
+[; ;main.c: 155: }
+[; ;main.c: 156: codigo_ir = 0;
 [e = _codigo_ir -> -> -> 0 `i `l `ul ]
-[; ;main.c: 304: _delay((unsigned long)((2000)*(16000000/4000.0)));
-"304
+[; ;main.c: 158: _delay((unsigned long)((2000)*(16000000/4000.0)));
+"158
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 306: flag_codigo = 0;
-"306
+[; ;main.c: 160: flag_codigo = 0;
+"160
 [e = _flag_codigo -> -> 0 `i `uc ]
-[; ;main.c: 307: cuenta = 0;
-"307
+[; ;main.c: 161: cuenta = 0;
+"161
 [e = _cuenta -> -> 0 `i `ui ]
-[; ;main.c: 308: INTEDG1 = 0;
-"308
+[; ;main.c: 162: INTEDG1 = 0;
+"162
 [e = _INTEDG1 -> -> 0 `i `b ]
-[; ;main.c: 309: INT1IF = 0;
-"309
+[; ;main.c: 163: INT1IF = 0;
+"163
 [e = _INT1IF -> -> 0 `i `b ]
-[; ;main.c: 310: INT1E = 1;
-"310
+[; ;main.c: 164: INT1E = 1;
+"164
 [e = _INT1E -> -> 1 `i `b ]
-"311
+"165
 }
 [e :U 628 ]
-[; ;main.c: 311: }
-[; ;main.c: 312: _delay((unsigned long)((80)*(16000000/4000.0)));
-"312
+[; ;main.c: 165: }
+[; ;main.c: 166: _delay((unsigned long)((80)*(16000000/4000.0)));
+"166
 [e ( __delay (1 -> * -> -> 80 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 313: LATB7 =~ LATB7;
-"313
+[; ;main.c: 167: LATB7 =~ LATB7;
+"167
 [e = _LATB7 -> ~ -> _LATB7 `i `b ]
-"317
+"168
 }
 [e :U 625 ]
-"265
+"122
 [e $U 626  ]
 [e :U 627 ]
-[; ;main.c: 317: }
-[; ;main.c: 318: }
-"318
+[; ;main.c: 168: }
+[; ;main.c: 169: }
+"169
 [e :UE 624 ]
 }
 [p f _sprintf 12583056 ]
