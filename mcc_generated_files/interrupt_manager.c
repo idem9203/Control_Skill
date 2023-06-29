@@ -58,40 +58,13 @@ void  INTERRUPT_Initialize (void)
 void __interrupt() INTERRUPT_InterruptManager (void)
 {
     // interrupt handler
-    if(INTCON3bits.INT1IE == 1 && INTCON3bits.INT1IF == 1)
+    if(INTCONbits.PEIE == 1)
     {
-        if (INT1IF == 1)
+        if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
         {
-            //el analasis se hace solo
-            if (flag_codigo == 0)
-            {
-                if (cuenta != 0)
-                {
-                    timer_aux = TMR0; //captura el valor del timer
-                    TMR0 = 0; // resetea el timer para otra lectura
-                    tiempo[cuenta - 1] = timer_aux;     // CARGA UN BUUFER CON LOS DATOS
-                    cuenta++;
-                    INTEDG1 = !INTEDG1;
-
-                    if (TMR0IF == 1)  // si hubo desborde del timer , fin de datos
-                    {
-                        cuenta--;// omite el codigo de ultimo desborde
-                        flag_codigo = 1;
-                        INT1IE = 0; //deshabilita la interrpcuion
-                    }
-                }
-                else
-                {
-                    TMR0IF = 0;// limpia la bansera timer
-                    TMR0 = 0;   // resetea el timer
-                    cuenta++;
-                }
-            }
-        }
-        INT1IF = 0;    
-    
-        INT1_ISR();
-    }
+            EUSART1_RxDefaultInterruptHandler();
+        } 
+    }      
 }
 /**
  End of File

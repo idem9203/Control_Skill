@@ -71,8 +71,8 @@ void PIN_MANAGER_Initialize(void)
     /**
     ANSELx registers
     */
-    ANSELC = 0x84;
-    ANSELB = 0x3C;
+    ANSELC = 0x04;
+    ANSELB = 0x3E;
     ANSELA = 0x07;
 
     /**
@@ -88,12 +88,6 @@ void PIN_MANAGER_Initialize(void)
 
    
     
-}
-  
-void PIN_MANAGER_IOC(void)
-{   
-	// Clear global Interrupt-On-Change flag
-    INTCONbits.IOCIF = 0;
 }
 
 /**

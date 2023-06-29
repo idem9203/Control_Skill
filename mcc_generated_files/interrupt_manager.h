@@ -50,15 +50,6 @@
 #define INTERRUPT_MANAGER_H
 
 
-char flag_codigo=0;
-unsigned int cuenta=0;  // almacenar #datos
-unsigned char cont; // contador para for
-char texto[10];   // usado para convertir numeros a cadena
-unsigned char timer_aux;
-unsigned char tiempo[70];        // en has sumar dos al numero de datos leidos
-unsigned long codigo_ir; // variable salida has que almcena codigo unico
-
-
 /**
  * @Param
     none

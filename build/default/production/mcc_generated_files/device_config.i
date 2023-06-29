@@ -4,7 +4,7 @@
 
 # 50
 #pragma config PLLSEL = PLL3X
-#pragma config CFGPLLEN = OFF
+#pragma config CFGPLLEN = ON
 #pragma config CPUDIV = NOCLKDIV
 #pragma config LS48MHZ = SYS48X8
 

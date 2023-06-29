@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"11330 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
+"11330 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
 [s S508 :1 `uc 1 ]
 [n S508 . NOT_BOR ]
 "11333
@@ -27,57 +27,52 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RCONbits `VS507 ~T0 @X0 0 e@4048 ]
 [t ~ __interrupt . k ]
 [t T12 __interrupt  ]
-"12253
-[s S572 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S572 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
-"12263
-[s S573 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S573 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
-"12252
-[u S571 `S572 1 `S573 1 ]
-[n S571 . . . ]
-"12274
-[v _INTCON3bits `VS571 ~T0 @X0 0 e@4080 ]
-"14159
-[v _INT1IF `Vb ~T0 @X0 0 e@32640 ]
-"11700
-[v _TMR0 `Vus ~T0 @X0 0 e@4054 ]
-"14192
-[v _INTEDG1 `Vb ~T0 @X0 0 e@32653 ]
-"15386
-[v _TMR0IF `Vb ~T0 @X0 0 e@32658 ]
-"14156
-[v _INT1IE `Vb ~T0 @X0 0 e@32643 ]
-"275 mcc_generated_files/ext_int.h
-[v _INT1_ISR `(v ~T0 @X0 0 ef ]
-"53 mcc_generated_files/interrupt_manager.h
-[v _flag_codigo `uc ~T0 @X0 1 e ]
-[i _flag_codigo
--> -> 0 `i `uc
-]
-[; ;interrupt_manager.h: 53: char flag_codigo=0;
-"54
-[v _cuenta `ui ~T0 @X0 1 e ]
-[i _cuenta
--> -> 0 `i `ui
-]
-[; ;interrupt_manager.h: 54: unsigned int cuenta=0;
-"55
-[v _cont `uc ~T0 @X0 1 e ]
-[; ;interrupt_manager.h: 55: unsigned char cont;
-"56
-[v _texto `uc ~T0 @X0 -> 10 `i e ]
-[; ;interrupt_manager.h: 56: char texto[10];
-"57
-[v _timer_aux `uc ~T0 @X0 1 e ]
-[; ;interrupt_manager.h: 57: unsigned char timer_aux;
-"58
-[v _tiempo `uc ~T0 @X0 -> 70 `i e ]
-[; ;interrupt_manager.h: 58: unsigned char tiempo[70];
-"59
-[v _codigo_ir `ul ~T0 @X0 1 e ]
-[; ;interrupt_manager.h: 59: unsigned long codigo_ir;
-[; ;interrupt_manager.h: 119: void INTERRUPT_Initialize (void);
+"12422
+[s S579 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S579 . IOCIF INT0IF TMR0IF IOCIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"12432
+[s S580 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S580 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"12442
+[s S581 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S581 . . GIEL GIEH ]
+"12421
+[u S578 `S579 1 `S580 1 `S581 1 ]
+[n S578 . . . . ]
+"12448
+[v _INTCONbits `VS578 ~T0 @X0 0 e@4082 ]
+"5387
+[s S218 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S218 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ACTIE ]
+"5397
+[s S219 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S219 . . SSP1IE TX1IE RC1IE . STIE ]
+"5405
+[s S220 :7 `uc 1 :1 `uc 1 ]
+[n S220 . . PSPIE ]
+"5386
+[u S217 `S218 1 `S219 1 `S220 1 ]
+[n S217 . . . . ]
+"5410
+[v _PIE1bits `VS217 ~T0 @X0 0 e@3997 ]
+"5486
+[s S222 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S222 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ACTIF ]
+"5496
+[s S223 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S223 . . SSP1IF TX1IF RC1IF . STIF ]
+"5504
+[s S224 :7 `uc 1 :1 `uc 1 ]
+[n S224 . . PSPIF ]
+"5485
+[u S221 `S222 1 `S223 1 `S224 1 ]
+[n S221 . . . . ]
+"5509
+[v _PIR1bits `VS221 ~T0 @X0 0 e@3998 ]
+[v F4531 `(v ~T0 @X0 0 tf ]
+"95 mcc_generated_files/eusart1.h
+[v _EUSART1_RxDefaultInterruptHandler `*F4531 ~T0 @X0 0 e ]
+[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -114,7 +109,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\builtins.h: 14: extern __nonreentrant void _delaywdt(uint32_t);
 [; ;xc8\pic\include\builtins.h: 17: extern __nonreentrant void _delay3(uint8_t);
 [; ;xc8\pic\include\proc\pic18f25k50.h: 52: extern volatile unsigned char SRCON1 __at(0xF57);
-"54 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
+"54 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
 [; ;xc8\pic\include\proc\pic18f25k50.h: 54: asm("SRCON1 equ 0F57h");
 [; <" SRCON1 equ 0F57h ;# ">
 [; ;xc8\pic\include\proc\pic18f25k50.h: 57: typedef union {
@@ -5104,8 +5099,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\pic18.h: 158: __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 [; ;xc8\pic\include\pic18.h: 192: unsigned char __t1rd16on(void);
 [; ;xc8\pic\include\pic18.h: 193: unsigned char __t3rd16on(void);
-[; ;pin_manager.h: 156: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 168: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 154: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 166: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;errno.h: 29: extern int errno;
 [; ;conio.h: 12: extern void init_uart(void);
@@ -5116,22 +5111,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;conio.h: 19: extern __bit kbhit(void);
 [; ;conio.h: 23: extern char * cgets(char *);
 [; ;conio.h: 24: extern void cputs(const char *);
-[; ;ext_int.h: 253: void EXT_INT_Initialize(void);
-[; ;ext_int.h: 275: void INT1_ISR(void);
-[; ;ext_int.h: 299: void INT1_CallBack(void);
-[; ;ext_int.h: 322: void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
-[; ;ext_int.h: 346: extern void (*INT1_InterruptHandler)(void);
-[; ;ext_int.h: 370: void INT1_DefaultInterruptHandler(void);
-[; ;ext_int.h: 372: void normaliza(void);
-[; ;ext_int.h: 374: unsigned long Hash_algoritmo ();
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;tmr0.h: 100: void TMR0_Initialize(void);
-[; ;tmr0.h: 129: void TMR0_StartTimer(void);
-[; ;tmr0.h: 161: void TMR0_StopTimer(void);
-[; ;tmr0.h: 196: uint8_t TMR0_ReadTimer(void);
-[; ;tmr0.h: 235: void TMR0_WriteTimer(uint8_t timerVal);
-[; ;tmr0.h: 271: void TMR0_Reload(void);
-[; ;tmr0.h: 310: bool TMR0_HasOverflowOccured(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
@@ -5163,19 +5142,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart1.h: 82: };
 [; ;eusart1.h: 83: uint8_t status;
 [; ;eusart1.h: 84: }eusart1_status_t;
-[; ;eusart1.h: 111: void EUSART1_Initialize(void);
-[; ;eusart1.h: 159: bool EUSART1_is_tx_ready(void);
-[; ;eusart1.h: 207: bool EUSART1_is_rx_ready(void);
-[; ;eusart1.h: 254: bool EUSART1_is_tx_done(void);
-[; ;eusart1.h: 302: eusart1_status_t EUSART1_get_last_status(void);
-[; ;eusart1.h: 322: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 342: void EUSART1_Write(uint8_t txData);
-[; ;eusart1.h: 363: void EUSART1_Write_string(const char* data);
-[; ;eusart1.h: 365: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 383: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 401: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 73: void SYSTEM_Initialize(void);
-[; ;mcc.h: 86: void OSCILLATOR_Initialize(void);
+[; ;eusart1.h: 89: extern volatile uint8_t eusart1TxBufferRemaining;
+[; ;eusart1.h: 90: extern volatile uint8_t eusart1RxCount;
+[; ;eusart1.h: 95: extern void (*EUSART1_RxDefaultInterruptHandler)(void);
+[; ;eusart1.h: 117: void EUSART1_Initialize(void);
+[; ;eusart1.h: 165: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 213: bool EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 260: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 308: eusart1_status_t EUSART1_get_last_status(void);
+[; ;eusart1.h: 328: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 348: void EUSART1_Write(uint8_t txData);
+[; ;eusart1.h: 370: void EUSART1_Receive_ISR(void);
+[; ;eusart1.h: 391: void EUSART1_RxDataHandler(void);
+[; ;eusart1.h: 410: void EUSART1_Write_string(const char* data);
+[; ;eusart1.h: 412: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 430: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 448: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 469: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+[; ;mcc.h: 71: void SYSTEM_Initialize(void);
+[; ;mcc.h: 84: void OSCILLATOR_Initialize(void);
 "52 mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize `(v ~T0 @X0 1 ef ]
 "53
@@ -5200,106 +5185,30 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interrupt_manager.c: 59: {
 [e :U _INTERRUPT_InterruptManager ]
 [f ]
-[; ;interrupt_manager.c: 61: if(INTCON3bits.INT1IE == 1 && INTCON3bits.INT1IF == 1)
+[; ;interrupt_manager.c: 61: if(INTCONbits.PEIE == 1)
 "61
-[e $ ! && == -> . . _INTCON3bits 0 3 `i -> 1 `i == -> . . _INTCON3bits 0 0 `i -> 1 `i 608  ]
+[e $ ! == -> . . _INTCONbits 1 6 `i -> 1 `i 608  ]
 [; ;interrupt_manager.c: 62: {
 "62
 {
-[; ;interrupt_manager.c: 63: if (INT1IF == 1)
+[; ;interrupt_manager.c: 63: if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
 "63
-[e $ ! == -> _INT1IF `i -> 1 `i 609  ]
+[e $ ! && == -> . . _PIE1bits 1 3 `i -> 1 `i == -> . . _PIR1bits 1 3 `i -> 1 `i 609  ]
 [; ;interrupt_manager.c: 64: {
 "64
 {
-[; ;interrupt_manager.c: 66: if (flag_codigo == 0)
+[; ;interrupt_manager.c: 65: EUSART1_RxDefaultInterruptHandler();
+"65
+[e ( *U _EUSART1_RxDefaultInterruptHandler ..  ]
 "66
-[e $ ! == -> _flag_codigo `i -> 0 `i 610  ]
-[; ;interrupt_manager.c: 67: {
-"67
-{
-[; ;interrupt_manager.c: 68: if (cuenta != 0)
-"68
-[e $ ! != _cuenta -> -> 0 `i `ui 611  ]
-[; ;interrupt_manager.c: 69: {
-"69
-{
-[; ;interrupt_manager.c: 70: timer_aux = TMR0;
-"70
-[e = _timer_aux -> _TMR0 `uc ]
-[; ;interrupt_manager.c: 71: TMR0 = 0;
-"71
-[e = _TMR0 -> -> 0 `i `us ]
-[; ;interrupt_manager.c: 72: tiempo[cuenta - 1] = timer_aux;
-"72
-[e = *U + &U _tiempo * -> - _cuenta -> -> 1 `i `ui `ux -> -> # *U &U _tiempo `ui `ux _timer_aux ]
-[; ;interrupt_manager.c: 73: cuenta++;
-"73
-[e ++ _cuenta -> -> 1 `i `ui ]
-[; ;interrupt_manager.c: 74: INTEDG1 = !INTEDG1;
-"74
-[e = _INTEDG1 ! _INTEDG1 ]
-[; ;interrupt_manager.c: 76: if (TMR0IF == 1)
-"76
-[e $ ! == -> _TMR0IF `i -> 1 `i 612  ]
-[; ;interrupt_manager.c: 77: {
-"77
-{
-[; ;interrupt_manager.c: 78: cuenta--;
-"78
-[e -- _cuenta -> -> 1 `i `ui ]
-[; ;interrupt_manager.c: 79: flag_codigo = 1;
-"79
-[e = _flag_codigo -> -> 1 `i `uc ]
-[; ;interrupt_manager.c: 80: INT1IE = 0;
-"80
-[e = _INT1IE -> -> 0 `i `b ]
-"81
-}
-[e :U 612 ]
-"82
-}
-[; ;interrupt_manager.c: 81: }
-[; ;interrupt_manager.c: 82: }
-[e $U 613  ]
-"83
-[e :U 611 ]
-[; ;interrupt_manager.c: 83: else
-[; ;interrupt_manager.c: 84: {
-"84
-{
-[; ;interrupt_manager.c: 85: TMR0IF = 0;
-"85
-[e = _TMR0IF -> -> 0 `i `b ]
-[; ;interrupt_manager.c: 86: TMR0 = 0;
-"86
-[e = _TMR0 -> -> 0 `i `us ]
-[; ;interrupt_manager.c: 87: cuenta++;
-"87
-[e ++ _cuenta -> -> 1 `i `ui ]
-"88
-}
-[e :U 613 ]
-"89
-}
-[e :U 610 ]
-"90
 }
 [e :U 609 ]
-[; ;interrupt_manager.c: 88: }
-[; ;interrupt_manager.c: 89: }
-[; ;interrupt_manager.c: 90: }
-[; ;interrupt_manager.c: 91: INT1IF = 0;
-"91
-[e = _INT1IF -> -> 0 `i `b ]
-[; ;interrupt_manager.c: 93: INT1_ISR();
-"93
-[e ( _INT1_ISR ..  ]
-"94
+"67
 }
 [e :U 608 ]
-[; ;interrupt_manager.c: 94: }
-[; ;interrupt_manager.c: 95: }
-"95
+[; ;interrupt_manager.c: 66: }
+[; ;interrupt_manager.c: 67: }
+[; ;interrupt_manager.c: 68: }
+"68
 [e :UE 607 ]
 }

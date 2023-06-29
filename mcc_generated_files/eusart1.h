@@ -83,10 +83,16 @@ typedef union {
     uint8_t status;
 }eusart1_status_t;
 
+/**
+ Section: Global variables
+ */
+extern volatile uint8_t eusart1TxBufferRemaining;
+extern volatile uint8_t eusart1RxCount;
 
 /**
   Section: EUSART1 APIs
 */
+extern void (*EUSART1_RxDefaultInterruptHandler)(void);
 
 /**
   @Summary
@@ -342,6 +348,47 @@ uint8_t EUSART1_Read(void);
 void EUSART1_Write(uint8_t txData);
 
 
+/**
+  @Summary
+    Maintains the driver's receiver state machine and implements its ISR
+
+  @Description
+    This routine is used to maintain the driver's internal receiver state
+    machine.This interrupt service routine is called when the state of the
+    receiver needs to be maintained in a non polled manner.
+
+  @Preconditions
+    EUSART1_Initialize() function should have been called
+    for the ISR to execute correctly.
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+void EUSART1_Receive_ISR(void);
+
+/**
+  @Summary
+    Maintains the driver's receiver state machine
+
+  @Description
+    This routine is called by the receive state routine and is used to maintain 
+    the driver's internal receiver state machine. It should be called by a custom
+    ISR to maintain normal behavior
+
+  @Preconditions
+    EUSART1_Initialize() function should have been called
+    for the ISR to execute correctly.
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+void EUSART1_RxDataHandler(void);
 
 /**
   @Summary
@@ -401,6 +448,25 @@ void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
 
+/**
+  @Summary
+    Sets the receive handler function to be called by the interrupt service
+
+  @Description
+    Calling this function will set a new custom function that will be 
+    called when the receive interrupt needs servicing.
+
+  @Preconditions
+    EUSART1_Initialize() function should have been called
+    for the ISR to execute correctly.
+
+  @Param
+    A pointer to the new function
+
+  @Returns
+    None
+*/
+void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 

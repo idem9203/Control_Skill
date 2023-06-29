@@ -53,8 +53,6 @@ void SYSTEM_Initialize(void)
     INTERRUPT_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
-    EXT_INT_Initialize();
-    TMR0_Initialize();
     EUSART1_Initialize();
 }
 
@@ -68,6 +66,10 @@ void OSCILLATOR_Initialize(void)
     OSCTUNE = 0x80;
     // ACTSRC SOSC; ACTUD enabled; ACTEN disabled; 
     ACTCON = 0x00;
+    // Wait for PLL to stabilize
+    while(PLLRDY == 0)
+    {
+    }
 }
 
 

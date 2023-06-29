@@ -1,7 +1,7 @@
 
-# 1 "mcc_generated_files/tmr0.c"
+# 1 "Librerias/esp8266.c"
 
-# 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\xc.h"
+# 18 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
@@ -98,7 +98,7 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 
 
-# 7 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\builtins.h"
+# 7 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\builtins.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
@@ -111,7 +111,7 @@ extern __nonreentrant void _delaywdt(uint32_t);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(uint8_t);
 
-# 52 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h"
+# 52 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h"
 extern volatile unsigned char SRCON1 __at(0xF57);
 
 asm("SRCON1 equ 0F57h");
@@ -7661,7 +7661,7 @@ extern volatile __bit nW __at(0x7E3A);
 
 extern volatile __bit nWRITE __at(0x7E3A);
 
-# 19 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\pic18.h"
+# 19 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\pic18.h"
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
 
@@ -7674,93 +7674,188 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
+# 154 "Librerias/../mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_Initialize (void);
+
+# 166
+void PIN_MANAGER_IOC(void);
+
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 100 "mcc_generated_files/tmr0.h"
-void TMR0_Initialize(void);
+# 29 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\errno.h"
+extern int errno;
 
-# 129
-void TMR0_StartTimer(void);
+# 12 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\conio.h"
+extern void init_uart(void);
 
-# 161
-void TMR0_StopTimer(void);
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
 
-# 196
-uint8_t TMR0_ReadTimer(void);
+extern __bit kbhit(void);
 
-# 235
-void TMR0_WriteTimer(uint8_t timerVal);
+# 23
+extern char * cgets(char *);
+extern void cputs(const char *);
 
-# 271
-void TMR0_Reload(void);
+# 110 "Librerias/../mcc_generated_files/interrupt_manager.h"
+void INTERRUPT_Initialize (void);
 
-# 310
-bool TMR0_HasOverflowOccured(void);
+# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
 
-# 59 "mcc_generated_files/tmr0.c"
-volatile uint8_t timer0ReloadVal;
+# 4 "C:\Program Files\Microchip\xc8\v2.36\pic\include\__size_t.h"
+typedef unsigned size_t;
 
-# 66
-void TMR0_Initialize(void)
+# 7 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 43 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdio.h"
+struct __prbuf
 {
+char * ptr;
+void (* func)(char);
+};
+
+# 88
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
 
 
 
-TMR0H = 0x00;
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
 
 
-TMR0L = 0x64;
+# 180
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
 
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
 
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
 
-timer0ReloadVal = 100;
+# 76 "Librerias/../mcc_generated_files/eusart1.h"
+typedef union {
+struct {
+unsigned perr : 1;
+unsigned ferr : 1;
+unsigned oerr : 1;
+unsigned reserved : 5;
+};
+uint8_t status;
+}eusart1_status_t;
 
+# 89
+extern volatile uint8_t eusart1TxBufferRemaining;
+extern volatile uint8_t eusart1RxCount;
 
-INTCONbits.TMR0IF = 0;
+# 95
+extern void (*EUSART1_RxDefaultInterruptHandler)(void);
 
+# 117
+void EUSART1_Initialize(void);
 
-T0CON = 0xD7;
-}
+# 165
+bool EUSART1_is_tx_ready(void);
 
-void TMR0_StartTimer(void)
+# 213
+bool EUSART1_is_rx_ready(void);
+
+# 260
+bool EUSART1_is_tx_done(void);
+
+# 308
+eusart1_status_t EUSART1_get_last_status(void);
+
+# 328
+uint8_t EUSART1_Read(void);
+
+# 348
+void EUSART1_Write(uint8_t txData);
+
+# 370
+void EUSART1_Receive_ISR(void);
+
+# 391
+void EUSART1_RxDataHandler(void);
+
+# 410
+void EUSART1_Write_string(const char* data);
+
+void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+
+# 430
+void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+
+# 448
+void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+
+# 469
+void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+
+# 71 "Librerias/../mcc_generated_files/mcc.h"
+void SYSTEM_Initialize(void);
+
+# 84
+void OSCILLATOR_Initialize(void);
+
+# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 46 "Librerias/esp8266.h"
+void esp8266_router_init(void);
+
+# 13 "Librerias/esp8266.c"
+void esp8266_router_init()
 {
+EUSART1_Write_string("ATE0\r\n");
+_delay((unsigned long)((1000)*(48000000/4000.0)));
 
-T0CONbits.TMR0ON = 1;
-}
-
-void TMR0_StopTimer(void)
-{
-
-T0CONbits.TMR0ON = 0;
-}
-
-uint8_t TMR0_ReadTimer(void)
-{
-uint8_t readVal;
+EUSART1_Write_string("AT+CWMODE=2\r\n");
+_delay((unsigned long)((200)*(48000000/4000.0)));
 
 
-readVal = TMR0L;
+EUSART1_Write_string("AT+CIPSERVER=0\r\n");
+_delay((unsigned long)((200)*(48000000/4000.0)));
+EUSART1_Write_string("AT+CIPMUX=0\r\n");
+_delay((unsigned long)((200)*(48000000/4000.0)));
 
-return readVal;
-}
-
-void TMR0_WriteTimer(uint8_t timerVal)
-{
-
-TMR0L = timerVal;
-}
-
-void TMR0_Reload(void)
-{
-
-TMR0L = timer0ReloadVal;
-}
+EUSART1_Write_string("AT+CIPMODE=0\r\n");
+_delay((unsigned long)((200)*(48000000/4000.0)));
 
 
-bool TMR0_HasOverflowOccured(void)
-{
 
-return(INTCONbits.TMR0IF);
+EUSART1_Write_string("AT+CWSAP=\"ESP8266_IDEM\",\"noconectar\",5,3\r\n");
+_delay((unsigned long)((200)*(48000000/4000.0)));
+
+EUSART1_Write_string("AT+CIPAP=\"192.168.1.253\"\r\n");
+_delay((unsigned long)((200)*(48000000/4000.0)));
+
+EUSART1_Write_string("AT+CIPMUX=0\r\n");
+_delay((unsigned long)((200)*(48000000/4000.0)));
+
+EUSART1_Write_string("AT+CIPSERVER=1,200\r\n");
+_delay((unsigned long)((200)*(48000000/4000.0)));
+
+EUSART1_Write_string("AT+CIPSTO=0\r\n");
+_delay((unsigned long)((200)*(48000000/4000.0)));
 }
 

@@ -1,19 +1,10 @@
 
 # 1 "mcc_generated_files/interrupt_manager.c"
 
-# 53 "mcc_generated_files/interrupt_manager.h"
-char flag_codigo=0;
-unsigned int cuenta=0;
-unsigned char cont;
-char texto[10];
-unsigned char timer_aux;
-unsigned char tiempo[70];
-unsigned long codigo_ir;
-
-# 119
+# 110 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
-# 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\xc.h"
+# 18 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
@@ -110,7 +101,7 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 
 
-# 7 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\builtins.h"
+# 7 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\builtins.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
@@ -123,7 +114,7 @@ extern __nonreentrant void _delaywdt(uint32_t);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(uint8_t);
 
-# 52 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h"
+# 52 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h"
 extern volatile unsigned char SRCON1 __at(0xF57);
 
 asm("SRCON1 equ 0F57h");
@@ -7673,7 +7664,7 @@ extern volatile __bit nW __at(0x7E3A);
 
 extern volatile __bit nWRITE __at(0x7E3A);
 
-# 19 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\pic18.h"
+# 19 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\pic18.h"
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
 
@@ -7686,10 +7677,10 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 156 "mcc_generated_files/pin_manager.h"
+# 154 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 168
+# 166
 void PIN_MANAGER_IOC(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
@@ -7711,52 +7702,6 @@ extern __bit kbhit(void);
 # 23
 extern char * cgets(char *);
 extern void cputs(const char *);
-
-# 253 "mcc_generated_files/ext_int.h"
-void EXT_INT_Initialize(void);
-
-# 275
-void INT1_ISR(void);
-
-# 299
-void INT1_CallBack(void);
-
-# 322
-void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
-
-# 346
-extern void (*INT1_InterruptHandler)(void);
-
-# 370
-void INT1_DefaultInterruptHandler(void);
-
-void normaliza(void);
-
-unsigned long Hash_algoritmo ();
-
-# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 100 "mcc_generated_files/tmr0.h"
-void TMR0_Initialize(void);
-
-# 129
-void TMR0_StartTimer(void);
-
-# 161
-void TMR0_StopTimer(void);
-
-# 196
-uint8_t TMR0_ReadTimer(void);
-
-# 235
-void TMR0_WriteTimer(uint8_t timerVal);
-
-# 271
-void TMR0_Reload(void);
-
-# 310
-bool TMR0_HasOverflowOccured(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -7818,42 +7763,58 @@ unsigned reserved : 5;
 uint8_t status;
 }eusart1_status_t;
 
-# 111
+# 89
+extern volatile uint8_t eusart1TxBufferRemaining;
+extern volatile uint8_t eusart1RxCount;
+
+# 95
+extern void (*EUSART1_RxDefaultInterruptHandler)(void);
+
+# 117
 void EUSART1_Initialize(void);
 
-# 159
+# 165
 bool EUSART1_is_tx_ready(void);
 
-# 207
+# 213
 bool EUSART1_is_rx_ready(void);
 
-# 254
+# 260
 bool EUSART1_is_tx_done(void);
 
-# 302
+# 308
 eusart1_status_t EUSART1_get_last_status(void);
 
-# 322
+# 328
 uint8_t EUSART1_Read(void);
 
-# 342
+# 348
 void EUSART1_Write(uint8_t txData);
 
-# 363
+# 370
+void EUSART1_Receive_ISR(void);
+
+# 391
+void EUSART1_RxDataHandler(void);
+
+# 410
 void EUSART1_Write_string(const char* data);
 
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 
-# 383
+# 430
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 
-# 401
+# 448
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
-# 73 "mcc_generated_files/mcc.h"
+# 469
+void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+
+# 71 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 86
+# 84
 void OSCILLATOR_Initialize(void);
 
 # 52 "mcc_generated_files/interrupt_manager.c"
@@ -7866,39 +7827,12 @@ RCONbits.IPEN = 0;
 void __interrupt() INTERRUPT_InterruptManager (void)
 {
 
-if(INTCON3bits.INT1IE == 1 && INTCON3bits.INT1IF == 1)
+if(INTCONbits.PEIE == 1)
 {
-if (INT1IF == 1)
+if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
 {
-
-if (flag_codigo == 0)
-{
-if (cuenta != 0)
-{
-timer_aux = TMR0;
-TMR0 = 0;
-tiempo[cuenta - 1] = timer_aux;
-cuenta++;
-INTEDG1 = !INTEDG1;
-
-if (TMR0IF == 1)
-{
-cuenta--;
-flag_codigo = 1;
-INT1IE = 0;
+EUSART1_RxDefaultInterruptHandler();
 }
-}
-else
-{
-TMR0IF = 0;
-TMR0 = 0;
-cuenta++;
-}
-}
-}
-INT1IF = 0;
-
-INT1_ISR();
 }
 }
 

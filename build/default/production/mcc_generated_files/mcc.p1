@@ -1,17 +1,13 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"119 mcc_generated_files/interrupt_manager.h
+"110 mcc_generated_files/interrupt_manager.h
 [v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
-"156 mcc_generated_files/pin_manager.h
+"154 mcc_generated_files/pin_manager.h
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"86 mcc_generated_files/mcc.h
+"84 mcc_generated_files/mcc.h
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"253 mcc_generated_files/ext_int.h
-[v _EXT_INT_Initialize `(v ~T0 @X0 0 ef ]
-"100 mcc_generated_files/tmr0.h
-[v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
-"111 mcc_generated_files/eusart1.h
+"117 mcc_generated_files/eusart1.h
 [v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
-"11547 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
+"11547 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
 "11485
 [v _OSCCON2 `Vuc ~T0 @X0 0 e@4050 ]
@@ -19,6 +15,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _OSCTUNE `Vuc ~T0 @X0 0 e@3995 ]
 "7401
 [v _ACTCON `Vuc ~T0 @X0 0 e@4021 ]
+"14657
+[v _PLLRDY `Vb ~T0 @X0 0 e@32407 ]
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -55,7 +53,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\builtins.h: 14: extern __nonreentrant void _delaywdt(uint32_t);
 [; ;xc8\pic\include\builtins.h: 17: extern __nonreentrant void _delay3(uint8_t);
 [; ;xc8\pic\include\proc\pic18f25k50.h: 52: extern volatile unsigned char SRCON1 __at(0xF57);
-"54 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
+"54 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
 [; ;xc8\pic\include\proc\pic18f25k50.h: 54: asm("SRCON1 equ 0F57h");
 [; <" SRCON1 equ 0F57h ;# ">
 [; ;xc8\pic\include\proc\pic18f25k50.h: 57: typedef union {
@@ -5045,8 +5043,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\pic18.h: 158: __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 [; ;xc8\pic\include\pic18.h: 192: unsigned char __t1rd16on(void);
 [; ;xc8\pic\include\pic18.h: 193: unsigned char __t3rd16on(void);
-[; ;pin_manager.h: 156: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 168: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 154: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 166: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;errno.h: 29: extern int errno;
 [; ;conio.h: 12: extern void init_uart(void);
@@ -5057,50 +5055,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;conio.h: 19: extern __bit kbhit(void);
 [; ;conio.h: 23: extern char * cgets(char *);
 [; ;conio.h: 24: extern void cputs(const char *);
-"53 mcc_generated_files/interrupt_manager.h
-[v _flag_codigo `uc ~T0 @X0 1 e ]
-[i _flag_codigo
--> -> 0 `i `uc
-]
-[; ;interrupt_manager.h: 53: char flag_codigo=0;
-"54
-[v _cuenta `ui ~T0 @X0 1 e ]
-[i _cuenta
--> -> 0 `i `ui
-]
-[; ;interrupt_manager.h: 54: unsigned int cuenta=0;
-"55
-[v _cont `uc ~T0 @X0 1 e ]
-[; ;interrupt_manager.h: 55: unsigned char cont;
-"56
-[v _texto `uc ~T0 @X0 -> 10 `i e ]
-[; ;interrupt_manager.h: 56: char texto[10];
-"57
-[v _timer_aux `uc ~T0 @X0 1 e ]
-[; ;interrupt_manager.h: 57: unsigned char timer_aux;
-"58
-[v _tiempo `uc ~T0 @X0 -> 70 `i e ]
-[; ;interrupt_manager.h: 58: unsigned char tiempo[70];
-"59
-[v _codigo_ir `ul ~T0 @X0 1 e ]
-[; ;interrupt_manager.h: 59: unsigned long codigo_ir;
-[; ;interrupt_manager.h: 119: void INTERRUPT_Initialize (void);
-[; ;ext_int.h: 253: void EXT_INT_Initialize(void);
-[; ;ext_int.h: 275: void INT1_ISR(void);
-[; ;ext_int.h: 299: void INT1_CallBack(void);
-[; ;ext_int.h: 322: void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
-[; ;ext_int.h: 346: extern void (*INT1_InterruptHandler)(void);
-[; ;ext_int.h: 370: void INT1_DefaultInterruptHandler(void);
-[; ;ext_int.h: 372: void normaliza(void);
-[; ;ext_int.h: 374: unsigned long Hash_algoritmo ();
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;tmr0.h: 100: void TMR0_Initialize(void);
-[; ;tmr0.h: 129: void TMR0_StartTimer(void);
-[; ;tmr0.h: 161: void TMR0_StopTimer(void);
-[; ;tmr0.h: 196: uint8_t TMR0_ReadTimer(void);
-[; ;tmr0.h: 235: void TMR0_WriteTimer(uint8_t timerVal);
-[; ;tmr0.h: 271: void TMR0_Reload(void);
-[; ;tmr0.h: 310: bool TMR0_HasOverflowOccured(void);
+[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
@@ -5132,19 +5087,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart1.h: 82: };
 [; ;eusart1.h: 83: uint8_t status;
 [; ;eusart1.h: 84: }eusart1_status_t;
-[; ;eusart1.h: 111: void EUSART1_Initialize(void);
-[; ;eusart1.h: 159: bool EUSART1_is_tx_ready(void);
-[; ;eusart1.h: 207: bool EUSART1_is_rx_ready(void);
-[; ;eusart1.h: 254: bool EUSART1_is_tx_done(void);
-[; ;eusart1.h: 302: eusart1_status_t EUSART1_get_last_status(void);
-[; ;eusart1.h: 322: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 342: void EUSART1_Write(uint8_t txData);
-[; ;eusart1.h: 363: void EUSART1_Write_string(const char* data);
-[; ;eusart1.h: 365: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 383: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 401: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 73: void SYSTEM_Initialize(void);
-[; ;mcc.h: 86: void OSCILLATOR_Initialize(void);
+[; ;eusart1.h: 89: extern volatile uint8_t eusart1TxBufferRemaining;
+[; ;eusart1.h: 90: extern volatile uint8_t eusart1RxCount;
+[; ;eusart1.h: 95: extern void (*EUSART1_RxDefaultInterruptHandler)(void);
+[; ;eusart1.h: 117: void EUSART1_Initialize(void);
+[; ;eusart1.h: 165: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 213: bool EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 260: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 308: eusart1_status_t EUSART1_get_last_status(void);
+[; ;eusart1.h: 328: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 348: void EUSART1_Write(uint8_t txData);
+[; ;eusart1.h: 370: void EUSART1_Receive_ISR(void);
+[; ;eusart1.h: 391: void EUSART1_RxDataHandler(void);
+[; ;eusart1.h: 410: void EUSART1_Write_string(const char* data);
+[; ;eusart1.h: 412: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 430: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 448: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 469: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+[; ;mcc.h: 71: void SYSTEM_Initialize(void);
+[; ;mcc.h: 84: void OSCILLATOR_Initialize(void);
 "50 mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
 "51
@@ -5162,40 +5123,48 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.c: 55: OSCILLATOR_Initialize();
 "55
 [e ( _OSCILLATOR_Initialize ..  ]
-[; ;mcc.c: 56: EXT_INT_Initialize();
+[; ;mcc.c: 56: EUSART1_Initialize();
 "56
-[e ( _EXT_INT_Initialize ..  ]
-[; ;mcc.c: 57: TMR0_Initialize();
-"57
-[e ( _TMR0_Initialize ..  ]
-[; ;mcc.c: 58: EUSART1_Initialize();
-"58
 [e ( _EUSART1_Initialize ..  ]
-[; ;mcc.c: 59: }
-"59
+[; ;mcc.c: 57: }
+"57
 [e :UE 606 ]
 }
-"61
+"59
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"62
+"60
 {
-[; ;mcc.c: 61: void OSCILLATOR_Initialize(void)
-[; ;mcc.c: 62: {
+[; ;mcc.c: 59: void OSCILLATOR_Initialize(void)
+[; ;mcc.c: 60: {
 [e :U _OSCILLATOR_Initialize ]
 [f ]
-[; ;mcc.c: 64: OSCCON = 0x70;
-"64
+[; ;mcc.c: 62: OSCCON = 0x70;
+"62
 [e = _OSCCON -> -> 112 `i `uc ]
-[; ;mcc.c: 66: OSCCON2 = 0x00;
-"66
+[; ;mcc.c: 64: OSCCON2 = 0x00;
+"64
 [e = _OSCCON2 -> -> 0 `i `uc ]
-[; ;mcc.c: 68: OSCTUNE = 0x80;
-"68
+[; ;mcc.c: 66: OSCTUNE = 0x80;
+"66
 [e = _OSCTUNE -> -> 128 `i `uc ]
-[; ;mcc.c: 70: ACTCON = 0x00;
-"70
+[; ;mcc.c: 68: ACTCON = 0x00;
+"68
 [e = _ACTCON -> -> 0 `i `uc ]
-[; ;mcc.c: 71: }
+[; ;mcc.c: 70: while(PLLRDY == 0)
+"70
+[e $U 608  ]
+[e :U 609 ]
+[; ;mcc.c: 71: {
 "71
+{
+"72
+}
+[e :U 608 ]
+"70
+[e $ == -> _PLLRDY `i -> 0 `i 609  ]
+[e :U 610 ]
+[; ;mcc.c: 72: }
+[; ;mcc.c: 73: }
+"73
 [e :UE 607 ]
 }

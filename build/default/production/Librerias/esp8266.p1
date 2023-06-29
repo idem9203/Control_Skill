@@ -1,33 +1,10 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F4461 `(v ~T0 @X0 0 tf ]
-"12253 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
-[s S572 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S572 . INT1IF INT2IF . INT1IE INT2IE . INT1IP INT2IP ]
-"12263
-[s S573 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S573 . INT1F INT2F . INT1E INT2E . INT1P INT2P ]
-"12252
-[u S571 `S572 1 `S573 1 ]
-[n S571 . . . ]
-"12274
-[v _INTCON3bits `VS571 ~T0 @X0 0 e@4080 ]
-"299 mcc_generated_files/ext_int.h
-[v _INT1_CallBack `(v ~T0 @X0 0 ef ]
-[v F4458 `(v ~T0 @X0 0 tf ]
-"12345 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
-[s S575 :7 `uc 1 :1 `uc 1 ]
-[n S575 . . NOT_RBPU ]
-"12349
-[s S576 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S576 . IOCIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
-"12359
-[s S577 :2 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
-[n S577 . . T0IP . RBPU ]
-"12344
-[u S574 `S575 1 `S576 1 `S577 1 ]
-[n S574 . . . . ]
-"12366
-[v _INTCON2bits `VS574 ~T0 @X0 0 e@4081 ]
+"410 Librerias/../mcc_generated_files/eusart1.h
+[v _EUSART1_Write_string `(v ~T0 @X0 0 ef1`*Cuc ]
+[v F38 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\builtins.h
+[v __delay `JF38 ~T0 @X0 0 e ]
+[p i __delay ]
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -64,7 +41,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\builtins.h: 14: extern __nonreentrant void _delaywdt(uint32_t);
 [; ;xc8\pic\include\builtins.h: 17: extern __nonreentrant void _delay3(uint8_t);
 [; ;xc8\pic\include\proc\pic18f25k50.h: 52: extern volatile unsigned char SRCON1 __at(0xF57);
-"54 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h
+"54 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
 [; ;xc8\pic\include\proc\pic18f25k50.h: 54: asm("SRCON1 equ 0F57h");
 [; <" SRCON1 equ 0F57h ;# ">
 [; ;xc8\pic\include\proc\pic18f25k50.h: 57: typedef union {
@@ -5054,106 +5031,150 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\pic18.h: 158: __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 [; ;xc8\pic\include\pic18.h: 192: unsigned char __t1rd16on(void);
 [; ;xc8\pic\include\pic18.h: 193: unsigned char __t3rd16on(void);
-[; ;ext_int.h: 253: void EXT_INT_Initialize(void);
-[; ;ext_int.h: 275: void INT1_ISR(void);
-[; ;ext_int.h: 299: void INT1_CallBack(void);
-[; ;ext_int.h: 322: void INT1_SetInterruptHandler(void (* InterruptHandler)(void));
-[; ;ext_int.h: 346: extern void (*INT1_InterruptHandler)(void);
-[; ;ext_int.h: 370: void INT1_DefaultInterruptHandler(void);
-[; ;ext_int.h: 372: void normaliza(void);
-[; ;ext_int.h: 374: unsigned long Hash_algoritmo ();
-"30 mcc_generated_files/ext_int.c
-[v _INT1_InterruptHandler `*F4461 ~T0 @X0 1 e ]
-[; ;ext_int.c: 30: void (*INT1_InterruptHandler)(void);
+[; ;pin_manager.h: 154: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 166: void PIN_MANAGER_IOC(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;errno.h: 29: extern int errno;
+[; ;conio.h: 12: extern void init_uart(void);
+[; ;conio.h: 14: extern char getch(void);
+[; ;conio.h: 15: extern char getche(void);
+[; ;conio.h: 16: extern void putch(char);
+[; ;conio.h: 17: extern void ungetch(char);
+[; ;conio.h: 19: extern __bit kbhit(void);
+[; ;conio.h: 23: extern char * cgets(char *);
+[; ;conio.h: 24: extern void cputs(const char *);
+[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 43: struct __prbuf
+[; ;stdio.h: 44: {
+[; ;stdio.h: 45: char * ptr;
+[; ;stdio.h: 46: void (* func)(char);
+[; ;stdio.h: 47: };
+[; ;stdio.h: 88: extern int cprintf(char *, ...);
+[; ;stdio.h: 93: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 183: extern char * gets(char *);
+[; ;stdio.h: 184: extern int puts(const char *);
+[; ;stdio.h: 185: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+[; ;stdio.h: 186: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+[; ;stdio.h: 187: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+[; ;stdio.h: 188: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 189: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+[; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+[; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 195: extern int printf(const char *, ...);
+[; ;eusart1.h: 76: typedef union {
+[; ;eusart1.h: 77: struct {
+[; ;eusart1.h: 78: unsigned perr : 1;
+[; ;eusart1.h: 79: unsigned ferr : 1;
+[; ;eusart1.h: 80: unsigned oerr : 1;
+[; ;eusart1.h: 81: unsigned reserved : 5;
+[; ;eusart1.h: 82: };
+[; ;eusart1.h: 83: uint8_t status;
+[; ;eusart1.h: 84: }eusart1_status_t;
+[; ;eusart1.h: 89: extern volatile uint8_t eusart1TxBufferRemaining;
+[; ;eusart1.h: 90: extern volatile uint8_t eusart1RxCount;
+[; ;eusart1.h: 95: extern void (*EUSART1_RxDefaultInterruptHandler)(void);
+[; ;eusart1.h: 117: void EUSART1_Initialize(void);
+[; ;eusart1.h: 165: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 213: bool EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 260: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 308: eusart1_status_t EUSART1_get_last_status(void);
+[; ;eusart1.h: 328: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 348: void EUSART1_Write(uint8_t txData);
+[; ;eusart1.h: 370: void EUSART1_Receive_ISR(void);
+[; ;eusart1.h: 391: void EUSART1_RxDataHandler(void);
+[; ;eusart1.h: 410: void EUSART1_Write_string(const char* data);
+[; ;eusart1.h: 412: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 430: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 448: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 469: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+[; ;mcc.h: 71: void SYSTEM_Initialize(void);
+[; ;mcc.h: 84: void OSCILLATOR_Initialize(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;esp8266.h: 46: void esp8266_router_init(void);
+"13 Librerias/esp8266.c
+[v _esp8266_router_init `(v ~T0 @X0 1 ef ]
+"14
+{
+[; ;esp8266.c: 13: void esp8266_router_init()
+[; ;esp8266.c: 14: {
+[e :U _esp8266_router_init ]
+[f ]
+[; ;esp8266.c: 15: EUSART1_Write_string("ATE0\r\n");
+"15
+[e ( _EUSART1_Write_string (1 :s 1C ]
+[; ;esp8266.c: 16: _delay((unsigned long)((1000)*(48000000/4000.0)));
+"16
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 18: EUSART1_Write_string("AT+CWMODE=2\r\n");
+"18
+[e ( _EUSART1_Write_string (1 :s 2C ]
+[; ;esp8266.c: 19: _delay((unsigned long)((200)*(48000000/4000.0)));
+"19
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 22: EUSART1_Write_string("AT+CIPSERVER=0\r\n");
+"22
+[e ( _EUSART1_Write_string (1 :s 3C ]
+[; ;esp8266.c: 23: _delay((unsigned long)((200)*(48000000/4000.0)));
+"23
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 24: EUSART1_Write_string("AT+CIPMUX=0\r\n");
+"24
+[e ( _EUSART1_Write_string (1 :s 4C ]
+[; ;esp8266.c: 25: _delay((unsigned long)((200)*(48000000/4000.0)));
+"25
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 27: EUSART1_Write_string("AT+CIPMODE=0\r\n");
+"27
+[e ( _EUSART1_Write_string (1 :s 5C ]
+[; ;esp8266.c: 28: _delay((unsigned long)((200)*(48000000/4000.0)));
+"28
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 32: EUSART1_Write_string("AT+CWSAP=\"ESP8266_IDEM\",\"noconectar\",5,3\r\n");
 "32
-[v _INT1_ISR `(v ~T0 @X0 1 ef ]
+[e ( _EUSART1_Write_string (1 :s 6C ]
+[; ;esp8266.c: 33: _delay((unsigned long)((200)*(48000000/4000.0)));
 "33
-{
-[; ;ext_int.c: 32: void INT1_ISR(void)
-[; ;ext_int.c: 33: {
-[e :U _INT1_ISR ]
-[f ]
-[; ;ext_int.c: 34: (INTCON3bits.INT1IF = 0);
-"34
-[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-[; ;ext_int.c: 37: INT1_CallBack();
-"37
-[e ( _INT1_CallBack ..  ]
-[; ;ext_int.c: 38: }
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 35: EUSART1_Write_string("AT+CIPAP=\"192.168.1.253\"\r\n");
+"35
+[e ( _EUSART1_Write_string (1 :s 7C ]
+[; ;esp8266.c: 36: _delay((unsigned long)((200)*(48000000/4000.0)));
+"36
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 38: EUSART1_Write_string("AT+CIPMUX=0\r\n");
 "38
-[e :UE 603 ]
-}
+[e ( _EUSART1_Write_string (1 :s 8C ]
+[; ;esp8266.c: 39: _delay((unsigned long)((200)*(48000000/4000.0)));
+"39
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 41: EUSART1_Write_string("AT+CIPSERVER=1,200\r\n");
 "41
-[v _INT1_CallBack `(v ~T0 @X0 1 ef ]
+[e ( _EUSART1_Write_string (1 :s 9C ]
+[; ;esp8266.c: 42: _delay((unsigned long)((200)*(48000000/4000.0)));
 "42
-{
-[; ;ext_int.c: 41: void INT1_CallBack(void)
-[; ;ext_int.c: 42: {
-[e :U _INT1_CallBack ]
-[f ]
-[; ;ext_int.c: 44: if(INT1_InterruptHandler)
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 44: EUSART1_Write_string("AT+CIPSTO=0\r\n");
 "44
-[e $ ! != _INT1_InterruptHandler -> -> 0 `i `*F4461 605  ]
-[; ;ext_int.c: 45: {
+[e ( _EUSART1_Write_string (1 :s 10C ]
+[; ;esp8266.c: 45: _delay((unsigned long)((200)*(48000000/4000.0)));
 "45
-{
-[; ;ext_int.c: 46: INT1_InterruptHandler();
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 46: }
 "46
-[e ( *U _INT1_InterruptHandler ..  ]
-"47
-}
-[e :U 605 ]
-[; ;ext_int.c: 47: }
-[; ;ext_int.c: 48: }
-"48
-[e :UE 604 ]
-}
-"50
-[v _INT1_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F4458 ]
-{
-[; ;ext_int.c: 50: void INT1_SetInterruptHandler(void (* InterruptHandler)(void)){
-[e :U _INT1_SetInterruptHandler ]
-[v F4473 `(v ~T0 @X0 0 tf ]
-[v _InterruptHandler `*F4473 ~T0 @X0 1 r1 ]
-[f ]
-[; ;ext_int.c: 51: INT1_InterruptHandler = InterruptHandler;
-"51
-[e = _INT1_InterruptHandler _InterruptHandler ]
-[; ;ext_int.c: 52: }
-"52
 [e :UE 606 ]
 }
-"54
-[v _INT1_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
-{
-[; ;ext_int.c: 54: void INT1_DefaultInterruptHandler(void){
-[e :U _INT1_DefaultInterruptHandler ]
-[f ]
-[; ;ext_int.c: 57: }
-"57
-[e :UE 607 ]
-}
-"59
-[v _EXT_INT_Initialize `(v ~T0 @X0 1 ef ]
-"60
-{
-[; ;ext_int.c: 59: void EXT_INT_Initialize(void)
-[; ;ext_int.c: 60: {
-[e :U _EXT_INT_Initialize ]
-[f ]
-[; ;ext_int.c: 64: (INTCON3bits.INT1IF = 0);
-"64
-[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-[; ;ext_int.c: 65: (INTCON2bits.INTEDG1 = 0);
-"65
-[e = . . _INTCON2bits 1 5 -> -> 0 `i `uc ]
-[; ;ext_int.c: 67: INT1_SetInterruptHandler(INT1_DefaultInterruptHandler);
-"67
-[e ( _INT1_SetInterruptHandler (1 &U _INT1_DefaultInterruptHandler ]
-[; ;ext_int.c: 68: (INTCON3bits.INT1IE = 1);
-"68
-[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
-[; ;ext_int.c: 70: }
-"70
-[e :UE 608 ]
-}
+[a 6C 65 84 43 67 87 83 65 80 61 34 69 83 80 56 50 54 54 95 73 68 69 77 34 44 34 110 111 99 111 110 101 99 116 97 114 34 44 53 44 51 13 10 0 ]
+[a 2C 65 84 43 67 87 77 79 68 69 61 50 13 10 0 ]
+[a 1C 65 84 69 48 13 10 0 ]
+[a 4C 65 84 43 67 73 80 77 85 88 61 48 13 10 0 ]
+[a 8C 65 84 43 67 73 80 77 85 88 61 48 13 10 0 ]
+[a 3C 65 84 43 67 73 80 83 69 82 86 69 82 61 48 13 10 0 ]
+[a 10C 65 84 43 67 73 80 83 84 79 61 48 13 10 0 ]
+[a 5C 65 84 43 67 73 80 77 79 68 69 61 48 13 10 0 ]
+[a 9C 65 84 43 67 73 80 83 69 82 86 69 82 61 49 44 50 48 48 13 10 0 ]
+[a 7C 65 84 43 67 73 80 65 80 61 34 49 57 50 46 49 54 56 46 49 46 50 53 51 34 13 10 0 ]

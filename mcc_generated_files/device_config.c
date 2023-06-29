@@ -48,7 +48,7 @@
 
 // CONFIG1L
 #pragma config PLLSEL = PLL3X    // PLL Selection->3x clock multiplier
-#pragma config CFGPLLEN = OFF    // PLL Enable Configuration bit->PLL Disabled (firmware controlled)
+#pragma config CFGPLLEN = ON    // PLL Enable Configuration bit->PLL Enabled
 #pragma config CPUDIV = NOCLKDIV    // CPU System Clock Postscaler->CPU uses system clock (no divide)
 #pragma config LS48MHZ = SYS48X8    // Low Speed USB mode with 48 MHz system clock->System clock at 48 MHz, USB clock divider is set to 8
 

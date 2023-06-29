@@ -1,7 +1,7 @@
 
 # 1 "mcc_generated_files/eusart1.c"
 
-# 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\xc.h"
+# 18 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
@@ -98,7 +98,7 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 
 
-# 7 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\builtins.h"
+# 7 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\builtins.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
@@ -111,7 +111,7 @@ extern __nonreentrant void _delaywdt(uint32_t);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(uint8_t);
 
-# 52 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\proc\pic18f25k50.h"
+# 52 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h"
 extern volatile unsigned char SRCON1 __at(0xF57);
 
 asm("SRCON1 equ 0F57h");
@@ -7661,7 +7661,7 @@ extern volatile __bit nW __at(0x7E3A);
 
 extern volatile __bit nWRITE __at(0x7E3A);
 
-# 19 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC18F-K_DFP/1.8.249/xc8\pic\include\pic18.h"
+# 19 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\pic18.h"
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
 
@@ -7751,42 +7751,65 @@ unsigned reserved : 5;
 uint8_t status;
 }eusart1_status_t;
 
-# 111
+# 89
+extern volatile uint8_t eusart1TxBufferRemaining;
+extern volatile uint8_t eusart1RxCount;
+
+# 95
+extern void (*EUSART1_RxDefaultInterruptHandler)(void);
+
+# 117
 void EUSART1_Initialize(void);
 
-# 159
+# 165
 bool EUSART1_is_tx_ready(void);
 
-# 207
+# 213
 bool EUSART1_is_rx_ready(void);
 
-# 254
+# 260
 bool EUSART1_is_tx_done(void);
 
-# 302
+# 308
 eusart1_status_t EUSART1_get_last_status(void);
 
-# 322
+# 328
 uint8_t EUSART1_Read(void);
 
-# 342
+# 348
 void EUSART1_Write(uint8_t txData);
 
-# 363
+# 370
+void EUSART1_Receive_ISR(void);
+
+# 391
+void EUSART1_RxDataHandler(void);
+
+# 410
 void EUSART1_Write_string(const char* data);
 
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 
-# 383
+# 430
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 
-# 401
+# 448
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
-# 52 "mcc_generated_files/eusart1.c"
+# 469
+void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+
+# 63 "mcc_generated_files/eusart1.c"
+volatile uint8_t eusart1RxHead = 0;
+volatile uint8_t eusart1RxTail = 0;
+volatile uint8_t eusart1RxBuffer[8];
+volatile eusart1_status_t eusart1RxStatusBuffer[8];
+volatile uint8_t eusart1RxCount;
 volatile eusart1_status_t eusart1RxLastError;
 
-# 58
+# 73
+void (*EUSART1_RxDefaultInterruptHandler)(void);
+
 void (*EUSART1_FramingErrorHandler)(void);
 void (*EUSART1_OverrunErrorHandler)(void);
 void (*EUSART1_ErrorHandler)(void);
@@ -7798,21 +7821,24 @@ void EUSART1_DefaultErrorHandler(void);
 void EUSART1_Initialize(void)
 {
 
+PIE1bits.RC1IE = 0;
+EUSART1_SetRxInterruptHandler(EUSART1_Receive_ISR);
+
 
 
 BAUDCON1 = 0x08;
 
 
-RCSTA1 = 0x80;
+RCSTA1 = 0x90;
 
 
 TXSTA1 = 0x24;
 
 
-SPBRG1 = 0xA0;
+SPBRG1 = 0x67;
 
 
-SPBRGH1 = 0x01;
+SPBRGH1 = 0x00;
 
 
 EUSART1_SetFramingErrorHandler(EUSART1_DefaultFramingErrorHandler);
@@ -7821,6 +7847,13 @@ EUSART1_SetErrorHandler(EUSART1_DefaultErrorHandler);
 
 eusart1RxLastError.status = 0;
 
+
+eusart1RxHead = 0;
+eusart1RxTail = 0;
+eusart1RxCount = 0;
+
+
+PIE1bits.RC1IE = 1;
 }
 
 bool EUSART1_is_tx_ready(void)
@@ -7830,7 +7863,7 @@ return (bool)(PIR1bits.TX1IF && TXSTA1bits.TXEN);
 
 bool EUSART1_is_rx_ready(void)
 {
-return (bool)(PIR1bits.RC1IF);
+return (eusart1RxCount ? 1 : 0);
 }
 
 bool EUSART1_is_tx_done(void)
@@ -7844,21 +7877,24 @@ return eusart1RxLastError;
 
 uint8_t EUSART1_Read(void)
 {
-while(!PIR1bits.RC1IF)
+uint8_t readValue = 0;
+
+while(0 == eusart1RxCount)
 {
 }
 
-eusart1RxLastError.status = 0;
+eusart1RxLastError = eusart1RxStatusBuffer[eusart1RxTail];
 
-if(1 == RCSTA1bits.OERR)
+readValue = eusart1RxBuffer[eusart1RxTail++];
+if(sizeof(eusart1RxBuffer) <= eusart1RxTail)
 {
-
-
-RCSTA1bits.CREN = 0;
-RCSTA1bits.CREN = 1;
+eusart1RxTail = 0;
 }
+PIE1bits.RC1IE = 0;
+eusart1RxCount--;
+PIE1bits.RC1IE = 1;
 
-return RCREG1;
+return readValue;
 }
 
 void EUSART1_Write(uint8_t txData)
@@ -7889,6 +7925,39 @@ EUSART1_Write(txData);
 }
 
 
+void EUSART1_Receive_ISR(void)
+{
+
+eusart1RxStatusBuffer[eusart1RxHead].status = 0;
+
+if(RCSTA1bits.FERR){
+eusart1RxStatusBuffer[eusart1RxHead].ferr = 1;
+EUSART1_FramingErrorHandler();
+}
+
+if(RCSTA1bits.OERR){
+eusart1RxStatusBuffer[eusart1RxHead].oerr = 1;
+EUSART1_OverrunErrorHandler();
+}
+
+if(eusart1RxStatusBuffer[eusart1RxHead].status){
+EUSART1_ErrorHandler();
+} else {
+EUSART1_RxDataHandler();
+}
+
+
+}
+
+void EUSART1_RxDataHandler(void){
+
+eusart1RxBuffer[eusart1RxHead++] = RCREG1;
+if(sizeof(eusart1RxBuffer) <= eusart1RxHead)
+{
+eusart1RxHead = 0;
+}
+eusart1RxCount++;
+}
 
 void EUSART1_DefaultFramingErrorHandler(void){}
 
@@ -7901,6 +7970,7 @@ RCSTA1bits.CREN = 1;
 }
 
 void EUSART1_DefaultErrorHandler(void){
+EUSART1_RxDataHandler();
 }
 
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void)){
@@ -7913,5 +7983,10 @@ EUSART1_OverrunErrorHandler = interruptHandler;
 
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void)){
 EUSART1_ErrorHandler = interruptHandler;
+}
+
+
+void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void)){
+EUSART1_RxDefaultInterruptHandler = interruptHandler;
 }
 

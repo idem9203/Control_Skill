@@ -42,6 +42,7 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include "Librerias/esp8266.h"
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -57,30 +58,9 @@
 #define OutDig LATA3
 #define Led LATB7
 
-// ALGORITMO HASH
-#define FNV_PRIME 16777619
-#define FNV_BASIS 2166136261
-
-
-void normaliza()
-{
-    for (cont=0;cont<cuenta-1+2;cont++)      //toma dos datos adicionales
-    {
-        if   (tiempo[cont+2] <(float)tiempo[cont] * .8)  tiempo[cont]=0 ;
-        else if (tiempo[cont] <(float)tiempo[cont+2] * .8)  tiempo[cont]= 2 ;
-        else  tiempo[cont]=1 ;
-    }
-}
-
-unsigned long Hash_algoritmo ()
-{
-    unsigned long hash_acum = FNV_BASIS;
-    for (cont = 0; cont < cuenta - 1; cont++)
-    {
-        hash_acum = (hash_acum * FNV_PRIME) ^ tiempo[cont];
-    }
-    return (hash_acum);
-}
+char texto[100];
+int cuenta;
+int codigo_ir;
 
 //END //////////////////////////////////////////////////////////////////////////
 
@@ -108,24 +88,22 @@ void main(void)
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    INTERRUPT_GlobalInterruptEnable();                                          // es lo mismo que GIE = 1; y INTCON = 0b11000000;
+//    INTERRUPT_GlobalInterruptEnable();                                          // es lo mismo que GIE = 1; y INTCON = 0b11000000;
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
     // Enable the Peripheral Interrupts
-    INTERRUPT_PeripheralInterruptEnable();                                      //es lo mismo que PEIE = 1; y INTCON = 0b11000000;
+//    INTERRUPT_PeripheralInterruptEnable();                                      //es lo mismo que PEIE = 1; y INTCON = 0b11000000;
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
+    
+    void esp8266_router_init();
 
     while (1)
     {
-        // Add your application code
-        if (flag_codigo == 1)
-        {           
-            normaliza(); //normaliza los codigos a las constantes analizadas
-            codigo_ir = Hash_algoritmo();
+        // Add your application code          
             EUSART1_Write_string("Son: ");
             sprintf(texto, "%d", cuenta);
             EUSART1_Write_string(texto);
@@ -137,32 +115,6 @@ void main(void)
             EUSART1_Write_string("\r");
             EUSART1_Write_string("\n");
             
-            if (codigo_ir == 0xabca4680)
-            {
-                Rele1 =~ Rele1;
-                EUSART1_Write_string("COMANDO1");
-            }
-            else if (codigo_ir == 0x88574b5)
-            {
-                Rele2 =~ Rele2;
-                EUSART1_Write_string("COMANDO2");
-            }
-
-            else if (codigo_ir == 0x574cb39e)
-            {
-                OutDig =~ OutDig;
-                EUSART1_Write_string("COMANDO3");
-            }
-            codigo_ir = 0;
-
-            __delay_ms(2000);
-           
-            flag_codigo = 0;
-            cuenta = 0;
-            INTEDG1 = 0; // for flanco de bajada
-            INT1IF = 0; // limpia la badera de interrpcion
-            INT1E = 1; //  habilita la interrpcion for flanco
-        }
         __delay_ms(80);
         Led =~ Led; 
     }
