@@ -7674,10 +7674,10 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 154 "mcc_generated_files/pin_manager.h"
+# 168 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 166
+# 180
 void PIN_MANAGER_IOC(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
@@ -7699,9 +7699,6 @@ extern __bit kbhit(void);
 # 23
 extern char * cgets(char *);
 extern void cputs(const char *);
-
-# 110 "mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -7763,65 +7760,49 @@ unsigned reserved : 5;
 uint8_t status;
 }eusart1_status_t;
 
-# 89
-extern volatile uint8_t eusart1TxBufferRemaining;
-extern volatile uint8_t eusart1RxCount;
-
-# 95
-extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-
-# 117
+# 111
 void EUSART1_Initialize(void);
 
-# 165
+# 159
 bool EUSART1_is_tx_ready(void);
 
-# 213
+# 207
 bool EUSART1_is_rx_ready(void);
 
-# 260
+# 254
 bool EUSART1_is_tx_done(void);
 
-# 308
+# 302
 eusart1_status_t EUSART1_get_last_status(void);
 
-# 328
+# 322
 uint8_t EUSART1_Read(void);
 
-# 348
+# 342
 void EUSART1_Write(uint8_t txData);
 
-# 370
-void EUSART1_Receive_ISR(void);
 
-# 391
-void EUSART1_RxDataHandler(void);
-
-# 410
 void EUSART1_Write_string(const char* data);
 
+# 362
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 
-# 430
+# 380
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 
-# 448
+# 398
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
-# 469
-void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-
-# 71 "mcc_generated_files/mcc.h"
+# 70 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 84
+# 83
 void OSCILLATOR_Initialize(void);
 
 # 50 "mcc_generated_files/mcc.c"
 void SYSTEM_Initialize(void)
 {
 
-INTERRUPT_Initialize();
 PIN_MANAGER_Initialize();
 OSCILLATOR_Initialize();
 EUSART1_Initialize();

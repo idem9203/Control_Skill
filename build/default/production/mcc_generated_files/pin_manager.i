@@ -7674,10 +7674,10 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 154 "mcc_generated_files/pin_manager.h"
+# 168 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 166
+# 180
 void PIN_MANAGER_IOC(void);
 
 # 55 "mcc_generated_files/pin_manager.c"
@@ -7690,8 +7690,8 @@ LATB = 0x00;
 LATC = 0x00;
 
 # 67
-TRISA = 0xC7;
-TRISB = 0xFE;
+TRISA = 0xDF;
+TRISB = 0x7E;
 TRISC = 0x87;
 
 # 74
@@ -7704,5 +7704,11 @@ WPUB = 0x00;
 INTCON2bits.nRBPU = 1;
 
 # 91
+}
+
+void PIN_MANAGER_IOC(void)
+{
+
+INTCONbits.IOCIF = 0;
 }
 

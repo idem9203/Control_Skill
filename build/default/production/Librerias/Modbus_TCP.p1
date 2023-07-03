@@ -1,47 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"11330 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
-[s S508 :1 `uc 1 ]
-[n S508 . NOT_BOR ]
-"11333
-[s S509 :1 `uc 1 :1 `uc 1 ]
-[n S509 . . NOT_POR ]
-"11337
-[s S510 :2 `uc 1 :1 `uc 1 ]
-[n S510 . . NOT_PD ]
-"11341
-[s S511 :3 `uc 1 :1 `uc 1 ]
-[n S511 . . NOT_TO ]
-"11345
-[s S512 :4 `uc 1 :1 `uc 1 ]
-[n S512 . . NOT_RI ]
-"11349
-[s S513 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S513 . nBOR nPOR nPD nTO nRI . SBOREN IPEN ]
-"11359
-[s S514 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S514 . BOR POR PD TO RI ]
-"11329
-[u S507 `S508 1 `S509 1 `S510 1 `S511 1 `S512 1 `S513 1 `S514 1 ]
-[n S507 . . . . . . . . ]
-"11367
-[v _RCONbits `VS507 ~T0 @X0 0 e@4048 ]
-[t ~ __interrupt . k ]
-[t T12 __interrupt  ]
-"12422
-[s S579 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S579 . IOCIF INT0IF TMR0IF IOCIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-"12432
-[s S580 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S580 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-"12442
-[s S581 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S581 . . GIEL GIEH ]
-"12421
-[u S578 `S579 1 `S580 1 `S581 1 ]
-[n S578 . . . . ]
-"12448
-[v _INTCONbits `VS578 ~T0 @X0 0 e@4082 ]
-"5387
+"5387 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
 [s S218 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S218 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ACTIE ]
 "5397
@@ -55,7 +13,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S217 . . . . ]
 "5410
 [v _PIE1bits `VS217 ~T0 @X0 0 e@3997 ]
-"5486
+"23 Librerias/../Librerias/esp8266.h
+[v _manda_esp8266_bytes `(v ~T0 @X0 0 ef2`*uc`ui ]
+"15 Librerias/Modbus_TCP.c
+[v _estado_rec `uc ~T0 @X0 0 e ]
+"5486 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
 [s S222 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S222 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ACTIF ]
 "5496
@@ -69,10 +31,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S221 . . . . ]
 "5509
 [v _PIR1bits `VS221 ~T0 @X0 0 e@3998 ]
-[v F4531 `(v ~T0 @X0 0 tf ]
-"95 mcc_generated_files/eusart1.h
-[v _EUSART1_RxDefaultInterruptHandler `*F4531 ~T0 @X0 0 e ]
-[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
+"13433
+[v _CREN `Vb ~T0 @X0 0 e@32092 ]
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -5099,8 +5059,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\pic18.h: 158: __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 [; ;xc8\pic\include\pic18.h: 192: unsigned char __t1rd16on(void);
 [; ;xc8\pic\include\pic18.h: 193: unsigned char __t3rd16on(void);
-[; ;pin_manager.h: 154: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 166: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 168: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 180: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;errno.h: 29: extern int errno;
 [; ;conio.h: 12: extern void init_uart(void);
@@ -5142,73 +5102,341 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart1.h: 82: };
 [; ;eusart1.h: 83: uint8_t status;
 [; ;eusart1.h: 84: }eusart1_status_t;
-[; ;eusart1.h: 89: extern volatile uint8_t eusart1TxBufferRemaining;
-[; ;eusart1.h: 90: extern volatile uint8_t eusart1RxCount;
-[; ;eusart1.h: 95: extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-[; ;eusart1.h: 117: void EUSART1_Initialize(void);
-[; ;eusart1.h: 165: bool EUSART1_is_tx_ready(void);
-[; ;eusart1.h: 213: bool EUSART1_is_rx_ready(void);
-[; ;eusart1.h: 260: bool EUSART1_is_tx_done(void);
-[; ;eusart1.h: 308: eusart1_status_t EUSART1_get_last_status(void);
-[; ;eusart1.h: 328: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 348: void EUSART1_Write(uint8_t txData);
-[; ;eusart1.h: 370: void EUSART1_Receive_ISR(void);
-[; ;eusart1.h: 391: void EUSART1_RxDataHandler(void);
-[; ;eusart1.h: 410: void EUSART1_Write_string(const char* data);
-[; ;eusart1.h: 412: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 430: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 448: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 469: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 71: void SYSTEM_Initialize(void);
-[; ;mcc.h: 84: void OSCILLATOR_Initialize(void);
-"52 mcc_generated_files/interrupt_manager.c
-[v _INTERRUPT_Initialize `(v ~T0 @X0 1 ef ]
-"53
+[; ;eusart1.h: 111: void EUSART1_Initialize(void);
+[; ;eusart1.h: 159: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 207: bool EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 254: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 302: eusart1_status_t EUSART1_get_last_status(void);
+[; ;eusart1.h: 322: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 342: void EUSART1_Write(uint8_t txData);
+[; ;eusart1.h: 345: void EUSART1_Write_string(const char* data);
+[; ;eusart1.h: 362: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 380: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 398: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+[; ;mcc.h: 70: void SYSTEM_Initialize(void);
+[; ;mcc.h: 83: void OSCILLATOR_Initialize(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;Modbus_TCP.h: 12: extern char modbus_rx[];
+[; ;Modbus_TCP.h: 13: extern char modbus_tx[];
+[; ;Modbus_TCP.h: 15: extern unsigned char rec_largo;
+[; ;Modbus_TCP.h: 16: extern unsigned char rec_socket;
+[; ;Modbus_TCP.h: 19: void modbus_write_holding(unsigned int dir_mod, unsigned int dat_mod);
+[; ;Modbus_TCP.h: 20: void modbus_write_holding_varios(unsigned int dir_mod, unsigned int *buff_datos,unsigned int cuantos);
+[; ;Modbus_TCP.h: 21: void modbus_write_coilsdigital(unsigned int dir_mod, unsigned int dat_dig);
+[; ;Modbus_TCP.h: 22: void modbus_read_analog(unsigned int dir_mod, unsigned int cuantos);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;esp8266.h: 10: extern char modbus_rx[];
+[; ;esp8266.h: 11: extern char modbus_tx[];
+[; ;esp8266.h: 16: void Uart1_write_text_const(const char *info);
+[; ;esp8266.h: 17: char tiempo(unsigned int milis, char cap[30], char cap1[30]);
+[; ;esp8266.h: 18: void esp82666_interrupcion_1();
+[; ;esp8266.h: 19: char manda_AT_COMANDO(char *coman, char cap[30], char cap1[30],unsigned int retardo);
+[; ;esp8266.h: 20: unsigned long strlen_const(const char *const_pun);
+[; ;esp8266.h: 21: void manda_esp8266_const(const char *info);
+[; ;esp8266.h: 22: void manda_esp8266(char *info);
+[; ;esp8266.h: 23: void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
+[; ;esp8266.h: 24: unsigned char conecta(char *ip_dir);
+"11 Librerias/Modbus_TCP.c
+[v _modbus_rx `uc ~T0 @X0 -> 50 `i e ]
+[; ;Modbus_TCP.c: 11: char modbus_rx[50];
+"12
+[v _modbus_tx `uc ~T0 @X0 -> 50 `i e ]
+[; ;Modbus_TCP.c: 12: char modbus_tx[50];
+"14
+[v _tamano `ui ~T0 @X0 1 e ]
+[; ;Modbus_TCP.c: 14: unsigned int tamano;
+[; ;Modbus_TCP.c: 15: extern char estado_rec;
+"19
+[v _modbus_write_holding `(v ~T0 @X0 1 ef2`ui`ui ]
+"20
 {
-[; ;interrupt_manager.c: 52: void INTERRUPT_Initialize (void)
-[; ;interrupt_manager.c: 53: {
-[e :U _INTERRUPT_Initialize ]
+[; ;Modbus_TCP.c: 19: void modbus_write_holding(unsigned int dir_mod, unsigned int dat_mod)
+[; ;Modbus_TCP.c: 20: {
+[e :U _modbus_write_holding ]
+"19
+[v _dir_mod `ui ~T0 @X0 1 r1 ]
+[v _dat_mod `ui ~T0 @X0 1 r2 ]
+"20
 [f ]
-[; ;interrupt_manager.c: 55: RCONbits.IPEN = 0;
-"55
-[e = . . _RCONbits 5 7 -> -> 0 `i `uc ]
-[; ;interrupt_manager.c: 56: }
-"56
+[; ;Modbus_TCP.c: 21: PIE1bits.RC1IE = 0;
+"21
+[e = . . _PIE1bits 1 3 -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 22: modbus_tx[0] = 0;
+"22
+[e = *U + &U _modbus_tx * -> -> -> 0 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 23: modbus_tx[1] = 0;
+"23
+[e = *U + &U _modbus_tx * -> -> -> 1 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 24: modbus_tx[2] = 0;
+"24
+[e = *U + &U _modbus_tx * -> -> -> 2 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 25: modbus_tx[3] = 00;
+"25
+[e = *U + &U _modbus_tx * -> -> -> 3 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 26: modbus_tx[4] = 00;;
+"26
+[e = *U + &U _modbus_tx * -> -> -> 4 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 28: modbus_tx[5] = 6;
+"28
+[e = *U + &U _modbus_tx * -> -> -> 5 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 6 `i `uc ]
+[; ;Modbus_TCP.c: 29: modbus_tx[6] = 1;
+"29
+[e = *U + &U _modbus_tx * -> -> -> 6 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 1 `i `uc ]
+[; ;Modbus_TCP.c: 30: modbus_tx[7] = 6;
+"30
+[e = *U + &U _modbus_tx * -> -> -> 7 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 6 `i `uc ]
+[; ;Modbus_TCP.c: 32: modbus_tx[8] = ((char *)&dir_mod)[1];
+"32
+[e = *U + &U _modbus_tx * -> -> -> 8 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dir_mod `*uc * -> -> 1 `i `x -> -> # *U -> &U _dir_mod `*uc `i `x ]
+[; ;Modbus_TCP.c: 33: modbus_tx[9] = ((char *)&dir_mod)[0];
+"33
+[e = *U + &U _modbus_tx * -> -> -> 9 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dir_mod `*uc * -> -> 0 `i `x -> -> # *U -> &U _dir_mod `*uc `i `x ]
+[; ;Modbus_TCP.c: 35: modbus_tx[10] = ((char *)&dat_mod)[1];
+"35
+[e = *U + &U _modbus_tx * -> -> -> 10 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dat_mod `*uc * -> -> 1 `i `x -> -> # *U -> &U _dat_mod `*uc `i `x ]
+[; ;Modbus_TCP.c: 36: modbus_tx[11] = ((char *)&dat_mod)[0];
+"36
+[e = *U + &U _modbus_tx * -> -> -> 11 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dat_mod `*uc * -> -> 0 `i `x -> -> # *U -> &U _dat_mod `*uc `i `x ]
+[; ;Modbus_TCP.c: 38: manda_esp8266_bytes(modbus_tx,12);
+"38
+[e ( _manda_esp8266_bytes (2 , &U _modbus_tx -> -> 12 `i `ui ]
+[; ;Modbus_TCP.c: 40: }
+"40
 [e :UE 606 ]
 }
-[v $root$_INTERRUPT_InterruptManager `(v ~T0 @X0 0 e ]
-"58
-[v _INTERRUPT_InterruptManager `(v ~T12 @X0 1 ef ]
-"59
+"42
+[v _modbus_write_holding_varios `(v ~T0 @X0 1 ef3`ui`*ui`ui ]
+"43
 {
-[; ;interrupt_manager.c: 58: void __interrupt() INTERRUPT_InterruptManager (void)
-[; ;interrupt_manager.c: 59: {
-[e :U _INTERRUPT_InterruptManager ]
+[; ;Modbus_TCP.c: 42: void modbus_write_holding_varios(unsigned int dir_mod, unsigned int *buff_datos,unsigned int cuantos)
+[; ;Modbus_TCP.c: 43: {
+[e :U _modbus_write_holding_varios ]
+"42
+[v _dir_mod `ui ~T0 @X0 1 r1 ]
+[v _buff_datos `*ui ~T0 @X0 1 r2 ]
+[v _cuantos `ui ~T0 @X0 1 r3 ]
+"43
 [f ]
-[; ;interrupt_manager.c: 61: if(INTCONbits.PEIE == 1)
-"61
-[e $ ! == -> . . _INTCONbits 1 6 `i -> 1 `i 608  ]
-[; ;interrupt_manager.c: 62: {
+"44
+[v _cuent1 `uc ~T0 @X0 1 a ]
+[; ;Modbus_TCP.c: 44: unsigned char cuent1;
+[; ;Modbus_TCP.c: 45: PIE1bits.RC1IE = 0;
+"45
+[e = . . _PIE1bits 1 3 -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 46: modbus_tx[0] = 0;
+"46
+[e = *U + &U _modbus_tx * -> -> -> 0 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 47: modbus_tx[1] = 0;
+"47
+[e = *U + &U _modbus_tx * -> -> -> 1 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 48: modbus_tx[2] = 0;
+"48
+[e = *U + &U _modbus_tx * -> -> -> 2 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 49: modbus_tx[3] = 00;
+"49
+[e = *U + &U _modbus_tx * -> -> -> 3 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 50: modbus_tx[4] = 00;;
+"50
+[e = *U + &U _modbus_tx * -> -> -> 4 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 52: modbus_tx[5] = 7 + cuantos * 2;
+"52
+[e = *U + &U _modbus_tx * -> -> -> 5 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> + -> -> 7 `i `ui * _cuantos -> -> 2 `i `ui `uc ]
+[; ;Modbus_TCP.c: 53: modbus_tx[6] = 1;
+"53
+[e = *U + &U _modbus_tx * -> -> -> 6 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 1 `i `uc ]
+[; ;Modbus_TCP.c: 54: modbus_tx[7] = 0x10;
+"54
+[e = *U + &U _modbus_tx * -> -> -> 7 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 16 `i `uc ]
+[; ;Modbus_TCP.c: 56: modbus_tx[8] = ((char *)&dir_mod)[1];
+"56
+[e = *U + &U _modbus_tx * -> -> -> 8 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dir_mod `*uc * -> -> 1 `i `x -> -> # *U -> &U _dir_mod `*uc `i `x ]
+[; ;Modbus_TCP.c: 57: modbus_tx[9] = ((char *)&dir_mod)[0];
+"57
+[e = *U + &U _modbus_tx * -> -> -> 9 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dir_mod `*uc * -> -> 0 `i `x -> -> # *U -> &U _dir_mod `*uc `i `x ]
+[; ;Modbus_TCP.c: 59: modbus_tx[10] = ((char *)&cuantos)[1];
+"59
+[e = *U + &U _modbus_tx * -> -> -> 10 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _cuantos `*uc * -> -> 1 `i `x -> -> # *U -> &U _cuantos `*uc `i `x ]
+[; ;Modbus_TCP.c: 60: modbus_tx[11] = ((char *)&cuantos)[0];
+"60
+[e = *U + &U _modbus_tx * -> -> -> 11 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _cuantos `*uc * -> -> 0 `i `x -> -> # *U -> &U _cuantos `*uc `i `x ]
+[; ;Modbus_TCP.c: 62: modbus_tx[12] = 2 * cuantos;
 "62
-{
-[; ;interrupt_manager.c: 63: if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
+[e = *U + &U _modbus_tx * -> -> -> 12 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> * -> -> 2 `i `ui _cuantos `uc ]
+[; ;Modbus_TCP.c: 63: for(cuent1 = 13; cuent1 < 12 + 2 * cuantos; cuent1++)
 "63
-[e $ ! && == -> . . _PIE1bits 1 3 `i -> 1 `i == -> . . _PIR1bits 1 3 `i -> 1 `i 609  ]
-[; ;interrupt_manager.c: 64: {
-"64
 {
-[; ;interrupt_manager.c: 65: EUSART1_RxDefaultInterruptHandler();
-"65
-[e ( *U _EUSART1_RxDefaultInterruptHandler ..  ]
-"66
-}
-[e :U 609 ]
-"67
-}
+[e = _cuent1 -> -> 13 `i `uc ]
+[e $U 611  ]
+"64
 [e :U 608 ]
-[; ;interrupt_manager.c: 66: }
-[; ;interrupt_manager.c: 67: }
-[; ;interrupt_manager.c: 68: }
-"68
+[; ;Modbus_TCP.c: 64: {
+{
+[; ;Modbus_TCP.c: 65: modbus_tx[cuent1] = ((char *)&*buff_datos)[1];
+"65
+[e = *U + &U _modbus_tx * -> _cuent1 `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U *U _buff_datos `*uc * -> -> 1 `i `x -> -> # *U -> &U *U _buff_datos `*uc `i `x ]
+[; ;Modbus_TCP.c: 66: cuent1++;
+"66
+[e ++ _cuent1 -> -> 1 `i `uc ]
+[; ;Modbus_TCP.c: 67: modbus_tx[cuent1] = ((char *)&*buff_datos++)[0];
+"67
+[e = *U + &U _modbus_tx * -> _cuent1 `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U *U ++ _buff_datos * -> -> 1 `i `x -> -> # *U _buff_datos `i `x `*uc * -> -> 0 `i `x -> -> # *U -> &U *U ++ _buff_datos * -> -> 1 `i `x -> -> # *U _buff_datos `i `x `*uc `i `x ]
+"69
+}
+"63
+[e ++ _cuent1 -> -> 1 `i `uc ]
+[e :U 611 ]
+[e $ < -> _cuent1 `ui + -> -> 12 `i `ui * -> -> 2 `i `ui _cuantos 608  ]
+[e :U 609 ]
+"69
+}
+[; ;Modbus_TCP.c: 69: }
+[; ;Modbus_TCP.c: 71: manda_esp8266_bytes(modbus_tx,17);
+"71
+[e ( _manda_esp8266_bytes (2 , &U _modbus_tx -> -> 17 `i `ui ]
+[; ;Modbus_TCP.c: 72: }
+"72
 [e :UE 607 ]
+}
+"74
+[v _modbus_write_coilsdigital `(v ~T0 @X0 1 ef2`ui`ui ]
+"75
+{
+[; ;Modbus_TCP.c: 74: void modbus_write_coilsdigital(unsigned int dir_mod, unsigned int dat_dig)
+[; ;Modbus_TCP.c: 75: {
+[e :U _modbus_write_coilsdigital ]
+"74
+[v _dir_mod `ui ~T0 @X0 1 r1 ]
+[v _dat_dig `ui ~T0 @X0 1 r2 ]
+"75
+[f ]
+[; ;Modbus_TCP.c: 76: PIE1bits.RC1IE = 0;
+"76
+[e = . . _PIE1bits 1 3 -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 77: modbus_tx[0] = 0;
+"77
+[e = *U + &U _modbus_tx * -> -> -> 0 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 78: modbus_tx[1] = 0;
+"78
+[e = *U + &U _modbus_tx * -> -> -> 1 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 79: modbus_tx[2] = 0;
+"79
+[e = *U + &U _modbus_tx * -> -> -> 2 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 80: modbus_tx[3] = 00;
+"80
+[e = *U + &U _modbus_tx * -> -> -> 3 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 81: modbus_tx[4] = 00;;
+"81
+[e = *U + &U _modbus_tx * -> -> -> 4 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 83: modbus_tx[5] = 9;
+"83
+[e = *U + &U _modbus_tx * -> -> -> 5 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 9 `i `uc ]
+[; ;Modbus_TCP.c: 84: modbus_tx[6] = 1;
+"84
+[e = *U + &U _modbus_tx * -> -> -> 6 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 1 `i `uc ]
+[; ;Modbus_TCP.c: 85: modbus_tx[7] = 0x0f;
+"85
+[e = *U + &U _modbus_tx * -> -> -> 7 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 15 `i `uc ]
+[; ;Modbus_TCP.c: 87: modbus_tx[8] = ((char *)&dir_mod)[1];
+"87
+[e = *U + &U _modbus_tx * -> -> -> 8 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dir_mod `*uc * -> -> 1 `i `x -> -> # *U -> &U _dir_mod `*uc `i `x ]
+[; ;Modbus_TCP.c: 88: modbus_tx[9] = ((char *)&dir_mod)[0];
+"88
+[e = *U + &U _modbus_tx * -> -> -> 9 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dir_mod `*uc * -> -> 0 `i `x -> -> # *U -> &U _dir_mod `*uc `i `x ]
+[; ;Modbus_TCP.c: 90: modbus_tx[10] = 00;
+"90
+[e = *U + &U _modbus_tx * -> -> -> 10 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 91: modbus_tx[11] = 0x0f;
+"91
+[e = *U + &U _modbus_tx * -> -> -> 11 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 15 `i `uc ]
+[; ;Modbus_TCP.c: 92: modbus_tx[12] = 02;
+"92
+[e = *U + &U _modbus_tx * -> -> -> 12 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 2 `i `uc ]
+[; ;Modbus_TCP.c: 93: modbus_tx[13] = ((char *)&dat_dig)[0];
+"93
+[e = *U + &U _modbus_tx * -> -> -> 13 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dat_dig `*uc * -> -> 0 `i `x -> -> # *U -> &U _dat_dig `*uc `i `x ]
+[; ;Modbus_TCP.c: 94: modbus_tx[14] = ((char *)&dat_dig)[1];
+"94
+[e = *U + &U _modbus_tx * -> -> -> 14 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dat_dig `*uc * -> -> 1 `i `x -> -> # *U -> &U _dat_dig `*uc `i `x ]
+[; ;Modbus_TCP.c: 96: manda_esp8266_bytes(modbus_tx,15);
+"96
+[e ( _manda_esp8266_bytes (2 , &U _modbus_tx -> -> 15 `i `ui ]
+[; ;Modbus_TCP.c: 98: }
+"98
+[e :UE 612 ]
+}
+"101
+[v _modbus_read_analog `(v ~T0 @X0 1 ef2`ui`ui ]
+"102
+{
+[; ;Modbus_TCP.c: 101: void modbus_read_analog(unsigned int dir_mod, unsigned int cuantos)
+[; ;Modbus_TCP.c: 102: {
+[e :U _modbus_read_analog ]
+"101
+[v _dir_mod `ui ~T0 @X0 1 r1 ]
+[v _cuantos `ui ~T0 @X0 1 r2 ]
+"102
+[f ]
+"103
+[v _cuent1 `uc ~T0 @X0 1 a ]
+[; ;Modbus_TCP.c: 103: unsigned char cuent1;
+[; ;Modbus_TCP.c: 104: tamano=cuantos;
+"104
+[e = _tamano _cuantos ]
+[; ;Modbus_TCP.c: 105: modbus_tx[0] = 0;
+"105
+[e = *U + &U _modbus_tx * -> -> -> 0 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 106: modbus_tx[1] = 0;
+"106
+[e = *U + &U _modbus_tx * -> -> -> 1 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 107: modbus_tx[2] = 0;
+"107
+[e = *U + &U _modbus_tx * -> -> -> 2 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 108: modbus_tx[3] = 00;
+"108
+[e = *U + &U _modbus_tx * -> -> -> 3 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 109: modbus_tx[4] = 00;;
+"109
+[e = *U + &U _modbus_tx * -> -> -> 4 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 111: modbus_tx[5] = 2 + cuantos * 2;
+"111
+[e = *U + &U _modbus_tx * -> -> -> 5 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> + -> -> 2 `i `ui * _cuantos -> -> 2 `i `ui `uc ]
+[; ;Modbus_TCP.c: 112: modbus_tx[6]= 1;
+"112
+[e = *U + &U _modbus_tx * -> -> -> 6 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 1 `i `uc ]
+[; ;Modbus_TCP.c: 113: modbus_tx[7]= 0x4;
+"113
+[e = *U + &U _modbus_tx * -> -> -> 7 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux -> -> 4 `i `uc ]
+[; ;Modbus_TCP.c: 115: modbus_tx[8] = ((char *)&dir_mod)[1];
+"115
+[e = *U + &U _modbus_tx * -> -> -> 8 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dir_mod `*uc * -> -> 1 `i `x -> -> # *U -> &U _dir_mod `*uc `i `x ]
+[; ;Modbus_TCP.c: 116: modbus_tx[9] = ((char *)&dir_mod)[0];
+"116
+[e = *U + &U _modbus_tx * -> -> -> 9 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _dir_mod `*uc * -> -> 0 `i `x -> -> # *U -> &U _dir_mod `*uc `i `x ]
+[; ;Modbus_TCP.c: 118: modbus_tx[10] = ((char *)&cuantos)[1];
+"118
+[e = *U + &U _modbus_tx * -> -> -> 10 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _cuantos `*uc * -> -> 1 `i `x -> -> # *U -> &U _cuantos `*uc `i `x ]
+[; ;Modbus_TCP.c: 119: modbus_tx[11] = ((char *)&cuantos)[0];
+"119
+[e = *U + &U _modbus_tx * -> -> -> 11 `i `ui `ux -> -> # *U &U _modbus_tx `ui `ux *U + -> &U _cuantos `*uc * -> -> 0 `i `x -> -> # *U -> &U _cuantos `*uc `i `x ]
+[; ;Modbus_TCP.c: 123: estado_rec = 1;
+"123
+[e = _estado_rec -> -> 1 `i `uc ]
+[; ;Modbus_TCP.c: 124: PIR1bits.RC1IF = 0;
+"124
+[e = . . _PIR1bits 1 3 -> -> 0 `i `uc ]
+[; ;Modbus_TCP.c: 126: CREN = 0;
+"126
+[e = _CREN -> -> 0 `i `b ]
+[; ;Modbus_TCP.c: 127: CREN = 1;
+"127
+[e = _CREN -> -> 1 `i `b ]
+[; ;Modbus_TCP.c: 128: PIE1bits.RC1IE = 1;
+"128
+[e = . . _PIE1bits 1 3 -> -> 1 `i `uc ]
+[; ;Modbus_TCP.c: 129: manda_esp8266_bytes(modbus_tx,12);
+"129
+[e ( _manda_esp8266_bytes (2 , &U _modbus_tx -> -> 12 `i `ui ]
+[; ;Modbus_TCP.c: 130: }
+"130
+[e :UE 613 ]
 }

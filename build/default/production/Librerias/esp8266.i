@@ -1,6 +1,101 @@
 
 # 1 "Librerias/esp8266.c"
 
+# 4 "C:\Program Files\Microchip\xc8\v2.36\pic\include\__size_t.h"
+typedef unsigned size_t;
+
+# 14 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 36
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 7 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 43 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdio.h"
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 29 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\errno.h"
+extern int errno;
+
+# 12 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\conio.h"
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 23
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 88 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 180
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
 # 18 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -7674,85 +7769,19 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 154 "Librerias/../mcc_generated_files/pin_manager.h"
+# 168 "Librerias/../Librerias/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 166
+# 180
 void PIN_MANAGER_IOC(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 29 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\errno.h"
-extern int errno;
-
-# 12 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\conio.h"
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-# 23
-extern char * cgets(char *);
-extern void cputs(const char *);
-
-# 110 "Librerias/../mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
-
-# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
+# 15
 typedef unsigned char bool;
 
-# 4 "C:\Program Files\Microchip\xc8\v2.36\pic\include\__size_t.h"
-typedef unsigned size_t;
-
-# 7 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdarg.h"
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-
-# 43 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdio.h"
-struct __prbuf
-{
-char * ptr;
-void (* func)(char);
-};
-
-# 88
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-
-
-# 180
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-
-# 76 "Librerias/../mcc_generated_files/eusart1.h"
+# 76 "Librerias/../Librerias/../mcc_generated_files/eusart1.h"
 typedef union {
 struct {
 unsigned perr : 1;
@@ -7763,99 +7792,372 @@ unsigned reserved : 5;
 uint8_t status;
 }eusart1_status_t;
 
-# 89
-extern volatile uint8_t eusart1TxBufferRemaining;
-extern volatile uint8_t eusart1RxCount;
-
-# 95
-extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-
-# 117
+# 111
 void EUSART1_Initialize(void);
 
-# 165
+# 159
 bool EUSART1_is_tx_ready(void);
 
-# 213
+# 207
 bool EUSART1_is_rx_ready(void);
 
-# 260
+# 254
 bool EUSART1_is_tx_done(void);
 
-# 308
+# 302
 eusart1_status_t EUSART1_get_last_status(void);
 
-# 328
+# 322
 uint8_t EUSART1_Read(void);
 
-# 348
+# 342
 void EUSART1_Write(uint8_t txData);
 
-# 370
-void EUSART1_Receive_ISR(void);
 
-# 391
-void EUSART1_RxDataHandler(void);
-
-# 410
 void EUSART1_Write_string(const char* data);
 
+# 362
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 
-# 430
+# 380
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 
-# 448
+# 398
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
-# 469
-void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-
-# 71 "Librerias/../mcc_generated_files/mcc.h"
+# 70 "Librerias/../Librerias/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 84
+# 83
 void OSCILLATOR_Initialize(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 46 "Librerias/esp8266.h"
-void esp8266_router_init(void);
+# 10 "Librerias/../Librerias/esp8266.h"
+extern char modbus_rx[];
+extern char modbus_tx[];
+
+
+
+
+void Uart1_write_text_const(const char *info);
+char tiempo(unsigned int milis, char cap[30], char cap1[30]);
+void esp82666_interrupcion_1();
+char manda_AT_COMANDO(char *coman, char cap[30], char cap1[30],unsigned int retardo);
+unsigned long strlen_const(const char *const_pun);
+void manda_esp8266_const(const char *info);
+void manda_esp8266(char *info);
+void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
+unsigned char conecta(char *ip_dir);
 
 # 13 "Librerias/esp8266.c"
-void esp8266_router_init()
+unsigned int led1;
+unsigned int led2;
+
+
+char trama_cont=0;
+unsigned char dato_rx;
+
+char captu1[30];
+
+
+enum estados_ {normal,cap_i,cap_p,cap_d,cap_co,cap_co2,cap_largo,esp_final} ;
+
+char estado_rec = normal;
+
+extern unsigned int tamano;
+unsigned char rec_largo[4];
+unsigned char rec_socket[1];
+unsigned char *rec_punte;
+unsigned char *buff_punte;
+unsigned int rec_son;
+unsigned char flag_modbus=0;
+
+
+int atoi_(char* cadena)
 {
-EUSART1_Write_string("ATE0\r\n");
-_delay((unsigned long)((1000)*(48000000/4000.0)));
+int respuesta = 0;
+int i;
 
-EUSART1_Write_string("AT+CWMODE=2\r\n");
-_delay((unsigned long)((200)*(48000000/4000.0)));
+for (i = 0; cadena[i] != '\0'; ++i)
+respuesta = respuesta * 10 + cadena[i] - '0';
+return respuesta;
+}
 
-
-EUSART1_Write_string("AT+CIPSERVER=0\r\n");
-_delay((unsigned long)((200)*(48000000/4000.0)));
-EUSART1_Write_string("AT+CIPMUX=0\r\n");
-_delay((unsigned long)((200)*(48000000/4000.0)));
-
-EUSART1_Write_string("AT+CIPMODE=0\r\n");
-_delay((unsigned long)((200)*(48000000/4000.0)));
+void Uart1_write_text_const(const char *info)
+{
+while(*info) EUSART1_Write(*info++);
+}
 
 
+char tiempo(unsigned int milis, char cap[30], char cap1[30])
+{
+unsigned int cont1;
+estado_rec=normal;
+trama_cont=0;
+memset(modbus_rx,0,50);
+PIR1bits.RC1IF = 0;
 
-EUSART1_Write_string("AT+CWSAP=\"ESP8266_IDEM\",\"noconectar\",5,3\r\n");
-_delay((unsigned long)((200)*(48000000/4000.0)));
+CREN = 0;
+CREN = 1;
+PIE1bits.RC1IE = 1;
+_delay((unsigned long)((50)*(48000000/4000.0)));
 
-EUSART1_Write_string("AT+CIPAP=\"192.168.1.253\"\r\n");
-_delay((unsigned long)((200)*(48000000/4000.0)));
 
-EUSART1_Write_string("AT+CIPMUX=0\r\n");
-_delay((unsigned long)((200)*(48000000/4000.0)));
+for (cont1=1;cont1<=milis;cont1++)
+{
+_delay((unsigned long)((1)*(48000000/4000.0)));
 
-EUSART1_Write_string("AT+CIPSERVER=1,200\r\n");
-_delay((unsigned long)((200)*(48000000/4000.0)));
+if (strstr(modbus_rx,cap))
+{
+RCIE=0;
+_delay((unsigned long)((10)*(48000000/4000.0)));
+return(1);
+}
+else if (strstr(modbus_rx,cap1) )
+{
+RCIE=0;
+_delay((unsigned long)((10)*(48000000/4000.0)));
+return(2);
+}
+}
 
-EUSART1_Write_string("AT+CIPSTO=0\r\n");
-_delay((unsigned long)((200)*(48000000/4000.0)));
+PIE1bits.RC1IE = 0;
+return(0);
+}
+
+
+void esp82666_interrupcion_1()
+{
+
+if (PIR1bits.RC1IF == 1)
+{ dato_rx=RCREG;
+
+switch (estado_rec)
+{
+case normal:
+modbus_rx[trama_cont]=dato_rx;
+trama_cont++;
+if (trama_cont>=50) trama_cont=0;
+break;
+
+case cap_i:
+
+if (dato_rx!='I') trama_cont=0;
+else
+{
+
+estado_rec=cap_p;
+}
+
+case cap_p:
+
+
+if (dato_rx!='P')
+{
+trama_cont=0;
+estado_rec=cap_i;
+
+}
+else
+{
+
+estado_rec=cap_d;
+}
+
+break ;
+
+
+case cap_d:
+
+if (dato_rx!='D')
+{
+trama_cont=0;
+estado_rec=cap_i;
+
+}
+else
+{
+
+estado_rec=cap_co;
+}
+
+break ;
+
+case cap_co:
+
+if (dato_rx!=',')
+{
+trama_cont=0;
+estado_rec=cap_i;
+
+}
+else
+{
+
+
+
+
+trama_cont=0;
+estado_rec=cap_co2;
+
+}
+
+break ;
+
+
+case cap_co2:
+
+
+if (dato_rx==',')
+{
+estado_rec=cap_largo;
+trama_cont=0;
+}
+else
+{
+trama_cont++;
+if (trama_cont>50)
+{ trama_cont=0;
+estado_rec=cap_i;
+}
+}
+
+break ;
+
+case cap_largo:
+
+if (dato_rx==':')
+{
+trama_cont=0;
+rec_son=13;
+estado_rec=esp_final;
+}
+else
+{
+modbus_rx[trama_cont]=dato_rx;
+trama_cont++;
+if (trama_cont>50)
+{ trama_cont=0;
+estado_rec=cap_i;
+}
+}
+break ;
+
+
+case esp_final:
+led1=!led1;
+modbus_rx[trama_cont]=dato_rx;
+trama_cont++;
+if (trama_cont>=rec_son)
+
+
+{
+trama_cont=0;
+estado_rec=normal;
+flag_modbus = 1;
+led2 = 1;
+PIE1bits.RC1IE = 0;
+
+}
+break;
+
+
+}
+
+
+PIR1bits.RC1IF = 0;
+
+
+}
+
+}
+
+char manda_AT_COMANDO(char *coman, char cap[30], char cap1[30],unsigned int retardo)
+{
+
+EUSART1_Write_string(coman);
+Uart1_write_text_const("\r\n");
+return (tiempo(retardo,cap,cap1));
+}
+
+
+unsigned long strlen_const(const char *const_pun)
+{
+unsigned int cuen_const=0;
+
+while (*const_pun++!=0) cuen_const++;
+return (cuen_const);
+
+}
+void manda_esp8266_const(const char *info)
+{
+unsigned int largo;
+Uart1_write_text_const("AT+CIPSEND=");
+Uart1_write_text_const('4');
+Uart1_write_text_const(',');
+largo=strlen_const(info);
+sprintf(captu1,"%1u",largo);
+EUSART1_Write_string(captu1);
+Uart1_write_text_const("\r\n");
+_delay((unsigned long)((50)*(48000000/4000.0)));
+Uart1_write_text_const(info);
+_delay((unsigned long)((100)*(48000000/4000.0)));
+
+}
+
+
+void manda_esp8266(char *info)
+{
+unsigned int largo;
+largo=strlen(info);
+sprintf(captu1,"AT+CIPSEND=4,%d\r\n",largo);
+EUSART1_Write_string(captu1);
+_delay((unsigned long)((50)*(48000000/4000.0)));
+EUSART1_Write_string(info);
+_delay((unsigned long)((100)*(48000000/4000.0)));
+
+}
+
+
+void manda_esp8266_bytes(unsigned char *info2,unsigned int largo)
+{
+unsigned char cuenta;
+
+sprintf(captu1,"AT+CIPSEND=4,%d\r\n",largo);
+EUSART1_Write_string(captu1);
+_delay((unsigned long)((50)*(48000000/4000.0)));
+for (cuenta = 0; cuenta < largo; cuenta++)
+{
+unsigned char byte = *info2++;
+EUSART1_Write(byte);
+}
+_delay((unsigned long)((50)*(48000000/4000.0)));
+
+}
+
+
+
+
+unsigned char conecta(char *ip_dir)
+{
+unsigned char tempo;
+memset(modbus_tx,0,50);
+sprintf(modbus_tx,"AT+CIPSTART=4,\"TCP\",\"%s\",502",ip_dir);
+
+manda_AT_COMANDO("AT+CIPMUX=1\r\n","OK","OK",500);
+_delay((unsigned long)((300)*(48000000/4000.0)));
+tempo=manda_AT_COMANDO(modbus_tx, "OK", "CONNECT", 10000);
+_delay((unsigned long)((2000)*(48000000/4000.0)));
+if ((tempo==1) ||(tempo==2)) return(1);
+manda_AT_COMANDO("AT+CIPMUX=1\r\n","OK","OK",500);
+_delay((unsigned long)((300)*(48000000/4000.0)));
+tempo=manda_AT_COMANDO(modbus_tx, "OK", "Linked", 10000);
+_delay((unsigned long)((2000)*(48000000/4000.0)));
+
+if ((tempo==1) ||(tempo==2)) return(1);
+else return(0);
+
 }
 

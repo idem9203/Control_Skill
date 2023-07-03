@@ -64,8 +64,8 @@ void PIN_MANAGER_Initialize(void)
     /**
     TRISx registers
     */
-    TRISA = 0xC7;
-    TRISB = 0xFE;
+    TRISA = 0xDF;
+    TRISB = 0x7E;
     TRISC = 0x87;
 
     /**
@@ -88,6 +88,12 @@ void PIN_MANAGER_Initialize(void)
 
    
     
+}
+
+void PIN_MANAGER_IOC(void)
+{   
+	// Clear global Interrupt-On-Change flag
+    INTCONbits.IOCIF = 0;
 }
 
 /**

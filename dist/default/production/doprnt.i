@@ -224,18 +224,9 @@ extern double round(double);
 #pragma warning disable 350
 
 # 358
-const static unsigned long dpowers[] = {1, 10, 100, 1000, 10000,
+const static unsigned int dpowers[] = {1, 10, 100, 1000, 10000,
 
-100000, 1000000, 10000000, 100000000,
-1000000000
-
-};
-
-
-const static unsigned long hexpowers[] = {1, 0x10, 0x100, 0x1000,
-
-0x10000, 0x100000, 0x1000000, 0x10000000
-
+# 363
 };
 
 # 463
@@ -251,10 +242,13 @@ va_list ap;
 
 char c;
 
-# 517
-int prec;
+int width;
 
-# 525
+# 521
+signed char prec;
+
+
+
 unsigned char flag;
 
 # 540
@@ -263,7 +257,7 @@ unsigned long vd;
 double integ;
 } tmpval;
 
-unsigned long val;
+unsigned int val;
 unsigned len;
 const char * cp;
 
@@ -280,35 +274,64 @@ if(c != '%')
 continue;
 }
 
-# 565
+
+width = 0;
+
 flag = 0;
 
-# 659
-loop:
+# 614
+if(isdigit((unsigned)*f)) {
+width = 0;
+do {
+width *= 10;
+width += *f++ - '0';
+} while(isdigit((unsigned)*f));
 
+# 625
+}
+
+# 661
 switch(c = *f++) {
 
 case 0:
 goto alldone;
-
-
-case 'l':
-
-flag |= 0x10;
-goto loop;
 
 # 723
 case 'd':
 case 'i':
 break;
 
-# 744
-case 'x':
+# 754
+case 's':
+
+# 760
+cp = (*(const char * *)__va_arg((*(const char * **)ap), (const char *)0));
+
+# 766
+if(!cp)
+cp = "(null)";
 
 
-flag |= 0x80;
 
-break;
+len = 0;
+while(cp[len])
+len++;
+
+# 783
+if(((unsigned)width) > len)
+width -= len;
+else
+width = 0;
+
+# 790
+while(width--)
+((*sp++ = (' ')));
+
+while(len--)
+((*sp++ = (*cp++)));
+
+# 800
+continue;
 
 # 828
 default:
@@ -316,21 +339,24 @@ default:
 # 839
 continue;
 
-# 848
+
+
+case 'u':
+flag |= 0x40;
+break;
+
+
 }
 
 # 1277
-if((flag & 0x80) == 0x00)
+if((flag & 0x40) == 0x00)
 
 {
 
-if(flag & 0x10)
-val = (unsigned long)(*(long *)__va_arg((*(long **)ap), (long)0));
-else
+# 1285
+val = (unsigned int)(*(int *)__va_arg((*(int **)ap), (int)0));
 
-val = (unsigned long)(*(int *)__va_arg((*(int **)ap), (int)0));
-
-if((long)val < 0) {
+if((int)val < 0) {
 flag |= 0x03;
 val = -val;
 }
@@ -344,46 +370,35 @@ else
 
 {
 
-# 1307
-if(flag & 0x10)
-val = (*(unsigned long *)__va_arg((*(unsigned long **)ap), (unsigned long)0));
-else
-
-
+# 1312
 val = (*(unsigned *)__va_arg((*(unsigned **)ap), (unsigned)0));
 }
-
-# 1320
-switch((unsigned char)(flag & 0x80)) {
-
-
-
-
-case 0x00:
 
 # 1331
 for(c = 1 ; c != sizeof dpowers/sizeof dpowers[0] ; c++)
 if(val < dpowers[c])
 break;
 
-break;
+# 1371
+if(width && flag & 0x03)
+width--;
 
-
-
-
-case 0x80:
-
-for(c = 1 ; c != sizeof hexpowers/sizeof hexpowers[0] ; c++)
-if(val < hexpowers[c])
-break;
-
-break;
-
-# 1362
-}
+# 1407
+if(width > c)
+width -= c;
+else
+width = 0;
 
 # 1448
 {
+
+if(width
+
+# 1454
+)
+do
+((*sp++ = (' ')));
+while(--width);
 
 # 1464
 if(flag & 0x03)
@@ -397,32 +412,11 @@ prec = c;
 
 while(prec--) {
 
-switch((unsigned char)(flag & 0x80))
-
+# 1504
 {
-
-
-
-
-case 0x00:
 
 # 1515
-c = (val / dpowers[(unsigned int)prec]) % 10 + '0';
-
-break;
-
-# 1523
-case 0x80:
-
-{
-unsigned char idx = (val / hexpowers[(unsigned int)prec]) & 0xF;
-
-# 1532
-c = "0123456789abcdef"[idx];
-
-}
-
-break;
+c = (val / dpowers[(unsigned char)prec]) % 10 + '0';
 
 # 1549
 }

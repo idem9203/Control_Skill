@@ -3,8 +3,17 @@
 [d edition pro ]
 [d chip 18F25K50 ]
 [d frameptr 4065 ]
-"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\__lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"25 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
+[e E4672 estados_ `uc
+normal 0
+cap_i 1
+cap_p 2
+cap_d 3
+cap_co 4
+cap_co2 5
+cap_largo 6
+esp_final 7
+]
 "505 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\fleq.c
@@ -19,8 +28,14 @@
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
-"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\llmod.c
-[v ___llmod __llmod `(ul  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
@@ -29,45 +44,65 @@
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\strchr.c
+[v _strchr strchr `(*.39uc  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\strstr.c
+[v _strstr strstr `(*.39uc  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul64.c
 [v ___omul __omul `(ul  1 e 4 0 ]
-"71 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
+"46 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
+[v _Uart1_write_text_const Uart1_write_text_const `(v  1 e 1 0 ]
+"52
+[v _tiempo tiempo `(uc  1 e 1 0 ]
+"89
+[v _esp82666_interrupcion_1 esp82666_interrupcion_1 `(v  1 e 1 0 ]
+"235
+[v _manda_AT_COMANDO manda_AT_COMANDO `(uc  1 e 1 0 ]
+"244
+[v _strlen_const strlen_const `(ul  1 e 4 0 ]
+"282
+[v _manda_esp8266_bytes manda_esp8266_bytes `(v  1 e 1 0 ]
+"301
+[v _conecta conecta `(uc  1 e 1 0 ]
+"19 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/Modbus_TCP.c
+[v _modbus_write_holding modbus_write_holding `(v  1 e 1 0 ]
+"74
+[v _modbus_write_coilsdigital modbus_write_coilsdigital `(v  1 e 1 0 ]
+"124 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"137
 [v _main main `(v  1 e 1 0 ]
-"83 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
+"66 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
-"140
+"113
 [v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
-"162
+"132
 [v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-"171
+"141
 [v _EUSART1_Write_string EUSART1_Write_string `(v  1 e 1 0 ]
-"190
-[v _EUSART1_Receive_ISR EUSART1_Receive_ISR `(v  1 e 1 0 ]
-"214
-[v _EUSART1_RxDataHandler EUSART1_RxDataHandler `(v  1 e 1 0 ]
-"224
+"161
 [v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
-"226
+"163
 [v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
-"234
+"171
 [v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
-"238
+"174
 [v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
-"242
+"178
 [v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
-"246
+"182
 [v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
-"251
-[v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
-"52 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/interrupt_manager.c
-[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
-"58
-[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
 "50 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"59
+"58
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "55 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
@@ -87,55 +122,13 @@
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
 "4155
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
-[s S475 . 1 `uc 1 TRISA0 1 0 :1:0 
-`uc 1 TRISA1 1 0 :1:1 
-`uc 1 TRISA2 1 0 :1:2 
-`uc 1 TRISA3 1 0 :1:3 
-`uc 1 TRISA4 1 0 :1:4 
-`uc 1 TRISA5 1 0 :1:5 
-`uc 1 TRISA6 1 0 :1:6 
-`uc 1 TRISA7 1 0 :1:7 
-]
-"4187
-[s S484 . 1 `uc 1 RA0 1 0 :1:0 
-`uc 1 RA1 1 0 :1:1 
-`uc 1 RA2 1 0 :1:2 
-`uc 1 RA3 1 0 :1:3 
-`uc 1 RA4 1 0 :1:4 
-`uc 1 RA5 1 0 :1:5 
-`uc 1 RA6 1 0 :1:6 
-`uc 1 RA7 1 0 :1:7 
-]
-[u S493 . 1 `S475 1 . 1 0 `S484 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES493  1 e 1 @3986 ]
 "4377
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S515 . 1 `uc 1 TRISB0 1 0 :1:0 
-`uc 1 TRISB1 1 0 :1:1 
-`uc 1 TRISB2 1 0 :1:2 
-`uc 1 TRISB3 1 0 :1:3 
-`uc 1 TRISB4 1 0 :1:4 
-`uc 1 TRISB5 1 0 :1:5 
-`uc 1 TRISB6 1 0 :1:6 
-`uc 1 TRISB7 1 0 :1:7 
-]
-"4409
-[s S524 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
-]
-[u S533 . 1 `S515 1 . 1 0 `S524 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES533  1 e 1 @3987 ]
 "4599
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
 "5241
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
-[s S36 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S476 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -145,19 +138,19 @@
 `uc 1 ACTIE 1 0 :1:7 
 ]
 "5410
-[s S45 . 1 `uc 1 . 1 0 :3:0 
+[s S485 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SSP1IE 1 0 :1:3 
 `uc 1 TX1IE 1 0 :1:4 
 `uc 1 RC1IE 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 STIE 1 0 :1:7 
 ]
-[s S52 . 1 `uc 1 . 1 0 :7:0 
+[s S492 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIE 1 0 :1:7 
 ]
-[u S55 . 1 `S36 1 . 1 0 `S45 1 . 1 0 `S52 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES55  1 e 1 @3997 ]
-[s S124 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S495 . 1 `S476 1 . 1 0 `S485 1 . 1 0 `S492 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES495  1 e 1 @3997 ]
+[s S70 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -167,21 +160,21 @@
 `uc 1 ACTIF 1 0 :1:7 
 ]
 "5509
-[s S133 . 1 `uc 1 . 1 0 :3:0 
+[s S79 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SSP1IF 1 0 :1:3 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 STIF 1 0 :1:7 
 ]
-[s S140 . 1 `uc 1 . 1 0 :7:0 
+[s S86 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S143 . 1 `S124 1 . 1 0 `S133 1 . 1 0 `S140 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES143  1 e 1 @3998 ]
+[u S89 . 1 `S70 1 . 1 0 `S79 1 . 1 0 `S86 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES89  1 e 1 @3998 ]
 "6242
 [v _RCSTA1 RCSTA1 `VEuc  1 e 1 @4011 ]
-[s S252 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S197 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -191,24 +184,24 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "6281
-[s S261 . 1 `uc 1 . 1 0 :3:0 
+[s S206 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S264 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S209 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S268 . 1 `uc 1 . 1 0 :6:0 
+[s S213 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S271 . 1 `uc 1 . 1 0 :5:0 
+[s S216 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[u S274 . 1 `S252 1 . 1 0 `S261 1 . 1 0 `S264 1 . 1 0 `S268 1 . 1 0 `S271 1 . 1 0 ]
-[v _RCSTA1bits RCSTA1bits `VES274  1 e 1 @4011 ]
+[u S219 . 1 `S197 1 . 1 0 `S206 1 . 1 0 `S209 1 . 1 0 `S213 1 . 1 0 `S216 1 . 1 0 ]
+[v _RCSTA1bits RCSTA1bits `VES219  1 e 1 @4011 ]
 "6448
 [v _TXSTA1 TXSTA1 `VEuc  1 e 1 @4012 ]
-[s S167 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S113 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -218,39 +211,41 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "6506
-[s S176 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S122 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S180 . 1 `uc 1 . 1 0 :2:0 
+[s S126 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 BRGH1 1 0 :1:2 
 ]
-[s S183 . 1 `uc 1 . 1 0 :7:0 
+[s S129 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S186 . 1 `uc 1 . 1 0 :3:0 
+[s S132 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SENDB1 1 0 :1:3 
 ]
-[s S189 . 1 `uc 1 . 1 0 :4:0 
+[s S135 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SYNC1 1 0 :1:4 
 ]
-[s S192 . 1 `uc 1 . 1 0 :1:0 
+[s S138 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 ]
-[s S195 . 1 `uc 1 . 1 0 :6:0 
+[s S141 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX91 1 0 :1:6 
 ]
-[s S198 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S144 . 1 `uc 1 TX9D1 1 0 :1:0 
 ]
-[s S200 . 1 `uc 1 . 1 0 :5:0 
+[s S146 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 TXEN1 1 0 :1:5 
 ]
-[u S203 . 1 `S167 1 . 1 0 `S176 1 . 1 0 `S180 1 . 1 0 `S183 1 . 1 0 `S186 1 . 1 0 `S189 1 . 1 0 `S192 1 . 1 0 `S195 1 . 1 0 `S198 1 . 1 0 `S200 1 . 1 0 ]
-[v _TXSTA1bits TXSTA1bits `VES203  1 e 1 @4012 ]
+[u S149 . 1 `S113 1 . 1 0 `S122 1 . 1 0 `S126 1 . 1 0 `S129 1 . 1 0 `S132 1 . 1 0 `S135 1 . 1 0 `S138 1 . 1 0 `S141 1 . 1 0 `S144 1 . 1 0 `S146 1 . 1 0 ]
+[v _TXSTA1bits TXSTA1bits `VES149  1 e 1 @4012 ]
 "6742
 [v _TXREG1 TXREG1 `VEuc  1 e 1 @4013 ]
 "6780
 [v _RCREG1 RCREG1 `VEuc  1 e 1 @4014 ]
+"6785
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
 "6818
 [v _SPBRG1 SPBRG1 `VEuc  1 e 1 @4015 ]
 "6956
@@ -259,47 +254,15 @@
 [v _ACTCON ACTCON `VEuc  1 e 1 @4021 ]
 "7891
 [v _BAUDCON1 BAUDCON1 `VEuc  1 e 1 @4024 ]
-[s S609 . 1 `uc 1 NOT_BOR 1 0 :1:0 
-]
-"11367
-[s S611 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 NOT_POR 1 0 :1:1 
-]
-[s S614 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_PD 1 0 :1:2 
-]
-[s S617 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 NOT_TO 1 0 :1:3 
-]
-[s S620 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 NOT_RI 1 0 :1:4 
-]
-[s S623 . 1 `uc 1 nBOR 1 0 :1:0 
-`uc 1 nPOR 1 0 :1:1 
-`uc 1 nPD 1 0 :1:2 
-`uc 1 nTO 1 0 :1:3 
-`uc 1 nRI 1 0 :1:4 
-`uc 1 . 1 0 :1:5 
-`uc 1 SBOREN 1 0 :1:6 
-`uc 1 IPEN 1 0 :1:7 
-]
-[s S632 . 1 `uc 1 BOR 1 0 :1:0 
-`uc 1 POR 1 0 :1:1 
-`uc 1 PD 1 0 :1:2 
-`uc 1 TO 1 0 :1:3 
-`uc 1 RI 1 0 :1:4 
-]
-[u S638 . 1 `S609 1 . 1 0 `S611 1 . 1 0 `S614 1 . 1 0 `S617 1 . 1 0 `S620 1 . 1 0 `S623 1 . 1 0 `S632 1 . 1 0 ]
-[v _RCONbits RCONbits `VES638  1 e 1 @4048 ]
 "11485
 [v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
 "11547
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S424 . 1 `uc 1 . 1 0 :7:0 
+[s S337 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
 "12366
-[s S427 . 1 `uc 1 IOCIP 1 0 :1:0 
+[s S340 . 1 `uc 1 IOCIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -308,14 +271,14 @@
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S436 . 1 `uc 1 . 1 0 :2:0 
+[s S349 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IP 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S441 . 1 `S424 1 . 1 0 `S427 1 . 1 0 `S436 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES441  1 e 1 @4081 ]
-[s S676 . 1 `uc 1 IOCIF 1 0 :1:0 
+[u S354 . 1 `S337 1 . 1 0 `S340 1 . 1 0 `S349 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES354  1 e 1 @4081 ]
+[s S376 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -325,7 +288,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "12448
-[s S685 . 1 `uc 1 . 1 0 :1:0 
+[s S385 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -334,12 +297,16 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S694 . 1 `uc 1 . 1 0 :6:0 
+[s S394 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S698 . 1 `S676 1 . 1 0 `S685 1 . 1 0 `S694 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES698  1 e 1 @4082 ]
+[u S398 . 1 `S376 1 . 1 0 `S385 1 . 1 0 `S394 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES398  1 e 1 @4082 ]
+"13433
+[v _CREN CREN `VEb  1 e 0 @32092 ]
+"14048
+[v _GIE GIE `VEb  1 e 0 @32663 ]
 "14321
 [v _LATA5 LATA5 `VEb  1 e 0 @31821 ]
 "14330
@@ -348,174 +315,280 @@
 [v _LATB7 LATB7 `VEb  1 e 0 @31831 ]
 "14657
 [v _PLLRDY PLLRDY `VEb  1 e 0 @32407 ]
+"14762
+[v _RCIE RCIE `VEb  1 e 0 @31981 ]
+"14765
+[v _RCIF RCIF `VEb  1 e 0 @31989 ]
 "358 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\doprnt.c
-[v _dpowers dpowers `C[10]ul  1 s 40 dpowers ]
-"366
-[v _hexpowers hexpowers `C[8]ul  1 s 32 hexpowers ]
-"61 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
-[v _texto texto `[100]uc  1 e 100 0 ]
-"63 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
-[v _eusart1RxHead eusart1RxHead `VEuc  1 e 1 0 ]
-"64
-[v _eusart1RxTail eusart1RxTail `VEuc  1 e 1 0 ]
-"65
-[v _eusart1RxBuffer eusart1RxBuffer `VE[8]uc  1 e 8 0 ]
+[v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
+"13 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
+[v _led1 led1 `ui  1 e 2 0 ]
+"14
+[v _led2 led2 `ui  1 e 2 0 ]
+"17
+[v _trama_cont trama_cont `uc  1 e 1 0 ]
+"18
+[v _dato_rx dato_rx `uc  1 e 1 0 ]
+"20
+[v _captu1 captu1 `[30]uc  1 e 30 0 ]
+"25
+[v _estado_rec estado_rec `uc  1 e 1 0 ]
+"32
+[v _rec_son rec_son `ui  1 e 2 0 ]
+"33
+[v _flag_modbus flag_modbus `uc  1 e 1 0 ]
+"11 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/Modbus_TCP.c
+[v _modbus_rx modbus_rx `[50]uc  1 e 50 0 ]
+"12
+[v _modbus_tx modbus_tx `[50]uc  1 e 50 0 ]
+"14
+[v _tamano tamano `ui  1 e 2 0 ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
-"66
+"52 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
 [u S29 . 1 `S24 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S29  1 e 8 0 ]
-"67
-[v _eusart1RxCount eusart1RxCount `VEuc  1 e 1 0 ]
-"68
 [v _eusart1RxLastError eusart1RxLastError `VES29  1 e 1 0 ]
-"73
-[v _EUSART1_RxDefaultInterruptHandler EUSART1_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
-"75
+"58
 [v _EUSART1_FramingErrorHandler EUSART1_FramingErrorHandler `*.37(v  1 e 2 0 ]
-"76
+"59
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
-"77
+"60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"71 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
+"137 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"121
+"235
+} 0
+"19 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/Modbus_TCP.c
+[v _modbus_write_holding modbus_write_holding `(v  1 e 1 0 ]
+{
+[v modbus_write_holding@dir_mod dir_mod `ui  1 p 2 0 ]
+[v modbus_write_holding@dat_mod dat_mod `ui  1 p 2 2 ]
+"40
+} 0
+"74
+[v _modbus_write_coilsdigital modbus_write_coilsdigital `(v  1 e 1 0 ]
+{
+[v modbus_write_coilsdigital@dir_mod dir_mod `ui  1 p 2 0 ]
+[v modbus_write_coilsdigital@dat_dig dat_dig `ui  1 p 2 2 ]
+"98
+} 0
+"282 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
+[v _manda_esp8266_bytes manda_esp8266_bytes `(v  1 e 1 0 ]
+{
+"291
+[v manda_esp8266_bytes@byte byte `uc  1 a 1 45 ]
+"284
+[v manda_esp8266_bytes@cuenta cuenta `uc  1 a 1 46 ]
+"282
+[v manda_esp8266_bytes@info2 info2 `*.39uc  1 p 2 39 ]
+[v manda_esp8266_bytes@largo largo `ui  1 p 2 41 ]
+"296
+} 0
+"301
+[v _conecta conecta `(uc  1 e 1 0 ]
+{
+"303
+[v conecta@tempo tempo `uc  1 a 1 43 ]
+"301
+[v conecta@ip_dir ip_dir `*.25uc  1 p 2 39 ]
+"320
 } 0
 "505 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-"1526
-[v sprintf@idx idx `uc  1 a 1 34 ]
+"514
+[v sprintf@width width `i  1 a 2 36 ]
 "545
-[v sprintf@val val `ul  1 a 4 39 ]
+[v sprintf@val val `ui  1 a 2 34 ]
+"546
+[v sprintf@len len `ui  1 a 2 32 ]
 "507
-[v sprintf@ap ap `[1]*.39v  1 a 2 37 ]
-"517
-[v sprintf@prec prec `i  1 a 2 35 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 29 ]
+"547
+[v sprintf@cp cp `*.35Cuc  1 a 2 27 ]
 "512
-[v sprintf@c c `uc  1 a 1 44 ]
+[v sprintf@c c `uc  1 a 1 38 ]
 "525
-[v sprintf@flag flag `uc  1 a 1 43 ]
+[v sprintf@flag flag `uc  1 a 1 31 ]
+"521
+[v sprintf@prec prec `c  1 a 1 26 ]
 "505
-[v sprintf@sp sp `*.39uc  1 p 2 26 ]
-[v sprintf@f f `*.25Cuc  1 p 2 28 ]
+[v sprintf@sp sp `*.39uc  1 p 2 16 ]
+[v sprintf@f f `*.25Cuc  1 p 2 18 ]
 "1567
 } 0
-"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\llmod.c
-[v ___llmod __llmod `(ul  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 6 ]
+"15
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 8 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 4 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 6 ]
+"53
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
 "10
-[v ___llmod@counter counter `uc  1 a 1 25 ]
+[v ___lwmod@counter counter `uc  1 a 1 15 ]
 "7
-[v ___llmod@dividend dividend `ul  1 p 4 17 ]
-[v ___llmod@divisor divisor `ul  1 p 4 21 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 11 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 13 ]
 "25
 } 0
-"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\__lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "10
-[v ___lldiv@quotient quotient `ul  1 a 4 12 ]
+[v ___lwdiv@quotient quotient `ui  1 a 2 8 ]
 "11
-[v ___lldiv@counter counter `uc  1 a 1 16 ]
+[v ___lwdiv@counter counter `uc  1 a 1 10 ]
 "7
-[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
-[v ___lldiv@divisor divisor `ul  1 p 4 8 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 4 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
 "30
+} 0
+"235 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
+[v _manda_AT_COMANDO manda_AT_COMANDO `(uc  1 e 1 0 ]
+{
+[v manda_AT_COMANDO@coman coman `*.35uc  1 p 2 29 ]
+[v manda_AT_COMANDO@cap cap `*.25uc  1 p 2 31 ]
+[v manda_AT_COMANDO@cap1 cap1 `*.25uc  1 p 2 33 ]
+[v manda_AT_COMANDO@retardo retardo `ui  1 p 2 35 ]
+"241
+} 0
+"52
+[v _tiempo tiempo `(uc  1 e 1 0 ]
+{
+"54
+[v tiempo@cont1 cont1 `ui  1 a 2 27 ]
+"52
+[v tiempo@milis milis `ui  1 p 2 19 ]
+[v tiempo@cap cap `*.25uc  1 p 2 21 ]
+[v tiempo@cap1 cap1 `*.25uc  1 p 2 23 ]
+"86
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\strstr.c
+[v _strstr strstr `(*.39uc  1 e 2 0 ]
+{
+[v strstr@s1 s1 `*.39Cuc  1 p 2 15 ]
+[v strstr@s2 s2 `*.25Cuc  1 p 2 17 ]
+"12
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+{
+[v strncmp@s1 s1 `*.39Cuc  1 p 2 8 ]
+[v strncmp@s2 s2 `*.25Cuc  1 p 2 10 ]
+[v strncmp@len len `ui  1 p 2 12 ]
+"14
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"6
+[v strlen@cp cp `*.25Cuc  1 a 2 6 ]
+"4
+[v strlen@s s `*.25Cuc  1 p 2 4 ]
+"13
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\strchr.c
+[v _strchr strchr `(*.39uc  1 e 2 0 ]
+{
+[v strchr@ptr ptr `*.39Cuc  1 p 2 4 ]
+[v strchr@chr chr `i  1 p 2 6 ]
+"11
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"15
+[v memset@p p `*.39uc  1 a 2 10 ]
+"8
+[v memset@p1 p1 `*.39v  1 p 2 4 ]
+[v memset@c c `i  1 p 2 6 ]
+[v memset@n n `ui  1 p 2 8 ]
+"22
+} 0
+"46 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
+[v _Uart1_write_text_const Uart1_write_text_const `(v  1 e 1 0 ]
+{
+[v Uart1_write_text_const@info info `*.33Cuc  1 p 3 5 ]
+"49
+} 0
+"141 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
+[v _EUSART1_Write_string EUSART1_Write_string `(v  1 e 1 0 ]
+{
+[v EUSART1_Write_string@data data `*.35Cuc  1 p 2 5 ]
+"147
+} 0
+"132
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+{
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 4 ]
+"139
 } 0
 "50 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"57
+"56
 } 0
 "55 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "91
 } 0
-"59 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/mcc.c
+"58 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"73
+"72
 } 0
-"52 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/interrupt_manager.c
-[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
-{
-"56
-} 0
-"83 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
+"66 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
 {
-"119
+"92
 } 0
-"251
-[v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
-{
-[v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 4 ]
-"253
-} 0
-"242
+"178
 [v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 4 ]
-"244
+"180
 } 0
-"238
+"174
 [v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 4 ]
-"240
+"176
 } 0
-"246
+"182
 [v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
 {
 [v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 4 ]
-"248
+"184
 } 0
-"171
-[v _EUSART1_Write_string EUSART1_Write_string `(v  1 e 1 0 ]
+"124 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-[v EUSART1_Write_string@data data `*.35Cuc  1 p 2 5 ]
-"177
+"130
 } 0
-"162
-[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+"89 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
+[v _esp82666_interrupcion_1 esp82666_interrupcion_1 `(v  1 e 1 0 ]
 {
-[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART1_Write@txData txData `uc  1 a 1 4 ]
-"169
-} 0
-"58 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/interrupt_manager.c
-[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
-{
-"68
-} 0
-"190 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
-[v _EUSART1_Receive_ISR EUSART1_Receive_ISR `(v  1 e 1 0 ]
-{
-"212
-} 0
-"226
-[v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
-{
-"232
-} 0
-"224
-[v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
-{
-} 0
-"234
-[v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
-{
-"236
-} 0
-"214
-[v _EUSART1_RxDataHandler EUSART1_RxDataHandler `(v  1 e 1 0 ]
-{
-"222
+"233
 } 0

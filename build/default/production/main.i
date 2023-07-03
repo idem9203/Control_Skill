@@ -7674,10 +7674,10 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 154 "mcc_generated_files/pin_manager.h"
+# 168 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 166
+# 180
 void PIN_MANAGER_IOC(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
@@ -7699,9 +7699,6 @@ extern __bit kbhit(void);
 # 23
 extern char * cgets(char *);
 extern void cputs(const char *);
-
-# 110 "mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -7763,65 +7760,44 @@ unsigned reserved : 5;
 uint8_t status;
 }eusart1_status_t;
 
-# 89
-extern volatile uint8_t eusart1TxBufferRemaining;
-extern volatile uint8_t eusart1RxCount;
-
-# 95
-extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-
-# 117
+# 111
 void EUSART1_Initialize(void);
 
-# 165
+# 159
 bool EUSART1_is_tx_ready(void);
 
-# 213
+# 207
 bool EUSART1_is_rx_ready(void);
 
-# 260
+# 254
 bool EUSART1_is_tx_done(void);
 
-# 308
+# 302
 eusart1_status_t EUSART1_get_last_status(void);
 
-# 328
+# 322
 uint8_t EUSART1_Read(void);
 
-# 348
+# 342
 void EUSART1_Write(uint8_t txData);
 
-# 370
-void EUSART1_Receive_ISR(void);
 
-# 391
-void EUSART1_RxDataHandler(void);
-
-# 410
 void EUSART1_Write_string(const char* data);
 
+# 362
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 
-# 430
+# 380
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 
-# 448
+# 398
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
-# 469
-void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-
-# 71 "mcc_generated_files/mcc.h"
+# 70 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 84
+# 83
 void OSCILLATOR_Initialize(void);
-
-# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 46 "Librerias/esp8266.h"
-void esp8266_router_init(void);
 
 # 7 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdlib.h"
 typedef unsigned short wchar_t;
@@ -7945,46 +7921,111 @@ extern __bit iscntrl(char);
 extern char toupper(char);
 extern char tolower(char);
 
-# 61 "main.c"
-char texto[100];
-int cuenta;
-int codigo_ir;
+# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
 
-# 71
+# 12 "Librerias/Modbus_TCP.h"
+extern char modbus_rx[];
+extern char modbus_tx[];
+
+extern unsigned char rec_largo;
+extern unsigned char rec_socket;
+
+
+void modbus_write_holding(unsigned int dir_mod, unsigned int dat_mod);
+void modbus_write_holding_varios(unsigned int dir_mod, unsigned int *buff_datos,unsigned int cuantos);
+void modbus_write_coilsdigital(unsigned int dir_mod, unsigned int dat_dig);
+void modbus_read_analog(unsigned int dir_mod, unsigned int cuantos);
+
+# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 10 "Librerias/esp8266.h"
+extern char modbus_rx[];
+extern char modbus_tx[];
+
+
+
+
+void Uart1_write_text_const(const char *info);
+char tiempo(unsigned int milis, char cap[30], char cap1[30]);
+void esp82666_interrupcion_1();
+char manda_AT_COMANDO(char *coman, char cap[30], char cap1[30],unsigned int retardo);
+unsigned long strlen_const(const char *const_pun);
+void manda_esp8266_const(const char *info);
+void manda_esp8266(char *info);
+void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
+unsigned char conecta(char *ip_dir);
+
+# 65 "main.c"
+extern unsigned int rec_son;
+extern unsigned char flag_modbus;
+
+
+unsigned int buff_tx[5];
+
+# 96
+unsigned int digital_out = 0;
+
+# 113
+unsigned int codigo;
+
+float val1, val2;
+unsigned int lectu1,lectu2;
+
+# 124
+void interrupt INTERRUPT_InterruptManager (void)
+{
+if (RCIF == 1)
+{
+esp82666_interrupcion_1();
+}
+}
+
+# 137
 void main(void)
 {
 
 SYSTEM_Initialize();
 
-ANSELA = 0b00000111;
-ANSELC = 0x00;
-TRISAbits.TRISA5 = 0;
-TRISBbits.TRISB0 = 0;
-TRISBbits.TRISB7 = 0;
-
+# 151
+LATA5 = 1;
 LATA5 = 0;
 LATB0 = 0;
 LATB7 = 0;
 
-# 102
-void esp8266_router_init();
+# 181
+PIR1bits.RC1IF = 0;
+PIE1bits.RC1IE = 1;
+GIE = 1;
+
+
+
+
+manda_AT_COMANDO("ATE0","OK", "ERROR", 500);
+manda_AT_COMANDO("AT+CWMODE=1","OK", "no change", 1000);
+
+manda_AT_COMANDO("AT+CWJAP=\"TIGO-4EA0\",\"2NB112100448\"","OK","OK",10000);
+
+manda_AT_COMANDO("AT+CIPMUX=1","OK","OK",3000);
+manda_AT_COMANDO("AT+CIFSR","OK","OK",5000);
+_delay((unsigned long)((2000)*(48000000/4000.0)));
+
+conecta("192.168.1.14");
+
 
 while (1)
 {
 
-EUSART1_Write_string("Son: ");
-sprintf(texto, "%d", cuenta);
-EUSART1_Write_string(texto);
-EUSART1_Write_string("\r");
-EUSART1_Write_string("\n");
-sprintf(texto, "%lx", codigo_ir);
-EUSART1_Write_string("CODIGO IR = ");
-EUSART1_Write_string(texto);
-EUSART1_Write_string("\r");
-EUSART1_Write_string("\n");
+# 226
+modbus_write_coilsdigital(0,digital_out);
 
-_delay((unsigned long)((80)*(48000000/4000.0)));
-LATB7 =~ LATB7;
+
+modbus_write_holding(0,100);
+modbus_write_holding(1,50);
+
+
+
 }
 }
 

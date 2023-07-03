@@ -1,8 +1,5 @@
 
-# 1 "mcc_generated_files/interrupt_manager.c"
-
-# 110 "mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
+# 1 "Librerias/Modbus_TCP.c"
 
 # 18 "C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -7677,10 +7674,10 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 
-# 154 "mcc_generated_files/pin_manager.h"
+# 168 "Librerias/../Librerias/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 166
+# 180
 void PIN_MANAGER_IOC(void);
 
 # 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
@@ -7752,7 +7749,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
-# 76 "mcc_generated_files/eusart1.h"
+# 76 "Librerias/../Librerias/../mcc_generated_files/eusart1.h"
 typedef union {
 struct {
 unsigned perr : 1;
@@ -7763,76 +7760,199 @@ unsigned reserved : 5;
 uint8_t status;
 }eusart1_status_t;
 
-# 89
-extern volatile uint8_t eusart1TxBufferRemaining;
-extern volatile uint8_t eusart1RxCount;
-
-# 95
-extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-
-# 117
+# 111
 void EUSART1_Initialize(void);
 
-# 165
+# 159
 bool EUSART1_is_tx_ready(void);
 
-# 213
+# 207
 bool EUSART1_is_rx_ready(void);
 
-# 260
+# 254
 bool EUSART1_is_tx_done(void);
 
-# 308
+# 302
 eusart1_status_t EUSART1_get_last_status(void);
 
-# 328
+# 322
 uint8_t EUSART1_Read(void);
 
-# 348
+# 342
 void EUSART1_Write(uint8_t txData);
 
-# 370
-void EUSART1_Receive_ISR(void);
 
-# 391
-void EUSART1_RxDataHandler(void);
-
-# 410
 void EUSART1_Write_string(const char* data);
 
+# 362
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 
-# 430
+# 380
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 
-# 448
+# 398
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
-# 469
-void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-
-# 71 "mcc_generated_files/mcc.h"
+# 70 "Librerias/../Librerias/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 84
+# 83
 void OSCILLATOR_Initialize(void);
 
-# 52 "mcc_generated_files/interrupt_manager.c"
-void INTERRUPT_Initialize (void)
-{
+# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
 
-RCONbits.IPEN = 0;
+# 12 "Librerias/../Librerias/Modbus_TCP.h"
+extern char modbus_rx[];
+extern char modbus_tx[];
+
+extern unsigned char rec_largo;
+extern unsigned char rec_socket;
+
+
+void modbus_write_holding(unsigned int dir_mod, unsigned int dat_mod);
+void modbus_write_holding_varios(unsigned int dir_mod, unsigned int *buff_datos,unsigned int cuantos);
+void modbus_write_coilsdigital(unsigned int dir_mod, unsigned int dat_dig);
+void modbus_read_analog(unsigned int dir_mod, unsigned int cuantos);
+
+# 15 "C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 10 "Librerias/../Librerias/esp8266.h"
+extern char modbus_rx[];
+extern char modbus_tx[];
+
+
+
+
+void Uart1_write_text_const(const char *info);
+char tiempo(unsigned int milis, char cap[30], char cap1[30]);
+void esp82666_interrupcion_1();
+char manda_AT_COMANDO(char *coman, char cap[30], char cap1[30],unsigned int retardo);
+unsigned long strlen_const(const char *const_pun);
+void manda_esp8266_const(const char *info);
+void manda_esp8266(char *info);
+void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
+unsigned char conecta(char *ip_dir);
+
+# 11 "Librerias/Modbus_TCP.c"
+char modbus_rx[50];
+char modbus_tx[50];
+
+unsigned int tamano;
+extern char estado_rec;
+
+
+
+void modbus_write_holding(unsigned int dir_mod, unsigned int dat_mod)
+{
+PIE1bits.RC1IE = 0;
+modbus_tx[0] = 0;
+modbus_tx[1] = 0;
+modbus_tx[2] = 0;
+modbus_tx[3] = 00;
+modbus_tx[4] = 00;;
+
+modbus_tx[5] = 6;
+modbus_tx[6] = 1;
+modbus_tx[7] = 6;
+
+modbus_tx[8] = ((char *)&dir_mod)[1];
+modbus_tx[9] = ((char *)&dir_mod)[0];
+
+modbus_tx[10] = ((char *)&dat_mod)[1];
+modbus_tx[11] = ((char *)&dat_mod)[0];
+
+manda_esp8266_bytes(modbus_tx,12);
+
 }
 
-void __interrupt() INTERRUPT_InterruptManager (void)
+void modbus_write_holding_varios(unsigned int dir_mod, unsigned int *buff_datos,unsigned int cuantos)
 {
+unsigned char cuent1;
+PIE1bits.RC1IE = 0;
+modbus_tx[0] = 0;
+modbus_tx[1] = 0;
+modbus_tx[2] = 0;
+modbus_tx[3] = 00;
+modbus_tx[4] = 00;;
 
-if(INTCONbits.PEIE == 1)
+modbus_tx[5] = 7 + cuantos * 2;
+modbus_tx[6] = 1;
+modbus_tx[7] = 0x10;
+
+modbus_tx[8] = ((char *)&dir_mod)[1];
+modbus_tx[9] = ((char *)&dir_mod)[0];
+
+modbus_tx[10] = ((char *)&cuantos)[1];
+modbus_tx[11] = ((char *)&cuantos)[0];
+
+modbus_tx[12] = 2 * cuantos;
+for(cuent1 = 13; cuent1 < 12 + 2 * cuantos; cuent1++)
 {
-if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
-{
-EUSART1_RxDefaultInterruptHandler();
-}
-}
+modbus_tx[cuent1] = ((char *)&*buff_datos)[1];
+cuent1++;
+modbus_tx[cuent1] = ((char *)&*buff_datos++)[0];
+
 }
 
+manda_esp8266_bytes(modbus_tx,17);
+}
+
+void modbus_write_coilsdigital(unsigned int dir_mod, unsigned int dat_dig)
+{
+PIE1bits.RC1IE = 0;
+modbus_tx[0] = 0;
+modbus_tx[1] = 0;
+modbus_tx[2] = 0;
+modbus_tx[3] = 00;
+modbus_tx[4] = 00;;
+
+modbus_tx[5] = 9;
+modbus_tx[6] = 1;
+modbus_tx[7] = 0x0f;
+
+modbus_tx[8] = ((char *)&dir_mod)[1];
+modbus_tx[9] = ((char *)&dir_mod)[0];
+
+modbus_tx[10] = 00;
+modbus_tx[11] = 0x0f;
+modbus_tx[12] = 02;
+modbus_tx[13] = ((char *)&dat_dig)[0];
+modbus_tx[14] = ((char *)&dat_dig)[1];
+
+manda_esp8266_bytes(modbus_tx,15);
+
+}
+
+
+void modbus_read_analog(unsigned int dir_mod, unsigned int cuantos)
+{
+unsigned char cuent1;
+tamano=cuantos;
+modbus_tx[0] = 0;
+modbus_tx[1] = 0;
+modbus_tx[2] = 0;
+modbus_tx[3] = 00;
+modbus_tx[4] = 00;;
+
+modbus_tx[5] = 2 + cuantos * 2;
+modbus_tx[6]= 1;
+modbus_tx[7]= 0x4;
+
+modbus_tx[8] = ((char *)&dir_mod)[1];
+modbus_tx[9] = ((char *)&dir_mod)[0];
+
+modbus_tx[10] = ((char *)&cuantos)[1];
+modbus_tx[11] = ((char *)&cuantos)[0];
+
+
+
+estado_rec = 1;
+PIR1bits.RC1IF = 0;
+
+CREN = 0;
+CREN = 1;
+PIE1bits.RC1IE = 1;
+manda_esp8266_bytes(modbus_tx,12);
+}

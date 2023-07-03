@@ -1,47 +1,59 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"14765 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
+[v _RCIF `Vb ~T0 @X0 0 e@31989 ]
+"18 Librerias/esp8266.h
+[v _esp82666_interrupcion_1 `(v ~T0 @X0 0 ef ]
 [p mainexit ]
-"71 mcc_generated_files/mcc.h
+"70 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"232 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
-[v _ANSELA `Vuc ~T0 @X0 0 e@3931 ]
-"327
-[v _ANSELC `Vuc ~T0 @X0 0 e@3933 ]
-"4166
-[s S174 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S174 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
-"4176
-[s S175 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S175 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
-"4165
-[u S173 `S174 1 `S175 1 ]
-[n S173 . . . ]
-"4187
-[v _TRISAbits `VS173 ~T0 @X0 0 e@3986 ]
-"4388
-[s S180 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S180 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
-"4398
-[s S181 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S181 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"4387
-[u S179 `S180 1 `S181 1 ]
-[n S179 . . . ]
-"4409
-[v _TRISBbits `VS179 ~T0 @X0 0 e@3987 ]
-"14321
+"14321 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
 [v _LATA5 `Vb ~T0 @X0 0 e@31821 ]
 "14330
 [v _LATB0 `Vb ~T0 @X0 0 e@31824 ]
 "14351
 [v _LATB7 `Vb ~T0 @X0 0 e@31831 ]
-"410 mcc_generated_files/eusart1.h
-[v _EUSART1_Write_string `(v ~T0 @X0 0 ef1`*Cuc ]
-"194 C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"5486
+[s S222 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S222 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ACTIF ]
+"5496
+[s S223 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S223 . . SSP1IF TX1IF RC1IF . STIF ]
+"5504
+[s S224 :7 `uc 1 :1 `uc 1 ]
+[n S224 . . PSPIF ]
+"5485
+[u S221 `S222 1 `S223 1 `S224 1 ]
+[n S221 . . . . ]
+"5509
+[v _PIR1bits `VS221 ~T0 @X0 0 e@3998 ]
+"5387
+[s S218 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S218 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ACTIE ]
+"5397
+[s S219 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S219 . . SSP1IE TX1IE RC1IE . STIE ]
+"5405
+[s S220 :7 `uc 1 :1 `uc 1 ]
+[n S220 . . PSPIE ]
+"5386
+[u S217 `S218 1 `S219 1 `S220 1 ]
+[n S217 . . . . ]
+"5410
+[v _PIE1bits `VS217 ~T0 @X0 0 e@3997 ]
+"14048
+[v _GIE `Vb ~T0 @X0 0 e@32663 ]
+"19 Librerias/esp8266.h
+[v _manda_AT_COMANDO `(uc ~T0 @X0 0 ef4`*uc`*uc`*uc`ui ]
 [v F38 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\builtins.h
 [v __delay `JF38 ~T0 @X0 0 e ]
 [p i __delay ]
+"24 Librerias/esp8266.h
+[v _conecta `(uc ~T0 @X0 0 ef1`*uc ]
+"21 Librerias/Modbus_TCP.h
+[v _modbus_write_coilsdigital `(v ~T0 @X0 0 ef2`ui`ui ]
+"19
+[v _modbus_write_holding `(v ~T0 @X0 0 ef2`ui`ui ]
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -5068,8 +5080,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;xc8\pic\include\pic18.h: 158: __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
 [; ;xc8\pic\include\pic18.h: 192: unsigned char __t1rd16on(void);
 [; ;xc8\pic\include\pic18.h: 193: unsigned char __t3rd16on(void);
-[; ;pin_manager.h: 154: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 166: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 168: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 180: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;errno.h: 29: extern int errno;
 [; ;conio.h: 12: extern void init_uart(void);
@@ -5080,7 +5092,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;conio.h: 19: extern __bit kbhit(void);
 [; ;conio.h: 23: extern char * cgets(char *);
 [; ;conio.h: 24: extern void cputs(const char *);
-[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
@@ -5112,27 +5123,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart1.h: 82: };
 [; ;eusart1.h: 83: uint8_t status;
 [; ;eusart1.h: 84: }eusart1_status_t;
-[; ;eusart1.h: 89: extern volatile uint8_t eusart1TxBufferRemaining;
-[; ;eusart1.h: 90: extern volatile uint8_t eusart1RxCount;
-[; ;eusart1.h: 95: extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-[; ;eusart1.h: 117: void EUSART1_Initialize(void);
-[; ;eusart1.h: 165: bool EUSART1_is_tx_ready(void);
-[; ;eusart1.h: 213: bool EUSART1_is_rx_ready(void);
-[; ;eusart1.h: 260: bool EUSART1_is_tx_done(void);
-[; ;eusart1.h: 308: eusart1_status_t EUSART1_get_last_status(void);
-[; ;eusart1.h: 328: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 348: void EUSART1_Write(uint8_t txData);
-[; ;eusart1.h: 370: void EUSART1_Receive_ISR(void);
-[; ;eusart1.h: 391: void EUSART1_RxDataHandler(void);
-[; ;eusart1.h: 410: void EUSART1_Write_string(const char* data);
-[; ;eusart1.h: 412: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 430: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 448: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 469: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 71: void SYSTEM_Initialize(void);
-[; ;mcc.h: 84: void OSCILLATOR_Initialize(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;esp8266.h: 46: void esp8266_router_init(void);
+[; ;eusart1.h: 111: void EUSART1_Initialize(void);
+[; ;eusart1.h: 159: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 207: bool EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 254: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 302: eusart1_status_t EUSART1_get_last_status(void);
+[; ;eusart1.h: 322: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 342: void EUSART1_Write(uint8_t txData);
+[; ;eusart1.h: 345: void EUSART1_Write_string(const char* data);
+[; ;eusart1.h: 362: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 380: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 398: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+[; ;mcc.h: 70: void SYSTEM_Initialize(void);
+[; ;mcc.h: 83: void OSCILLATOR_Initialize(void);
 [; ;stdlib.h: 7: typedef unsigned short wchar_t;
 [; ;stdlib.h: 15: typedef struct {
 [; ;stdlib.h: 16: int rem;
@@ -5222,112 +5225,169 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ctype.h: 14: extern __bit iscntrl(char);
 [; ;ctype.h: 17: extern char toupper(char);
 [; ;ctype.h: 18: extern char tolower(char);
-"61 main.c
-[v _texto `uc ~T0 @X0 -> 100 `i e ]
-[; ;main.c: 61: char texto[100];
-"62
-[v _cuenta `i ~T0 @X0 1 e ]
-[; ;main.c: 62: int cuenta;
-"63
-[v _codigo_ir `i ~T0 @X0 1 e ]
-[; ;main.c: 63: int codigo_ir;
-[v $root$_main `(v ~T0 @X0 0 e ]
-"71
-[v _main `(v ~T0 @X0 1 ef ]
-"72
-{
-[; ;main.c: 71: void main(void)
-[; ;main.c: 72: {
-[e :U _main ]
-[f ]
-[; ;main.c: 74: SYSTEM_Initialize();
-"74
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 76: ANSELA = 0b00000111;
-"76
-[e = _ANSELA -> -> 7 `i `uc ]
-[; ;main.c: 77: ANSELC = 0x00;
-"77
-[e = _ANSELC -> -> 0 `i `uc ]
-[; ;main.c: 78: TRISAbits.TRISA5 = 0;
-"78
-[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 79: TRISBbits.TRISB0 = 0;
-"79
-[e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 80: TRISBbits.TRISB7 = 0;
-"80
-[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
-[; ;main.c: 82: LATA5 = 0;
-"82
-[e = _LATA5 -> -> 0 `i `b ]
-[; ;main.c: 83: LATB0 = 0;
-"83
-[e = _LATB0 -> -> 0 `i `b ]
-[; ;main.c: 84: LATB7 = 0;
-"84
-[e = _LATB7 -> -> 0 `i `b ]
-[v _esp8266_router_init `(v ~T0 @X0 0 ef ]
-[; ;main.c: 102: void esp8266_router_init();
-[; ;main.c: 104: while (1)
-"104
-[e :U 612 ]
-[; ;main.c: 105: {
-"105
-{
-[; ;main.c: 107: EUSART1_Write_string("Son: ");
-"107
-[e ( _EUSART1_Write_string (1 :s 1C ]
-[; ;main.c: 108: sprintf(texto, "%d", cuenta);
-"108
-[e ( _sprintf (1 , (. , &U _texto :s 2C _cuenta ]
-[; ;main.c: 109: EUSART1_Write_string(texto);
-"109
-[e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
-[; ;main.c: 110: EUSART1_Write_string("\r");
-"110
-[e ( _EUSART1_Write_string (1 :s 3C ]
-[; ;main.c: 111: EUSART1_Write_string("\n");
-"111
-[e ( _EUSART1_Write_string (1 :s 4C ]
-[; ;main.c: 112: sprintf(texto, "%lx", codigo_ir);
-"112
-[e ( _sprintf (1 , (. , &U _texto :s 5C _codigo_ir ]
-[; ;main.c: 113: EUSART1_Write_string("CODIGO IR = ");
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;Modbus_TCP.h: 12: extern char modbus_rx[];
+[; ;Modbus_TCP.h: 13: extern char modbus_tx[];
+[; ;Modbus_TCP.h: 15: extern unsigned char rec_largo;
+[; ;Modbus_TCP.h: 16: extern unsigned char rec_socket;
+[; ;Modbus_TCP.h: 19: void modbus_write_holding(unsigned int dir_mod, unsigned int dat_mod);
+[; ;Modbus_TCP.h: 20: void modbus_write_holding_varios(unsigned int dir_mod, unsigned int *buff_datos,unsigned int cuantos);
+[; ;Modbus_TCP.h: 21: void modbus_write_coilsdigital(unsigned int dir_mod, unsigned int dat_dig);
+[; ;Modbus_TCP.h: 22: void modbus_read_analog(unsigned int dir_mod, unsigned int cuantos);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;esp8266.h: 10: extern char modbus_rx[];
+[; ;esp8266.h: 11: extern char modbus_tx[];
+[; ;esp8266.h: 16: void Uart1_write_text_const(const char *info);
+[; ;esp8266.h: 17: char tiempo(unsigned int milis, char cap[30], char cap1[30]);
+[; ;esp8266.h: 18: void esp82666_interrupcion_1();
+[; ;esp8266.h: 19: char manda_AT_COMANDO(char *coman, char cap[30], char cap1[30],unsigned int retardo);
+[; ;esp8266.h: 20: unsigned long strlen_const(const char *const_pun);
+[; ;esp8266.h: 21: void manda_esp8266_const(const char *info);
+[; ;esp8266.h: 22: void manda_esp8266(char *info);
+[; ;esp8266.h: 23: void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
+[; ;esp8266.h: 24: unsigned char conecta(char *ip_dir);
+[; ;main.c: 65: extern unsigned int rec_son;
+[; ;main.c: 66: extern unsigned char flag_modbus;
+"69 main.c
+[v _buff_tx `ui ~T0 @X0 -> 5 `i e ]
+[; ;main.c: 69: unsigned int buff_tx[5];
+"96
+[v _digital_out `ui ~T0 @X0 1 e ]
+[i _digital_out
+-> -> 0 `i `ui
+]
+[; ;main.c: 96: unsigned int digital_out = 0;
 "113
-[e ( _EUSART1_Write_string (1 :s 6C ]
-[; ;main.c: 114: EUSART1_Write_string(texto);
-"114
-[e ( _EUSART1_Write_string (1 -> &U _texto `*Cuc ]
-[; ;main.c: 115: EUSART1_Write_string("\r");
+[v _codigo `ui ~T0 @X0 1 e ]
+[; ;main.c: 113: unsigned int codigo;
 "115
-[e ( _EUSART1_Write_string (1 :s 7C ]
-[; ;main.c: 116: EUSART1_Write_string("\n");
+[v _val1 `f ~T0 @X0 1 e ]
+[v _val2 `f ~T0 @X0 1 e ]
+[; ;main.c: 115: float val1, val2;
 "116
-[e ( _EUSART1_Write_string (1 :s 8C ]
-[; ;main.c: 118: _delay((unsigned long)((80)*(48000000/4000.0)));
-"118
-[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;main.c: 119: LATB7 =~ LATB7;
-"119
-[e = _LATB7 -> ~ -> _LATB7 `i `b ]
-"120
+[v _lectu1 `ui ~T0 @X0 1 e ]
+[v _lectu2 `ui ~T0 @X0 1 e ]
+[; ;main.c: 116: unsigned int lectu1,lectu2;
+[v $root$_INTERRUPT_InterruptManager `(v ~T0 @X0 0 e ]
+[v F4838 `(v ~T0 @X0 1 tf ]
+"124
+[v _INTERRUPT_InterruptManager `IF4838 ~T0 @X0 1 e ]
+"125
+{
+[; ;main.c: 124: void interrupt INTERRUPT_InterruptManager (void)
+[; ;main.c: 125: {
+[e :U _INTERRUPT_InterruptManager ]
+[f ]
+[; ;main.c: 126: if (RCIF == 1)
+"126
+[e $ ! == -> _RCIF `i -> 1 `i 611  ]
+[; ;main.c: 127: {
+"127
+{
+[; ;main.c: 128: esp82666_interrupcion_1();
+"128
+[e ( _esp82666_interrupcion_1 ..  ]
+"129
 }
 [e :U 611 ]
-"104
-[e $U 612  ]
-[e :U 613 ]
-[; ;main.c: 120: }
-[; ;main.c: 121: }
-"121
+[; ;main.c: 129: }
+[; ;main.c: 130: }
+"130
 [e :UE 610 ]
 }
-[p f _sprintf 12583056 ]
-[a 5C 37 108 120 0 ]
-[a 2C 37 100 0 ]
-[a 6C 67 79 68 73 71 79 32 73 82 32 61 32 0 ]
-[a 1C 83 111 110 58 32 0 ]
-[a 3C 13 0 ]
-[a 7C 13 0 ]
-[a 4C 10 0 ]
-[a 8C 10 0 ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"137
+[v _main `(v ~T0 @X0 1 ef ]
+"138
+{
+[; ;main.c: 137: void main(void)
+[; ;main.c: 138: {
+[e :U _main ]
+[f ]
+[; ;main.c: 140: SYSTEM_Initialize();
+"140
+[e ( _SYSTEM_Initialize ..  ]
+[; ;main.c: 151: LATA5 = 1;
+"151
+[e = _LATA5 -> -> 1 `i `b ]
+[; ;main.c: 152: LATA5 = 0;
+"152
+[e = _LATA5 -> -> 0 `i `b ]
+[; ;main.c: 153: LATB0 = 0;
+"153
+[e = _LATB0 -> -> 0 `i `b ]
+[; ;main.c: 154: LATB7 = 0;
+"154
+[e = _LATB7 -> -> 0 `i `b ]
+[; ;main.c: 181: PIR1bits.RC1IF = 0;
+"181
+[e = . . _PIR1bits 1 3 -> -> 0 `i `uc ]
+[; ;main.c: 182: PIE1bits.RC1IE = 1;
+"182
+[e = . . _PIE1bits 1 3 -> -> 1 `i `uc ]
+[; ;main.c: 183: GIE = 1;
+"183
+[e = _GIE -> -> 1 `i `b ]
+[; ;main.c: 188: manda_AT_COMANDO("ATE0","OK", "ERROR", 500);
+"188
+[e ( _manda_AT_COMANDO (4 , , , -> :s 1C `*uc -> :s 2C `*uc -> :s 3C `*uc -> -> 500 `i `ui ]
+[; ;main.c: 189: manda_AT_COMANDO("AT+CWMODE=1","OK", "no change", 1000);
+"189
+[e ( _manda_AT_COMANDO (4 , , , -> :s 4C `*uc -> :s 5C `*uc -> :s 6C `*uc -> -> 1000 `i `ui ]
+[; ;main.c: 191: manda_AT_COMANDO("AT+CWJAP=\"TIGO-4EA0\",\"2NB112100448\"","OK","OK",10000);
+"191
+[e ( _manda_AT_COMANDO (4 , , , -> :s 7C `*uc -> :s 8C `*uc -> :s 9C `*uc -> -> 10000 `i `ui ]
+[; ;main.c: 193: manda_AT_COMANDO("AT+CIPMUX=1","OK","OK",3000);
+"193
+[e ( _manda_AT_COMANDO (4 , , , -> :s 10C `*uc -> :s 11C `*uc -> :s 12C `*uc -> -> 3000 `i `ui ]
+[; ;main.c: 194: manda_AT_COMANDO("AT+CIFSR","OK","OK",5000);
+"194
+[e ( _manda_AT_COMANDO (4 , , , -> :s 13C `*uc -> :s 14C `*uc -> :s 15C `*uc -> -> 5000 `i `ui ]
+[; ;main.c: 195: _delay((unsigned long)((2000)*(48000000/4000.0)));
+"195
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 197: conecta("192.168.1.14");
+"197
+[e ( _conecta (1 -> :s 16C `*uc ]
+[; ;main.c: 200: while (1)
+"200
+[e :U 614 ]
+[; ;main.c: 201: {
+"201
+{
+[; ;main.c: 226: modbus_write_coilsdigital(0,digital_out);
+"226
+[e ( _modbus_write_coilsdigital (2 , -> -> 0 `i `ui _digital_out ]
+[; ;main.c: 229: modbus_write_holding(0,100);
+"229
+[e ( _modbus_write_holding (2 , -> -> 0 `i `ui -> -> 100 `i `ui ]
+[; ;main.c: 230: modbus_write_holding(1,50);
+"230
+[e ( _modbus_write_holding (2 , -> -> 1 `i `ui -> -> 50 `i `ui ]
+"234
+}
+[e :U 613 ]
+"200
+[e $U 614  ]
+[e :U 615 ]
+[; ;main.c: 234: }
+[; ;main.c: 235: }
+"235
+[e :UE 612 ]
+}
+[a 6C 110 111 32 99 104 97 110 103 101 0 ]
+[a 13C 65 84 43 67 73 70 83 82 0 ]
+[a 3C 69 82 82 79 82 0 ]
+[a 2C 79 75 0 ]
+[a 5C 79 75 0 ]
+[a 8C 79 75 0 ]
+[a 9C 79 75 0 ]
+[a 11C 79 75 0 ]
+[a 12C 79 75 0 ]
+[a 14C 79 75 0 ]
+[a 15C 79 75 0 ]
+[a 16C 49 57 50 46 49 54 56 46 49 46 49 52 0 ]
+[a 10C 65 84 43 67 73 80 77 85 88 61 49 0 ]
+[a 4C 65 84 43 67 87 77 79 68 69 61 49 0 ]
+[a 1C 65 84 69 48 0 ]
+[a 7C 65 84 43 67 87 74 65 80 61 34 84 73 71 79 45 52 69 65 48 34 44 34 50 78 66 49 49 50 49 48 48 52 52 56 34 0 ]
