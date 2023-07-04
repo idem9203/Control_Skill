@@ -7929,7 +7929,7 @@ manda_esp8266_bytes(modbus_tx,15);
 void modbus_read_analog(unsigned int dir_mod, unsigned int cuantos)
 {
 unsigned char cuent1;
-tamano=cuantos;
+tamano = cuantos;
 modbus_tx[0] = 0;
 modbus_tx[1] = 0;
 modbus_tx[2] = 0;

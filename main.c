@@ -69,31 +69,31 @@ extern unsigned char flag_modbus;
 unsigned int buff_tx[5];
 
 //registro para escribir coils digitales
-//typedef union {
-//    unsigned int byte;   
-//    // a structure with 8 single bit bit-field objects, overlapping the union member "byte"
-//    struct {
-//        unsigned b0:1;
-//        unsigned b1:1;
-//        unsigned b2:1;
-//        unsigned b3:1;
-//        unsigned b4:1;
-//        unsigned b5:1;
-//        unsigned b6:1;
-//        unsigned b7:1;
-//        unsigned b8:1;
-//        unsigned b9:1;
-//        unsigned b10:1;
-//        unsigned b11:1;
-//        unsigned b12:1;
-//        unsigned b13:1;
-//        unsigned b14:1;
-//        unsigned b15:1;
-//    };
-//}digital_out;
+union {
+    unsigned int byte;   
+    // a structure with 8 single bit bit-field objects, overlapping the union member "byte"
+    struct {
+        unsigned b0:1;
+        unsigned b1:1;
+        unsigned b2:1;
+        unsigned b3:1;
+        unsigned b4:1;
+        unsigned b5:1;
+        unsigned b6:1;
+        unsigned b7:1;
+        unsigned b8:1;
+        unsigned b9:1;
+        unsigned b10:1;
+        unsigned b11:1;
+        unsigned b12:1;
+        unsigned b13:1;
+        unsigned b14:1;
+        unsigned b15:1;
+    };
+}digital_out;
 // digital_out.byte; seria el byte complet de 8 bits
 // digital.out.b0; es el bit a bit
-unsigned int digital_out = 0;
+//unsigned int digital_out = 0;
 // le da nombre a las  salidas digitales deseadas   le puede colocar el no,bre que deseen y anexar hasta 15
 #define digit1 digital_out.b0
 #define digit2 digital_out.b1
@@ -103,7 +103,6 @@ unsigned int digital_out = 0;
 #define digit6 digital_out.b5
 #define digit7 digital_out.b6
 #define digit8 digital_out.b7
-
 
 
 
@@ -134,8 +133,10 @@ void interrupt INTERRUPT_InterruptManager (void)
                          Main application
  */
 
+
 void main(void)
 {
+    
     // Initialize the device
     SYSTEM_Initialize();
     
@@ -148,7 +149,8 @@ void main(void)
 //    TRISAbits.TRISA3 = 1;                                                       //Input RA3 como Entrada
 //    TRISAbits.TRISA4 = 1;                                                       //Input RA3 como Entrada
     
-    Rele1 = 1;
+//    Input_Dig_1_SetDigitalInput();
+//    
     LATA5 = 0;
     LATB0 = 0;
     LATB7 = 0;
@@ -194,7 +196,7 @@ void main(void)
     manda_AT_COMANDO("AT+CIFSR","OK","OK",5000);  //muestra la ip del modulo
     __delay_ms(2000);
     //  conecta("192.168.43.80");
-    conecta("192.168.1.14");
+    conecta("192.168.1.16");
     
 
     while (1)
@@ -220,17 +222,18 @@ void main(void)
 //        modbus_write_holding_varios(0,buff_tx,2);// manda desde la direccion cero dos datos
 
          //manda hasta 16 coils o datos digitales
-//        digit1 =! InputDig1;
-//        digit2 =! InputDig2;
+        if (Input_Dig_1_GetValue() == 1) digit1 =! digit1;
+        if (Input_Dig_2_GetValue() == 1) digit2 =! digit2;
+        
 //
-        modbus_write_coilsdigital(0,digital_out);  //  saca desde la direccion cero las salidas digiles  permite 15
+        modbus_write_coilsdigital(0,digital_out.byte);  //  saca desde la direccion cero las salidas digiles  permite 15
         
         //manda dato a un registro holding
         modbus_write_holding(0,100); //manda a la direccion cero el dato 100
         modbus_write_holding(1,50); //manda a la direccion 1 el dato 50
             
-//        __delay_ms(80);
-//        led1 =~ led1; 
+        __delay_ms(80);
+        LED_Toggle(); 
     }
 }
 /**

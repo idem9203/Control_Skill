@@ -52,8 +52,8 @@ void Uart1_write_text_const(const char *info)
 char tiempo(unsigned int milis, char cap[30], char cap1[30])
 {
     unsigned int cont1;
-    estado_rec=normal;
-    trama_cont=0;
+    estado_rec = normal;
+    trama_cont = 0;
     memset(modbus_rx,0,50);// LIMPIA LA TRAMA
     PIR1bits.RC1IF = 0;
     //BORRA ERRORES DE RECEPCION
@@ -63,19 +63,19 @@ char tiempo(unsigned int milis, char cap[30], char cap1[30])
     __delay_ms(50);
  //  Delay_ms(1);
 
-    for (cont1=1;cont1<=milis;cont1++)
+    for (cont1 = 1; cont1 <= milis; cont1++)
      {
     __delay_ms(1);
 
           if (strstr(modbus_rx,cap))
           {
-           RCIE=0; // deshabilita la interrpcion
+           RCIE = 0; // deshabilita la interrpcion
            __delay_ms(10);
            return(1);
           }
           else  if (strstr(modbus_rx,cap1) )
           {
-         RCIE=0; // deshabilita la interrpcion
+         RCIE = 0; // deshabilita la interrpcion
           __delay_ms(10);
           return(2);
           }
@@ -205,7 +205,7 @@ void esp82666_interrupcion_1()
                  
                  
      case esp_final:
-              led1=!led1;
+              LED_Toggle();
                  modbus_rx[trama_cont]=dato_rx;
                  trama_cont++;
                      if (trama_cont>=rec_son)
@@ -215,7 +215,7 @@ void esp82666_interrupcion_1()
                     trama_cont=0;
                     estado_rec=normal; //regresa al estado inical
                     flag_modbus = 1;
-                    led2 = 1;
+                    RELE_1_SetHigh();;
                     PIE1bits.RC1IE = 0;
 
                     }
@@ -236,7 +236,7 @@ char manda_AT_COMANDO(char *coman, char cap[30], char cap1[30],unsigned int reta
 {
 
   EUSART1_Write_string(coman);//manda el comando
-  Uart1_write_text_const("\r\n"); // manda final de linea
+  EUSART1_Write_string("\r\n"); // manda final de linea
   return (tiempo(retardo,cap,cap1));
   }
 

@@ -8,7 +8,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "53
 [p x LS48MHZ=SYS48X8 ]
 "56
-[p x FOSC=HSM ]
+[p x FOSC=HSH ]
 "57
 [p x PCLKEN=ON ]
 "58

@@ -7894,8 +7894,8 @@ while(*info) EUSART1_Write(*info++);
 char tiempo(unsigned int milis, char cap[30], char cap1[30])
 {
 unsigned int cont1;
-estado_rec=normal;
-trama_cont=0;
+estado_rec = normal;
+trama_cont = 0;
 memset(modbus_rx,0,50);
 PIR1bits.RC1IF = 0;
 
@@ -7905,19 +7905,19 @@ PIE1bits.RC1IE = 1;
 _delay((unsigned long)((50)*(48000000/4000.0)));
 
 
-for (cont1=1;cont1<=milis;cont1++)
+for (cont1 = 1; cont1 <= milis; cont1++)
 {
 _delay((unsigned long)((1)*(48000000/4000.0)));
 
 if (strstr(modbus_rx,cap))
 {
-RCIE=0;
+RCIE = 0;
 _delay((unsigned long)((10)*(48000000/4000.0)));
 return(1);
 }
 else if (strstr(modbus_rx,cap1) )
 {
-RCIE=0;
+RCIE = 0;
 _delay((unsigned long)((10)*(48000000/4000.0)));
 return(2);
 }
@@ -8047,7 +8047,7 @@ break ;
 
 
 case esp_final:
-led1=!led1;
+do { LATBbits.LATB7 = ~LATBbits.LATB7; } while(0);
 modbus_rx[trama_cont]=dato_rx;
 trama_cont++;
 if (trama_cont>=rec_son)
@@ -8057,7 +8057,7 @@ if (trama_cont>=rec_son)
 trama_cont=0;
 estado_rec=normal;
 flag_modbus = 1;
-led2 = 1;
+do { LATAbits.LATA5 = 1; } while(0);;
 PIE1bits.RC1IE = 0;
 
 }
@@ -8078,7 +8078,7 @@ char manda_AT_COMANDO(char *coman, char cap[30], char cap1[30],unsigned int reta
 {
 
 EUSART1_Write_string(coman);
-Uart1_write_text_const("\r\n");
+EUSART1_Write_string("\r\n");
 return (tiempo(retardo,cap,cap1));
 }
 

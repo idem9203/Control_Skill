@@ -5379,7 +5379,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "103
 [v _cuent1 `uc ~T0 @X0 1 a ]
 [; ;Modbus_TCP.c: 103: unsigned char cuent1;
-[; ;Modbus_TCP.c: 104: tamano=cuantos;
+[; ;Modbus_TCP.c: 104: tamano = cuantos;
 "104
 [e = _tamano _cuantos ]
 [; ;Modbus_TCP.c: 105: modbus_tx[0] = 0;

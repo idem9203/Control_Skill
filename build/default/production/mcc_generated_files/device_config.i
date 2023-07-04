@@ -9,7 +9,7 @@
 #pragma config LS48MHZ = SYS48X8
 
 
-#pragma config FOSC = HSM
+#pragma config FOSC = HSH
 #pragma config PCLKEN = ON
 #pragma config FCMEN = OFF
 #pragma config IESO = OFF

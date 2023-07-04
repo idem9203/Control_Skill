@@ -1,4 +1,10 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"75 main.c
+[s S611 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S611 . b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 b10 b11 b12 b13 b14 b15 ]
+"72
+[u S610 `ui 1 `S611 1 ]
+[n S610 . byte . ]
 "14765 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
 [v _RCIF `Vb ~T0 @X0 0 e@31989 ]
 "18 Librerias/esp8266.h
@@ -50,10 +56,41 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p i __delay ]
 "24 Librerias/esp8266.h
 [v _conecta `(uc ~T0 @X0 0 ef1`*uc ]
+"2801 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
+[s S120 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S120 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"2811
+[s S121 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S121 . AN0 AN1 AN2 AN3 T0CKI AN4 OSC2 ]
+"2820
+[s S122 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S122 . . VREFM VREFP . LVDIN ]
+"2827
+[s S123 :5 `uc 1 :1 `uc 1 ]
+[n S123 . . HLVDIN ]
+"2831
+[s S124 :1 `uc 1 :6 `uc 1 :1 `uc 1 ]
+[n S124 . ULPWUIN . RJPU ]
+"2800
+[u S119 `S120 1 `S121 1 `S122 1 `S123 1 `S124 1 ]
+[n S119 . . . . . . ]
+"2837
+[v _PORTAbits `VS119 ~T0 @X0 0 e@3968 ]
 "21 Librerias/Modbus_TCP.h
 [v _modbus_write_coilsdigital `(v ~T0 @X0 0 ef2`ui`ui ]
 "19
 [v _modbus_write_holding `(v ~T0 @X0 0 ef2`ui`ui ]
+"3590 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
+[s S152 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S152 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"3600
+[s S153 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S153 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
+"3589
+[u S151 `S152 1 `S153 1 ]
+[n S151 . . . ]
+"3611
+[v _LATBbits `VS151 ~T0 @X0 0 e@3978 ]
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -5251,49 +5288,66 @@ Version 3.2 HI-TECH Software Intermediate Code
 "69 main.c
 [v _buff_tx `ui ~T0 @X0 -> 5 `i e ]
 [; ;main.c: 69: unsigned int buff_tx[5];
-"96
-[v _digital_out `ui ~T0 @X0 1 e ]
-[i _digital_out
--> -> 0 `i `ui
-]
-[; ;main.c: 96: unsigned int digital_out = 0;
-"113
+"93
+[v _digital_out `S610 ~T0 @X0 1 e ]
+[; ;main.c: 72: union {
+[; ;main.c: 73: unsigned int byte;
+[; ;main.c: 75: struct {
+[; ;main.c: 76: unsigned b0:1;
+[; ;main.c: 77: unsigned b1:1;
+[; ;main.c: 78: unsigned b2:1;
+[; ;main.c: 79: unsigned b3:1;
+[; ;main.c: 80: unsigned b4:1;
+[; ;main.c: 81: unsigned b5:1;
+[; ;main.c: 82: unsigned b6:1;
+[; ;main.c: 83: unsigned b7:1;
+[; ;main.c: 84: unsigned b8:1;
+[; ;main.c: 85: unsigned b9:1;
+[; ;main.c: 86: unsigned b10:1;
+[; ;main.c: 87: unsigned b11:1;
+[; ;main.c: 88: unsigned b12:1;
+[; ;main.c: 89: unsigned b13:1;
+[; ;main.c: 90: unsigned b14:1;
+[; ;main.c: 91: unsigned b15:1;
+[; ;main.c: 92: };
+[; ;main.c: 93: }digital_out;
+"112
 [v _codigo `ui ~T0 @X0 1 e ]
-[; ;main.c: 113: unsigned int codigo;
-"115
+[; ;main.c: 112: unsigned int codigo;
+"114
 [v _val1 `f ~T0 @X0 1 e ]
 [v _val2 `f ~T0 @X0 1 e ]
-[; ;main.c: 115: float val1, val2;
-"116
+[; ;main.c: 114: float val1, val2;
+"115
 [v _lectu1 `ui ~T0 @X0 1 e ]
 [v _lectu2 `ui ~T0 @X0 1 e ]
-[; ;main.c: 116: unsigned int lectu1,lectu2;
+[; ;main.c: 115: unsigned int lectu1,lectu2;
 [v $root$_INTERRUPT_InterruptManager `(v ~T0 @X0 0 e ]
-[v F4838 `(v ~T0 @X0 1 tf ]
+[v F4858 `(v ~T0 @X0 1 tf ]
+"123
+[v _INTERRUPT_InterruptManager `IF4858 ~T0 @X0 1 e ]
 "124
-[v _INTERRUPT_InterruptManager `IF4838 ~T0 @X0 1 e ]
-"125
 {
-[; ;main.c: 124: void interrupt INTERRUPT_InterruptManager (void)
-[; ;main.c: 125: {
+[; ;main.c: 123: void interrupt INTERRUPT_InterruptManager (void)
+[; ;main.c: 124: {
 [e :U _INTERRUPT_InterruptManager ]
 [f ]
-[; ;main.c: 126: if (RCIF == 1)
+[; ;main.c: 125: if (RCIF == 1)
+"125
+[e $ ! == -> _RCIF `i -> 1 `i 613  ]
+[; ;main.c: 126: {
 "126
-[e $ ! == -> _RCIF `i -> 1 `i 611  ]
-[; ;main.c: 127: {
-"127
 {
-[; ;main.c: 128: esp82666_interrupcion_1();
-"128
+[; ;main.c: 127: esp82666_interrupcion_1();
+"127
 [e ( _esp82666_interrupcion_1 ..  ]
-"129
+"128
 }
-[e :U 611 ]
+[e :U 613 ]
+[; ;main.c: 128: }
 [; ;main.c: 129: }
-[; ;main.c: 130: }
-"130
-[e :UE 610 ]
+"129
+[e :UE 612 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
 "137
@@ -5304,76 +5358,93 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 138: {
 [e :U _main ]
 [f ]
-[; ;main.c: 140: SYSTEM_Initialize();
-"140
+[; ;main.c: 141: SYSTEM_Initialize();
+"141
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 151: LATA5 = 1;
-"151
-[e = _LATA5 -> -> 1 `i `b ]
-[; ;main.c: 152: LATA5 = 0;
-"152
-[e = _LATA5 -> -> 0 `i `b ]
-[; ;main.c: 153: LATB0 = 0;
-"153
-[e = _LATB0 -> -> 0 `i `b ]
-[; ;main.c: 154: LATB7 = 0;
+[; ;main.c: 154: LATA5 = 0;
 "154
+[e = _LATA5 -> -> 0 `i `b ]
+[; ;main.c: 155: LATB0 = 0;
+"155
+[e = _LATB0 -> -> 0 `i `b ]
+[; ;main.c: 156: LATB7 = 0;
+"156
 [e = _LATB7 -> -> 0 `i `b ]
-[; ;main.c: 181: PIR1bits.RC1IF = 0;
-"181
-[e = . . _PIR1bits 1 3 -> -> 0 `i `uc ]
-[; ;main.c: 182: PIE1bits.RC1IE = 1;
-"182
-[e = . . _PIE1bits 1 3 -> -> 1 `i `uc ]
-[; ;main.c: 183: GIE = 1;
+[; ;main.c: 183: PIR1bits.RC1IF = 0;
 "183
+[e = . . _PIR1bits 1 3 -> -> 0 `i `uc ]
+[; ;main.c: 184: PIE1bits.RC1IE = 1;
+"184
+[e = . . _PIE1bits 1 3 -> -> 1 `i `uc ]
+[; ;main.c: 185: GIE = 1;
+"185
 [e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 188: manda_AT_COMANDO("ATE0","OK", "ERROR", 500);
-"188
+[; ;main.c: 190: manda_AT_COMANDO("ATE0","OK", "ERROR", 500);
+"190
 [e ( _manda_AT_COMANDO (4 , , , -> :s 1C `*uc -> :s 2C `*uc -> :s 3C `*uc -> -> 500 `i `ui ]
-[; ;main.c: 189: manda_AT_COMANDO("AT+CWMODE=1","OK", "no change", 1000);
-"189
-[e ( _manda_AT_COMANDO (4 , , , -> :s 4C `*uc -> :s 5C `*uc -> :s 6C `*uc -> -> 1000 `i `ui ]
-[; ;main.c: 191: manda_AT_COMANDO("AT+CWJAP=\"TIGO-4EA0\",\"2NB112100448\"","OK","OK",10000);
+[; ;main.c: 191: manda_AT_COMANDO("AT+CWMODE=1","OK", "no change", 1000);
 "191
-[e ( _manda_AT_COMANDO (4 , , , -> :s 7C `*uc -> :s 8C `*uc -> :s 9C `*uc -> -> 10000 `i `ui ]
-[; ;main.c: 193: manda_AT_COMANDO("AT+CIPMUX=1","OK","OK",3000);
+[e ( _manda_AT_COMANDO (4 , , , -> :s 4C `*uc -> :s 5C `*uc -> :s 6C `*uc -> -> 1000 `i `ui ]
+[; ;main.c: 193: manda_AT_COMANDO("AT+CWJAP=\"TIGO-4EA0\",\"2NB112100448\"","OK","OK",10000);
 "193
-[e ( _manda_AT_COMANDO (4 , , , -> :s 10C `*uc -> :s 11C `*uc -> :s 12C `*uc -> -> 3000 `i `ui ]
-[; ;main.c: 194: manda_AT_COMANDO("AT+CIFSR","OK","OK",5000);
-"194
-[e ( _manda_AT_COMANDO (4 , , , -> :s 13C `*uc -> :s 14C `*uc -> :s 15C `*uc -> -> 5000 `i `ui ]
-[; ;main.c: 195: _delay((unsigned long)((2000)*(48000000/4000.0)));
+[e ( _manda_AT_COMANDO (4 , , , -> :s 7C `*uc -> :s 8C `*uc -> :s 9C `*uc -> -> 10000 `i `ui ]
+[; ;main.c: 195: manda_AT_COMANDO("AT+CIPMUX=1","OK","OK",3000);
 "195
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;main.c: 197: conecta("192.168.1.14");
+[e ( _manda_AT_COMANDO (4 , , , -> :s 10C `*uc -> :s 11C `*uc -> :s 12C `*uc -> -> 3000 `i `ui ]
+[; ;main.c: 196: manda_AT_COMANDO("AT+CIFSR","OK","OK",5000);
+"196
+[e ( _manda_AT_COMANDO (4 , , , -> :s 13C `*uc -> :s 14C `*uc -> :s 15C `*uc -> -> 5000 `i `ui ]
+[; ;main.c: 197: _delay((unsigned long)((2000)*(48000000/4000.0)));
 "197
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 199: conecta("192.168.1.16");
+"199
 [e ( _conecta (1 -> :s 16C `*uc ]
-[; ;main.c: 200: while (1)
-"200
-[e :U 614 ]
-[; ;main.c: 201: {
-"201
+[; ;main.c: 202: while (1)
+"202
+[e :U 616 ]
+[; ;main.c: 203: {
+"203
 {
-[; ;main.c: 226: modbus_write_coilsdigital(0,digital_out);
+[; ;main.c: 225: if (PORTAbits.RA3 == 1) digital_out.b0 =! digital_out.b0;
+"225
+[e $ ! == -> . . _PORTAbits 0 3 `i -> 1 `i 618  ]
+[e = . . _digital_out 1 0 -> -> ! != -> . . _digital_out 1 0 `i -> -> -> 0 `i `uc `i `i `uc ]
+[e :U 618 ]
+[; ;main.c: 226: if (PORTAbits.RA4 == 1) digital_out.b1 =! digital_out.b1;
 "226
-[e ( _modbus_write_coilsdigital (2 , -> -> 0 `i `ui _digital_out ]
-[; ;main.c: 229: modbus_write_holding(0,100);
+[e $ ! == -> . . _PORTAbits 0 4 `i -> 1 `i 619  ]
+[e = . . _digital_out 1 1 -> -> ! != -> . . _digital_out 1 1 `i -> -> -> 0 `i `uc `i `i `uc ]
+[e :U 619 ]
+[; ;main.c: 229: modbus_write_coilsdigital(0,digital_out.byte);
 "229
+[e ( _modbus_write_coilsdigital (2 , -> -> 0 `i `ui . _digital_out 0 ]
+[; ;main.c: 232: modbus_write_holding(0,100);
+"232
 [e ( _modbus_write_holding (2 , -> -> 0 `i `ui -> -> 100 `i `ui ]
-[; ;main.c: 230: modbus_write_holding(1,50);
-"230
+[; ;main.c: 233: modbus_write_holding(1,50);
+"233
 [e ( _modbus_write_holding (2 , -> -> 1 `i `ui -> -> 50 `i `ui ]
-"234
-}
-[e :U 613 ]
-"200
-[e $U 614  ]
-[e :U 615 ]
-[; ;main.c: 234: }
-[; ;main.c: 235: }
+[; ;main.c: 235: _delay((unsigned long)((80)*(48000000/4000.0)));
 "235
-[e :UE 612 ]
+[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 236: do { LATBbits.LATB7 = ~LATBbits.LATB7; } while(0);
+"236
+[e :U 622 ]
+{
+[e = . . _LATBbits 0 7 -> ~ -> . . _LATBbits 0 7 `i `uc ]
+}
+[e :U 621 ]
+"237
+}
+[e :U 615 ]
+"202
+[e $U 616  ]
+[e :U 617 ]
+[; ;main.c: 237: }
+[; ;main.c: 238: }
+"238
+[e :UE 614 ]
 }
 [a 6C 110 111 32 99 104 97 110 103 101 0 ]
 [a 13C 65 84 43 67 73 70 83 82 0 ]
@@ -5386,7 +5457,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 12C 79 75 0 ]
 [a 14C 79 75 0 ]
 [a 15C 79 75 0 ]
-[a 16C 49 57 50 46 49 54 56 46 49 46 49 52 0 ]
+[a 16C 49 57 50 46 49 54 56 46 49 46 49 54 0 ]
 [a 10C 65 84 43 67 73 80 77 85 88 61 49 0 ]
 [a 4C 65 84 43 67 87 77 79 68 69 61 49 0 ]
 [a 1C 65 84 69 48 0 ]

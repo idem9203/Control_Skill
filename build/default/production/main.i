@@ -7964,16 +7964,37 @@ extern unsigned char flag_modbus;
 
 unsigned int buff_tx[5];
 
-# 96
-unsigned int digital_out = 0;
 
-# 113
+union {
+unsigned int byte;
+
+struct {
+unsigned b0:1;
+unsigned b1:1;
+unsigned b2:1;
+unsigned b3:1;
+unsigned b4:1;
+unsigned b5:1;
+unsigned b6:1;
+unsigned b7:1;
+unsigned b8:1;
+unsigned b9:1;
+unsigned b10:1;
+unsigned b11:1;
+unsigned b12:1;
+unsigned b13:1;
+unsigned b14:1;
+unsigned b15:1;
+};
+}digital_out;
+
+# 112
 unsigned int codigo;
 
 float val1, val2;
 unsigned int lectu1,lectu2;
 
-# 124
+# 123
 void interrupt INTERRUPT_InterruptManager (void)
 {
 if (RCIF == 1)
@@ -7986,15 +8007,15 @@ esp82666_interrupcion_1();
 void main(void)
 {
 
+
 SYSTEM_Initialize();
 
-# 151
-LATA5 = 1;
+# 154
 LATA5 = 0;
 LATB0 = 0;
 LATB7 = 0;
 
-# 181
+# 183
 PIR1bits.RC1IF = 0;
 PIE1bits.RC1IE = 1;
 GIE = 1;
@@ -8011,21 +8032,25 @@ manda_AT_COMANDO("AT+CIPMUX=1","OK","OK",3000);
 manda_AT_COMANDO("AT+CIFSR","OK","OK",5000);
 _delay((unsigned long)((2000)*(48000000/4000.0)));
 
-conecta("192.168.1.14");
+conecta("192.168.1.16");
 
 
 while (1)
 {
 
-# 226
-modbus_write_coilsdigital(0,digital_out);
+# 225
+if (PORTAbits.RA3 == 1) digital_out.b0 =! digital_out.b0;
+if (PORTAbits.RA4 == 1) digital_out.b1 =! digital_out.b1;
+
+
+modbus_write_coilsdigital(0,digital_out.byte);
 
 
 modbus_write_holding(0,100);
 modbus_write_holding(1,50);
 
-
-
+_delay((unsigned long)((80)*(48000000/4000.0)));
+do { LATBbits.LATB7 = ~LATBbits.LATB7; } while(0);
 }
 }
 

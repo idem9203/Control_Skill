@@ -53,7 +53,7 @@
 #pragma config LS48MHZ = SYS48X8    // Low Speed USB mode with 48 MHz system clock->System clock at 48 MHz, USB clock divider is set to 8
 
 // CONFIG1H
-#pragma config FOSC = HSM    // Oscillator Selection->HS oscillator, medium power 4MHz to 16MHz
+#pragma config FOSC = HSH    // Oscillator Selection->HS oscillator, high power 16MHz to 25MHz
 #pragma config PCLKEN = ON    // Primary Oscillator Shutdown->Primary oscillator enabled
 #pragma config FCMEN = OFF    // Fail-Safe Clock Monitor->Fail-Safe Clock Monitor disabled
 #pragma config IESO = OFF    // Internal/External Oscillator Switchover->Oscillator Switchover mode disabled
