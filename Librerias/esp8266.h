@@ -22,4 +22,5 @@ void manda_esp8266_const(const char *info); // manda un string cosntante
 void manda_esp8266(char *info);    // manda un string de una variable
 void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
 unsigned char conecta(char *ip_dir);// dice si se conecta al servidor
+unsigned char conecta_rapido(char *ip_dir);
 

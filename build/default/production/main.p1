@@ -1,8 +1,8 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"75 main.c
+"78 main.c
 [s S611 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S611 . b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 b10 b11 b12 b13 b14 b15 ]
-"72
+"75
 [u S610 `ui 1 `S611 1 ]
 [n S610 . byte . ]
 "14765 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
@@ -80,17 +80,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _modbus_write_coilsdigital `(v ~T0 @X0 0 ef2`ui`ui ]
 "19
 [v _modbus_write_holding `(v ~T0 @X0 0 ef2`ui`ui ]
-"3590 C:/Users/TEOREMAIEE/.mchp_packs/Microchip/PIC18F-K_DFP/1.9.255/xc8\pic\include\proc\pic18f25k50.h
-[s S152 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S152 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"3600
-[s S153 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S153 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
-"3589
-[u S151 `S152 1 `S153 1 ]
-[n S151 . . . ]
-"3611
-[v _LATBbits `VS151 ~T0 @X0 0 e@3978 ]
+"25 Librerias/esp8266.h
+[v _conecta_rapido `(uc ~T0 @X0 0 ef1`*uc ]
 [; ;xc8\pic\include\xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8\pic\include\xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -5283,167 +5274,219 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;esp8266.h: 22: void manda_esp8266(char *info);
 [; ;esp8266.h: 23: void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
 [; ;esp8266.h: 24: unsigned char conecta(char *ip_dir);
-[; ;main.c: 65: extern unsigned int rec_son;
-[; ;main.c: 66: extern unsigned char flag_modbus;
-"69 main.c
+[; ;esp8266.h: 25: unsigned char conecta_rapido(char *ip_dir);
+"63 main.c
+[v _contador `i ~T0 @X0 1 e ]
+[i _contador
+-> 0 `i
+]
+[; ;main.c: 63: int contador = 0;
+"64
+[v _contador2 `i ~T0 @X0 1 e ]
+[i _contador2
+-> 0 `i
+]
+[; ;main.c: 64: int contador2 = 0;
+"65
+[v _contador_continuo `i ~T0 @X0 1 e ]
+[i _contador_continuo
+-> 0 `i
+]
+[; ;main.c: 65: int contador_continuo = 0;
+[; ;main.c: 68: extern unsigned int rec_son;
+[; ;main.c: 69: extern unsigned char flag_modbus;
+"72
 [v _buff_tx `ui ~T0 @X0 -> 5 `i e ]
-[; ;main.c: 69: unsigned int buff_tx[5];
-"93
+[; ;main.c: 72: unsigned int buff_tx[5];
+"96
 [v _digital_out `S610 ~T0 @X0 1 e ]
-[; ;main.c: 72: union {
-[; ;main.c: 73: unsigned int byte;
-[; ;main.c: 75: struct {
-[; ;main.c: 76: unsigned b0:1;
-[; ;main.c: 77: unsigned b1:1;
-[; ;main.c: 78: unsigned b2:1;
-[; ;main.c: 79: unsigned b3:1;
-[; ;main.c: 80: unsigned b4:1;
-[; ;main.c: 81: unsigned b5:1;
-[; ;main.c: 82: unsigned b6:1;
-[; ;main.c: 83: unsigned b7:1;
-[; ;main.c: 84: unsigned b8:1;
-[; ;main.c: 85: unsigned b9:1;
-[; ;main.c: 86: unsigned b10:1;
-[; ;main.c: 87: unsigned b11:1;
-[; ;main.c: 88: unsigned b12:1;
-[; ;main.c: 89: unsigned b13:1;
-[; ;main.c: 90: unsigned b14:1;
-[; ;main.c: 91: unsigned b15:1;
-[; ;main.c: 92: };
-[; ;main.c: 93: }digital_out;
-"112
+[; ;main.c: 75: union {
+[; ;main.c: 76: unsigned int byte;
+[; ;main.c: 78: struct {
+[; ;main.c: 79: unsigned b0:1;
+[; ;main.c: 80: unsigned b1:1;
+[; ;main.c: 81: unsigned b2:1;
+[; ;main.c: 82: unsigned b3:1;
+[; ;main.c: 83: unsigned b4:1;
+[; ;main.c: 84: unsigned b5:1;
+[; ;main.c: 85: unsigned b6:1;
+[; ;main.c: 86: unsigned b7:1;
+[; ;main.c: 87: unsigned b8:1;
+[; ;main.c: 88: unsigned b9:1;
+[; ;main.c: 89: unsigned b10:1;
+[; ;main.c: 90: unsigned b11:1;
+[; ;main.c: 91: unsigned b12:1;
+[; ;main.c: 92: unsigned b13:1;
+[; ;main.c: 93: unsigned b14:1;
+[; ;main.c: 94: unsigned b15:1;
+[; ;main.c: 95: };
+[; ;main.c: 96: }digital_out;
+"122
 [v _codigo `ui ~T0 @X0 1 e ]
-[; ;main.c: 112: unsigned int codigo;
-"114
+[; ;main.c: 122: unsigned int codigo;
+"124
 [v _val1 `f ~T0 @X0 1 e ]
 [v _val2 `f ~T0 @X0 1 e ]
-[; ;main.c: 114: float val1, val2;
-"115
+[; ;main.c: 124: float val1, val2;
+"125
 [v _lectu1 `ui ~T0 @X0 1 e ]
 [v _lectu2 `ui ~T0 @X0 1 e ]
-[; ;main.c: 115: unsigned int lectu1,lectu2;
+[; ;main.c: 125: unsigned int lectu1,lectu2;
 [v $root$_INTERRUPT_InterruptManager `(v ~T0 @X0 0 e ]
-[v F4858 `(v ~T0 @X0 1 tf ]
-"123
-[v _INTERRUPT_InterruptManager `IF4858 ~T0 @X0 1 e ]
-"124
+[v F4863 `(v ~T0 @X0 1 tf ]
+"133
+[v _INTERRUPT_InterruptManager `IF4863 ~T0 @X0 1 e ]
+"134
 {
-[; ;main.c: 123: void interrupt INTERRUPT_InterruptManager (void)
-[; ;main.c: 124: {
+[; ;main.c: 133: void interrupt INTERRUPT_InterruptManager (void)
+[; ;main.c: 134: {
 [e :U _INTERRUPT_InterruptManager ]
 [f ]
-[; ;main.c: 125: if (RCIF == 1)
-"125
+[; ;main.c: 135: if (RCIF == 1)
+"135
 [e $ ! == -> _RCIF `i -> 1 `i 613  ]
-[; ;main.c: 126: {
-"126
+[; ;main.c: 136: {
+"136
 {
-[; ;main.c: 127: esp82666_interrupcion_1();
-"127
+[; ;main.c: 137: esp82666_interrupcion_1();
+"137
 [e ( _esp82666_interrupcion_1 ..  ]
-"128
+"138
 }
 [e :U 613 ]
-[; ;main.c: 128: }
-[; ;main.c: 129: }
-"129
+[; ;main.c: 138: }
+[; ;main.c: 139: }
+"139
 [e :UE 612 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"137
+"147
 [v _main `(v ~T0 @X0 1 ef ]
-"138
+"148
 {
-[; ;main.c: 137: void main(void)
-[; ;main.c: 138: {
+[; ;main.c: 147: void main(void)
+[; ;main.c: 148: {
 [e :U _main ]
 [f ]
-[; ;main.c: 141: SYSTEM_Initialize();
-"141
+[; ;main.c: 151: SYSTEM_Initialize();
+"151
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 154: LATA5 = 0;
-"154
+[; ;main.c: 164: LATA5 = 0;
+"164
 [e = _LATA5 -> -> 0 `i `b ]
-[; ;main.c: 155: LATB0 = 0;
-"155
+[; ;main.c: 165: LATB0 = 0;
+"165
 [e = _LATB0 -> -> 0 `i `b ]
-[; ;main.c: 156: LATB7 = 0;
-"156
+[; ;main.c: 166: LATB7 = 0;
+"166
 [e = _LATB7 -> -> 0 `i `b ]
-[; ;main.c: 183: PIR1bits.RC1IF = 0;
-"183
-[e = . . _PIR1bits 1 3 -> -> 0 `i `uc ]
-[; ;main.c: 184: PIE1bits.RC1IE = 1;
-"184
-[e = . . _PIE1bits 1 3 -> -> 1 `i `uc ]
-[; ;main.c: 185: GIE = 1;
-"185
-[e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 190: manda_AT_COMANDO("ATE0","OK", "ERROR", 500);
-"190
-[e ( _manda_AT_COMANDO (4 , , , -> :s 1C `*uc -> :s 2C `*uc -> :s 3C `*uc -> -> 500 `i `ui ]
-[; ;main.c: 191: manda_AT_COMANDO("AT+CWMODE=1","OK", "no change", 1000);
-"191
-[e ( _manda_AT_COMANDO (4 , , , -> :s 4C `*uc -> :s 5C `*uc -> :s 6C `*uc -> -> 1000 `i `ui ]
-[; ;main.c: 193: manda_AT_COMANDO("AT+CWJAP=\"TIGO-4EA0\",\"2NB112100448\"","OK","OK",10000);
+[; ;main.c: 193: PIR1bits.RC1IF = 0;
 "193
-[e ( _manda_AT_COMANDO (4 , , , -> :s 7C `*uc -> :s 8C `*uc -> :s 9C `*uc -> -> 10000 `i `ui ]
-[; ;main.c: 195: manda_AT_COMANDO("AT+CIPMUX=1","OK","OK",3000);
+[e = . . _PIR1bits 1 3 -> -> 0 `i `uc ]
+[; ;main.c: 194: PIE1bits.RC1IE = 1;
+"194
+[e = . . _PIE1bits 1 3 -> -> 1 `i `uc ]
+[; ;main.c: 195: GIE = 1;
 "195
-[e ( _manda_AT_COMANDO (4 , , , -> :s 10C `*uc -> :s 11C `*uc -> :s 12C `*uc -> -> 3000 `i `ui ]
-[; ;main.c: 196: manda_AT_COMANDO("AT+CIFSR","OK","OK",5000);
-"196
-[e ( _manda_AT_COMANDO (4 , , , -> :s 13C `*uc -> :s 14C `*uc -> :s 15C `*uc -> -> 5000 `i `ui ]
-[; ;main.c: 197: _delay((unsigned long)((2000)*(48000000/4000.0)));
-"197
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;main.c: 199: conecta("192.168.1.16");
-"199
-[e ( _conecta (1 -> :s 16C `*uc ]
-[; ;main.c: 202: while (1)
-"202
-[e :U 616 ]
-[; ;main.c: 203: {
+[e = _GIE -> -> 1 `i `b ]
+[; ;main.c: 200: manda_AT_COMANDO("ATE0","OK", "ERROR", 500);
+"200
+[e ( _manda_AT_COMANDO (4 , , , -> :s 1C `*uc -> :s 2C `*uc -> :s 3C `*uc -> -> 500 `i `ui ]
+[; ;main.c: 201: manda_AT_COMANDO("AT+CWMODE=1","OK", "no change", 1000);
+"201
+[e ( _manda_AT_COMANDO (4 , , , -> :s 4C `*uc -> :s 5C `*uc -> :s 6C `*uc -> -> 1000 `i `ui ]
+[; ;main.c: 203: manda_AT_COMANDO("AT+CWJAP=\"TIGO-4EA0\",\"2NB112100448\"","OK","OK",10000);
 "203
+[e ( _manda_AT_COMANDO (4 , , , -> :s 7C `*uc -> :s 8C `*uc -> :s 9C `*uc -> -> 10000 `i `ui ]
+[; ;main.c: 205: manda_AT_COMANDO("AT+CIPMUX=1","OK","OK",3000);
+"205
+[e ( _manda_AT_COMANDO (4 , , , -> :s 10C `*uc -> :s 11C `*uc -> :s 12C `*uc -> -> 3000 `i `ui ]
+[; ;main.c: 206: manda_AT_COMANDO("AT+CIFSR","OK","OK",5000);
+"206
+[e ( _manda_AT_COMANDO (4 , , , -> :s 13C `*uc -> :s 14C `*uc -> :s 15C `*uc -> -> 5000 `i `ui ]
+[; ;main.c: 207: _delay((unsigned long)((2000)*(48000000/4000.0)));
+"207
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 209: conecta("192.168.1.13");
+"209
+[e ( _conecta (1 -> :s 16C `*uc ]
+[; ;main.c: 212: while (1)
+"212
+[e :U 616 ]
+[; ;main.c: 213: {
+"213
 {
-[; ;main.c: 225: if (PORTAbits.RA3 == 1) digital_out.b0 =! digital_out.b0;
-"225
+[; ;main.c: 235: if (PORTAbits.RA3 == 1) digital_out.b0 =! digital_out.b0;
+"235
 [e $ ! == -> . . _PORTAbits 0 3 `i -> 1 `i 618  ]
 [e = . . _digital_out 1 0 -> -> ! != -> . . _digital_out 1 0 `i -> -> -> 0 `i `uc `i `i `uc ]
 [e :U 618 ]
-[; ;main.c: 226: if (PORTAbits.RA4 == 1) digital_out.b1 =! digital_out.b1;
-"226
+[; ;main.c: 236: if (PORTAbits.RA4 == 1) digital_out.b1 =! digital_out.b1;
+"236
 [e $ ! == -> . . _PORTAbits 0 4 `i -> 1 `i 619  ]
 [e = . . _digital_out 1 1 -> -> ! != -> . . _digital_out 1 1 `i -> -> -> 0 `i `uc `i `i `uc ]
 [e :U 619 ]
-[; ;main.c: 229: modbus_write_coilsdigital(0,digital_out.byte);
-"229
+[; ;main.c: 239: modbus_write_coilsdigital(0,digital_out.byte);
+"239
 [e ( _modbus_write_coilsdigital (2 , -> -> 0 `i `ui . _digital_out 0 ]
-[; ;main.c: 232: modbus_write_holding(0,100);
-"232
-[e ( _modbus_write_holding (2 , -> -> 0 `i `ui -> -> 100 `i `ui ]
-[; ;main.c: 233: modbus_write_holding(1,50);
-"233
-[e ( _modbus_write_holding (2 , -> -> 1 `i `ui -> -> 50 `i `ui ]
-[; ;main.c: 235: _delay((unsigned long)((80)*(48000000/4000.0)));
-"235
-[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;main.c: 236: do { LATBbits.LATB7 = ~LATBbits.LATB7; } while(0);
-"236
-[e :U 622 ]
+[; ;main.c: 241: LATB7 = digital_out.b0;
+"241
+[e = _LATB7 -> . . _digital_out 1 0 `b ]
+[; ;main.c: 244: if (PORTAbits.RA3 == 1) contador++;
+"244
+[e $ ! == -> . . _PORTAbits 0 3 `i -> 1 `i 620  ]
+[e ++ _contador -> 1 `i ]
+[e :U 620 ]
+[; ;main.c: 246: if (contador == 10)
+"246
+[e $ ! == _contador -> 10 `i 621  ]
+[; ;main.c: 247: {
+"247
 {
-[e = . . _LATBbits 0 7 -> ~ -> . . _LATBbits 0 7 `i `uc ]
+[; ;main.c: 248: contador = 0;
+"248
+[e = _contador -> 0 `i ]
+[; ;main.c: 249: contador2++;
+"249
+[e ++ _contador2 -> 1 `i ]
+"250
 }
 [e :U 621 ]
-"237
+[; ;main.c: 250: }
+[; ;main.c: 251: modbus_write_holding(0,contador2);
+"251
+[e ( _modbus_write_holding (2 , -> -> 0 `i `ui -> _contador2 `ui ]
+[; ;main.c: 252: modbus_write_holding(1,contador_continuo);
+"252
+[e ( _modbus_write_holding (2 , -> -> 1 `i `ui -> _contador_continuo `ui ]
+[; ;main.c: 254: if (contador2 > 5)
+"254
+[e $ ! > _contador2 -> 5 `i 622  ]
+[; ;main.c: 255: {
+"255
+{
+[; ;main.c: 256: conecta_rapido("192.168.1.13");
+"256
+[e ( _conecta_rapido (1 -> :s 17C `*uc ]
+[; ;main.c: 257: contador_continuo++;
+"257
+[e ++ _contador_continuo -> 1 `i ]
+[; ;main.c: 258: contador2 = 0;
+"258
+[e = _contador2 -> 0 `i ]
+"259
+}
+[e :U 622 ]
+"263
 }
 [e :U 615 ]
-"202
+"212
 [e $U 616  ]
 [e :U 617 ]
-[; ;main.c: 237: }
-[; ;main.c: 238: }
-"238
+[; ;main.c: 259: }
+[; ;main.c: 263: }
+[; ;main.c: 264: }
+"264
 [e :UE 614 ]
 }
 [a 6C 110 111 32 99 104 97 110 103 101 0 ]
@@ -5457,7 +5500,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 12C 79 75 0 ]
 [a 14C 79 75 0 ]
 [a 15C 79 75 0 ]
-[a 16C 49 57 50 46 49 54 56 46 49 46 49 54 0 ]
+[a 16C 49 57 50 46 49 54 56 46 49 46 49 51 0 ]
+[a 17C 49 57 50 46 49 54 56 46 49 46 49 51 0 ]
 [a 10C 65 84 43 67 73 80 77 85 88 61 49 0 ]
 [a 4C 65 84 43 67 87 77 79 68 69 61 49 0 ]
 [a 1C 65 84 69 48 0 ]

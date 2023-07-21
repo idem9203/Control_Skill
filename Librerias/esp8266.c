@@ -69,15 +69,15 @@ char tiempo(unsigned int milis, char cap[30], char cap1[30])
 
           if (strstr(modbus_rx,cap))
           {
-           RCIE = 0; // deshabilita la interrpcion
-           __delay_ms(10);
-           return(1);
+            RCIE = 0; // deshabilita la interrpcion
+            __delay_ms(10);
+            return(1);
           }
           else  if (strstr(modbus_rx,cap1) )
           {
-         RCIE = 0; // deshabilita la interrpcion
-          __delay_ms(10);
-          return(2);
+            RCIE = 0; // deshabilita la interrpcion
+            __delay_ms(10);
+            return(2);
           }
     }
 
@@ -269,9 +269,13 @@ unsigned int largo;
 void manda_esp8266(char *info)
 {
     unsigned int largo;
-        largo=strlen(info); //calcula el largo de la cadena a enviar
-        sprintf(captu1,"AT+CIPSEND=4,%d\r\n",largo); //es el largo de la trama  +2 por enter y fin de  linea
-        EUSART1_Write_string(captu1);     //manda envia solo constantes
+        Uart1_write_text_const("AT+CIPSEND=");     //manda envia solo constantes
+        EUSART1_Write('4');    //manda el socket  el cual se conecto
+        EUSART1_Write(',');
+        largo=strlen(info);  //calcula el largo de la cadena a enviar
+        sprintf(captu1,"%1u",largo); //es el largo de la trama  +2 por enter y fin de  linea
+        EUSART1_Write_string(captu1); //envia el largo d ela trama
+        Uart1_write_text_const("\r\n"); // estos son los dos que se adicionaron
         __delay_ms(50); //retardo para que muestre >
         EUSART1_Write_string(info);     //manda envia solo constantes
         __delay_ms(100); //retardo para que confirme ele envio
@@ -282,16 +286,13 @@ void manda_esp8266(char *info)
 void manda_esp8266_bytes(unsigned char *info2,unsigned int largo)
 {
     unsigned char cuenta;
-
+        
         sprintf(captu1,"AT+CIPSEND=4,%d\r\n",largo); //es el largo de la trama  +2 por enter y fin de  linea
         EUSART1_Write_string(captu1);     //manda envia solo constantes
-        __delay_ms(50); //retardo antes de enviar apra que muestre >
-        for (cuenta = 0; cuenta < largo; cuenta++) 
-        {
-            unsigned char byte = *info2++;
-            EUSART1_Write(byte);  // manda los bytes deseados
-        }
-        __delay_ms(50); //retardo para que prdcesa la info,  vuelve lento el sistema
+        __delay_ms(80); //retardo antes de enviar apra que muestre >
+        for (cuenta = 0; cuenta < largo; cuenta++) EUSART1_Write(*info2++);  // manda los bytes deseados
+        __delay_ms(80); //retardo para que prdcesa la info,  vuelve lento el sistema
+//        Uart1_write_text_const("\r\n"); // estos son los dos que se adicionaron
 
 }
 
@@ -321,4 +322,26 @@ void manda_esp8266_bytes(unsigned char *info2,unsigned int largo)
 
 
 
+// analiza si se conectoa ubidots
+ unsigned char conecta_rapido(char *ip_dir)
+{
+    unsigned char tempo;
+    memset(modbus_tx,0,50);
+    sprintf(modbus_tx,"AT+CIPSTART=4,\"TCP\",\"%s\",502",ip_dir);
+    
 
+//    manda_AT_COMANDO("AT+CIPMUX=1\r\n","OK","OK",100);
+//    __delay_ms(100);
+    manda_AT_COMANDO(modbus_tx, "OK", "CONNECT", 100);
+//    tempo=manda_AT_COMANDO(modbus_tx, "OK", "CONNECT", 100);
+    __delay_ms(50);
+     
+//    if ((tempo==1) ||(tempo==2)) return(1);
+//    manda_AT_COMANDO("AT+CIPMUX=1\r\n","OK","OK",300);
+//    __delay_ms(100);
+//    tempo=manda_AT_COMANDO(modbus_tx, "OK", "Linked", 300);
+//    __delay_ms(100);
+//
+//    if ((tempo==1) ||(tempo==2)) return(1);
+//    else return(0);
+}

@@ -7956,8 +7956,14 @@ void manda_esp8266_const(const char *info);
 void manda_esp8266(char *info);
 void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
 unsigned char conecta(char *ip_dir);
+unsigned char conecta_rapido(char *ip_dir);
 
-# 65 "main.c"
+# 63 "main.c"
+int contador = 0;
+int contador2 = 0;
+int contador_continuo = 0;
+
+
 extern unsigned int rec_son;
 extern unsigned char flag_modbus;
 
@@ -7988,13 +7994,13 @@ unsigned b15:1;
 };
 }digital_out;
 
-# 112
+# 122
 unsigned int codigo;
 
 float val1, val2;
 unsigned int lectu1,lectu2;
 
-# 123
+# 133
 void interrupt INTERRUPT_InterruptManager (void)
 {
 if (RCIF == 1)
@@ -8003,19 +8009,19 @@ esp82666_interrupcion_1();
 }
 }
 
-# 137
+# 147
 void main(void)
 {
 
 
 SYSTEM_Initialize();
 
-# 154
+# 164
 LATA5 = 0;
 LATB0 = 0;
 LATB7 = 0;
 
-# 183
+# 193
 PIR1bits.RC1IF = 0;
 PIE1bits.RC1IE = 1;
 GIE = 1;
@@ -8032,25 +8038,41 @@ manda_AT_COMANDO("AT+CIPMUX=1","OK","OK",3000);
 manda_AT_COMANDO("AT+CIFSR","OK","OK",5000);
 _delay((unsigned long)((2000)*(48000000/4000.0)));
 
-conecta("192.168.1.16");
+conecta("192.168.1.13");
 
 
 while (1)
 {
 
-# 225
+# 235
 if (PORTAbits.RA3 == 1) digital_out.b0 =! digital_out.b0;
 if (PORTAbits.RA4 == 1) digital_out.b1 =! digital_out.b1;
 
 
 modbus_write_coilsdigital(0,digital_out.byte);
 
+LATB7 = digital_out.b0;
 
-modbus_write_holding(0,100);
-modbus_write_holding(1,50);
 
-_delay((unsigned long)((80)*(48000000/4000.0)));
-do { LATBbits.LATB7 = ~LATBbits.LATB7; } while(0);
+if (PORTAbits.RA3 == 1) contador++;
+
+if (contador == 10)
+{
+contador = 0;
+contador2++;
+}
+modbus_write_holding(0,contador2);
+modbus_write_holding(1,contador_continuo);
+
+if (contador2 > 5)
+{
+conecta_rapido("192.168.1.13");
+contador_continuo++;
+contador2 = 0;
+}
+
+
+
 }
 }
 

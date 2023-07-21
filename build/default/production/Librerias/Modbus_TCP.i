@@ -7834,6 +7834,7 @@ void manda_esp8266_const(const char *info);
 void manda_esp8266(char *info);
 void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
 unsigned char conecta(char *ip_dir);
+unsigned char conecta_rapido(char *ip_dir);
 
 # 11 "Librerias/Modbus_TCP.c"
 char modbus_rx[50];

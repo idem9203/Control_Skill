@@ -60,6 +60,9 @@
 #define InputDig1 PORTA.RA3
 #define InputDig2 PORTA.RA4
 
+int contador = 0;
+int contador2 = 0;
+int contador_continuo = 0;
 
 //usadas para leer datos modbus
 extern unsigned int  rec_son;
@@ -103,7 +106,14 @@ union {
 #define digit6 digital_out.b5
 #define digit7 digital_out.b6
 #define digit8 digital_out.b7
-
+#define digit9 digital_out.b8
+#define digit10 digital_out.b9
+#define digit11 digital_out.b10
+#define digit12 digital_out.b11
+#define digit13 digital_out.b12
+#define digit14 digital_out.b13
+#define digit15 digital_out.b14
+#define digit16 digital_out.b15
 
 
 
@@ -196,7 +206,7 @@ void main(void)
     manda_AT_COMANDO("AT+CIFSR","OK","OK",5000);  //muestra la ip del modulo
     __delay_ms(2000);
     //  conecta("192.168.43.80");
-    conecta("192.168.1.16");
+    conecta("192.168.1.13");
     
 
     while (1)
@@ -218,7 +228,7 @@ void main(void)
         //manda varias variabels analogas
         // carga el buffer con los datos a enviar
 //        buff_tx[0]=val1;
-//        buff_tx[1]=val2;
+//        buff_tx[1]=val2; 
 //        modbus_write_holding_varios(0,buff_tx,2);// manda desde la direccion cero dos datos
 
          //manda hasta 16 coils o datos digitales
@@ -228,12 +238,28 @@ void main(void)
 //
         modbus_write_coilsdigital(0,digital_out.byte);  //  saca desde la direccion cero las salidas digiles  permite 15
         
+        led1 = digit1;
+        
         //manda dato a un registro holding
-        modbus_write_holding(0,100); //manda a la direccion cero el dato 100
-        modbus_write_holding(1,50); //manda a la direccion 1 el dato 50
-            
-        __delay_ms(80);
-        LED_Toggle(); 
+        if (Input_Dig_1_GetValue() == 1) contador++;
+        
+        if (contador == 10)
+        {
+            contador = 0;
+            contador2++;
+        }
+        modbus_write_holding(0,contador2); //manda a la direccion cero el dato 100
+        modbus_write_holding(1,contador_continuo); //manda a la direccion 1 el dato 50
+        
+        if (contador2 > 5)
+        {
+            conecta_rapido("192.168.1.13");
+            contador_continuo++;
+            contador2 = 0;
+        }
+//            
+//        __delay_ms(80);
+//        LED_Toggle(); 
     }
 }
 /**

@@ -7850,6 +7850,7 @@ void manda_esp8266_const(const char *info);
 void manda_esp8266(char *info);
 void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
 unsigned char conecta(char *ip_dir);
+unsigned char conecta_rapido(char *ip_dir);
 
 # 13 "Librerias/esp8266.c"
 unsigned int led1;
@@ -8111,9 +8112,13 @@ _delay((unsigned long)((100)*(48000000/4000.0)));
 void manda_esp8266(char *info)
 {
 unsigned int largo;
+Uart1_write_text_const("AT+CIPSEND=");
+EUSART1_Write('4');
+EUSART1_Write(',');
 largo=strlen(info);
-sprintf(captu1,"AT+CIPSEND=4,%d\r\n",largo);
+sprintf(captu1,"%1u",largo);
 EUSART1_Write_string(captu1);
+Uart1_write_text_const("\r\n");
 _delay((unsigned long)((50)*(48000000/4000.0)));
 EUSART1_Write_string(info);
 _delay((unsigned long)((100)*(48000000/4000.0)));
@@ -8127,13 +8132,10 @@ unsigned char cuenta;
 
 sprintf(captu1,"AT+CIPSEND=4,%d\r\n",largo);
 EUSART1_Write_string(captu1);
-_delay((unsigned long)((50)*(48000000/4000.0)));
-for (cuenta = 0; cuenta < largo; cuenta++)
-{
-unsigned char byte = *info2++;
-EUSART1_Write(byte);
-}
-_delay((unsigned long)((50)*(48000000/4000.0)));
+_delay((unsigned long)((80)*(48000000/4000.0)));
+for (cuenta = 0; cuenta < largo; cuenta++) EUSART1_Write(*info2++);
+_delay((unsigned long)((80)*(48000000/4000.0)));
+
 
 }
 
@@ -8161,3 +8163,21 @@ else return(0);
 
 }
 
+
+
+
+unsigned char conecta_rapido(char *ip_dir)
+{
+unsigned char tempo;
+memset(modbus_tx,0,50);
+sprintf(modbus_tx,"AT+CIPSTART=4,\"TCP\",\"%s\",502",ip_dir);
+
+
+
+
+manda_AT_COMANDO(modbus_tx, "OK", "CONNECT", 100);
+
+_delay((unsigned long)((50)*(48000000/4000.0)));
+
+# 347
+}

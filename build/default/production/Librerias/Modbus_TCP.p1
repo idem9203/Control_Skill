@@ -5136,6 +5136,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;esp8266.h: 22: void manda_esp8266(char *info);
 [; ;esp8266.h: 23: void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
 [; ;esp8266.h: 24: unsigned char conecta(char *ip_dir);
+[; ;esp8266.h: 25: unsigned char conecta_rapido(char *ip_dir);
 "11 Librerias/Modbus_TCP.c
 [v _modbus_rx `uc ~T0 @X0 -> 50 `i e ]
 [; ;Modbus_TCP.c: 11: char modbus_rx[50];

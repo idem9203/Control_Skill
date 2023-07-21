@@ -1,7 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "25 Librerias/esp8266.c
-[c E4672 0 1 2 3 4 5 6 7 .. ]
-[n E4672 estados_ normal cap_i cap_p cap_d cap_co cap_co2 cap_largo esp_final  ]
+[c E4674 0 1 2 3 4 5 6 7 .. ]
+[n E4674 estados_ normal cap_i cap_p cap_d cap_co cap_co2 cap_largo esp_final  ]
 "342 Librerias/../Librerias/../mcc_generated_files/eusart1.h
 [v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
 "16 C:\Program Files\Microchip\xc8\v2.36\pic\include\c90\string.h
@@ -5198,6 +5198,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;esp8266.h: 22: void manda_esp8266(char *info);
 [; ;esp8266.h: 23: void manda_esp8266_bytes(unsigned char *info2,unsigned int largo);
 [; ;esp8266.h: 24: unsigned char conecta(char *ip_dir);
+[; ;esp8266.h: 25: unsigned char conecta_rapido(char *ip_dir);
 "13 Librerias/esp8266.c
 [v _led1 `ui ~T0 @X0 1 e ]
 [; ;esp8266.c: 13: unsigned int led1;
@@ -5220,7 +5221,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "25
 [v _estado_rec `uc ~T0 @X0 1 e ]
 [i _estado_rec
--> . `E4672 0 `uc
+-> . `E4674 0 `uc
 ]
 [; ;esp8266.c: 25: char estado_rec = normal;
 [; ;esp8266.c: 27: extern unsigned int tamano;
@@ -5328,7 +5329,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;esp8266.c: 54: unsigned int cont1;
 [; ;esp8266.c: 55: estado_rec = normal;
 "55
-[e = _estado_rec -> . `E4672 0 `uc ]
+[e = _estado_rec -> . `E4674 0 `uc ]
 [; ;esp8266.c: 56: trama_cont = 0;
 "56
 [e = _trama_cont -> -> 0 `i `uc ]
@@ -5479,7 +5480,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;esp8266.c: 109: estado_rec=cap_p;
 "109
-[e = _estado_rec -> . `E4672 2 `uc ]
+[e = _estado_rec -> . `E4674 2 `uc ]
 "110
 }
 [e :U 631 ]
@@ -5498,7 +5499,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _trama_cont -> -> 0 `i `uc ]
 [; ;esp8266.c: 118: estado_rec=cap_i;
 "118
-[e = _estado_rec -> . `E4672 1 `uc ]
+[e = _estado_rec -> . `E4674 1 `uc ]
 "120
 }
 [; ;esp8266.c: 120: }
@@ -5511,7 +5512,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;esp8266.c: 124: estado_rec=cap_d;
 "124
-[e = _estado_rec -> . `E4672 3 `uc ]
+[e = _estado_rec -> . `E4674 3 `uc ]
 "125
 }
 [e :U 634 ]
@@ -5533,7 +5534,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _trama_cont -> -> 0 `i `uc ]
 [; ;esp8266.c: 135: estado_rec=cap_i;
 "135
-[e = _estado_rec -> . `E4672 1 `uc ]
+[e = _estado_rec -> . `E4674 1 `uc ]
 "137
 }
 [; ;esp8266.c: 137: }
@@ -5546,7 +5547,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;esp8266.c: 141: estado_rec=cap_co;
 "141
-[e = _estado_rec -> . `E4672 4 `uc ]
+[e = _estado_rec -> . `E4674 4 `uc ]
 "142
 }
 [e :U 637 ]
@@ -5568,7 +5569,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _trama_cont -> -> 0 `i `uc ]
 [; ;esp8266.c: 151: estado_rec=cap_i;
 "151
-[e = _estado_rec -> . `E4672 1 `uc ]
+[e = _estado_rec -> . `E4674 1 `uc ]
 "153
 }
 [; ;esp8266.c: 153: }
@@ -5584,7 +5585,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _trama_cont -> -> 0 `i `uc ]
 [; ;esp8266.c: 161: estado_rec=cap_co2;
 "161
-[e = _estado_rec -> . `E4672 5 `uc ]
+[e = _estado_rec -> . `E4674 5 `uc ]
 "163
 }
 [e :U 640 ]
@@ -5603,7 +5604,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;esp8266.c: 173: estado_rec=cap_largo;
 "173
-[e = _estado_rec -> . `E4672 6 `uc ]
+[e = _estado_rec -> . `E4674 6 `uc ]
 [; ;esp8266.c: 174: trama_cont=0;
 "174
 [e = _trama_cont -> -> 0 `i `uc ]
@@ -5629,7 +5630,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _trama_cont -> -> 0 `i `uc ]
 [; ;esp8266.c: 181: estado_rec=cap_i;
 "181
-[e = _estado_rec -> . `E4672 1 `uc ]
+[e = _estado_rec -> . `E4674 1 `uc ]
 "182
 }
 [e :U 644 ]
@@ -5658,7 +5659,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _rec_son -> -> 13 `i `ui ]
 [; ;esp8266.c: 193: estado_rec=esp_final;
 "193
-[e = _estado_rec -> . `E4672 7 `uc ]
+[e = _estado_rec -> . `E4674 7 `uc ]
 "194
 }
 [; ;esp8266.c: 194: }
@@ -5684,7 +5685,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _trama_cont -> -> 0 `i `uc ]
 [; ;esp8266.c: 201: estado_rec=cap_i;
 "201
-[e = _estado_rec -> . `E4672 1 `uc ]
+[e = _estado_rec -> . `E4674 1 `uc ]
 "202
 }
 [e :U 648 ]
@@ -5723,7 +5724,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _trama_cont -> -> 0 `i `uc ]
 [; ;esp8266.c: 216: estado_rec=normal;
 "216
-[e = _estado_rec -> . `E4672 0 `uc ]
+[e = _estado_rec -> . `E4674 0 `uc ]
 [; ;esp8266.c: 217: flag_modbus = 1;
 "217
 [e = _flag_modbus -> -> 1 `i `uc ]
@@ -5750,14 +5751,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 625  ]
 "95
 [e :U 626 ]
-[e [\ _estado_rec , $ -> . `E4672 0 `uc 627
- , $ -> . `E4672 1 `uc 629
- , $ -> . `E4672 2 `uc 632
- , $ -> . `E4672 3 `uc 635
- , $ -> . `E4672 4 `uc 638
- , $ -> . `E4672 5 `uc 641
- , $ -> . `E4672 6 `uc 645
- , $ -> . `E4672 7 `uc 649
+[e [\ _estado_rec , $ -> . `E4674 0 `uc 627
+ , $ -> . `E4674 1 `uc 629
+ , $ -> . `E4674 2 `uc 632
+ , $ -> . `E4674 3 `uc 635
+ , $ -> . `E4674 4 `uc 638
+ , $ -> . `E4674 5 `uc 641
+ , $ -> . `E4674 6 `uc 645
+ , $ -> . `E4674 7 `uc 649
  625 ]
 "225
 [e :U 625 ]
@@ -5893,166 +5894,199 @@ Version 3.2 HI-TECH Software Intermediate Code
 "271
 [v _largo `ui ~T0 @X0 1 a ]
 [; ;esp8266.c: 271: unsigned int largo;
-[; ;esp8266.c: 272: largo=strlen(info);
+[; ;esp8266.c: 272: Uart1_write_text_const("AT+CIPSEND=");
 "272
-[e = _largo ( _strlen (1 -> _info `*Cuc ]
-[; ;esp8266.c: 273: sprintf(captu1,"AT+CIPSEND=4,%d\r\n",largo);
+[e ( _Uart1_write_text_const (1 :s 5C ]
+[; ;esp8266.c: 273: EUSART1_Write('4');
 "273
-[e ( _sprintf (1 , (. , &U _captu1 :s 5C _largo ]
-[; ;esp8266.c: 274: EUSART1_Write_string(captu1);
+[e ( _EUSART1_Write (1 -> -> 52 `ui `uc ]
+[; ;esp8266.c: 274: EUSART1_Write(',');
 "274
-[e ( _EUSART1_Write_string (1 -> &U _captu1 `*Cuc ]
-[; ;esp8266.c: 275: _delay((unsigned long)((50)*(48000000/4000.0)));
+[e ( _EUSART1_Write (1 -> -> 44 `ui `uc ]
+[; ;esp8266.c: 275: largo=strlen(info);
 "275
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;esp8266.c: 276: EUSART1_Write_string(info);
+[e = _largo ( _strlen (1 -> _info `*Cuc ]
+[; ;esp8266.c: 276: sprintf(captu1,"%1u",largo);
 "276
-[e ( _EUSART1_Write_string (1 -> _info `*Cuc ]
-[; ;esp8266.c: 277: _delay((unsigned long)((100)*(48000000/4000.0)));
+[e ( _sprintf (1 , (. , &U _captu1 :s 6C _largo ]
+[; ;esp8266.c: 277: EUSART1_Write_string(captu1);
 "277
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;esp8266.c: 279: }
+[e ( _EUSART1_Write_string (1 -> &U _captu1 `*Cuc ]
+[; ;esp8266.c: 278: Uart1_write_text_const("\r\n");
+"278
+[e ( _Uart1_write_text_const (1 :s 7C ]
+[; ;esp8266.c: 279: _delay((unsigned long)((50)*(48000000/4000.0)));
 "279
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 280: EUSART1_Write_string(info);
+"280
+[e ( _EUSART1_Write_string (1 -> _info `*Cuc ]
+[; ;esp8266.c: 281: _delay((unsigned long)((100)*(48000000/4000.0)));
+"281
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 283: }
+"283
 [e :UE 663 ]
 }
-"282
+"286
 [v _manda_esp8266_bytes `(v ~T0 @X0 1 ef2`*uc`ui ]
-"283
+"287
 {
-[; ;esp8266.c: 282: void manda_esp8266_bytes(unsigned char *info2,unsigned int largo)
-[; ;esp8266.c: 283: {
+[; ;esp8266.c: 286: void manda_esp8266_bytes(unsigned char *info2,unsigned int largo)
+[; ;esp8266.c: 287: {
 [e :U _manda_esp8266_bytes ]
-"282
+"286
 [v _info2 `*uc ~T0 @X0 1 r1 ]
 [v _largo `ui ~T0 @X0 1 r2 ]
-"283
-[f ]
-"284
-[v _cuenta `uc ~T0 @X0 1 a ]
-[; ;esp8266.c: 284: unsigned char cuenta;
-[; ;esp8266.c: 286: sprintf(captu1,"AT+CIPSEND=4,%d\r\n",largo);
-"286
-[e ( _sprintf (1 , (. , &U _captu1 :s 6C _largo ]
-[; ;esp8266.c: 287: EUSART1_Write_string(captu1);
 "287
-[e ( _EUSART1_Write_string (1 -> &U _captu1 `*Cuc ]
-[; ;esp8266.c: 288: _delay((unsigned long)((50)*(48000000/4000.0)));
+[f ]
 "288
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;esp8266.c: 289: for (cuenta = 0; cuenta < largo; cuenta++)
-"289
+[v _cuenta `uc ~T0 @X0 1 a ]
+[; ;esp8266.c: 288: unsigned char cuenta;
+[; ;esp8266.c: 290: sprintf(captu1,"AT+CIPSEND=4,%d\r\n",largo);
+"290
+[e ( _sprintf (1 , (. , &U _captu1 :s 8C _largo ]
+[; ;esp8266.c: 291: EUSART1_Write_string(captu1);
+"291
+[e ( _EUSART1_Write_string (1 -> &U _captu1 `*Cuc ]
+[; ;esp8266.c: 292: _delay((unsigned long)((80)*(48000000/4000.0)));
+"292
+[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 293: for (cuenta = 0; cuenta < largo; cuenta++) EUSART1_Write(*info2++);
+"293
 {
 [e = _cuenta -> -> 0 `i `uc ]
 [e $U 668  ]
-"290
 [e :U 665 ]
-[; ;esp8266.c: 290: {
-{
-"291
-[v _byte `uc ~T0 @X0 1 a ]
-[; ;esp8266.c: 291: unsigned char byte = *info2++;
-[e = _byte *U ++ _info2 * -> -> 1 `i `x -> -> # *U _info2 `i `x ]
-[; ;esp8266.c: 292: EUSART1_Write(byte);
-"292
-[e ( _EUSART1_Write (1 _byte ]
-"293
-}
-"289
+[e ( _EUSART1_Write (1 *U ++ _info2 * -> -> 1 `i `x -> -> # *U _info2 `i `x ]
 [e ++ _cuenta -> -> 1 `i `uc ]
 [e :U 668 ]
 [e $ < -> _cuenta `ui _largo 665  ]
 [e :U 666 ]
-"293
 }
-[; ;esp8266.c: 293: }
-[; ;esp8266.c: 294: _delay((unsigned long)((50)*(48000000/4000.0)));
+[; ;esp8266.c: 294: _delay((unsigned long)((80)*(48000000/4000.0)));
 "294
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;esp8266.c: 296: }
-"296
+[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 297: }
+"297
 [e :UE 664 ]
 }
-"301
+"302
 [v _conecta `(uc ~T0 @X0 1 ef1`*uc ]
-"302
-{
-[; ;esp8266.c: 301: unsigned char conecta(char *ip_dir)
-[; ;esp8266.c: 302: {
-[e :U _conecta ]
-"301
-[v _ip_dir `*uc ~T0 @X0 1 r1 ]
-"302
-[f ]
 "303
-[v _tempo `uc ~T0 @X0 1 a ]
-[; ;esp8266.c: 303: unsigned char tempo;
-[; ;esp8266.c: 304: memset(modbus_tx,0,50);
+{
+[; ;esp8266.c: 302: unsigned char conecta(char *ip_dir)
+[; ;esp8266.c: 303: {
+[e :U _conecta ]
+"302
+[v _ip_dir `*uc ~T0 @X0 1 r1 ]
+"303
+[f ]
 "304
-[e ( _memset (3 , , -> &U _modbus_tx `*v -> 0 `i -> -> 50 `i `ui ]
-[; ;esp8266.c: 305: sprintf(modbus_tx,"AT+CIPSTART=4,\"TCP\",\"%s\",502",ip_dir);
+[v _tempo `uc ~T0 @X0 1 a ]
+[; ;esp8266.c: 304: unsigned char tempo;
+[; ;esp8266.c: 305: memset(modbus_tx,0,50);
 "305
-[e ( _sprintf (1 , (. , &U _modbus_tx :s 7C -> _ip_dir `*Cuc ]
-[; ;esp8266.c: 307: manda_AT_COMANDO("AT+CIPMUX=1\r\n","OK","OK",500);
-"307
-[e ( _manda_AT_COMANDO (4 , , , -> :s 8C `*uc -> :s 9C `*uc -> :s 10C `*uc -> -> 500 `i `ui ]
-[; ;esp8266.c: 308: _delay((unsigned long)((300)*(48000000/4000.0)));
+[e ( _memset (3 , , -> &U _modbus_tx `*v -> 0 `i -> -> 50 `i `ui ]
+[; ;esp8266.c: 306: sprintf(modbus_tx,"AT+CIPSTART=4,\"TCP\",\"%s\",502",ip_dir);
+"306
+[e ( _sprintf (1 , (. , &U _modbus_tx :s 9C -> _ip_dir `*Cuc ]
+[; ;esp8266.c: 308: manda_AT_COMANDO("AT+CIPMUX=1\r\n","OK","OK",500);
 "308
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;esp8266.c: 309: tempo=manda_AT_COMANDO(modbus_tx, "OK", "CONNECT", 10000);
+[e ( _manda_AT_COMANDO (4 , , , -> :s 10C `*uc -> :s 11C `*uc -> :s 12C `*uc -> -> 500 `i `ui ]
+[; ;esp8266.c: 309: _delay((unsigned long)((300)*(48000000/4000.0)));
 "309
-[e = _tempo ( _manda_AT_COMANDO (4 , , , &U _modbus_tx -> :s 11C `*uc -> :s 12C `*uc -> -> 10000 `i `ui ]
-[; ;esp8266.c: 310: _delay((unsigned long)((2000)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 310: tempo=manda_AT_COMANDO(modbus_tx, "OK", "CONNECT", 10000);
 "310
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;esp8266.c: 311: if ((tempo==1) ||(tempo==2)) return(1);
+[e = _tempo ( _manda_AT_COMANDO (4 , , , &U _modbus_tx -> :s 13C `*uc -> :s 14C `*uc -> -> 10000 `i `ui ]
+[; ;esp8266.c: 311: _delay((unsigned long)((2000)*(48000000/4000.0)));
 "311
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 312: if ((tempo==1) ||(tempo==2)) return(1);
+"312
 [e $ ! || == -> _tempo `i -> 1 `i == -> _tempo `i -> 2 `i 670  ]
 [e ) -> -> 1 `i `uc ]
 [e $UE 669  ]
 [e :U 670 ]
-[; ;esp8266.c: 312: manda_AT_COMANDO("AT+CIPMUX=1\r\n","OK","OK",500);
-"312
-[e ( _manda_AT_COMANDO (4 , , , -> :s 13C `*uc -> :s 14C `*uc -> :s 15C `*uc -> -> 500 `i `ui ]
-[; ;esp8266.c: 313: _delay((unsigned long)((300)*(48000000/4000.0)));
+[; ;esp8266.c: 313: manda_AT_COMANDO("AT+CIPMUX=1\r\n","OK","OK",500);
 "313
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;esp8266.c: 314: tempo=manda_AT_COMANDO(modbus_tx, "OK", "Linked", 10000);
+[e ( _manda_AT_COMANDO (4 , , , -> :s 15C `*uc -> :s 16C `*uc -> :s 17C `*uc -> -> 500 `i `ui ]
+[; ;esp8266.c: 314: _delay((unsigned long)((300)*(48000000/4000.0)));
 "314
-[e = _tempo ( _manda_AT_COMANDO (4 , , , &U _modbus_tx -> :s 16C `*uc -> :s 17C `*uc -> -> 10000 `i `ui ]
-[; ;esp8266.c: 315: _delay((unsigned long)((2000)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 315: tempo=manda_AT_COMANDO(modbus_tx, "OK", "Linked", 10000);
 "315
+[e = _tempo ( _manda_AT_COMANDO (4 , , , &U _modbus_tx -> :s 18C `*uc -> :s 19C `*uc -> -> 10000 `i `ui ]
+[; ;esp8266.c: 316: _delay((unsigned long)((2000)*(48000000/4000.0)));
+"316
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-[; ;esp8266.c: 317: if ((tempo==1) ||(tempo==2)) return(1);
-"317
+[; ;esp8266.c: 318: if ((tempo==1) ||(tempo==2)) return(1);
+"318
 [e $ ! || == -> _tempo `i -> 1 `i == -> _tempo `i -> 2 `i 671  ]
 [e ) -> -> 1 `i `uc ]
 [e $UE 669  ]
 [e $U 672  ]
-"318
+"319
 [e :U 671 ]
-[; ;esp8266.c: 318: else return(0);
+[; ;esp8266.c: 319: else return(0);
 [e ) -> -> 0 `i `uc ]
 [e $UE 669  ]
 [e :U 672 ]
-[; ;esp8266.c: 320: }
-"320
+[; ;esp8266.c: 321: }
+"321
 [e :UE 669 ]
+}
+"326
+[v _conecta_rapido `(uc ~T0 @X0 1 ef1`*uc ]
+"327
+{
+[; ;esp8266.c: 326: unsigned char conecta_rapido(char *ip_dir)
+[; ;esp8266.c: 327: {
+[e :U _conecta_rapido ]
+"326
+[v _ip_dir `*uc ~T0 @X0 1 r1 ]
+"327
+[f ]
+"328
+[v _tempo `uc ~T0 @X0 1 a ]
+[; ;esp8266.c: 328: unsigned char tempo;
+[; ;esp8266.c: 329: memset(modbus_tx,0,50);
+"329
+[e ( _memset (3 , , -> &U _modbus_tx `*v -> 0 `i -> -> 50 `i `ui ]
+[; ;esp8266.c: 330: sprintf(modbus_tx,"AT+CIPSTART=4,\"TCP\",\"%s\",502",ip_dir);
+"330
+[e ( _sprintf (1 , (. , &U _modbus_tx :s 20C -> _ip_dir `*Cuc ]
+[; ;esp8266.c: 335: manda_AT_COMANDO(modbus_tx, "OK", "CONNECT", 100);
+"335
+[e ( _manda_AT_COMANDO (4 , , , &U _modbus_tx -> :s 21C `*uc -> :s 22C `*uc -> -> 100 `i `ui ]
+[; ;esp8266.c: 337: _delay((unsigned long)((50)*(48000000/4000.0)));
+"337
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;esp8266.c: 347: }
+"347
+[e :UE 673 ]
 }
 [p f _sprintf 8684672 ]
 [a 3C 37 49 117 0 ]
-[a 17C 76 105 110 107 101 100 0 ]
-[a 12C 67 79 78 78 69 67 84 0 ]
-[a 9C 79 75 0 ]
-[a 10C 79 75 0 ]
+[a 6C 37 49 117 0 ]
+[a 19C 76 105 110 107 101 100 0 ]
+[a 14C 67 79 78 78 69 67 84 0 ]
+[a 22C 67 79 78 78 69 67 84 0 ]
 [a 11C 79 75 0 ]
-[a 14C 79 75 0 ]
-[a 15C 79 75 0 ]
+[a 12C 79 75 0 ]
+[a 13C 79 75 0 ]
 [a 16C 79 75 0 ]
+[a 17C 79 75 0 ]
+[a 18C 79 75 0 ]
+[a 21C 79 75 0 ]
 [a 2C 65 84 43 67 73 80 83 69 78 68 61 0 ]
-[a 7C 65 84 43 67 73 80 83 84 65 82 84 61 52 44 34 84 67 80 34 44 34 37 115 34 44 53 48 50 0 ]
-[a 5C 65 84 43 67 73 80 83 69 78 68 61 52 44 37 100 13 10 0 ]
-[a 6C 65 84 43 67 73 80 83 69 78 68 61 52 44 37 100 13 10 0 ]
-[a 8C 65 84 43 67 73 80 77 85 88 61 49 13 10 0 ]
-[a 13C 65 84 43 67 73 80 77 85 88 61 49 13 10 0 ]
+[a 5C 65 84 43 67 73 80 83 69 78 68 61 0 ]
+[a 9C 65 84 43 67 73 80 83 84 65 82 84 61 52 44 34 84 67 80 34 44 34 37 115 34 44 53 48 50 0 ]
+[a 20C 65 84 43 67 73 80 83 84 65 82 84 61 52 44 34 84 67 80 34 44 34 37 115 34 44 53 48 50 0 ]
+[a 8C 65 84 43 67 73 80 83 69 78 68 61 52 44 37 100 13 10 0 ]
+[a 10C 65 84 43 67 73 80 77 85 88 61 49 13 10 0 ]
+[a 15C 65 84 43 67 73 80 77 85 88 61 49 13 10 0 ]
 [a 1C 13 10 0 ]
 [a 4C 13 10 0 ]
+[a 7C 13 10 0 ]

@@ -4,7 +4,7 @@
 [d chip 18F25K50 ]
 [d frameptr 4065 ]
 "25 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
-[e E4672 estados_ `uc
+[e E4674 estados_ `uc
 normal 0
 cap_i 1
 cap_p 2
@@ -68,17 +68,19 @@ esp_final 7
 [v _manda_AT_COMANDO manda_AT_COMANDO `(uc  1 e 1 0 ]
 "244
 [v _strlen_const strlen_const `(ul  1 e 4 0 ]
-"282
+"286
 [v _manda_esp8266_bytes manda_esp8266_bytes `(v  1 e 1 0 ]
-"301
+"302
 [v _conecta conecta `(uc  1 e 1 0 ]
+"326
+[v _conecta_rapido conecta_rapido `(uc  1 e 1 0 ]
 "19 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/Modbus_TCP.c
 [v _modbus_write_holding modbus_write_holding `(v  1 e 1 0 ]
 "74
 [v _modbus_write_coilsdigital modbus_write_coilsdigital `(v  1 e 1 0 ]
-"123 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
+"133 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"137
+"147
 [v _main main `(v  1 e 1 0 ]
 "66 C:\Users\TEOREMAIEE\Desktop\Control_Skill\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
@@ -149,7 +151,7 @@ esp_final 7
 [v _WPUB WPUB `VEuc  1 e 1 @3973 ]
 "3472
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
-[s S942 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S921 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -159,7 +161,7 @@ esp_final 7
 `uc 1 LATA7 1 0 :1:7 
 ]
 "3499
-[s S951 . 1 `uc 1 LA0 1 0 :1:0 
+[s S930 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -168,11 +170,11 @@ esp_final 7
 `uc 1 LA6 1 0 :1:6 
 `uc 1 LA7 1 0 :1:7 
 ]
-[u S960 . 1 `S942 1 . 1 0 `S951 1 . 1 0 ]
-[v _LATAbits LATAbits `VES960  1 e 1 @3977 ]
+[u S939 . 1 `S921 1 . 1 0 `S930 1 . 1 0 ]
+[v _LATAbits LATAbits `VES939  1 e 1 @3977 ]
 "3584
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
-[s S638 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S881 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -182,7 +184,7 @@ esp_final 7
 `uc 1 LATB7 1 0 :1:7 
 ]
 "3611
-[s S647 . 1 `uc 1 LB0 1 0 :1:0 
+[s S890 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -191,8 +193,8 @@ esp_final 7
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S656 . 1 `S638 1 . 1 0 `S647 1 . 1 0 ]
-[v _LATBbits LATBbits `VES656  1 e 1 @3978 ]
+[u S899 . 1 `S881 1 . 1 0 `S890 1 . 1 0 ]
+[v _LATBbits LATBbits `VES899  1 e 1 @3978 ]
 "3696
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
 "4155
@@ -414,6 +416,12 @@ esp_final 7
 [v _modbus_tx modbus_tx `[50]uc  1 e 50 0 ]
 "14
 [v _tamano tamano `ui  1 e 2 0 ]
+"63 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
+[v _contador contador `i  1 e 2 0 ]
+"64
+[v _contador2 contador2 `i  1 e 2 0 ]
+"65
+[v _contador_continuo contador_continuo `i  1 e 2 0 ]
 [s S443 . 2 `uc 1 b0 1 0 :1:0 
 `uc 1 b1 1 0 :1:1 
 `uc 1 b2 1 0 :1:2 
@@ -431,7 +439,7 @@ esp_final 7
 `uc 1 b14 1 1 :1:6 
 `uc 1 b15 1 1 :1:7 
 ]
-"93 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
+"96
 [u S460 . 2 `ui 1 byte 2 0 `S443 1 . 2 0 ]
 [v _digital_out digital_out `S460  1 e 2 0 ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
@@ -448,10 +456,10 @@ esp_final 7
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"137 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
+"147 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"238
+"264
 } 0
 "19 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/Modbus_TCP.c
 [v _modbus_write_holding modbus_write_holding `(v  1 e 1 0 ]
@@ -467,26 +475,30 @@ esp_final 7
 [v modbus_write_coilsdigital@dat_dig dat_dig `ui  1 p 2 2 ]
 "98
 } 0
-"282 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
+"286 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
 [v _manda_esp8266_bytes manda_esp8266_bytes `(v  1 e 1 0 ]
 {
-"291
-[v manda_esp8266_bytes@byte byte `uc  1 a 1 45 ]
-"284
-[v manda_esp8266_bytes@cuenta cuenta `uc  1 a 1 46 ]
-"282
+"288
+[v manda_esp8266_bytes@cuenta cuenta `uc  1 a 1 45 ]
+"286
 [v manda_esp8266_bytes@info2 info2 `*.39uc  1 p 2 39 ]
 [v manda_esp8266_bytes@largo largo `ui  1 p 2 41 ]
-"296
+"297
 } 0
-"301
+"326
+[v _conecta_rapido conecta_rapido `(uc  1 e 1 0 ]
+{
+[v conecta_rapido@ip_dir ip_dir `*.25uc  1 p 2 39 ]
+"347
+} 0
+"302
 [v _conecta conecta `(uc  1 e 1 0 ]
 {
-"303
+"304
 [v conecta@tempo tempo `uc  1 a 1 43 ]
-"301
+"302
 [v conecta@ip_dir ip_dir `*.25uc  1 p 2 39 ]
-"320
+"321
 } 0
 "505 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -667,10 +679,10 @@ esp_final 7
 [v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 4 ]
 "184
 } 0
-"123 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
+"133 C:\Users\TEOREMAIEE\Desktop\Control_Skill\main.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"129
+"139
 } 0
 "89 C:\Users\TEOREMAIEE\Desktop\Control_Skill\Librerias/esp8266.c
 [v _esp82666_interrupcion_1 esp82666_interrupcion_1 `(v  1 e 1 0 ]
