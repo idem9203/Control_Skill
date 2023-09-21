@@ -146,7 +146,7 @@ void EUSART1_Write_string(const char* data)
     }
 }
 
-char getch(void)
+int getch(void)
 {
     return EUSART1_Read();
 }

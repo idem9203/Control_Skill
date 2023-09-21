@@ -13,6 +13,7 @@
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
+                <sourceRootElem>../../IDEM_V1-5/IDEM_V1-5.X/Librerias</sourceRootElem>
                 <sourceRootElem>Librerias</sourceRootElem>
             </sourceRootList>
             <confList>
