@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Control_Skill
+PROJECTNAME=Control_Skill-Control_RF_Motor_Pozo
 
 # Active Configuration
 DEFAULTCONF=default

@@ -7685,22 +7685,18 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/device_config.h" 1
 # 50 "./mcc_generated_files/mcc.h" 2
-
+# 1 "./mcc_generated_files/device_config.h" 1
+# 51 "./mcc_generated_files/mcc.h" 2
 # 1 "./mcc_generated_files/pin_manager.h" 1
 # 196 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 208 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "./mcc_generated_files/mcc.h" 2
-
+# 52 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
-
+# 54 "./mcc_generated_files/mcc.h" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\conio.h" 1 3
 
 
@@ -7861,18 +7857,15 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 8 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\conio.h" 2 3
-# 54 "./mcc_generated_files/mcc.h" 2
-
+# 55 "./mcc_generated_files/mcc.h" 2
 # 1 "./mcc_generated_files/interrupt_manager.h" 1
 # 110 "./mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 55 "./mcc_generated_files/mcc.h" 2
-
+# 56 "./mcc_generated_files/mcc.h" 2
 # 1 "./mcc_generated_files/ccp2.h" 1
 # 59 "./mcc_generated_files/ccp2.h"
 void CCP2_Initialize(void);
-# 56 "./mcc_generated_files/mcc.h" 2
-
+# 57 "./mcc_generated_files/mcc.h" 2
 # 1 "./mcc_generated_files/tmr1.h" 1
 # 95 "./mcc_generated_files/tmr1.h"
 void TMR1_Initialize(void);
@@ -7900,8 +7893,7 @@ void TMR1_CallBack(void);
 extern void (*TMR1_InterruptHandler)(void);
 # 419 "./mcc_generated_files/tmr1.h"
 void TMR1_DefaultInterruptHandler(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-
+# 58 "./mcc_generated_files/mcc.h" 2
 # 1 "./mcc_generated_files/adc.h" 1
 # 72 "./mcc_generated_files/adc.h"
 typedef uint16_t adc_result_t;
@@ -7939,8 +7931,7 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 319 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 58 "./mcc_generated_files/mcc.h" 2
-
+# 59 "./mcc_generated_files/mcc.h" 2
 # 1 "./mcc_generated_files/eusart1.h" 1
 # 76 "./mcc_generated_files/eusart1.h"
 typedef union {
@@ -7974,13 +7965,12 @@ void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 399 "./mcc_generated_files/eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-# 59 "./mcc_generated_files/mcc.h" 2
+# 60 "./mcc_generated_files/mcc.h" 2
 # 74 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 # 87 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 44 "main.c" 2
-
+# 45 "main.c" 2
 
 
 
@@ -8041,8 +8031,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 48 "main.c" 2
-
+# 49 "main.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\ctype.h" 1 3
 # 10 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\ctype.h" 3
 int isalnum(int);
@@ -8077,8 +8066,7 @@ int isupper_l(int, locale_t);
 int isxdigit_l(int, locale_t);
 int tolower_l(int, locale_t);
 int toupper_l(int, locale_t);
-# 49 "main.c" 2
-
+# 50 "main.c" 2
 
 
 
@@ -8103,7 +8091,7 @@ unsigned char get_Status();
 unsigned char get_fifo_status();
 void nrf2401_envia_Text(char* Text);
 void nrf2401_recibe_Text(char* Buffer, char StopChar);
-# 53 "main.c" 2
+# 54 "main.c" 2
 # 70 "main.c"
 const unsigned char direccion_tx[5] = {17, 17, 17, 17, 17};
 const unsigned char direccion_rx[5] = {17, 17, 17, 17, 17};
@@ -8131,7 +8119,7 @@ unsigned char get_Status();
 unsigned char get_fifo_status();
 void nrf2401_envia_Text(char* Text);
 void nrf2401_recibe_Text(char* Buffer, char StopChar);
-# 1 "./Librerias/nRF24L01_2.h" 2
+# 2 "./Librerias/nRF24L01_2.h" 2
 # 19 "./Librerias/nRF24L01_2.h"
 extern const unsigned char direccion_tx[];
 extern const unsigned char direccion_rx[];
@@ -8252,7 +8240,7 @@ void flush_RX()
 void flush_TX()
 {
     nrf2401_write(0x07, 0x70);
-    nrf2401_comando(0xE2);
+    nrf2401_comando(0xE1);
 }
 
 
@@ -8371,8 +8359,7 @@ void nrf2401_recibe_Text(char* Buffer, char StopChar)
 
     *--Buffer=0;
 }
-# 73 "main.c" 2
-
+# 74 "main.c" 2
 unsigned char dato_serial = 0;
 
 
@@ -8476,6 +8463,10 @@ void trip_protec_current()
     }
 }
 
+void recibido_1();
+void envio_ya_recibido();
+void confirmacion();
+
 void main(void)
 {
 
@@ -8529,18 +8520,50 @@ void main(void)
 
         trip_protec_current();
 
-        if(nrf2401_haydatos() == 1)
-        {
-            dato_serial = nrf2401_recibe();
-            if (dato_serial == 1)
-            {
-                LATA5 = 1;
-                _delay((unsigned long)((3000)*(48000000/4000.0)));
-            }
-        }
 
-        _delay((unsigned long)((100)*(48000000/4000.0)));
+        recibido_1();
+
+
+        _delay((unsigned long)((50)*(48000000/4000.0)));
 
 
     }
+}
+
+void recibido_1()
+{
+    if(nrf2401_haydatos() == 1)
+    {
+        dato_serial = nrf2401_recibe();
+        if (dato_serial == 1)
+        {
+            envio_ya_recibido();
+            confirmacion();
+            dato_serial = 0;
+        }
+        else if (dato_serial == 2)
+        {
+            envio_ya_recibido();
+            LATA5 = 0;
+            dato_serial = 0;
+        }
+    }
+}
+void envio_ya_recibido()
+{
+    nrF2401_init_TX(17);
+
+    int i = 0;
+    for (i = 0; i < 60; i++) {
+        nrf2401_envia(dato_serial);
+        _delay((unsigned long)((50)*(48000000/4000.0)));
+    }
+    nrF2401_init_RX(17);
+}
+void confirmacion()
+{
+    envio_ya_recibido();
+    LATA5 = 1;
+    _delay((unsigned long)((3000)*(48000000/4000.0)));
+    _delay((unsigned long)((3000)*(48000000/4000.0)));
 }

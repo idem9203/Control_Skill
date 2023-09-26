@@ -141,7 +141,7 @@ double get_corriente_AC(int n_muestras)
   {
       valor = ADC_GetConversion(0);
       voltaje =  valor * (5.0 / 1023.0);                                        ////lectura del sensor
-      corriente = ((voltaje - 2.527) / sensibilidad);                             //Ecuación  para obtener la corriente
+      corriente = ((voltaje - 2.527) / sensibilidad);                           //Ecuación  para obtener la corriente
       if (corriente > I_max) I_max = corriente;
       if (corriente < I_min) I_min = corriente;
   }
@@ -248,6 +248,10 @@ void trip_protec_current()
     }
 }
 
+void recibido_1();
+void envio_ya_recibido();
+void confirmacion();
+
 void main(void)
 {
     // Initialize the device
@@ -301,20 +305,52 @@ void main(void)
         
         trip_protec_current();
         
-        if(nrf2401_haydatos() == 1)                                             //Recibe datos del modulo NRF2401
-        {
-            dato_serial = nrf2401_recibe();
-            if (dato_serial == 1) 
-            {
-                RELE1 = 1;
-                __delay_ms(3000);
-            }
-        }
+        
+        recibido_1();
+        
    
-        __delay_ms(100);
+        __delay_ms(50);
         
 
     }
+}
+
+void recibido_1()
+{
+    if(nrf2401_haydatos() == 1)                                             //Recibe datos del modulo NRF2401
+    {
+        dato_serial = nrf2401_recibe();
+        if (dato_serial == 1) 
+        {
+            envio_ya_recibido();           
+            confirmacion();
+            dato_serial = 0;
+        }
+        else if (dato_serial == 2)
+        {
+            envio_ya_recibido();
+            RELE1 = 0;
+            dato_serial = 0;
+        }
+    }
+}
+void envio_ya_recibido()
+{
+    nrF2401_init_TX(17);
+    
+    int i = 0;
+    for (i = 0; i < 60; i++) {
+        nrf2401_envia(dato_serial);
+        __delay_ms(50);
+    }
+    nrF2401_init_RX(17);
+}
+void confirmacion()
+{
+    envio_ya_recibido(); 
+    RELE1 = 1;
+    __delay_ms(3000);
+    __delay_ms(3000);
 }
 /**
  End of File

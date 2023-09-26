@@ -7683,13 +7683,11 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\xc.h" 2 3
-# 47 "mcc_generated_files/ccp2.c" 2
-
+# 48 "mcc_generated_files/ccp2.c" 2
 # 1 "mcc_generated_files/ccp2.h" 1
 # 59 "mcc_generated_files/ccp2.h"
 void CCP2_Initialize(void);
-# 48 "mcc_generated_files/ccp2.c" 2
-
+# 49 "mcc_generated_files/ccp2.c" 2
 void CCP2_Initialize(void)
 {
 

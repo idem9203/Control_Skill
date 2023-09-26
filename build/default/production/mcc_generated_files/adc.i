@@ -7683,12 +7683,11 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\xc.h" 2 3
-# 51 "mcc_generated_files/adc.c" 2
-
+# 52 "mcc_generated_files/adc.c" 2
 # 1 "mcc_generated_files/adc.h" 1
 # 56 "mcc_generated_files/adc.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdbool.h" 1 3
-# 56 "mcc_generated_files/adc.h" 2
+# 57 "mcc_generated_files/adc.h" 2
 # 72 "mcc_generated_files/adc.h"
 typedef uint16_t adc_result_t;
 
@@ -7725,11 +7724,9 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 319 "mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 52 "mcc_generated_files/adc.c" 2
-
-# 1 "mcc_generated_files/device_config.h" 1
 # 53 "mcc_generated_files/adc.c" 2
-
+# 1 "mcc_generated_files/device_config.h" 1
+# 54 "mcc_generated_files/adc.c" 2
 
 
 

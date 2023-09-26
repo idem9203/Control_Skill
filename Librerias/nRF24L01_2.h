@@ -135,7 +135,7 @@ void flush_RX()
 void flush_TX()
 {
     nrf2401_write(status, 0x70);
-    nrf2401_comando(FLUSH_RX);
+    nrf2401_comando(FLUSH_TX);
 }
 
 //limpia buffer de tx y rx

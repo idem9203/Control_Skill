@@ -11,8 +11,7 @@
 # 1 "mcc_generated_files/interrupt_manager.h" 1
 # 110 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 49 "mcc_generated_files/interrupt_manager.c" 2
-
+# 50 "mcc_generated_files/interrupt_manager.c" 2
 # 1 "mcc_generated_files/mcc.h" 1
 # 49 "mcc_generated_files/mcc.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\xc.h" 1 3
@@ -7690,22 +7689,18 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\xc.h" 2 3
-# 49 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/device_config.h" 1
 # 50 "mcc_generated_files/mcc.h" 2
-
+# 1 "mcc_generated_files/device_config.h" 1
+# 51 "mcc_generated_files/mcc.h" 2
 # 1 "mcc_generated_files/pin_manager.h" 1
 # 196 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 208 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "mcc_generated_files/mcc.h" 2
-
+# 52 "mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "mcc_generated_files/mcc.h" 2
-
+# 54 "mcc_generated_files/mcc.h" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\conio.h" 1 3
 
 
@@ -7866,14 +7861,12 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 8 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\conio.h" 2 3
-# 54 "mcc_generated_files/mcc.h" 2
-
+# 55 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/ccp2.h" 1
 # 59 "mcc_generated_files/ccp2.h"
 void CCP2_Initialize(void);
-# 56 "mcc_generated_files/mcc.h" 2
-
+# 57 "mcc_generated_files/mcc.h" 2
 # 1 "mcc_generated_files/tmr1.h" 1
 # 95 "mcc_generated_files/tmr1.h"
 void TMR1_Initialize(void);
@@ -7901,8 +7894,7 @@ void TMR1_CallBack(void);
 extern void (*TMR1_InterruptHandler)(void);
 # 419 "mcc_generated_files/tmr1.h"
 void TMR1_DefaultInterruptHandler(void);
-# 57 "mcc_generated_files/mcc.h" 2
-
+# 58 "mcc_generated_files/mcc.h" 2
 # 1 "mcc_generated_files/adc.h" 1
 # 72 "mcc_generated_files/adc.h"
 typedef uint16_t adc_result_t;
@@ -7940,8 +7932,7 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 319 "mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 58 "mcc_generated_files/mcc.h" 2
-
+# 59 "mcc_generated_files/mcc.h" 2
 # 1 "mcc_generated_files/eusart1.h" 1
 # 76 "mcc_generated_files/eusart1.h"
 typedef union {
@@ -7975,13 +7966,12 @@ void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 399 "mcc_generated_files/eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-# 59 "mcc_generated_files/mcc.h" 2
+# 60 "mcc_generated_files/mcc.h" 2
 # 74 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 # 87 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 50 "mcc_generated_files/interrupt_manager.c" 2
-
+# 51 "mcc_generated_files/interrupt_manager.c" 2
 
 void INTERRUPT_Initialize (void)
 {

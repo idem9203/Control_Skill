@@ -1,0 +1,1274 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F25K50 ]
+[d frameptr 4065 ]
+"83 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/adc.c
+[e E4620 . `uc
+channel_AN0 0
+channel_AN1 1
+channel_AN2 2
+channel_Temp 28
+channel_CTMU 29
+channel_DAC 30
+channel_FVRBuf2 31
+]
+"142 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+[e E4963 . `uc
+channel_AN0 0
+channel_AN1 1
+channel_AN2 2
+channel_Temp 28
+channel_CTMU 29
+channel_DAC 30
+channel_FVRBuf2 31
+]
+"23 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo/Librerias/nRF24L01_2.h
+[v _spi_s_init spi_s_init `(v  1 e 1 0 ]
+"40
+[v _spi_s_read spi_s_read `(uc  1 e 1 0 ]
+"61
+[v _spi_s_write spi_s_write `(v  1 e 1 0 ]
+"81
+[v _nrf2401_write nrf2401_write `(v  1 e 1 0 ]
+"91
+[v _nrf2401_comando nrf2401_comando `(v  1 e 1 0 ]
+"99
+[v _nrf2401_read nrf2401_read `(uc  1 e 1 0 ]
+"111
+[v _nrf2401_direccion_TX_RX nrf2401_direccion_TX_RX `(v  1 e 1 0 ]
+"128
+[v _flush_RX flush_RX `(v  1 e 1 0 ]
+"135
+[v _flush_TX flush_TX `(v  1 e 1 0 ]
+"142
+[v _flush_TX_RX flush_TX_RX `(v  1 e 1 0 ]
+"151
+[v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
+"172
+[v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
+"184
+[v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
+"201
+[v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
+"218
+[v _get_Status get_Status `(uc  1 e 1 0 ]
+"240
+[v _nrf2401_haydatos nrf2401_haydatos `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\__fpclassifyf.c
+[v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
+"193 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
+[v _pad pad `(v  1 s 1 pad ]
+"587
+[v _efgtoa efgtoa `(v  1 s 1 efgtoa ]
+"1158
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+"1817
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\floorf.c
+[v _floorf floorf `(f  1 e 4 0 ]
+"43 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"1 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\labs.c
+[v _labs labs `(l  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.39uc  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"135 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+[v _get_corriente_AC get_corriente_AC `(d  1 e 4 0 ]
+"196
+[v _trip_protec_current trip_protec_current `(v  1 e 1 0 ]
+"255
+[v _main main `(v  1 e 1 0 ]
+"318
+[v _recibido_1 recibido_1 `(v  1 e 1 0 ]
+"337
+[v _envio_ya_recibido envio_ya_recibido `(v  1 e 1 0 ]
+"348
+[v _confirmacion confirmacion `(v  1 e 1 0 ]
+"62 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"110
+[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
+"49 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/ccp2.c
+[v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
+"66 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+"94
+[v _EUSART1_is_tx_ready EUSART1_is_tx_ready `(a  1 e 1 0 ]
+"113
+[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
+"132
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+"141
+[v _EUSART1_Write_string EUSART1_Write_string `(v  1 e 1 0 ]
+"154
+[v _putch putch `(v  1 e 1 0 ]
+"161
+[v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"163
+[v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"171
+[v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
+"174
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+"178
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"182
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+"52 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"58
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+"50 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"62
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"55 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"65 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"123
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+"160
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+"179
+[v _TMR1_CallBack TMR1_CallBack `(v  1 e 1 0 ]
+"189
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+"193
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"232 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k50.h
+[v _ANSELA ANSELA `VEuc  1 e 1 @3931 ]
+"277
+[v _ANSELB ANSELB `VEuc  1 e 1 @3932 ]
+"327
+[v _ANSELC ANSELC `VEuc  1 e 1 @3933 ]
+[s S1063 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"2977
+[s S1185 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S1193 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S1196 . 1 `S1063 1 . 1 0 `S1185 1 . 1 0 `S1193 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES1196  1 e 1 @3969 ]
+"3238
+[v _WPUB WPUB `VEuc  1 e 1 @3973 ]
+"3472
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
+"3584
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S1094 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"3611
+[s S1103 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S1112 . 1 `S1094 1 . 1 0 `S1103 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1112  1 e 1 @3978 ]
+"3696
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+[s S1134 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"3723
+[s S1143 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LC4 1 0 :1:4 
+`uc 1 LC5 1 0 :1:5 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S1152 . 1 `S1134 1 . 1 0 `S1143 1 . 1 0 ]
+[v _LATCbits LATCbits `VES1152  1 e 1 @3979 ]
+"4115
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @3984 ]
+"4135
+[v _CCPR2H CCPR2H `VEuc  1 e 1 @3985 ]
+"4155
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"4377
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+[s S1054 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"4409
+[u S1072 . 1 `S1054 1 . 1 0 `S1063 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES1072  1 e 1 @3987 ]
+"4599
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+[s S1018 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"4629
+[s S1027 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S1034 . 1 `S1018 1 . 1 0 `S1027 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES1034  1 e 1 @3988 ]
+"4777
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @3991 ]
+"5241
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
+[s S653 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 ACTIE 1 0 :1:7 
+]
+"5410
+[s S662 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 STIE 1 0 :1:7 
+]
+[s S669 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIE 1 0 :1:7 
+]
+[u S672 . 1 `S653 1 . 1 0 `S662 1 . 1 0 `S669 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES672  1 e 1 @3997 ]
+[s S70 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 ACTIF 1 0 :1:7 
+]
+"5509
+[s S79 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 STIF 1 0 :1:7 
+]
+[s S86 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIF 1 0 :1:7 
+]
+[u S89 . 1 `S70 1 . 1 0 `S79 1 . 1 0 `S86 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES89  1 e 1 @3998 ]
+"6242
+[v _RCSTA1 RCSTA1 `VEuc  1 e 1 @4011 ]
+[s S197 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"6281
+[s S206 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S209 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S213 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S216 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[u S219 . 1 `S197 1 . 1 0 `S206 1 . 1 0 `S209 1 . 1 0 `S213 1 . 1 0 `S216 1 . 1 0 ]
+[v _RCSTA1bits RCSTA1bits `VES219  1 e 1 @4011 ]
+"6448
+[v _TXSTA1 TXSTA1 `VEuc  1 e 1 @4012 ]
+[s S113 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"6506
+[s S122 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S126 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 BRGH1 1 0 :1:2 
+]
+[s S129 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S132 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SENDB1 1 0 :1:3 
+]
+[s S135 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SYNC1 1 0 :1:4 
+]
+[s S138 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+]
+[s S141 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX91 1 0 :1:6 
+]
+[s S144 . 1 `uc 1 TX9D1 1 0 :1:0 
+]
+[s S146 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 TXEN1 1 0 :1:5 
+]
+[u S149 . 1 `S113 1 . 1 0 `S122 1 . 1 0 `S126 1 . 1 0 `S129 1 . 1 0 `S132 1 . 1 0 `S135 1 . 1 0 `S138 1 . 1 0 `S141 1 . 1 0 `S144 1 . 1 0 `S146 1 . 1 0 ]
+[v _TXSTA1bits TXSTA1bits `VES149  1 e 1 @4012 ]
+"6742
+[v _TXREG1 TXREG1 `VEuc  1 e 1 @4013 ]
+"6780
+[v _RCREG1 RCREG1 `VEuc  1 e 1 @4014 ]
+"6818
+[v _SPBRG1 SPBRG1 `VEuc  1 e 1 @4015 ]
+"6956
+[v _SPBRGH1 SPBRGH1 `VEuc  1 e 1 @4016 ]
+"7401
+[v _ACTCON ACTCON `VEuc  1 e 1 @4021 ]
+"7891
+[v _BAUDCON1 BAUDCON1 `VEuc  1 e 1 @4024 ]
+"8827
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"8898
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"8966
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S480 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"9006
+[s S483 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S487 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S490 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S493 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S496 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S499 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[s S502 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S505 . 1 `S480 1 . 1 0 `S483 1 . 1 0 `S487 1 . 1 0 `S490 1 . 1 0 `S493 1 . 1 0 `S496 1 . 1 0 `S499 1 . 1 0 `S502 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES505  1 e 1 @4034 ]
+"9061
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"9068
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"11017
+[v _T1GCON T1GCON `VEuc  1 e 1 @4044 ]
+[s S887 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO_NOT_T1DONE 1 0 :1:3 
+]
+"11063
+[s S890 . 1 `uc 1 T1GSS 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO_nT1DONE 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 TMR1GE 1 0 :1:7 
+]
+[s S898 . 1 `uc 1 T1GSS0 1 0 :1:0 
+`uc 1 T1GSS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T1GGO 1 0 :1:3 
+]
+[s S903 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_T1DONE 1 0 :1:3 
+]
+[s S906 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 nT1DONE 1 0 :1:3 
+]
+[s S909 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1DONE 1 0 :1:3 
+]
+[s S912 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO_NOT_DONE 1 0 :1:3 
+]
+[s S915 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+]
+[u S918 . 1 `S887 1 . 1 0 `S890 1 . 1 0 `S898 1 . 1 0 `S903 1 . 1 0 `S906 1 . 1 0 `S909 1 . 1 0 `S912 1 . 1 0 `S915 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES918  1 e 1 @4044 ]
+"11148
+[v _T1CON T1CON `VEuc  1 e 1 @4045 ]
+[s S826 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+]
+"11187
+[s S829 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 SOSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+[s S836 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 T1RD16 1 0 :1:1 
+`uc 1 T1SYNC 1 0 :1:2 
+`uc 1 T1SOSCEN 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+[s S845 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1OSCEN 1 0 :1:3 
+]
+[s S848 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SOSCEN1 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 RD161 1 0 :1:7 
+]
+[u S853 . 1 `S826 1 . 1 0 `S829 1 . 1 0 `S836 1 . 1 0 `S845 1 . 1 0 `S848 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES853  1 e 1 @4045 ]
+"11277
+[v _TMR1 TMR1 `VEus  1 e 2 @4046 ]
+"11284
+[v _TMR1L TMR1L `VEuc  1 e 1 @4046 ]
+"11304
+[v _TMR1H TMR1H `VEuc  1 e 1 @4047 ]
+[s S559 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"11367
+[s S561 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S564 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S567 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S570 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S573 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S582 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+]
+[u S588 . 1 `S559 1 . 1 0 `S561 1 . 1 0 `S564 1 . 1 0 `S567 1 . 1 0 `S570 1 . 1 0 `S573 1 . 1 0 `S582 1 . 1 0 ]
+[v _RCONbits RCONbits `VES588  1 e 1 @4048 ]
+"11485
+[v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
+"11547
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+[s S356 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"12366
+[s S359 . 1 `uc 1 IOCIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S368 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S373 . 1 `S356 1 . 1 0 `S359 1 . 1 0 `S368 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES373  1 e 1 @4081 ]
+[s S395 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"12448
+[s S404 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S413 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S417 . 1 `S395 1 . 1 0 `S404 1 . 1 0 `S413 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES417  1 e 1 @4082 ]
+"14321
+[v _LATA5 LATA5 `VEb  1 e 0 @31821 ]
+"14657
+[v _PLLRDY PLLRDY `VEb  1 e 0 @32407 ]
+"153 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"154
+[v _flags flags `uc  1 s 1 flags ]
+"185
+[v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
+"70 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+[v _direccion_tx direccion_tx `C[5]uc  1 e 5 0 ]
+"74
+[v _dato_serial dato_serial `uc  1 e 1 0 ]
+"82
+[v _valor valor `ui  1 e 2 0 ]
+"83
+[v _voltaje voltaje `d  1 e 4 0 ]
+"86
+[v _I I `d  1 e 4 0 ]
+"87
+[v _I_max I_max `d  1 e 4 0 ]
+"88
+[v _I_min I_min `d  1 e 4 0 ]
+"91
+[v _i i `i  1 e 2 0 ]
+"92
+[v _j j `i  1 e 2 0 ]
+"93
+[v _k k `i  1 e 2 0 ]
+"94
+[v _l l `i  1 e 2 0 ]
+"95
+[v _valor_string valor_string `[14]uc  1 e 14 0 ]
+"99
+[v _conteo conteo `ul  1 e 4 0 ]
+"100
+[v _currentSeg currentSeg `ul  1 e 4 0 ]
+"101
+[v _previousMillis previousMillis `ul  1 e 4 0 ]
+[s S24 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"52 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/eusart1.c
+[u S29 . 1 `S24 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxLastError eusart1RxLastError `VES29  1 e 1 0 ]
+"58
+[v _EUSART1_FramingErrorHandler EUSART1_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"59
+[v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"60
+[v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
+"57 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
+"58
+[v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
+"255 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"316
+} 0
+"196
+[v _trip_protec_current trip_protec_current `(v  1 e 1 0 ]
+{
+"249
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[u S1857 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+"13
+[s S1860 _IO_FILE 12 `S1857 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v sprintf@f f `S1860  1 a 12 85 ]
+"12
+[v sprintf@ap ap `[1]*.30v  1 a 1 84 ]
+"9
+[v sprintf@s s `*.39uc  1 p 2 77 ]
+[v sprintf@fmt fmt `*.31Cuc  1 p 1 79 ]
+"23
+} 0
+"1817 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v vfprintf@cfmt cfmt `*.31uc  1 a 1 76 ]
+[s S1892 _IO_FILE 0 ]
+"1817
+[v vfprintf@fp fp `*.30S1892  1 p 1 73 ]
+[v vfprintf@fmt fmt `*.31Cuc  1 p 1 74 ]
+[v vfprintf@ap ap `*.30*.30v  1 p 1 75 ]
+"1840
+} 0
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[u S1942 . 4 `d 1 f 4 0 ]
+"1188
+[v vfpfcnvrt@convarg convarg `S1942  1 a 4 67 ]
+"1179
+[v vfpfcnvrt@cp cp `*.31uc  1 a 1 72 ]
+[v vfpfcnvrt@c c `uc  1 a 1 71 ]
+[s S1892 _IO_FILE 0 ]
+"1177
+[v vfpfcnvrt@fp fp `*.30S1892  1 p 1 62 ]
+[v vfpfcnvrt@fmt fmt `*.30*.31uc  1 p 1 63 ]
+[v vfpfcnvrt@ap ap `*.30*.30v  1 p 1 64 ]
+"1814
+} 0
+"1158
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+{
+"1164
+[v read_prec_or_width@c c `uc  1 a 1 12 ]
+"1159
+[v read_prec_or_width@n n `i  1 a 2 13 ]
+"1158
+[v read_prec_or_width@fmt fmt `*.30*.31Cuc  1 p 1 10 ]
+[v read_prec_or_width@ap ap `*.30[1]*.30v  1 p 1 11 ]
+"1171
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 8 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 4 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 6 ]
+"53
+} 0
+"587 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
+[v _efgtoa efgtoa `(v  1 s 1 efgtoa ]
+{
+[u S1905 flui 4 `d 1 f 4 0 `l 1 u 4 0 ]
+"592
+[v efgtoa@u u `S1905  1 a 4 58 ]
+[v efgtoa@g g `S1905  1 a 4 52 ]
+"591
+[v efgtoa@l l `d  1 a 4 47 ]
+[v efgtoa@h h `d  1 a 4 43 ]
+"592
+[v efgtoa@ou ou `S1905  1 a 4 37 ]
+"590
+[v efgtoa@n n `i  1 a 2 56 ]
+[v efgtoa@i i `i  1 a 2 41 ]
+[v efgtoa@w w `i  1 a 2 35 ]
+[v efgtoa@e e `i  1 a 2 33 ]
+[v efgtoa@m m `i  1 a 2 31 ]
+[v efgtoa@d d `i  1 a 2 29 ]
+[v efgtoa@t t `i  1 a 2 22 ]
+[v efgtoa@p p `i  1 a 2 20 ]
+[v efgtoa@ne ne `i  1 a 2 18 ]
+"589
+[v efgtoa@sign sign `uc  1 a 1 51 ]
+[v efgtoa@nmode nmode `uc  1 a 1 28 ]
+[v efgtoa@mode mode `uc  1 a 1 27 ]
+[v efgtoa@pp pp `uc  1 a 1 26 ]
+[s S1892 _IO_FILE 0 ]
+"587
+[v efgtoa@fp fp `*.30S1892  1 p 1 10 ]
+[v efgtoa@f f `d  1 p 4 11 ]
+[v efgtoa@c c `uc  1 p 1 15 ]
+"868
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.39uc  1 e 2 0 ]
+{
+"5
+[v strcpy@d d `*.39uc  1 a 2 8 ]
+"3
+[v strcpy@dest dest `*.39uc  1 p 2 4 ]
+[v strcpy@src src `*.31Cuc  1 p 1 6 ]
+"8
+} 0
+"193 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
+[v _pad pad `(v  1 s 1 pad ]
+{
+"195
+[v pad@i i `i  1 a 2 26 ]
+[s S1892 _IO_FILE 0 ]
+"193
+[v pad@fp fp `*.30S1892  1 p 1 20 ]
+[v pad@buf buf `*.39uc  1 p 2 21 ]
+[v pad@p p `i  1 p 2 23 ]
+"226
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+"11
+[v fputs@i i `i  1 a 2 18 ]
+"10
+[v fputs@c c `uc  1 a 1 17 ]
+"8
+[v fputs@s s `*.39Cuc  1 p 2 14 ]
+[u S1857 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1860 _IO_FILE 12 `S1857 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputs@fp fp `*.30S1860  1 p 1 16 ]
+"19
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 6 ]
+[u S1857 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1860 _IO_FILE 12 `S1857 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputc@fp fp `*.30S1860  1 p 1 8 ]
+"24
+} 0
+"154 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/eusart1.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 a 1 wreg ]
+[v putch@txData txData `uc  1 a 1 wreg ]
+"156
+[v putch@txData txData `uc  1 a 1 5 ]
+"157
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+{
+"8
+[v memcpy@s s `*.39Cuc  1 a 2 13 ]
+"7
+[v memcpy@d d `*.39uc  1 a 2 11 ]
+"9
+[v memcpy@tmp tmp `uc  1 a 1 10 ]
+"4
+[v memcpy@d1 d1 `*.39v  1 p 2 4 ]
+[v memcpy@s1 s1 `*.39Cv  1 p 2 6 ]
+[v memcpy@n n `ui  1 p 2 8 ]
+"18
+} 0
+"1 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\labs.c
+[v _labs labs `(l  1 e 4 0 ]
+{
+[v labs@a a `l  1 p 4 4 ]
+"4
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\floorf.c
+[v _floorf floorf `(f  1 e 4 0 ]
+{
+[u S2014 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"5
+[v floorf@u u `S2014  1 a 4 6 ]
+"7
+[v floorf@m m `ul  1 a 4 0 ]
+"6
+[v floorf@e e `i  1 a 2 4 ]
+"3
+[v floorf@x x `f  1 p 4 76 ]
+"4
+[v floorf@F521 F521 `S2014  1 s 4 F521 ]
+"27
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\__fpclassifyf.c
+[v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
+{
+[u S2014 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"6
+[v ___fpclassifyf@u u `S2014  1 a 4 14 ]
+"7
+[v ___fpclassifyf@e e `i  1 a 2 12 ]
+"4
+[v ___fpclassifyf@x x `f  1 p 4 4 ]
+"5
+[v ___fpclassifyf@F465 F465 `S2014  1 s 4 F465 ]
+"11
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 13 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 12 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 4 ]
+"70
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+{
+[v ___flneg@f1 f1 `d  1 p 4 4 ]
+"20
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+{
+[v ___fleq@ff1 ff1 `d  1 p 4 4 ]
+[v ___fleq@ff2 ff2 `d  1 p 4 8 ]
+"12
+} 0
+"23 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo/Librerias/nRF24L01_2.h
+[v _spi_s_init spi_s_init `(v  1 e 1 0 ]
+{
+"38
+} 0
+"318 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+[v _recibido_1 recibido_1 `(v  1 e 1 0 ]
+{
+"336
+} 0
+"172 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo/Librerias/nRF24L01_2.h
+[v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
+{
+"174
+[v nrf2401_recibe@valor_ valor_ `uc  1 a 1 6 ]
+"181
+} 0
+"240
+[v _nrf2401_haydatos nrf2401_haydatos `(uc  1 e 1 0 ]
+{
+"244
+} 0
+"218
+[v _get_Status get_Status `(uc  1 e 1 0 ]
+{
+"221
+} 0
+"99
+[v _nrf2401_read nrf2401_read `(uc  1 e 1 0 ]
+{
+[v nrf2401_read@reg reg `uc  1 a 1 wreg ]
+"101
+[v nrf2401_read@dato_ dato_ `uc  1 a 1 7 ]
+"99
+[v nrf2401_read@reg reg `uc  1 a 1 wreg ]
+[v nrf2401_read@reg reg `uc  1 a 1 6 ]
+"108
+} 0
+"40
+[v _spi_s_read spi_s_read `(uc  1 e 1 0 ]
+{
+"42
+[v spi_s_read@cont_s cont_s `uc  1 a 1 5 ]
+"43
+[v spi_s_read@dato_ dato_ `uc  1 a 1 4 ]
+"59
+} 0
+"348 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+[v _confirmacion confirmacion `(v  1 e 1 0 ]
+{
+"354
+} 0
+"337
+[v _envio_ya_recibido envio_ya_recibido `(v  1 e 1 0 ]
+{
+"341
+[v envio_ya_recibido@i i `i  1 a 2 13 ]
+"347
+} 0
+"151 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo/Librerias/nRF24L01_2.h
+[v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
+{
+[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 wreg ]
+[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 wreg ]
+[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 8 ]
+"167
+} 0
+"135
+[v _flush_TX flush_TX `(v  1 e 1 0 ]
+{
+"139
+} 0
+"201
+[v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
+{
+[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
+[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
+"203
+[v nrF2401_init_TX@canal canal `uc  1 a 1 10 ]
+"215
+} 0
+"184
+[v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
+{
+[v nrF2401_init_RX@canal canal `uc  1 a 1 wreg ]
+[v nrF2401_init_RX@canal canal `uc  1 a 1 wreg ]
+"186
+[v nrF2401_init_RX@canal canal `uc  1 a 1 10 ]
+"199
+} 0
+"111
+[v _nrf2401_direccion_TX_RX nrf2401_direccion_TX_RX `(v  1 e 1 0 ]
+{
+"113
+[v nrf2401_direccion_TX_RX@cont_s cont_s `uc  1 a 1 9 ]
+"111
+[v nrf2401_direccion_TX_RX@direccion_ direccion_ `*.31Cuc  1 p 1 6 ]
+[v nrf2401_direccion_TX_RX@registro registro `uc  1 p 1 7 ]
+"124
+} 0
+"142
+[v _flush_TX_RX flush_TX_RX `(v  1 e 1 0 ]
+{
+"147
+} 0
+"81
+[v _nrf2401_write nrf2401_write `(v  1 e 1 0 ]
+{
+[v nrf2401_write@reg reg `uc  1 a 1 wreg ]
+[v nrf2401_write@reg reg `uc  1 a 1 wreg ]
+[v nrf2401_write@valor valor `uc  1 p 1 6 ]
+"83
+[v nrf2401_write@reg reg `uc  1 a 1 7 ]
+"89
+} 0
+"91
+[v _nrf2401_comando nrf2401_comando `(v  1 e 1 0 ]
+{
+[v nrf2401_comando@comando comando `uc  1 a 1 wreg ]
+[v nrf2401_comando@comando comando `uc  1 a 1 wreg ]
+"93
+[v nrf2401_comando@comando comando `uc  1 a 1 6 ]
+"97
+} 0
+"61
+[v _spi_s_write spi_s_write `(v  1 e 1 0 ]
+{
+[v spi_s_write@dato_ dato_ `uc  1 a 1 wreg ]
+"63
+[v spi_s_write@cont_s cont_s `uc  1 a 1 5 ]
+"61
+[v spi_s_write@dato_ dato_ `uc  1 a 1 wreg ]
+"63
+[v spi_s_write@dato_ dato_ `uc  1 a 1 4 ]
+"77
+} 0
+"135 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+[v _get_corriente_AC get_corriente_AC `(d  1 e 4 0 ]
+{
+"140
+[v get_corriente_AC@i i `i  1 a 2 0 ]
+"137
+[v get_corriente_AC@corriente corriente `d  1 a 4 2 ]
+"135
+[v get_corriente_AC@n_muestras n_muestras `i  1 p 2 76 ]
+"151
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 14 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 13 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 4 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 12 ]
+"44
+} 0
+"245 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@b b `d  1 p 4 43 ]
+[v ___flsub@a a `d  1 p 4 47 ]
+"250
+} 0
+"10
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 19 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 18 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 17 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 16 ]
+"10
+[v ___fladd@b b `d  1 p 4 4 ]
+[v ___fladd@a a `d  1 p 4 8 ]
+"237
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1722 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1727 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1730 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1722 1 fAsBytes 4 0 `S1727 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1730  1 a 4 37 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 32 ]
+[s S1798 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1801 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1798 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1801  1 a 2 41 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 36 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 31 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 30 ]
+"8
+[v ___flmul@b b `d  1 p 4 18 ]
+[v ___flmul@a a `d  1 p 4 22 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+{
+[v ___flge@ff1 ff1 `d  1 p 4 43 ]
+[v ___flge@ff2 ff2 `d  1 p 4 47 ]
+"19
+} 0
+"11 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 70 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 63 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 68 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 75 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 74 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 67 ]
+"11
+[v ___fldiv@b b `d  1 p 4 51 ]
+[v ___fldiv@a a `d  1 p 4 55 ]
+"185
+} 0
+"110 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/adc.c
+[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
+{
+[v ADC_GetConversion@channel channel `E4620  1 a 1 wreg ]
+[v ADC_GetConversion@channel channel `E4620  1 a 1 wreg ]
+"113
+[v ADC_GetConversion@channel channel `E4620  1 a 1 8 ]
+"128
+} 0
+"50 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"60
+} 0
+"65 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"93
+} 0
+"189
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 4 ]
+"191
+} 0
+"55 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"91
+} 0
+"62 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"76
+} 0
+"52 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"66 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"178
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 4 ]
+"180
+} 0
+"174
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 4 ]
+"176
+} 0
+"182
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 4 ]
+"184
+} 0
+"49 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/ccp2.c
+[v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
+{
+"60
+} 0
+"62 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+{
+"81
+} 0
+"94 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/eusart1.c
+[v _EUSART1_is_tx_ready EUSART1_is_tx_ready `(a  1 e 1 0 ]
+{
+"97
+} 0
+"141
+[v _EUSART1_Write_string EUSART1_Write_string `(v  1 e 1 0 ]
+{
+[v EUSART1_Write_string@data data `*.39Cuc  1 p 2 5 ]
+"147
+} 0
+"132
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+{
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 4 ]
+"139
+} 0
+"58 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+{
+"68
+} 0
+"160 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+{
+"162
+[v TMR1_ISR@CountCallBack CountCallBack `VEui  1 s 2 CountCallBack ]
+"177
+} 0
+"123
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
+"143
+} 0
+"179
+[v _TMR1_CallBack TMR1_CallBack `(v  1 e 1 0 ]
+{
+"187
+} 0
+"193
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"196
+} 0

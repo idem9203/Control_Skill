@@ -7683,12 +7683,11 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\xc.h" 2 3
-# 51 "mcc_generated_files/tmr1.c" 2
-
+# 52 "mcc_generated_files/tmr1.c" 2
 # 1 "mcc_generated_files/tmr1.h" 1
 # 54 "mcc_generated_files/tmr1.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdbool.h" 1 3
-# 54 "mcc_generated_files/tmr1.h" 2
+# 55 "mcc_generated_files/tmr1.h" 2
 # 95 "mcc_generated_files/tmr1.h"
 void TMR1_Initialize(void);
 # 126 "mcc_generated_files/tmr1.h"
@@ -7715,8 +7714,7 @@ void TMR1_CallBack(void);
 extern void (*TMR1_InterruptHandler)(void);
 # 419 "mcc_generated_files/tmr1.h"
 void TMR1_DefaultInterruptHandler(void);
-# 52 "mcc_generated_files/tmr1.c" 2
-
+# 53 "mcc_generated_files/tmr1.c" 2
 
 
 
