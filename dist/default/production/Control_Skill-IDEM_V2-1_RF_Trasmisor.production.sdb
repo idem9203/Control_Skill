@@ -1,0 +1,671 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F25K50 ]
+[d frameptr 4065 ]
+"83 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
+[e E4620 . `uc
+channel_AN0 0
+channel_AN1 1
+channel_AN2 2
+channel_Temp 28
+channel_CTMU 29
+channel_DAC 30
+channel_FVRBuf2 31
+]
+"23 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+[v _spi_s_init spi_s_init `(v  1 e 1 0 ]
+"40
+[v _spi_s_read spi_s_read `(uc  1 e 1 0 ]
+"61
+[v _spi_s_write spi_s_write `(v  1 e 1 0 ]
+"81
+[v _nrf2401_write nrf2401_write `(v  1 e 1 0 ]
+"91
+[v _nrf2401_comando nrf2401_comando `(v  1 e 1 0 ]
+"99
+[v _nrf2401_read nrf2401_read `(uc  1 e 1 0 ]
+"111
+[v _nrf2401_direccion_TX_RX nrf2401_direccion_TX_RX `(v  1 e 1 0 ]
+"128
+[v _flush_RX flush_RX `(v  1 e 1 0 ]
+"135
+[v _flush_TX flush_TX `(v  1 e 1 0 ]
+"142
+[v _flush_TX_RX flush_TX_RX `(v  1 e 1 0 ]
+"151
+[v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
+"172
+[v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
+"184
+[v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
+"201
+[v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
+"218
+[v _get_Status get_Status `(uc  1 e 1 0 ]
+"240
+[v _nrf2401_haydatos nrf2401_haydatos `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"149 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+[v _main main `(v  1 e 1 0 ]
+"220
+[v _envio_1 envio_1 `(v  1 e 1 0 ]
+"232
+[v _envio_2 envio_2 `(v  1 e 1 0 ]
+"244
+[v _envio_ya_recibio envio_ya_recibio `(v  1 e 1 0 ]
+"255
+[v _envio_confirmado envio_confirmado `(v  1 e 1 0 ]
+"263
+[v _condicion_tanque condicion_tanque `(v  1 e 1 0 ]
+"62 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"49 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
+[v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
+"113 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/eusart1.c
+[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
+"132
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+"153
+[v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"155
+[v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"163
+[v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
+"166
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+"170
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"174
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+"50 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"60
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"55 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"232 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k50.h
+[v _ANSELA ANSELA `VEuc  1 e 1 @3931 ]
+"277
+[v _ANSELB ANSELB `VEuc  1 e 1 @3932 ]
+"327
+[v _ANSELC ANSELC `VEuc  1 e 1 @3933 ]
+[s S764 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"2837
+[s S806 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+`uc 1 OSC2 1 0 :1:6 
+]
+[s S814 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFM 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S820 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S823 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+`uc 1 . 1 0 :6:1 
+`uc 1 RJPU 1 0 :1:7 
+]
+[u S827 . 1 `S764 1 . 1 0 `S806 1 . 1 0 `S814 1 . 1 0 `S820 1 . 1 0 `S823 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES827  1 e 1 @3968 ]
+[s S592 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"2977
+[s S714 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S722 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S725 . 1 `S592 1 . 1 0 `S714 1 . 1 0 `S722 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES725  1 e 1 @3969 ]
+"3238
+[v _WPUB WPUB `VEuc  1 e 1 @3973 ]
+"3472
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
+"3584
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S623 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"3611
+[s S632 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S641 . 1 `S623 1 . 1 0 `S632 1 . 1 0 ]
+[v _LATBbits LATBbits `VES641  1 e 1 @3978 ]
+"3696
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+[s S663 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"3723
+[s S672 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LC4 1 0 :1:4 
+`uc 1 LC5 1 0 :1:5 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S681 . 1 `S663 1 . 1 0 `S672 1 . 1 0 ]
+[v _LATCbits LATCbits `VES681  1 e 1 @3979 ]
+"4115
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @3984 ]
+"4135
+[v _CCPR2H CCPR2H `VEuc  1 e 1 @3985 ]
+"4155
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+[s S755 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"4187
+[u S773 . 1 `S755 1 . 1 0 `S764 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES773  1 e 1 @3986 ]
+"4377
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+[s S583 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"4409
+[u S601 . 1 `S583 1 . 1 0 `S592 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES601  1 e 1 @3987 ]
+"4599
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+[s S547 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"4629
+[s S556 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S563 . 1 `S547 1 . 1 0 `S556 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES563  1 e 1 @3988 ]
+"4777
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @3991 ]
+"5241
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
+[s S70 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 ACTIF 1 0 :1:7 
+]
+"5509
+[s S79 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 STIF 1 0 :1:7 
+]
+[s S86 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIF 1 0 :1:7 
+]
+[u S89 . 1 `S70 1 . 1 0 `S79 1 . 1 0 `S86 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES89  1 e 1 @3998 ]
+"6242
+[v _RCSTA1 RCSTA1 `VEuc  1 e 1 @4011 ]
+[s S197 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"6281
+[s S206 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S209 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S213 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S216 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[u S219 . 1 `S197 1 . 1 0 `S206 1 . 1 0 `S209 1 . 1 0 `S213 1 . 1 0 `S216 1 . 1 0 ]
+[v _RCSTA1bits RCSTA1bits `VES219  1 e 1 @4011 ]
+"6448
+[v _TXSTA1 TXSTA1 `VEuc  1 e 1 @4012 ]
+[s S113 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"6506
+[s S122 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S126 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 BRGH1 1 0 :1:2 
+]
+[s S129 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S132 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SENDB1 1 0 :1:3 
+]
+[s S135 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SYNC1 1 0 :1:4 
+]
+[s S138 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+]
+[s S141 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX91 1 0 :1:6 
+]
+[s S144 . 1 `uc 1 TX9D1 1 0 :1:0 
+]
+[s S146 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 TXEN1 1 0 :1:5 
+]
+[u S149 . 1 `S113 1 . 1 0 `S122 1 . 1 0 `S126 1 . 1 0 `S129 1 . 1 0 `S132 1 . 1 0 `S135 1 . 1 0 `S138 1 . 1 0 `S141 1 . 1 0 `S144 1 . 1 0 `S146 1 . 1 0 ]
+[v _TXSTA1bits TXSTA1bits `VES149  1 e 1 @4012 ]
+"6742
+[v _TXREG1 TXREG1 `VEuc  1 e 1 @4013 ]
+"6780
+[v _RCREG1 RCREG1 `VEuc  1 e 1 @4014 ]
+"6818
+[v _SPBRG1 SPBRG1 `VEuc  1 e 1 @4015 ]
+"6956
+[v _SPBRGH1 SPBRGH1 `VEuc  1 e 1 @4016 ]
+"7401
+[v _ACTCON ACTCON `VEuc  1 e 1 @4021 ]
+"7891
+[v _BAUDCON1 BAUDCON1 `VEuc  1 e 1 @4024 ]
+"8827
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"8898
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"8966
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S468 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"9006
+[s S471 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S475 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S478 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S481 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S484 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S487 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[s S490 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S493 . 1 `S468 1 . 1 0 `S471 1 . 1 0 `S475 1 . 1 0 `S478 1 . 1 0 `S481 1 . 1 0 `S484 1 . 1 0 `S487 1 . 1 0 `S490 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES493  1 e 1 @4034 ]
+"9061
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"9068
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"11485
+[v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
+"11547
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+[s S344 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"12366
+[s S347 . 1 `uc 1 IOCIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S356 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S361 . 1 `S344 1 . 1 0 `S347 1 . 1 0 `S356 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES361  1 e 1 @4081 ]
+[s S383 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"12448
+[s S392 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S401 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S405 . 1 `S383 1 . 1 0 `S392 1 . 1 0 `S401 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES405  1 e 1 @4082 ]
+"14321
+[v _LATA5 LATA5 `VEb  1 e 0 @31821 ]
+"14330
+[v _LATB0 LATB0 `VEb  1 e 0 @31824 ]
+"14657
+[v _PLLRDY PLLRDY `VEb  1 e 0 @32407 ]
+"70 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+[v _direccion_tx direccion_tx `C[5]uc  1 e 5 0 ]
+"74
+[v _dato_serial dato_serial `uc  1 e 1 0 ]
+[s S24 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"52 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/eusart1.c
+[u S29 . 1 `S24 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxLastError eusart1RxLastError `VES29  1 e 1 0 ]
+"58
+[v _EUSART1_FramingErrorHandler EUSART1_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"59
+[v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"60
+[v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
+"149 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"217
+} 0
+"23 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+[v _spi_s_init spi_s_init `(v  1 e 1 0 ]
+{
+"38
+} 0
+"240
+[v _nrf2401_haydatos nrf2401_haydatos `(uc  1 e 1 0 ]
+{
+"244
+} 0
+"218
+[v _get_Status get_Status `(uc  1 e 1 0 ]
+{
+"221
+} 0
+"99
+[v _nrf2401_read nrf2401_read `(uc  1 e 1 0 ]
+{
+[v nrf2401_read@reg reg `uc  1 a 1 wreg ]
+"101
+[v nrf2401_read@dato_ dato_ `uc  1 a 1 3 ]
+"99
+[v nrf2401_read@reg reg `uc  1 a 1 wreg ]
+[v nrf2401_read@reg reg `uc  1 a 1 2 ]
+"108
+} 0
+"201
+[v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
+{
+[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
+[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
+"203
+[v nrF2401_init_TX@canal canal `uc  1 a 1 6 ]
+"215
+} 0
+"244 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+[v _envio_ya_recibio envio_ya_recibio `(v  1 e 1 0 ]
+{
+"253
+} 0
+"172 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+[v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
+{
+"174
+[v nrf2401_recibe@valor_ valor_ `uc  1 a 1 2 ]
+"181
+} 0
+"40
+[v _spi_s_read spi_s_read `(uc  1 e 1 0 ]
+{
+"42
+[v spi_s_read@cont_s cont_s `uc  1 a 1 1 ]
+"43
+[v spi_s_read@dato_ dato_ `uc  1 a 1 0 ]
+"59
+} 0
+"263 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+[v _condicion_tanque condicion_tanque `(v  1 e 1 0 ]
+{
+"265
+[v condicion_tanque@j j `i  1 a 2 13 ]
+"282
+} 0
+"255
+[v _envio_confirmado envio_confirmado `(v  1 e 1 0 ]
+{
+"261
+} 0
+"232
+[v _envio_2 envio_2 `(v  1 e 1 0 ]
+{
+"236
+[v envio_2@i i `i  1 a 2 9 ]
+"242
+} 0
+"220
+[v _envio_1 envio_1 `(v  1 e 1 0 ]
+{
+"224
+[v envio_1@i i `i  1 a 2 9 ]
+"230
+} 0
+"151 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+[v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
+{
+[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 wreg ]
+[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 wreg ]
+[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 4 ]
+"167
+} 0
+"135
+[v _flush_TX flush_TX `(v  1 e 1 0 ]
+{
+"139
+} 0
+"184
+[v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
+{
+[v nrF2401_init_RX@canal canal `uc  1 a 1 wreg ]
+[v nrF2401_init_RX@canal canal `uc  1 a 1 wreg ]
+"186
+[v nrF2401_init_RX@canal canal `uc  1 a 1 6 ]
+"199
+} 0
+"111
+[v _nrf2401_direccion_TX_RX nrf2401_direccion_TX_RX `(v  1 e 1 0 ]
+{
+"113
+[v nrf2401_direccion_TX_RX@cont_s cont_s `uc  1 a 1 5 ]
+"111
+[v nrf2401_direccion_TX_RX@direccion_ direccion_ `*.31Cuc  1 p 1 2 ]
+[v nrf2401_direccion_TX_RX@registro registro `uc  1 p 1 3 ]
+"124
+} 0
+"142
+[v _flush_TX_RX flush_TX_RX `(v  1 e 1 0 ]
+{
+"147
+} 0
+"81
+[v _nrf2401_write nrf2401_write `(v  1 e 1 0 ]
+{
+[v nrf2401_write@reg reg `uc  1 a 1 wreg ]
+[v nrf2401_write@reg reg `uc  1 a 1 wreg ]
+[v nrf2401_write@valor valor `uc  1 p 1 2 ]
+"83
+[v nrf2401_write@reg reg `uc  1 a 1 3 ]
+"89
+} 0
+"91
+[v _nrf2401_comando nrf2401_comando `(v  1 e 1 0 ]
+{
+[v nrf2401_comando@comando comando `uc  1 a 1 wreg ]
+[v nrf2401_comando@comando comando `uc  1 a 1 wreg ]
+"93
+[v nrf2401_comando@comando comando `uc  1 a 1 2 ]
+"97
+} 0
+"61
+[v _spi_s_write spi_s_write `(v  1 e 1 0 ]
+{
+[v spi_s_write@dato_ dato_ `uc  1 a 1 wreg ]
+"63
+[v spi_s_write@cont_s cont_s `uc  1 a 1 1 ]
+"61
+[v spi_s_write@dato_ dato_ `uc  1 a 1 wreg ]
+"63
+[v spi_s_write@dato_ dato_ `uc  1 a 1 0 ]
+"77
+} 0
+"50 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"58
+} 0
+"55 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"91
+} 0
+"60 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"74
+} 0
+"49 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
+[v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
+{
+"60
+} 0
+"62 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+{
+"81
+} 0

@@ -1,4 +1,4 @@
-<config configName="default" projectName="IDEMV2-1" configVersion="1.1" device="PIC18F25K50" deviceLibraryClass="com.microchip.mcc.mcu8.Mcu8PeripheralLibrary" coreVersion="5.2.4">
+<config configName="default" projectName="IDEMV2-1" configVersion="1.1" device="PIC18F25K50" deviceLibraryClass="com.microchip.mcc.mcu8.Mcu8PeripheralLibrary" coreVersion="5.5.7">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -152,7 +152,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="dependentModuleKey"/>
-         <value>0</value>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="enableInterrupt"/>

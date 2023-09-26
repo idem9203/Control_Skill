@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\IDEMV2-1.X.production.hex">
+  <executable name="dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>738</used>
-      <free>32030</free>
+      <used>1394</used>
+      <free>31374</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>2048</length>
-      <used>104</used>
-      <free>1944</free>
+      <used>110</used>
+      <free>1938</free>
     </memory>
   </executable>
 </project>

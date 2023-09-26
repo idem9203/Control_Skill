@@ -78,7 +78,9 @@ unsigned char dato_serial = 0;
 ////////////////////////////////////////////////////////////////////////////////
 ////////// DECLARACION DE VARIABLES
 #define RELE1 LATA5
+#define RELE2 LATB0
 #define Input1 PORTAbits.RA3
+#define Input2 PORTAbits.RA4
 char procesa[30];
 char trama[30];
 char puntero = 0;
@@ -139,7 +141,10 @@ unsigned char texto[20];
                          Main application
  */
 
-
+void envio_1();
+void envio_ya_recibio();
+void envio_confirmado();
+void condicion_tanque();
 
 void main(void)
 {
@@ -175,8 +180,10 @@ void main(void)
     TRISAbits.RA3 = 1;                                                          // Puerto RA3 se asigna como entrada
     
     RELE1 = 1;
-    __delay_ms(500);
+    RELE2 = 1;
+    __delay_ms(1000);
     RELE1 = 0;
+    RELE2 = 0;
     
     //INICIAMOS EL MODULO NRF24L01
     spi_s_init();
@@ -190,17 +197,88 @@ void main(void)
         // Add your application code
         
         //EJEMPLO ENVIO DE DATOS TX POR MODULO NRF24L01
-        if(Input1 == 1) 
+        if(Input1 == 0 && Input2 == 1) 
         {
 //            dato_serial = ~dato_serial;
 //            nrf2401_envia(dato_serial);
-            RELE1 = 1;
-            nrf2401_envia(dato_serial);
-            __delay_ms(3000);
+            envio_1();
+            
+            if(nrf2401_haydatos() == 1) envio_ya_recibio();
+          
+            
         }
         else RELE1 = 0;
+        
+        
+        
+        
         __delay_ms(100);
     }
+}
+
+
+void envio_1()
+{
+    dato_serial = 1;
+    RELE1 = 1;
+    int i = 0;
+    for (i = 0; i < 10; i++) {
+        nrf2401_envia(dato_serial);
+        __delay_ms(50);
+    }
+    nrF2401_init_RX(17);
+}
+
+void envio_2()
+{
+    dato_serial = 2;
+    RELE1 = 1;
+    int i = 0;
+    for (i = 0; i < 10; i++) {
+        nrf2401_envia(dato_serial);
+        __delay_ms(50);
+    }
+    nrF2401_init_RX(17);
+}
+
+void envio_ya_recibio()
+{
+    dato_serial = nrf2401_recibe();
+    if(dato_serial == 1)
+    {
+        envio_confirmado();
+        condicion_tanque();
+                
+    }
+}
+
+void envio_confirmado()
+{
+    RELE2 = 1;
+    __delay_ms(1000);
+    RELE2 = 0;  
+    dato_serial = 0;
+}
+
+void condicion_tanque()
+{
+    int j = 0;
+    while(1)
+    {
+        if (Input1 == 1 && Input2 == 0)       //Tanque completamente lleno
+        {
+            envio_2();
+            envio_confirmado();
+            break;
+        }
+        else if (Input1 == 0 && Input2 == 1)  //Tanque completamente vacio
+        {
+            j++;
+            __delay_ms(1000);
+            if (j == 300) break;
+        }
+    }
+    
 }
 /**
  End of File

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=IDEMV2-1.X
+PROJECTNAME=Control_Skill-IDEM_V2-1_RF_Trasmisor
 
 # Active Configuration
 DEFAULTCONF=default
