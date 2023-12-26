@@ -150,6 +150,8 @@ void flush_TX_RX()
 //
 void nrf2401_envia(unsigned char dato_tx)
 {
+    spi_s_init();
+    nrF2401_init_TX(17);
     unsigned char cont_ = 0;
 
     flush_TX();

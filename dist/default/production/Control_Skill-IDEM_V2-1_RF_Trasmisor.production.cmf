@@ -11,40 +11,31 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+$C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 idloc IDLOC 5 200000 200000 8 1 1
 init CODE 0 0 0 4 1 2
 config CONFIG 4 300000 300000 E 1 1
 $dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-cinit CODE 0 BEA BEA 22 1 2
+cinit CODE 0 AAC AAC 22 1 2
 idloc IDLOC 5 200000 200000 8 1 1
 text0 CODE 0 80C 80C 9E 1 2
-text1 CODE 0 CF4 CF4 16 1 2
-text2 CODE 0 C6C C6C 1E 1 2
-text3 CODE 0 D66 D66 8 1 2
-text4 CODE 0 C8A C8A 1C 1 2
-text5 CODE 0 9A4 9A4 60 1 2
-text6 CODE 0 C0C C0C 20 1 2
-text7 CODE 0 CC2 CC2 1A 1 2
-text8 CODE 0 B00 B00 46 1 2
-text9 CODE 0 8AA 8AA 86 1 2
-text10 CODE 0 C2C C2C 20 1 2
-text11 CODE 0 A04 A04 5A 1 2
-text12 CODE 0 A5E A5E 5A 1 2
-text13 CODE 0 B86 B86 36 1 2
-text14 CODE 0 D34 D34 12 1 2
-text15 CODE 0 930 930 74 1 2
-text16 CODE 0 B46 B46 40 1 2
-text17 CODE 0 CDC CDC 18 1 2
-text18 CODE 0 CA6 CA6 1C 1 2
-text19 CODE 0 D20 D20 14 1 2
-text20 CODE 0 AB8 AB8 48 1 2
-text21 CODE 0 D46 D46 12 1 2
-text22 CODE 0 BBC BBC 2E 1 2
-text23 CODE 0 C4C C4C 20 1 2
-text24 CODE 0 D58 D58 E 1 2
-text25 CODE 0 D0A D0A 16 1 2
-cstackCOMRAM COMRAM 1 40 40 11 1 1
+text1 CODE 0 90A 90A 56 1 2
+text2 CODE 0 960 960 56 1 2
+text3 CODE 0 9FE 9FE 40 1 2
+text4 CODE 0 B22 B22 16 1 2
+text5 CODE 0 8AA 8AA 60 1 2
+text6 CODE 0 A3E A3E 40 1 2
+text7 CODE 0 B0A B0A 18 1 2
+text8 CODE 0 B62 B62 12 1 2
+text9 CODE 0 AEE AEE 1C 1 2
+text10 CODE 0 B4E B4E 14 1 2
+text11 CODE 0 9B6 9B6 48 1 2
+text12 CODE 0 B74 B74 12 1 2
+text13 CODE 0 A7E A7E 2E 1 2
+text14 CODE 0 ACE ACE 20 1 2
+text15 CODE 0 B86 B86 E 1 2
+text16 CODE 0 B38 B38 16 1 2
+cstackCOMRAM COMRAM 1 40 40 E 1 1
 bssBANK0 BANK0 1 60 60 1E 1 1
 smallconst SMALLCONST 0 800 800 C 1 2
 bssCOMRAM COMRAM 1 1 1 3F 1 1
@@ -66,16 +57,16 @@ BANK5 500-5FF 1
 BANK6 600-6FF 1
 BANK7 700-7FF 1
 CONST 4-7FF 1
-CONST D6E-7FFF 1
-SMALLCONST D6E-7FFF 1
+CONST B94-7FFF 1
+SMALLCONST B94-7FFF 1
 CODE 4-7FF 1
-CODE D6E-7FFF 1
-BIGRAM 51-5F 1
+CODE B94-7FFF 1
+BIGRAM 4E-5F 1
 BIGRAM 7E-7FF 1
 BIGSFR F53-FFF 1
-COMRAM 51-5F 1
+COMRAM 4E-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST D6E-7FFF 1
+MEDIUMCONST B94-7FFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -90,262 +81,192 @@ MEDIUMCONST D6E-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-D0A text25 CODE >62:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
-D0A text25 CODE >67:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
-D0E text25 CODE >70:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
-D12 text25 CODE >73:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
-D16 text25 CODE >76:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
-D1A text25 CODE >79:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
-D1E text25 CODE >81:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
-D58 text24 CODE >49:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
-D58 text24 CODE >53:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
-D5C text24 CODE >56:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
-D60 text24 CODE >59:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
-D64 text24 CODE >60:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
-C4C text23 CODE >60:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-C4C text23 CODE >63:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-C50 text23 CODE >65:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-C54 text23 CODE >67:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-C58 text23 CODE >69:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-C5C text23 CODE >71:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-C5C text23 CODE >73:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-C6A text23 CODE >74:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-BBC text22 CODE >55:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BBC text22 CODE >60:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BC0 text22 CODE >61:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BC4 text22 CODE >62:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BC8 text22 CODE >67:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BCC text22 CODE >68:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BD0 text22 CODE >69:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BD4 text22 CODE >74:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BDA text22 CODE >75:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BDE text22 CODE >76:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BE2 text22 CODE >81:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BE6 text22 CODE >82:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-BE8 text22 CODE >91:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
-D46 text21 CODE >50:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-D46 text21 CODE >53:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-D4A text21 CODE >54:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-D4E text21 CODE >55:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-D52 text21 CODE >56:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-D56 text21 CODE >58:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
-AB8 text20 CODE >61:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-ABA text20 CODE >63:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-ABE text20 CODE >65:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-AC2 text20 CODE >68:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-AD6 text20 CODE >69:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-AD8 text20 CODE >70:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-ADC text20 CODE >72:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-ADE text20 CODE >73:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-AE4 text20 CODE >74:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-AE6 text20 CODE >75:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-AEC text20 CODE >76:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-AFE text20 CODE >77:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D20 text19 CODE >91:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D22 text19 CODE >93:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D24 text19 CODE >94:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D2A text19 CODE >95:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D2C text19 CODE >96:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D32 text19 CODE >97:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CA6 text18 CODE >81:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CA8 text18 CODE >83:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CAA text18 CODE >84:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CB2 text18 CODE >85:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CB8 text18 CODE >86:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CBA text18 CODE >87:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CC0 text18 CODE >89:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CDC text17 CODE >142:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CDC text17 CODE >144:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CE6 text17 CODE >145:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CEC text17 CODE >146:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CF2 text17 CODE >147:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B46 text16 CODE >111:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B46 text16 CODE >115:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B48 text16 CODE >116:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B50 text16 CODE >117:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B54 text16 CODE >119:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B6A text16 CODE >120:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B7C text16 CODE >121:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B7E text16 CODE >122:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B84 text16 CODE >124:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-930 text15 CODE >184:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-932 text15 CODE >186:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-934 text15 CODE >187:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-93E text15 CODE >188:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-948 text15 CODE >189:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-952 text15 CODE >190:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-95C text15 CODE >191:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-966 text15 CODE >192:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-970 text15 CODE >193:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-97A text15 CODE >194:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-984 text15 CODE >195:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-990 text15 CODE >196:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-99C text15 CODE >197:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9A0 text15 CODE >198:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9A2 text15 CODE >199:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D34 text14 CODE >135:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D34 text14 CODE >137:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D3E text14 CODE >138:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D44 text14 CODE >139:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B86 text13 CODE >151:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B88 text13 CODE >153:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B88 text13 CODE >155:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B8C text13 CODE >156:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B96 text13 CODE >159:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B98 text13 CODE >160:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B9E text13 CODE >161:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-BA4 text13 CODE >162:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-BA6 text13 CODE >163:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-BA8 text13 CODE >164:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-BAE text13 CODE >165:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-BB0 text13 CODE >166:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-BBA text13 CODE >167:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-A5E text12 CODE >220:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A5E text12 CODE >222:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A62 text12 CODE >223:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A64 text12 CODE >224:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A6C text12 CODE >225:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A74 text12 CODE >226:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A7A text12 CODE >227:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A90 text12 CODE >228:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-AB0 text12 CODE >229:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-AB6 text12 CODE >230:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A04 text11 CODE >232:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A04 text11 CODE >234:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A08 text11 CODE >235:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A0A text11 CODE >236:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A12 text11 CODE >237:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A1A text11 CODE >238:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A20 text11 CODE >239:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A36 text11 CODE >240:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A56 text11 CODE >241:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-A5C text11 CODE >242:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C2C text10 CODE >255:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C2C text10 CODE >257:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C2E text10 CODE >258:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C44 text10 CODE >259:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C46 text10 CODE >260:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C4A text10 CODE >261:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-8AA text9 CODE >263:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-8AA text9 CODE >265:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-8B2 text9 CODE >268:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-8CE text9 CODE >270:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-8D2 text9 CODE >271:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-8D6 text9 CODE >272:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-8DA text9 CODE >274:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-8F6 text9 CODE >276:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-8FA text9 CODE >277:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-910 text9 CODE >278:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-92A text9 CODE >279:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-92E text9 CODE >282:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-B00 text8 CODE >40:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B00 text8 CODE >42:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B04 text8 CODE >43:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B08 text8 CODE >45:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B0C text8 CODE >47:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B10 text8 CODE >48:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B12 text8 CODE >49:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B18 text8 CODE >51:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B26 text8 CODE >53:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B28 text8 CODE >55:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B2A text8 CODE >56:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B30 text8 CODE >57:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B42 text8 CODE >58:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-B44 text8 CODE >59:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CC2 text7 CODE >172:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CC2 text7 CODE >175:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CC4 text7 CODE >176:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CCA text7 CODE >177:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CD0 text7 CODE >178:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CD2 text7 CODE >179:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CD8 text7 CODE >180:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CDA text7 CODE >181:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C0C text6 CODE >244:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C0C text6 CODE >246:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C12 text6 CODE >247:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C22 text6 CODE >249:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C26 text6 CODE >250:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-C2A text6 CODE >253:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-9A4 text5 CODE >201:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9A6 text5 CODE >203:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9A8 text5 CODE >204:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9B2 text5 CODE >206:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9BC text5 CODE >207:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9C6 text5 CODE >208:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9D0 text5 CODE >209:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9DA text5 CODE >210:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9E4 text5 CODE >211:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9F0 text5 CODE >212:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-9FC text5 CODE >213:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-A00 text5 CODE >214:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-A02 text5 CODE >215:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C8A text4 CODE >99:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C8C text4 CODE >101:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C8C text4 CODE >102:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C8E text4 CODE >103:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C94 text4 CODE >104:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C9A text4 CODE >105:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C9C text4 CODE >106:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CA2 text4 CODE >107:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CA4 text4 CODE >108:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D66 text3 CODE >218:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D66 text3 CODE >220:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D6C text3 CODE >221:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C6C text2 CODE >240:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C6C text2 CODE >242:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C86 text2 CODE >243:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-C88 text2 CODE >244:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CF4 text1 CODE >23:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CF4 text1 CODE >26:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CF6 text1 CODE >27:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CF8 text1 CODE >28:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CFA text1 CODE >29:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CFC text1 CODE >30:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-CFE text1 CODE >31:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D00 text1 CODE >33:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D02 text1 CODE >34:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D04 text1 CODE >35:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D06 text1 CODE >36:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-D08 text1 CODE >38:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-80C text0 CODE >149:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-80C text0 CODE >152:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-810 text0 CODE >171:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-816 text0 CODE >172:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-81A text0 CODE >173:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-81E text0 CODE >180:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-820 text0 CODE >182:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-822 text0 CODE >183:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-824 text0 CODE >184:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-83A text0 CODE >185:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-83C text0 CODE >186:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-83E text0 CODE >189:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-842 text0 CODE >190:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-848 text0 CODE >193:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-84C text0 CODE >200:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-868 text0 CODE >204:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-86C text0 CODE >206:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-888 text0 CODE >210:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-88A text0 CODE >215:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-BEA cinit CODE >2723:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BEA cinit CODE >2725:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BEA cinit CODE >2728:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BEA cinit CODE >2782:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BEE cinit CODE >2783:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BF0 cinit CODE >2784:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BF0 cinit CODE >2785:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BF2 cinit CODE >2786:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BF4 cinit CODE >2787:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BF6 cinit CODE >2790:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BFA cinit CODE >2791:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BFC cinit CODE >2792:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BFC cinit CODE >2793:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-BFE cinit CODE >2794:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-C00 cinit CODE >2795:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-C02 cinit CODE >2801:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-C02 cinit CODE >2804:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-C04 cinit CODE >2805:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-C06 cinit CODE >2806:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
-C08 cinit CODE >2807:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.s
+B38 text16 CODE >62:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
+B38 text16 CODE >67:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
+B3C text16 CODE >70:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
+B40 text16 CODE >73:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
+B44 text16 CODE >76:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
+B48 text16 CODE >79:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
+B4C text16 CODE >81:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
+B86 text15 CODE >49:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
+B86 text15 CODE >53:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
+B8A text15 CODE >56:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
+B8E text15 CODE >59:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
+B92 text15 CODE >60:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
+ACE text14 CODE >60:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+ACE text14 CODE >63:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+AD2 text14 CODE >65:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+AD6 text14 CODE >67:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+ADA text14 CODE >69:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+ADE text14 CODE >71:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+ADE text14 CODE >73:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+AEC text14 CODE >74:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+A7E text13 CODE >55:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+A7E text13 CODE >60:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+A82 text13 CODE >61:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+A86 text13 CODE >62:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+A8A text13 CODE >67:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+A8E text13 CODE >68:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+A92 text13 CODE >69:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+A96 text13 CODE >74:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+A9C text13 CODE >75:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+AA0 text13 CODE >76:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+AA4 text13 CODE >81:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+AA8 text13 CODE >82:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+AAA text13 CODE >91:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/pin_manager.c
+B74 text12 CODE >50:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+B74 text12 CODE >53:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+B78 text12 CODE >54:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+B7C text12 CODE >55:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+B80 text12 CODE >56:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+B84 text12 CODE >58:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/mcc.c
+9B6 text11 CODE >61:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9B8 text11 CODE >63:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9BC text11 CODE >65:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9C0 text11 CODE >68:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9D4 text11 CODE >69:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9D6 text11 CODE >70:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9DA text11 CODE >72:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9DC text11 CODE >73:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9E2 text11 CODE >74:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9E4 text11 CODE >75:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9EA text11 CODE >76:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9FC text11 CODE >77:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B4E text10 CODE >91:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B50 text10 CODE >93:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B52 text10 CODE >94:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B58 text10 CODE >95:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B5A text10 CODE >96:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B60 text10 CODE >97:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+AEE text9 CODE >81:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+AF0 text9 CODE >83:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+AF2 text9 CODE >84:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+AFA text9 CODE >85:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B00 text9 CODE >86:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B02 text9 CODE >87:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B08 text9 CODE >89:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B62 text8 CODE >135:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B62 text8 CODE >137:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B6C text8 CODE >138:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B72 text8 CODE >139:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B0A text7 CODE >142:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B0A text7 CODE >144:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B14 text7 CODE >145:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B1A text7 CODE >146:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B20 text7 CODE >147:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A3E text6 CODE >111:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A3E text6 CODE >115:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A40 text6 CODE >116:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A48 text6 CODE >117:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A4C text6 CODE >119:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A62 text6 CODE >120:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A74 text6 CODE >121:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A76 text6 CODE >122:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A7C text6 CODE >124:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+8AA text5 CODE >203:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+8AC text5 CODE >205:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+8AE text5 CODE >206:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+8B8 text5 CODE >208:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+8C2 text5 CODE >209:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+8CC text5 CODE >210:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+8D6 text5 CODE >211:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+8E0 text5 CODE >212:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+8EA text5 CODE >213:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+8F6 text5 CODE >214:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+902 text5 CODE >215:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+906 text5 CODE >216:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+908 text5 CODE >217:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B22 text4 CODE >23:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B22 text4 CODE >26:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B24 text4 CODE >27:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B26 text4 CODE >28:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B28 text4 CODE >29:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B2A text4 CODE >30:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B2C text4 CODE >31:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B2E text4 CODE >33:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B30 text4 CODE >34:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B32 text4 CODE >35:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B34 text4 CODE >36:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+B36 text4 CODE >38:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+9FE text3 CODE >151:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A00 text3 CODE >153:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A04 text3 CODE >154:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A0A text3 CODE >155:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A0A text3 CODE >157:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A0E text3 CODE >158:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A18 text3 CODE >161:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A1A text3 CODE >162:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A20 text3 CODE >163:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A26 text3 CODE >164:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A28 text3 CODE >165:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A2A text3 CODE >166:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A30 text3 CODE >167:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A32 text3 CODE >168:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+A3C text3 CODE >169:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
+960 text2 CODE >229:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+960 text2 CODE >231:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+964 text2 CODE >232:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+966 text2 CODE >233:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+968 text2 CODE >234:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+970 text2 CODE >236:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+978 text2 CODE >237:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+97E text2 CODE >238:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+994 text2 CODE >239:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+9B4 text2 CODE >241:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+90A text1 CODE >243:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+90A text1 CODE >245:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+90E text1 CODE >246:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+910 text1 CODE >247:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+912 text1 CODE >248:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+91A text1 CODE >250:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+922 text1 CODE >251:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+928 text1 CODE >252:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+93E text1 CODE >253:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+95E text1 CODE >255:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+80C text0 CODE >150:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+80C text0 CODE >153:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+810 text0 CODE >172:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+816 text0 CODE >173:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+81A text0 CODE >174:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+81E text0 CODE >181:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+820 text0 CODE >183:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+822 text0 CODE >184:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+824 text0 CODE >185:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+83A text0 CODE >186:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+83C text0 CODE >187:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+83E text0 CODE >190:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+842 text0 CODE >191:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+848 text0 CODE >194:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+84C text0 CODE >201:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+868 text0 CODE >205:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+86C text0 CODE >209:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+870 text0 CODE >210:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+87E text0 CODE >212:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+882 text0 CODE >213:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+886 text0 CODE >215:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+886 text0 CODE >217:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+888 text0 CODE >218:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+88A text0 CODE >224:C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+AAC cinit CODE >2708:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AAC cinit CODE >2710:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AAC cinit CODE >2713:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AAC cinit CODE >2767:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AB0 cinit CODE >2768:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AB2 cinit CODE >2769:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AB2 cinit CODE >2770:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AB4 cinit CODE >2771:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AB6 cinit CODE >2772:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AB8 cinit CODE >2775:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+ABC cinit CODE >2776:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+ABE cinit CODE >2777:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+ABE cinit CODE >2778:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AC0 cinit CODE >2779:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AC2 cinit CODE >2780:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AC4 cinit CODE >2786:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AC4 cinit CODE >2789:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AC6 cinit CODE >2790:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+AC8 cinit CODE >2791:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
+ACA cinit CODE >2792:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -360,12 +281,12 @@ C08 cinit CODE >2807:C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_1.
 %SYMTAB
 _dato_serial 3E 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Hspace_0 D6E 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__Hspace_0 B94 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hspace_1 7E 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hspace_4 60000E 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -373,30 +294,26 @@ _LATA F89 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor
 _LATB F8A 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _LATC F8B 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _WPUB F85 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-___sp 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+___sp 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 _main 80C 0 CODE 0 text0 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-_nrf2401_recibe CC2 0 CODE 0 text7 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-start 0 0 CODE 0 init C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+___stack_hi 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+start 0 0 CODE 0 init C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 nrf2401_comando@comando 42 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-nrf2401_envia@dato_tx 44 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_condicion_tanque 930 0 CODE 0 text9 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+nrf2401_envia@dato_tx 47 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_spi_s_write AB8 0 CODE 0 text20 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__accesstop 60 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-intlevel0 0 0 CODE 0 text C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-intlevel1 0 0 CODE 0 text C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-intlevel2 0 0 CODE 0 text C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-intlevel3 0 0 CODE 0 text C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+_spi_s_write 9B6 0 CODE 0 text11 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__accesstop 60 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-spi_s_read@cont_s 41 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 spi_s_write@dato_ 40 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_nrf2401_recibe CDC 0 CODE 0 text7 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _ACTCON FB5 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _ADCON0 FC2 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _ADCON1 FC1 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -406,29 +323,26 @@ _ADRESL FC3 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmis
 _ANSELA F5B 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _ANSELB F5C 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _ANSELC F5D 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_envio_1 AB8 0 CODE 0 text12 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_envio_2 A5E 0 CODE 0 text11 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+__end_of_envio_1 9B6 0 CODE 0 text2 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_envio_2 960 0 CODE 0 text1 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 _CCPR2H F91 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _CCPR2L F90 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 spi_s_write@cont_s 41 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_CCP2_Initialize D66 0 CODE 0 text24 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_CCP2_Initialize B94 0 CODE 0 text15 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _TXSTA1bits FAC 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hintcodelo 0 0 CODE 0 intcodelo dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-nrf2401_read@reg 42 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 nrf2401_direccion_TX_RX@direccion_ 42 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_nrf2401_haydatos C6C 0 CODE 0 text2 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-condicion_tanque@j 4D 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 nrF2401_init_TX@canal 46 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_flush_TX_RX CF4 0 CODE 0 text17 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_flush_TX_RX B22 0 CODE 0 text7 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _INTCON2bits FF1 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_PIN_MANAGER_Initialize BBC 0 CODE 0 text22 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-start_initialization BEA 0 CODE 0 cinit dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_PIN_MANAGER_Initialize A7E 0 CODE 0 text13 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+start_initialization AAC 0 CODE 0 cinit dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _eusart1RxLastError 3F 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _OSCCON FD3 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -436,21 +350,19 @@ _PLLRDY 7E97 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmi
 _TRISAbits F92 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _TRISBbits F93 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _TRISCbits F94 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_CCP2_Initialize D58 0 CODE 0 text24 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_CCP2_Initialize B86 0 CODE 0 text15 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _RCREG1 FAE 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _RCSTA1 FAB 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_SYSTEM_Initialize D58 0 CODE 0 text21 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_SYSTEM_Initialize B86 0 CODE 0 text12 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 nrf2401_write@valor 42 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _SPBRG1 FAF 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _TXREG1 FAD 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _TXSTA1 FAC 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _EUSART1_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _EUSART1_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-__end_of_nrF2401_init_RX 9A4 0 CODE 0 text15 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_nrF2401_init_TX A04 0 CODE 0 text5 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_get_Status D66 0 CODE 0 text3 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+__end_of_nrF2401_init_TX 90A 0 CODE 0 text5 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hbank2 0 0 ABS 0 bank2 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -480,10 +392,8 @@ __Htext9 0 0 ABS 0 text9 dist/default/production\Control_Skill-IDEM_V2-1_RF_Tras
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 _BAUDCON1 FB8 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-nrF2401_init_RX@canal 46 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_nrf2401_haydatos C8A 0 CODE 0 text2 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hconfig 30000E 0 CONFIG 4 config dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -514,14 +424,13 @@ __Ltext8 0 0 ABS 0 text8 dist/default/production\Control_Skill-IDEM_V2-1_RF_Tras
 __Ltext9 0 0 ABS 0 text9 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _EUSART1_FramingErrorHandler 39 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _EUSART1_OverrunErrorHandler 37 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_nrf2401_envia B86 0 CODE 0 text13 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_nrf2401_envia 9FE 0 CODE 0 text3 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_nrf2401_write CA6 0 CODE 0 text18 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_nrf2401_write AEE 0 CODE 0 text9 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _PORTAbits F80 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _PORTBbits F81 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _INTCONbits FF2 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_envio_ya_recibio C0C 0 CODE 0 text6 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Habs1 0 0 ABS 0 abs1 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hdata 0 0 ABS 0 data dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hheap 0 0 HEAP 7 heap dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -538,31 +447,26 @@ __Lrbit 0 0 COMRAM 1 rbit dist/default/production\Control_Skill-IDEM_V2-1_RF_Tra
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Ltemp 0 0 COMRAM 1 temp dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Ltext 0 0 ABS 0 text dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-nrf2401_recibe@valor_ 42 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hintret 0 0 ABS 0 intret dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__S0 D6E 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__S0 B94 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __S1 7E 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __S4 0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __S5 0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 nrf2401_direccion_TX_RX@cont_s 45 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _ADC_InterruptHandler 33 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _EUSART1_DefaultErrorHandler 0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_nrF2401_init_RX 930 0 CODE 0 text15 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_nrF2401_init_TX 9A4 0 CODE 0 text5 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_nrf2401_comando D34 0 CODE 0 text19 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_spi_s_write B00 0 CODE 0 text20 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_nrF2401_init_TX 8AA 0 CODE 0 text5 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_nrf2401_comando B62 0 CODE 0 text10 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_spi_s_write 9FE 0 CODE 0 text11 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _datorx 3C 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_get_Status D6E 0 CODE 0 text3 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_SYSTEM_Initialize D46 0 CODE 0 text21 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_SYSTEM_Initialize B74 0 CODE 0 text12 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lintentry 0 0 ABS 0 intentry dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-nrf2401_read@dato_ 43 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_nrf2401_read C8A 0 CODE 0 text4 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_envio_1 A5E 0 CODE 0 text12 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_envio_2 A04 0 CODE 0 text11 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_envio_1 960 0 CODE 0 text2 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_envio_2 90A 0 CODE 0 text1 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hramtop 800 0 RAM 0 ramtop dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __activetblptr 2 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -577,53 +481,34 @@ __Htext13 0 0 ABS 0 text13 dist/default/production\Control_Skill-IDEM_V2-1_RF_Tr
 __Htext14 0 0 ABS 0 text14 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Htext15 0 0 ABS 0 text15 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Htext16 0 0 ABS 0 text16 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Htext17 0 0 ABS 0 text17 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Htext18 0 0 ABS 0 text18 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Htext19 0 0 ABS 0 text19 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Htext20 0 0 ABS 0 text20 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Htext21 0 0 ABS 0 text21 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Htext22 0 0 ABS 0 text22 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Htext23 0 0 ABS 0 text23 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Htext24 0 0 ABS 0 text24 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Htext25 0 0 ABS 0 text25 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_ADC_Initialize D0A 0 CODE 0 text25 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext10 C2C 0 CODE 0 text10 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext11 A04 0 CODE 0 text11 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext12 A5E 0 CODE 0 text12 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext13 B86 0 CODE 0 text13 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext14 D34 0 CODE 0 text14 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext15 930 0 CODE 0 text15 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext16 B46 0 CODE 0 text16 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext17 CDC 0 CODE 0 text17 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext18 CA6 0 CODE 0 text18 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext19 D20 0 CODE 0 text19 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext20 AB8 0 CODE 0 text20 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext21 D46 0 CODE 0 text21 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext22 BBC 0 CODE 0 text22 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext23 C4C 0 CODE 0 text23 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext24 D58 0 CODE 0 text24 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext25 D0A 0 CODE 0 text25 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_PIN_MANAGER_Initialize BEA 0 CODE 0 text22 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_ADC_Initialize B38 0 CODE 0 text16 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext10 B4E 0 CODE 0 text10 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext11 9B6 0 CODE 0 text11 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext12 B74 0 CODE 0 text12 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext13 A7E 0 CODE 0 text13 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext14 ACE 0 CODE 0 text14 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext15 B86 0 CODE 0 text15 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext16 B38 0 CODE 0 text16 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_PIN_MANAGER_Initialize AAC 0 CODE 0 text13 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _EUSART1_ErrorHandler 35 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_nrf2401_comando D20 0 CODE 0 text19 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_nrf2401_comando B4E 0 CODE 0 text10 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lconfig 0 0 CONFIG 4 config dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _LATBbits F8A 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_envio_ya_recibio C2C 0 CODE 0 text6 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _LATCbits F8B 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _RCSTA1bits FAB 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-___inthi_stack_hi 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-isa$std 1 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-_nrf2401_direccion_TX_RX B46 0 CODE 0 text16 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_nrf2401_direccion_TX_RX B86 0 CODE 0 text16 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-stackhi 0 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-stacklo 0 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+isa$std 1 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+_nrf2401_direccion_TX_RX A3E 0 CODE 0 text6 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_nrf2401_direccion_TX_RX A7E 0 CODE 0 text6 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+stackhi 0 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 __Lintcode 0 0 CODE 0 intcode dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _OSCCON2 FD2 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _OSCTUNE F9B 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -635,35 +520,32 @@ __Lspace_1 0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmi
 __Lspace_2 0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lspace_4 0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __pbssCOMRAM 1 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_ADC_Initialize D20 0 CODE 0 text25 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_ADC_Initialize B4E 0 CODE 0 text16 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _PIR1bits F9E 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_nrf2401_read CA6 0 CODE 0 text4 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_nrf2401_envia BBC 0 CODE 0 text13 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-end_of_initialization C02 0 CODE 0 cinit dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_spi_s_init CF4 0 CODE 0 text1 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_spi_s_read B00 0 CODE 0 text8 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_nrf2401_write CC2 0 CODE 0 text18 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_nrf2401_envia A3E 0 CODE 0 text3 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+end_of_initialization AC4 0 CODE 0 cinit dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_spi_s_init B22 0 CODE 0 text4 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_nrf2401_write B0A 0 CODE 0 text9 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hintentry 0 0 ABS 0 intentry dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __end_of_direccion_rx 806 0 SMALLCONST 0 smallconst dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __end_of_direccion_tx 80B 0 SMALLCONST 0 smallconst dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hreset_vec 0 0 CODE 0 reset_vec dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_envio_confirmado C2C 0 CODE 0 text10 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lramtop 800 0 RAM 0 ramtop dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__pcinit BEA 0 CODE 0 cinit dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__pcinit AAC 0 CODE 0 cinit dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __ptext0 80C 0 CODE 0 text0 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext1 CF4 0 CODE 0 text1 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext2 C6C 0 CODE 0 text2 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext3 D66 0 CODE 0 text3 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext4 C8A 0 CODE 0 text4 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext5 9A4 0 CODE 0 text5 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext6 C0C 0 CODE 0 text6 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext7 CC2 0 CODE 0 text7 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext8 B00 0 CODE 0 text8 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ptext9 8AA 0 CODE 0 text9 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext1 90A 0 CODE 0 text1 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext2 960 0 CODE 0 text2 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext3 9FE 0 CODE 0 text3 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext4 B22 0 CODE 0 text4 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext5 8AA 0 CODE 0 text5 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext6 A3E 0 CODE 0 text6 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext7 B0A 0 CODE 0 text7 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext8 B62 0 CODE 0 text8 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__ptext9 AEE 0 CODE 0 text9 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Ltext11 0 0 ABS 0 text11 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -672,44 +554,33 @@ __Ltext13 0 0 ABS 0 text13 dist/default/production\Control_Skill-IDEM_V2-1_RF_Tr
 __Ltext14 0 0 ABS 0 text14 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Ltext15 0 0 ABS 0 text15 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Ltext16 0 0 ABS 0 text16 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Ltext17 0 0 ABS 0 text17 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Ltext18 0 0 ABS 0 text18 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Ltext19 0 0 ABS 0 text19 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Ltext20 0 0 ABS 0 text20 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Ltext21 0 0 ABS 0 text21 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Ltext22 0 0 ABS 0 text22 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Ltext23 0 0 ABS 0 text23 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Ltext24 0 0 ABS 0 text24 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__Ltext25 0 0 ABS 0 text25 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+___heap_hi 0 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-___intlo_stack_hi 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs1hk.\driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\TEOREM~1\AppData\Local\Temp\xcAs11do.\driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _flag_rx 3B 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of__initialization C02 0 CODE 0 cinit dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of__initialization AC4 0 CODE 0 cinit dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-spi_s_read@dato_ 40 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _SPBRGH1 FB0 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_spi_s_init D0A 0 CODE 0 text1 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_spi_s_read B46 0 CODE 0 text8 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_flush_TX D34 0 CODE 0 text14 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_spi_s_init B38 0 CODE 0 text4 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_flush_TX B62 0 CODE 0 text8 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __pcstackCOMRAM 40 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_flush_TX_RX CDC 0 CODE 0 text17 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-envio_1@i 49 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-envio_2@i 49 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_flush_TX_RX B0A 0 CODE 0 text7 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+envio_1@i 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+envio_2@i 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 nrf2401_direccion_TX_RX@registro 43 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _procesa 1 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __end_of_main 8AA 0 CODE 0 text0 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_flush_TX D46 0 CODE 0 text14 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_flush_TX B74 0 CODE 0 text8 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _LATA5 7C4D 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _LATB0 7C50 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _TRISA F92 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -723,14 +594,12 @@ __LRAM 1 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.
 __Lbss 0 0 RAM 1 bss dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_condicion_tanque 8AA 0 CODE 0 text9 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _texto 1F 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _trama 60 0 BANK0 1 bssBANK0 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _puntero 3D 0 COMRAM 1 bssCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 _CCP2CON F97 0 ABS 0 - dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_envio_confirmado C4C 0 CODE 0 text10 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__end_of_OSCILLATOR_Initialize C6C 0 CODE 0 text23 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-__initialization BEA 0 CODE 0 cinit dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__end_of_OSCILLATOR_Initialize AEE 0 CODE 0 text14 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+__initialization AAC 0 CODE 0 cinit dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 nrf2401_write@reg 43 0 COMRAM 1 cstackCOMRAM dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
@@ -738,7 +607,7 @@ __Hsmallconst 80C 0 SMALLCONST 0 smallconst dist/default/production\Control_Skil
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 __Hintcode 0 0 CODE 0 intcode dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
-_OSCILLATOR_Initialize C4C 0 CODE 0 text23 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
+_OSCILLATOR_Initialize ACE 0 CODE 0 text14 dist/default/production\Control_Skill-IDEM_V2-1_RF_Trasmisor.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -763,11 +632,11 @@ _OSCILLATOR_Initialize C4C 0 CODE 0 text23 dist/default/production\Control_Skill
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text0 0 80C 80C 562 1
+text0 0 80C 80C 388 1
 reset_vec 0 0 0 4 1
 bssBANK0 1 60 60 1E 1
 smallconst 0 800 800 C 1
-bssCOMRAM 1 1 1 50 1
+bssCOMRAM 1 1 1 4D 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

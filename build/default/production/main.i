@@ -8189,6 +8189,8 @@ void flush_TX_RX()
 
 void nrf2401_envia(unsigned char dato_tx)
 {
+    spi_s_init();
+    nrF2401_init_TX(17);
     unsigned char cont_ = 0;
 
     flush_TX();
@@ -8304,6 +8306,7 @@ char flag_rx = 0;
 unsigned char texto[20];
 # 144 "main.c"
 void envio_1();
+void envio_2();
 void envio_ya_recibio();
 void envio_confirmado();
 void condicion_tanque();
@@ -8312,7 +8315,7 @@ void main(void)
 {
 
     SYSTEM_Initialize();
-# 171 "main.c"
+# 172 "main.c"
     ANSELA = 0b00000111;
     ANSELB = 0b00000000;
     ANSELC = 0x00;
@@ -8335,24 +8338,32 @@ void main(void)
     nrF2401_init_TX(17);
 
 
-    dato_serial = 1;
+    dato_serial = 2;
 
     while (1)
     {
 
 
 
-        if(PORTAbits.RA3 == 0 && PORTAbits.RA4 == 1)
+        if(PORTAbits.RA3 == 0 && PORTAbits.RA4 == 0)
         {
 
 
             envio_1();
 
-            if(nrf2401_haydatos() == 1) envio_ya_recibio();
 
 
         }
-        else LATA5 = 0;
+        else if (PORTAbits.RA3 == 1)
+            {
+                envio_2();
+            }
+
+        else
+        {
+            LATA5 = 0;
+            LATB0 = 0;
+        }
 
 
 
@@ -8364,26 +8375,30 @@ void main(void)
 
 void envio_1()
 {
-    dato_serial = 1;
+    dato_serial = 0b00000001;
     LATA5 = 1;
+    LATB0 = 0;
     int i = 0;
+
     for (i = 0; i < 10; i++) {
-        nrf2401_envia(dato_serial);
+        nrf2401_envia('a');
         _delay((unsigned long)((50)*(48000000/4000.0)));
     }
-    nrF2401_init_RX(17);
+
 }
 
 void envio_2()
 {
-    dato_serial = 2;
-    LATA5 = 1;
+    dato_serial = 0b10000000;
+    LATB0 = 1;
+    LATA5 = 0;
     int i = 0;
+
     for (i = 0; i < 10; i++) {
-        nrf2401_envia(dato_serial);
+        nrf2401_envia('b');
         _delay((unsigned long)((50)*(48000000/4000.0)));
     }
-    nrF2401_init_RX(17);
+
 }
 
 void envio_ya_recibio()
@@ -8410,13 +8425,13 @@ void condicion_tanque()
     int j = 0;
     while(1)
     {
-        if (PORTAbits.RA3 == 1 && PORTAbits.RA4 == 0)
+        if (PORTAbits.RA3 == 1 && PORTAbits.RA4 == 1)
         {
             envio_2();
             envio_confirmado();
             break;
         }
-        else if (PORTAbits.RA3 == 0 && PORTAbits.RA4 == 1)
+        else if (PORTAbits.RA3 == 0 && PORTAbits.RA4 == 0)
         {
             j++;
             _delay((unsigned long)((1000)*(48000000/4000.0)));

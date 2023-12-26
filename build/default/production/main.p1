@@ -82,6 +82,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2977
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k50.h: 2977: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
 [v _PORTBbits `VS130 ~T0 @X0 0 e@3969 ]
+"16 ./Librerias/nRF24L01.h
+[; ;./Librerias/nRF24L01.h: 16: void nrF2401_init_TX(unsigned char canal);
+[; ;./Librerias/nRF24L01.h: 16: void nrF2401_init_TX(unsigned char canal);
+[v _nrF2401_init_TX `(v ~T0 @X0 0 ef1`uc ]
 "19 ./Librerias/nRF24L01_2.h
 [; ;./Librerias/nRF24L01_2.h: 19: extern const unsigned char direccion_tx[];
 [v _direccion_tx `Cuc ~T0 @X0 -> 0 `x e ]
@@ -150,13 +154,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 144: void envio_1();
 [v _envio_1 `(v ~T0 @X0 0 e? ]
 "145
-[; ;main.c: 145: void envio_ya_recibio();
-[v _envio_ya_recibio `(v ~T0 @X0 0 e? ]
-"146
-[; ;main.c: 146: void envio_confirmado();
-[v _envio_confirmado `(v ~T0 @X0 0 e? ]
+[; ;main.c: 145: void envio_2();
+[v _envio_2 `(v ~T0 @X0 0 e? ]
 "147
-[; ;main.c: 147: void condicion_tanque();
+[; ;main.c: 147: void envio_confirmado();
+[v _envio_confirmado `(v ~T0 @X0 0 e? ]
+"148
+[; ;main.c: 148: void condicion_tanque();
 [v _condicion_tanque `(v ~T0 @X0 0 e? ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k50.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k50.h: 54: __asm("SRCON1 equ 0F57h");
@@ -1179,322 +1183,328 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Librerias/nRF24L01_2.h: 152: {
 [f ]
 "153
-[; ;./Librerias/nRF24L01_2.h: 153:     unsigned char cont_ = 0;
+[; ;./Librerias/nRF24L01_2.h: 153:     spi_s_init();
+[e ( _spi_s_init ..  ]
+"154
+[; ;./Librerias/nRF24L01_2.h: 154:     nrF2401_init_TX(17);
+[e ( _nrF2401_init_TX (1 -> -> 17 `i `uc ]
+"155
+[; ;./Librerias/nRF24L01_2.h: 155:     unsigned char cont_ = 0;
 [v _cont_ `uc ~T0 @X0 1 a ]
 [e = _cont_ -> -> 0 `i `uc ]
-"155
-[; ;./Librerias/nRF24L01_2.h: 155:     flush_TX();
+"157
+[; ;./Librerias/nRF24L01_2.h: 157:     flush_TX();
 [e ( _flush_TX ..  ]
-"156
-[; ;./Librerias/nRF24L01_2.h: 156:     nrf2401_write(0x00, 0x02 +0x04 + 0x08);
+"158
+[; ;./Librerias/nRF24L01_2.h: 158:     nrf2401_write(0x00, 0x02 +0x04 + 0x08);
 [e ( _nrf2401_write (2 , -> -> 0 `i `uc -> + + -> 2 `i -> 4 `i -> 8 `i `uc ]
-"159
-[; ;./Librerias/nRF24L01_2.h: 159:     LATCbits.LATC2 = 0;
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-"160
-[; ;./Librerias/nRF24L01_2.h: 160:     spi_s_write(0xA0);
-[e ( _spi_s_write (1 -> -> 160 `i `uc ]
 "161
-[; ;./Librerias/nRF24L01_2.h: 161:     spi_s_write(dato_tx);
-[e ( _spi_s_write (1 _dato_tx ]
+[; ;./Librerias/nRF24L01_2.h: 161:     LATCbits.LATC2 = 0;
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 "162
-[; ;./Librerias/nRF24L01_2.h: 162:     LATCbits.LATC2 = 1;
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 162:     spi_s_write(0xA0);
+[e ( _spi_s_write (1 -> -> 160 `i `uc ]
 "163
-[; ;./Librerias/nRF24L01_2.h: 163:     LATBbits.LATB1 = 1;
-[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 163:     spi_s_write(dato_tx);
+[e ( _spi_s_write (1 _dato_tx ]
 "164
-[; ;./Librerias/nRF24L01_2.h: 164:     _delay((unsigned long)((15)*(48000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
+[; ;./Librerias/nRF24L01_2.h: 164:     LATCbits.LATC2 = 1;
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
 "165
-[; ;./Librerias/nRF24L01_2.h: 165:     LATBbits.LATB1 = 0;
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 165:     LATBbits.LATB1 = 1;
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 "166
-[; ;./Librerias/nRF24L01_2.h: 166:     nrf2401_write(0x00, 0x01 + 0x02 +0x04 + 0x08);
-[e ( _nrf2401_write (2 , -> -> 0 `i `uc -> + + + -> 1 `i -> 2 `i -> 4 `i -> 8 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 166:     _delay((unsigned long)((15)*(48000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
 "167
-[; ;./Librerias/nRF24L01_2.h: 167: }
+[; ;./Librerias/nRF24L01_2.h: 167:     LATBbits.LATB1 = 0;
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+"168
+[; ;./Librerias/nRF24L01_2.h: 168:     nrf2401_write(0x00, 0x01 + 0x02 +0x04 + 0x08);
+[e ( _nrf2401_write (2 , -> -> 0 `i `uc -> + + + -> 1 `i -> 2 `i -> 4 `i -> 8 `i `uc ]
+"169
+[; ;./Librerias/nRF24L01_2.h: 169: }
 [e :UE 634 ]
 }
-"172
-[; ;./Librerias/nRF24L01_2.h: 172: char nrf2401_recibe()
+"174
+[; ;./Librerias/nRF24L01_2.h: 174: char nrf2401_recibe()
 [v _nrf2401_recibe `(uc ~T0 @X0 1 ef ]
-"173
-[; ;./Librerias/nRF24L01_2.h: 173: {
+"175
+[; ;./Librerias/nRF24L01_2.h: 175: {
 {
 [e :U _nrf2401_recibe ]
 [f ]
-"174
-[; ;./Librerias/nRF24L01_2.h: 174:     char valor_;
-[v _valor_ `uc ~T0 @X0 1 a ]
-"175
-[; ;./Librerias/nRF24L01_2.h: 175:     LATCbits.LATC2 = 0;
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 "176
-[; ;./Librerias/nRF24L01_2.h: 176:     spi_s_write(0x61);
-[e ( _spi_s_write (1 -> -> 97 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 176:     char valor_;
+[v _valor_ `uc ~T0 @X0 1 a ]
 "177
-[; ;./Librerias/nRF24L01_2.h: 177:     valor_ = spi_s_read();
-[e = _valor_ -> ( _spi_s_read ..  `uc ]
+[; ;./Librerias/nRF24L01_2.h: 177:     LATCbits.LATC2 = 0;
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 "178
-[; ;./Librerias/nRF24L01_2.h: 178:     LATCbits.LATC2 = 1;
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 178:     spi_s_write(0x61);
+[e ( _spi_s_write (1 -> -> 97 `i `uc ]
 "179
-[; ;./Librerias/nRF24L01_2.h: 179:     _delay((unsigned long)((5)*(48000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
+[; ;./Librerias/nRF24L01_2.h: 179:     valor_ = spi_s_read();
+[e = _valor_ -> ( _spi_s_read ..  `uc ]
 "180
-[; ;./Librerias/nRF24L01_2.h: 180:     return (valor_);
+[; ;./Librerias/nRF24L01_2.h: 180:     LATCbits.LATC2 = 1;
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+"181
+[; ;./Librerias/nRF24L01_2.h: 181:     _delay((unsigned long)((5)*(48000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
+"182
+[; ;./Librerias/nRF24L01_2.h: 182:     return (valor_);
 [e ) _valor_ ]
 [e $UE 635  ]
-"181
-[; ;./Librerias/nRF24L01_2.h: 181: }
+"183
+[; ;./Librerias/nRF24L01_2.h: 183: }
 [e :UE 635 ]
 }
-"184
-[; ;./Librerias/nRF24L01_2.h: 184: void nrF2401_init_RX(unsigned char canal)
+"186
+[; ;./Librerias/nRF24L01_2.h: 186: void nrF2401_init_RX(unsigned char canal)
 [v _nrF2401_init_RX `(v ~T0 @X0 1 ef1`uc ]
-"185
-[; ;./Librerias/nRF24L01_2.h: 185: {
+"187
+[; ;./Librerias/nRF24L01_2.h: 187: {
 {
 [e :U _nrF2401_init_RX ]
-"184
-[; ;./Librerias/nRF24L01_2.h: 184: void nrF2401_init_RX(unsigned char canal)
-[v _canal `uc ~T0 @X0 1 r1 ]
-"185
-[; ;./Librerias/nRF24L01_2.h: 185: {
-[f ]
 "186
-[; ;./Librerias/nRF24L01_2.h: 186:     LATBbits.LATB1 = 0;
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 186: void nrF2401_init_RX(unsigned char canal)
+[v _canal `uc ~T0 @X0 1 r1 ]
 "187
-[; ;./Librerias/nRF24L01_2.h: 187:     nrf2401_write(0x00, 0x04 + 0x08);
-[e ( _nrf2401_write (2 , -> -> 0 `i `uc -> + -> 4 `i -> 8 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 187: {
+[f ]
 "188
-[; ;./Librerias/nRF24L01_2.h: 188:     nrf2401_write(0x04, 0x00);
-[e ( _nrf2401_write (2 , -> -> 4 `i `uc -> -> 0 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 188:     LATBbits.LATB1 = 0;
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
 "189
-[; ;./Librerias/nRF24L01_2.h: 189:     nrf2401_write(0x03, 0x03);
-[e ( _nrf2401_write (2 , -> -> 3 `i `uc -> -> 3 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 189:     nrf2401_write(0x00, 0x04 + 0x08);
+[e ( _nrf2401_write (2 , -> -> 0 `i `uc -> + -> 4 `i -> 8 `i `uc ]
 "190
-[; ;./Librerias/nRF24L01_2.h: 190:     nrf2401_write(0x06, 0x10 + 0x06);
-[e ( _nrf2401_write (2 , -> -> 6 `i `uc -> + -> 16 `i -> 6 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 190:     nrf2401_write(0x04, 0x00);
+[e ( _nrf2401_write (2 , -> -> 4 `i `uc -> -> 0 `i `uc ]
 "191
-[; ;./Librerias/nRF24L01_2.h: 191:     nrf2401_write(0x05, canal);
-[e ( _nrf2401_write (2 , -> -> 5 `i `uc _canal ]
+[; ;./Librerias/nRF24L01_2.h: 191:     nrf2401_write(0x03, 0x03);
+[e ( _nrf2401_write (2 , -> -> 3 `i `uc -> -> 3 `i `uc ]
 "192
-[; ;./Librerias/nRF24L01_2.h: 192:     nrf2401_write(0x01, 0x00);
-[e ( _nrf2401_write (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 192:     nrf2401_write(0x06, 0x10 + 0x06);
+[e ( _nrf2401_write (2 , -> -> 6 `i `uc -> + -> 16 `i -> 6 `i `uc ]
 "193
-[; ;./Librerias/nRF24L01_2.h: 193:     nrf2401_write(0x11, 1);
-[e ( _nrf2401_write (2 , -> -> 17 `i `uc -> -> 1 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 193:     nrf2401_write(0x05, canal);
+[e ( _nrf2401_write (2 , -> -> 5 `i `uc _canal ]
 "194
-[; ;./Librerias/nRF24L01_2.h: 194:     nrf2401_write(0x00, 0x01 + 0x02 +0x04 + 0x08);
-[e ( _nrf2401_write (2 , -> -> 0 `i `uc -> + + + -> 1 `i -> 2 `i -> 4 `i -> 8 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 194:     nrf2401_write(0x01, 0x00);
+[e ( _nrf2401_write (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
 "195
-[; ;./Librerias/nRF24L01_2.h: 195:     nrf2401_direccion_TX_RX(direccion_tx , 0x10);
-[e ( _nrf2401_direccion_TX_RX (2 , &U _direccion_tx -> -> 16 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 195:     nrf2401_write(0x11, 1);
+[e ( _nrf2401_write (2 , -> -> 17 `i `uc -> -> 1 `i `uc ]
 "196
-[; ;./Librerias/nRF24L01_2.h: 196:     nrf2401_direccion_TX_RX(direccion_tx, 0x0A);
-[e ( _nrf2401_direccion_TX_RX (2 , &U _direccion_tx -> -> 10 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 196:     nrf2401_write(0x00, 0x01 + 0x02 +0x04 + 0x08);
+[e ( _nrf2401_write (2 , -> -> 0 `i `uc -> + + + -> 1 `i -> 2 `i -> 4 `i -> 8 `i `uc ]
 "197
-[; ;./Librerias/nRF24L01_2.h: 197:     flush_TX_RX();
-[e ( _flush_TX_RX ..  ]
+[; ;./Librerias/nRF24L01_2.h: 197:     nrf2401_direccion_TX_RX(direccion_tx , 0x10);
+[e ( _nrf2401_direccion_TX_RX (2 , &U _direccion_tx -> -> 16 `i `uc ]
 "198
-[; ;./Librerias/nRF24L01_2.h: 198:     LATBbits.LATB1 = 1;
-[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 198:     nrf2401_direccion_TX_RX(direccion_tx, 0x0A);
+[e ( _nrf2401_direccion_TX_RX (2 , &U _direccion_tx -> -> 10 `i `uc ]
 "199
-[; ;./Librerias/nRF24L01_2.h: 199: }
+[; ;./Librerias/nRF24L01_2.h: 199:     flush_TX_RX();
+[e ( _flush_TX_RX ..  ]
+"200
+[; ;./Librerias/nRF24L01_2.h: 200:     LATBbits.LATB1 = 1;
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+"201
+[; ;./Librerias/nRF24L01_2.h: 201: }
 [e :UE 636 ]
 }
-"201
-[; ;./Librerias/nRF24L01_2.h: 201: void nrF2401_init_TX(unsigned char canal)
+"203
+[; ;./Librerias/nRF24L01_2.h: 203: void nrF2401_init_TX(unsigned char canal)
 [v _nrF2401_init_TX `(v ~T0 @X0 1 ef1`uc ]
-"202
-[; ;./Librerias/nRF24L01_2.h: 202: {
+"204
+[; ;./Librerias/nRF24L01_2.h: 204: {
 {
 [e :U _nrF2401_init_TX ]
-"201
-[; ;./Librerias/nRF24L01_2.h: 201: void nrF2401_init_TX(unsigned char canal)
-[v _canal `uc ~T0 @X0 1 r1 ]
-"202
-[; ;./Librerias/nRF24L01_2.h: 202: {
-[f ]
 "203
-[; ;./Librerias/nRF24L01_2.h: 203:     LATBbits.LATB1 = 0;
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 203: void nrF2401_init_TX(unsigned char canal)
+[v _canal `uc ~T0 @X0 1 r1 ]
 "204
-[; ;./Librerias/nRF24L01_2.h: 204:     nrf2401_write(0x04, 0x00);
-[e ( _nrf2401_write (2 , -> -> 4 `i `uc -> -> 0 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 204: {
+[f ]
+"205
+[; ;./Librerias/nRF24L01_2.h: 205:     LATBbits.LATB1 = 0;
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
 "206
-[; ;./Librerias/nRF24L01_2.h: 206:     nrf2401_write(0x03, 0x03);
-[e ( _nrf2401_write (2 , -> -> 3 `i `uc -> -> 3 `i `uc ]
-"207
-[; ;./Librerias/nRF24L01_2.h: 207:     nrf2401_write(0x06, 0x10 + 0x06);
-[e ( _nrf2401_write (2 , -> -> 6 `i `uc -> + -> 16 `i -> 6 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 206:     nrf2401_write(0x04, 0x00);
+[e ( _nrf2401_write (2 , -> -> 4 `i `uc -> -> 0 `i `uc ]
 "208
-[; ;./Librerias/nRF24L01_2.h: 208:     nrf2401_write(0x05, canal);
-[e ( _nrf2401_write (2 , -> -> 5 `i `uc _canal ]
+[; ;./Librerias/nRF24L01_2.h: 208:     nrf2401_write(0x03, 0x03);
+[e ( _nrf2401_write (2 , -> -> 3 `i `uc -> -> 3 `i `uc ]
 "209
-[; ;./Librerias/nRF24L01_2.h: 209:     nrf2401_write(0x01, 0);
-[e ( _nrf2401_write (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 209:     nrf2401_write(0x06, 0x10 + 0x06);
+[e ( _nrf2401_write (2 , -> -> 6 `i `uc -> + -> 16 `i -> 6 `i `uc ]
 "210
-[; ;./Librerias/nRF24L01_2.h: 210:     nrf2401_write(0x00, 0x02 +0x04 + 0x08);
-[e ( _nrf2401_write (2 , -> -> 0 `i `uc -> + + -> 2 `i -> 4 `i -> 8 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 210:     nrf2401_write(0x05, canal);
+[e ( _nrf2401_write (2 , -> -> 5 `i `uc _canal ]
 "211
-[; ;./Librerias/nRF24L01_2.h: 211:     nrf2401_direccion_TX_RX(direccion_tx, 0x10);
-[e ( _nrf2401_direccion_TX_RX (2 , &U _direccion_tx -> -> 16 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 211:     nrf2401_write(0x01, 0);
+[e ( _nrf2401_write (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
 "212
-[; ;./Librerias/nRF24L01_2.h: 212:     nrf2401_direccion_TX_RX(direccion_tx, 0x0A);
-[e ( _nrf2401_direccion_TX_RX (2 , &U _direccion_tx -> -> 10 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 212:     nrf2401_write(0x00, 0x02 +0x04 + 0x08);
+[e ( _nrf2401_write (2 , -> -> 0 `i `uc -> + + -> 2 `i -> 4 `i -> 8 `i `uc ]
 "213
-[; ;./Librerias/nRF24L01_2.h: 213:     flush_TX_RX();
-[e ( _flush_TX_RX ..  ]
+[; ;./Librerias/nRF24L01_2.h: 213:     nrf2401_direccion_TX_RX(direccion_tx, 0x10);
+[e ( _nrf2401_direccion_TX_RX (2 , &U _direccion_tx -> -> 16 `i `uc ]
 "214
-[; ;./Librerias/nRF24L01_2.h: 214:     LATBbits.LATB1 = 1;
-[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+[; ;./Librerias/nRF24L01_2.h: 214:     nrf2401_direccion_TX_RX(direccion_tx, 0x0A);
+[e ( _nrf2401_direccion_TX_RX (2 , &U _direccion_tx -> -> 10 `i `uc ]
 "215
-[; ;./Librerias/nRF24L01_2.h: 215: }
+[; ;./Librerias/nRF24L01_2.h: 215:     flush_TX_RX();
+[e ( _flush_TX_RX ..  ]
+"216
+[; ;./Librerias/nRF24L01_2.h: 216:     LATBbits.LATB1 = 1;
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+"217
+[; ;./Librerias/nRF24L01_2.h: 217: }
 [e :UE 637 ]
 }
-"218
-[; ;./Librerias/nRF24L01_2.h: 218: unsigned char get_Status()
+"220
+[; ;./Librerias/nRF24L01_2.h: 220: unsigned char get_Status()
 [v _get_Status `(uc ~T0 @X0 1 ef ]
-"219
-[; ;./Librerias/nRF24L01_2.h: 219: {
+"221
+[; ;./Librerias/nRF24L01_2.h: 221: {
 {
 [e :U _get_Status ]
 [f ]
-"220
-[; ;./Librerias/nRF24L01_2.h: 220:     return nrf2401_read (0x07);
+"222
+[; ;./Librerias/nRF24L01_2.h: 222:     return nrf2401_read (0x07);
 [e ) ( _nrf2401_read (1 -> -> 7 `i `uc ]
 [e $UE 638  ]
-"221
-[; ;./Librerias/nRF24L01_2.h: 221: }
+"223
+[; ;./Librerias/nRF24L01_2.h: 223: }
 [e :UE 638 ]
 }
-"223
-[; ;./Librerias/nRF24L01_2.h: 223: unsigned char get_fifo_status()
+"225
+[; ;./Librerias/nRF24L01_2.h: 225: unsigned char get_fifo_status()
 [v _get_fifo_status `(uc ~T0 @X0 1 ef ]
-"224
-[; ;./Librerias/nRF24L01_2.h: 224: {
+"226
+[; ;./Librerias/nRF24L01_2.h: 226: {
 {
 [e :U _get_fifo_status ]
 [f ]
-"225
-[; ;./Librerias/nRF24L01_2.h: 225:     return nrf2401_read (0x17);
+"227
+[; ;./Librerias/nRF24L01_2.h: 227:     return nrf2401_read (0x17);
 [e ) ( _nrf2401_read (1 -> -> 23 `i `uc ]
 [e $UE 639  ]
-"227
-[; ;./Librerias/nRF24L01_2.h: 227: }
+"229
+[; ;./Librerias/nRF24L01_2.h: 229: }
 [e :UE 639 ]
 }
-"230
-[; ;./Librerias/nRF24L01_2.h: 230: void nrf2401_envia_Text(char* Text)
+"232
+[; ;./Librerias/nRF24L01_2.h: 232: void nrf2401_envia_Text(char* Text)
 [v _nrf2401_envia_Text `(v ~T0 @X0 1 ef1`*uc ]
-"231
-[; ;./Librerias/nRF24L01_2.h: 231: {
+"233
+[; ;./Librerias/nRF24L01_2.h: 233: {
 {
 [e :U _nrf2401_envia_Text ]
-"230
-[; ;./Librerias/nRF24L01_2.h: 230: void nrf2401_envia_Text(char* Text)
-[v _Text `*uc ~T0 @X0 1 r1 ]
-"231
-[; ;./Librerias/nRF24L01_2.h: 231: {
-[f ]
 "232
-[; ;./Librerias/nRF24L01_2.h: 232:     flush_TX();
-[e ( _flush_TX ..  ]
+[; ;./Librerias/nRF24L01_2.h: 232: void nrf2401_envia_Text(char* Text)
+[v _Text `*uc ~T0 @X0 1 r1 ]
 "233
-[; ;./Librerias/nRF24L01_2.h: 233:     while(*Text)
+[; ;./Librerias/nRF24L01_2.h: 233: {
+[f ]
+"234
+[; ;./Librerias/nRF24L01_2.h: 234:     flush_TX();
+[e ( _flush_TX ..  ]
+"235
+[; ;./Librerias/nRF24L01_2.h: 235:     while(*Text)
 [e $U 641  ]
 [e :U 642 ]
-"234
-[; ;./Librerias/nRF24L01_2.h: 234:     {
-{
-"235
-[; ;./Librerias/nRF24L01_2.h: 235:         nrf2401_envia(*Text++);
-[e ( _nrf2401_envia (1 -> *U ++ _Text * -> -> 1 `i `x -> -> # *U _Text `i `x `uc ]
 "236
-[; ;./Librerias/nRF24L01_2.h: 236:     }
+[; ;./Librerias/nRF24L01_2.h: 236:     {
+{
+"237
+[; ;./Librerias/nRF24L01_2.h: 237:         nrf2401_envia(*Text++);
+[e ( _nrf2401_envia (1 -> *U ++ _Text * -> -> 1 `i `x -> -> # *U _Text `i `x `uc ]
+"238
+[; ;./Librerias/nRF24L01_2.h: 238:     }
 }
 [e :U 641 ]
-"233
-[; ;./Librerias/nRF24L01_2.h: 233:     while(*Text)
+"235
+[; ;./Librerias/nRF24L01_2.h: 235:     while(*Text)
 [e $ != -> *U _Text `i -> 0 `i 642  ]
 [e :U 643 ]
-"237
-[; ;./Librerias/nRF24L01_2.h: 237:     _delay((unsigned long)((3)*(48000000/4000.0)));
+"239
+[; ;./Librerias/nRF24L01_2.h: 239:     _delay((unsigned long)((3)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 3 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"238
-[; ;./Librerias/nRF24L01_2.h: 238: }
+"240
+[; ;./Librerias/nRF24L01_2.h: 240: }
 [e :UE 640 ]
 }
-"240
-[; ;./Librerias/nRF24L01_2.h: 240: char nrf2401_haydatos()
+"242
+[; ;./Librerias/nRF24L01_2.h: 242: char nrf2401_haydatos()
 [v _nrf2401_haydatos `(uc ~T0 @X0 1 ef ]
-"241
-[; ;./Librerias/nRF24L01_2.h: 241: {
+"243
+[; ;./Librerias/nRF24L01_2.h: 243: {
 {
 [e :U _nrf2401_haydatos ]
 [f ]
-"242
-[; ;./Librerias/nRF24L01_2.h: 242:     if(get_Status() == 0x40) return(1);
+"244
+[; ;./Librerias/nRF24L01_2.h: 244:     if(get_Status() == 0x40) return(1);
 [e $ ! == -> ( _get_Status ..  `i -> 64 `i 645  ]
 [e ) -> -> 1 `i `uc ]
 [e $UE 644  ]
 [e $U 646  ]
-"243
-[; ;./Librerias/nRF24L01_2.h: 243:     else return(0);
+"245
+[; ;./Librerias/nRF24L01_2.h: 245:     else return(0);
 [e :U 645 ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 644  ]
 [e :U 646 ]
-"244
-[; ;./Librerias/nRF24L01_2.h: 244: }
+"246
+[; ;./Librerias/nRF24L01_2.h: 246: }
 [e :UE 644 ]
 }
-"247
-[; ;./Librerias/nRF24L01_2.h: 247: void nrf2401_recibe_Text(char* Buffer, char StopChar)
+"249
+[; ;./Librerias/nRF24L01_2.h: 249: void nrf2401_recibe_Text(char* Buffer, char StopChar)
 [v _nrf2401_recibe_Text `(v ~T0 @X0 1 ef2`*uc`uc ]
-"248
-[; ;./Librerias/nRF24L01_2.h: 248: {
+"250
+[; ;./Librerias/nRF24L01_2.h: 250: {
 {
 [e :U _nrf2401_recibe_Text ]
-"247
-[; ;./Librerias/nRF24L01_2.h: 247: void nrf2401_recibe_Text(char* Buffer, char StopChar)
+"249
+[; ;./Librerias/nRF24L01_2.h: 249: void nrf2401_recibe_Text(char* Buffer, char StopChar)
 [v _Buffer `*uc ~T0 @X0 1 r1 ]
 [v _StopChar `uc ~T0 @X0 1 r2 ]
-"248
-[; ;./Librerias/nRF24L01_2.h: 248: {
-[f ]
-"249
-[; ;./Librerias/nRF24L01_2.h: 249:     flush_RX();
-[e ( _flush_RX ..  ]
 "250
-[; ;./Librerias/nRF24L01_2.h: 250:     while(*(Buffer-1)!=StopChar)
+[; ;./Librerias/nRF24L01_2.h: 250: {
+[f ]
+"251
+[; ;./Librerias/nRF24L01_2.h: 251:     flush_RX();
+[e ( _flush_RX ..  ]
+"252
+[; ;./Librerias/nRF24L01_2.h: 252:     while(*(Buffer-1)!=StopChar)
 [e $U 648  ]
 [e :U 649 ]
-"251
-[; ;./Librerias/nRF24L01_2.h: 251:     {
+"253
+[; ;./Librerias/nRF24L01_2.h: 253:     {
 {
-"252
-[; ;./Librerias/nRF24L01_2.h: 252:         if(get_Status() == 0x40) *Buffer++=nrf2401_recibe();
+"254
+[; ;./Librerias/nRF24L01_2.h: 254:         if(get_Status() == 0x40) *Buffer++=nrf2401_recibe();
 [e $ ! == -> ( _get_Status ..  `i -> 64 `i 651  ]
 [e = *U ++ _Buffer * -> -> 1 `i `x -> -> # *U _Buffer `i `x ( _nrf2401_recibe ..  ]
 [e :U 651 ]
-"253
-[; ;./Librerias/nRF24L01_2.h: 253:     }
+"255
+[; ;./Librerias/nRF24L01_2.h: 255:     }
 }
 [e :U 648 ]
-"250
-[; ;./Librerias/nRF24L01_2.h: 250:     while(*(Buffer-1)!=StopChar)
+"252
+[; ;./Librerias/nRF24L01_2.h: 252:     while(*(Buffer-1)!=StopChar)
 [e $ != -> *U - _Buffer * -> -> 1 `i `x -> -> # *U _Buffer `i `x `i -> _StopChar `i 649  ]
 [e :U 650 ]
-"255
-[; ;./Librerias/nRF24L01_2.h: 255:     *--Buffer=0;
+"257
+[; ;./Librerias/nRF24L01_2.h: 257:     *--Buffer=0;
 [e = *U =- _Buffer * -> -> 1 `i `x -> -> # *U _Buffer `i `x -> -> 0 `i `uc ]
-"256
-[; ;./Librerias/nRF24L01_2.h: 256: }
+"258
+[; ;./Librerias/nRF24L01_2.h: 258: }
 [e :UE 647 ]
 }
 "74 main.c
@@ -1528,309 +1538,330 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 89: unsigned char texto[20];
 [v _texto `uc ~T0 @X0 -> 20 `i e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"149
-[; ;main.c: 149: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
 "150
-[; ;main.c: 150: {
+[; ;main.c: 150: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"151
+[; ;main.c: 151: {
 {
 [e :U _main ]
 [f ]
-"152
-[; ;main.c: 152:     SYSTEM_Initialize();
+"153
+[; ;main.c: 153:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"171
-[; ;main.c: 171:     ANSELA = 0b00000111;
-[e = _ANSELA -> -> 7 `i `uc ]
 "172
-[; ;main.c: 172:     ANSELB = 0b00000000;
-[e = _ANSELB -> -> 0 `i `uc ]
+[; ;main.c: 172:     ANSELA = 0b00000111;
+[e = _ANSELA -> -> 7 `i `uc ]
 "173
-[; ;main.c: 173:     ANSELC = 0x00;
+[; ;main.c: 173:     ANSELB = 0b00000000;
+[e = _ANSELB -> -> 0 `i `uc ]
+"174
+[; ;main.c: 174:     ANSELC = 0x00;
 [e = _ANSELC -> -> 0 `i `uc ]
-"180
-[; ;main.c: 180:     TRISAbits.RA3 = 1;
+"181
+[; ;main.c: 181:     TRISAbits.RA3 = 1;
 [e = . . _TRISAbits 1 3 -> -> 1 `i `uc ]
-"182
-[; ;main.c: 182:     LATA5 = 1;
-[e = _LATA5 -> -> 1 `i `b ]
 "183
-[; ;main.c: 183:     LATB0 = 1;
-[e = _LATB0 -> -> 1 `i `b ]
+[; ;main.c: 183:     LATA5 = 1;
+[e = _LATA5 -> -> 1 `i `b ]
 "184
-[; ;main.c: 184:     _delay((unsigned long)((1000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 184:     LATB0 = 1;
+[e = _LATB0 -> -> 1 `i `b ]
 "185
-[; ;main.c: 185:     LATA5 = 0;
-[e = _LATA5 -> -> 0 `i `b ]
+[; ;main.c: 185:     _delay((unsigned long)((1000)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
 "186
-[; ;main.c: 186:     LATB0 = 0;
+[; ;main.c: 186:     LATA5 = 0;
+[e = _LATA5 -> -> 0 `i `b ]
+"187
+[; ;main.c: 187:     LATB0 = 0;
 [e = _LATB0 -> -> 0 `i `b ]
-"189
-[; ;main.c: 189:     spi_s_init();
-[e ( _spi_s_init ..  ]
 "190
-[; ;main.c: 190:     nrF2401_init_TX(17);
+[; ;main.c: 190:     spi_s_init();
+[e ( _spi_s_init ..  ]
+"191
+[; ;main.c: 191:     nrF2401_init_TX(17);
 [e ( _nrF2401_init_TX (1 -> -> 17 `i `uc ]
-"193
-[; ;main.c: 193:     dato_serial = 1;
-[e = _dato_serial -> -> 1 `i `uc ]
-"195
-[; ;main.c: 195:     while (1)
-[e :U 654 ]
+"194
+[; ;main.c: 194:     dato_serial = 2;
+[e = _dato_serial -> -> 2 `i `uc ]
 "196
-[; ;main.c: 196:     {
+[; ;main.c: 196:     while (1)
+[e :U 654 ]
+"197
+[; ;main.c: 197:     {
 {
-"200
-[; ;main.c: 200:         if(PORTAbits.RA3 == 0 && PORTAbits.RA4 == 1)
-[e $ ! && == -> . . _PORTAbits 0 3 `i -> 0 `i == -> . . _PORTAbits 0 4 `i -> 1 `i 656  ]
 "201
-[; ;main.c: 201:         {
+[; ;main.c: 201:         if(PORTAbits.RA3 == 0 && PORTAbits.RA4 == 0)
+[e $ ! && == -> . . _PORTAbits 0 3 `i -> 0 `i == -> . . _PORTAbits 0 4 `i -> 0 `i 656  ]
+"202
+[; ;main.c: 202:         {
 {
-"204
-[; ;main.c: 204:             envio_1();
+"205
+[; ;main.c: 205:             envio_1();
 [e ( _envio_1 ..  ]
-"206
-[; ;main.c: 206:             if(nrf2401_haydatos() == 1) envio_ya_recibio();
-[e $ ! == -> ( _nrf2401_haydatos ..  `i -> 1 `i 657  ]
-[e ( _envio_ya_recibio ..  ]
-[e :U 657 ]
 "209
 [; ;main.c: 209:         }
 }
-[e $U 658  ]
+[e $U 657  ]
 "210
-[; ;main.c: 210:         else LATA5 = 0;
+[; ;main.c: 210:         else if (PORTAbits.RA3 == 1)
 [e :U 656 ]
-[e = _LATA5 -> -> 0 `i `b ]
-[e :U 658 ]
+[e $ ! == -> . . _PORTAbits 0 3 `i -> 1 `i 658  ]
+"211
+[; ;main.c: 211:             {
+{
+"212
+[; ;main.c: 212:                 envio_2();
+[e ( _envio_2 ..  ]
+"213
+[; ;main.c: 213:             }
+}
+[e $U 659  ]
 "215
-[; ;main.c: 215:         _delay((unsigned long)((100)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[; ;main.c: 215:         else
+[e :U 658 ]
 "216
-[; ;main.c: 216:     }
+[; ;main.c: 216:         {
+{
+"217
+[; ;main.c: 217:             LATA5 = 0;
+[e = _LATA5 -> -> 0 `i `b ]
+"218
+[; ;main.c: 218:             LATB0 = 0;
+[e = _LATB0 -> -> 0 `i `b ]
+"219
+[; ;main.c: 219:         }
+}
+[e :U 659 ]
+[e :U 657 ]
+"224
+[; ;main.c: 224:         _delay((unsigned long)((100)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"225
+[; ;main.c: 225:     }
 }
 [e :U 653 ]
 [e $U 654  ]
 [e :U 655 ]
-"217
-[; ;main.c: 217: }
+"226
+[; ;main.c: 226: }
 [e :UE 652 ]
 }
-"220
-[; ;main.c: 220: void envio_1()
+"229
+[; ;main.c: 229: void envio_1()
 [v _envio_1 `(v ~T0 @X0 1 ef ]
-"221
-[; ;main.c: 221: {
+"230
+[; ;main.c: 230: {
 {
 [e :U _envio_1 ]
 [f ]
-"222
-[; ;main.c: 222:     dato_serial = 1;
+"231
+[; ;main.c: 231:     dato_serial = 0b00000001;
 [e = _dato_serial -> -> 1 `i `uc ]
-"223
-[; ;main.c: 223:     LATA5 = 1;
+"232
+[; ;main.c: 232:     LATA5 = 1;
 [e = _LATA5 -> -> 1 `i `b ]
-"224
-[; ;main.c: 224:     int i = 0;
+"233
+[; ;main.c: 233:     LATB0 = 0;
+[e = _LATB0 -> -> 0 `i `b ]
+"234
+[; ;main.c: 234:     int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"225
-[; ;main.c: 225:     for (i = 0; i < 10; i++) {
+"236
+[; ;main.c: 236:     for (i = 0; i < 10; i++) {
 {
 [e = _i -> 0 `i ]
-[e $ < _i -> 10 `i 660  ]
-[e $U 661  ]
-[e :U 660 ]
+[e $ < _i -> 10 `i 661  ]
+[e $U 662  ]
+[e :U 661 ]
 {
-"226
-[; ;main.c: 226:         nrf2401_envia(dato_serial);
-[e ( _nrf2401_envia (1 _dato_serial ]
-"227
-[; ;main.c: 227:         _delay((unsigned long)((50)*(48000000/4000.0)));
+"237
+[; ;main.c: 237:         nrf2401_envia('a');
+[e ( _nrf2401_envia (1 -> -> 97 `ui `uc ]
+"238
+[; ;main.c: 238:         _delay((unsigned long)((50)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"228
-[; ;main.c: 228:     }
+"239
+[; ;main.c: 239:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 10 `i 660  ]
-[e :U 661 ]
+[e $ < _i -> 10 `i 661  ]
+[e :U 662 ]
 }
-"229
-[; ;main.c: 229:     nrF2401_init_RX(17);
-[e ( _nrF2401_init_RX (1 -> -> 17 `i `uc ]
-"230
-[; ;main.c: 230: }
-[e :UE 659 ]
+"241
+[; ;main.c: 241: }
+[e :UE 660 ]
 }
-"232
-[; ;main.c: 232: void envio_2()
+"243
+[; ;main.c: 243: void envio_2()
 [v _envio_2 `(v ~T0 @X0 1 ef ]
-"233
-[; ;main.c: 233: {
+"244
+[; ;main.c: 244: {
 {
 [e :U _envio_2 ]
 [f ]
-"234
-[; ;main.c: 234:     dato_serial = 2;
-[e = _dato_serial -> -> 2 `i `uc ]
-"235
-[; ;main.c: 235:     LATA5 = 1;
-[e = _LATA5 -> -> 1 `i `b ]
-"236
-[; ;main.c: 236:     int i = 0;
+"245
+[; ;main.c: 245:     dato_serial = 0b10000000;
+[e = _dato_serial -> -> 128 `i `uc ]
+"246
+[; ;main.c: 246:     LATB0 = 1;
+[e = _LATB0 -> -> 1 `i `b ]
+"247
+[; ;main.c: 247:     LATA5 = 0;
+[e = _LATA5 -> -> 0 `i `b ]
+"248
+[; ;main.c: 248:     int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"237
-[; ;main.c: 237:     for (i = 0; i < 10; i++) {
+"250
+[; ;main.c: 250:     for (i = 0; i < 10; i++) {
 {
 [e = _i -> 0 `i ]
-[e $ < _i -> 10 `i 664  ]
-[e $U 665  ]
-[e :U 664 ]
+[e $ < _i -> 10 `i 665  ]
+[e $U 666  ]
+[e :U 665 ]
 {
-"238
-[; ;main.c: 238:         nrf2401_envia(dato_serial);
-[e ( _nrf2401_envia (1 _dato_serial ]
-"239
-[; ;main.c: 239:         _delay((unsigned long)((50)*(48000000/4000.0)));
+"251
+[; ;main.c: 251:         nrf2401_envia('b');
+[e ( _nrf2401_envia (1 -> -> 98 `ui `uc ]
+"252
+[; ;main.c: 252:         _delay((unsigned long)((50)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"240
-[; ;main.c: 240:     }
+"253
+[; ;main.c: 253:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 10 `i 664  ]
-[e :U 665 ]
+[e $ < _i -> 10 `i 665  ]
+[e :U 666 ]
 }
-"241
-[; ;main.c: 241:     nrF2401_init_RX(17);
-[e ( _nrF2401_init_RX (1 -> -> 17 `i `uc ]
-"242
-[; ;main.c: 242: }
-[e :UE 663 ]
+"255
+[; ;main.c: 255: }
+[e :UE 664 ]
 }
-"244
-[; ;main.c: 244: void envio_ya_recibio()
+"257
+[; ;main.c: 257: void envio_ya_recibio()
 [v _envio_ya_recibio `(v ~T0 @X0 1 ef ]
-"245
-[; ;main.c: 245: {
+"258
+[; ;main.c: 258: {
 {
 [e :U _envio_ya_recibio ]
 [f ]
-"246
-[; ;main.c: 246:     dato_serial = nrf2401_recibe();
+"259
+[; ;main.c: 259:     dato_serial = nrf2401_recibe();
 [e = _dato_serial -> ( _nrf2401_recibe ..  `uc ]
-"247
-[; ;main.c: 247:     if(dato_serial == 1)
-[e $ ! == -> _dato_serial `i -> 1 `i 668  ]
-"248
-[; ;main.c: 248:     {
+"260
+[; ;main.c: 260:     if(dato_serial == 1)
+[e $ ! == -> _dato_serial `i -> 1 `i 669  ]
+"261
+[; ;main.c: 261:     {
 {
-"249
-[; ;main.c: 249:         envio_confirmado();
+"262
+[; ;main.c: 262:         envio_confirmado();
 [e ( _envio_confirmado ..  ]
-"250
-[; ;main.c: 250:         condicion_tanque();
+"263
+[; ;main.c: 263:         condicion_tanque();
 [e ( _condicion_tanque ..  ]
-"252
-[; ;main.c: 252:     }
+"265
+[; ;main.c: 265:     }
 }
-[e :U 668 ]
-"253
-[; ;main.c: 253: }
-[e :UE 667 ]
+[e :U 669 ]
+"266
+[; ;main.c: 266: }
+[e :UE 668 ]
 }
-"255
-[; ;main.c: 255: void envio_confirmado()
+"268
+[; ;main.c: 268: void envio_confirmado()
 [v _envio_confirmado `(v ~T0 @X0 1 ef ]
-"256
-[; ;main.c: 256: {
+"269
+[; ;main.c: 269: {
 {
 [e :U _envio_confirmado ]
 [f ]
-"257
-[; ;main.c: 257:     LATB0 = 1;
+"270
+[; ;main.c: 270:     LATB0 = 1;
 [e = _LATB0 -> -> 1 `i `b ]
-"258
-[; ;main.c: 258:     _delay((unsigned long)((1000)*(48000000/4000.0)));
+"271
+[; ;main.c: 271:     _delay((unsigned long)((1000)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"259
-[; ;main.c: 259:     LATB0 = 0;
+"272
+[; ;main.c: 272:     LATB0 = 0;
 [e = _LATB0 -> -> 0 `i `b ]
-"260
-[; ;main.c: 260:     dato_serial = 0;
+"273
+[; ;main.c: 273:     dato_serial = 0;
 [e = _dato_serial -> -> 0 `i `uc ]
-"261
-[; ;main.c: 261: }
-[e :UE 669 ]
+"274
+[; ;main.c: 274: }
+[e :UE 670 ]
 }
-"263
-[; ;main.c: 263: void condicion_tanque()
+"276
+[; ;main.c: 276: void condicion_tanque()
 [v _condicion_tanque `(v ~T0 @X0 1 ef ]
-"264
-[; ;main.c: 264: {
+"277
+[; ;main.c: 277: {
 {
 [e :U _condicion_tanque ]
 [f ]
-"265
-[; ;main.c: 265:     int j = 0;
+"278
+[; ;main.c: 278:     int j = 0;
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 0 `i ]
-"266
-[; ;main.c: 266:     while(1)
-[e :U 672 ]
-"267
-[; ;main.c: 267:     {
-{
-"268
-[; ;main.c: 268:         if (PORTAbits.RA3 == 1 && PORTAbits.RA4 == 0)
-[e $ ! && == -> . . _PORTAbits 0 3 `i -> 1 `i == -> . . _PORTAbits 0 4 `i -> 0 `i 674  ]
-"269
-[; ;main.c: 269:         {
-{
-"270
-[; ;main.c: 270:             envio_2();
-[e ( _envio_2 ..  ]
-"271
-[; ;main.c: 271:             envio_confirmado();
-[e ( _envio_confirmado ..  ]
-"272
-[; ;main.c: 272:             break;
-[e $U 673  ]
-"273
-[; ;main.c: 273:         }
-}
-[e $U 675  ]
-"274
-[; ;main.c: 274:         else if (PORTAbits.RA3 == 0 && PORTAbits.RA4 == 1)
-[e :U 674 ]
-[e $ ! && == -> . . _PORTAbits 0 3 `i -> 0 `i == -> . . _PORTAbits 0 4 `i -> 1 `i 676  ]
-"275
-[; ;main.c: 275:         {
-{
-"276
-[; ;main.c: 276:             j++;
-[e ++ _j -> 1 `i ]
-"277
-[; ;main.c: 277:             _delay((unsigned long)((1000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"278
-[; ;main.c: 278:             if (j == 300) break;
-[e $ ! == _j -> 300 `i 677  ]
-[e $U 673  ]
-[e :U 677 ]
 "279
-[; ;main.c: 279:         }
-}
-[e :U 676 ]
-[e :U 675 ]
-"280
-[; ;main.c: 280:     }
-}
-[e :U 671 ]
-[e $U 672  ]
+[; ;main.c: 279:     while(1)
 [e :U 673 ]
+"280
+[; ;main.c: 280:     {
+{
+"281
+[; ;main.c: 281:         if (PORTAbits.RA3 == 1 && PORTAbits.RA4 == 1)
+[e $ ! && == -> . . _PORTAbits 0 3 `i -> 1 `i == -> . . _PORTAbits 0 4 `i -> 1 `i 675  ]
 "282
-[; ;main.c: 282: }
-[e :UE 670 ]
+[; ;main.c: 282:         {
+{
+"283
+[; ;main.c: 283:             envio_2();
+[e ( _envio_2 ..  ]
+"284
+[; ;main.c: 284:             envio_confirmado();
+[e ( _envio_confirmado ..  ]
+"285
+[; ;main.c: 285:             break;
+[e $U 674  ]
+"286
+[; ;main.c: 286:         }
+}
+[e $U 676  ]
+"287
+[; ;main.c: 287:         else if (PORTAbits.RA3 == 0 && PORTAbits.RA4 == 0)
+[e :U 675 ]
+[e $ ! && == -> . . _PORTAbits 0 3 `i -> 0 `i == -> . . _PORTAbits 0 4 `i -> 0 `i 677  ]
+"288
+[; ;main.c: 288:         {
+{
+"289
+[; ;main.c: 289:             j++;
+[e ++ _j -> 1 `i ]
+"290
+[; ;main.c: 290:             _delay((unsigned long)((1000)*(48000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"291
+[; ;main.c: 291:             if (j == 300) break;
+[e $ ! == _j -> 300 `i 678  ]
+[e $U 674  ]
+[e :U 678 ]
+"292
+[; ;main.c: 292:         }
+}
+[e :U 677 ]
+[e :U 676 ]
+"293
+[; ;main.c: 293:     }
+}
+[e :U 672 ]
+[e $U 673  ]
+[e :U 674 ]
+"295
+[; ;main.c: 295: }
+[e :UE 671 ]
 }

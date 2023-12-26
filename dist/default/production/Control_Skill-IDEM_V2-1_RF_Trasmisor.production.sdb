@@ -35,16 +35,12 @@ channel_FVRBuf2 31
 [v _flush_TX_RX flush_TX_RX `(v  1 e 1 0 ]
 "151
 [v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
-"172
+"174
 [v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
-"184
-[v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
-"201
+"203
 [v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
-"218
+"220
 [v _get_Status get_Status `(uc  1 e 1 0 ]
-"240
-[v _nrf2401_haydatos nrf2401_haydatos `(uc  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\float.c
@@ -69,17 +65,15 @@ channel_FVRBuf2 31
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"149 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+"150 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
 [v _main main `(v  1 e 1 0 ]
-"220
+"229
 [v _envio_1 envio_1 `(v  1 e 1 0 ]
-"232
+"243
 [v _envio_2 envio_2 `(v  1 e 1 0 ]
-"244
-[v _envio_ya_recibio envio_ya_recibio `(v  1 e 1 0 ]
-"255
+"268
 [v _envio_confirmado envio_confirmado `(v  1 e 1 0 ]
-"263
+"276
 [v _condicion_tanque condicion_tanque `(v  1 e 1 0 ]
 "62 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -113,7 +107,7 @@ channel_FVRBuf2 31
 [v _ANSELB ANSELB `VEuc  1 e 1 @3932 ]
 "327
 [v _ANSELC ANSELC `VEuc  1 e 1 @3933 ]
-[s S764 . 1 `uc 1 RA0 1 0 :1:0 
+[s S769 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -123,7 +117,7 @@ channel_FVRBuf2 31
 `uc 1 RA7 1 0 :1:7 
 ]
 "2837
-[s S806 . 1 `uc 1 AN0 1 0 :1:0 
+[s S811 . 1 `uc 1 AN0 1 0 :1:0 
 `uc 1 AN1 1 0 :1:1 
 `uc 1 AN2 1 0 :1:2 
 `uc 1 AN3 1 0 :1:3 
@@ -131,21 +125,21 @@ channel_FVRBuf2 31
 `uc 1 AN4 1 0 :1:5 
 `uc 1 OSC2 1 0 :1:6 
 ]
-[s S814 . 1 `uc 1 . 1 0 :2:0 
+[s S819 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 VREFM 1 0 :1:2 
 `uc 1 VREFP 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
 `uc 1 LVDIN 1 0 :1:5 
 ]
-[s S820 . 1 `uc 1 . 1 0 :5:0 
+[s S825 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 HLVDIN 1 0 :1:5 
 ]
-[s S823 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+[s S828 . 1 `uc 1 ULPWUIN 1 0 :1:0 
 `uc 1 . 1 0 :6:1 
 `uc 1 RJPU 1 0 :1:7 
 ]
-[u S827 . 1 `S764 1 . 1 0 `S806 1 . 1 0 `S814 1 . 1 0 `S820 1 . 1 0 `S823 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES827  1 e 1 @3968 ]
+[u S832 . 1 `S769 1 . 1 0 `S811 1 . 1 0 `S819 1 . 1 0 `S825 1 . 1 0 `S828 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES832  1 e 1 @3968 ]
 [s S592 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -225,7 +219,7 @@ channel_FVRBuf2 31
 [v _CCPR2H CCPR2H `VEuc  1 e 1 @3985 ]
 "4155
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
-[s S755 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S760 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -235,8 +229,8 @@ channel_FVRBuf2 31
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "4187
-[u S773 . 1 `S755 1 . 1 0 `S764 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES773  1 e 1 @3986 ]
+[u S778 . 1 `S760 1 . 1 0 `S769 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES778  1 e 1 @3986 ]
 "4377
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 [s S583 . 1 `uc 1 TRISB0 1 0 :1:0 
@@ -489,114 +483,47 @@ channel_FVRBuf2 31
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"149 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+"150 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"217
+"226
 } 0
-"23 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-[v _spi_s_init spi_s_init `(v  1 e 1 0 ]
-{
-"38
-} 0
-"240
-[v _nrf2401_haydatos nrf2401_haydatos `(uc  1 e 1 0 ]
-{
-"244
-} 0
-"218
-[v _get_Status get_Status `(uc  1 e 1 0 ]
-{
-"221
-} 0
-"99
-[v _nrf2401_read nrf2401_read `(uc  1 e 1 0 ]
-{
-[v nrf2401_read@reg reg `uc  1 a 1 wreg ]
-"101
-[v nrf2401_read@dato_ dato_ `uc  1 a 1 3 ]
-"99
-[v nrf2401_read@reg reg `uc  1 a 1 wreg ]
-[v nrf2401_read@reg reg `uc  1 a 1 2 ]
-"108
-} 0
-"201
-[v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
-{
-[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
-[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
-"203
-[v nrF2401_init_TX@canal canal `uc  1 a 1 6 ]
-"215
-} 0
-"244 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-[v _envio_ya_recibio envio_ya_recibio `(v  1 e 1 0 ]
-{
-"253
-} 0
-"172 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
-[v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
-{
-"174
-[v nrf2401_recibe@valor_ valor_ `uc  1 a 1 2 ]
-"181
-} 0
-"40
-[v _spi_s_read spi_s_read `(uc  1 e 1 0 ]
-{
-"42
-[v spi_s_read@cont_s cont_s `uc  1 a 1 1 ]
-"43
-[v spi_s_read@dato_ dato_ `uc  1 a 1 0 ]
-"59
-} 0
-"263 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
-[v _condicion_tanque condicion_tanque `(v  1 e 1 0 ]
-{
-"265
-[v condicion_tanque@j j `i  1 a 2 13 ]
-"282
-} 0
-"255
-[v _envio_confirmado envio_confirmado `(v  1 e 1 0 ]
-{
-"261
-} 0
-"232
+"243
 [v _envio_2 envio_2 `(v  1 e 1 0 ]
 {
-"236
-[v envio_2@i i `i  1 a 2 9 ]
-"242
+"248
+[v envio_2@i i `i  1 a 2 10 ]
+"255
 } 0
-"220
+"229
 [v _envio_1 envio_1 `(v  1 e 1 0 ]
 {
-"224
-[v envio_1@i i `i  1 a 2 9 ]
-"230
+"234
+[v envio_1@i i `i  1 a 2 10 ]
+"241
 } 0
 "151 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
 [v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
 {
 [v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 wreg ]
 [v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 wreg ]
-[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 4 ]
-"167
+"153
+[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 7 ]
+"169
 } 0
-"135
-[v _flush_TX flush_TX `(v  1 e 1 0 ]
+"23
+[v _spi_s_init spi_s_init `(v  1 e 1 0 ]
 {
-"139
+"38
 } 0
-"184
-[v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
+"203
+[v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
 {
-[v nrF2401_init_RX@canal canal `uc  1 a 1 wreg ]
-[v nrF2401_init_RX@canal canal `uc  1 a 1 wreg ]
-"186
-[v nrF2401_init_RX@canal canal `uc  1 a 1 6 ]
-"199
+[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
+[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
+"205
+[v nrF2401_init_TX@canal canal `uc  1 a 1 6 ]
+"217
 } 0
 "111
 [v _nrf2401_direccion_TX_RX nrf2401_direccion_TX_RX `(v  1 e 1 0 ]
@@ -612,6 +539,11 @@ channel_FVRBuf2 31
 [v _flush_TX_RX flush_TX_RX `(v  1 e 1 0 ]
 {
 "147
+} 0
+"135
+[v _flush_TX flush_TX `(v  1 e 1 0 ]
+{
+"139
 } 0
 "81
 [v _nrf2401_write nrf2401_write `(v  1 e 1 0 ]

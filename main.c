@@ -142,6 +142,7 @@ unsigned char texto[20];
  */
 
 void envio_1();
+void envio_2();
 void envio_ya_recibio();
 void envio_confirmado();
 void condicion_tanque();
@@ -190,24 +191,32 @@ void main(void)
     nrF2401_init_TX(17);                                                        //incicializa transmision por el canal 17
 //    nrF2401_init_RX(17);                                                        //Inicializa recepcion por el canal 17
     ////////////////////////////////////////////////////////////////////////////
-    dato_serial = 1;
+    dato_serial = 2;
 
     while (1)
     {
         // Add your application code
         
         //EJEMPLO ENVIO DE DATOS TX POR MODULO NRF24L01
-        if(Input1 == 0 && Input2 == 1) 
+        if(Input1 == 0 && Input2 == 0) 
         {
 //            dato_serial = ~dato_serial;
 //            nrf2401_envia(dato_serial);
             envio_1();
             
-            if(nrf2401_haydatos() == 1) envio_ya_recibio();
-          
-            
+            //if(nrf2401_haydatos() == 1) envio_ya_recibio();
+                
+        } 
+        else if (Input1 == 1) 
+            {
+                envio_2();
+            }
+        
+        else 
+        {
+            RELE1 = 0;
+            RELE2 = 0;
         }
-        else RELE1 = 0;
         
         
         
@@ -219,26 +228,30 @@ void main(void)
 
 void envio_1()
 {
-    dato_serial = 1;
+    dato_serial = 0b00000001;
     RELE1 = 1;
+    RELE2 = 0;
     int i = 0;
+    
     for (i = 0; i < 10; i++) {
-        nrf2401_envia(dato_serial);
+        nrf2401_envia('a');
         __delay_ms(50);
     }
-    nrF2401_init_RX(17);
+    //nrF2401_init_RX(17);
 }
 
 void envio_2()
 {
-    dato_serial = 2;
-    RELE1 = 1;
+    dato_serial = 0b10000000;
+    RELE2 = 1;
+    RELE1 = 0;
     int i = 0;
+    
     for (i = 0; i < 10; i++) {
-        nrf2401_envia(dato_serial);
+        nrf2401_envia('b');
         __delay_ms(50);
     }
-    nrF2401_init_RX(17);
+    //nrF2401_init_RX(17);
 }
 
 void envio_ya_recibio()
@@ -265,13 +278,13 @@ void condicion_tanque()
     int j = 0;
     while(1)
     {
-        if (Input1 == 1 && Input2 == 0)       //Tanque completamente lleno
+        if (Input1 == 1 && Input2 == 1)       //Tanque completamente lleno
         {
             envio_2();
             envio_confirmado();
             break;
         }
-        else if (Input1 == 0 && Input2 == 1)  //Tanque completamente vacio
+        else if (Input1 == 0 && Input2 == 0)  //Tanque completamente vacio
         {
             j++;
             __delay_ms(1000);
