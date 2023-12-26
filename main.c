@@ -143,9 +143,6 @@ unsigned char texto[20];
 
 void envio_1();
 void envio_2();
-void envio_ya_recibio();
-void envio_confirmado();
-void condicion_tanque();
 
 void main(void)
 {
@@ -191,26 +188,14 @@ void main(void)
     nrF2401_init_TX(17);                                                        //incicializa transmision por el canal 17
 //    nrF2401_init_RX(17);                                                        //Inicializa recepcion por el canal 17
     ////////////////////////////////////////////////////////////////////////////
-    dato_serial = 2;
 
     while (1)
     {
         // Add your application code
         
         //EJEMPLO ENVIO DE DATOS TX POR MODULO NRF24L01
-        if(Input1 == 0 && Input2 == 0) 
-        {
-//            dato_serial = ~dato_serial;
-//            nrf2401_envia(dato_serial);
-            envio_1();
-            
-            //if(nrf2401_haydatos() == 1) envio_ya_recibio();
-                
-        } 
-        else if (Input1 == 1) 
-            {
-                envio_2();
-            }
+        if(Input1 == 0 && Input2 == 0) envio_1();
+        else if (Input1 == 1) envio_2();
         
         else 
         {
@@ -228,7 +213,6 @@ void main(void)
 
 void envio_1()
 {
-    dato_serial = 0b00000001;
     RELE1 = 1;
     RELE2 = 0;
     int i = 0;
@@ -237,12 +221,10 @@ void envio_1()
         nrf2401_envia('a');
         __delay_ms(50);
     }
-    //nrF2401_init_RX(17);
 }
 
 void envio_2()
 {
-    dato_serial = 0b10000000;
     RELE2 = 1;
     RELE1 = 0;
     int i = 0;
@@ -251,47 +233,6 @@ void envio_2()
         nrf2401_envia('b');
         __delay_ms(50);
     }
-    //nrF2401_init_RX(17);
-}
-
-void envio_ya_recibio()
-{
-    dato_serial = nrf2401_recibe();
-    if(dato_serial == 1)
-    {
-        envio_confirmado();
-        condicion_tanque();
-                
-    }
-}
-
-void envio_confirmado()
-{
-    RELE2 = 1;
-    __delay_ms(1000);
-    RELE2 = 0;  
-    dato_serial = 0;
-}
-
-void condicion_tanque()
-{
-    int j = 0;
-    while(1)
-    {
-        if (Input1 == 1 && Input2 == 1)       //Tanque completamente lleno
-        {
-            envio_2();
-            envio_confirmado();
-            break;
-        }
-        else if (Input1 == 0 && Input2 == 0)  //Tanque completamente vacio
-        {
-            j++;
-            __delay_ms(1000);
-            if (j == 300) break;
-        }
-    }
-    
 }
 /**
  End of File

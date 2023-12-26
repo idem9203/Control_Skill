@@ -156,12 +156,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "145
 [; ;main.c: 145: void envio_2();
 [v _envio_2 `(v ~T0 @X0 0 e? ]
-"147
-[; ;main.c: 147: void envio_confirmado();
-[v _envio_confirmado `(v ~T0 @X0 0 e? ]
-"148
-[; ;main.c: 148: void condicion_tanque();
-[v _condicion_tanque `(v ~T0 @X0 0 e? ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k50.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8\pic\include\proc\pic18f25k50.h: 54: __asm("SRCON1 equ 0F57h");
 [; <" SRCON1 equ 0F57h ;# ">
@@ -1538,330 +1532,180 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 89: unsigned char texto[20];
 [v _texto `uc ~T0 @X0 -> 20 `i e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"150
-[; ;main.c: 150: void main(void)
+"147
+[; ;main.c: 147: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"151
-[; ;main.c: 151: {
+"148
+[; ;main.c: 148: {
 {
 [e :U _main ]
 [f ]
-"153
-[; ;main.c: 153:     SYSTEM_Initialize();
+"150
+[; ;main.c: 150:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"172
-[; ;main.c: 172:     ANSELA = 0b00000111;
+"169
+[; ;main.c: 169:     ANSELA = 0b00000111;
 [e = _ANSELA -> -> 7 `i `uc ]
-"173
-[; ;main.c: 173:     ANSELB = 0b00000000;
+"170
+[; ;main.c: 170:     ANSELB = 0b00000000;
 [e = _ANSELB -> -> 0 `i `uc ]
-"174
-[; ;main.c: 174:     ANSELC = 0x00;
+"171
+[; ;main.c: 171:     ANSELC = 0x00;
 [e = _ANSELC -> -> 0 `i `uc ]
-"181
-[; ;main.c: 181:     TRISAbits.RA3 = 1;
+"178
+[; ;main.c: 178:     TRISAbits.RA3 = 1;
 [e = . . _TRISAbits 1 3 -> -> 1 `i `uc ]
-"183
-[; ;main.c: 183:     LATA5 = 1;
+"180
+[; ;main.c: 180:     LATA5 = 1;
 [e = _LATA5 -> -> 1 `i `b ]
-"184
-[; ;main.c: 184:     LATB0 = 1;
+"181
+[; ;main.c: 181:     LATB0 = 1;
 [e = _LATB0 -> -> 1 `i `b ]
-"185
-[; ;main.c: 185:     _delay((unsigned long)((1000)*(48000000/4000.0)));
+"182
+[; ;main.c: 182:     _delay((unsigned long)((1000)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"186
-[; ;main.c: 186:     LATA5 = 0;
+"183
+[; ;main.c: 183:     LATA5 = 0;
 [e = _LATA5 -> -> 0 `i `b ]
-"187
-[; ;main.c: 187:     LATB0 = 0;
+"184
+[; ;main.c: 184:     LATB0 = 0;
 [e = _LATB0 -> -> 0 `i `b ]
-"190
-[; ;main.c: 190:     spi_s_init();
+"187
+[; ;main.c: 187:     spi_s_init();
 [e ( _spi_s_init ..  ]
-"191
-[; ;main.c: 191:     nrF2401_init_TX(17);
+"188
+[; ;main.c: 188:     nrF2401_init_TX(17);
 [e ( _nrF2401_init_TX (1 -> -> 17 `i `uc ]
-"194
-[; ;main.c: 194:     dato_serial = 2;
-[e = _dato_serial -> -> 2 `i `uc ]
-"196
-[; ;main.c: 196:     while (1)
+"192
+[; ;main.c: 192:     while (1)
 [e :U 654 ]
+"193
+[; ;main.c: 193:     {
+{
 "197
-[; ;main.c: 197:     {
-{
-"201
-[; ;main.c: 201:         if(PORTAbits.RA3 == 0 && PORTAbits.RA4 == 0)
+[; ;main.c: 197:         if(PORTAbits.RA3 == 0 && PORTAbits.RA4 == 0) envio_1();
 [e $ ! && == -> . . _PORTAbits 0 3 `i -> 0 `i == -> . . _PORTAbits 0 4 `i -> 0 `i 656  ]
-"202
-[; ;main.c: 202:         {
-{
-"205
-[; ;main.c: 205:             envio_1();
 [e ( _envio_1 ..  ]
-"209
-[; ;main.c: 209:         }
-}
 [e $U 657  ]
-"210
-[; ;main.c: 210:         else if (PORTAbits.RA3 == 1)
+"198
+[; ;main.c: 198:         else if (PORTAbits.RA3 == 1) envio_2();
 [e :U 656 ]
 [e $ ! == -> . . _PORTAbits 0 3 `i -> 1 `i 658  ]
-"211
-[; ;main.c: 211:             {
-{
-"212
-[; ;main.c: 212:                 envio_2();
 [e ( _envio_2 ..  ]
-"213
-[; ;main.c: 213:             }
-}
 [e $U 659  ]
-"215
-[; ;main.c: 215:         else
+"200
+[; ;main.c: 200:         else
 [e :U 658 ]
-"216
-[; ;main.c: 216:         {
+"201
+[; ;main.c: 201:         {
 {
-"217
-[; ;main.c: 217:             LATA5 = 0;
+"202
+[; ;main.c: 202:             LATA5 = 0;
 [e = _LATA5 -> -> 0 `i `b ]
-"218
-[; ;main.c: 218:             LATB0 = 0;
+"203
+[; ;main.c: 203:             LATB0 = 0;
 [e = _LATB0 -> -> 0 `i `b ]
-"219
-[; ;main.c: 219:         }
+"204
+[; ;main.c: 204:         }
 }
 [e :U 659 ]
 [e :U 657 ]
-"224
-[; ;main.c: 224:         _delay((unsigned long)((100)*(48000000/4000.0)));
+"209
+[; ;main.c: 209:         _delay((unsigned long)((100)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"225
-[; ;main.c: 225:     }
+"210
+[; ;main.c: 210:     }
 }
 [e :U 653 ]
 [e $U 654  ]
 [e :U 655 ]
-"226
-[; ;main.c: 226: }
+"211
+[; ;main.c: 211: }
 [e :UE 652 ]
 }
-"229
-[; ;main.c: 229: void envio_1()
+"214
+[; ;main.c: 214: void envio_1()
 [v _envio_1 `(v ~T0 @X0 1 ef ]
-"230
-[; ;main.c: 230: {
+"215
+[; ;main.c: 215: {
 {
 [e :U _envio_1 ]
 [f ]
-"231
-[; ;main.c: 231:     dato_serial = 0b00000001;
-[e = _dato_serial -> -> 1 `i `uc ]
-"232
-[; ;main.c: 232:     LATA5 = 1;
+"216
+[; ;main.c: 216:     LATA5 = 1;
 [e = _LATA5 -> -> 1 `i `b ]
-"233
-[; ;main.c: 233:     LATB0 = 0;
+"217
+[; ;main.c: 217:     LATB0 = 0;
 [e = _LATB0 -> -> 0 `i `b ]
-"234
-[; ;main.c: 234:     int i = 0;
+"218
+[; ;main.c: 218:     int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"236
-[; ;main.c: 236:     for (i = 0; i < 10; i++) {
+"220
+[; ;main.c: 220:     for (i = 0; i < 10; i++) {
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 10 `i 661  ]
 [e $U 662  ]
 [e :U 661 ]
 {
-"237
-[; ;main.c: 237:         nrf2401_envia('a');
+"221
+[; ;main.c: 221:         nrf2401_envia('a');
 [e ( _nrf2401_envia (1 -> -> 97 `ui `uc ]
-"238
-[; ;main.c: 238:         _delay((unsigned long)((50)*(48000000/4000.0)));
+"222
+[; ;main.c: 222:         _delay((unsigned long)((50)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"239
-[; ;main.c: 239:     }
+"223
+[; ;main.c: 223:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 10 `i 661  ]
 [e :U 662 ]
 }
-"241
-[; ;main.c: 241: }
+"224
+[; ;main.c: 224: }
 [e :UE 660 ]
 }
-"243
-[; ;main.c: 243: void envio_2()
+"226
+[; ;main.c: 226: void envio_2()
 [v _envio_2 `(v ~T0 @X0 1 ef ]
-"244
-[; ;main.c: 244: {
+"227
+[; ;main.c: 227: {
 {
 [e :U _envio_2 ]
 [f ]
-"245
-[; ;main.c: 245:     dato_serial = 0b10000000;
-[e = _dato_serial -> -> 128 `i `uc ]
-"246
-[; ;main.c: 246:     LATB0 = 1;
+"228
+[; ;main.c: 228:     LATB0 = 1;
 [e = _LATB0 -> -> 1 `i `b ]
-"247
-[; ;main.c: 247:     LATA5 = 0;
+"229
+[; ;main.c: 229:     LATA5 = 0;
 [e = _LATA5 -> -> 0 `i `b ]
-"248
-[; ;main.c: 248:     int i = 0;
+"230
+[; ;main.c: 230:     int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"250
-[; ;main.c: 250:     for (i = 0; i < 10; i++) {
+"232
+[; ;main.c: 232:     for (i = 0; i < 10; i++) {
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 10 `i 665  ]
 [e $U 666  ]
 [e :U 665 ]
 {
-"251
-[; ;main.c: 251:         nrf2401_envia('b');
+"233
+[; ;main.c: 233:         nrf2401_envia('b');
 [e ( _nrf2401_envia (1 -> -> 98 `ui `uc ]
-"252
-[; ;main.c: 252:         _delay((unsigned long)((50)*(48000000/4000.0)));
+"234
+[; ;main.c: 234:         _delay((unsigned long)((50)*(48000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"253
-[; ;main.c: 253:     }
+"235
+[; ;main.c: 235:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 10 `i 665  ]
 [e :U 666 ]
 }
-"255
-[; ;main.c: 255: }
+"236
+[; ;main.c: 236: }
 [e :UE 664 ]
-}
-"257
-[; ;main.c: 257: void envio_ya_recibio()
-[v _envio_ya_recibio `(v ~T0 @X0 1 ef ]
-"258
-[; ;main.c: 258: {
-{
-[e :U _envio_ya_recibio ]
-[f ]
-"259
-[; ;main.c: 259:     dato_serial = nrf2401_recibe();
-[e = _dato_serial -> ( _nrf2401_recibe ..  `uc ]
-"260
-[; ;main.c: 260:     if(dato_serial == 1)
-[e $ ! == -> _dato_serial `i -> 1 `i 669  ]
-"261
-[; ;main.c: 261:     {
-{
-"262
-[; ;main.c: 262:         envio_confirmado();
-[e ( _envio_confirmado ..  ]
-"263
-[; ;main.c: 263:         condicion_tanque();
-[e ( _condicion_tanque ..  ]
-"265
-[; ;main.c: 265:     }
-}
-[e :U 669 ]
-"266
-[; ;main.c: 266: }
-[e :UE 668 ]
-}
-"268
-[; ;main.c: 268: void envio_confirmado()
-[v _envio_confirmado `(v ~T0 @X0 1 ef ]
-"269
-[; ;main.c: 269: {
-{
-[e :U _envio_confirmado ]
-[f ]
-"270
-[; ;main.c: 270:     LATB0 = 1;
-[e = _LATB0 -> -> 1 `i `b ]
-"271
-[; ;main.c: 271:     _delay((unsigned long)((1000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"272
-[; ;main.c: 272:     LATB0 = 0;
-[e = _LATB0 -> -> 0 `i `b ]
-"273
-[; ;main.c: 273:     dato_serial = 0;
-[e = _dato_serial -> -> 0 `i `uc ]
-"274
-[; ;main.c: 274: }
-[e :UE 670 ]
-}
-"276
-[; ;main.c: 276: void condicion_tanque()
-[v _condicion_tanque `(v ~T0 @X0 1 ef ]
-"277
-[; ;main.c: 277: {
-{
-[e :U _condicion_tanque ]
-[f ]
-"278
-[; ;main.c: 278:     int j = 0;
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
-"279
-[; ;main.c: 279:     while(1)
-[e :U 673 ]
-"280
-[; ;main.c: 280:     {
-{
-"281
-[; ;main.c: 281:         if (PORTAbits.RA3 == 1 && PORTAbits.RA4 == 1)
-[e $ ! && == -> . . _PORTAbits 0 3 `i -> 1 `i == -> . . _PORTAbits 0 4 `i -> 1 `i 675  ]
-"282
-[; ;main.c: 282:         {
-{
-"283
-[; ;main.c: 283:             envio_2();
-[e ( _envio_2 ..  ]
-"284
-[; ;main.c: 284:             envio_confirmado();
-[e ( _envio_confirmado ..  ]
-"285
-[; ;main.c: 285:             break;
-[e $U 674  ]
-"286
-[; ;main.c: 286:         }
-}
-[e $U 676  ]
-"287
-[; ;main.c: 287:         else if (PORTAbits.RA3 == 0 && PORTAbits.RA4 == 0)
-[e :U 675 ]
-[e $ ! && == -> . . _PORTAbits 0 3 `i -> 0 `i == -> . . _PORTAbits 0 4 `i -> 0 `i 677  ]
-"288
-[; ;main.c: 288:         {
-{
-"289
-[; ;main.c: 289:             j++;
-[e ++ _j -> 1 `i ]
-"290
-[; ;main.c: 290:             _delay((unsigned long)((1000)*(48000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
-"291
-[; ;main.c: 291:             if (j == 300) break;
-[e $ ! == _j -> 300 `i 678  ]
-[e $U 674  ]
-[e :U 678 ]
-"292
-[; ;main.c: 292:         }
-}
-[e :U 677 ]
-[e :U 676 ]
-"293
-[; ;main.c: 293:     }
-}
-[e :U 672 ]
-[e $U 673  ]
-[e :U 674 ]
-"295
-[; ;main.c: 295: }
-[e :UE 671 ]
 }

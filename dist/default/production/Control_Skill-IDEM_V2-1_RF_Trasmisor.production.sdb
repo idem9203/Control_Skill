@@ -65,16 +65,12 @@ channel_FVRBuf2 31
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"150 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+"147 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
 [v _main main `(v  1 e 1 0 ]
-"229
+"214
 [v _envio_1 envio_1 `(v  1 e 1 0 ]
-"243
+"226
 [v _envio_2 envio_2 `(v  1 e 1 0 ]
-"268
-[v _envio_confirmado envio_confirmado `(v  1 e 1 0 ]
-"276
-[v _condicion_tanque condicion_tanque `(v  1 e 1 0 ]
 "62 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "49 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\mcc_generated_files/ccp2.c
@@ -467,8 +463,6 @@ channel_FVRBuf2 31
 [v _PLLRDY PLLRDY `VEb  1 e 0 @32407 ]
 "70 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
 [v _direccion_tx direccion_tx `C[5]uc  1 e 5 0 ]
-"74
-[v _dato_serial dato_serial `uc  1 e 1 0 ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
@@ -483,24 +477,24 @@ channel_FVRBuf2 31
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"150 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
+"147 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"226
+"211
 } 0
-"243
+"226
 [v _envio_2 envio_2 `(v  1 e 1 0 ]
 {
-"248
+"230
 [v envio_2@i i `i  1 a 2 10 ]
-"255
+"236
 } 0
-"229
+"214
 [v _envio_1 envio_1 `(v  1 e 1 0 ]
 {
-"234
+"218
 [v envio_1@i i `i  1 a 2 10 ]
-"241
+"224
 } 0
 "151 C:\Users\TEOREMAIEE\Desktop\Control_Skill-IDEM_V2-1_RF_Trasmisor/Librerias/nRF24L01_2.h
 [v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
