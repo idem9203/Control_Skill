@@ -8352,16 +8352,24 @@ char nrf2401_haydatos()
 void nrf2401_recibe_Text(char* Buffer, char StopChar)
 {
     flush_RX();
-    while(*(Buffer-1)!= StopChar)
-    {
+
+    for (int i = 0; i < 20; i++) {
         if(get_Status() == 0x40) *Buffer++ = nrf2401_recibe();
+        if (nrf2401_recibe() == '/') break;
     }
 
-    *--Buffer=0;
+
+
+
+
+    *--Buffer = 0;
 }
 # 74 "main.c" 2
-unsigned char dato_serial = 0;
-
+char dato_serial = 'c';
+int letra1 = 'a';
+int letra2 = 'b';
+char texto = 0;
+_Bool estado = 0;
 
 
 
@@ -8389,7 +8397,7 @@ unsigned long conteo = 0;
 unsigned long currentSeg = 0;
 unsigned long previousMillis = 0;
 const long intervalo = 14400;
-# 135 "main.c"
+# 138 "main.c"
 double get_corriente_AC(int n_muestras)
 {
   double corriente = 0.0;
@@ -8407,15 +8415,19 @@ double get_corriente_AC(int n_muestras)
 
   return(((I_max - I_min) / 2));
 }
-# 196 "main.c"
+# 199 "main.c"
 void trip_protec_current()
 {
+    if (I > 9 && I < 16) estado = 0;
+
     if (I <= 9)
     {
+        estado = 1;
         LATA5 = 0;
         currentSeg = conteo;
         if (currentSeg - previousMillis >= intervalo)
         {
+            estado = 0;
             previousMillis = currentSeg;
             LATA5 = 1;
             _delay((unsigned long)((3000)*(48000000/4000.0)));
@@ -8423,6 +8435,7 @@ void trip_protec_current()
     }
     if (I >= 16 && I < 17)
     {
+        estado = 1;
         i = i + 1;
         if (i > 600)
         {
@@ -8433,6 +8446,7 @@ void trip_protec_current()
     }
     if (I >= 17 && I < 18)
     {
+        estado = 1;
         j = j + 1;
         if ( j > 300)
         {
@@ -8443,6 +8457,7 @@ void trip_protec_current()
     }
     if (I >= 18 && I < 19)
     {
+        estado = 1;
         k = k + 1;
         if (k > 120)
         {
@@ -8453,6 +8468,7 @@ void trip_protec_current()
     }
     if (I >= 19)
     {
+        estado = 1;
         l = l + 1;
         if (l > 15)
         {
@@ -8464,8 +8480,6 @@ void trip_protec_current()
 }
 
 void recibido_1();
-void envio_ya_recibido();
-void confirmacion();
 
 void main(void)
 {
@@ -8518,10 +8532,12 @@ void main(void)
         sprintf(valor_string, "%.3f Amp.\n\r", I);
         if (EUSART1_is_tx_ready()) EUSART1_Write_string(valor_string);
 
+
         trip_protec_current();
 
 
-        recibido_1();
+        if (estado == 0 ) recibido_1();
+        else LATA5 = 0;
 
 
         _delay((unsigned long)((50)*(48000000/4000.0)));
@@ -8535,35 +8551,7 @@ void recibido_1()
     if(nrf2401_haydatos() == 1)
     {
         dato_serial = nrf2401_recibe();
-        if (dato_serial == 1)
-        {
-            envio_ya_recibido();
-            confirmacion();
-            dato_serial = 0;
-        }
-        else if (dato_serial == 2)
-        {
-            envio_ya_recibido();
-            LATA5 = 0;
-            dato_serial = 0;
-        }
+        if (dato_serial == letra1) LATA5 = 1;
+        else if (dato_serial == letra2) LATA5 = 0;
     }
-}
-void envio_ya_recibido()
-{
-    nrF2401_init_TX(17);
-
-    int i = 0;
-    for (i = 0; i < 60; i++) {
-        nrf2401_envia(dato_serial);
-        _delay((unsigned long)((50)*(48000000/4000.0)));
-    }
-    nrF2401_init_RX(17);
-}
-void confirmacion()
-{
-    envio_ya_recibido();
-    LATA5 = 1;
-    _delay((unsigned long)((3000)*(48000000/4000.0)));
-    _delay((unsigned long)((3000)*(48000000/4000.0)));
 }

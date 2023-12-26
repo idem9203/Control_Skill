@@ -247,10 +247,15 @@ char nrf2401_haydatos()
 void nrf2401_recibe_Text(char* Buffer, char StopChar)
 {
     flush_RX();
-    while(*(Buffer-1)!= StopChar)   //mientras no llegue el caracter deseado
-    {
-        if(get_Status() == 0x40) *Buffer++ = nrf2401_recibe();  //sigue almacenando en el buffer       ,
+    
+    for (int i = 0; i < 20; i++) {
+        if(get_Status() == 0x40) *Buffer++ = nrf2401_recibe();
+        if (nrf2401_recibe() == '/') break;
     }
 
-    *--Buffer=0; //coloca un cero al final para que sea una cadena
+//    while(*(Buffer-1)!= StopChar)   //mientras no llegue el caracter deseado
+//    {
+//        if(get_Status() == 0x40) *Buffer++ = nrf2401_recibe();  //sigue almacenando en el buffer       ,
+//    }
+    *--Buffer = 0; //coloca un cero al final para que sea una cadena
 }

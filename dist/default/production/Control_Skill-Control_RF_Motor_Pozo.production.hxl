@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\TEOREM~1\AppData\Local\Temp\xcAs8b0.\driver_tmp_3.o
+ C:\Users\TEOREM~1\AppData\Local\Temp\xcAs144c.\driver_tmp_3.o
  -Odist/default/production\Control_Skill-Control_RF_Motor_Pozo.production.hex
  -logfile=dist/default/production\Control_Skill-Control_RF_Motor_Pozo.production.hxl
  -addressing=1
@@ -9,21 +9,23 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs8b0.\driver_tmp_3.o)
-  8h - 4Fh		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs8b0.\driver_tmp_3.o)
-  800h - 3881h		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs8b0.\driver_tmp_3.o)
-  200000h - 200007h		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs8b0.\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs8b0.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs144c.\driver_tmp_3.o)
+  8h - 4Fh		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs144c.\driver_tmp_3.o)
+  800h - 37F8h		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs144c.\driver_tmp_3.o)
+  37FAh - 37FFh		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs144c.\driver_tmp_3.o)
+  200000h - 200007h		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs144c.\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\TEOREM~1\AppData\Local\Temp\xcAs144c.\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   50h - 7FFh
-  3882h - 1FFFFFh
+  37F9h - 37F9h
+  3800h - 1FFFFFh
   200008h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\TEOREM~1\AppData\Local\Temp\xcAs8b0.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\TEOREM~1\AppData\Local\Temp\xcAs144c.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -800,16 +802,7 @@
 000037C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000037D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000037E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000037F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003800 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003810 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003820 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003830 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003840 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003850 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003860 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003870 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003880 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+000037F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------

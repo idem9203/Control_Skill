@@ -13,7 +13,7 @@ channel_CTMU 29
 channel_DAC 30
 channel_FVRBuf2 31
 ]
-"142 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+"145 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
 [e E4963 . `uc
 channel_AN0 0
 channel_AN1 1
@@ -49,8 +49,6 @@ channel_FVRBuf2 31
 [v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
 "184
 [v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
-"201
-[v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
 "218
 [v _get_Status get_Status `(uc  1 e 1 0 ]
 "240
@@ -115,18 +113,14 @@ channel_FVRBuf2 31
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"135 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+"138 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
 [v _get_corriente_AC get_corriente_AC `(d  1 e 4 0 ]
-"196
+"199
 [v _trip_protec_current trip_protec_current `(v  1 e 1 0 ]
-"255
+"264
 [v _main main `(v  1 e 1 0 ]
-"318
+"329
 [v _recibido_1 recibido_1 `(v  1 e 1 0 ]
-"337
-[v _envio_ya_recibido envio_ya_recibido `(v  1 e 1 0 ]
-"348
-[v _confirmacion confirmacion `(v  1 e 1 0 ]
 "62 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "110
@@ -635,31 +629,33 @@ channel_FVRBuf2 31
 [v _direccion_tx direccion_tx `C[5]uc  1 e 5 0 ]
 "74
 [v _dato_serial dato_serial `uc  1 e 1 0 ]
-"82
+"78
+[v _estado estado `a  1 e 1 0 ]
+"85
 [v _valor valor `ui  1 e 2 0 ]
-"83
-[v _voltaje voltaje `d  1 e 4 0 ]
 "86
+[v _voltaje voltaje `d  1 e 4 0 ]
+"89
 [v _I I `d  1 e 4 0 ]
-"87
+"90
 [v _I_max I_max `d  1 e 4 0 ]
-"88
-[v _I_min I_min `d  1 e 4 0 ]
 "91
-[v _i i `i  1 e 2 0 ]
-"92
-[v _j j `i  1 e 2 0 ]
-"93
-[v _k k `i  1 e 2 0 ]
+[v _I_min I_min `d  1 e 4 0 ]
 "94
-[v _l l `i  1 e 2 0 ]
+[v _i i `i  1 e 2 0 ]
 "95
+[v _j j `i  1 e 2 0 ]
+"96
+[v _k k `i  1 e 2 0 ]
+"97
+[v _l l `i  1 e 2 0 ]
+"98
 [v _valor_string valor_string `[14]uc  1 e 14 0 ]
-"99
+"102
 [v _conteo conteo `ul  1 e 4 0 ]
-"100
+"103
 [v _currentSeg currentSeg `ul  1 e 4 0 ]
-"101
+"104
 [v _previousMillis previousMillis `ul  1 e 4 0 ]
 [s S24 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
@@ -679,23 +675,23 @@ channel_FVRBuf2 31
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58
 [v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
-"255 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+"264 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"316
+"327
 } 0
-"196
+"199
 [v _trip_protec_current trip_protec_current `(v  1 e 1 0 ]
 {
-"249
+"260
 } 0
 "9 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S1857 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[u S1850 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
 "13
-[s S1860 _IO_FILE 12 `S1857 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v sprintf@f f `S1860  1 a 12 85 ]
+[s S1853 _IO_FILE 12 `S1850 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v sprintf@f f `S1853  1 a 12 85 ]
 "12
 [v sprintf@ap ap `[1]*.30v  1 a 1 84 ]
 "9
@@ -708,9 +704,9 @@ channel_FVRBuf2 31
 {
 "1820
 [v vfprintf@cfmt cfmt `*.31uc  1 a 1 76 ]
-[s S1892 _IO_FILE 0 ]
+[s S1885 _IO_FILE 0 ]
 "1817
-[v vfprintf@fp fp `*.30S1892  1 p 1 73 ]
+[v vfprintf@fp fp `*.30S1885  1 p 1 73 ]
 [v vfprintf@fmt fmt `*.31Cuc  1 p 1 74 ]
 [v vfprintf@ap ap `*.30*.30v  1 p 1 75 ]
 "1840
@@ -718,15 +714,15 @@ channel_FVRBuf2 31
 "1177
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S1942 . 4 `d 1 f 4 0 ]
+[u S1935 . 4 `d 1 f 4 0 ]
 "1188
-[v vfpfcnvrt@convarg convarg `S1942  1 a 4 67 ]
+[v vfpfcnvrt@convarg convarg `S1935  1 a 4 67 ]
 "1179
 [v vfpfcnvrt@cp cp `*.31uc  1 a 1 72 ]
 [v vfpfcnvrt@c c `uc  1 a 1 71 ]
-[s S1892 _IO_FILE 0 ]
+[s S1885 _IO_FILE 0 ]
 "1177
-[v vfpfcnvrt@fp fp `*.30S1892  1 p 1 62 ]
+[v vfpfcnvrt@fp fp `*.30S1885  1 p 1 62 ]
 [v vfpfcnvrt@fmt fmt `*.30*.31uc  1 p 1 63 ]
 [v vfpfcnvrt@ap ap `*.30*.30v  1 p 1 64 ]
 "1814
@@ -756,15 +752,15 @@ channel_FVRBuf2 31
 "587 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
 [v _efgtoa efgtoa `(v  1 s 1 efgtoa ]
 {
-[u S1905 flui 4 `d 1 f 4 0 `l 1 u 4 0 ]
+[u S1898 flui 4 `d 1 f 4 0 `l 1 u 4 0 ]
 "592
-[v efgtoa@u u `S1905  1 a 4 58 ]
-[v efgtoa@g g `S1905  1 a 4 52 ]
+[v efgtoa@u u `S1898  1 a 4 58 ]
+[v efgtoa@g g `S1898  1 a 4 52 ]
 "591
 [v efgtoa@l l `d  1 a 4 47 ]
 [v efgtoa@h h `d  1 a 4 43 ]
 "592
-[v efgtoa@ou ou `S1905  1 a 4 37 ]
+[v efgtoa@ou ou `S1898  1 a 4 37 ]
 "590
 [v efgtoa@n n `i  1 a 2 56 ]
 [v efgtoa@i i `i  1 a 2 41 ]
@@ -780,9 +776,9 @@ channel_FVRBuf2 31
 [v efgtoa@nmode nmode `uc  1 a 1 28 ]
 [v efgtoa@mode mode `uc  1 a 1 27 ]
 [v efgtoa@pp pp `uc  1 a 1 26 ]
-[s S1892 _IO_FILE 0 ]
+[s S1885 _IO_FILE 0 ]
 "587
-[v efgtoa@fp fp `*.30S1892  1 p 1 10 ]
+[v efgtoa@fp fp `*.30S1885  1 p 1 10 ]
 [v efgtoa@f f `d  1 p 4 11 ]
 [v efgtoa@c c `uc  1 p 1 15 ]
 "868
@@ -802,9 +798,9 @@ channel_FVRBuf2 31
 {
 "195
 [v pad@i i `i  1 a 2 26 ]
-[s S1892 _IO_FILE 0 ]
+[s S1885 _IO_FILE 0 ]
 "193
-[v pad@fp fp `*.30S1892  1 p 1 20 ]
+[v pad@fp fp `*.30S1885  1 p 1 20 ]
 [v pad@buf buf `*.39uc  1 p 2 21 ]
 [v pad@p p `i  1 p 2 23 ]
 "226
@@ -818,18 +814,18 @@ channel_FVRBuf2 31
 [v fputs@c c `uc  1 a 1 17 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 14 ]
-[u S1857 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S1860 _IO_FILE 12 `S1857 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v fputs@fp fp `*.30S1860  1 p 1 16 ]
+[u S1850 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1853 _IO_FILE 12 `S1850 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputs@fp fp `*.30S1853  1 p 1 16 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 6 ]
-[u S1857 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S1860 _IO_FILE 12 `S1857 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v fputc@fp fp `*.30S1860  1 p 1 8 ]
+[u S1850 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1853 _IO_FILE 12 `S1850 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputc@fp fp `*.30S1853  1 p 1 8 ]
 "24
 } 0
 "154 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\mcc_generated_files/eusart1.c
@@ -865,9 +861,9 @@ channel_FVRBuf2 31
 "3 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S2014 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S2007 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S2014  1 a 4 6 ]
+[v floorf@u u `S2007  1 a 4 6 ]
 "7
 [v floorf@m m `ul  1 a 4 0 ]
 "6
@@ -875,21 +871,21 @@ channel_FVRBuf2 31
 "3
 [v floorf@x x `f  1 p 4 76 ]
 "4
-[v floorf@F521 F521 `S2014  1 s 4 F521 ]
+[v floorf@F521 F521 `S2007  1 s 4 F521 ]
 "27
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S2014 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S2007 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S2014  1 a 4 14 ]
+[v ___fpclassifyf@u u `S2007  1 a 4 14 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 12 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 4 ]
 "5
-[v ___fpclassifyf@F465 F465 `S2014  1 s 4 F465 ]
+[v ___fpclassifyf@F465 F465 `S2007  1 s 4 F465 ]
 "11
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
@@ -920,10 +916,10 @@ channel_FVRBuf2 31
 {
 "38
 } 0
-"318 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+"329 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
 [v _recibido_1 recibido_1 `(v  1 e 1 0 ]
 {
-"336
+"337
 } 0
 "172 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo/Librerias/nRF24L01_2.h
 [v _nrf2401_recibe nrf2401_recibe `(uc  1 e 1 0 ]
@@ -961,40 +957,6 @@ channel_FVRBuf2 31
 "43
 [v spi_s_read@dato_ dato_ `uc  1 a 1 4 ]
 "59
-} 0
-"348 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
-[v _confirmacion confirmacion `(v  1 e 1 0 ]
-{
-"354
-} 0
-"337
-[v _envio_ya_recibido envio_ya_recibido `(v  1 e 1 0 ]
-{
-"341
-[v envio_ya_recibido@i i `i  1 a 2 13 ]
-"347
-} 0
-"151 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo/Librerias/nRF24L01_2.h
-[v _nrf2401_envia nrf2401_envia `(v  1 e 1 0 ]
-{
-[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 wreg ]
-[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 wreg ]
-[v nrf2401_envia@dato_tx dato_tx `uc  1 a 1 8 ]
-"167
-} 0
-"135
-[v _flush_TX flush_TX `(v  1 e 1 0 ]
-{
-"139
-} 0
-"201
-[v _nrF2401_init_TX nrF2401_init_TX `(v  1 e 1 0 ]
-{
-[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
-[v nrF2401_init_TX@canal canal `uc  1 a 1 wreg ]
-"203
-[v nrF2401_init_TX@canal canal `uc  1 a 1 10 ]
-"215
 } 0
 "184
 [v _nrF2401_init_RX nrF2401_init_RX `(v  1 e 1 0 ]
@@ -1051,16 +1013,16 @@ channel_FVRBuf2 31
 [v spi_s_write@dato_ dato_ `uc  1 a 1 4 ]
 "77
 } 0
-"135 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
+"138 C:\Users\TEOREMAIEE\Desktop\Control_Skill-Control_RF_Motor_Pozo\main.c
 [v _get_corriente_AC get_corriente_AC `(d  1 e 4 0 ]
 {
-"140
+"143
 [v get_corriente_AC@i i `i  1 a 2 0 ]
-"137
+"140
 [v get_corriente_AC@corriente corriente `d  1 a 4 2 ]
-"135
+"138
 [v get_corriente_AC@n_muestras n_muestras `i  1 p 2 76 ]
-"151
+"154
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -1103,17 +1065,17 @@ channel_FVRBuf2 31
 "8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1722 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1715 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1727 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1730 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1722 1 fAsBytes 4 0 `S1727 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1730  1 a 4 37 ]
+[s S1720 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1723 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1715 1 fAsBytes 4 0 `S1720 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1723  1 a 4 37 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 32 ]
-[s S1798 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1791 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1801 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1798 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1801  1 a 2 41 ]
+[u S1794 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1791 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1794  1 a 2 41 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 36 ]
 "11
